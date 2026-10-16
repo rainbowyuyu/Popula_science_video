@@ -1,0 +1,178 @@
+{
+  "id": "h034",
+  "partIndex": 0,
+  "expected": "脂肪不容易直接溶在血液里，肝脏就把它装进带外壳的小颗粒。",
+  "heard": "脂肪不容易直接融在血液里肝脏就把它装进带外壳的小颗粒",
+  "words": [
+    {
+      "text": "脂",
+      "start": 0.0,
+      "end": 0.4,
+      "probability": 0.5672874674201012
+    },
+    {
+      "text": "肪",
+      "start": 0.4,
+      "end": 0.56,
+      "probability": 0.9950978755950928
+    },
+    {
+      "text": "不",
+      "start": 0.56,
+      "end": 0.7,
+      "probability": 0.9919147491455078
+    },
+    {
+      "text": "容易",
+      "start": 0.7,
+      "end": 0.9,
+      "probability": 0.9969934225082397
+    },
+    {
+      "text": "直接",
+      "start": 0.9,
+      "end": 1.12,
+      "probability": 0.9957051873207092
+    },
+    {
+      "text": "融",
+      "start": 1.12,
+      "end": 1.34,
+      "probability": 0.9208457469940186
+    },
+    {
+      "text": "在",
+      "start": 1.34,
+      "end": 1.48,
+      "probability": 0.9968146681785583
+    },
+    {
+      "text": "血",
+      "start": 1.48,
+      "end": 1.7,
+      "probability": 0.7510595917701721
+    },
+    {
+      "text": "液",
+      "start": 1.7,
+      "end": 1.86,
+      "probability": 0.9988091886043549
+    },
+    {
+      "text": "里",
+      "start": 1.86,
+      "end": 2.02,
+      "probability": 0.7843307256698608
+    },
+    {
+      "text": "肝",
+      "start": 2.02,
+      "end": 2.46,
+      "probability": 0.598247230052948
+    },
+    {
+      "text": "脏",
+      "start": 2.46,
+      "end": 2.66,
+      "probability": 0.6206718385219574
+    },
+    {
+      "text": "就",
+      "start": 2.66,
+      "end": 2.82,
+      "probability": 0.9808838367462158
+    },
+    {
+      "text": "把它",
+      "start": 2.82,
+      "end": 3.0,
+      "probability": 0.9560985565185547
+    },
+    {
+      "text": "装",
+      "start": 3.0,
+      "end": 3.22,
+      "probability": 0.7588409781455994
+    },
+    {
+      "text": "进",
+      "start": 3.22,
+      "end": 3.38,
+      "probability": 0.996954083442688
+    },
+    {
+      "text": "带",
+      "start": 3.38,
+      "end": 3.6,
+      "probability": 0.749970555305481
+    },
+    {
+      "text": "外",
+      "start": 3.6,
+      "end": 3.74,
+      "probability": 0.9970036149024963
+    },
+    {
+      "text": "壳",
+      "start": 3.74,
+      "end": 3.92,
+      "probability": 0.9864650070667267
+    },
+    {
+      "text": "的",
+      "start": 3.92,
+      "end": 4.04,
+      "probability": 0.996010422706604
+    },
+    {
+      "text": "小",
+      "start": 4.04,
+      "end": 4.2,
+      "probability": 0.9969702959060669
+    },
+    {
+      "text": "颗",
+      "start": 4.2,
+      "end": 4.4,
+      "probability": 0.961665153503418
+    },
+    {
+      "text": "粒",
+      "start": 4.4,
+      "end": 4.56,
+      "probability": 0.9986157417297363
+    }
+  ],
+  "sourceSHA256": "a63ce2655361d5a52fece678c1e65a5e78505317d2b8bfc4657e728beeb08d12",
+  "ratio": 0.9615384615384616,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "溶",
+      "heard": "融",
+      "end": 8
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 238080,
+    "seconds": 4.96,
+    "peakDBFS": -7.253846200550086,
+    "first20msDBFS": -88.29625937613507,
+    "last20msDBFS": -61.163519864252116,
+    "firstActiveMs": 200.0,
+    "lastActiveToEndMs": 430.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "rainbow.shanghai-environment/1",
+  "kind": "interface contract, not computed results",
+  "dataFile": "physics/environment-response.json",
+  "tmd": {
+    "time": "number[1201], seconds 0..60 inclusive, dt0.05",
+    "nodeIds": "string[133], same core node IDs as frozen structural-graph",
+    "nodeXYZ_m": "number[133][3], Three Y-up metres",
+    "nodeU": "number[1201][133][3], displacement increment from gravity equilibrium",
+    "supportNodeId": "N_CORE_132",
+    "supportXYZ_m": "number[3]",
+    "supportX_m": "number[1201]",
+    "massX_m": "number[1201]",
+    "relativeX_m": "number[1201] = massX-supportX",
+    "supportVelocityX_m_s": "number[1201]",
+    "massVelocityX_m_s": "number[1201]",
+    "relativeVelocityX_m_s": "number[1201]",
+    "supportAccelerationX_m_s2": "number[1201]",
+    "massAccelerationX_m_s2": "number[1201]",
+    "massRayleighForce_N": "number[1201], mass-proportional Rayleigh term included in the actual mass equation balance",
+    "massForceResidual_N": "number[1201], actual discrete solver equation residual before output rounding",
+    "springForceOnSupport_N": "number[1201], positive+X",
+    "damperForceOnSupport_N": "number[1201], positive+X",
+    "forceOnSupport_N": "number[1201], sum of spring and dashpot forces",
+    "dissipatedEnergy_J": "number[1201], cumulative non-negative viscous work",
+    "windFactor": "number[1201], same prescribed gust used for frozen dynamic response",
+    "windLoads": {
+      "nodeIds": "string[132], IDs of nodes with actually applied wind forces",
+      "nodeXYZ_m": "number[132][3], undeformed core application coordinates, Y-up metres",
+      "baseForce_N": "number[132][3]; physical time force = baseForce_N * windFactor",
+      "display": "Arrow tip follows its actual displaced core node. These are net nodal forces, not facade pressures."
+    },
+    "coreWindSection": {
+      "time": "number[61], seconds 0..60 in 1-second increments",
+      "memberIds": "string[132], same equivalent core beam IDs as frozen graph",
+      "nodeIds": "string[132][2]",
+      "sections": "object[132], actual equivalent A, Iy, Iz, cy, cz used for stress conversion",
+      "axialMPa": "number[61][132], signed wind-only N/A",
+      "momentY_Nm": "number[61][132][2], wind-only local end bending moments with aligned internal sign",
+      "momentZ_Nm": "number[61][132][2], wind-only local end bending moments with aligned internal sign",
+      "extremeMPa": "number[61][132], unsigned nominal section normal-stress envelope from axial plus biaxial bending",
+      "formula": "max ends(abs(N/A)+abs(My)*cz/Iy+abs(Mz)*cy/Iz)/1e6",
+      "display": "Separate fixed unsigned 0..6 MPa legend; not tensile/compressive axial stress, wall-local von Mises stress, or facade pressure."
+    },
+    "mass_kg": 1000000,
+    "validation": "Actual equation-of-motion balance and comparison to frozen response.dynamic"
+  },
+  "pile": {
+    "coordinates": "local X horizontal, Y upward; head localY0. Place head at existing model pile-head anchor; depths increase downward.",
+    "nodes": "{id,xyz_m:[0,-depth,0]}[n]",
+    "length_m": 52,
+    "diameter_m": 1,
+    "headDepthBelowGrade_m": 33,
+    "datumNote": "33m aligns the existing reconstruction. Zhu design mat top25.4m + thickness6m implies31.4m; excavation depth33m does not establish an as-built raft bottom. Springs were recomputed at33m against original absolute soil layer boundaries.",
+    "headVerticalLoad_N": 8000000,
+    "headHorizontalLoad_N": 300000,
+    "pileSelfWeight_N": 1001276.2368806062,
+    "fullCaseScale": 1,
+    "loadFactor": "number[41], 0..1; progress of static loading, NOT consolidation time",
+    "soilLayers": "{id,name,depthRangeBelowGrade_m:[top,bottom],role?}[]; upper clay layers contextOnlyAbovePileHead",
+    "springs": "{nodeId,depthBelowPileHead_m,depthBelowGrade_m,layerId,tributaryLength_m,lateralStiffness_N_m,shaftStiffness_N_m}[]",
+    "stages": "41 computed load increments; linear interpolation between adjacent increments allowed",
+    "stageFields": {
+      "loadFactor": "number",
+      "u_m": "number[n][2], X/Y physical displacements",
+      "settlement_m": "number[n], positive downward",
+      "sideReactionOnPile_N": "number[n][2], X/Y reaction on pile; soil receives opposite force",
+      "toeReactionOnPile_N": "number[2], X/Y, toe upward component in index1",
+      "sideShearStress_Pa": "number[n], interface vertical reaction divided by tributary circumference area, NOT soil von Mises stress",
+      "axialForce_N": "number[n-1], beam member axial force, tension positive",
+      "moment_Nm": "number[n-1], beam local end moment",
+      "equilibrium": "actual applied force/soil reaction/residual"
+    }
+  },
+  "flow": {
+    "computedFieldAvailable": false,
+    "description": "No building CFD pressure/velocity field obtained. Current lines may only be labelled flow-mechanism illustration. Actual tower wind dynamics uses Zwind/OpenSees prescribed forces.",
+    "iwind": "Local directory is film/preview adapter, not a runnable building CFD backend",
+    "diffusion": "Available OC4 surrogate is fixed floating 5MW wind-turbine domain; inapplicable to this building"
+  },
+  "memberStressStats": "Fixed full-time percentiles and maxima by member role; use fixed labelled scale for each shot, not per-frame renormalization"
+}

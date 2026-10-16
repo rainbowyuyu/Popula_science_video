@@ -1,0 +1,35 @@
+regulatory reproduction we recommend multi-seed campaigns and frozen tool schemas. Ethically, 
+the submitting human engineer retains accountability, with the AI system treated as a 
+computational collaborator under transparent AI authorship disclosure. 
+Methods (online; draft ≤3000 words — expand equations in SI) 
+Orchestrator 
+Natural-language requirements are parsed into a structured job descriptor. Only schema-validated 
+tools may be invoked. Each phase returns logs, quantitative metrics and a retry flag. Replanning 
+addresses (1) geometric/meshing anomalies, (2) numerical solver aborts and (3) physical limit-
+state violations. Backends include FreeCAD, Gmsh, CalculiX–BESO, SQP upscaling, PSO sizing 
+and Zwind 2.5. Termination requires inactive retry flags, sizing convergence with zero maximum 
+limit-state violation, and Automated Reviewer **S ≥ 85** with all sub-scores ≥60 (weights 0.15, 
+0.30, 0.25, 0.15, 0.15 for capacity, steel intensity, unit cost, constructability, fatigue). Artifacts are 
+hashed (SHA-256) for audit. 
+Topology, upscaling and sizing 
+BESO minimizes compliance under a volume fraction with soft-kill void stiffness and spatial 
+filtering (Supplementary Methods). Anisotropic fixed-draft upscaling scales horizontal 
+dimensions by a power-law factor refined by SQP under pitch constraints. PSO minimizes steel 
+mass subject to tilt, unity check ≤1.0, 1P/3P avoidance and fatigue limits; virtual-work 
+sensitivities reduce full FEA calls (Supplementary Methods). 
+Zwind 
+Zwind 2.5 integrates aero-hydro-servo-elastic coupling via Lagrange equations for rigid–flexible 
+multibody systems (Supplementary Note). Public reproduction packages include solver input 
+decks and structural subsets; full proprietary Zwind binaries follow their licenses. 
+Automated Reviewer and AIP 
+Piecewise linear scoring and regulatory parallel channel as in Results; fleet data in Extended Data 
+Table 1–2 and Supplementary Data. AIP followed CCS four-stage workflow; three clarification 
+rounds are summarized in Extended Data Fig. 3. 
+Statistics and reproducibility 
+Flagship metrics are from deterministic solver runs unless noted. LLM orchestration may vary 
+with sampling; multi-seed campaigns and pinned dependencies are recommended. Code: 
+https://github.com/rainbowyuyu/ai_engineer. Data: Zenodo DOI pending deposition 
+(`submission/zenodo_bundle/`). 
+Data availability 
+Fleet benchmark tables and validation source data supporting Fig. 3 are deposited at Zenodo 
+(**DOI_PLACEHOLDER** — replace after upload of `submission/zenodo_bundle/`). TuQiang 

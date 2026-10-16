@@ -1,0 +1,208 @@
+{
+  "id": "h038",
+  "partIndex": 0,
+  "expected": "当低密度脂蛋白在血中持续偏多，就更容易进入并滞留在动脉壁里。",
+  "heard": "當低密度直蛋白在雪中持續偏多,就更容易進入並滯留在動脈壁裡",
+  "words": [
+    {
+      "text": "當",
+      "start": 0.0,
+      "end": 0.36,
+      "probability": 0.7974162101745605
+    },
+    {
+      "text": "低",
+      "start": 0.36,
+      "end": 0.54,
+      "probability": 0.983458399772644
+    },
+    {
+      "text": "密",
+      "start": 0.54,
+      "end": 0.68,
+      "probability": 0.9721415042877197
+    },
+    {
+      "text": "度",
+      "start": 0.68,
+      "end": 0.82,
+      "probability": 0.9993822574615479
+    },
+    {
+      "text": "直",
+      "start": 0.82,
+      "end": 0.98,
+      "probability": 0.4150680899620056
+    },
+    {
+      "text": "蛋",
+      "start": 0.98,
+      "end": 1.14,
+      "probability": 0.6916214227676392
+    },
+    {
+      "text": "白",
+      "start": 1.14,
+      "end": 1.3,
+      "probability": 0.9940186738967896
+    },
+    {
+      "text": "在",
+      "start": 1.3,
+      "end": 1.48,
+      "probability": 0.9687873125076294
+    },
+    {
+      "text": "雪",
+      "start": 1.48,
+      "end": 1.7,
+      "probability": 0.6005248427391052
+    },
+    {
+      "text": "中",
+      "start": 1.7,
+      "end": 1.96,
+      "probability": 0.9982510209083557
+    },
+    {
+      "text": "持",
+      "start": 1.96,
+      "end": 2.18,
+      "probability": 0.9915960431098938
+    },
+    {
+      "text": "續",
+      "start": 2.18,
+      "end": 2.3,
+      "probability": 0.9987131357192993
+    },
+    {
+      "text": "偏",
+      "start": 2.3,
+      "end": 2.52,
+      "probability": 0.9948560893535614
+    },
+    {
+      "text": "多,",
+      "start": 2.52,
+      "end": 2.7,
+      "probability": 0.9991683959960938
+    },
+    {
+      "text": "就",
+      "start": 2.94,
+      "end": 3.14,
+      "probability": 0.9279542565345764
+    },
+    {
+      "text": "更",
+      "start": 3.14,
+      "end": 3.3,
+      "probability": 0.997779905796051
+    },
+    {
+      "text": "容易",
+      "start": 3.3,
+      "end": 3.54,
+      "probability": 0.9983335137367249
+    },
+    {
+      "text": "進",
+      "start": 3.54,
+      "end": 3.74,
+      "probability": 0.9400492906570435
+    },
+    {
+      "text": "入",
+      "start": 3.74,
+      "end": 3.92,
+      "probability": 0.9977073669433594
+    },
+    {
+      "text": "並",
+      "start": 3.92,
+      "end": 4.08,
+      "probability": 0.9583484530448914
+    },
+    {
+      "text": "滯",
+      "start": 4.08,
+      "end": 4.28,
+      "probability": 0.707789734005928
+    },
+    {
+      "text": "留",
+      "start": 4.28,
+      "end": 4.42,
+      "probability": 0.9301021695137024
+    },
+    {
+      "text": "在",
+      "start": 4.42,
+      "end": 4.58,
+      "probability": 0.9983310103416443
+    },
+    {
+      "text": "動",
+      "start": 4.58,
+      "end": 4.7,
+      "probability": 0.7636914253234863
+    },
+    {
+      "text": "脈",
+      "start": 4.7,
+      "end": 4.88,
+      "probability": 0.9235687553882599
+    },
+    {
+      "text": "壁",
+      "start": 4.88,
+      "end": 5.06,
+      "probability": 0.9906522333621979
+    },
+    {
+      "text": "裡",
+      "start": 5.06,
+      "end": 5.24,
+      "probability": 0.7975606918334961
+    }
+  ],
+  "sourceSHA256": "f586669e059b702cd204dcd1fb91a76183511ac050d5c2af294c9b935d30ce7f",
+  "ratio": 0.9285714285714286,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "脂",
+      "heard": "直",
+      "end": 5
+    },
+    {
+      "op": "replace",
+      "expected": "血",
+      "heard": "雪",
+      "end": 9
+    }
+  ],
+  "rawTailNeedsReview": true,
+  "rawMetrics": {
+    "samples48k": 272640,
+    "seconds": 5.68,
+    "peakDBFS": -6.2569187476481325,
+    "first20msDBFS": -77.8188893647413,
+    "last20msDBFS": -95.3652991614777,
+    "firstActiveMs": 30.0,
+    "lastActiveToEndMs": 40.0,
+    "activityThresholdDBFS": -47.96255884012094,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

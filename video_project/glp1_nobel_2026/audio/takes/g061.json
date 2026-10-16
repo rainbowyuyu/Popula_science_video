@@ -1,0 +1,69 @@
+{
+  "id": "g061",
+  "text": "按医生建议在家规范测量，记录多天结果。一回紧张时的高读数，需要复测；已经确诊，也别凭感觉自行停药。",
+  "ttsText": "按医生建议在家规范测量，记录多天结果。一回紧张时的高读数，需要复测；已经确诊，也别凭感觉自行停药。",
+  "signature": "07bb8e2f887937243ff89323ab7ee7a57cb6670ed459d6112190930e53166c82",
+  "raw": "audio/raw/g061-07bb8e2f88.wav",
+  "processed": "public/voice/g061.wav",
+  "rawDuration": 8.480041666666667,
+  "duration": 8.480041666666667,
+  "sha256": "23307d5d024b17b6d1cbd5c3455f9556448f2164fdcc9b32880c3f6f578debbd",
+  "seed": 129732143,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g061",
+    "g062",
+    "g063",
+    "g064"
+  ],
+  "rawEndpointDB": -97.07114282880087,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "1c0a30a232ec10a02f299c0d26121324fd18b9373c2af858b8f1a076f4c4ae7a",
+    "outputSha256": "23307d5d024b17b6d1cbd5c3455f9556448f2164fdcc9b32880c3f6f578debbd",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.862582750581236,
+    "input": {
+      "seconds": 8.480041666666667,
+      "peakDb": -6.649915798071385,
+      "activeRmsDb": -21.416505531031085,
+      "quietFrameP10Db": -63.33512620612108
+    },
+    "output": {
+      "seconds": 8.480041666666667,
+      "peakDb": -4.257982491064254,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -63.64913108240774
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,60 @@
+{
+  "proteinShapes": [
+    {
+      "name": "human-dpp4",
+      "pdb": "1NU6",
+      "chain": "A",
+      "source": "https://www.rcsb.org/structure/1NU6",
+      "sourceSHA256": "79e5185b935596af5ca03e93ce76918a1e9f242adae87843a4e9e2a9d1857314",
+      "units": "DrugDetail drawing unit = 2.2 nm",
+      "boundsNm": [
+        7.407,
+        7.481,
+        7.187
+      ],
+      "surface": "Smoothed coarse van der Waals envelope, chain A only; no docking or molecular dynamics."
+    },
+    {
+      "name": "human-albumin",
+      "pdb": "1AO6",
+      "chain": "A",
+      "source": "https://www.rcsb.org/structure/1AO6",
+      "sourceSHA256": "fde71dae3138ff8aeb2df37740738ed722e08b657d2357e24ad3c6e626423181",
+      "units": "DrugDetail drawing unit = 2.2 nm",
+      "boundsNm": [
+        8.941,
+        7.355,
+        5.71
+      ],
+      "surface": "Smoothed coarse van der Waals envelope, chain A only; no docking or molecular dynamics."
+    }
+  ],
+  "mechanismReferences": [
+    {
+      "key": "mentlein1993",
+      "doi": "10.1111/j.1432-1033.1993.tb17986.x",
+      "supports": "DPP4 removes N-terminal His-Ala from GLP-1; serum inhibition experiment"
+    },
+    {
+      "key": "lau2015",
+      "doi": "10.1021/acs.jmedchem.5b00726",
+      "supports": "Aib8, Arg34, Lys26-linked sidechain; albumin association and retained receptor activity"
+    },
+    {
+      "key": "knudsen2019",
+      "doi": "10.3389/fendo.2019.00155",
+      "supports": "drug discovery narrative and reversible albumin binding"
+    },
+    {
+      "key": "bryant2020",
+      "doi": "10.1016/j.ceb.2020.02.006",
+      "supports": "GLUT4 trafficking from intracellular membranes to cell surface"
+    }
+  ],
+  "representationBoundaries": [
+    "Protein structures are coarse smoothed surfaces, not an atomistic display.",
+    "GLP chain bead-and-bond display is a schematic with one bead per amino acid.",
+    "Motion and temporary albumin association are illustrative, not an experimentally determined complex pose or molecular dynamics.",
+    "GLUT4 12-helix drawing and alternating access are schematic; glucose dots indicate transport direction."
+  ]
+}

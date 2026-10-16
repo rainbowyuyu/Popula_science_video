@@ -1,0 +1,6158 @@
+{
+  "source": {
+    "V5World.ts": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\src\\V5World.ts",
+      "sha256": "4dcc9fcec5195a1ab6a9fa0fe8de8eb969f54d4caf21015a3598eca4212251bb"
+    },
+    "V5HandoffContext.ts": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\src\\V5HandoffContext.ts",
+      "sha256": "a2b290125a4f694f33c278da95170d0f5e829e6b92350f730627215df0891b9c"
+    },
+    "Director": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\src\\V7Director.ts",
+      "sha256": "6705270eb7ff47174c338c8b35db4dd2979a258024d125d1ede309c0889a050a"
+    },
+    "Camera": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\src\\V5CameraPath.ts",
+      "sha256": "c2ce5df97b79a63bc1fab89523bc26b022095058d61efe3324ca5eccd23e3c4a"
+    }
+  },
+  "samples": [
+    {
+      "handoff": {
+        "poseActivation": 0.619838835415257,
+        "anatomyBlend": 0.380161164584743,
+        "poseResidual": 0.6050475002566348,
+        "neutralReady": 0,
+        "visiblePerson": 1,
+        "attenuatedMeasure": 0.6050475002566348
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 636.8333333333334,
+        "seated": 0,
+        "measurementWeight": 0.6050475002566348,
+        "neutralPoseWeight": 0.380161164584743,
+        "poseResidual": 0.6050475002566348,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0.42149040808237476,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22598609082851928,
+          1.1756317687135582,
+          0.14773154706133954
+        ],
+        "posedWrist": [
+          0.17567217926635575,
+          1.277039298940072,
+          0.316713863049355
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.3477693917473118,
+          0.6962436206950426,
+          -0.6279341293520861
+        ],
+        "wristDeflectionDegrees": 6.85186562038124,
+        "forearmLength": 0.20339616515558998,
+        "spoonTip": [
+          0.055,
+          0.809,
+          0.515
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20966373260316493,
+          0.9721803541010409,
+          0.02488411893615333
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 19105,
+      "clip": "h068",
+      "d": 2.7374168457449253,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0723420431520971,
+        1.0293909195901914,
+        2.6941962972243676
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": [
+            {
+              "path": "Scene/Group/same-atlas-seated-home-measurement/supported-back",
+              "distance": 4.616626236631926,
+              "point": [
+                -0.18214864582921397,
+                0.4510066321882802,
+                -1.7109101187551636
+              ],
+              "material": [
+                {
+                  "alpha": 0.9761368047410052,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": false,
+        "materials": []
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-19105.png",
+        "sha256": "2f6a56a71f677dd329477ef26aff5c552b38b338b3cec4c1ed49e58c74e6e955"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0.30704516869454757,
+        "anatomyBlend": 0.6929548313054524,
+        "poseResidual": 0.29358015082920885,
+        "neutralReady": 0,
+        "visiblePerson": 1,
+        "attenuatedMeasure": 0.29358015082920885
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 637.0333333333333,
+        "seated": 0,
+        "measurementWeight": 0.29358015082920885,
+        "neutralPoseWeight": 0.6929548313054524,
+        "poseResidual": 0.29358015082920885,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0.20879071471229235,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22598609082851928,
+          1.1756317687135582,
+          0.14773154706133954
+        ],
+        "posedWrist": [
+          0.17567217926635575,
+          1.277039298940072,
+          0.316713863049355
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.3477693917473118,
+          0.6962436206950426,
+          -0.6279341293520861
+        ],
+        "wristDeflectionDegrees": 6.85186562038124,
+        "forearmLength": 0.20339616515558998,
+        "spoonTip": [
+          0.055,
+          0.809,
+          0.515
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20953203204274304,
+          1.1000857891591662,
+          -0.008275832277778877
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 19111,
+      "clip": "h068",
+      "d": 2.7368652170847465,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0722750119761058,
+        1.0293379969756975,
+        2.6936379392106806
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": [
+            {
+              "path": "Scene/Group/V5 — same atlas person and daily activities/Group/tailored woven shorts with ease and sewn hems",
+              "distance": 2.8967184474637895,
+              "point": [
+                -0.1526355132160635,
+                0.6616175719839499,
+                0.0945316200705113
+              ],
+              "material": [
+                {
+                  "alpha": 0.9561464590939912,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 2
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/body/FJ2810_Skin",
+              "distance": 2.9118422031537325,
+              "point": [
+                -0.15903076627949675,
+                0.6596977050826132,
+                0.08096169613907822
+              ],
+              "material": [
+                {
+                  "alpha": 0.9589969392528818,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/Mesh",
+              "distance": 2.9118422031537325,
+              "point": [
+                -0.15903076627949675,
+                0.6596977050826132,
+                0.08096169613907822
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/V5 — same atlas person and daily activities/Group/tailored woven shorts with ease and sewn hems",
+              "distance": 2.937104810186637,
+              "point": [
+                -0.16971334859104026,
+                0.6564907739420764,
+                0.058294597914649415
+              ],
+              "material": [
+                {
+                  "alpha": 0.9561464590939912,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": false,
+        "materials": []
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-19111.png",
+        "sha256": "ca5c71b1c0750fac3b71b9bdf2f17ea2e744654def8b57c9d1fb6f83b6ef8a03"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0.04693612932573807,
+        "anatomyBlend": 0.9530638706742619,
+        "poseResidual": 0.043595344384203254,
+        "neutralReady": 0,
+        "visiblePerson": 1,
+        "attenuatedMeasure": 0.043595344384203254
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 637.2333333333333,
+        "seated": 0,
+        "measurementWeight": 0.043595344384203254,
+        "neutralPoseWeight": 0.9530638706742619,
+        "poseResidual": 0.043595344384203254,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0.03191656794150191,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22598609082851928,
+          1.1756317687135582,
+          0.14773154706133954
+        ],
+        "posedWrist": [
+          0.17567217926635575,
+          1.277039298940072,
+          0.316713863049355
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.3477693917473118,
+          0.6962436206950426,
+          -0.6279341293520861
+        ],
+        "wristDeflectionDegrees": 6.85186562038124,
+        "forearmLength": 0.20339616515558998,
+        "spoonTip": [
+          0.055,
+          0.809,
+          0.515
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20905670169218984,
+          1.202743149371335,
+          -0.03491383616824088
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 19117,
+      "clip": "h068",
+      "d": 2.7364661844619347,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0722221053449785,
+        1.0292990295049056,
+        2.6932356663842603
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": false,
+        "materials": []
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-19117.png",
+        "sha256": "d431ec97af4af47c5c04bcb2a90f932052339ca0528b4961c53d90779ec4b59a"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 7.430713751579473e-8,
+        "anatomyBlend": 0.9999999256928624,
+        "poseResidual": 6.690187782964559e-8,
+        "neutralReady": 0.9999999999999982,
+        "visiblePerson": 0.9003425516271526,
+        "attenuatedMeasure": 6.690187782964559e-8
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 637.4,
+        "seated": 0,
+        "measurementWeight": 6.690187782964559e-8,
+        "neutralPoseWeight": 0.9999999256928624,
+        "poseResidual": 6.690187782964559e-8,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 5.052885353684644e-8,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22598609082851928,
+          1.1756317687135582,
+          0.14773154706133954
+        ],
+        "posedWrist": [
+          0.17567217926635575,
+          1.277039298940072,
+          0.316713863049355
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.3477693917473118,
+          0.6962436206950426,
+          -0.6279341293520861
+        ],
+        "wristDeflectionDegrees": 6.85186562038124,
+        "forearmLength": 0.20339616515558998,
+        "spoonTip": [
+          0.055,
+          0.809,
+          0.515
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893701715234134,
+          1.2206457670388389,
+          -0.03956164259472816
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 19122,
+      "clip": "h068",
+      "d": 2.736240898137404,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0721902376247285,
+        1.0292767195792683,
+        2.6930092870855664
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": true,
+        "materials": [
+          {
+            "name": "leftKidneyMesh",
+            "alpha": 0.0008923014454318935
+          }
+        ]
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-19122.png",
+        "sha256": "bd741d6d29f176b29d52843bc32f52c9e112b497298eaaa9ac1b14134f8f9581"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0,
+        "anatomyBlend": 1,
+        "poseResidual": 0,
+        "neutralReady": 1,
+        "visiblePerson": 0.8594720694935247,
+        "attenuatedMeasure": 0
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 637.6,
+        "seated": 0,
+        "measurementWeight": 0,
+        "neutralPoseWeight": 1,
+        "poseResidual": 0,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984285,
+        "posedElbow": [
+          0.22599277540367982,
+          1.1756415532300937,
+          0.14774154571697273
+        ],
+        "posedWrist": [
+          0.1756586314381941,
+          1.2771649776668423,
+          0.31664823072943044
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.3480556436520946,
+          0.6958499582155082,
+          -0.6282118309721663
+        ],
+        "wristDeflectionDegrees": 6.8561191317582235,
+        "forearmLength": 0.20339616515559003,
+        "spoonTip": [
+          0.05497165066300868,
+          0.8091653711324495,
+          0.5149291266575217
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893701715234134,
+          1.2206457670388389,
+          -0.03956164957799622
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 19128,
+      "clip": "h068",
+      "d": 2.7360808505100143,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0721663990842545,
+        1.02926068431977,
+        2.692848905273411
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": true,
+        "materials": [
+          {
+            "name": "leftKidneyMesh",
+            "alpha": 0.0015856898334232804
+          }
+        ]
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-19128.png",
+        "sha256": "a717bdc16bb60c570e3f3e88973b31d1f208b3ec05119ccb0b5c94e46297a9f9"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0,
+        "anatomyBlend": 1,
+        "poseResidual": 0,
+        "neutralReady": 1,
+        "visiblePerson": 0.7578974276149518,
+        "attenuatedMeasure": 0
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 638,
+        "seated": 0,
+        "measurementWeight": 0,
+        "neutralPoseWeight": 1,
+        "poseResidual": 0,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.29940273879842844,
+        "posedElbow": [
+          0.22620007682854978,
+          1.176007423744087,
+          0.14812634664979002
+        ],
+        "posedWrist": [
+          0.17521006144367032,
+          1.2813314552070951,
+          0.314490004722787
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.3576137220943784,
+          0.6827301353824079,
+          -0.6371750057955221
+        ],
+        "wristDeflectionDegrees": 6.997537482250287,
+        "forearmLength": 0.20339616515558998,
+        "spoonTip": [
+          0.05403264138946045,
+          0.8146429252281474,
+          0.5125816034736511
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893701715234134,
+          1.2206457670388389,
+          -0.03956164957799622
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 19140,
+      "clip": "h068",
+      "d": 2.736000040159771,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0721537048643373,
+        1.0292524859173573,
+        2.692768168939916
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": true,
+        "materials": [
+          {
+            "name": "leftKidneyMesh",
+            "alpha": 0.024233940678996396
+          }
+        ]
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-19140.png",
+        "sha256": "e32e955a6832d5da2878a685b33dd8c40cb61896ab11d19427cf76ee179f1cc5"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0.3674796689479155,
+        "anatomyBlend": 0.6325203310520845,
+        "poseResidual": 0.35392742802240235,
+        "neutralReady": 0,
+        "visiblePerson": 1,
+        "attenuatedMeasure": 0.35392742802240235
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 823.6666666666666,
+        "seated": 0,
+        "measurementWeight": 0.35392742802240235,
+        "neutralPoseWeight": 0.6325203310520845,
+        "poseResidual": 0.35392742802240235,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22622452456607958,
+          1.1974166734677185,
+          0.1713056906137839
+        ],
+        "posedWrist": [
+          0.1674446554997842,
+          1.3584412404781319,
+          0.2807863547132405
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.5621838846054076,
+          0.424890635760764,
+          -0.7095190113963034
+        ],
+        "wristDeflectionDegrees": 9.51880926960347,
+        "forearmLength": 0.2033961651555898,
+        "spoonTip": [
+          0.037000000000000005,
+          0.914,
+          0.47000000000000003
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20900833673311098,
+          1.0753039206723654,
+          -0.0018862667453172278
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 24710,
+      "clip": "h088",
+      "d": 2.6889094164510103,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.056628602055865,
+        1.0232150068462398,
+        2.6487218192988338
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": [
+            {
+              "path": "Scene/Group/V5 — same atlas person and daily activities/Group/tailored woven shorts with ease and sewn hems",
+              "distance": 2.8297346418872404,
+              "point": [
+                -0.13994514162476257,
+                0.6639996781131856,
+                0.1097114280176088
+              ],
+              "material": [
+                {
+                  "alpha": 0.96312111370865,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 2
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/body/FJ2810_Skin",
+              "distance": 2.84689791779998,
+              "point": [
+                -0.14720275688264906,
+                0.6618209184132939,
+                0.09431149077762457
+              ],
+              "material": [
+                {
+                  "alpha": 0.9655182413175877,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/Mesh",
+              "distance": 2.84689791779998,
+              "point": [
+                -0.14720275688264906,
+                0.6618209184132939,
+                0.09431149077762457
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/body/FJ2810_Skin",
+              "distance": 2.8947343359769535,
+              "point": [
+                -0.16743073202031722,
+                0.6557484145019756,
+                0.05138974078907932
+              ],
+              "material": [
+                {
+                  "alpha": 0.9655182413175877,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/Mesh",
+              "distance": 2.8947343359769535,
+              "point": [
+                -0.16743073202031722,
+                0.6557484145019756,
+                0.05138974078907932
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/V5 — same atlas person and daily activities/Group/tailored woven shorts with ease and sewn hems",
+              "distance": 2.910631137186331,
+              "point": [
+                -0.17415280929713406,
+                0.6537304250454017,
+                0.03712616184380302
+              ],
+              "material": [
+                {
+                  "alpha": 0.96312111370865,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": false,
+        "materials": []
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-24710.png",
+        "sha256": "daa423a0e15d51a4527e458828aa3ed65bfcab5ba0be45e9fd6496a50c20c8a8"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0.0014214756187459787,
+        "anatomyBlend": 0.998578524381254,
+        "poseResidual": 0.0012936338021743913,
+        "neutralReady": 0.989410265175989,
+        "visiblePerson": 0.910064010324467,
+        "attenuatedMeasure": 0.0012936338021743913
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 824.0666666666667,
+        "seated": 0,
+        "measurementWeight": 0.0012936338021743913,
+        "neutralPoseWeight": 0.998578524381254,
+        "poseResidual": 0.0012936338021743913,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22622452456607958,
+          1.1974166734677185,
+          0.1713056906137839
+        ],
+        "posedWrist": [
+          0.1674446554997842,
+          1.3584412404781319,
+          0.2807863547132405
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.5621838846054076,
+          0.424890635760764,
+          -0.7095190113963034
+        ],
+        "wristDeflectionDegrees": 9.51880926960347,
+        "forearmLength": 0.2033961651555898,
+        "spoonTip": [
+          0.037000000000000005,
+          0.914,
+          0.47000000000000003
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893727871929202,
+          1.220114533200547,
+          -0.03942394259333798
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 24722,
+      "clip": "h088",
+      "d": 2.6882176595146263,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.056535006375008,
+        1.0231471624128001,
+        2.6480251373752215
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": true,
+        "materials": [
+          {
+            "name": "leftKidneyMesh",
+            "alpha": 0.0008913164994459839
+          }
+        ]
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-24722.png",
+        "sha256": "8ca5c011a2b4c8e0c29bf11084f607ce86cf6632cb01292417add12af7d45898"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0,
+        "anatomyBlend": 1,
+        "poseResidual": 0,
+        "neutralReady": 1,
+        "visiblePerson": 0.8927051739146058,
+        "attenuatedMeasure": 0
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 824.1666666666666,
+        "seated": 0,
+        "measurementWeight": 0,
+        "neutralPoseWeight": 1,
+        "poseResidual": 0,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22622452456607958,
+          1.1974166734677185,
+          0.1713056906137839
+        ],
+        "posedWrist": [
+          0.1674446554997842,
+          1.3584412404781319,
+          0.2807863547132405
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.5621838846054076,
+          0.424890635760764,
+          -0.7095190113963034
+        ],
+        "wristDeflectionDegrees": 9.51880926960347,
+        "forearmLength": 0.2033961651555898,
+        "spoonTip": [
+          0.037000000000000005,
+          0.914,
+          0.47000000000000003
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893701715234134,
+          1.2206457670388389,
+          -0.03956164957799622
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 24725,
+      "clip": "h088",
+      "d": 2.688129032723867,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.0565218805816934,
+        1.0231382944504368,
+        2.6479362979067065
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": true,
+        "materials": [
+          {
+            "name": "leftKidneyMesh",
+            "alpha": 0.0008902344381337345
+          }
+        ]
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-24725.png",
+        "sha256": "b6660a5c3026a28d80e76ab593ffede4cdb28a4076bea4c910ff75e65e6d0389"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0,
+        "anatomyBlend": 1,
+        "poseResidual": 0,
+        "neutralReady": 1,
+        "visiblePerson": 0.8078186080832324,
+        "attenuatedMeasure": 0
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "stand",
+        "time": 824.5666666666667,
+        "seated": 0,
+        "measurementWeight": 0,
+        "neutralPoseWeight": 1,
+        "poseResidual": 0,
+        "actionWeights": {
+          "eat": 0
+        },
+        "adiposity": 0,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.911,
+              0.008
+            ],
+            [
+              -0.25,
+              0.911,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984284,
+        "posedElbow": [
+          0.22624793644533836,
+          1.197089754138835,
+          0.17098133516166397
+        ],
+        "posedWrist": [
+          0.16750885388504555,
+          1.357735037452874,
+          0.28103956124643803
+        ],
+        "grip": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "handDorsal": [
+          0.5600646799158014,
+          0.427266793877475,
+          -0.7097680192573305
+        ],
+        "wristDeflectionDegrees": 9.49812753978852,
+        "forearmLength": 0.2033961651555899,
+        "spoonTip": [
+          0.03715206332510733,
+          0.913112963936874,
+          0.47038015831276836
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          1.18,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.88,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.534,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.2606018240534196,
+          0.863061317323668,
+          0.06068286277337511
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893701715234134,
+          1.2206457670388389,
+          -0.03956164957799622
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 24737,
+      "clip": "h088",
+      "d": 2.6880011306167484,
+      "focus": [
+        0.18,
+        0.68,
+        0.13
+      ],
+      "camera": [
+        1.056502065447455,
+        1.0231253613502334,
+        2.647808410872744
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": []
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": true,
+        "materials": [
+          {
+            "name": "leftKidneyMesh",
+            "alpha": 0.008232518494793412
+          }
+        ]
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-24737.png",
+        "sha256": "149a7740ffef63a96f7717420758b72ec8edcaa9b9550452a8393e0d285f1be4"
+      }
+    },
+    {
+      "handoff": {
+        "poseActivation": 0.9991795722196813,
+        "anatomyBlend": 0.0008204277803186555,
+        "poseResidual": 0.9991795722196813,
+        "neutralReady": 0,
+        "visiblePerson": 1,
+        "attenuatedMeasure": 0
+      },
+      "person": {
+        "units": "metres",
+        "identity": "same BodyParts3D body with neutral external appearance and fixed-length poses; wrist-scale connected grip hand during dining",
+        "sourceHeight": 1.719431,
+        "pose": "fixed-bone-length IK, local-axis forearm pronation and pose-first dual-quaternion skinning; topology-constrained harmonic weights; no patient-specific rig",
+        "clothing": "continuous shorts with two leg openings; no external genital detail",
+        "wardrobeFit": "independent smooth connected hip-and-leg garment in metres; two leg openings, fabric ease and restrained folds; shared fixed-length leg pose and measurement pose; no skin-painted anatomical relief and no body scaling",
+        "anatomy": "organ/skeleton coordinates are never scaled or deformed; hide static organs while seated, recover standing pose before anatomy handoff",
+        "weightChange": "adiposity 0–1 is a small schematic skin contour change, not kg prediction; no scaling of skeleton/organs or body height",
+        "diningTableOffsetY": -0.225,
+        "diningAction": "seated dorsal-up fork grip; coordinated fixed-length arm IK, forearm pronation, wrist and finger flexion; food pickup and moderate presentation lift above the bowl; a single restrained food pickup and return, with rigid constant-size food fixed to the fork; no fabricated swallow",
+        "action": "eat",
+        "time": 737.2,
+        "seated": 0.9991795722196813,
+        "measurementWeight": 0,
+        "neutralPoseWeight": 0.0008204277803186555,
+        "poseResidual": 0.9991795722196813,
+        "actionWeights": {
+          "eat": 1
+        },
+        "adiposity": 0.6794421091093834,
+        "chairSupport": {
+          "weight": 0,
+          "bodyForward": 0,
+          "armrestTop": 0.621,
+          "wrists": [
+            [
+              0.25,
+              0.4613691925011434,
+              0.008
+            ],
+            [
+              -0.25,
+              0.4613691925011434,
+              0.008
+            ]
+          ],
+          "targets": [
+            [
+              0.25,
+              0.46136919250114344,
+              0.008
+            ],
+            [
+              -0.25,
+              0.46136919250114344,
+              0.008
+            ]
+          ],
+          "upperLengths": [
+            0.29940273879842844,
+            0.29940273879842844
+          ],
+          "forearmLengths": [
+            0.20339616515559006,
+            0.20339616515559006
+          ]
+        },
+        "upperArmLength": 0.2994027387984283,
+        "posedElbow": [
+          0.22622452456607958,
+          1.1974166734677185,
+          0.1713056906137839
+        ],
+        "posedWrist": [
+          0.1674446554997842,
+          1.3584412404781319,
+          0.2807863547132405
+        ],
+        "grip": [
+          0.12927774079174584,
+          0.9301032939979507,
+          0.33808292113299915
+        ],
+        "handDorsal": [
+          0.5621838846054076,
+          0.424890635760764,
+          -0.7095190113963034
+        ],
+        "wristDeflectionDegrees": 9.51880926960347,
+        "forearmLength": 0.2033961651555898,
+        "spoonTip": [
+          0.037000000000000005,
+          0.914,
+          0.47000000000000003
+        ],
+        "mouth": [
+          0.001,
+          1.08,
+          0.137
+        ]
+      },
+      "anchors": {
+        "body": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "stomach": [
+          0.038375901989638805,
+          1.1764962077140808,
+          0.03792495001107454
+        ],
+        "esophagus": [
+          0.007295235060155392,
+          1.331326186656952,
+          -0.004682849161326885
+        ],
+        "small_intestine": [
+          0.0097835473716259,
+          1.0193112194538116,
+          0.04366100067272782
+        ],
+        "pancreas": [
+          0.012384800240397453,
+          1.119341254234314,
+          0.020895499968901277
+        ],
+        "liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "brain": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          -0.020326148718595505
+        ],
+        "heart": [
+          0.021441148594021797,
+          1.3049712181091309,
+          0.023403901606798172
+        ],
+        "aorta": [
+          0.0140078105032444,
+          1.2100456953048706,
+          -0.008727900683879852
+        ],
+        "veins": [
+          -0.004214446991682053,
+          1.1832857131958008,
+          0.033186400309205055
+        ],
+        "pancreatic_ducts": [
+          0.0023949984461069107,
+          1.1224362254142761,
+          0.020186000154353678
+        ],
+        "skin": [
+          -0.0006250143051147461,
+          0.8597155809402466,
+          0.0007718950510025024
+        ],
+        "brainstem": [
+          -0.0006617996841669083,
+          1.5835611820220947,
+          -0.025890949298627675
+        ],
+        "pancreatic_arteries": [
+          0.05007073568413034,
+          1.1483662128448486,
+          0.0069980500265955925
+        ],
+        "portal_tributaries": [
+          -0.04303085058927536,
+          1.0253772139549255,
+          0.023936000652611256
+        ],
+        "leftKidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "rightKidney": [
+          -0.059001498855650425,
+          1.0971561670303345,
+          -0.011761450674384832
+        ],
+        "adrenals": [
+          0.006471749395132065,
+          1.15497624874115,
+          -0.01725870033260435
+        ],
+        "thighMuscles": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.004984600469470024
+        ],
+        "meal": [
+          0.07,
+          1.015,
+          0.44
+        ],
+        "intestinal": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "islet": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "beta": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02232037147958198
+        ],
+        "receptor": [
+          0.03238672958562649,
+          1.1253481878187308,
+          0.022322481700926235
+        ],
+        "secretion": [
+          0.03239136784039746,
+          1.125340860034314,
+          0.02232397147958198
+        ],
+        "circuit": [
+          -0.0005235001444816589,
+          1.6256111860275269,
+          0.0041999638257901335
+        ],
+        "drug": [
+          0.014662896841764451,
+          1.1606562156677247,
+          0.11284649945795536
+        ],
+        "torso": [
+          0,
+          1.26,
+          0.02
+        ],
+        "autonomic": [
+          0,
+          1.4,
+          0
+        ],
+        "brainheart": [
+          0.01,
+          1.43,
+          0.018
+        ],
+        "muscle": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "airway": [
+          -0.0006,
+          1.528,
+          0.0045
+        ],
+        "kidney": [
+          0.06161634996533394,
+          1.1155877113342285,
+          -0.02008335002028616
+        ],
+        "personTorso": [
+          0,
+          0.7303691925011433,
+          0
+        ],
+        "personActivity": [
+          0,
+          0.4303691925011434,
+          0.03
+        ],
+        "mealMouth": [
+          0,
+          1.0843691925011434,
+          0.095
+        ],
+        "mealPerson": [
+          0.05,
+          0.95,
+          0.18
+        ],
+        "mealBowl": [
+          0.055,
+          0.809,
+          0.43
+        ],
+        "mealHand": [
+          0.12927774079174584,
+          0.9301032939979507,
+          0.33808292113299915
+        ],
+        "personHip": [
+          0,
+          0.91,
+          0
+        ],
+        "personFoot": [
+          0.1,
+          0.025,
+          0.06
+        ],
+        "measurement": [
+          0.18,
+          0.68,
+          0.13
+        ],
+        "measureCuff": [
+          0.20893701715234134,
+          1.2206457670388389,
+          -0.03956164957799622
+        ],
+        "measureForearm": [
+          0.2329102341055574,
+          0.73,
+          0.2586329315564926
+        ],
+        "measureMonitor": [
+          0.468,
+          0.7090000000000001,
+          0.34
+        ],
+        "renalControl": [
+          0.04162076339125634,
+          1.1552600646018982,
+          -0.015314061298995513
+        ],
+        "gutBrain": [
+          0.00435196690261364,
+          1.312721199989319,
+          0.007493986687622967
+        ],
+        "gutMuscle": [
+          0.05925539880990982,
+          0.8451642021536827,
+          0.04566639298737643
+        ],
+        "wholeRegulation": [
+          0.054032725282013416,
+          1.1272891834378242,
+          0.010890418001698682
+        ],
+        "artery": [
+          0.014146028392612163,
+          1.2500500000000012,
+          -0.01732978935441014
+        ],
+        "arteryWall": [
+          0.009346028392612164,
+          1.2500500000000012,
+          -0.018729789354410137
+        ],
+        "arteriole": [
+          0.10877788315958614,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "arterioleWall": [
+          0.1088221869570545,
+          0.670922248144693,
+          0.04764646884632884
+        ],
+        "lipid": [
+          0.01766289684176445,
+          1.1926562156677245,
+          0.03784649945795536
+        ],
+        "lipidParticle": [
+          0.017662787728619452,
+          1.192656241338265,
+          0.03784649975006836
+        ],
+        "lipidSource": [
+          0.017662801841764452,
+          1.1926562406677246,
+          0.03784649945795536
+        ],
+        "lipidClearance": [
+          0.01766298184176445,
+          1.1926561956677244,
+          0.03784649945795536
+        ],
+        "lipidWall": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01878248472880397
+        ],
+        "lipidWallMembrane": [
+          0.009782743069773777,
+          1.2489301250000011,
+          -0.01878238472880397
+        ],
+        "lipidWallRetained": [
+          0.009782743069773777,
+          1.2489297800000012,
+          -0.01878238472880397
+        ],
+        "nephron": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "glomerulus": [
+          0.08196634996533395,
+          1.1281377113342286,
+          -0.016017692199639468
+        ],
+        "tubule": [
+          0.08298634996533394,
+          1.1276477113342285,
+          -0.016017692199639468
+        ],
+        "plaque": [
+          0.009546028392612163,
+          1.2480500000000012,
+          -0.019129789354410138
+        ],
+        "thrombus": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "foamCell": [
+          0.009782743069773777,
+          1.2489300000000012,
+          -0.01880248472880397
+        ],
+        "lipid_liver": [
+          -0.01033710315823555,
+          1.1836562156677246,
+          0.02284649945795536
+        ],
+        "muscleCell": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "clotDetail": [
+          0.01008714242364563,
+          1.2480500000000012,
+          -0.01922825561979434
+        ],
+        "leftAtrium": [
+          0.013969548977911472,
+          1.315481185913086,
+          -0.001124250702559948
+        ],
+        "atrialClot": [
+          0.02358871079981327,
+          1.3055867767333984,
+          -0.001124250702559948
+        ]
+      },
+      "frame": 22116,
+      "clip": "h078",
+      "d": 3.0767115424018634,
+      "focus": [
+        0.049771106979434404,
+        0.9496795497712082,
+        0.17931332093830318
+      ],
+      "camera": [
+        1.3799616666181307,
+        1.4633336461088162,
+        2.9056490411885694
+      ],
+      "rays": [
+        {
+          "x": -0.3,
+          "hits": []
+        },
+        {
+          "x": 0,
+          "hits": []
+        },
+        {
+          "x": 0.3,
+          "hits": [
+            {
+              "path": "Scene/Group/Group/body/FJ2810_Skin",
+              "distance": 3.165818155704336,
+              "point": [
+                0.17488295017911737,
+                0.9445443187388978,
+                0.024495189694350827
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/Mesh",
+              "distance": 3.165818155704336,
+              "point": [
+                0.17488295017911737,
+                0.9445443187388978,
+                0.024495189694350827
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/body/FJ2810_Skin",
+              "distance": 3.3432287418907447,
+              "point": [
+                0.10735104816541963,
+                0.9154716701693298,
+                -0.1369629764248268
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": false,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/Group/Mesh",
+              "distance": 3.3432287418907447,
+              "point": [
+                0.10735104816541963,
+                0.9154716701693298,
+                -0.1369629764248268
+              ],
+              "material": [
+                {
+                  "alpha": 1,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            },
+            {
+              "path": "Scene/Group/V5 — same atlas person and daily activities/Group/Group/Group/dining chair — back",
+              "distance": 3.3440081369346393,
+              "point": [
+                0.10705436897132148,
+                0.915343949052484,
+                -0.1376722897593611
+              ],
+              "material": [
+                {
+                  "alpha": 0.9991795722196813,
+                  "transparent": true,
+                  "depthWrite": true,
+                  "side": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "x": 0.6,
+          "hits": []
+        }
+      ],
+      "weights": {
+        "gut": 0,
+        "islet": 0,
+        "beta": 0,
+        "receptor": 0,
+        "drug": 0,
+        "artery": 0,
+        "arteriole": 0,
+        "lipid": 0,
+        "lipidWall": 0,
+        "nephron": 0
+      },
+      "clot": {
+        "visible": false,
+        "materials": []
+      },
+      "clotPosition": [
+        0.01008714242364563,
+        1.2480500000000012,
+        -0.01922825561979434
+      ],
+      "labels": [],
+      "cardio": {
+        "artery": {
+          "visible": false,
+          "materials": []
+        },
+        "nephron": {
+          "visible": false,
+          "materials": []
+        }
+      },
+      "kidney": {
+        "visible": false,
+        "materials": []
+      },
+      "image": {
+        "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v7\\source-preview\\furniture-edge-07\\frame-22116.png",
+        "sha256": "4bd93657361815a59cb4fb0e4e5ccfb0af4a175ba27b759797f100a85fc9969b"
+      }
+    }
+  ]
+}

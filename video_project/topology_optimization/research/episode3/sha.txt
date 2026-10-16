@@ -1,0 +1,7080 @@
+Article
+
+applied
+sciences
+
+The Influence of the Damage of Mortise-tenon Joint
+The
+Influence
+of the Damage
+Joint
+on the
+Cyclic Performance
+of of
+theMortise-Tenon
+Traditional Chinese
+on
+the Cyclic
+Timber
+FramePerformance of the Traditional Chinese
+Timber Frame
+Article
+
+Ben Sha 1, Hao Wang 1,* and Aiqun Li 1,2
+
+1,2
+1, * Structures
+1 Key Laboratory
+of C&PC
+of Li
+Ministry
+of Education, Southeast University, Nanjing 211189, China
+and Aiqun
+Ben
+Sha 1 , Hao Wang
+
+Beijing Advanced Innovation Center for Future Urban Design, Beijing University of Civil Engineering and
+Key Laboratory of C&PC Structures of Ministry of Education, Southeast University, Nanjing 211189, China
+Architecture, Beijing 100044, China
+2
+Beijing Advanced Innovation Center for Future Urban Design, Beijing University of Civil Engineering and
+* Correspondence: wanghao1980@seu.edu.cn; Tel.: +86-137-3919-6535
+Architecture, Beijing 100044, China
+11 July 2019;
+Accepted: 16 August 2019;
+Published:
+date
+*Received:
+Correspondence:
+wanghao1980@seu.edu.cn;
+Tel.:
++86-137-3919-6535
+2
+
+1
+
+
+
+
+Abstract:11InJuly
+this
+article,
+the 16
+finite
+element
+method is20used
+to2019
+build the analytical model
+of a
+Received:
+2019;
+Accepted:
+August
+2019; Published:
+August
+
+traditional Chinese timber frame with straight mortise-tenon joints. The analytical model is then
+Abstract:
+the finite
+element
+used to
+the analytical
+model of aThree
+traditional
+subjectedIn
+tothis
+the article,
+lateral cyclic
+loading
+andmethod
+verifiedisbased
+onbuild
+the results
+of an experiment.
+types
+Chinese
+timber
+frame
+with
+straight
+mortise-tenon
+joints.
+The
+analytical
+model
+is
+then
+subjected
+to
+the
+of damage in the straight mortise-tenon joint, including the gap between the mortise and tenon,
+lateral
+cyclic
+loading
+andthe
+verified
+theproposed
+results ofand
+an experiment.
+types
+of damage
+in the
+damage
+in the
+top and
+end ofbased
+tenon,onare
+idealized so Three
+that the
+analytical
+model
+can
+straight
+mortise-tenon
+joint,The
+including
+the gap
+between
+the mortise
+and tenon,
+damage
+in the top
+and
+be modified
+accordingly.
+hysteresis
+curve,
+stiffness
+and energy
+dissipation
+capacity
+derived
+the
+endthese
+of tenon,
+are proposed
+and idealized
+that theextents
+analytical
+can The
+be modified
+accordingly.
+from
+damaged
+models with
+differentso
+damage
+are model
+analyzed.
+results indicate
+that
+The
+stiffness
+energy
+capacity derived
+from these
+damaged
+the hysteresis
+proposed curve,
+damages
+of theand
+joints
+havedissipation
+adverse influences
+on the lateral
+behavior
+of themodels
+timber
+with
+different
+damageand
+extents
+are analyzed.
+resultsofindicate
+that frame
+the proposed
+damages
+the
+frame.
+Both stiffness
+energy
+dissipationThe
+capacity
+the timber
+are weakened
+byofthese
+joints
+have
+adverse
+influences
+on
+the
+lateral
+behavior
+of
+the
+timber
+frame.
+Both
+stiffness
+and
+energy
+damages.
+dissipation capacity of the timber frame are weakened by these damages.
+Keywords: traditional Chinese timber frame; damage of mortise-tenon joint; finite element method;
+traditional Chinese timber frame; damage of mortise-tenon joint; finite element method;
+Keywords:
+cyclic performance
+cyclic performance
+
+1. Introduction
+1. Introduction
+Timber structures have been widely used in the construction of palaces, temples, and civil
+Timber
+havebecause
+been widely
+in the
+palaces,The
+temples,
+civil
+dwellings instructures
+ancient China
+timberused
+is very
+easyconstruction
+to obtain andofprocess.
+famousand
+Buddha
+dwellings
+in known
+ancient as
+China
+because
+timber
+is veryiseasy
+to obtain
+and process.
+The
+famous
+Buddha
+Tower, also
+YingXian
+Timber
+Tower,
+a typical
+traditional
+Chinese
+timber
+structure
+as
+Tower,
+also
+known
+as
+YingXian
+Timber
+Tower,
+is
+a
+typical
+traditional
+Chinese
+timber
+structure
+as
+shown
+shown in Figure 1. It can be seen that the tower was erected by columns, beams, and bracket sets [1].
+in
+Figureframe,
+1. It can
+be seen that
+the tower
+erected is
+bythe
+columns,
+beams, andcomponent
+bracket setsand
+[1]. also
+Timber
+Timber
+consisting
+of beams
+andwas
+columns,
+basic structural
+the
+frame,
+consisting
+ofof
+beams
+and columns,
+is the
+structural
+component
+and alsoby
+thethe
+structural
+structural
+skeleton
+the timber
+structures.
+Thebasic
+columns
+and beams
+are connected
+mortiseskeleton
+of the
+timber
+structures.
+The
+beams are in
+connected
+tenon joints,
+and
+two typical
+types
+of columns
+the jointsand
+are presented
+Figure 2.by the mortise-tenon joints,
+and two typical types of the joints are presented in Figure 2.
+
+Figure
+Figure1.1. The
+The Buddha
+Buddha Tower.
+Tower.
+Appl. Sci. 2019, 9, x; doi: FOR PEER REVIEW
+
+www.mdpi.com/journal/applsci
+
+Appl. Sci. 2019, 9, 3429; doi:10.3390/app9163429
+
+www.mdpi.com/journal/applsci
+
+Appl. Sci. 2019, 9, 3429
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+
+(a)
+
+2 of 20
+2 of 21
+
+(b)
+
+Figure 2. Timber frame with mortise-tenon joints: (a) Straight joint; (b) dovetail joint.
+
+Timber frame is the main component of resisting the lateral force such as earthquake actions and
+strong winds. Therefore, the mechanical properties of the timber frame, especially the mortise-tenon
+joints, have prominent effects on the seismic performance of the whole structures [2]. Xue et al. [3,4]
+carried out some pseudo-static tests and shaking table tests on timber structures with mortise-tenon
+joints and found that most of the input energy is dissipated by the mortise-tenon joints. Shi et al. [5]
+used a synchronous loading technique to study the hysteresis behavior of a full-scale Chinese timber
+structure and
+and revealed
+revealed the
+theeffects
+effectsof
+ofvertical
+verticalloads
+loadsand
+andgaps
+gapsininthe
+the
+mortise-tenon
+joint.
+Some
+tests
+mortise-tenon
+joint.
+Some
+tests
+on
+on the
+timber
+frame
+with
+straight
+mortise-tenon
+joints
+[6,7]ororwith
+withdovetail
+dovetailjoints
+joints [8–11]
+[8–11] have
+have been
+the
+timber
+frame
+with
+straight
+mortise-tenon
+joints
+[6,7]
+conducted and the pulling-out of the tenon were frequently observed.
+observed. Zhang [12] studied the seismic
+and lateral resistance of column-and-tie wooden buildings, the global slip of the framework and the
+Jiang et
+et al. [13] used multi-scale modelling method to
+slip of the column
+column footing were
+were observed.
+observed. Jiang
+simulate a timber frame with mortise-tenon joints and received good results. Some analytical models
+were proposed [6,7] and can
+can predict
+predict the
+the hysteresis
+hysteresis behavior
+behavior of
+of the
+the timber
+timber frame.
+frame. Xiong et al. [14]
+studied the moment-rotation
+moment-rotationangle
+anglecurve
+curveof
+ofaluminum
+aluminumalloy
+alloymortise-and-tenon
+mortise-and-tenonjoints,
+joints,and
+andproposed
+proposeda
+hybrid
+beam
+element
+model
+which
+can
+well
+reflect
+the
+semi-rigid
+characteristics
+of
+the
+joints.
+a hybrid beam element model which can well reflect the semi-rigid characteristics of the joints.
+simulations are based on the intact timber structure
+Most of these experiments and numerical simulations
+specimens or models. However,
+However, in
+in real
+real situation,
+situation, the
+the damage
+damage of
+of the mortise-tenon
+mortise-tenon joint is often
+intimber
+timberframe,
+frame,
+especially
+in ancient
+the ancient
+structures.
+Two typical
+damages
+of the
+encountered in
+especially
+in the
+structures.
+Two typical
+damages
+of the mortisemortise-tenon
+areas
+shown
+as follows:
+Gap between
+the mortise
+and(Figure
+tenon (Figure
+(2) defect
+tenon
+joint arejoint
+shown
+follows:
+(1) Gap (1)
+between
+the mortise
+and tenon
+3a); (2)3a);
+defect
+in the
+in
+the
+tenon
+(Figure
+3b).
+Traditional
+timber
+frames
+often
+undergo
+lateral
+displacement
+during
+tenon (Figure 3b). Traditional timber frames often undergo lateral displacement during the actionthe
+of
+action of earthquake
+strong
+wind [15,16],
+which
+willtolead
+to abetween
+gap between
+mortise
+tenon
+in
+earthquake
+or strongorwind
+[15,16],
+which will
+lead
+a gap
+mortise
+and and
+tenon
+in the
+the longitudinal
+direction
+ofbeam.
+the beam.
+Besides,
+in some
+districts,
+the tenon
+may suffer
+from
+longitudinal
+direction
+of the
+Besides,
+in some
+moistmoist
+districts,
+the tenon
+may suffer
+from fungi
+fungi
+or
+termites
+and
+eventually
+become
+incomplete.
+These
+adverse
+influences
+are
+likely
+to
+weaken
+or termites and eventually become incomplete. These adverse influences are likely to weaken the
+the connection
+between
+beam
+column
+and
+hence
+reduce
+seismic
+resistanceofofthe
+theframe.
+frame.
+connection
+between
+thethe
+beam
+andand
+thethe
+column
+and
+hence
+reduce
+thethe
+seismic
+resistance
+To study the influence of damage caused by termites and fungi, different types of holes were
+drilled in the dovetail and straight mortise-tenon joints, and the results compared with the intact joints
+revealed that these damages can significantly influence the seismic performance of these joint [17,18].
+Xue et al. [19,20] carried out some tests on the through-tenon joints and dovetail joints by cutting the
+tenon size to simulate looseness, and the hysteresis behavior of these joints was remarkably affected.
+Li et al. [21] conducted the low-cycle reciprocating load test on the straight-tenon joint wood frame
+with column foot damage, the results showed that this damage can decrease the fullness and peak of
+the hysteresis curves as well as the energy dissipation ability of the frame.
+
+(a)
+
+(b)
+
+Figure 3. Damages of the mortise-tenon joint: (a) Gap between the mortise and tenon; (b) bamage in
+the tenon.
+
+tenon joint are shown as follows: (1) Gap between the mortise and tenon (Figure 3a); (2) defect in the
+tenon (Figure 3b). Traditional timber frames often undergo lateral displacement during the action of
+earthquake or strong wind [15,16], which will lead to a gap between mortise and tenon in the
+longitudinal direction of the beam. Besides, in some moist districts, the tenon may suffer from fungi
+or termites
+eventually become incomplete. These adverse influences are likely to weaken
+Appl.
+Sci. 2019, and
+9, 3429
+3 ofthe
+20
+connection between the beam and the column and hence reduce the seismic resistance of the frame.
+
+(a)
+
+(b)
+
+Figure 3. Damages of the mortise-tenon joint: (a) Gap between the mortise and tenon; (b) bamage in
+the tenon.
+
+In this study, a timber frame with straight mortise-tenon joint is built in ABAQUS v6.13 (Dassault
+Sys Simulia Corp, Providence, RI, USA) based on an experiment conducted by Lin [22]. The finite
+element (FE) model is then verified by comparing the analytical result with that of the experiment.
+Three different types of damage of the mortise-tenon joint are idealized and the FE model is modified
+accordingly. The influences of these damages on the seismic performance of the timber frame are then
+derived and discussed.
+2. Finite Element (FE) Model and Verification
+2.1. Test Model
+The analytic model is derived from the quasi-static test of a traditional timber frame with straight
+mortise-tenon joints conducted by Lin [22]. The timber frame was designed based on Yingzaofashi [23],
+which is a technical code of practice for the construction of traditional timber buildings of the pre-Ming
+dynasty. The 1/3.52-scaled timber frame consists of two columns and a beam as shown in Figure 4.
+The columns are round with a diameter of 180 mm. The beam has a rectangular section of 120 mm ×
+180 mm, while the width of the tenon is only half of the beam, namely 60 mm. The bottom sides of
+both columns are hinged on the ground, which is consistent with the real situation that the columns
+are directly placed on the ground in most traditional timber structures. The vertical load of 10 kN
+is applied to the top of the columns through hydraulic jack to simulate the load transferred from
+the roof. The columns are driven by the MTS actuator through anchor bolt so that the columns can
+simultaneously move back and forth. More details of the test can be found in Lin [22].
+The horizontal loading of the MTS actuator is controlled by displacement. A total of nine levels of
+displacement are taken in the test and each level consists of three cycles. The displacement amplitude
+is increased by 20 mm after each level of loading and the maximum displacement amplitude is 180 mm.
+Since the main purpose of the work is to study the influences of different types of damages on the
+seismic behavior of the timber frame, the loading cycle of each displacement amplitude is changed to
+one in the numerical simulation as shown in Figure 5 so as to reduce the calculation cost.
+2.2. FE Model
+To simulate the cyclic behavior of the timber frame with straight mortise-tenon joints, a 3D finite
+element model is built based on ABAQUS as shown in Figure 6. The columns and the beam are all
+modelled by 8-node reduced-integration solid element (C3D8R).
+
+120 mm × 180 mm, while the width of the tenon is only half of the beam, namely 60 mm. The bottom
+sides of both columns are hinged on the ground, which is consistent with the real situation that the
+columns are directly placed on the ground in most traditional timber structures. The vertical load of
+10 kN is applied to the top of the columns through hydraulic jack to simulate the load transferred
+fromSci.the
+roof.
+The columns are driven by the MTS actuator through anchor bolt so that the columns
+Appl.
+2019,
+9, 3429
+4 of 20
+can simultaneously move back and forth. More details of the test can be found in Lin [22].
+
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+
+4 of 21
+
+The horizontal loading of the MTS actuator is controlled by displacement. A total of nine levels
+of displacement are taken in the test and each level consists of three cycles. The displacement
+amplitude is increased by 20 mm after each level of loading and the maximum displacement
+amplitude is 180 mm. Since the main purpose of the work is to study the influences of different types
+of damages on the seismic behavior of the timber frame, the loading cycle of each displacement
+amplitude is changed to one in the numerical simulation as shown in Figure 5 so as to reduce the
+calculation cost.
+Figure
+Figure4.4.The
+Thetest
+testmodel.
+model.
+
+200
+
+Displacement (mm)
+
+150
+100
+50
+0
+-50
+-100
+-150
+-200
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+Cycle
+Figure 5. The loading pattern.
+Figure 5. The loading pattern.
+
+Timber is regarded as orthotropic material and the elastic behavior can be modelled through nine
+2.2. FE Model
+engineering constants, namely E1 , E2 , E3 , G12 , G13 , G23 , υ12 , υ13 , υ23 , which are Young’s moduli, Shear
+To simulate
+the cyclic
+of the timber frame
+with straight
+mortise-tenon
+joints, a 3Dof
+finite
+moduli,
+and Poisson’s
+ratiosbehavior
+of three perpendicular
+directions.
+These elastic
+material parameters
+the
+element
+model
+is
+built
+based
+on
+ABAQUS
+as
+shown
+in
+Figure
+6.
+The
+columns
+and
+the
+beam
+are
+all
+FE model are given in Table 1 according to [13]. Here, subscript 1 means the direction of the grain,
+modelled 2by
+8-node
+reduced-integration
+solid element
+(C3D8R).
+subscript
+and
+3 mean
+the radial and tangential
+direction
+in the plane perpendicular to the grain.
+
+2.2. FE Model
+To simulate the cyclic behavior of the timber frame with straight mortise-tenon joints, a 3D finite
+element model is built based on ABAQUS as shown in Figure 6. The columns and the beam are all
+Appl. Sci. 2019, 9, 3429
+5 of 20
+modelled by 8-node reduced-integration solid element (C3D8R).
+
+Figure 6. Finite element (FE) model.
+Table 1. Elastic material parameters of the finite element (FE) mode.
+E1 /MPa
+
+E2 /MPa
+
+E3 /MPa
+
+G12 /MPa
+
+G13 /MPa
+
+G23 /MPa
+
+υ12
+
+υ13
+
+υ23
+
+4720
+
+378
+
+236
+
+337
+
+33.7
+
+317
+
+0.37
+
+0.47
+
+0.42
+
+The post-yield behavior of timber is simulated through Hill’s potential function, which is a
+simple extension of the Mises function and can be expressed in terms of rectangular Cartesian stress
+components as follows:
+q
+f (σ) =
+
+F(σ22 − σ33 )2 + G(σ33 − σ11 )2 + H (σ11 − σ22 )2 + 2Lσ23 2 + 2Mσ31 2 + 2Nσ12 2
+
+(1)
+
+where F, G, H, L, M, N are constants obtained by tests of the material in different orientations,
+σij (i, j = 1, 2, 3) are different stress components. For simplicity, the post-yield moduli are set as zero in
+this study. The plastic material parameters of the FE model are presented in Table 2.
+Table 2. Plastic material parameters of the FE mode.
+Direction
+
+σcy 1 /MPa
+
+σty 2 /MPa
+
+τy 3 /MPa
+
+1
+2
+3
+
+21
+2.1
+2.1
+
+30
+2.1
+2.1
+
+4.2
+4.2
+4.2
+
+1 The yield compressive stress; 2 The yield tensile stress; 3 The yield shear stress.
+
+The interaction between the mortise and the tenon plays a significant role in the seismic performance
+of traditional timber structures since it can dissipate a vast amount of energy through friction between
+these two parts. In ABAQUS, the interaction between two surfaces is simulated by surface-to-surface
+contact which includes the normal and the tangential behaviors. The normal behavior is set as ‘HARD’
+contact which can transfer the normal stress between the two surfaces and allow these two surfaces to
+
+Appl. Sci. 2019, 9, 3429
+
+6 of 20
+
+separate after contact. The tangential behavior is realized by Coulomb friction to simulate the lateral
+sliding behavior at the interface of the mortise and tenon.
+2.3. Verification
+To verify the accuracy of the FE model, the mesh sensitivity analysis is first carried out so as to
+eliminate the adverse influence of element size on the calculation results. The element size of the FE
+model are set to be 40 mm, 30 mm, 20 mm and 12 mm, which results in the total element number of
+3240, 6320, 21,666 and 90,720, respectively. The numerical simulation is run by a workstation installed
+with an Intel Xeon Gold 6154 CPU. The calculation time for each model is 35 min, 40 min, 72 min and
+333 min.
+The hysteresis curves of three models are plotted in Figure 7. It can be seen from the figure that the
+hysteresis curve of 20 mm model is nearly identical to that of 12 mm model, while the curve of 40 mm
+model is quite different from that of the model with the finest mesh. Therefore, the model with element
+size of 20 mm can be regarded as a preferable one and used in the following section since it provides
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+6 of 21
+almost the same results with the finest model and takes only 22% calculation time of the latter model.
+6
+
+Force (kN)
+
+4
+2
+0
+-2
+-4
+
+40mm
+
+-6
+-200 -150 -100 -50
+
+20mm
+
+0
+
+50
+
+12mm
+
+100
+
+150
+
+200
+
+Displacement (mm)
+
+Figure 7. Hysteresis curves of models with different element sizes.
+Figure 7. Hysteresis curves of models with different element sizes.
+
+The experimental hysteresis curves from Lin [22] and from the model with element size of 20 mm
+The experimental hysteresis curves from Lin [22] and from the model with element size of 20
+are plotted in Figure 8 for clearly comparison. It can be seen from Figure 8a that the hysteresis curve
+mm are plotted in Figure 8 for clearly comparison. It can be seen from Figure 8a that the hysteresis
+of this study is reversed Z-shaped and well reflect the pinch effect of the timber frame. However,
+curve of this study is reversed Z-shaped and well reflect the pinch effect of the timber frame.
+the unloading stiffness is about 35% smaller than the experimental results, which is also seen in [24].
+However, the unloading stiffness is about 35% smaller than the experimental results, which is also
+Figure 8b presents the skeleton curves of both experiment and simulation, and both of the curves
+seen in [24]. Figure 8b presents the skeleton curves of both experiment and simulation, and both of
+show the nonlinear behavior when the displacement amplitude is larger than 20 mm. At the positive
+the curves show the nonlinear behavior when the displacement amplitude is larger than 20 mm. At
+loading process, when the displacement reaches +120 mm, both skeleton curves begin to slightly
+the positive loading process, when the displacement reaches +120 mm, both skeleton curves begin to
+decrease. While the descending displacements at the negative loading process of the experiment and
+slightly decrease. While the descending displacements at the negative loading process of the
+the simulation are −140 mm and −120 mm, respectively.
+experiment and the simulation are −140 mm and −120 mm, respectively.
+During each cycle of loading, the stiffness is calculated according to Equation (2), in which Fimax
+is the force
+corresponding to the maximum positive displacement ∆imax in the ith cycle, and Fimin is
+6
+6
+the force corresponding to the maximum negative displacement ∆imin in ith cycle.
+4
+
+|F
+| + |Fimin |
+K(∆i ) = imax
+|∆imax | + |∆
+2 imin |
+
+2
+
+(2)
+
+Force (kN)
+
+Force (kN)
+
+4
+
+For0 a given cycle i, the dissipated energy due to plastic
+0 deformation and friction equals to the area
+enveloped by the hysteresis curve.
+-2
+
+-2
+-4
+-6
+-200 -150 -100 -50
+
+0
+
+50
+
+Displacement (mm)
+(a)
+
+100
+
+150
+
+Experiment
+Simulation
+
+-4
+
+Experiment
+Simulation
+
+200
+
+-6
+-200 -150 -100 -50
+
+0
+
+50
+
+100
+
+150
+
+Displacement (mm)
+(b)
+
+Figure 8. Results of the experiment and the simulation: (a) Hysteresis curves; (b) Skeleton curves.
+
+200
+
+6
+
+6
+
+4
+
+4
+
+2
+
+2
+
+Force (kN)
+
+Force (kN)
+
+However, the unloading stiffness is about 35% smaller than the experimental results, which is also
+seen in [24]. Figure 8b presents the skeleton curves of both experiment and simulation, and both of
+the curves show the nonlinear behavior when the displacement amplitude is larger than 20 mm. At
+the positive loading process, when the displacement reaches +120 mm, both skeleton curves begin to
+slightly decrease. While the descending displacements at the negative loading process of7 ofthe
+Appl. Sci. 2019, 9, 3429
+20
+experiment and the simulation are −140 mm and −120 mm, respectively.
+
+0
+
+0
+-2
+
+-2
+-4
+-6
+-200 -150 -100 -50
+
+0
+
+50
+
+100
+
+150
+
+Experiment
+Simulation
+
+-4
+
+Experiment
+Simulation
+
+-6
+-200 -150 -100 -50
+
+200
+
+0
+
+50
+
+100
+
+150
+
+200
+
+Displacement (mm)
+(b)
+
+Displacement (mm)
+(a)
+
+Figure 8. Results of the experiment and the simulation: (a) Hysteresis curves; (b) Skeleton curves.
+
+During
+each
+cycle
+loading, the stiffness is calculated according to Equation (2), in which 7Fofi max
+Appl. Sci.
+2019, 9,
+x FOR
+PEERofREVIEW
+21
+
+Figure 9 shows the stiffness and dissipated energy of each cycle derived from both the experiment
+and
+the
+numerical
+results of
+In Figure
+9a, displacement
+the two curves Δhave in
+thethe
+identical
+changing
+is the force
+corresponding
+tothis
+the study.
+maximum
+positive
+ith cycle,
+and Fi trend
+i max
+min is
+except
+the
+points
+of
+the
+first
+cycle.
+The
+error
+of
+0.381
+between
+the
+two
+points
+can
+be
+attributed
+to the
+attributed
+to
+the
+tightness
+between
+the
+mortise
+and
+tenon
+during
+installation
+in
+the
+experiment,
+which
+the force corresponding to the maximum negative displacement Δ i min in ith cycle.
+tightness
+between
+the on
+mortise
+andand
+tenon
+during
+the experiment,
+which
+exerts some
+exerts
+some
+pre-stress
+the joints
+leads
+to theinstallation
+increase of in
+rotational
+stiffness of
+the experimental
+F
++
+F
+pre-stress
+on
+the
+joints
+and
+leads
+to
+the
+increase
+of
+rotational
+stiffness
+of
+the
+experimental
+model.
+With
+i
+m
+ax
+i
+m
+in
+model. With the first point excluded, the
+numerical
+results well reflect the stiffness degradation
+K (Δ
+(2)of
+i) =
+Δ
++
+Δ
+the first
+point
+excluded,
+the numerical
+results
+wellcycle
+degradation
+of itthe
+timber
+frame.
+ireflect
+m ax
+i m instiffness
+the
+timber
+frame.
+The dissipated
+energy
+of each
+isthe
+plotted
+in Figure
+9b, and
+shows
+that
+the
+The
+dissipated
+energy
+of
+each
+cycle
+is
+plotted
+in
+Figure
+9b,
+and
+it
+shows
+that
+the
+two
+curves
+have
+two curves
+have similar
+tendency,
+although
+energy
+dissipation
+capacity
+FE model
+is
+For a given
+cycle i, variation
+the dissipated
+energy
+due to the
+plastic
+deformation
+and
+frictionofequals
+to the
+similarthan
+variation
+tendency, although
+the energy
+dissipation
+capacity
+of FEwhen
+modelthe
+is lower
+than the
+lower
+the
+experiment.
+The
+hysteresis
+curves
+of
+the
+experiment
+displacement
+area enveloped by the hysteresis curve.
+experiment.
+The hysteresis
+curves
+of the
+experiment
+when
+the8a,
+displacement
+amplitude
+is lessofthan
+amplitude
+than the
+80 mm
+are full
+as can
+be seen in
+Figure
+while
+the enveloped
+curves
+the
+Figureis9less
+shows
+stiffness
+and
+dissipated
+energy
+of each
+cycle
+derived from
+both the
+80
+mm
+are
+full
+as
+can
+be
+seen
+in
+Figure
+8a,
+while
+the
+enveloped
+curves
+of
+the
+simulation
+are
+reversed
+simulation
+Z-shaped,
+which
+leads
+to theInerrors
+larger
+than
+0.2.curves
+Whenhave
+the displacement
+experimentare
+andreversed
+the numerical
+results
+of this
+study.
+Figure
+9a, the
+two
+the identical
+Z-shaped, which
+leads
+to
+the the
+errors
+larger
+than
+0.2. When
+the
+displacement
+amplitude
+reaches
+mm,
+amplitude
+reaches
+100
+mm,
+errors
+are
+all
+within
+0.15.
+Therefore,
+to
+a
+large
+extent,
+FE100
+model
+changing trend except the points of the first cycle. The error of 0.381 between the two the
+points
+can
+be
+thethis
+errors
+arecan
+all well
+within
+0.15. Therefore,
+to a large
+extent,ofthe
+model
+of frame
+this study
+well simulate
+of
+study
+simulate
+the hysteresis
+properties
+theFE
+real
+timber
+withcan
+straight
+mortisethe hysteresis
+tenon
+joints. properties of the real timber frame with straight mortise-tenon joints.
+1400
+
+120
+
+1200
+
+Dissipated Energy (J)
+
+Stiffness (N/mm)
+
+100
+Experiment
+Simulation
+
+80
+60
+40
+20
+0
+
+Experiment
+Simulation
+
+1000
+800
+600
+400
+200
+
+0
+
+50
+
+100
+
+150
+
+0
+
+200
+
+0
+
+50
+
+Displacement (mm)
+
+100
+
+150
+
+200
+
+Displacement (mm)
+
+(a)
+
+(b)
+
+Figure 9. Results
+Results from
+from the
+the experiment
+experiment and
+and the simulation: (a)
+(a) Stiffness;
+Stiffness; (b) dissipated energy.
+
+3. Stress
+Stress Analysis
+Analysis
+3.
+To clearly
+of the
+to lateral
+To
+clearly understand
+understand the
+the deformative
+deformative characteristics
+characteristics of
+the timber
+timber frame
+frame subjected
+subjected to
+lateral
+cyclic
+loading,
+the
+deformed
+models
+and
+the
+minimum
+principal
+stress
+at
+the
+middle
+plane
+are
+plotted
+cyclic loading, the deformed models and the minimum principal stress at the middle plane are plotted
+in Figure
+Figure 10.
+10. Figure
+Figure 10a,b
+10a,b show
+show the
+the compressive
+compressive state
+state of
+of the
+the frame
+frame under
+under the
+the displacement
+displacement amplitude
+amplitude
+in
+of +180
+mm and
+and −180
+−180 mm,
+mm, respectively.
+respectively. ItIt can
+can be
+be seen
+seen that
+that since
+since the
+the frame
+frame is
+is symmetrical,
+the two
+of
++180 mm
+symmetrical, the
+two
+deformed
+models
+are
+also
+symmetrical.
+deformed models are also symmetrical.
+
+1
+
+2
+
+5
+
+6
+
+0.51
+-0.82
+-2.14
+-3.47
+-4.80
+-6.12
+-7.45
+
+1
+
+2
+
+5
+
+6
+
+To clearly understand the deformative characteristics of the timber frame subjected to lateral
+cyclic loading, the deformed models and the minimum principal stress at the middle plane are plotted
+in Figure 10. Figure 10a,b show the compressive state of the frame under the displacement amplitude
+of +180
+mm9,and
+two
+Appl.
+Sci. 2019,
+3429−180 mm, respectively. It can be seen that since the frame is symmetrical, the
+8 of
+20
+deformed models are also symmetrical.
+
+(a)
+
+(b)
+
+Figure
+Figure10.
+10.Minimum
+Minimumprincipal
+principalstress
+stressatatthe
+themiddle
+middleplane:
+plane:(a)
+(a)+180
++180 mm;
+mm; (b)
+(b) −180
+−180 mm.
+
+The
+deformed state
+stateof
+ofthe
+themortise-tenon
+mortise-tenonjoints
+jointsininFigure
+Figure
+10a
+is given
+in Figure
+It
+The detailed deformed
+10a
+is given
+in Figure
+11. 11.
+It can
+
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+8 of 21
+Appl.
+Sci.seen
+2019,
+9,when
+x FOR
+PEER
+REVIEW
+21
+can
+be
+when
+top
+thecolumns
+columnsare
+aremoving
+movingright
+rightat
+at the
+the displacement
+displacement of +180
+the
+be
+seen
+thatthat
+thethe
+top
+of of
+the
++180 mm,8 of
+the
+
+columns
+the
+are
+at
+the
+intersection
+points
+of
+66 and
+value
+columns and
+andprincipal
+the beam
+beamstress
+are in
+in
+contact
+atat
+the
+intersection
+points
+of 2,
+2, 3,
+3,
+and7.7. The
+The largest
+largest
+value of
+of
+compressive
+iscontact
+15.4 MPa
+intersection
+point
+2. When
+the
+displacement
+amplitude
+is
+compressiveprincipal
+principalstress
+stressisis15.4
+15.4MPa
+MPaat
+atintersection
+intersectionpoint
+point2.2. When
+When the
+the displacement
+displacement amplitude
+amplitude is
+is
+compressive
+−180 mm, the columns and the beam compress each other at the intersection points of 1, 4, 5 and 8,
+−180 mm,
+mm, the
+the columns
+columns and
+and the beam
+beam compress
+compress each
+each other
+other at
+at the
+the intersection
+intersection points
+points of
+of 1,
+1, 4,
+4, 55 and
+and 8,
+8,
+−180
+inversely,
+as shown
+in Figurethe
+10b.
+inversely,
+as
+shown
+in
+Figure
+10b.
+inversely, as shown in Figure 10b.
+
+Figure
+11. The
+minimum principal
+stress of
+the joints
+when the
+displacement =
+= +180 mm.
+Figure
+Figure11.
+11.The
+Theminimum
+minimumprincipal
+principalstress
+stressof
+ofthe
+thejoints
+jointswhen
+whenthe
+thedisplacement
+displacement =+180
++180 mm.
+mm.
+
+The
+vertical compressive
+compressivestress
+stress
+beam,
+denoted
+asinS33
+in Figure
+12, is vertical
+to the
+The vertical
+in in
+thethe
+beam,
+denoted
+as S33
+Figure
+12, is vertical
+to the direction
+The vertical compressive stress in the beam, denoted as S33 in Figure 12, is vertical to the
+direction
+of the
+timber
+and isbycaused
+by thebetween
+contact between
+the columns
+and the
+beam.value
+Larger
+of the timber
+grain
+andgrain
+is caused
+the contact
+the columns
+and the beam.
+Larger
+of
+direction of the timber grain and is caused by the contact between the columns and the beam. Larger
+value
+S33
+in the
+beamgreater
+meanscontact
+greater force
+contact
+force derived
+the column.
+If the forces
+contactexerted
+forces
+S33 inof
+the
+beam
+means
+derived
+from thefrom
+column.
+If the contact
+value of S33 in the beam means greater contact force derived from the column. If the contact forces
+exerted
+around
+the two intersection
+of a mortise-tenon
+(for intersection
+example intersection
+points
+2
+around the
+two intersection
+points ofpoints
+a mortise-tenon
+joint (for joint
+example
+points 2 and
+3) get
+exerted around the two intersection points of a mortise-tenon joint (for example intersection points 2
+and
+3) get
+themoment
+bendingcaused
+moment
+byforces
+the two
+forces
+also be which
+greater,
+which
+then
+larger,
+thelarger,
+bending
+bycaused
+the two
+will
+also will
+be greater,
+then
+leads
+to leads
+more
+and 3) get larger, the bending moment caused by the two forces will also be greater, which then leads
+to
+more demand
+for theloadings
+lateral loadings
+onof
+the
+top
+of the columns.
+demand
+for the lateral
+on the top
+the
+columns.
+to more demand for the lateral loadings on the top of the columns.
+
+Figure 12. S33 of the beam when the displacement = +180 mm.
+Figure 12. S33 of the beam when the displacement = +180 mm.
+Figure 12. S33 of the beam when the displacement = +180 mm.
+
+Figure 13 shows the vertical compressive stresses S33 at the intersection points 2 and 3 with
+Figure 13 shows the vertical compressive stresses S33 at the intersection points 2 and 3 with
+respect to the lateral loading displacement. It can be seen from the figure that when the timber frame
+respect to the lateral loading displacement. It can be seen from the figure that when the timber frame
+moves left, the vertical compressive stresses are close to zero, which means the contact at these
+moves left, the vertical compressive stresses are close to zero, which means the contact at these
+intersection points makes almost no contribution to the stiffness and strength of the timber frame.
+intersection points makes almost no contribution to the stiffness and strength of the timber frame.
+This is consistent with the phenomenon seen in Figure 10b. However, when the displacement
+
+Appl. Sci. 2019, 9, 3429
+
+9 of 20
+
+Figure 13 shows the vertical compressive stresses S33 at the intersection points 2 and 3 with respect
+to the lateral loading displacement. It can be seen from the figure that when the timber frame moves
+left, the vertical compressive stresses are close to zero, which means the contact at these intersection
+points makes almost no contribution to the stiffness and strength of the timber frame. This is consistent
+with the phenomenon seen in Figure 10b. However, when the displacement amplitude increases from
+0 mm to +180 mm, the envelope curve of S33 is similar to that of the reaction force of the timber frame,
+which confirms that larger values of S33 in the intersection points will demand greater lateral loadings
+on the top of the columns. Therefore, the envelope curves of S33 at all the eight intersection points are
+plotted in Figure 14. The symmetrical intersection points, for example 1 and 6, in the beam have the
+symmetrical
+curves.
+At different displacement magnitudes, the vertical compressive stresses
+Appl.
+Sci. 2019, 9,envelope
+x FOR PEER
+REVIEW
+9 of 21
+Appl.
+Sci.
+2019,
+9,
+x
+FOR
+PEER
+REVIEW
+9 of 21
+of intersection points 4 and 7 have larger values than those of other points.
+
+(MPa)
+S33S33
+(MPa)
+
+0
+0
+-2
+-2
+-4
+-4
+-6
+-6
+
+2
+23
+3
+
+-8
+0
+50 100
+-8-200 -150 -100 -50
+(mm)
+-200 -150 -100Displacement
+-50
+0
+50 100
+
+150
+150
+
+200
+200
+
+Displacement (mm)
+
+Figure 13. S33 of points 2 and 3.
+Figure 13.
+13. S33
+S33 of
+of points
+points 22 and
+and 3.
+3.
+Figure
+0
+0
+
+(MPa)
+S33S33
+(MPa)
+
+-2
+-2
+
+1
+5
+1
+8
+5
+4
+8
+
+6
+2
+6
+3
+2
+7
+3
+
+4
+
+7
+
+-4
+-4
+-6
+-6
+-8
+-200 -150 -100 -50
+0
+50 100
+-8
+(mm)
+-200 -150 -100Displacement
+-50
+0
+50 100
+
+150
+
+200
+
+150
+
+200
+
+Displacement (mm)
+
+Figure 14. Envelope curves of S33.
+Figure 14. Envelope curves of S33.
+4. Damage of Mortise-Tenon JointFigure 14. Envelope curves of S33.
+
+4. Damage of Mortise-tenon Joint
+To study
+the influences ofJoint
+mortise-tenon joint damages on the seismic performance of the timber
+4. Damage
+of Mortise-tenon
+To
+study
+the
+influences
+of
+mortise-tenon
+damages
+the seismic
+of the timber
+frame. Three different types of damages arejoint
+presented
+andonidealized,
+soperformance
+that the FE model
+can be
+ToThree
+study different
+the influences
+ofofmortise-tenon
+joint
+damages
+on
+the seismic
+performance
+of the timber
+frame.
+types
+damages
+are
+presented
+and
+idealized,
+so
+that
+the
+FE
+model
+can be
+modified accordingly.
+frame. Three
+different types of damages are presented and idealized, so that the FE model can be
+modified
+accordingly.
+modified
+accordingly.
+4.1. Gap between Mortise and Tenon
+4.1. Gap Between Mortise and Tenon
+In this
+section,
+the beam
+and column are initially assembled with a gap in the left mortise-tenon
+4.1. Gap
+Between
+Mortise
+and Tenon
+section,
+beam
+andas
+column
+are initially
+withgaps
+a gapare
+in10
+themm,
+left 20
+mortise-tenon
+joint In
+of this
+the frame
+or the
+in both
+joints
+illustrated
+in Figureassembled
+15. The preset
+mm, 30 mm,
+In
+section,
+the
+beam
+and10
+column
+aremodels
+initially
+assembled
+a gap
+inare
+the10
+leftmm,
+mortise-tenon
+joint
+of this
+the frame
+in both
+joints
+asdifferent
+illustrated
+in Figure
+15. Thewith
+preset
+gaps
+20
+30
+40 mm
+and
+50 mm,orwhich
+means
+are
+analyzed
+herein.
+Different
+models
+aremm,
+named
+joint
+of
+the
+frame
+or
+in
+both
+joints
+as
+illustrated
+in
+Figure
+15.
+The
+preset
+gaps
+are
+10
+mm,
+20
+mm,
+30
+mm,
+40
+mm
+and
+50
+mm,
+which
+means
+10
+different
+models
+are
+analyzed
+herein.
+Different
+models
+are
+by the length of the gap and a letter S (single joint damaged) or B (both joints damaged). For example,
+mm,
+40
+mm
+and
+50
+mm,
+which
+means
+10
+different
+models
+are
+analyzed
+herein.
+Different
+models
+are
+named by the length of the gap and a letter S (single joint damaged ) or B (both joints damaged). For
+named by40
+themm-S
+lengthmodel
+of themeans
+gap and
+letterbetween
+S (singlethe
+joint
+damaged
+or B (both
+joints
+For
+example,
+thea gap
+mortise
+and)tenon
+of the
+left damaged).
+joint is 40 mm
+example,
+40
+mm-S
+model
+means
+the
+gap
+between
+the
+mortise
+and
+tenon
+of
+the
+left
+joint
+is
+40
+mm
+while the right joint is intact.
+while the right joint is intact.
+
+4.1. Gap Between Mortise and Tenon
+In this section, the beam and column are initially assembled with a gap in the left mortise-tenon
+joint
+of the frame or in both joints as illustrated in Figure 15. The preset gaps are 10 mm, 20 mm,
+30
+Appl. Sci. 2019, 9, 3429
+10 of 20
+mm, 40 mm and 50 mm, which means 10 different models are analyzed herein. Different models are
+named by the length of the gap and a letter S (single joint damaged ) or B (both joints damaged). For
+40
+mm-S model
+means
+the gap
+between
+thebetween
+mortise and
+of and
+the left
+jointofisthe
+40 mm
+whileisthe
+example,
+40 mm-S
+model
+means
+the gap
+the tenon
+mortise
+tenon
+left joint
+40right
+mm
+joint
+intact.
+whileisthe
+right joint is intact.
+
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+
+10 of 21
+
+Figure
+Figure 15.
+15. Gap
+Gap between
+between the
+the mortise
+mortise and
+and tenon.
+tenon.
+
+6
+
+6
+
+4
+
+4
+
+2
+
+2
+
+Force (kN)
+
+Force (kN)
+
+Figure 16 gives the hysteresis curves of the undamaged model and the damaged models when
+Figure
+It can
+can be
+be seen
+seen that
+that the
+the gap
+gap between
+between the
+the mortise
+mortise and
+and the
+the tenon
+tenon
+the displacement amplitude is 180 mm. It
+can decrease
+decrease the maximum
+maximum force and the stiffness of the timber frame. However,
+However, when
+when the
+the gap
+gap is
+can
+larger than 20 mm, the maximum force and the stiffness will not change a lot with the increase of the
+gap. This
+This is
+is also
+also clearly
+clearly demonstrated
+demonstrated in
+in the
+the normalized
+normalized stiffness
+stiffness as shown in Figure 17. Here,
+Here, the
+gap.
+the stiffness
+stiffness of the
+normalized stiffness is derived by dividing the stiffness of the damaged model by the
+undamaged model at the same displacement amplitude.
+
+0
+-2
+
+0
+-2
+
+undamaged
+20mm-S
+40mm-S
+
+-4
+-6
+-200 -150 -100 -50
+
+0
+
+50
+
+Displacement (mm)
+(a)
+
+10mm-S
+30mm-S
+50mm-S
+
+100
+
+150
+
+undamaged
+20mm-B
+40mm-B
+
+-4
+200
+
+-6
+-200 -150 -100 -50
+
+0
+
+50
+
+10mm-B
+30mm-B
+50mm-B
+
+100
+
+150
+
+200
+
+Displacement (mm)
+(b)
+
+Figure 16.
+curves
+of the
+(a) Single
+joint damaged
+models; models;
+(b) both joints
+damaged
+16.Hysteresis
+Hysteresis
+curves
+of last
+the cycle:
+last cycle:
+(a) Single
+joint damaged
+(b) both
+joints
+models.
+damaged models.
+
+As is
+is shown
+shown in
+stiffnesses
+of
+As
+in Figure
+Figure 17,
+17,when
+whenthe
+thedisplacement
+displacementamplitude
+amplitudeisissmall,
+small,the
+thenormalized
+normalized
+stiffnesses
+all
+damaged
+models
+are
+larger
+than
+0.9.
+The
+normalized
+stiffness
+almost
+decreases
+linearly
+with
+the
+of all damaged models are larger than 0.9. The normalized stiffness almost decreases linearly with
+enlargement
+of theofgap
+displacement
+amplitude
+is greateristhan
+60 mm.
+From
+the comparison
+the
+enlargement
+thewhen
+gap the
+when
+the displacement
+amplitude
+greater
+than
+60 mm.
+From the
+between
+these
+two
+figures,
+it
+can
+be
+concluded
+that
+when
+the
+length
+of
+the
+gap
+remains
+the
+the
+comparison between these two figures, it can be concluded that when the length of the gapsame,
+remains
+stiffness
+of
+the
+model
+with
+both
+joints
+damaged
+is
+slightly
+smaller
+than
+that
+of
+the
+model
+with
+only
+one
+the same, the stiffness of the model with both joints damaged is slightly smaller than that of the model
+joint damaged.
+the gap reaches
+mm,
+thereaches
+normalized
+stiffness
+of these damaged
+models
+will
+with
+only one When
+joint damaged.
+When20the
+gap
+20 mm,
+the normalized
+stiffness
+of these
+become
+quite
+similar.
+This
+phenomenon
+can
+be
+attributed
+to
+the
+lack
+of
+contact
+between
+the
+external
+damaged models will become quite similar. This phenomenon can be attributed to the lack of contact
+surface ofthe
+theexternal
+columnsurface
+and theofvertical
+surface
+thevertical
+beam, which
+by red
+in Figure
+15. For
+between
+the column
+andofthe
+surfaceisofmarked
+the beam,
+which
+is marked
+by
+the undamaged
+the columns
+move
+back
+and
+forth, the
+external
+of the
+red
+in Figure 15.model,
+For thewhen
+undamaged
+model,
+when
+the
+columns
+move
+back surfaces
+and forth,
+the columns
+external
+and the vertical
+surfaces of
+thethe
+beam
+will besurfaces
+in contact.
+Thebeam
+compressive
+of the The
+vertical
+surface of
+surfaces
+of the columns
+and
+vertical
+of the
+will be stress
+in contact.
+compressive
+the
+beam
+marked
+in
+Figure
+15
+is
+presented
+in
+Figure
+18a
+when
+the
+displacement
+is
++180
+mm.
+If there
+is
+stress of the vertical surface of the beam marked in Figure 15 is presented in Figure 18a when
+the
+a gap betweenisthe
+column
+and
+the is
+beam,
+compressive
+stress and
+between
+these surfaces
+will be smaller
+displacement
++180
+mm. If
+there
+a gapthe
+between
+the column
+the beam,
+the compressive
+stress
+
+between these surfaces will be smaller and even become zero, thus the maximum force and the
+stiffness of the frame will decrease. Figure 18b gives the compressive stress of the 10 mm-S model at
+the displacement of +180 mm, in which the maximum compressive stress is much smaller than that
+of the undamaged model. When the gap is larger than 10 mm, these surfaces will no longer squeeze
+with each other, therefore no compressive stress in the vertical surface of the beam is detected and
+
+Appl. Sci. 2019, 9, 3429
+
+11 of 20
+
+and even become zero, thus the maximum force and the stiffness of the frame will decrease. Figure 18b
+gives the compressive stress of the 10 mm-S model at the displacement of +180 mm, in which the
+maximum compressive stress is much smaller than that of the undamaged model. When the gap is
+larger than 10 mm, these surfaces will no longer squeeze with each other, therefore no compressive
+stress in the vertical surface of the beam is detected and the maximum force and the stiffness of these
+Appl. Sci.
+Sci. 2019,
+2019,
+9, xx FOR
+FOR
+PEER REVIEW
+REVIEW
+11 of
+of 21
+21
+models
+are very
+close.
+Appl.
+9,
+PEER
+11
+1.1
+1.1
+
+Normalized
+NormalizedStiffness
+Stiffness
+
+Normalized
+NormalizedStiffness
+Stiffness
+
+1.1
+1.1
+
+1.0
+1.0
+
+0.9
+0.9
+
+0.8
+0.8
+
+0.7
+0.7
+00
+
+undamaged
+undamaged
+20mm-S
+20mm-S
+40mm-S
+40mm-S
+
+50
+50
+
+10mm-S
+10mm-S
+30mm-S
+30mm-S
+50mm-S
+50mm-S
+
+100
+100
+
+150
+150
+
+1.0
+1.0
+
+0.9
+0.9
+
+0.8
+0.8
+
+0.7
+0.7
+00
+
+200
+200
+
+Displacement (mm)
+(mm)
+Displacement
+(a)
+(a)
+
+undamaged
+undamaged
+20mm-B
+20mm-B
+40mm-B
+40mm-B
+
+10mm-B
+10mm-B
+30mm-B
+30mm-B
+50mm-B
+50mm-B
+
+50
+50
+
+100
+100
+
+150
+150
+
+200
+200
+
+Displacement (mm)
+(mm)
+Displacement
+(b)
+(b)
+
+Figure 17.
+17. Normalized
+Normalized
+stiffness:
+(a)
+Single
+joint
+damaged
+models; (b)
+(b) both
+both joints
+joints damaged
+damaged models.
+models.
+Figure
+Normalized stiffness:
+stiffness: (a)
+(a) Single
+Single joint
+joint damaged
+damaged models;
+
+20.00
+20.00
+18.33
+18.33
+16.67
+16.67
+15.00
+15.00
+13.33
+13.33
+11.67
+11.67
+10.00
+10.00
+8.33
+8.33
+6.67
+6.67
+5.00
+5.00
+3.33
+3.33
+1.67
+1.67
+0.00
+0.00
+
+(a)
+(a)
+
+(b)
+(b)
+
+Figure 18.
+18. Compressive
+Compressive stress
+stress of
+of the
+the vertical
+vertical surface
+surface of
+of the
+the beam
+beam when
+when the
+the displacement
+displacement is
+is +180
++180 mm:
+mm:
+Figure
+Undamaged model;
+model; (b)
+(b) 10
+10 mm-S
+mm-S model.
+model.
+(a) Undamaged
+(a)
+Undamaged
+model;
+(b)
+10
+mm-S
+model.
+
+Similarly,
+is is
+calculated
+byby
+dividing
+thethe
+dissipated
+energy
+of the
+Similarly,the
+thenormalized
+normalizeddissipated
+dissipatedenergy
+energy
+is
+calculated
+by
+dividing
+the
+dissipated
+energy
+of
+Similarly,
+the
+normalized
+dissipated
+energy
+calculated
+dividing
+dissipated
+energy
+of
+damaged
+model
+by
+that
+of
+the
+undamaged
+model
+at
+the
+same
+displacement,
+as
+is
+plotted
+in
+Figure
+19.
+the
+damaged
+model
+by
+that
+of
+the
+undamaged
+model
+at
+the
+same
+displacement,
+as
+is
+plotted
+in
+Figure
+the damaged model by that of the undamaged model at the same displacement, as is plotted in Figure
+When
+thethe
+displacement
+amplitude
+is 20
+mm,
+the
+total
+very
+19. When
+When
+the
+displacement
+amplitude
+is 20
+20
+mm,
+the
+totaldissipated
+dissipatedenergy
+energyof
+ofeach
+eachmodel
+modelis
+is also
+also very
+19.
+displacement
+amplitude
+is
+mm,
+the
+total
+dissipated
+energy
+of
+each
+model
+is
+also
+small, so
+so that
+that the
+the lack
+lack of
+of contact
+mentioned above
+above has
+has aa great
+great effect
+effect on
+on the
+the normalized
+normalized dissipated
+dissipated
+small,
+contact mentioned
+on
+the
+normalized
+dissipated
+energy
+and
+makes
+these
+values
+much
+bigger
+than
+the
+values
+of
+other
+displacement
+amplitudes.
+energy
+and
+makes
+these
+values
+much
+bigger
+than
+displacement
+amplitudes.
+When
+energy and makes these values much bigger than the values of other displacement amplitudes. When
+the
+displacement
+amplitude
+is
+greater
+than
+40
+mm,
+the
+normalized
+dissipated
+energies
+of
+all
+damaged
+displacement amplitude
+amplitude is
+is greater
+greater than
+than 40 mm, the normalized dissipated energies
+energies of all damaged
+the displacement
+models
+are
+closely
+around
+a
+unit
+and
+the
+most
+reduction
+of
+the
+dissipated
+energy
+is about
+about 9%
+9% at
+at the
+the
+models are closely around a unit and the most reduction of the dissipated energy is
+displacement
+of
+180
+mm
+for
+single
+tenon
+damaged
+model
+and
+160
+mm
+for
+both
+tenon
+damaged
+model.
+displacement of
+of 180
+180 mm
+mm for
+for single
+single tenon
+tenon damaged
+damaged model
+model and
+and 160
+160 mm
+mm for
+for both
+both tenon
+tenon damaged
+damaged
+displacement
+Besides,
+the
+normalized
+dissipated
+energy
+slightly
+decreases
+with
+the
+increase
+of
+the
+displacement
+model.
+Besides,
+the
+normalized
+dissipated
+energy
+slightly
+decreases
+with
+the
+increase
+of the
+the
+model. Besides, the normalized dissipated energy slightly decreases with the increase of
+amplitude
+although
+some
+fluctuations
+are
+observed.
+This
+is
+because
+that
+in
+the
+loading
+process
+the
+displacement
+amplitude
+although
+some
+fluctuations
+are
+observed.
+This
+is
+because
+that
+in
+the
+loading
+displacement amplitude although some fluctuations are observed. This is because that in the loading
+reaction
+force
+of theforce
+undamaged
+model is larger
+those
+of the
+damaged
+models,models,
+which makes
+process the
+the
+reaction
+force
+of the
+the undamaged
+undamaged
+modelthan
+is larger
+larger
+than
+those
+of the
+the damaged
+damaged
+models,
+which
+process
+reaction
+of
+model
+is
+than
+those
+of
+which
+the
+enveloped
+area
+of
+the
+undamaged
+model
+larger
+than
+the
+others;
+while
+in
+the
+unloading
+process,
+makes
+the
+enveloped
+area
+of
+the
+undamaged
+model
+larger
+than
+the
+others;
+while
+in
+the
+unloading
+makes the enveloped area of the undamaged model larger than the others; while in the unloading
+the
+reaction
+force of force
+the
+model is
+still greater
+than the
+damaged
+models,
+whichwhich
+leads
+process,
+the reaction
+reaction
+forceundamaged
+of the
+the undamaged
+undamaged
+model
+is still
+still greater
+greater
+than
+the damaged
+damaged
+models,
+which
+process,
+the
+of
+model
+is
+than
+the
+models,
+leads to
+to the
+the smaller
+smaller enveloped
+enveloped area
+area of
+of the
+the undamaged
+undamaged model,
+model, as
+as can
+can be
+be seen
+seen in
+in Figure
+Figure 16.
+16. Therefore,
+Therefore,
+leads
+the
+normalized
+dissipated
+energies
+of
+the
+damaged
+models
+are
+close
+to
+one
+when
+the
+displacement
+the normalized dissipated energies of the damaged models are close to one when the displacement
+is larger
+larger than
+than 40
+40 mm.
+mm.
+is
+
+Appl. Sci. 2019, 9, 3429
+
+12 of 20
+
+Normalized Dissipated Energy
+
+Normalized Dissipated Energy
+
+to the smaller enveloped area of the undamaged model, as can be seen in Figure 16. Therefore, the
+normalized
+Appl. Sci. 2019, dissipated
+9, x FOR PEERenergies
+REVIEW of the damaged models are close to one when the displacement
+12 of is
+21
+larger
+than
+Appl. Sci.
+2019,40
+9, xmm.
+FOR PEER REVIEW
+12 of 21
+
+1.6
+
+undamaged
+20mm-S
+40mm-S
+
+1.4
+
+10mm-S
+30mm-S
+50mm-S
+
+1.2
+
+1.0
+0
+
+50
+
+100
+
+150
+
+Displacement
+(mm)
+(a)
+
+200
+
+1.6
+
+undamaged
+20mm-B
+40mm-B
+
+1.4
+
+10mm-B
+30mm-B
+50mm-B
+
+1.2
+
+1.0
+0
+
+50
+
+100
+
+150
+
+200
+
+Displacement
+(mm)
+(b)
+
+(a)
+(b)
+Figure 19. Normalized dissipated energy: (a) Single joint damaged models; (b) both joints damaged
+dissipated
+energy:
+(a) Single
+joint damaged
+models;models;
+(b) both (b)
+joints
+damaged
+Figure
+19. Normalized
+Normalized
+dissipated
+energy:
+(a) Single
+joint damaged
+both
+joints
+models.19.
+models. models.
+damaged
+
+4.2. Damage in the Top of the Tenon
+4.2.
+Damage in
+in the
+the Top
+4.2. Damage
+Top of
+of the
+the Tenon
+Tenon
+As can be seen in Figure 3b, the tenon part is often damaged and the cross-section of this part
+As
+be
+in
+3b,
+the
+part is
+damaged
+and
+the
+of
+part
+As can
+can
+be seen
+seen
+in Figure
+Figure
+3b,upper
+the tenon
+tenon
+is often
+often
+damaged
+andmortise
+the cross-section
+cross-section
+of this
+this
+decreases
+a lot,
+especially
+in the
+placepart
+where
+the tenon
+and the
+are in contact.
+In part
+this
+decreases
+a
+lot,
+especially
+in
+the
+upper
+place
+where
+the
+tenon
+and
+the
+mortise
+are
+in
+contact.
+In
+this
+decreases
+a
+lot,
+especially
+in
+the
+upper
+place
+where
+the
+tenon
+and
+the
+mortise
+are
+in
+contact.
+In
+this
+section, this type of damage is simplified by reducing the height of the tenon of the left joint, with the
+section,
+this
+type
+is
+by
+the
+of
+tenon
+of
+left joint,
+with
+section,
+thiswidth
+type of
+ofofdamage
+damage
+is simplified
+simplified
+by reducing
+reducing
+the height
+height
+of the
+the
+tenon
+of the
+the
+with the
+the
+length and
+the tenon
+remain unchanged,
+while
+the
+tenon
+of the
+right
+jointleft
+is joint,
+not damaged,
+length
+and
+width
+of
+the
+tenon
+remain
+unchanged,
+while
+the
+tenon
+of
+the
+right
+joint
+is
+not
+damaged,
+length
+andinwidth
+of20.
+theThe
+tenon
+remain
+unchanged,
+whileisthe
+of the
+joint isofnot
+as shown
+Figure
+original
+height
+of the tenon
+180tenon
+mm, and
+theright
+reduction
+thedamaged,
+height is
+as
+shown
+in
+Figure
+20.
+The
+original
+height
+of
+the
+tenon
+is
+180
+mm,
+and
+the
+reduction
+of
+the
+height
+is
+as
+shown
+in
+Figure
+20.
+The
+original
+height
+of
+the
+tenon
+is
+180
+mm,
+and
+the
+reduction
+of
+the
+height
+is
+5 mm, 10 mm, 15 mm and 20 mm.
+55 mm,
+10
+mm,
+15
+mm
+and
+20
+mm.
+mm, 10 mm, 15 mm and 20 mm.
+
+Height reduction
+
+Cutoff part
+
+Figure 20. Damage in the top of the tenon.
+Figure 20. Damage in the top of the tenon.
+Figure 20. Damage in the top of the tenon.
+
+The hysteresis curves of the damaged models as well as the undamaged one are plotted in
+The hysteresis curves of the damaged models as well as the undamaged one are plotted in Figure
+Figure 21a, and the results of the last loading cycle are also given in Figure 21b for better comparison.
+The the
+hysteresis
+of the
+damaged
+models
+asgiven
+well asinthe
+undamaged
+one are
+plotted in Figure
+21a, and
+resultscurves
+of the last
+loading
+cycle
+are also
+Figure
+21b for better
+comparison.
+It can
+It can be seen from both figures that the reaction forces at different displacement amplitudes of the
+21a,
+and the
+results
+the lastthat
+loading
+cycle are forces
+also given
+in Figuredisplacement
+21b for better amplitudes
+comparison.of
+It can
+be seen
+from
+both offigures
+the reaction
+at different
+the
+damaged models are far smaller than those of the undamaged model, which indicates the smaller
+be
+seen
+from
+both
+figures
+that
+the
+reaction
+forces
+at
+different
+displacement
+amplitudes
+of
+the
+damaged models are far smaller than those of the undamaged model, which indicates the smaller
+stiffness of the damaged models. Besides, the areas enveloped by the curves, which are known as
+damaged
+are far smaller
+thosethe
+of areas
+the undamaged
+model,
+which indicates
+smaller
+stiffness ofmodels
+the damaged
+models.than
+Besides,
+enveloped by
+the curves,
+which arethe
+known
+as
+dissipated energy, decrease with the increase of the reduction of the tenon.
+stiffness
+of energy,
+the damaged
+models.
+Besides,
+theofareas
+enveloped
+curves, which are known as
+dissipated
+decrease
+with the
+increase
+the reduction
+ofby
+thethe
+tenon.
+dissipated energy, decrease with the increase of the reduction of the tenon.
+
+Displacement (mm)
+
+Displacement (mm)
+(a)
+
+(b)
+
+Figure 21. Hysteresis curves: (a) All cycles; (b) last cycle.
+Appl. Sci.
+9, 3429 of each models are demonstrated in Figure 22a. For clear comparison between
+13 of 20
+The2019,
+stiffnesses
+Appl.
+Sci.
+2019,
+9,
+x
+FOR
+PEER
+REVIEW
+13
+21
+the stiffnesses of the undamaged model and the damaged models, the normalized stiffnesses ofare
+
+Stiffness (N/mm)
+
+Normalized Stiffness
+
+Stiffness (N/mm)
+
+Normalized Stiffness
+
+Force (kN)
+
+Force (kN)
+
+plotted 6in Figure 22b by dividing the stiffness of the damaged models by that of the undamaged
+6
+model at the same displacement amplitude.
+From
+these two figures, it can be concluded that
+4
+4 the height reduction of the tenon can
+significantly decrease the stiffness of the damaged models, especially when the displacement
+2
+2
+amplitude
+is small. When the tenon is intact, it is initially
+in contact with the mortise, so that the
+interaction
+between
+the
+two
+parts
+works
+from
+the
+beginning.
+However, in the damaged models with
+0
+0
+a height reduction of the tenon, there is an empty space between the tenon and the mortise of the left
+-2
+joint, which
+indicates that the two parts are not in contact
+with each other at the very beginning.
+-2
+Therefore, the interaction between
+them takes effect when the columns movesundamaged
+laterally to different
+undamaged
+-4
+5 mm
+10 mm
+-4
+5
+mm
+10
+mm
+displacements for different height reductions of the tenon. Once the tenon and15the
+mortise
+begin to
+mm
+20 mm
+15 mm
+20 mm
+squeeze-6 each other, there will be a sudden increase in -6both the hysteresis curves and the stiffness
+-150 -100 -50
+0
+50 100 150 200
+-150
+-50 in0Figures
+50 100
+15022.200
+curves, -200
+which
+can-100
+be seen
+21 and
+It is clear -200
+in Figure
+22b that the
+normalized
+stiffnesses
+Displacement (mm)
+Displacement
+(mm)
+of the damaged models with height reductions of 5 mm, 10 mm, 15 mm and 20 mm get larger
+(a)
+(b)respectively. When these
+prominently at the displacements
+of 40 mm, 100 mm, 140 mm and 140 mm,
+displacements are not reached
+the corresponding
+stiffnesses of the
+Hysteresis
+cycles; (b)the
+lastnormalized
+cycle.
+Figure 21.by
+curves: (a) Allmodels,
+damaged models are very close. For example, the normalized stiffnesses of the four damaged models
+stiffnesses
+each
+are
+demonstrated
+in in
+Figure
+22a.
+For
+clear
+comparison
+between
+at theThe
+displacement
+20 models
+mm
+and
+40
+mm are around
+0.2 and
+0.3For
+respectively.
+Then,
+with
+the
+stiffnessesof
+ofof
+each
+models
+are
+demonstrated
+Figure
+22a.
+clear
+comparison
+between
+stiffnesses
+of
+the
+undamaged
+model
+and
+the
+damaged
+models,
+the
+normalized
+stiffnesses
+are
+plotted
+in
+displacement
+from 40 mm
+to and
+100 mm,
+the normalized
+of the 5mm-reduction
+the stiffnessesincreasing
+of the undamaged
+model
+the damaged
+models,stiffness
+the normalized
+stiffnesses are
+Figure is
+22b
+by dividing
+thedividing
+stiffness
+of
+the
+damaged
+models
+by these
+that
+ofthree
+thebyundamaged
+at the
+model
+larger
+than
+those ofthe
+other
+three of
+models,
+while
+models
+the similar
+plotted
+inmuch
+Figure
+22b by
+stiffness
+the
+damaged
+models
+that of have
+the model
+undamaged
+same displacement
+amplitude. amplitude.
+normalized
+model
+at thestiffness.
+same displacement
+From these two figures, it can be concluded that the height reduction of the tenon can
+1.2
+70
+significantly
+decrease the stiffness of the damaged models, especially when the displacement
+undamaged
+amplitude
+in contact with the mortise, so that the
+60 is small. When the tenon is intact, it is initially
+1.0
+5 mm
+10 mm
+interaction between the two parts
+works20from
+the beginning. However, in the damaged models with
+15
+mm
+mm
+50
+a height reduction of the tenon, there is an empty space 0.8
+between the tenon and the mortise of the left
+40
+joint, which indicates that the two parts are not in contact
+with each other at the very beginning.
+0.6
+Therefore,
+30 the interaction between them takes effect when the columns moves laterally to different
+0.4 Once the tenon and the mortise begin to
+displacements for different height reductions of the tenon.
+20
+squeeze each other, there will be a sudden increase in both the hysteresis curves
+and the stiffness
+undamaged
+0.2
+5 mm
+10 stiffnesses
+mm
+curves,10
+which can be seen in Figures 21 and 22. It is clear in Figure 22b that the normalized
+15 mm
+20 mm
+of the damaged
+models with height reductions of 5 mm,
+10 mm, 15 mm and 20 mm get larger
+0.0
+0
+0
+50
+100
+150
+200
+0
+100
+200
+prominently
+at the50displacements
+of 150
+40 mm, 100
+mm, 140 mm and 140 mm, respectively. When these
+Displacement (mm)
+Displacement (mm)
+displacements are not reached by the corresponding models, the normalized stiffnesses of the
+(a)
+(b)
+damaged models are very close. For example, the normalized stiffnesses of the four damaged models
+Figure
+normalized
+(a)
+(b)0.3
+normalized
+stiffness.
+Figure 22.
+22.
+Stiffness
+and
+normalized
+stiffness
+(a) Stiffness;
+at the displacement
+ofStiffness
+20 mmand
+and
+40 mm stiffness
+are around
+0.2 and
+respectively.
+Then, with the
+displacement increasing from 40 mm to 100 mm, the normalized stiffness of the 5mm-reduction
+From
+these larger
+two figures,
+it can be
+concluded
+the height
+of the
+tenonhave
+can significantly
+model
+is much
+than those
+of other
+threethat
+models,
+whilereduction
+these three
+models
+the similar
+decrease
+the
+stiffness
+of
+the
+damaged
+models,
+especially
+when
+the
+displacement
+amplitude
+is small.
+normalized stiffness.
+When the tenon is intact, it is initially in contact with the mortise, so that the interaction between the
+1.2
+two parts
+models with a height reduction of the
+70 works from the beginning. However, in the damaged
+tenon, there is an empty space
+between the tenon and the mortise of the left joint, which indicates
+undamaged
+60
+1.0
+5 mm with10each
+mm other at the
+that the two parts are not in contact
+very beginning. Therefore, the interaction
+15
+mm
+20
+mm
+50them takes effect when the columns moves laterally to different displacements for different
+between
+0.8
+height reductions
+of the tenon. Once the tenon and the mortise begin to squeeze each other, there
+40
+0.6 the stiffness curves, which can be seen in
+will be a sudden increase in both the hysteresis curves and
+30
+Figures 21 and 22. It is clear in Figure 22b that the normalized
+stiffnesses of the damaged models with
+0.4
+20
+height reductions
+of 5 mm, 10 mm, 15 mm and 20 mm get larger prominently at the displacements
+undamaged
+of 40 mm,
+When these displacements
+not
+reached
+5 mm are 10
+mm
+10 100 mm, 140 mm and 140 mm, respectively.0.2
+15 mm
+20 mm
+by the corresponding models, the normalized stiffnesses of the damaged models
+are very
+close. For
+0.0
+0
+50the displacement
+100
+150
+200and
+example, 0the normalized
+stiffnesses
+of the four
+of 20 mm
+50
+100
+150
+200damaged 0models at
+Displacement
+(mm) from 40 mm to
+40 mm are around 0.2
+and 0.3 respectively.
+Then, with the displacement
+increasing
+Displacement
+(mm)
+(a)
+
+(b)
+
+Figure 22. Stiffness and normalized stiffness (a) Stiffness; (b) normalized stiffness.
+
+Appl. Sci. 2019, 9, 3429
+
+14 of 20
+
+100
+the 9,normalized
+Appl.mm,
+Sci. 2019,
+x FOR PEER stiffness
+REVIEW of the 5mm-reduction model is much larger than those of other14three
+of 21
+models, while these three models have the similar normalized stiffness.
+stresses
+S33
+plotted
+in
+This phenomenon
+phenomenon can
+can be
+beseen
+seenmore
+moredirectly
+directlyfrom
+fromthe
+thevertical
+verticalcompressive
+compressive
+stresses
+S33
+plotted
+Figure
+23.23.
+Points
+1–4
+are
+in
+Figure
+Points
+1–4
+arethe
+theintersection
+intersectionpoints
+pointsofofthe
+theleft
+leftmortise-tenon
+mortise-tenonjoint,
+joint, while
+while points
+points 5–8 are
+related to the right joint, as can be seen in Figure 12. Since only the left joint is damaged,
+damaged, the envelope
+points
+1–4 1–4
+of the
+modelsmodels
+are quite
+different
+from the curves
+of the
+undamaged
+curves of
+ofS33
+S33at at
+points
+ofdamaged
+the damaged
+are
+quite different
+from the
+curves
+of the
+model. Whenmodel.
+the displacement
+small, the vertical
+compressive
+stresses
+S33 of the
+damaged
+undamaged
+When the is
+displacement
+is small,
+the vertical
+compressive
+stresses
+S33models
+of the
+at these four
+points
+nearly
+whichare
+arenearly
+far smaller
+than
+of the undamaged
+When the
+damaged
+models
+atare
+these
+four0,
+points
+0, which
+arethose
+far smaller
+than those ofmodel.
+the undamaged
+tenon and
+the the
+mortise
+ofand
+the left
+begin
+to squeeze
+other,
+S33 at these
+points
+will
+increase
+model.
+When
+tenon
+the joint
+mortise
+of the
+left jointeach
+begin
+to squeeze
+eachfour
+other,
+S33 at
+these
+four
+rapidly.will
+For increase
+instance,rapidly.
+from theFor
+envelope
+curve
+of S33
+point 1 of
+the 5ofmm-reduction
+be
+points
+instance,
+from
+the at
+envelope
+curve
+S33 at point model,
+1 of theit 5can
+mminferred that
+the interaction
+betweenthat
+the tenon
+and the mortise
+starts
+work
+when
+displacement
+reduction
+model,
+it can be inferred
+the interaction
+between
+the to
+tenon
+and
+the the
+mortise
+starts to
+is up to
+40 mm,
+which is identical
+22.
+work
+when
+the displacement
+is upwith
+to 40Figure
+mm, which
+is identical with Figure 22.
+0
+undamaged
+5mm
+10mm
+15mm
+20mm
+
+S33 (MPa)
+
+-2
+
+-4
+
+-6
+
+-8
+-200
+
+-150
+
+-100
+
+-50
+
+Point 5
+
+Point 2
+
+Point 1
+0
+
+0
+
+Displacement (mm)
+
+50
+
+100
+
+150
+
+20 -200
+
+-150
+
+-100
+
+-50
+
+Point 6
+00
+
+50
+
+100
+
+150
+
+Displacement (mm)
+
+Displacement (mm)
+
+Displacement (mm)
+
+(b)
+
+(c)
+
+(d)
+
+(a)
+
+200
+
+0
+undamaged
+5mm
+10mm
+15mm
+20mm
+
+S33 (MPa)
+
+-2
+
+-4
+
+-6
+
+-8
+0
+
+50
+
+100
+
+150
+
+Displacement (mm)
+
+(e)
+
+Point 7
+
+Point 4
+
+Point 3
+200-200
+
+-150
+
+-100
+
+-50
+
+00
+
+50
+
+Point 8
+
+100
+
+150
+
+200 -200
+
+-150
+
+-100
+
+-50
+
+Displacement (mm)
+
+Displacement (mm)
+
+Displacement (mm)
+
+(f)
+
+(g)
+
+(h)
+
+0
+
+Figure 23. Envelope curves
+curves of
+of S33:
+S33: (a)
+(a) Point
+Point 1;
+1;(b)
+(b)point
+point2;2;(c)
+(c)point
+point5;5;(d)
+(d)point
+point6;6;(e)
+(e)point
+point3;3;
+point
+(f)(f)
+point
+4;
+(g)
+point
+7;
+(h)
+point
+8.
+4; (g) point 7; (h) point 8.
+
+The normalized
+dissipated energy
+energy is
+is plotted
+plotted in
+in Figure
+Figure 24
+24 by
+The
+normalized dissipated
+by dividing
+dividing the
+the dissipated
+dissipated energy
+energy of
+of
+the damaged
+by the
+the
+damaged models
+models at
+at each
+each displacement
+displacement amplitude
+amplitude by
+the dissipated
+dissipated energy
+energy of
+of the
+the undamaged
+undamaged
+model at
+at the
+amplitude. It
+It can
+can be
+be seen
+seen from
+from the
+the figure
+figure that
+that this
+model
+the same
+same displacement
+displacement amplitude.
+this type
+type of
+of damage
+damage
+can
+greatly
+reduce
+the
+energy
+dissipation
+capacity
+of
+the
+frame.
+When
+the
+displacement
+is
+the
+can greatly reduce the energy dissipation capacity of the frame. When the displacement is small,
+small, the
+energy dissipation
+The frame
+frame
+energy
+dissipation capacity
+capacity of
+of the
+the damaged
+damaged models
+models can
+can be
+be only
+only 1/5
+1/5 of
+of the
+the undamaged
+undamaged one.
+one. The
+loses
+more
+energy
+dissipation
+capacity
+when
+the
+tenon
+suffers
+more
+reduction
+of
+the
+height.
+However,
+loses more energy dissipation capacity when the tenon suffers more reduction of the height.
+the normalized
+dissipateddissipated
+energy are
+similar
+the damaged
+modelsmodels
+with 10
+mm,
+mm,
+and
+However,
+the normalized
+energy
+arefor
+similar
+for the damaged
+with
+10 15
+mm,
+15 mm,
+
+and 20 mm reduction, especially at the displacement of 180 mm. Unlike what is found in the
+normalized stiffness of the damaged models, the normalized dissipated energy increases almost
+linearly with the enlargement of the displacement without any sudden changes. As well, at the
+
+Appl. Sci. 2019, 9, 3429
+
+15 of 20
+
+Normalized
+Dissipated
+Energy
+Normalized
+Dissipated
+Energy
+
+20
+mm
+especially
+at the displacement of 180 mm. Unlike what is found in the normalized
+Appl.
+Sci. reduction,
+2019, 9, x FOR
+PEER REVIEW
+15 of 21
+Appl. Sci. 2019,
+9, xdamaged
+FOR PEER models,
+REVIEW the normalized dissipated energy increases almost linearly with
+15 of
+21
+stiffness
+of the
+the
+displacementofofthe
+180
+mm, the reductions
+of the
+dissipated
+energy
+are 0.6
+models with
+10 mm,
+enlargement
+displacement
+without any
+sudden
+changes.
+As well,
+at for
+the the
+displacement
+of 180
+mm,
+displacement
+180
+mm,
+the
+reductions
+of
+thefor
+dissipated
+energy
+0.6 for
+models
+mm,
+15
+mm,
+and 20of
+mm
+reduction
+and
+0.75
+the model
+with
+length
+reduction.
+the
+reductions
+of
+thelength
+dissipated
+energy
+are
+0.6
+for
+models
+with5are
+10
+mm,
+15the
+mm,
+and 20with
+mm10
+length
+15 mm, and
+200.75
+mmfor
+length
+reduction
+0.75 for
+the model with 5 length reduction.
+reduction
+and
+the model
+withand
+5 length
+reduction.
+1.2
+1.2
+1.0
+1.0
+0.8
+0.8
+0.6
+0.6
+0.4
+0.4
+0.2
+0.2
+0.0
+0
+0.0
+0
+
+undamaged
+5 mm
+10 mm
+undamaged
+15
+20
+5 mm
+10 mm
+15 mm
+20 mm
+50
+100
+150
+200
+50 Displacement
+100 (mm) 150
+200
+
+Displacement (mm)
+
+Figure 24. Normalized dissipated energy.
+Figure
+Normalized dissipated
+dissipated energy.
+Figure 24.
+24. Normalized
+energy.
+
+4.3. Damage
+4.3.
+Damage in
+in the
+the End
+End of
+of the
+the Tenon
+Tenon
+4.3. Damage in the End of the Tenon
+In this
+toto
+the
+longitudinal
+direction
+of
+In
+this section,
+section, the
+thetenon
+tenonisissimplified
+simplifiedtotobebecut
+cutoff
+offperpendicular
+perpendicular
+the
+longitudinal
+direction
+In
+this
+section,
+the
+tenon
+is
+simplified
+to
+be
+cut
+off
+perpendicular
+to
+the
+longitudinal
+direction
+of
+the
+beam,
+as
+is
+seen
+in
+Figure
+25.
+This
+cutoff
+damage
+is
+designated
+to
+happen
+in
+the
+left
+tenon
+or
+in
+of the beam, as is seen in Figure 25. This cutoff damage is designated to happen in the left tenon or
+the
+beam,
+as
+is
+seen
+in
+Figure
+25.
+This
+cutoff
+damage
+is
+designated
+to
+happen
+in
+the
+left
+tenon
+or
+in
+both
+tenons.
+The
+damage
+length
+of of
+thethe
+tenon
+is isfrom
+in
+both
+tenons.
+The
+damage
+length
+tenon
+from4040mm
+mmtoto200
+200mm
+mmwith
+withintervals
+intervalsof
+of 20
+20 mm.
+mm.
+both
+tenons.
+The
+damage
+length
+of
+the
+tenon
+is
+from
+40
+mm
+to
+200
+mm
+with
+intervals
+of
+20
+mm.
+Therefore, there
+thereare
+are1818damaged
+damaged
+models
+generated
+in this
+section.
+Here,
+the damage
+length
+Therefore,
+models
+generated
+in this
+section.
+Here,
+the damage
+length
+alongalong
+with
+Therefore,
+there
+are
+18
+damaged
+models
+generated
+in
+this
+section.
+Here,
+the
+damage
+length
+along
+with
+the
+letter
+S
+(for
+single
+tenon
+damaged)
+or
+B
+(for
+both
+tenons
+damaged)
+are
+used
+to
+denote
+the
+the letter S (for single tenon damaged) or B (for both tenons damaged) are used to denote the damaged
+with
+the
+letter
+S
+(for
+single
+tenon
+damaged)
+or
+B
+(for
+both
+tenons
+damaged)
+are
+used
+to
+denote
+the
+damagedFor
+models.
+For 40
+example,
+40 mm-S
+model
+means
+that thelength
+damage
+length
+of the
+tenon
+40 only
+mm
+models.
+example,
+mm-S model
+means
+that
+the damage
+of the
+tenon
+is 40
+mm is
+and
+damaged
+models.
+For
+example,
+40
+mm-S
+model
+means
+that
+the
+damage
+length
+of
+the
+tenon
+is
+40
+mm
+andleft
+only
+the of
+leftthe
+tenon
+of is
+the
+model isItdamaged.
+should
+noted
+that
+the tenon
+lengthexceeding
+of the tenon
+the
+tenon
+model
+damaged.
+should beItnoted
+thatbethe
+length
+of the
+the
+and
+only
+the
+left
+tenon
+of
+the
+model
+is
+damaged.
+It
+should
+be
+noted
+that
+the
+length
+tenon
+exceeding
+the
+column
+is
+100
+mm,
+as
+seen
+in
+Figure
+4.
+Therefore,
+when
+the
+damage
+length
+ismm,
+bigger
+column is 100 mm, as seen in Figure 4. Therefore, when the damage length is bigger than of
+100the
+the
+exceeding
+the the
+column
+is 100ispart
+mm,
+seen
+incolumn.
+Figure
+4. Therefore,
+when the damage length is bigger
+than
+100 mm,
+ofasthe
+tenon
+is all inside
+the column.
+remaining
+part
+of remaining
+the tenon
+all inside
+the
+than 100 mm, the remaining part of the tenon is all inside the column.
+
+Figure
+Damage in
+in the
+the end
+end of
+of the
+the tenon.
+Figure 25.
+25. Damage
+tenon.
+Figure 25. Damage in the end of the tenon.
+
+The hysteresis curves of the last loading cycle of the damaged models as well as the undamaged
+The hysteresis curves of the last loading cycle of the damaged models as well as the undamaged
+model
+arehysteresis
+given in Figure
+It
+should
+be noted
+that not
+all
+curves derived
+from
+the damaged
+models
+The
+curves26.
+of It
+the
+last loading
+cycle
+theall
+damaged
+modelsfrom
+as well
+the undamaged
+model
+are given in Figure
+26.
+should
+be noted
+thatofnot
+curves derived
+theasdamaged
+models
+are
+given
+in
+the
+figure
+since
+they
+share
+the
+similar
+varying
+trend.
+Figure
+26a
+shows
+the
+results
+of the
+model
+arein
+given
+in Figure
+26.they
+It should
+that
+not all curves
+derived
+from
+the damaged
+are
+given
+the figure
+since
+share be
+thenoted
+similar
+varying
+trend. Figure
+26a
+shows
+the resultsmodels
+of the
+models
+that
+only
+have
+their
+left
+tenon
+damaged
+(labelled
+with
+S),
+while
+Figure
+26b
+are
+related
+to
+are
+given
+in
+the
+figure
+since
+they
+share
+the
+similar
+varying
+trend.
+Figure
+26a
+shows
+the
+results
+of the
+the
+models that only have their left tenon damaged (labelled with S), while Figure 26b are related to
+the
+models
+with
+both
+tenons
+damaged
+(labelled
+with
+B).
+It
+can
+be
+seen
+from
+both
+figures
+that
+the
+40
+mm-S
+models with
+that only
+their
+left tenon
+damaged
+S), while
+Figure
+26b are
+related
+the
+models
+both have
+tenons
+damaged
+(labelled
+with(labelled
+B). It canwith
+be seen
+from both
+figures
+that
+the 40to
+mmmodels
+with
+both
+tenons
+damaged
+(labelled
+with
+B).
+It
+can
+be
+seen
+from
+both
+figures
+that
+the
+40
+mmS model and the 40 mm-B model have identical hysteresis curves with the undamaged model, which
+S modelthis
+andcutoff
+the 40part
+mm-B
+model have
+hysteresis
+curves
+withofthe
+which
+means
+contributes
+littleidentical
+to the strength
+and
+stiffness
+theundamaged
+frame. Thismodel,
+is consistent
+means
+cutoff
+part contributes
+little
+to the
+of the
+frame. zero.
+This is
+consistent
+with
+thethis
+stress
+diagram
+in Figure 10
+since
+the strength
+stress in and
+thatstiffness
+cutoff part
+is almost
+Besides,
+the
+with the stress diagram in Figure 10 since the stress in that cutoff part is almost zero. Besides, the
+
+Appl. Sci. 2019, 9, 3429
+
+16 of 20
+
+6
+
+6
+
+6
+4
+
+6
+4
+
+4
+2
+
+4
+2
+
+Force
+(kN)(kN)
+Force
+
+Force
+(kN)(kN)
+Force
+
+model and the 40 mm-B model have identical hysteresis curves with the undamaged model, which
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+16 of 21
+means this cutoff part contributes little to the strength and stiffness of the frame. This is consistent
+with
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+16 of 21
+the
+stressand
+diagram
+in Figureenergy
+10 since
+in that
+part
+is almost
+zero. of
+Besides,
+the strength
+strength
+the dissipated
+ofthe
+the stress
+last cycle
+bothcutoff
+reduce
+with
+the increase
+the damage
+length
+and
+the
+dissipated
+energy
+of
+the
+last
+cycle
+both
+reduce
+with
+the
+increase
+of
+the
+damage
+length
+of
+the
+strength
+and From
+the dissipated
+energy of
+the lastthese
+cycletwo
+bothfigures,
+reducewhen
+with the
+the damage
+of the tenon.
+the comparison
+between
+theincrease
+damage of
+lengths
+are thelength
+same,
+tenon.
+From
+the
+comparison
+between
+these
+two
+figures,
+when
+the
+damage
+lengths
+are
+the
+same,
+the
+of
+tenon. and
+From
+the
+comparison
+between
+two
+figures,
+when model
+the damage
+lengths
+arethe
+the model
+same,
+thethe
+strength
+the
+dissipated
+energy
+of thethese
+single
+tenon
+damaged
+are greater
+than
+strength
+and
+the
+dissipated
+energy
+of
+the
+single
+tenon
+damaged
+model
+are
+greater
+than
+the
+model
+with
+the
+strength
+and
+the
+dissipated
+energy
+of
+the
+single
+tenon
+damaged
+model
+are
+greater
+than
+the
+model
+with two damaged tenons.
+two
+damaged
+tenons.
+with two damaged tenons.
+
+2
+0
+0
+-2
+-2
+-4
+
+undamaged
+80mm-S
+undamaged
+160mm-S
+80mm-S
+
+2
+0
+0
+-2
+-2
+-4
+
+40mm-S
+120mm-S
+40mm-S
+200mm-S
+120mm-S
+
+undamaged
+40mm-B
+80mm-B
+120mm-B
+undamaged
+40mm-B
+160mm-B
+200mm-B
+80mm-B
+120mm-B
+160mm-B
+200mm-B
+0
+50 100 150 200
+
+-4
+-6
+-200 -150 -100 -50
+-6
+-200 -150 -100Displacement
+-50
+0
+50 100
+(mm)
+
+-4
+-6
+160mm-S
+200mm-S
+-200 -150 -100 -50
+0
+50 100 150 200
+-6
+-200 -150 -100Displacement
+-50
+0
+50 100 150 200
+(mm)
+
+150
+
+200
+
+(a)
+(b)
+Displacement
+(mm)
+Displacement
+(mm)
+(a)
+(b)
+Figure 26. Hysteresis curves of last cycle: (a) Single tenon damaged; (b) both tenons damaged.
+Figure 26. Hysteresis
+Hysteresis curves
+curves of
+of last
+last cycle: (a)
+(a) Single
+Single tenon
+tenon damaged;
+damaged; (b)
+(b) both
+both tenons
+tenons damaged.
+damaged.
+
+Figure 27 demonstrates the varying trend of the stiffness of the damaged and undamaged
+Figure
+27
+demonstrates
+the
+varying
+trend
+ofthe
+the
+stiffness
+of theofdamaged
+and undamaged
+models.
+27be
+demonstrates
+the
+varying
+trend
+ofsame
+the stiffness
+theamplitude,
+damaged
+andstiffness
+undamaged
+models.
+It can
+seen from both
+figures
+that,
+at
+displacement
+the
+of the
+It
+can beItseen
+from
+both
+figures
+atthe
+the
+same
+displacement
+amplitude,
+the
+the damaged
+models.
+can
+be seen
+from
+boththat,
+figures
+that,
+at the
+same
+amplitude,
+stiffness
+of the
+damaged
+models
+gets
+smaller
+with
+enlargement
+ofdisplacement
+the cutoff
+part.
+Forstiffness
+the the
+200of
+mm-B
+model,
+models
+smaller
+with
+the enlargement
+of the cutoff part.
+Forcutoff
+thereaches
+200
+mm-B
+negative
+stiffness
+damaged
+models
+gets
+smaller
+with the
+thedisplacement
+enlargement
+of the
+part.
+Formodel,
+the 200
+mm-B
+model,
+negativegets
+stiffness
+is
+observed
+when
+amplitude
+140
+mm,
+which
+is also
+seen
+is
+observed
+when
+the
+displacement
+amplitude
+reaches
+140
+mm,
+which
+is
+also
+seen
+in
+Figure
+26b.
+negative
+is observed when the displacement amplitude reaches 140 mm, which is also seen
+in Figurestiffness
+26b.
+in Figure 26b.
+undamaged
+60mm-S
+undamaged
+100mm-S
+60mm-S
+140mm-S
+100mm-S
+180mm-S
+140mm-S
+180mm-S
+
+Stiffness
+(N/mm)
+Stiffness
+(N/mm)
+
+60
+50
+50
+40
+
+40mm-S
+80mm-S
+40mm-S
+120mm-S
+80mm-S
+160mm-S
+120mm-S
+200mm-S
+160mm-S
+200mm-S
+
+40
+30
+30
+20
+20
+10
+10
+0
+0
+-10
+-10
+
+70
+
+undamaged
+60mm-B
+undamaged
+100mm-B
+60mm-B
+140mm-B
+100mm-B
+180mm-B
+140mm-B
+180mm-B
+
+70
+60
+
+Stiffness
+(N/mm)
+Stiffness
+(N/mm)
+
+70
+
+70
+60
+
+60
+50
+50
+40
+
+40mm-B
+80mm-B
+40mm-B
+120mm-B
+80mm-B
+160mm-B
+120mm-B
+200mm-B
+160mm-B
+200mm-B
+
+40
+30
+30
+20
+20
+10
+10
+0
+
+0
+
+50
+
+100
+
+150
+
+200
+
+0
+
+50 Displacement
+100 (mm)150
+
+200
+
+0
+-10
+-10
+
+0
+
+50
+
+150
+
+200
+
+0
+
+50 Displacement
+100 (mm)150
+
+100
+
+200
+
+(a)
+Displacement
+(mm)
+
+(b)
+Displacement
+(mm)
+(a)
+(b)
+Figure 27. Stiffness of the damaged models: (a) Single tenon damaged; (b) both tenons damaged.
+Figure 27. Stiffness of the damaged models: (a) Single tenon damaged; (b) both tenons damaged.
+
+To better
+better understand
+understand the influence of this cutoff damage on the stiffness of the
+the model,
+model, the
+normalized
+stiffnesses
+of thethe
+damaged
+models
+are
+Figure
+To better
+understand
+influence
+of this
+cutoffin
+onAlthough
+the stiffness
+of the model,
+the
+models
+are given
+given
+indamage
+Figure 28.
+28.
+the normalized
+stiffness
+of different damaged
+changes with
+respect
+to the
+amplitude,
+the changing
+range
+normalized
+stiffnessesmodels
+of the damaged
+models
+are given
+indisplacement
+Figure 28. Although
+the normalized
+stiffness
+each curve
+is very limited.
+Therefore,
+the respect
+normalized
+stiffness
+of each amplitude,
+model is regarded
+as a constant
+of
+damaged
+modelsTherefore,
+changes with
+to the
+displacement
+the changing
+range
+of different
+value,
+derived
+by averaging
+of
+eachwhich
+curve is very
+limited.
+Therefore,
+the
+normalizedstiffnesses
+stiffness of
+modelat
+is different
+regardeddisplacement
+as a constant
+the
+normalized
+ofeach
+the model
+amplitudes,
+is
+labelled
+as
+Averaged
+normalized
+stiffness
+(ANS)
+in
+Table
+3.
+value,
+whichand
+is derived
+by
+averaging
+the
+normalized
+stiffnesses
+of
+the
+model
+at
+different
+displacement
+is labelled as Averaged normalized stiffness (ANS) in Table 3.
+amplitudes, and is labelled as Averaged normalized stiffness (ANS) in Table 3.
+
+Appl. Sci. 2019, 9, 3429
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+
+17 of 20
+17 of 21
+
+1.2
+
+1.2
+40mm-S
+140mm-S
+
+60mm-S
+160mm-S
+
+80mm-S
+180mm-S
+
+100mm-S
+200mm-S
+
+1.0
+
+0.8
+
+0.6
+
+undamaged
+120mm-B
+
+40mm-B
+140mm-B
+
+60mm-B
+160mm-B
+
+80mm-B
+180mm-B
+
+100mm-B
+200mm-B
+
+1.0
+
+Normalized Stiffness
+
+Normalized Stiffness
+
+undamaged
+120mm-S
+
+0.8
+0.6
+0.4
+0.2
+0.0
+
+0.4
+
+0
+
+50
+
+100
+
+150
+
+200
+
+-0.2
+
+0
+
+50
+
+100
+
+150
+
+200
+
+Displacement (mm)
+(b)
+
+Displacement (mm)
+
+(a)
+
+Figure 28.
+28. Normalized
+Normalized
+stiffness
+of damaged
+models:
+(a) Single
+damaged;
+both
+Figure
+stiffness
+of damaged
+models:
+(a) Single
+tenon tenon
+damaged;
+(b) both(b)tenons
+tenons damaged.
+damaged.
+Table 3. Averaged normalized stiffness (ANS) of damaged models.
+Table 3. Averaged normalized stiffness (ANS) of damaged models.
+Damage
+Length
+(mm) (mm)
+0
+Damage
+Length
+ANS ANS
+
+SingleSingle 1
+Both Both 1
+
+1
+1
+2Single-1
+2Single-1
+1
+
+1
+
+100
+0 40 40 60 60 8080
+100
+0.997
+0.988
+1
+0.997
+0.988 0.959
+0.959 0.911
+0.911
+0.994
+0.975
+1
+0.994
+0.975 0.917
+0.917 0.822
+0.822
+0.994
+0.976
+1
+0.994
+0.976 0.917
+0.917 0.823
+0.823
+
+120
+120
+
+140 160160 180 180200 200
+140
+0.840
+0.756 0.667
+0.6670.5840.584
+0.840 0.756
+0.507 0.507
+0.684
+0.519 0.353
+0.3530.1740.174
+0.684 0.519
+0.016 0.016
+0.680
+0.512 0.334
+0.3340.1670.167
+0.680 0.512
+0.014 0.014
+
+1 2Single-1 means twice the values in the row of ‘Single’ and then subtract 1.
+
+2Single-1 means twice the values in the row of ‘Single’ and then subtract 1.
+
+When the damage length is smaller than 100 mm, there is still some remaining part of the tenon
+When the damage length is smaller than 100 mm, there is still some remaining part of the tenon
+outside the column. Therefore, the tenon of the damaged model contacts with the mortise at the
+outside the column. Therefore, the tenon of the damaged model contacts with the mortise at the
+abovementioned intersection points as the undamaged model. However, when the damage length
+abovementioned intersection points as the undamaged model. However, when the damage length
+exceeds 100 mm, the remaining part of the tenon is all surrounded by the column, which leads to the
+exceeds 100 mm, the remaining part of the tenon is all surrounded by the column, which leads to the
+contact points between the tenon and the mortise moving to the inner of the column. Therefore, the
+contact points between the tenon and the mortise moving to the inner of the column. Therefore, the
+varying trends of the averaged normalized stiffness with the damage length before and after 100 mm
+varying trends of the averaged normalized stiffness with the damage length before and after 100 mm
+are quite different as plotted in Figure 29. When the damage length is 100 mm, the averaged
+are quite different as plotted in Figure 29. When the damage length is 100 mm, the averaged normalized
+normalized stiffnesses of the single tenon damaged model and the both tenons damaged model are
+stiffnesses of the single tenon damaged model and the both tenons damaged model are 0.91 and 0.82,
+0.91 and 0.82, respectively. When the damage length is greater than 100 mm, the two curves are
+respectively. When the damage length is greater than 100 mm, the−1two curves are almost
+linear, and
+almost linear, and the slopes of the two curves
+are −0.00404 mm and −0.00806 mm−1. The former
+the slopes of the two curves are −0.00404 mm−1 and −0.00806 mm−1 . The former value is nearly half of
+value is nearly half of the latter one. This is because the slope can be regarded as the reduction of the
+the latter one. This is because the slope can be regarded as the reduction of the stiffness of the damaged
+stiffness of the damaged model. If a given damage length l causes a reduction dS (l ) on the averaged
+model. If a given damage length l causes a reduction dS (l) on the averaged normalized stiffness of the
+normalized stiffness of the single damaged model, then the averaged normalized stiffness NK S (l ) of
+single damaged model, then the averaged normalized stiffness NKS (l) of this model can be derived by
+this model can be derived by
+NK
+S (Sl()l )=
+NK
+= 11−−ddS S( l()l)
+
+(3)
+(3)
+
+When
+of the
+thetenons
+tenonsare
+aredamaged
+damagedwith
+with
+the
+same
+damage
+length
+l, and
+damages
+at two
+the
+When both of
+the
+same
+damage
+length
+l, and
+the the
+damages
+at the
+two
+tenons
+are
+not
+supposed
+to
+affect
+each
+other,
+thus
+the
+reduction
+on
+the
+averaged
+normalized
+tenons are not supposed to affect each other, thus the reduction on the averaged normalized stiffness
+2 dthe
+stiffness
+, and the averaged
+normalized
+stiffness
+will be 2dwill
+, and
+normalized
+stiffness NK
+beB (l ) will be
+S ( l ) averaged
+S (l)be
+B (l) willNK
+N K ( l ) = 1 − 2 d ( l ) = 1 − 2 (1 − N K ( l )) = 2 N K ( l ) − 1
+
+S
+NKB (l)B = 1 − 2dS (Sl) = 1 − 2(1 − NKS S (l)) = 2NK
+S (l) − 1
+
+(4)
+(4)
+
+The right part of Equation (4) 2 N K S ( l ) − 1 is calculated and listed in the last row of Table 3 and
+rightin
+part
+of Equation
+(4) 2NK
+and
+listed
+the last row of Table 3 and is
+S (l) − 1 isItcalculated
+is alsoThe
+plotted
+Figure
+29 labelled
+by 2Single-1.
+can be seen
+that
+the in
+2 N K S ( l ) − 1 is almost identical
+also plotted in Figure 29 labelled by 2Single-1. It can be seen that the 2NKS (l) − 1 is almost identical
+with NK B (l ) .
+with NKB (l).
+
+Averaged
+Normalized
+Stiffness
+Averaged
+Normalized
+Stiffness
+
+Sci. 2019, 9, x3429
+Appl. Sci.
+FOR PEER REVIEW
+Appl. Sci. 2019, 9, x FOR PEER REVIEW
+
+20
+18 of 21
+18 of 21
+1.2
+1.2
+1.0
+1.0
+0.8
+0.8
+0.6
+0.6
+0.4
+0.4
+0.2
+0.2
+0.0
+0.0
+-0.2
+-0.2 0
+0
+
+Single
+Single
+Both
+Both
+2Single-1
+2Single-1
+
+50
+50
+
+100
+100
+
+150
+150
+
+200
+200
+
+Damage Length (mm)
+Damage Length (mm)
+
+Figure
+stiffness of
+of damaged models.
+models.
+Figure 29.
+29. Averaged
+Averaged normalized
+normalized
+Figure
+29.
+Averaged
+normalized stiffness
+stiffness of damaged
+damaged models.
+
+1.2
+1.2
+
+undamaged
+120mm-S
+undamaged
+120mm-S
+
+40mm-S
+140mm-S
+40mm-S
+140mm-S
+
+60mm-S
+160mm-S
+60mm-S
+160mm-S
+
+80mm-S
+180mm-S
+80mm-S
+180mm-S
+
+100mm-S
+200mm-S
+100mm-S
+200mm-S
+
+1.0
+1.0
+0.8
+0.8
+0.6
+0.6
+0.4
+0.40
+0
+
+50
+50
+
+100
+100
+
+150
+150
+
+Displacement (mm)
+Displacement (mm)
+
+200
+200
+
+Normalized
+Dissipated
+Energy
+Normalized
+Dissipated
+Energy
+
+Normalized
+Dissipated
+Energy
+Normalized
+Dissipated
+Energy
+
+Figure 30 presents the normalized dissipated
+dissipated energy
+energy of the models, and these curves share the
+Figure 30 presents the normalized dissipated energy of the models, and these curves share the
+similar characteristics
+characteristics with the normalized stiffness. The
+The normalized
+normalized dissipated
+dissipated energy
+energy has a slight
+similar characteristics with the normalized stiffness. The normalized dissipated energy has a slight
+rising trend, especially for the models with large damage length, although the slopes of these curves
+rising trend, especially for the models with large damage length, although the slopes of these curves
+are negligible. Therefore,
+Therefore, the
+the averaged
+averaged normalized
+normalized dissipated
+dissipated energy
+energy is achieved through the same
+are negligible. Therefore, the averaged normalized dissipated energy is achieved through the same
+stiffness and
+and is
+is given
+given in
+in Table
+Table44and
+andFigure
+Figure31.
+31.
+way as the averaged normalized stiffness
+way as the averaged normalized stiffness and is given in Table 4 and Figure 31.
+1.2
+1.2
+1.0
+1.0
+
+undamaged
+120mm-B
+undamaged
+120mm-B
+
+40mm-B
+140mm-B
+40mm-B
+140mm-B
+
+60mm-B
+160mm-B
+60mm-B
+160mm-B
+
+80mm-B
+180mm-B
+80mm-B
+180mm-B
+
+100mm-B
+200mm-B
+100mm-B
+200mm-B
+
+0.8
+0.8
+0.6
+0.6
+0.4
+0.4
+0.2
+0.20
+0
+
+50
+50
+
+100
+100
+
+150
+150
+
+Displacement (mm)
+Displacement (mm)
+
+200
+200
+
+(a)
+(b)
+(a)
+(b)
+Figure 30. Normalized
+Normalized dissipated energy: (a)
+(a) Single
+Single tenon
+tenon damaged;
+damaged; (b) both tenons damaged.
+Figure 30. Normalized dissipated energy: (a) Single tenon damaged; (b) both tenons damaged.
+Table 4. Averaged normalized dissipated energy (ANDE) of damaged models.
+Table 4. Averaged normalized dissipated energy (ANDE) of damaged models.
+Table 4. Averaged normalized dissipated energy (ANDE) of damaged models.
+Damage Length (mm)
+0
+40
+60
+80
+100
+120
+140
+160
+180
+200
+Damage Length (mm)
+0
+40
+60
+80
+100
+120
+140
+160
+180
+200
+Damage
+Length
+(mm)
+0
+40
+60
+80
+100
+120
+140
+160
+180
+200
+Single Single1
+0.995
+0.985 0.985
+0.9790.9790.975
+0.850 0.764
+0.7640.6820.682
+1
+0.995
+0.975 0.930
+0.930 0.850
+0.612 0.612
+ANDEANDE
+1
+0.995
+0.985
+0.9790.946
+0.975 0.930 0.850
+0.764
+0.6820.406
+0.612
+Both Single
+0.991
+0.975 0.975
+0.9600.960
+0.714 0.549
+0.5490.406
+Both 1
+1
+0.991
+0.946 0.866
+0.866 0.714
+0.268 0.268
+ANDE
+Both
+1
+0.991 0.975 0.960 0.946 0.866 0.714 0.549 0.406 0.268
+2Single-1
+0.990
+0.970 0.970
+0.9580.9580.950
+0.699 0.528
+0.5280.3640.364
+2Single-1 1
+1
+0.990
+0.950 0.861
+0.861 0.699
+0.225 0.225
+2Single-1
+1
+0.990 0.970 0.958 0.950 0.861 0.699 0.528 0.364 0.225
+
+Just as the averaged normalized stiffness, the changing trends of the averaged normalized
+dissipated energy with the damage length smaller and bigger than 100 mm are significantly different.
+The averaged normalized dissipated energy can be regarded as a bilinear curve with the two straight
+lines intersecting at the damage length of 100 mm, which is remarked by the dash line in Figure 31.
+The slopes of the left part of the curves are prominently smaller than those of the right part. When
+the damage length is 100 mm, the averaged normalized energy of both models are 0.975 and 0.946,
+respectively, which are greater than the averaged normalized stiffnesses with the same damage length.
+When the damage length is smaller than 100 mm, the reductions on the dissipated energy are all greater
+than 0.95, which means the damage length smaller than 100 mm has little effect on the frame. When
+the damage length reaches 180 mm, the reductions on dissipated energy of single and both damaged
+
+Appl. Sci. 2019, 9, 3429
+
+19 of 20
+
+Averaged Normalized Dissipated Energy
+
+models are 0.612 and 0.268, respectively. Similarly, a curve labelled with 2Single-1 is also plotted in the
+figure, and it is very close to the curve representing the averaged normalized dissipated energy of the
+both tenons damaged models, although the difference between the two curves gets larger with the
+Appl.
+Sci. 2019,
+9, xdamage
+FOR PEERlength.
+REVIEW
+19 of 21
+increase
+of the
+1.2
+1.0
+0.8
+0.6
+
+Single
+Both
+2Single-1
+
+0.4
+0.2
+
+0
+
+50
+
+100
+
+150
+
+200
+
+Damage Length (mm)
+
+Figure 31.
+31. Averaged
+Averaged normalized
+normalized dissipated
+dissipated energy
+energy of
+of damaged
+damaged models.
+models.
+Figure
+
+5. Conclusions
+Just as the averaged normalized stiffness, the changing trends of the averaged normalized
+In thisenergy
+study, with
+a FE model
+of a timber
+with
+straight
+joints
+is built anddifferent.
+verified.
+dissipated
+the damage
+lengthframe
+smaller
+and
+biggermortise-tenon
+than 100 mm are
+significantly
+stress state
+of the model
+subjected
+to the
+lateral
+cyclic loading
+is then
+analyzed.
+Three
+The averaged
+normalized
+dissipated
+energy
+can
+be regarded
+as a bilinear
+curve
+with the
+two damage
+straight
+typesintersecting
+of the mortise-tenon
+joint are
+proposed
+the FE model
+todash
+studyline
+theininfluence
+of
+lines
+at the damage
+length
+of 100 and
+mm,included
+which isinremarked
+by the
+Figure 31.
+these
+damages
+on
+the
+cyclic
+performance
+of
+the
+timber
+frame.
+The
+conclusions
+are
+as
+follows.
+The slopes of the left part of the curves are prominently smaller than those of the right part. When
+
+the damage length is 100 mm, the averaged normalized energy of both models are 0.975 and 0.946,
+(1). The vertical compressive stress at the contact surface of the mortise-tenon joint is a reasonable
+respectively, which are greater than the averaged normalized stiffnesses with the same damage
+variable that can represent the reaction force of the whole model. Larger value of this stress
+length. When the damage length is smaller than 100 mm, the reductions on the dissipated energy are
+corresponds to more demand for the lateral loadings exerted on the columns.
+all greater than 0.95, which means the damage length smaller than 100 mm has little effect on the
+(2). The gap between the mortise and the tenon can reduce the stiffness of the timber frame because
+frame. When the damage length reaches 180 mm, the reductions on dissipated energy of single and
+of the lack of contact between the external surface of the column and the vertical surface of the
+both damaged models are 0.612 and 0.268, respectively. Similarly, a curve labelled with 2Single-1 is
+beam, while the dissipated energy remains almost unchanged. When the gap reaches a certain
+also plotted in the figure, and it is very close to the curve representing the averaged normalized
+value, 20 mm in this study, the stiffness will become stable.
+dissipated energy of the both tenons damaged models, although the difference between the two
+(3). The damage in the top of the tenon can lead to the reduction in the maximum force and stiffness of
+curves gets larger with the increase of the damage length.
+the model followed by a sudden increase when some lateral displacement is reached. This certain
+lateral displacement can be derived from both the stiffness curves and the vertical compressive
+5. Conclusions
+stresses at the contact surfaces.
+this study,
+a FE
+a timber
+frame
+withofstraight
+mortise-tenon
+joints
+is built
+and verified.
+(4). In
+Damage
+in the
+endmodel
+of theoftenon
+has two
+types
+influences
+on the stiffness
+and
+dissipated
+energy
+The stress
+state
+of
+the
+model
+subjected
+to
+the
+lateral
+cyclic
+loading
+is
+then
+analyzed.
+Three
+damage
+of the model according to the length of the cutoff part. When the length is small, the stiffness and
+typesdissipated
+of the mortise-tenon
+joint are
+proposed
+and
+included
+in the
+FE model
+study
+theisinfluence
+of
+energy decrease
+slowly
+with the
+increase
+of the
+length.
+Whento
+this
+length
+larger than
+these100
+damages
+on
+the
+cyclic
+performance
+of
+the
+timber
+frame.
+The
+conclusions
+are
+as
+follows.
+mm in this study, the stiffness and dissipated energy will decrease dramatically.
+(1). The vertical compressive stress at the contact surface of the mortise-tenon joint is a
+reasonable variable that can represent the reaction force of the whole model. Larger value of this
+Author Contributions: All the authors discussed and agreed upon the idea and made scientific contributions. B.S.
+stress
+more demand
+forthe
+the
+lateral loadings
+exerted to
+onthe
+thewriting.
+columns.
+did thecorresponds
+mathematical to
+modeling,
+performed
+simulations,
+and contributed
+H.W., A.L. contributed
+to the(2).
+revisions
+andbetween
+discussionthe
+of the
+results.
+Conceptualization,
+B.S.; formal
+methodology,
+B.S.;
+The gap
+mortise
+and
+the tenon can reduce
+the analysis,
+stiffnessB.S.;
+of the
+timber frame
+supervision,
+H.W.,
+A.L.;
+B.S.; writing—review
+& editing,
+because
+of the
+lack
+of writing—original
+contact betweendraft,
+the external
+surface of the
+columnH.W.,
+and A.L.
+the vertical surface of
+Funding:
+research
+was funded energy
+by the National
+Natural
+Science
+Foundation
+of China,
+grant
+numbera51978033.
+the
+beam,This
+while
+the dissipated
+remains
+almost
+unchanged.
+When
+the gap
+reaches
+certain
+value,
+20of
+mm
+in thisThe
+study,
+thedeclare
+stiffness
+become
+stable.
+Conflicts
+Interest:
+authors
+nowill
+conflict
+of interest.
+(3). The damage in the top of the tenon can lead to the reduction in the maximum force and
+stiffness
+of the model followed by a sudden increase when some lateral displacement is reached. This
+References
+certain lateral displacement can be derived from both the stiffness curves and the vertical
+1.
+Fang, D.P.; Iwasaki, S.; Yu, M.H.; Shen, Q.P.; Miyamoto, Y.; Hikosaka, H. Ancient Chinese timber architecture.
+compressive stresses at the contact surfaces.
+I: Experimental study. J. Struct. Eng. 2001, 127, 1348–1357. [CrossRef]
+(4). Damage in the end of the tenon has two types of influences on the stiffness and dissipated
+energy of the model according to the length of the cutoff part. When the length is small, the stiffness
+and dissipated energy decrease slowly with the increase of the length. When this length is larger than
+100 mm in this study, the stiffness and dissipated energy will decrease dramatically.
+
+Appl. Sci. 2019, 9, 3429
+
+2.
+3.
+4.
+5.
+
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+
+15.
+16.
+17.
+18.
+19.
+20.
+
+21.
+22.
+23.
+24.
+
+20 of 20
+
+Feio, A.O.; Lourenco, P.B.; Machado, J.S. Testing and modeling of a traditional timber mortise and tenon
+joint. Mater. Struct. 2014, 47, 213–225. [CrossRef]
+Xue, J.Y.; Xu, D.; Ren, G.Q.; Fu, C.W.; Yang, S.M. Earthquake simulation shaking table test of column-and-tie
+wooden structure dwellings. J. Build. Struct. 2019, 40, 123–132. (In Chinese)
+Xue, J.Y.; Wu, Z.J.; Zhang, F.L.; Zhao, H.T. Seismic damage evaluation model of Chinese ancient timber
+buildings. Adv. Struct. Eng. 2015, 18, 1671–1683. [CrossRef]
+Shi, X.W.; Chen, Y.F.; Chen, J.Y.; Yang, Q.S.; Li, T.Y. Experimental assessment on the hysteretic behavior of a
+full-scale traditional Chinese timber structure using a synchronous loading technique. Adv. Mater. Sci. Eng.
+2018, 5729198. [CrossRef]
+Xie, Q.F.; Zhang, L.P.; Wang, L.; Zhou, W.J.; Zhou, T.G. Lateral performance of traditional Chinese timber
+frames: Experiments and analytical model. Eng. Struct. 2019, 186, 446–455. [CrossRef]
+Chun, Q.; Yue, Z.; Pan, J.W. Experimental study on seismic characteristics of typical mortise-tenon joints of
+Chinese southern traditional timber frame buildings. Sci. Chin. Technol. Sci. 2011, 54, 2404–2411. [CrossRef]
+Li, X.W.; Zhao, J.H.; Ma, G.W.; Chen, W. Experimental study on the seismic performance of a double-span
+traditional timber frame. Eng. Struct. 2015, 98, 141–150. [CrossRef]
+Li, X.W.; Zhao, J.H.; Ma, G.W.; Huang, S.H. Experimental study on the traditional timber mortise-tenon
+joints. Adv. Struct. Eng. 2015, 18, 2089–2102. [CrossRef]
+Seo, J.M.; Choi, I.K.; Lee, J.R. Static and cyclic behavior of wooden frames with tenon joints under lateral
+load. J. Struct. Eng. 1999, 125, 344–349. [CrossRef]
+Meng, X.J.; Li, T.Y.; Yang, Q.S. Experimental study on the seismic mechanism of a full-scale traditional
+Chinese timber structure. Eng. Struct. 2019, 180, 484–493. [CrossRef]
+Zhang, W.Z. The seismic and lateral resistance of column-and-tie wooden buildings based on mortise-tenon
+joint. Int. Wood Product J. 2019, 10, 86–91. [CrossRef]
+Jiang, S.F.; Wu, M.H.; Tang, W.J.; Liu, X.M. Multi-scale modeling method and seismic behavior analysis for
+ancient timber structures. J. Build. Struct. 2016, 37, 44–53. (In Chinese)
+Xiong, H.Y.; Tan, Z.R.; Zhang, R.H.; Zong, Z.J.; Luo, Z.P. Numerical calculation model performance analysis
+for aluminum alloy mortise-and-tenon structural joints used in electric vehicles. Compos. Part B Eng. 2019,
+161, 77–86. [CrossRef]
+Sun, B.T.; Zhang, H.Y.; Yan, P.L. Earthquake damage and feature analysis of Chinese traditional timber frame
+structures subjected to the Lushan 7.0 earthquake. China Civ. Eng. J. 2014, 47, 1–11.
+Qu, Z.; Dutu, A.; Zhong, J.R.; Sun, J.J. Seismic damage to masonry-infilled timber houses in the 2013 M7.0
+Lushan, China, earthquake. Earthq. Spectra 2015, 31, 1859–1874. [CrossRef]
+Xie, Q.F.; Wang, L.; Zheng, P.J.; Zhang, L.P.; Hu, W.B. Rotational behavior of degraded traditional mortise-tenon
+joints: Experimental tests and hysteretic model. Int. J. Archit. Herit. 2018, 12, 125–136. [CrossRef]
+King, W.S.; Yen, J.Y.R.; Yen, Y.N.A. Joint characteristics of traditional Chinese wooden frames. Eng. Struct.
+1996, 18, 635–644. [CrossRef]
+Xue, J.Y.; Li, Y.Z.; Xia, H.L.; Sui, Y. Experimental study on seismic performance of dovetail joints with
+different loose degrees in ancient buildings. J. Build. Struct. 2016, 37, 73–79. (In Chinese)
+Xue, J.Y.; Guo, R.; Qi, L.J.; Xu, D. Experimental study on the seismic performance of traditional timber
+mortise-tenon joints with different looseness under low-cyclic reversed loading. Adv. Struct. Eng. 2019, 22,
+1312–1328. [CrossRef]
+Li, S.C.; Jiang, Z.J.; Luo, H.Z.; Zhang, L. Seismic behavior of straight-tenon wood frames with column foot
+damage. Adv. Civ. Eng. 2019, 1–10. [CrossRef]
+Lin, M.Y. Experimental Research on Mechanical Property of Mortise-Tenon Joint of Chinese Ancient Timber
+Buildings. Master’s Thesis, Fuzhou University, Fuzhou, China, June 2014. (In Chinese)
+Li, J. Yingzaofashi; People’s Publishing House: Beijing, China, 2011. (In Chinese)
+Xie, Q.F.; Zhang, L.P.; Li, S.; Zhou, W.J.; Wang, L. Cyclic behavior of Chinese ancient wooden frame with
+mortise-tenon joints: Friction constitutive model and finite element modelling. J. Wood Sci. 2018, 64, 40–51.
+[CrossRef]
+© 2019 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).
+
+

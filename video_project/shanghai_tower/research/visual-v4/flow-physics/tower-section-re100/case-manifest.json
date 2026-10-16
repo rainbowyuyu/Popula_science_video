@@ -1,0 +1,44 @@
+{
+  "name": "tower-section-re100",
+  "geometrySource": "scripts/build_tower.py:profile_point support curve (a=0.10), normalized to reference scale D0=1",
+  "geometrySourceSHA256": "b24fc654655163d4846753c86afa8f556d88c798268c307b52492aea45598a02",
+  "officialBaseMeshSHA256": "0ac6b183af781ba2a98620c083980a3a42b41bab6a09dc1b788241723fa9b549",
+  "meshSHA256": "266df36124cd58ec3d4b4502a6e6c6253b4000cdf998010dcb0b843e37fe4fb8",
+  "angleDegrees": 25.0,
+  "referenceLength": 1,
+  "U": 1,
+  "rho": 1,
+  "dynamicViscosity": 0.01,
+  "ReynoldsBasedOnD0": 100.0,
+  "dimensionalInterpretation": "Consistent unit-scale teaching problem; no atmospheric or full-scale conversion",
+  "mesh": {
+    "points": 13336,
+    "triangles": 26192,
+    "minimumRelativeArea": 0.898966538717687,
+    "maximumRelativeArea": 1.1115191422415127,
+    "invertedCells": 0,
+    "outerBoundaryChanged": false
+  },
+  "steady": false,
+  "innerIterations": 60,
+  "timeStep": 0.1,
+  "timeIterations": 1200,
+  "physicalTime": 120.0,
+  "bodyRange": {
+    "min": [
+      0.012950417969072016,
+      -0.5482252210305015
+    ],
+    "max": [
+      1.0129192344931885,
+      0.45169766666484495
+    ]
+  },
+  "limitations": [
+    "2D laminar flow at Re=100; atmospheric Shanghai Tower Reynolds number is orders of magnitude larger.",
+    "No ground, nearby towers, atmospheric turbulence profile, twist interaction or vertical correlation.",
+    "No experimental validation for the reconstructed triangle; results illustrate a computed cross-section mechanism only.",
+    "Do not map its Cp or wake onto Shanghai Tower as physical full-building wind pressure.",
+    "This shape matches the film reconstruction; architect fabrication coordinates are unavailable."
+  ]
+}

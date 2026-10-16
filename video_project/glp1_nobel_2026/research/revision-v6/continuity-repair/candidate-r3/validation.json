@@ -1,0 +1,1541 @@
+{
+  "finishedUTC": "2026-10-09T08:59:05.906597+00:00",
+  "automaticChecksPass": true,
+  "fullDecodeSuccess": true,
+  "decodedFrames": 25621,
+  "videoSHA256": "2d6b8de1da3ac344ee95adfb255ac86d2b94daddc06b86bd70a74507c1300e11",
+  "timelineSHA256": "e976021ce9b1a665ca54206e73898587efb33c6f91865eb22bb8b7ad0c71dfb0",
+  "masterSHA256": "dec0de170d5796dadad56323e11041195049e3c0e4c365e4ed50f17fa15b1146",
+  "video": {
+    "index": 0,
+    "codec_name": "h264",
+    "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+    "profile": "High",
+    "codec_type": "video",
+    "codec_tag_string": "avc1",
+    "codec_tag": "0x31637661",
+    "mime_codec_string": "avc1.640028",
+    "width": 1920,
+    "height": 1080,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "has_b_frames": 2,
+    "sample_aspect_ratio": "1:1",
+    "display_aspect_ratio": "16:9",
+    "pix_fmt": "yuv420p",
+    "level": 40,
+    "color_range": "tv",
+    "color_space": "bt709",
+    "color_transfer": "bt709",
+    "color_primaries": "bt709",
+    "chroma_location": "center",
+    "field_order": "progressive",
+    "refs": 1,
+    "is_avc": "true",
+    "nal_length_size": "4",
+    "id": "0x1",
+    "r_frame_rate": "30/1",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/15360",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 13117952,
+    "duration": "854.033333",
+    "bit_rate": "1871567",
+    "bits_per_raw_sample": "8",
+    "nb_frames": "25621",
+    "extradata_size": 51,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "VideoHandler"
+    }
+  },
+  "audio": {
+    "index": 1,
+    "codec_name": "aac",
+    "codec_long_name": "AAC (Advanced Audio Coding)",
+    "profile": "LC",
+    "codec_type": "audio",
+    "codec_tag_string": "mp4a",
+    "codec_tag": "0x6134706d",
+    "mime_codec_string": "mp4a.40.2",
+    "sample_fmt": "fltp",
+    "sample_rate": "48000",
+    "channels": 2,
+    "channel_layout": "stereo",
+    "bits_per_sample": 0,
+    "initial_padding": 0,
+    "id": "0x2",
+    "r_frame_rate": "0/0",
+    "avg_frame_rate": "0/0",
+    "time_base": "1/48000",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 40993584,
+    "duration": "854.033000",
+    "bit_rate": "282337",
+    "nb_frames": "40034",
+    "extradata_size": 5,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "SoundHandler"
+    }
+  },
+  "audioMux": {
+    "method": "Complete locked master encoded once from zero after video-only IDR stream-copy splice",
+    "command": [
+      "ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-v",
+      "error",
+      "-xerror",
+      "-n",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v6\\continuity-repair\\candidate-r3\\silent-spliced.mp4",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\public\\master.wav",
+      "-map",
+      "0:v:0",
+      "-map",
+      "1:a:0",
+      "-map_metadata",
+      "-1",
+      "-c:v",
+      "copy",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "320k",
+      "-ar",
+      "48000",
+      "-af",
+      "asetpts=PTS-STARTPTS",
+      "-color_range",
+      "tv",
+      "-color_primaries",
+      "bt709",
+      "-color_trc",
+      "bt709",
+      "-colorspace",
+      "bt709",
+      "-movflags",
+      "+faststart+write_colr",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v6\\continuity-repair\\candidate-r3\\GLP1_V5_1080p.candidate.mp4"
+    ],
+    "masterSHA256": "dec0de170d5796dadad56323e11041195049e3c0e4c365e4ed50f17fa15b1146",
+    "trimmed": false,
+    "padded": false,
+    "timeStretched": false,
+    "videoCodec": "copy",
+    "audioCodec": "aac",
+    "audioBitrate": "320k",
+    "sampleRate": 48000,
+    "videoPayloadAndTimingUnchangedFromSilentSplice": true,
+    "videoCopyEvidence": {
+      "packetCount": 25621,
+      "allPayloadsAndPTSAndDTSMatched": true,
+      "codecConfigMatched": true,
+      "method": "Every compressed H264 packet SHA256, size, flags, rational PTS/DTS/duration, and codec extradata SHA256 compared before and after video-copy audio mux.",
+      "reports": [
+        {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/silent-video-packets.json",
+          "sha256": "9338fc076c2c769c4236291e317db3c912deeb94c8ecbc1066e3c07d5715e2b3"
+        },
+        {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/final-video-packets.json",
+          "sha256": "9338fc076c2c769c4236291e317db3c912deeb94c8ecbc1066e3c07d5715e2b3"
+        }
+      ]
+    }
+  },
+  "audioComparison": {
+    "masterSHA256": "dec0de170d5796dadad56323e11041195049e3c0e4c365e4ed50f17fa15b1146",
+    "correlation": 0.9999923098942851,
+    "normalizedRMSE": 0.003966690896513428,
+    "gainDB": -0.005239832014611982,
+    "samplesAAC": 6832299,
+    "samplesMaster": 6832267,
+    "comparedSamples": 6832267,
+    "windows": [
+      {
+        "startSeconds": 0.0,
+        "correlation": 0.999991132954655,
+        "normalizedRMSE": 0.00424301147436791
+      },
+      {
+        "startSeconds": 5.0,
+        "correlation": 0.9999875056608734,
+        "normalizedRMSE": 0.0050317147551947414
+      },
+      {
+        "startSeconds": 10.0,
+        "correlation": 0.9999910178187973,
+        "normalizedRMSE": 0.004285499579424235
+      },
+      {
+        "startSeconds": 15.0,
+        "correlation": 0.9999940918849496,
+        "normalizedRMSE": 0.0035004013943520018
+      },
+      {
+        "startSeconds": 20.0,
+        "correlation": 0.9999963912965839,
+        "normalizedRMSE": 0.002714577951570149
+      },
+      {
+        "startSeconds": 25.0,
+        "correlation": 0.9999942191830332,
+        "normalizedRMSE": 0.0034570469060634266
+      },
+      {
+        "startSeconds": 30.0,
+        "correlation": 0.9999963340358132,
+        "normalizedRMSE": 0.002748039568669349
+      },
+      {
+        "startSeconds": 35.0,
+        "correlation": 0.9999965647595008,
+        "normalizedRMSE": 0.002644650577661605
+      },
+      {
+        "startSeconds": 40.0,
+        "correlation": 0.9999955506736872,
+        "normalizedRMSE": 0.0030272478589113624
+      },
+      {
+        "startSeconds": 45.0,
+        "correlation": 0.9999967961420146,
+        "normalizedRMSE": 0.0025525060127674372
+      },
+      {
+        "startSeconds": 50.0,
+        "correlation": 0.9999967386313436,
+        "normalizedRMSE": 0.002592439033316337
+      },
+      {
+        "startSeconds": 55.0,
+        "correlation": 0.9999837920211724,
+        "normalizedRMSE": 0.005801114177502229
+      },
+      {
+        "startSeconds": 60.0,
+        "correlation": 0.9999934542303548,
+        "normalizedRMSE": 0.00364837460202934
+      },
+      {
+        "startSeconds": 65.0,
+        "correlation": 0.9999947072807963,
+        "normalizedRMSE": 0.0032808483027745024
+      },
+      {
+        "startSeconds": 70.0,
+        "correlation": 0.9999959587174112,
+        "normalizedRMSE": 0.0028892738134160922
+      },
+      {
+        "startSeconds": 75.0,
+        "correlation": 0.9999897714222306,
+        "normalizedRMSE": 0.004568837246973199
+      },
+      {
+        "startSeconds": 80.0,
+        "correlation": 0.9999955047842927,
+        "normalizedRMSE": 0.0030425701910873192
+      },
+      {
+        "startSeconds": 85.0,
+        "correlation": 0.9999941317886188,
+        "normalizedRMSE": 0.003464925619910209
+      },
+      {
+        "startSeconds": 90.0,
+        "correlation": 0.9999937681591626,
+        "normalizedRMSE": 0.0035644371267728563
+      },
+      {
+        "startSeconds": 95.0,
+        "correlation": 0.9999942860587809,
+        "normalizedRMSE": 0.0034167354451659186
+      },
+      {
+        "startSeconds": 100.0,
+        "correlation": 0.999992959937557,
+        "normalizedRMSE": 0.0037761536992238364
+      },
+      {
+        "startSeconds": 105.0,
+        "correlation": 0.999993038122641,
+        "normalizedRMSE": 0.0037762954847634345
+      },
+      {
+        "startSeconds": 110.0,
+        "correlation": 0.9999963694444757,
+        "normalizedRMSE": 0.00273575743991369
+      },
+      {
+        "startSeconds": 115.0,
+        "correlation": 0.9999907366154911,
+        "normalizedRMSE": 0.0043827994933419495
+      },
+      {
+        "startSeconds": 120.0,
+        "correlation": 0.9999933742939671,
+        "normalizedRMSE": 0.0036921021439891622
+      },
+      {
+        "startSeconds": 125.0,
+        "correlation": 0.9999896251170217,
+        "normalizedRMSE": 0.004580906872777574
+      },
+      {
+        "startSeconds": 130.0,
+        "correlation": 0.9999930263664925,
+        "normalizedRMSE": 0.0037848211005463046
+      },
+      {
+        "startSeconds": 135.0,
+        "correlation": 0.9999943136026971,
+        "normalizedRMSE": 0.0034083236306244238
+      },
+      {
+        "startSeconds": 140.0,
+        "correlation": 0.9999938069682256,
+        "normalizedRMSE": 0.003544269595937764
+      },
+      {
+        "startSeconds": 145.0,
+        "correlation": 0.9999940673865165,
+        "normalizedRMSE": 0.0035057326262087295
+      },
+      {
+        "startSeconds": 150.0,
+        "correlation": 0.9999873597277427,
+        "normalizedRMSE": 0.005077612943577495
+      },
+      {
+        "startSeconds": 155.0,
+        "correlation": 0.9999935806247819,
+        "normalizedRMSE": 0.0036245867009561997
+      },
+      {
+        "startSeconds": 160.0,
+        "correlation": 0.9999916698737669,
+        "normalizedRMSE": 0.0041498513757509525
+      },
+      {
+        "startSeconds": 165.0,
+        "correlation": 0.9999887917330723,
+        "normalizedRMSE": 0.004781644926980985
+      },
+      {
+        "startSeconds": 170.0,
+        "correlation": 0.9999901645929627,
+        "normalizedRMSE": 0.004464569511896814
+      },
+      {
+        "startSeconds": 175.0,
+        "correlation": 0.999991393533992,
+        "normalizedRMSE": 0.004211954340567873
+      },
+      {
+        "startSeconds": 180.0,
+        "correlation": 0.9999936514421728,
+        "normalizedRMSE": 0.0036399610817087016
+      },
+      {
+        "startSeconds": 185.0,
+        "correlation": 0.9999797225221685,
+        "normalizedRMSE": 0.00644194106926858
+      },
+      {
+        "startSeconds": 190.0,
+        "correlation": 0.9999921752227514,
+        "normalizedRMSE": 0.0040018993352237825
+      },
+      {
+        "startSeconds": 195.0,
+        "correlation": 0.9999939214265791,
+        "normalizedRMSE": 0.0035271986575800113
+      },
+      {
+        "startSeconds": 200.0,
+        "correlation": 0.9999941988988413,
+        "normalizedRMSE": 0.003467683369066287
+      },
+      {
+        "startSeconds": 205.0,
+        "correlation": 0.9999913139155224,
+        "normalizedRMSE": 0.004221051490111374
+      },
+      {
+        "startSeconds": 210.0,
+        "correlation": 0.9999860632776639,
+        "normalizedRMSE": 0.005318615446913855
+      },
+      {
+        "startSeconds": 215.0,
+        "correlation": 0.9999914620656581,
+        "normalizedRMSE": 0.004181249453049559
+      },
+      {
+        "startSeconds": 220.0,
+        "correlation": 0.999993396548077,
+        "normalizedRMSE": 0.0036771230220219164
+      },
+      {
+        "startSeconds": 225.0,
+        "correlation": 0.9999937215535246,
+        "normalizedRMSE": 0.0036149530048518773
+      },
+      {
+        "startSeconds": 230.0,
+        "correlation": 0.9999921011255609,
+        "normalizedRMSE": 0.004025050753027302
+      },
+      {
+        "startSeconds": 235.0,
+        "correlation": 0.9999941805060208,
+        "normalizedRMSE": 0.0034727983419918606
+      },
+      {
+        "startSeconds": 240.0,
+        "correlation": 0.9999885477035269,
+        "normalizedRMSE": 0.004837477190994623
+      },
+      {
+        "startSeconds": 245.0,
+        "correlation": 0.9999941807131569,
+        "normalizedRMSE": 0.003465477556975692
+      },
+      {
+        "startSeconds": 250.0,
+        "correlation": 0.9999936473124329,
+        "normalizedRMSE": 0.003596721110478318
+      },
+      {
+        "startSeconds": 255.0,
+        "correlation": 0.9999945546031309,
+        "normalizedRMSE": 0.0033191446405029575
+      },
+      {
+        "startSeconds": 260.0,
+        "correlation": 0.999994596503082,
+        "normalizedRMSE": 0.0033420023138516376
+      },
+      {
+        "startSeconds": 265.0,
+        "correlation": 0.9999894952886625,
+        "normalizedRMSE": 0.00462630222353873
+      },
+      {
+        "startSeconds": 270.0,
+        "correlation": 0.9999877929596097,
+        "normalizedRMSE": 0.004993544790016348
+      },
+      {
+        "startSeconds": 275.0,
+        "correlation": 0.9999927109429797,
+        "normalizedRMSE": 0.0038582492004175543
+      },
+      {
+        "startSeconds": 280.0,
+        "correlation": 0.9999935798646838,
+        "normalizedRMSE": 0.0036364437910989806
+      },
+      {
+        "startSeconds": 285.0,
+        "correlation": 0.999992015524262,
+        "normalizedRMSE": 0.004066358904440644
+      },
+      {
+        "startSeconds": 290.0,
+        "correlation": 0.9999946100383309,
+        "normalizedRMSE": 0.0033316072146336467
+      },
+      {
+        "startSeconds": 295.0,
+        "correlation": 0.9999933832000983,
+        "normalizedRMSE": 0.0036711129940741618
+      },
+      {
+        "startSeconds": 300.0,
+        "correlation": 0.9999942375530704,
+        "normalizedRMSE": 0.003423692359050235
+      },
+      {
+        "startSeconds": 305.0,
+        "correlation": 0.9999929617076331,
+        "normalizedRMSE": 0.0038235682785920304
+      },
+      {
+        "startSeconds": 310.0,
+        "correlation": 0.9999949568166983,
+        "normalizedRMSE": 0.0032106916428836763
+      },
+      {
+        "startSeconds": 315.0,
+        "correlation": 0.9999919199588734,
+        "normalizedRMSE": 0.0040745896287344
+      },
+      {
+        "startSeconds": 320.0,
+        "correlation": 0.999988316524271,
+        "normalizedRMSE": 0.004874736122517632
+      },
+      {
+        "startSeconds": 325.0,
+        "correlation": 0.9999927701263974,
+        "normalizedRMSE": 0.003834580604358381
+      },
+      {
+        "startSeconds": 330.0,
+        "correlation": 0.9999898844340527,
+        "normalizedRMSE": 0.004547701439103064
+      },
+      {
+        "startSeconds": 335.0,
+        "correlation": 0.9999914973827997,
+        "normalizedRMSE": 0.004178043408805571
+      },
+      {
+        "startSeconds": 340.0,
+        "correlation": 0.9999895982344942,
+        "normalizedRMSE": 0.004617138787993193
+      },
+      {
+        "startSeconds": 345.0,
+        "correlation": 0.9999929116626624,
+        "normalizedRMSE": 0.003802336350556633
+      },
+      {
+        "startSeconds": 350.0,
+        "correlation": 0.999989470425082,
+        "normalizedRMSE": 0.004626055016041134
+      },
+      {
+        "startSeconds": 355.0,
+        "correlation": 0.9999879865477564,
+        "normalizedRMSE": 0.004991602416455689
+      },
+      {
+        "startSeconds": 360.0,
+        "correlation": 0.9999955578049498,
+        "normalizedRMSE": 0.0030107548727499995
+      },
+      {
+        "startSeconds": 365.0,
+        "correlation": 0.9999940657807339,
+        "normalizedRMSE": 0.0034682188598276877
+      },
+      {
+        "startSeconds": 370.0,
+        "correlation": 0.9999910458835509,
+        "normalizedRMSE": 0.004313027134276543
+      },
+      {
+        "startSeconds": 375.0,
+        "correlation": 0.9999868473590595,
+        "normalizedRMSE": 0.005203991838941948
+      },
+      {
+        "startSeconds": 380.0,
+        "correlation": 0.9999822444350891,
+        "normalizedRMSE": 0.006010911421174316
+      },
+      {
+        "startSeconds": 385.0,
+        "correlation": 0.9999937069067216,
+        "normalizedRMSE": 0.003599326642011329
+      },
+      {
+        "startSeconds": 390.0,
+        "correlation": 0.999983015795298,
+        "normalizedRMSE": 0.005895387995097907
+      },
+      {
+        "startSeconds": 395.0,
+        "correlation": 0.9999905615876535,
+        "normalizedRMSE": 0.004401691060501209
+      },
+      {
+        "startSeconds": 400.0,
+        "correlation": 0.9999920710902213,
+        "normalizedRMSE": 0.0040452628723855666
+      },
+      {
+        "startSeconds": 405.0,
+        "correlation": 0.999992673531938,
+        "normalizedRMSE": 0.00386913324331679
+      },
+      {
+        "startSeconds": 410.0,
+        "correlation": 0.9999941541460761,
+        "normalizedRMSE": 0.00346661628298204
+      },
+      {
+        "startSeconds": 415.0,
+        "correlation": 0.9999909886251207,
+        "normalizedRMSE": 0.004282995818465024
+      },
+      {
+        "startSeconds": 420.0,
+        "correlation": 0.999995090281936,
+        "normalizedRMSE": 0.0031723527891058196
+      },
+      {
+        "startSeconds": 425.0,
+        "correlation": 0.999992991508683,
+        "normalizedRMSE": 0.003795926815496535
+      },
+      {
+        "startSeconds": 430.0,
+        "correlation": 0.9999883286080947,
+        "normalizedRMSE": 0.004897115045400945
+      },
+      {
+        "startSeconds": 435.0,
+        "correlation": 0.9999898642327412,
+        "normalizedRMSE": 0.004530195692444743
+      },
+      {
+        "startSeconds": 440.0,
+        "correlation": 0.9999940581645738,
+        "normalizedRMSE": 0.003498744163613858
+      },
+      {
+        "startSeconds": 445.0,
+        "correlation": 0.9999892833208613,
+        "normalizedRMSE": 0.004699234453321143
+      },
+      {
+        "startSeconds": 450.0,
+        "correlation": 0.9999850167228175,
+        "normalizedRMSE": 0.005567288895822325
+      },
+      {
+        "startSeconds": 455.0,
+        "correlation": 0.999993221858105,
+        "normalizedRMSE": 0.0037216638288175797
+      },
+      {
+        "startSeconds": 460.0,
+        "correlation": 0.9999967064871014,
+        "normalizedRMSE": 0.0026007697645908166
+      },
+      {
+        "startSeconds": 465.0,
+        "correlation": 0.999993270819604,
+        "normalizedRMSE": 0.003716534575743178
+      },
+      {
+        "startSeconds": 470.0,
+        "correlation": 0.9999905791943228,
+        "normalizedRMSE": 0.004389098057090037
+      },
+      {
+        "startSeconds": 475.0,
+        "correlation": 0.9999899432549885,
+        "normalizedRMSE": 0.004553334521630933
+      },
+      {
+        "startSeconds": 480.0,
+        "correlation": 0.9999930334584279,
+        "normalizedRMSE": 0.003786727499182305
+      },
+      {
+        "startSeconds": 485.0,
+        "correlation": 0.9999929713381727,
+        "normalizedRMSE": 0.003789176237895092
+      },
+      {
+        "startSeconds": 490.0,
+        "correlation": 0.9999965032846799,
+        "normalizedRMSE": 0.0026810408949209086
+      },
+      {
+        "startSeconds": 495.0,
+        "correlation": 0.9999908555830419,
+        "normalizedRMSE": 0.004320513780344818
+      },
+      {
+        "startSeconds": 500.0,
+        "correlation": 0.999994854274484,
+        "normalizedRMSE": 0.003235978530431955
+      },
+      {
+        "startSeconds": 505.0,
+        "correlation": 0.9999911679754133,
+        "normalizedRMSE": 0.004259805639990688
+      },
+      {
+        "startSeconds": 510.0,
+        "correlation": 0.9999970696798058,
+        "normalizedRMSE": 0.002445788412907675
+      },
+      {
+        "startSeconds": 515.0,
+        "correlation": 0.9999957268223905,
+        "normalizedRMSE": 0.0029582007632514722
+      },
+      {
+        "startSeconds": 520.0,
+        "correlation": 0.9999930556986493,
+        "normalizedRMSE": 0.0037828603983378916
+      },
+      {
+        "startSeconds": 525.0,
+        "correlation": 0.9999951823332363,
+        "normalizedRMSE": 0.003139923441339675
+      },
+      {
+        "startSeconds": 530.0,
+        "correlation": 0.9999921953700655,
+        "normalizedRMSE": 0.003990107804593676
+      },
+      {
+        "startSeconds": 535.0,
+        "correlation": 0.9999947233592036,
+        "normalizedRMSE": 0.0032874438751552314
+      },
+      {
+        "startSeconds": 540.0,
+        "correlation": 0.999993592487837,
+        "normalizedRMSE": 0.00365002965491934
+      },
+      {
+        "startSeconds": 545.0,
+        "correlation": 0.9999923599559047,
+        "normalizedRMSE": 0.003967331503499263
+      },
+      {
+        "startSeconds": 550.0,
+        "correlation": 0.9999952406142262,
+        "normalizedRMSE": 0.003130044125263802
+      },
+      {
+        "startSeconds": 555.0,
+        "correlation": 0.9999943590162091,
+        "normalizedRMSE": 0.0033923348549714546
+      },
+      {
+        "startSeconds": 560.0,
+        "correlation": 0.9999905997364983,
+        "normalizedRMSE": 0.004381774305148149
+      },
+      {
+        "startSeconds": 565.0,
+        "correlation": 0.999986020901684,
+        "normalizedRMSE": 0.005360594307886932
+      },
+      {
+        "startSeconds": 570.0,
+        "correlation": 0.9999949637876193,
+        "normalizedRMSE": 0.0032005293394320507
+      },
+      {
+        "startSeconds": 575.0,
+        "correlation": 0.999991705468509,
+        "normalizedRMSE": 0.004110891816170135
+      },
+      {
+        "startSeconds": 580.0,
+        "correlation": 0.9999916836577388,
+        "normalizedRMSE": 0.004120598998987553
+      },
+      {
+        "startSeconds": 585.0,
+        "correlation": 0.9999925643423878,
+        "normalizedRMSE": 0.003901288113302849
+      },
+      {
+        "startSeconds": 590.0,
+        "correlation": 0.9999909890198412,
+        "normalizedRMSE": 0.004289897868632095
+      },
+      {
+        "startSeconds": 595.0,
+        "correlation": 0.9999913192402894,
+        "normalizedRMSE": 0.004228064859696984
+      },
+      {
+        "startSeconds": 600.0,
+        "correlation": 0.9999942377404578,
+        "normalizedRMSE": 0.0034325022410053377
+      },
+      {
+        "startSeconds": 605.0,
+        "correlation": 0.9999942566976968,
+        "normalizedRMSE": 0.0034355713743525816
+      },
+      {
+        "startSeconds": 610.0,
+        "correlation": 0.9999958409111692,
+        "normalizedRMSE": 0.002925605790957683
+      },
+      {
+        "startSeconds": 615.0,
+        "correlation": 0.9999961108889709,
+        "normalizedRMSE": 0.002812347947408955
+      },
+      {
+        "startSeconds": 620.0,
+        "correlation": 0.9999945506601965,
+        "normalizedRMSE": 0.0033381913569340044
+      },
+      {
+        "startSeconds": 625.0,
+        "correlation": 0.9999934174917112,
+        "normalizedRMSE": 0.0036777135168032113
+      },
+      {
+        "startSeconds": 630.0,
+        "correlation": 0.9999937225478703,
+        "normalizedRMSE": 0.00358428738777899
+      },
+      {
+        "startSeconds": 635.0,
+        "correlation": 0.9999939752766481,
+        "normalizedRMSE": 0.0034941066875351515
+      },
+      {
+        "startSeconds": 640.0,
+        "correlation": 0.9999877181743843,
+        "normalizedRMSE": 0.005010393353959396
+      },
+      {
+        "startSeconds": 645.0,
+        "correlation": 0.9999930873451514,
+        "normalizedRMSE": 0.003751724115756583
+      },
+      {
+        "startSeconds": 650.0,
+        "correlation": 0.9999966124957399,
+        "normalizedRMSE": 0.0026472286253541397
+      },
+      {
+        "startSeconds": 655.0,
+        "correlation": 0.999989063132346,
+        "normalizedRMSE": 0.004717494026577137
+      },
+      {
+        "startSeconds": 660.0,
+        "correlation": 0.999994817692667,
+        "normalizedRMSE": 0.0032615219183686557
+      },
+      {
+        "startSeconds": 665.0,
+        "correlation": 0.9999888779461413,
+        "normalizedRMSE": 0.004761606038599572
+      },
+      {
+        "startSeconds": 670.0,
+        "correlation": 0.9999931760589638,
+        "normalizedRMSE": 0.00375674367924698
+      },
+      {
+        "startSeconds": 675.0,
+        "correlation": 0.9999907083054431,
+        "normalizedRMSE": 0.004367219278938471
+      },
+      {
+        "startSeconds": 680.0,
+        "correlation": 0.9999962290598557,
+        "normalizedRMSE": 0.002791258335766309
+      },
+      {
+        "startSeconds": 685.0,
+        "correlation": 0.9999929575385783,
+        "normalizedRMSE": 0.0038027180835174435
+      },
+      {
+        "startSeconds": 690.0,
+        "correlation": 0.99998935380507,
+        "normalizedRMSE": 0.004668701538875273
+      },
+      {
+        "startSeconds": 695.0,
+        "correlation": 0.9999914269603316,
+        "normalizedRMSE": 0.004189902147964657
+      },
+      {
+        "startSeconds": 700.0,
+        "correlation": 0.9999901964963568,
+        "normalizedRMSE": 0.004483882213002146
+      },
+      {
+        "startSeconds": 705.0,
+        "correlation": 0.9999920346884488,
+        "normalizedRMSE": 0.004023321915855863
+      },
+      {
+        "startSeconds": 710.0,
+        "correlation": 0.9999914327307988,
+        "normalizedRMSE": 0.004178741864819444
+      },
+      {
+        "startSeconds": 715.0,
+        "correlation": 0.9999954273211963,
+        "normalizedRMSE": 0.003064871698824926
+      },
+      {
+        "startSeconds": 720.0,
+        "correlation": 0.9999954889989288,
+        "normalizedRMSE": 0.0030470187264477087
+      },
+      {
+        "startSeconds": 725.0,
+        "correlation": 0.9999917517414348,
+        "normalizedRMSE": 0.004143684045739682
+      },
+      {
+        "startSeconds": 730.0,
+        "correlation": 0.9999946541425837,
+        "normalizedRMSE": 0.0033305825560184343
+      },
+      {
+        "startSeconds": 735.0,
+        "correlation": 0.9999931809778276,
+        "normalizedRMSE": 0.003734316962361632
+      },
+      {
+        "startSeconds": 740.0,
+        "correlation": 0.9999883223993383,
+        "normalizedRMSE": 0.004883075887443989
+      },
+      {
+        "startSeconds": 745.0,
+        "correlation": 0.9999947579801175,
+        "normalizedRMSE": 0.003273111874893527
+      },
+      {
+        "startSeconds": 750.0,
+        "correlation": 0.9999940294383242,
+        "normalizedRMSE": 0.003516188883952281
+      },
+      {
+        "startSeconds": 755.0,
+        "correlation": 0.9999928779318092,
+        "normalizedRMSE": 0.0038267303913895306
+      },
+      {
+        "startSeconds": 760.0,
+        "correlation": 0.9999899584721591,
+        "normalizedRMSE": 0.004516932093741822
+      },
+      {
+        "startSeconds": 765.0,
+        "correlation": 0.9999963140414284,
+        "normalizedRMSE": 0.002752360356292144
+      },
+      {
+        "startSeconds": 770.0,
+        "correlation": 0.9999928771430252,
+        "normalizedRMSE": 0.0038450165985881605
+      },
+      {
+        "startSeconds": 775.0,
+        "correlation": 0.9999975017123942,
+        "normalizedRMSE": 0.0022616091387986236
+      },
+      {
+        "startSeconds": 780.0,
+        "correlation": 0.9999915886820042,
+        "normalizedRMSE": 0.004148335239124692
+      },
+      {
+        "startSeconds": 785.0,
+        "correlation": 0.9999864834299173,
+        "normalizedRMSE": 0.005245053165146689
+      },
+      {
+        "startSeconds": 790.0,
+        "correlation": 0.999985195521439,
+        "normalizedRMSE": 0.005536374539985349
+      },
+      {
+        "startSeconds": 795.0,
+        "correlation": 0.9999911188924664,
+        "normalizedRMSE": 0.004255137423568025
+      },
+      {
+        "startSeconds": 800.0,
+        "correlation": 0.9999893505641526,
+        "normalizedRMSE": 0.004680747349408809
+      },
+      {
+        "startSeconds": 805.0,
+        "correlation": 0.9999925659436077,
+        "normalizedRMSE": 0.0038925871328668164
+      },
+      {
+        "startSeconds": 810.0,
+        "correlation": 0.999994937573906,
+        "normalizedRMSE": 0.0032071097166378936
+      },
+      {
+        "startSeconds": 815.0,
+        "correlation": 0.9999867908531699,
+        "normalizedRMSE": 0.005187891733944363
+      },
+      {
+        "startSeconds": 820.0,
+        "correlation": 0.9999898510729683,
+        "normalizedRMSE": 0.004578510881543973
+      },
+      {
+        "startSeconds": 825.0,
+        "correlation": 0.999994507487819,
+        "normalizedRMSE": 0.003357912275123467
+      },
+      {
+        "startSeconds": 830.0,
+        "correlation": 0.9999903046683091,
+        "normalizedRMSE": 0.004455600469613936
+      },
+      {
+        "startSeconds": 835.0,
+        "correlation": 0.9999959991059649,
+        "normalizedRMSE": 0.0028704071030875218
+      },
+      {
+        "startSeconds": 840.0,
+        "correlation": 0.9999930104078627,
+        "normalizedRMSE": 0.003769747941890149
+      },
+      {
+        "startSeconds": 845.0,
+        "correlation": 0.999992016570615,
+        "normalizedRMSE": 0.0040674185644980505
+      },
+      {
+        "startSeconds": 850.0,
+        "correlation": 0.9999784335269502,
+        "normalizedRMSE": 0.006636875106337426
+      }
+    ],
+    "lagWindows": [
+      {
+        "startSeconds": 0.1,
+        "bestLagSamples": 0,
+        "correlation": 0.9999912730172047
+      },
+      {
+        "startSeconds": 75.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999895840398295
+      },
+      {
+        "startSeconds": 150.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999839927726928
+      },
+      {
+        "startSeconds": 230.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999922439954452
+      },
+      {
+        "startSeconds": 305.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999924598562339
+      },
+      {
+        "startSeconds": 385.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999934680375634
+      },
+      {
+        "startSeconds": 460.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999966508776343
+      },
+      {
+        "startSeconds": 540.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999941387724642
+      },
+      {
+        "startSeconds": 615.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999947762383212
+      },
+      {
+        "startSeconds": 695.0,
+        "bestLagSamples": 0,
+        "correlation": 0.999991397846167
+      },
+      {
+        "startSeconds": 770.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999924219849446
+      },
+      {
+        "startSeconds": 850.0,
+        "bestLagSamples": 0,
+        "correlation": 0.9999784335269502
+      }
+    ],
+    "zeroLagVerified": true,
+    "method": "Full mono 8kHz decoded PCM, every nonsilent 5s window; +/-100ms independent lag search at 12 distributed positions",
+    "subjectiveListeningCompleted": false
+  },
+  "aacMeasurement": {
+    "input_i": "-15.04",
+    "input_tp": "-1.91",
+    "input_lra": "2.70",
+    "input_thresh": "-25.64",
+    "output_i": "-15.04",
+    "output_tp": "-2.00",
+    "output_lra": "2.60",
+    "output_thresh": "-25.60",
+    "normalization_type": "dynamic",
+    "target_offset": "0.04"
+  },
+  "frameCorrespondence": {
+    "allFramesMatched": true,
+    "totalFrames": 25621,
+    "baseFramesMatched": 24871,
+    "patchFramesMatched": 750,
+    "PTSExact": true,
+    "pixelFormat": "yuv420p",
+    "hash": "sha256",
+    "method": "Each final decoded raw YUV420 frame matched the authenticated cached c9 absolute frame outside GOP patches, or a freshly decoded patch-local frame inside them. Base/split/silent videos were not redundantly decoded in this candidate run.",
+    "baseCache": {
+      "path": "research/revision-v6/continuity-repair/splice-proof/exact-timebase/original.framehash.txt",
+      "sha256": "7436df137766656988036119ddc2380f3d93a224098bd635a48675baf921fab6",
+      "proof": "research/revision-v6/continuity-repair/splice-proof/exact-timebase/pixel-proof.json",
+      "proofSHA256": "4e67e8da9788f0a7a84d3f358b174a60360463c2d1649c91b10c9f1c14b84581",
+      "originalVideoSHA256": "c9f90b7b6c2f79a9238d38e82c752394c4faf1419eed40b36b30e4e2b164e8a4",
+      "cacheAuthenticated": true
+    },
+    "hashReports": {
+      "base": {
+        "path": "research/revision-v6/continuity-repair/candidate-r3/base-full.yuv.sha256",
+        "sha256": "7436df137766656988036119ddc2380f3d93a224098bd635a48675baf921fab6"
+      },
+      "patches": {
+        "12000": {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/patch-12000-12249.yuv.sha256",
+          "sha256": "3f16751cc532fbe3dcf7c3343dc7d683fffdc215d0993c5a2477e1aaab03f55b"
+        },
+        "20250": {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/patch-20250-20749.yuv.sha256",
+          "sha256": "4d20eadd5920957ec1d7d0b408c42fe052d4022ebc5222547f2d6416d7c602e3"
+        }
+      },
+      "final": {
+        "path": "research/revision-v6/continuity-repair/candidate-r3/final-composed.yuv.sha256",
+        "sha256": "c916bc983f5af710a256413691615d1f9cc2b53bd308d9da4e99762f3336d562"
+      }
+    }
+  },
+  "packetTiming": {
+    "packets": 25621,
+    "timeBase": "1/15360",
+    "allPresentationTimestampsExact": true,
+    "allDecodeIntervalsExact": true,
+    "decodeStartSeconds": -0.06666666666666667,
+    "keyframePresentationFrames": [
+      0,
+      250,
+      500,
+      750,
+      1000,
+      1250,
+      1500,
+      1750,
+      2000,
+      2250,
+      2500,
+      2750,
+      3000,
+      3250,
+      3500,
+      3750,
+      4000,
+      4250,
+      4500,
+      4750,
+      5000,
+      5250,
+      5500,
+      5750,
+      6000,
+      6250,
+      6500,
+      6750,
+      7000,
+      7250,
+      7500,
+      7750,
+      8000,
+      8250,
+      8500,
+      8750,
+      9000,
+      9250,
+      9500,
+      9750,
+      10000,
+      10250,
+      10500,
+      10750,
+      11000,
+      11250,
+      11500,
+      11750,
+      12000,
+      12250,
+      12500,
+      12750,
+      13000,
+      13250,
+      13500,
+      13750,
+      14000,
+      14250,
+      14500,
+      14750,
+      15000,
+      15250,
+      15500,
+      15750,
+      16000,
+      16250,
+      16500,
+      16750,
+      17000,
+      17250,
+      17500,
+      17750,
+      18000,
+      18250,
+      18500,
+      18750,
+      19000,
+      19250,
+      19500,
+      19750,
+      20000,
+      20250,
+      20500,
+      20750,
+      21000,
+      21250,
+      21500,
+      21750,
+      22000,
+      22250,
+      22500,
+      22750,
+      23000,
+      23250,
+      23500,
+      23750,
+      24000,
+      24250,
+      24500,
+      24750,
+      25000,
+      25250,
+      25500
+    ]
+  },
+  "baseSegmentValidation": [
+    {
+      "start": 0,
+      "end": 11999,
+      "file": "research/revision-v6/continuity-repair/candidate-r3/base-00.mp4",
+      "sha256": "aea8145b1a4fe992feb1e1e1ade7a58d94ed3ae7eb021d28cb171dff8840be06",
+      "timing": {
+        "packets": 12000,
+        "timeBase": "1/15360",
+        "allPresentationTimestampsExact": true,
+        "allDecodeIntervalsExact": true,
+        "decodeStartSeconds": -0.06666666666666667,
+        "keyframePresentationFrames": [
+          0,
+          250,
+          500,
+          750,
+          1000,
+          1250,
+          1500,
+          1750,
+          2000,
+          2250,
+          2500,
+          2750,
+          3000,
+          3250,
+          3500,
+          3750,
+          4000,
+          4250,
+          4500,
+          4750,
+          5000,
+          5250,
+          5500,
+          5750,
+          6000,
+          6250,
+          6500,
+          6750,
+          7000,
+          7250,
+          7500,
+          7750,
+          8000,
+          8250,
+          8500,
+          8750,
+          9000,
+          9250,
+          9500,
+          9750,
+          10000,
+          10250,
+          10500,
+          10750,
+          11000,
+          11250,
+          11500,
+          11750
+        ]
+      },
+      "usedInComposition": true,
+      "separateSegmentPixelDecodePerformed": false,
+      "pixelVerificationMethod": "Used base ranges are verified at their absolute positions in the complete final decoded frame map."
+    },
+    {
+      "start": 12000,
+      "end": 12249,
+      "file": "research/revision-v6/continuity-repair/candidate-r3/base-01.mp4",
+      "sha256": "d17c45c8cc4ff7ff6573b365b86881d33feb2b0723f023d2d544ba3430beeccc",
+      "timing": {
+        "packets": 250,
+        "timeBase": "1/15360",
+        "allPresentationTimestampsExact": true,
+        "allDecodeIntervalsExact": true,
+        "decodeStartSeconds": -0.06666666666666667,
+        "keyframePresentationFrames": [
+          0
+        ]
+      },
+      "usedInComposition": false,
+      "separateSegmentPixelDecodePerformed": false,
+      "pixelVerificationMethod": "Unused base segment; packet checks only."
+    },
+    {
+      "start": 12250,
+      "end": 20249,
+      "file": "research/revision-v6/continuity-repair/candidate-r3/base-02.mp4",
+      "sha256": "4ac5987eca08285048f114230e45ffde1d2b6a420bef2bf39c97d5fb78284c50",
+      "timing": {
+        "packets": 8000,
+        "timeBase": "1/15360",
+        "allPresentationTimestampsExact": true,
+        "allDecodeIntervalsExact": true,
+        "decodeStartSeconds": -0.06666666666666667,
+        "keyframePresentationFrames": [
+          0,
+          250,
+          500,
+          750,
+          1000,
+          1250,
+          1500,
+          1750,
+          2000,
+          2250,
+          2500,
+          2750,
+          3000,
+          3250,
+          3500,
+          3750,
+          4000,
+          4250,
+          4500,
+          4750,
+          5000,
+          5250,
+          5500,
+          5750,
+          6000,
+          6250,
+          6500,
+          6750,
+          7000,
+          7250,
+          7500,
+          7750
+        ]
+      },
+      "usedInComposition": true,
+      "separateSegmentPixelDecodePerformed": false,
+      "pixelVerificationMethod": "Used base ranges are verified at their absolute positions in the complete final decoded frame map."
+    },
+    {
+      "start": 20250,
+      "end": 20749,
+      "file": "research/revision-v6/continuity-repair/candidate-r3/base-03.mp4",
+      "sha256": "9b62296e2771c6bc511404fb89fef13e63cc584e9169202f7555969c520865be",
+      "timing": {
+        "packets": 500,
+        "timeBase": "1/15360",
+        "allPresentationTimestampsExact": true,
+        "allDecodeIntervalsExact": true,
+        "decodeStartSeconds": -0.06666666666666667,
+        "keyframePresentationFrames": [
+          0,
+          250
+        ]
+      },
+      "usedInComposition": false,
+      "separateSegmentPixelDecodePerformed": false,
+      "pixelVerificationMethod": "Unused base segment; packet checks only."
+    },
+    {
+      "start": 20750,
+      "end": 25620,
+      "file": "research/revision-v6/continuity-repair/candidate-r3/base-04.mp4",
+      "sha256": "f661560f203ed1b4acbcb203cdde1806c49c3dfde9df713fb48359625e751d9c",
+      "timing": {
+        "packets": 4871,
+        "timeBase": "1/15360",
+        "allPresentationTimestampsExact": true,
+        "allDecodeIntervalsExact": true,
+        "decodeStartSeconds": -0.06666666666666667,
+        "keyframePresentationFrames": [
+          0,
+          250,
+          500,
+          750,
+          1000,
+          1250,
+          1500,
+          1750,
+          2000,
+          2250,
+          2500,
+          2750,
+          3000,
+          3250,
+          3500,
+          3750,
+          4000,
+          4250,
+          4500,
+          4750
+        ]
+      },
+      "usedInComposition": true,
+      "separateSegmentPixelDecodePerformed": false,
+      "pixelVerificationMethod": "Used base ranges are verified at their absolute positions in the complete final decoded frame map."
+    }
+  ],
+  "patchTimebaseNormalization": [
+    {
+      "start": 12000,
+      "end": 12249,
+      "video": "research/revision-v6/continuity-repair/candidate-r3/patch-12000-12249.timescale15360.mp4",
+      "sha256": "e0cb8222311bf20e27d2caa35b6c363e1478cbc66d7d5b9d5a941e7c6063f9e9",
+      "timeBase": "1/15360",
+      "reencoded": false,
+      "allPayloadsAndPTSAndDTSMatched": true,
+      "reports": [
+        {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/patch-12000-12249.original-packets.json",
+          "sha256": "af5c73d7e68161b2b6c80d6d15fe6287b4d8112e6b0c609cae6dff6fa57f0a8b"
+        },
+        {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/patch-12000-12249.normalized-packets.json",
+          "sha256": "af5c73d7e68161b2b6c80d6d15fe6287b4d8112e6b0c609cae6dff6fa57f0a8b"
+        }
+      ]
+    },
+    {
+      "start": 20250,
+      "end": 20749,
+      "video": "research/revision-v6/continuity-repair/candidate-r3/patch-20250-20749.timescale15360.mp4",
+      "sha256": "0214b3414e411e07edd5fa84975b4f98de11b8110d4c0b1dcaf621c14bbe79f3",
+      "timeBase": "1/15360",
+      "reencoded": false,
+      "allPayloadsAndPTSAndDTSMatched": true,
+      "reports": [
+        {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/patch-20250-20749.original-packets.json",
+          "sha256": "9f32002e40ede55e69d408158576414fb3d97b2df84fcbcb39179aaed5a492f7"
+        },
+        {
+          "path": "research/revision-v6/continuity-repair/candidate-r3/patch-20250-20749.normalized-packets.json",
+          "sha256": "9f32002e40ede55e69d408158576414fb3d97b2df84fcbcb39179aaed5a492f7"
+        }
+      ]
+    }
+  ],
+  "validationPipeline": "authenticated-base-frame-cache-and-final-full-decode-v2",
+  "videoCopyEvidence": {
+    "packetCount": 25621,
+    "allPayloadsAndPTSAndDTSMatched": true,
+    "codecConfigMatched": true,
+    "method": "Every compressed H264 packet SHA256, size, flags, rational PTS/DTS/duration, and codec extradata SHA256 compared before and after video-copy audio mux.",
+    "reports": [
+      {
+        "path": "research/revision-v6/continuity-repair/candidate-r3/silent-video-packets.json",
+        "sha256": "9338fc076c2c769c4236291e317db3c912deeb94c8ecbc1066e3c07d5715e2b3"
+      },
+      {
+        "path": "research/revision-v6/continuity-repair/candidate-r3/final-video-packets.json",
+        "sha256": "9338fc076c2c769c4236291e317db3c912deeb94c8ecbc1066e3c07d5715e2b3"
+      }
+    ]
+  },
+  "subjectiveVisualReviewCompleted": false,
+  "subjectiveAudioReviewCompleted": false
+}

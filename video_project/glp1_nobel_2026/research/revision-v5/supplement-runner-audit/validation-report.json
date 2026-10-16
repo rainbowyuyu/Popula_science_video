@@ -1,0 +1,57 @@
+{
+  "rendered": false,
+  "gpuStarted": false,
+  "allChecksPass": true,
+  "protectedInputsUnchanged": {
+    "research\\revision-v5\\patches\\patch-plan.json": "09e341967872d0dc346ac00f66c8422d11ec223a1529cce2ea811252e04368bb",
+    "tmp\\final-render.json": "135f3e9cebdf42f9532d9e0a96b6c087497c8f0e483322da7c6bd3b2e5b15264",
+    "scripts\\render_patch_batch_v5.mjs": "7b2a66363aa249b5db648739480ffd76c31d34e8e64ccc688912cad4a6f942af"
+  },
+  "rendererSHA256": "ef8b6326e27e21537d4e8f7d745c07461b382c63e01db4c853d19e8274de52be",
+  "cases": [
+    {
+      "case": "valid",
+      "passed": true,
+      "exitCode": 0,
+      "expectedSuccess": true,
+      "log": "research\\revision-v5\\supplement-runner-audit\\valid.log"
+    },
+    {
+      "case": "missing-plan",
+      "passed": true,
+      "exitCode": 1,
+      "expectedSuccess": false,
+      "log": "research\\revision-v5\\supplement-runner-audit\\missing-plan.log"
+    },
+    {
+      "case": "tmp-root",
+      "passed": true,
+      "exitCode": 1,
+      "expectedSuccess": false,
+      "log": "research\\revision-v5\\supplement-runner-audit\\tmp-root.log"
+    },
+    {
+      "case": "bundle-dir",
+      "passed": true,
+      "exitCode": 1,
+      "expectedSuccess": false,
+      "log": "research\\revision-v5\\supplement-runner-audit\\bundle-dir.log"
+    },
+    {
+      "case": "missing-source",
+      "passed": true,
+      "exitCode": 1,
+      "expectedSuccess": false,
+      "log": "research\\revision-v5\\supplement-runner-audit\\missing-source.log"
+    },
+    {
+      "case": "mismatched-source",
+      "passed": true,
+      "exitCode": 1,
+      "expectedSuccess": false,
+      "log": "research\\revision-v5\\supplement-runner-audit\\mismatched-source.log"
+    }
+  ],
+  "outputDirectoryCreated": false,
+  "segmentMarkerCreated": false
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="跟着上海中心的同一座教学模型，从整体、骨架、地下基础到顶部，动手看懂结构关系。">
+  <title>上海中心 · 拆开一座垂直城市 | rainbow鱼</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="brand"><img src="../public/brand/logo.png" alt="rainbow鱼标志"><span>rainbow鱼</span><span class="series">每天5分钟科普</span></header>
+  <main>
+    <aside class="panel">
+      <p class="eyebrow">把视角，交给你</p>
+      <h1>拆开一座<br>垂直城市。</h1>
+      <p class="intro">这是影片里的同一座上海中心。转动、拉近，再把玻璃外衣轻轻打开。</p>
+      <div class="facts"><div><strong>632<span>米</span></strong><small>建筑高度</small></div><div><strong>120<span>°</span></strong><small>外形总扭转</small></div></div>
+      <fieldset class="views"><legend>从哪里开始</legend><button type="button" data-view="whole" aria-pressed="true">完整建筑</button><button type="button" data-view="skeleton" aria-pressed="false">看骨架</button><button type="button" data-view="foundation" aria-pressed="false">地下基础</button><button type="button" data-view="top" aria-pressed="false">楼顶阻尼器</button></fieldset>
+      <div class="explosion"><label for="explode">分层拆解 <output id="explodeValue" for="explode">0%</output></label><input id="explode" type="range" min="0" max="100" step="1" value="0" aria-label="分层拆解程度"><div class="range-caption"><span>完整</span><span>展开</span></div></div>
+      <div class="selection" aria-live="polite"><p class="eyebrow" id="partKicker">点选模型里的一个部件</p><h2 id="partName">从一条传力路开始</h2><p id="partDescription">楼板接住重量，梁把力交给核心筒和柱子，最后传入地下。</p></div>
+      <p class="scope">公开资料教学重建。部分尺度与构件简化；不用于施工或工程计算。</p>
+      <a class="sources" href="../research/sources.md" target="_blank" rel="noopener">查看资料与图纸来源 ↗</a>
+    </aside>
+    <section class="stage" aria-label="上海中心三维互动模型">
+      <canvas id="scene" aria-label="拖动旋转、滚轮缩放，点击选择建筑部件" tabindex="0"></canvas>
+      <div class="stage-heading"><span>上海中心</span><small id="viewName">完整建筑</small></div>
+      <div class="status" id="status" role="status"><span class="spinner" aria-hidden="true"></span>正在载入建筑模型…</div>
+      <div class="stage-bottom"><p>拖动旋转 · 滚轮拉近 · 点击部件</p><button id="rotate" type="button" aria-pressed="false">缓慢环绕</button></div>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

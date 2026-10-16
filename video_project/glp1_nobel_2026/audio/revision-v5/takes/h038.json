@@ -1,0 +1,87 @@
+{
+  "id": "h038",
+  "text": "当LDL在血中长期偏多，就更容易进入并滞留在动脉壁里。问题从管壁内部开始，日积月累，才形成斑块。",
+  "ttsText": "当L D L在血中持续偏多，就更容易进入并滞留在动脉壁里。问题从管壁内部开始，日积月累，才形成斑块。",
+  "signature": "0393980acc9b9365d510eb7f61328031f9e57d81823d7a8249b3e8819909fefa",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h038-0393980acc9b-73d1b4f4ba.wav",
+  "processed": "audio/revision-v5/voice/h038.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.720041666666667,
+  "sampleRate": 48000,
+  "sha256": "c1761078e0df06169b126e5c8d3d8b93d72c0f5b3cbdd4e17d52a540c409018a",
+  "rawSHA256": "9c860f2be4983a2c97fd93311036a7935e4bb42391729f83b2ebd6c15a9dd27e",
+  "seed": 1943123188,
+  "batchIds": [
+    "h033",
+    "h038"
+  ],
+  "batchKey": "73d1b4f4ba54ac9fd6d5fe3e55794176d31c3a25dd1155a203b4bfc2df89ce07",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -60.22324363296313,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "9c860f2be4983a2c97fd93311036a7935e4bb42391729f83b2ebd6c15a9dd27e",
+    "outputSha256": "c1761078e0df06169b126e5c8d3d8b93d72c0f5b3cbdd4e17d52a540c409018a",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4174747294872247,
+    "input": {
+      "seconds": 8.720041666666667,
+      "peakDb": -5.176385023278448,
+      "activeRmsDb": -22.106250478208302,
+      "quietFrameP10Db": -59.73051169996865
+    },
+    "output": {
+      "seconds": 8.720041666666667,
+      "peakDb": -3.511983210270189,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.60638210460298
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "pron-v2",
+  "candidateTakeSHA256": "99696a596d03ba6e075b11302603cd245899f59069986e5a5c438ea9db2f829a",
+  "candidateRecord": "audio/revision-v5/candidates/pron-v2/takes/h038.json",
+  "selectionReason": "Pronunciation pass: avoid ambiguous 长 readings with natural spoken synonyms; preserve original caption wording.",
+  "previousSelectedSHA256": "d44dbcfec4d3d0053d3f5bdc6003dbc418038a41ec16feb4ae7864019fe15d4c"
+}

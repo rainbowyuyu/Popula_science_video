@@ -1,0 +1,343 @@
+{
+  "sampleRate": 48000,
+  "durationSec": 300.0,
+  "missing": [],
+  "clips": [
+    {
+      "id": "000",
+      "startSec": 0,
+      "endSec": 6,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/000.wav",
+      "text": "一段家庭视频，手机能存，硬盘也能存。",
+      "status": "ok",
+      "seconds": 3.84
+    },
+    {
+      "id": "001",
+      "startSec": 6,
+      "endSec": 12,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/001.wav",
+      "text": "要是换成一滴液体，画面还能留下来吗？",
+      "status": "ok",
+      "seconds": 3.04
+    },
+    {
+      "id": "002",
+      "startSec": 12,
+      "endSec": 18,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/002.wav",
+      "text": "科学家试着把文件写进 DNA，再把它读回来。",
+      "status": "ok",
+      "seconds": 3.36
+    },
+    {
+      "id": "003",
+      "startSec": 18,
+      "endSec": 24,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/003.wav",
+      "text": "DNA 的字母表只有四个符号。把二进制两位一组，就能映射成一枚碱基。",
+      "status": "ok",
+      "seconds": 5.84
+    },
+    {
+      "id": "004",
+      "startSec": 24,
+      "endSec": 31,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/004.wav",
+      "text": "文件不能只剩一串字母。算法先分片，再给每片加地址。",
+      "status": "ok",
+      "seconds": 5.2
+    },
+    {
+      "id": "005",
+      "startSec": 31,
+      "endSec": 37,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/005.wav",
+      "text": "这样读回片段时，算法知道它来自文件哪一段。",
+      "status": "ok",
+      "seconds": 3.6
+    },
+    {
+      "id": "006",
+      "startSec": 37,
+      "endSec": 44,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/006.wav",
+      "text": "看到 DNA，算法已经留下两条线索：内容和地址。",
+      "status": "ok",
+      "seconds": 4.48
+    },
+    {
+      "id": "007",
+      "startSec": 44,
+      "endSec": 51,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/007.wav",
+      "text": "写入前，每条候选先过质检。GC 失衡，合成和读取都会变难。",
+      "status": "ok",
+      "seconds": 6.640041666666667
+    },
+    {
+      "id": "008",
+      "startSec": 51,
+      "endSec": 58,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/008.wav",
+      "text": "第二关看同一字母是否连得太长。长串 A，设备容易读错。",
+      "status": "ok",
+      "seconds": 5.52
+    },
+    {
+      "id": "009",
+      "startSec": 58,
+      "endSec": 66,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/009.wav",
+      "text": "不合格的候选会被重新映射，直到它给分子读写设备留出足够余量。",
+      "status": "ok",
+      "seconds": 5.36
+    },
+    {
+      "id": "010",
+      "startSec": 66,
+      "endSec": 75,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/010.wav",
+      "text": "这不是把字母挑得更漂亮，而是提前承认真实世界有噪声，把风险留在写入之前处理掉。",
+      "status": "ok",
+      "seconds": 6.8
+    },
+    {
+      "id": "011",
+      "startSec": 75,
+      "endSec": 83,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/011.wav",
+      "text": "可只挑好序列还不够，因为保存和测序都可能让某些片段消失。",
+      "status": "ok",
+      "seconds": 5.52
+    },
+    {
+      "id": "012",
+      "startSec": 83,
+      "endSec": 92,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/012.wav",
+      "text": "DNA Fountain 的想法，是把源片段随机组合成很多液滴，每滴都记住自己由哪些片段组合而成。",
+      "status": "ok",
+      "seconds": 8.720041666666667
+    },
+    {
+      "id": "013",
+      "startSec": 92,
+      "endSec": 101,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/013.wav",
+      "text": "液滴足够多时，解码器先找只有一个未知数的那滴。找回一片，就能继续消掉其他未知数。",
+      "status": "ok",
+      "seconds": 7.76
+    },
+    {
+      "id": "014",
+      "startSec": 101,
+      "endSec": 110,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/014.wav",
+      "text": "所以冗余不是把文件复制很多遍，而是把恢复关系设计进组合里。",
+      "status": "ok",
+      "seconds": 4.88
+    },
+    {
+      "id": "015",
+      "startSec": 110,
+      "endSec": 118,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/015.wav",
+      "text": "多一些不同的组合，换来丢掉几片以后仍能恢复的机会。这是 Fountain 真正有用的地方。",
+      "status": "ok",
+      "seconds": 6.08
+    },
+    {
+      "id": "016",
+      "startSec": 118,
+      "endSec": 126,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/016.wav",
+      "text": "接下来进入真正麻烦的环节：合成、保存，再把 DNA 测回来。",
+      "status": "ok",
+      "seconds": 5.04
+    },
+    {
+      "id": "017",
+      "startSec": 126,
+      "endSec": 135,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/017.wav",
+      "text": "读回来的不是整齐原文，可能有替换、插入、缺失，也可能整条片段根本没有被读到。",
+      "status": "ok",
+      "seconds": 7.2000416666666665
+    },
+    {
+      "id": "018",
+      "startSec": 135,
+      "endSec": 143,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/018.wav",
+      "text": "画面里的红色字母是固定生成的教学样本，只用来让错误看得见，不冒充某一次真实实验。",
+      "status": "ok",
+      "seconds": 7.2000416666666665
+    },
+    {
+      "id": "019",
+      "startSec": 143,
+      "endSec": 151,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/019.wav",
+      "text": "这一步的关键不是把噪声藏起来，而是让后面的算法有证据可用。",
+      "status": "ok",
+      "seconds": 5.2
+    },
+    {
+      "id": "020",
+      "startSec": 151,
+      "endSec": 160,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/020.wav",
+      "text": "镜头跟着一条读段离开实验台，下一站是地址分桶。",
+      "status": "ok",
+      "seconds": 4.560041666666667
+    },
+    {
+      "id": "021",
+      "startSec": 160,
+      "endSec": 169,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/021.wav",
+      "text": "读回的短片段，首先要找到自己的位置。",
+      "status": "ok",
+      "seconds": 3.36
+    },
+    {
+      "id": "022",
+      "startSec": 169,
+      "endSec": 179,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/022.wav",
+      "text": "同一位置的多条读段，还要做局部比对。动态规划矩阵展示的，就是这一小块相似关系。",
+      "status": "ok",
+      "seconds": 7.2000416666666665
+    },
+    {
+      "id": "023",
+      "startSec": 179,
+      "endSec": 188,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/023.wav",
+      "text": "对齐以后，每一列都有几种候选。质量更高的读段，投下更亮的权重。",
+      "status": "ok",
+      "seconds": 6.32
+    },
+    {
+      "id": "024",
+      "startSec": 188,
+      "endSec": 198,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/024.wav",
+      "text": "按列取共识，缺口就从多条证据的交集里补回来。",
+      "status": "ok",
+      "seconds": 4.24
+    },
+    {
+      "id": "025",
+      "startSec": 198,
+      "endSec": 207,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/025.wav",
+      "text": "外层纠错再补最后一层余量：编码负责写入前，局部比对和共识负责读回后。",
+      "status": "ok",
+      "seconds": 7.2000416666666665
+    },
+    {
+      "id": "026",
+      "startSec": 207,
+      "endSec": 216,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/026.wav",
+      "text": "生信算法的价值，就是把杂乱的短读段，变成可以核对的文件证据。",
+      "status": "ok",
+      "seconds": 5.84
+    },
+    {
+      "id": "027",
+      "startSec": 216,
+      "endSec": 225,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/027.wav",
+      "text": "那大模型能帮哪一步？它先把 DNA 看成一串 token，而不是一句自然语言。",
+      "status": "ok",
+      "seconds": 6.000041666666666
+    },
+    {
+      "id": "028",
+      "startSec": 225,
+      "endSec": 235,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/028.wav",
+      "text": "模型可以给候选序列打分，提示哪一段更可能在这次实验里出错，也能检索论文和调用约束检查器。",
+      "status": "ok",
+      "seconds": 8.720041666666667
+    },
+    {
+      "id": "029",
+      "startSec": 235,
+      "endSec": 245,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/029.wav",
+      "text": "它还可以观察读回结果，提出下一轮候选，把筛选变成一个会回看的闭环。",
+      "status": "ok",
+      "seconds": 6.000041666666666
+    },
+    {
+      "id": "030",
+      "startSec": 245,
+      "endSec": 254,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/030.wav",
+      "text": "但模型不能凭空替代纠错码，也不能保证一条序列一定合成成功。",
+      "status": "ok",
+      "seconds": 5.44
+    },
+    {
+      "id": "031",
+      "startSec": 254,
+      "endSec": 262,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/031.wav",
+      "text": "预测可以加快筛选，证据仍要回到编码器、合成仪和测序仪。",
+      "status": "ok",
+      "seconds": 5.28
+    },
+    {
+      "id": "032",
+      "startSec": 262,
+      "endSec": 273,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/032.wav",
+      "text": "回到开头那段视频：切片、地址、约束和冗余，经历一次分子读写。",
+      "status": "ok",
+      "seconds": 6.56
+    },
+    {
+      "id": "033",
+      "startSec": 273,
+      "endSec": 284,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/033.wav",
+      "text": "再靠分桶、比对和共识，把噪声里的证据重新拼起来。",
+      "status": "ok",
+      "seconds": 4.88
+    },
+    {
+      "id": "034",
+      "startSec": 284,
+      "endSec": 295,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/034.wav",
+      "text": "DNA 存储的难点，从来不只是把数据塞进去，而是让多年后的每一步，都留下可检查的证据。",
+      "status": "ok",
+      "seconds": 7.04
+    },
+    {
+      "id": "035",
+      "startSec": 295,
+      "endSec": 300,
+      "file": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/raw/035.wav",
+      "text": "",
+      "status": "silent",
+      "seconds": 0.0
+    }
+  ],
+  "sourceMusic": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/public/music/dna_ambient.wav",
+  "output": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2/public/audio/master.wav",
+  "voiceRmsDb": -21.803885172850748,
+  "musicRmsDb": -36.23308586442347,
+  "mixRmsDb": -22.625586533558323,
+  "peakDb": -1.500000020140368,
+  "peakLimitDb": -1.5,
+  "timeStretch": false,
+  "fitPolicy": "reject-overlong-clips",
+  "silentCueIds": [
+    "035"
+  ]
+}

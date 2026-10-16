@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "isolated_decoder_without_original_or_encoded_packets",
+      "pass": true,
+      "inputsPresentBeforeDecode": [
+        "decode-metadata.json",
+        "received-packets.jsonl",
+        "observed-region-reads.json"
+      ]
+    },
+    {
+      "name": "disconnected_xor_component_fails_without_known_anchor",
+      "pass": true
+    },
+    {
+      "name": "correlated_identical_errors_are_not_magically_recovered",
+      "pass": true
+    },
+    {
+      "name": "smith_waterman_max_to_zero_and_independent_score",
+      "pass": true
+    },
+    {
+      "name": "atlas_has_visual_pan_between_frames_0_and_44",
+      "pass": true,
+      "meanAbsoluteRgbDifference": 5.628689236111111
+    }
+  ],
+  "originalSha256": "5471d35fc6fd7bdcfaaefc30b58f1338e2effb01d2fee0cb32c1d6c152c7ca32",
+  "atlasSha256": "4f73db885d545e38e3b84f739ab4bbc57beb98645274469bf69416d6cd86f48d"
+}

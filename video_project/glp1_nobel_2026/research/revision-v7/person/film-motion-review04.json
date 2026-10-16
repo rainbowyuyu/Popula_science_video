@@ -1,0 +1,28 @@
+{
+  "review": "Film04 person and garment motion review",
+  "date": "2026-10-09",
+  "mode": "read-only visual review; no source edits or rendering",
+  "sourceIndex": "tmp/v7-motion-04/motion-sheets/index.json",
+  "verdict": "No definite visible blocking defect found in the assigned sampled views. Ready for full export from the person/garment review scope.",
+  "viewedSheets": {
+    "chair-action": {"sheets": 11, "firstFrame": 4147, "lastFrame": 4510, "cadenceFrames": 3, "sampleCount": 122, "allActuallyOpened": true},
+    "meal-to-walk": {"sheets": 8, "firstFrame": 22090, "lastFrame": 22280, "cadenceFrames": 2, "sampleCount": 96, "allActuallyOpened": true},
+    "drink-replacement": {"sheets": 3, "firstFrame": 21895, "lastFrame": 22069, "cadenceFrames": 6, "sampleCount": 30, "allActuallyOpened": true}
+  },
+  "totalSheetsActuallyViewed": 22,
+  "totalSamplesActuallyViewed": 248,
+  "observations": [
+    {"scope": "chair-action", "finding": "Standing calves are visibly in front of the chair seat; the definite Film03 calf/seat intersection does not recur in the reviewed standing samples including frame 4198."},
+    {"scope": "chair-action", "finding": "Descent, armrest support, hand release and rise keep recognizable arm volume and continuous garment placement at the reviewed sampling cadence. The chair retires progressively before the body settles into the neutral anatomical pose."},
+    {"scope": "chair-action", "finding": "Frames 4435 through 4510 show a continuous neutral person at the h016/h017 handoff; the later gradual skin transparency reveals underlying anatomy after the chair is gone. No definite pose jump was seen in the sampled sequence."},
+    {"scope": "meal-to-walk", "finding": "The table moves away from the hands and then fades progressively. The previous Film03 cake/finger overlap at frame 22116 was not visible in the reviewed Film04 sheet. The eating arm lowers progressively while the body and shorts return to standing."},
+    {"scope": "meal-to-walk", "finding": "Chair opacity decreases progressively through the posture transition; no hard on/off jump or new obvious garment hole was found in the reviewed sequence."},
+    {"scope": "drink-replacement", "finding": "The old drink leaves before the replacement enters. No double cup overlap or sudden body/garment discontinuity was apparent in the reviewed sampled sequence."}
+  ],
+  "blockingFindings": [],
+  "limitations": [
+    "Review used the 22 actual contact-sheet images at their displayed resolution, not every video frame and not an exhaustive triangle collision solver.",
+    "This is limited to the assigned person/garment motion scopes; World agent reviews measurement sequences, and the root reviews table/cup detail.",
+    "No audio, full-film playback, medical-content or whole-film acceptance claim is made by this report."
+  ]
+}

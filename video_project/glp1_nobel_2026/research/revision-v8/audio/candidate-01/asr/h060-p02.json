@@ -1,0 +1,190 @@
+{
+  "id": "h060",
+  "partIndex": 1,
+  "expected": "像氨氯地平，会减少钙进入管壁肌肉细胞，让小动脉放松。",
+  "heard": "向安律地平,會減少蓋進入管閉肌肉細胞,讓小動脈放鬆。",
+  "words": [
+    {
+      "text": "向",
+      "start": 0.0,
+      "end": 0.48,
+      "probability": 0.5963109731674194
+    },
+    {
+      "text": "安",
+      "start": 0.48,
+      "end": 0.66,
+      "probability": 0.8454003930091858
+    },
+    {
+      "text": "律",
+      "start": 0.66,
+      "end": 0.82,
+      "probability": 0.6924727708101273
+    },
+    {
+      "text": "地",
+      "start": 0.82,
+      "end": 0.94,
+      "probability": 0.8158833980560303
+    },
+    {
+      "text": "平,",
+      "start": 0.94,
+      "end": 1.2,
+      "probability": 0.9642040729522705
+    },
+    {
+      "text": "會",
+      "start": 1.54,
+      "end": 1.64,
+      "probability": 0.44966235756874084
+    },
+    {
+      "text": "減",
+      "start": 1.64,
+      "end": 1.8,
+      "probability": 0.997378945350647
+    },
+    {
+      "text": "少",
+      "start": 1.8,
+      "end": 1.98,
+      "probability": 0.9968012571334839
+    },
+    {
+      "text": "蓋",
+      "start": 1.98,
+      "end": 2.16,
+      "probability": 0.9448252022266388
+    },
+    {
+      "text": "進",
+      "start": 2.16,
+      "end": 2.34,
+      "probability": 0.9057386517524719
+    },
+    {
+      "text": "入",
+      "start": 2.34,
+      "end": 2.46,
+      "probability": 0.9806995987892151
+    },
+    {
+      "text": "管",
+      "start": 2.46,
+      "end": 2.6,
+      "probability": 0.9424118995666504
+    },
+    {
+      "text": "閉",
+      "start": 2.6,
+      "end": 2.82,
+      "probability": 0.7175330370664597
+    },
+    {
+      "text": "肌",
+      "start": 2.82,
+      "end": 2.98,
+      "probability": 0.9538886547088623
+    },
+    {
+      "text": "肉",
+      "start": 2.98,
+      "end": 3.12,
+      "probability": 0.9997665286064148
+    },
+    {
+      "text": "細",
+      "start": 3.12,
+      "end": 3.3,
+      "probability": 0.9907123446464539
+    },
+    {
+      "text": "胞,",
+      "start": 3.3,
+      "end": 3.54,
+      "probability": 0.9682726562023163
+    },
+    {
+      "text": "讓",
+      "start": 3.8,
+      "end": 3.92,
+      "probability": 0.9462082982063293
+    },
+    {
+      "text": "小",
+      "start": 3.92,
+      "end": 4.12,
+      "probability": 0.9931324124336243
+    },
+    {
+      "text": "動",
+      "start": 4.12,
+      "end": 4.26,
+      "probability": 0.4339998662471771
+    },
+    {
+      "text": "脈",
+      "start": 4.26,
+      "end": 4.46,
+      "probability": 0.969809353351593
+    },
+    {
+      "text": "放",
+      "start": 4.46,
+      "end": 4.62,
+      "probability": 0.9970057606697083
+    },
+    {
+      "text": "鬆。",
+      "start": 4.62,
+      "end": 4.84,
+      "probability": 0.9823008179664612
+    }
+  ],
+  "sourceSHA256": "fab0926c7037c06ea11baed6331cb486529ffcce135392fa6d50447711064d10",
+  "ratio": 0.782608695652174,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "像氨氯",
+      "heard": "向安律",
+      "end": 3
+    },
+    {
+      "op": "replace",
+      "expected": "钙",
+      "heard": "盖",
+      "end": 9
+    },
+    {
+      "op": "replace",
+      "expected": "壁",
+      "heard": "闭",
+      "end": 13
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 253440,
+    "seconds": 5.28,
+    "peakDBFS": -8.038474485386072,
+    "first20msDBFS": -88.3516632984385,
+    "last20msDBFS": -97.10611638702778,
+    "firstActiveMs": 60.0,
+    "lastActiveToEndMs": 440.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

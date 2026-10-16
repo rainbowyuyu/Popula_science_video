@@ -1,0 +1,144 @@
+{
+  "status": "reject",
+  "providerSHA256": "34c9573d52318429de591897941853c68ead8e74ed64bd9bd1da79782b842e5f",
+  "reviewedUTC": "2026-10-12T17:00:56.008081+00:00",
+  "reviewer": "/root/v14_fish independent visual QA",
+  "scope": "Actual contact plus native-frame dense sheets every 5 frames, and separately opened full-resolution 1920x1080 frames. All provider video frames were strictly decoded and all extracted JPEG hashes were bound to provenance.",
+  "inspectedFrames": [
+    1,
+    2,
+    6,
+    11,
+    16,
+    21,
+    26,
+    31,
+    36,
+    41,
+    46,
+    51,
+    56,
+    61,
+    66,
+    71,
+    76,
+    81,
+    86,
+    91,
+    96,
+    101,
+    106,
+    111,
+    116,
+    121,
+    126,
+    131,
+    136,
+    141,
+    146,
+    149,
+    150
+  ],
+  "nativeFrameNumbering": "One-based: frame_0001.jpg is decoded frame index 0.",
+  "individualFullResolutionFrames": [
+    16,
+    26,
+    31,
+    126
+  ],
+  "denseSheetsActuallyViewed": [
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\secondary_to_world_v16-dense-01.jpg",
+      "nativeFrameNumbers": [
+        1,
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\secondary_to_world_v16-dense-02.jpg",
+      "nativeFrameNumbers": [
+        51,
+        56,
+        61,
+        66,
+        71,
+        76,
+        81,
+        86,
+        91,
+        96
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\secondary_to_world_v16-dense-03.jpg",
+      "nativeFrameNumbers": [
+        101,
+        106,
+        111,
+        116,
+        121,
+        126,
+        131,
+        136,
+        141,
+        146
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\secondary_to_world_v16-dense-04.jpg",
+      "nativeFrameNumbers": [
+        150
+      ]
+    }
+  ],
+  "normalSpeedPlaybackReviewed": false,
+  "everyFrameManuallyReviewed": false,
+  "audioListened": false,
+  "providerAudioUsed": false,
+  "technicalChecks": {
+    "strictFullVideoDecodeExitCode": 0,
+    "frameCount": 150,
+    "allExtractedFrameHashesMatchProvenance": true,
+    "adjacentIdenticalJPEGHashes": 0,
+    "fps": "30/1",
+    "width": 1920,
+    "height": 1080
+  },
+  "findings": [
+    {
+      "frames": [
+        16
+      ],
+      "severity": "blocking",
+      "finding": "The generated secondary optical polyline moves its lower reflection kink into the interior of the spherical drop, detached from the surface boundary."
+    },
+    {
+      "frames": [
+        26,
+        31,
+        36
+      ],
+      "severity": "blocking",
+      "finding": "The fixed two-reflection scientific path morphs into a curved L-shaped line in homogeneous water. This creates a visible false teaching image and cannot be accepted as the same optical mechanism."
+    },
+    {
+      "frames": [
+        96,
+        106,
+        126,
+        150
+      ],
+      "finding": "The later double-rainbow garden and bottom-edge fish entry are coherent, but they do not remove the earlier scientific-path error."
+    }
+  ],
+  "limits": "This is a source-clip sampled visual decision. It does not certify every unsampled frame, normal-speed perceived motion, listening, final composite subtitles/logo, or the complete encoded film. Generated transitions are artistic and do not replace deterministic optics validation.",
+  "repair": "Complete the deterministic two-reflection explanation first. Keep the original polyline fixed while its light extinguishes, then let Qwen move a ray-free transparent drop back into the garden."
+}

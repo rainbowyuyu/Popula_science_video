@@ -1,0 +1,79 @@
+{
+  "id": "s040",
+  "text": "这栋楼又是怎么造起来的？施工时，核心筒先向上爬升，后面的工序接着跟上。",
+  "ttsText": "这栋楼又是怎么造起来的？施工时，核心筒先向上爬升，后面的工序接着跟上。",
+  "signature": "019700cbf39fa25730e8a24581bfa0056e715562b28c60de69e8816c357face5",
+  "raw": "audio/raw/s040-019700cbf3.wav",
+  "processed": "audio/candidates/v3-pronunciation/s040.wav",
+  "rawDuration": 6.88,
+  "duration": 7.12,
+  "sha256": "52afc1d3df92d3d29845c184610f3c6c85fdc5da3a6d76741cd4cfcf16cabbf3",
+  "seed": 1680166188,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s038",
+    "s040"
+  ],
+  "rawEndpointDB": -68.27163433194872,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "25bf2f4f3927cbd6e084f0680f1943a7bfe582c9c4dd3e409a8ff9f7bc72aa67",
+    "outputSha256": "52afc1d3df92d3d29845c184610f3c6c85fdc5da3a6d76741cd4cfcf16cabbf3",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.074266008689044,
+    "input": {
+      "seconds": 7.12,
+      "peakDb": -7.8190111725571985,
+      "activeRmsDb": -22.70470819685295,
+      "quietFrameP10Db": -63.8713945787764
+    },
+    "output": {
+      "seconds": 7.12,
+      "peakDb": -5.116977364377915,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.10945451141332
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "1409f6d139864ad5f6a20932b8ba0242c064d4d1b7b269b6e077f9e13120e0c9"
+  },
+  "subjectiveListeningChecked": false
+}

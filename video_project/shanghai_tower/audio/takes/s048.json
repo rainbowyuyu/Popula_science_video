@@ -1,0 +1,80 @@
+{
+  "id": "s048",
+  "text": "每天五分钟，认识生活里的新知识。我们下次见。",
+  "ttsText": "每天五分钟，认识生活里的新知识。我们下次见。",
+  "signature": "37878e71f737416988aa15567852223718c7092a0adde6d0a7546d53be641220",
+  "raw": "audio/raw/s048-37878e71f7.wav",
+  "processed": "public/voice/s048.wav",
+  "rawDuration": 4.320041666666667,
+  "duration": 4.560041666666667,
+  "sha256": "06d07e648de531f26c315aedb074ab850e653269ed5af1eb2677137989bfceed",
+  "seed": 3258754381,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s047",
+    "s048"
+  ],
+  "rawEndpointDB": -97.04333364647246,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "7e2eb828b285b615762dfe33a6b72e2d41598fd0159fd0a7fe3ca01d1d95077c",
+    "outputSha256": "06d07e648de531f26c315aedb074ab850e653269ed5af1eb2677137989bfceed",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.851863619103014,
+    "input": {
+      "seconds": 4.560041666666667,
+      "peakDb": -7.006474904105335,
+      "activeRmsDb": -23.752071123519684,
+      "quietFrameP10Db": -79.70140709360263
+    },
+    "output": {
+      "seconds": 4.560041666666667,
+      "peakDb": -3.7803396729079477,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -80.57116897100342
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "ab371f205d30b4278ab8aa3769bde4121eac66df800be97050616ceb4e08cd94"
+  },
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "v7-flow-a"
+}

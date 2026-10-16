@@ -1,0 +1,87 @@
+{
+  "id": "h045",
+  "partIndex": 0,
+  "ttsText": "体形瘦的人，也可能因遗传等原因出现高低密度脂蛋白；腰围大的人，则常伴甘油三酯升高。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 1,
+  "seed": 1342868133,
+  "signature": "500a8aa5809e3a7bfa2de51d46e93dafa45a6375cd09b9c376754e845aebd3b0",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h042-p01",
+    "h042-p02",
+    "h045-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\raw\\h045-p01.wav",
+  "rawSHA256": "74a6695d86e423304bcf0a4e3a900388574d51386a3f58721700faeb831634b2",
+  "rawMetrics": {
+    "samples48k": 380160,
+    "seconds": 7.92,
+    "peakDBFS": -7.572630222579042,
+    "first20msDBFS": -64.71975029379334,
+    "last20msDBFS": -97.79966653681647,
+    "firstActiveMs": 380.0,
+    "lastActiveToEndMs": 170.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\guarded\\h045-p01.wav",
+  "guardedSHA256": "2743fe3758f901b091c3985946e4285895f32ba181b161d971098f82b5df5fc3",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\processed\\h045-p01.wav",
+  "sha256": "9afe55e6c1838dcf5d3496e07b55f88c192aa86d0e5ce81a0e1c827e29370f7a",
+  "durationSeconds": 8.16,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "2743fe3758f901b091c3985946e4285895f32ba181b161d971098f82b5df5fc3",
+    "outputSha256": "9afe55e6c1838dcf5d3496e07b55f88c192aa86d0e5ce81a0e1c827e29370f7a",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.921624785829529,
+    "input": {
+      "seconds": 8.16,
+      "peakDb": -7.573180780166662,
+      "activeRmsDb": -23.728289826499758,
+      "quietFrameP10Db": -63.48431285324854
+    },
+    "output": {
+      "seconds": 8.16,
+      "peakDb": -2.903271078408209,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.6533102555169
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

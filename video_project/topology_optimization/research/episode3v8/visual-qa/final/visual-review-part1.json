@@ -1,0 +1,102 @@
+{
+  "reviewer": "model_rebuild",
+  "method": "Model visual inspection of extracted frames through view_image; not human real-time viewing and not continuous video playback.",
+  "scope": {
+    "contactSheets": [
+      "boundary-contact-01.jpg",
+      "boundary-contact-02.jpg",
+      "boundary-contact-03.jpg",
+      "boundary-contact-04.jpg",
+      "boundary-contact-05.jpg",
+      "boundary-contact-06.jpg",
+      "boundary-contact-07.jpg",
+      "boundary-contact-08.jpg",
+      "boundary-contact-09.jpg"
+    ],
+    "sampledFrames": 162,
+    "frameRange": [
+      17,
+      3027
+    ],
+    "timeRangeSeconds": [
+      0.5667,
+      100.9
+    ],
+    "fps": 30,
+    "chapters": [
+      "intro",
+      "straight",
+      "frame",
+      "bracket entrance only"
+    ],
+    "sourceIndex": "frames/frame-index.json",
+    "fullResolutionRechecks": [
+      944,
+      1049,
+      1680,
+      2094,
+      2432,
+      3027
+    ]
+  },
+  "conclusion": "No blocking geometry pop, wrong early assembly direction, annotation target error or hidden shoulder was observed within the sampled range. One minor branding-background overlap remains. These samples cannot certify every intervening frame or real-time motion pacing.",
+  "findings": [
+    {
+      "id": "P1-VIS-001",
+      "severity": "P3",
+      "blocking": false,
+      "category": "composition",
+      "frames": [
+        1680,
+        3027
+      ],
+      "timeSeconds": [
+        56.0,
+        100.9
+      ],
+      "observation": "A contextual timber or peg enters the upper-left branding area behind the rainbow鱼 wordmark during the peg close-up and bracket entrance. The logo remains readable, but the background is visually busier than the otherwise clean title margin.",
+      "evidence": [
+        "frames/sample-0089.jpg",
+        "frames/sample-0162.jpg"
+      ],
+      "recommendation": "Optional later refinement: slightly reframe these close-ups or reserve a quiet background strip around the fixed brand. No assembly or annotation correction is required for this observation."
+    }
+  ],
+  "checks": [
+    {
+      "topic": "intro and early chapter transitions",
+      "result": "No sudden model disappearance in the sampled consecutive triplets. Exploded members retain coherent relative positions; wide-to-detail travel preserves scene identity."
+    },
+    {
+      "topic": "tenon, mortise and shoulder",
+      "result": "The tenon marker points to the protruding end; mortise marker sits on the lower aperture lip; the shoulder remains visible through the translucent adjacent column in frames1049 onward."
+    },
+    {
+      "topic": "brace and columns",
+      "result": "The brace is labeled on the actual inclined member. In the sampled assembly sequence the prepared beam-brace unit remains coherent while columns close horizontally."
+    },
+    {
+      "topic": "peg insertion and removal",
+      "result": "The peg advances toward its aligned opening rather than visibly entering a solid column face; removal is shown before the columns separate. Full-resolution frame1680 confirms marker-to-peg attachment."
+    },
+    {
+      "topic": "bent group and longitudinal member",
+      "result": "The group bracket encloses the front bent; the longitudinal label targets a genuine longitudinal beam. Its final horizontal travel is the designed label exit, rather than a physical anchor jump."
+    },
+    {
+      "topic": "cross-direction tenons",
+      "result": "The translucent column in frame2432 reveals distinct joint elevations and does not require a fake duplicate model."
+    },
+    {
+      "topic": "bracket entrance",
+      "result": "The exploded bracket groups stay consistent during camera approach through frame3027; the group marker encloses multiple real components."
+    }
+  ],
+  "limitations": [
+    "Only 162 nonuniformly selected frames and six enlarged rechecks were viewed.",
+    "No audio listening was performed during this subreview.",
+    "The full bracket demonstration, hip, gravity, wind and reference outro lie outside this assigned contact-sheet range.",
+    "No code, original frame images or video media was modified."
+  ],
+  "handoff": "The main reviewer separately reported bracket line2 opening later than its narration at frames3376/3468, outside this reviewed range. That timing fix is being handled as a separate authorized revision."
+}

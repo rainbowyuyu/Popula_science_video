@@ -1,0 +1,147 @@
+{
+  "status": "pass",
+  "providerSHA256": "06ea278b5cb040b4f1f84d60ed73834dd2afaae13b9cb44013d78f81d3cb7ef8",
+  "reviewedUTC": "2026-10-12T17:00:55.510915+00:00",
+  "reviewer": "/root/v14_fish independent visual QA",
+  "scope": "Actual contact plus native-frame dense sheets every 5 frames, and separately opened full-resolution 1920x1080 frames. All provider video frames were strictly decoded and all extracted JPEG hashes were bound to provenance.",
+  "inspectedFrames": [
+    1,
+    2,
+    6,
+    11,
+    16,
+    21,
+    26,
+    31,
+    36,
+    41,
+    46,
+    51,
+    56,
+    61,
+    66,
+    71,
+    76,
+    81,
+    86,
+    91,
+    96,
+    101,
+    106,
+    111,
+    116,
+    121,
+    126,
+    131,
+    136,
+    141,
+    146,
+    149,
+    150
+  ],
+  "nativeFrameNumbering": "One-based: frame_0001.jpg is decoded frame index 0.",
+  "individualFullResolutionFrames": [
+    16,
+    76,
+    101
+  ],
+  "denseSheetsActuallyViewed": [
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\drop_to_world_v16-dense-01.jpg",
+      "nativeFrameNumbers": [
+        1,
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\drop_to_world_v16-dense-02.jpg",
+      "nativeFrameNumbers": [
+        51,
+        56,
+        61,
+        66,
+        71,
+        76,
+        81,
+        86,
+        91,
+        96
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\drop_to_world_v16-dense-03.jpg",
+      "nativeFrameNumbers": [
+        101,
+        106,
+        111,
+        116,
+        121,
+        126,
+        131,
+        136,
+        141,
+        146
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\drop_to_world_v16-dense-04.jpg",
+      "nativeFrameNumbers": [
+        150
+      ]
+    }
+  ],
+  "normalSpeedPlaybackReviewed": false,
+  "everyFrameManuallyReviewed": false,
+  "audioListened": false,
+  "providerAudioUsed": false,
+  "technicalChecks": {
+    "strictFullVideoDecodeExitCode": 0,
+    "frameCount": 150,
+    "allExtractedFrameHashesMatchProvenance": true,
+    "adjacentIdenticalJPEGHashes": 0,
+    "fps": "30/1",
+    "width": 1920,
+    "height": 1080
+  },
+  "findings": [
+    {
+      "frames": [
+        1,
+        16,
+        31,
+        46,
+        76
+      ],
+      "finding": "The primary-rainbow optical path keeps its single internal reflection while the drop scales down into the rain curtain. The white incoming ray remains left of the drop and the spectral outgoing ray remains lower-left."
+    },
+    {
+      "frames": [
+        81,
+        86,
+        91,
+        96,
+        101,
+        106
+      ],
+      "finding": "The outgoing ray shortens progressively; the cute fish enters from the bottom-left, then recedes with the camera. It is partially cropped during entry, with an intact face and coherent body when visible."
+    },
+    {
+      "frames": [
+        111,
+        126,
+        146,
+        150
+      ],
+      "finding": "The garden, rainbow and fish settle into the authored wide framing. The remaining white beam is above the fish and does not obscure its eyes."
+    }
+  ],
+  "limits": "This is a source-clip sampled visual decision. It does not certify every unsampled frame, normal-speed perceived motion, listening, final composite subtitles/logo, or the complete encoded film. Generated transitions are artistic and do not replace deterministic optics validation."
+}

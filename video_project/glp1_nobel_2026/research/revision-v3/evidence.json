@@ -1,0 +1,978 @@
+{
+  "createdAtUTC": "2026-10-08T11:42:02.298483+00:00",
+  "revision": "V3",
+  "storyFile": "docs/story-v3-draft.json",
+  "storySHA256": "b9998dd5631ef97ef1c63d4ae12c11f0102d8da80b07bf8fef85295e5d69d7ee",
+  "scope": "GLP1研究史、研究方法、分子设计与多尺度教学；实际读取级别逐条标明。",
+  "sources": [
+    {
+      "id": "afp2026",
+      "title": "Research into weight-loss drugs tipped for Nobel as award week opens",
+      "authors": "BSS/AFP via The Business Standard",
+      "year": 2026,
+      "url": "https://www.tbsnews.net/world/research-weight-loss-drugs-tipped-nobel-award-week-opens-1562861",
+      "readScope": "V3重新HTTP200读取新闻全文中的预测与Pendlebury引述。",
+      "supportedClaims": [
+        "2026年10月5日颁奖前专家向AFP预测GLP1/减重研究是热门方向。"
+      ],
+      "scopeAndLimit": "媒体专家预测，不是官方提名或评委理由。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/afp2026.html"
+      ]
+    },
+    {
+      "id": "appetite_semaglutide",
+      "status": "verified",
+      "title": "The effect of semaglutide 2.4 mg once weekly on energy intake, appetite, control of eating, and gastric emptying in adults with obesity.",
+      "authors": "Friedrichsen M, Breitschaft A, Tadayon S, Wizert A, Skovgaard D.",
+      "year": "2021",
+      "journal": "Diabetes, obesity & metabolism",
+      "doi": "10.1111/dom.14280",
+      "pmid": "33269530",
+      "pmcid": "PMC7898914",
+      "url": "https://doi.org/10.1111/dom.14280",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE%3A%22The+effect+of+semaglutide+2.4+mg+once+weekly+on+energy+intake%22&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:16.412395+00:00",
+      "savedMetadata": "research\\verified_raw\\appetite_semaglutide.json",
+      "evidenceExcerpt": "suppressed appetite, improved control of eating, and reduced food cravings",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "72名肥胖成人、20周、2.4mg每周与安慰剂；主观食欲和自由进食能量下降；20周用对乙酰氨基酚间接方法未见胃排空延迟。",
+      "readScope": "V3本轮重新读取原始摘要。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/appetite2021-v3.json"
+      ]
+    },
+    {
+      "id": "cabrera2006",
+      "doi": "10.1073/pnas.0510790103",
+      "title": "The unique cytoarchitecture of human pancreatic islets has implications for islet cell function.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1413730/",
+      "readScope": "EuropePMC XML500后，PMC HTML200；实际读取原始全文摘要、结果、人鼠形态对比图说明。",
+      "supportedClaims": [
+        "人胰岛的β/α/δ细胞较混杂，不是典型小鼠中心β外周α壳层。",
+        "不同内分泌细胞均可接近血管。"
+      ],
+      "scopeAndLimit": "模型需标教学示意；不能据一篇研究声称所有人胰岛都完全随机分布。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/cabrera2006-pmc.html",
+        "research/revision-v3/raw/cabrera2006-pmc-excerpts.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope"
+    },
+    {
+      "id": "deacon1995",
+      "doi": "10.1210/jcem.80.3.7883856",
+      "title": "Degradation of glucagon-like peptide-1 by human plasma in vitro yields an N-terminally truncated peptide that is a major endogenous metabolite in vivo.",
+      "url": "https://doi.org/10.1210/jcem.80.3.7883856",
+      "readScope": "本轮实际在线检索并读取原始摘要。",
+      "supportedClaims": [
+        "HPLC、质谱与序列分析确认GLP-1(9–36)amide。",
+        "DPP-IV抑制剂阻止代谢片段形成。"
+      ],
+      "scopeAndLimit": "摘要体外人血浆20.4分钟不可当作体内天然活性肽1–2分钟半衰期。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/deacon-target-search.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope",
+      "authors": "Deacon CF, Johnsen AH, Holst JJ.",
+      "year": "1995",
+      "pmid": "7883856"
+    },
+    {
+      "id": "drucker1987",
+      "status": "verified",
+      "title": "Glucagon-like peptide I stimulates insulin gene expression and increases cyclic AMP levels in a rat islet cell line.",
+      "authors": "Drucker DJ, Philippe J, Mojsov S, Chick WL, Habener JF.",
+      "year": "1987",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "doi": "10.1073/pnas.84.10.3434",
+      "pmid": "3033647",
+      "pmcid": "PMC304885",
+      "url": "https://doi.org/10.1073/pnas.84.10.3434",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3033647&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:14.659807+00:00",
+      "savedMetadata": "research\\verified_raw\\drucker1987.json",
+      "evidenceExcerpt": "potently increases cAMP levels, insulin mRNA transcripts, and insulin release",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "培养大鼠胰岛瘤细胞中的机制结果，不能把细胞水平证据直接当作人体疗效。",
+      "readScope": "V3本轮读取EuropePMC原始摘要；培养大鼠胰岛瘤细胞cAMP、胰岛素mRNA与释放。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/drucker1987.json"
+      ]
+    },
+    {
+      "id": "eec2022",
+      "status": "verified-full-text-sections",
+      "title": "Enteroendocrine System and Gut Barrier in Metabolic Disorders",
+      "authors": "Osinski C, Moret D, Clément K, Serradas P, Ribeiro A.",
+      "year": "2022",
+      "journal": "International Journal of Molecular Sciences",
+      "doi": "10.3390/ijms23073732",
+      "pmid": "35409092",
+      "pmcid": "PMC8998765",
+      "url": "https://doi.org/10.3390/ijms23073732",
+      "fullTextUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8998765/fullTextXML",
+      "retrievedAtUTC": "2026-10-08T09:41:15.530856+00:00",
+      "savedFullText": "research/revision-v2/raw/eec2022.xml",
+      "savedExcerpts": "research/revision-v2/raw/eec2022-excerpts.json",
+      "evidenceExcerpt": "microvilli facing the intestinal lumen at the apical pole and a larger basal pole containing the secretory vesicles",
+      "scopeAndLimit": "实际阅读肠内分泌细胞形态和L细胞肽分泌段；基底极小泡的形态依据与Müller2019循环分泌依据共同支持朝间质/血管方向，不能把L细胞分泌画向肠腔。"
+    },
+    {
+      "id": "huang2018",
+      "doi": "10.1177/0963689718779898",
+      "title": "The Flaws and Future of Islet Volume Measurements.",
+      "url": "https://doi.org/10.1177/0963689718779898",
+      "readScope": "本轮取得开放全文并阅读胰岛直径、IEQ定义与Table1附近段落。",
+      "supportedClaims": [
+        "IEQ定义为直径150μm的标准球体。",
+        "人胰岛直径分布很宽，有50–350μm及大于400μm报告，平均值受分离和测量方法影响。"
+      ],
+      "scopeAndLimit": "150μm是用于镜头的选定示意实例，不称所有人体胰岛真实大小。原文某调查人数/男女数有内部不一致，此处不引用该人数。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/huang2018.xml"
+      ],
+      "verificationStatus": "verified-with-stated-scope"
+    },
+    {
+      "id": "knudsen2019",
+      "doi": "10.3389/fendo.2019.00155",
+      "title": "The Discovery and Development of Liraglutide and Semaglutide.",
+      "url": "https://doi.org/10.3389/fendo.2019.00155",
+      "readScope": "本轮取得开放全文XML，定向阅读天然半衰期、Ala扫描、Aib8、白蛋白结合与司美格鲁肽侧链筛选章节和图3说明。",
+      "supportedClaims": [
+        "Aib8提高抗DPP-IV稳定性并保留GLP1R亲和。",
+        "系统比较脂肪酸/脂肪二酸链长及连接臂；C18脂肪二酸与γGlu-2×OEG组合在受体活性及白蛋白结合间取得平衡。",
+        "天然GLP1在人体IV后约1.5分钟与SC后约1.5小时不同。"
+      ],
+      "scopeAndLimit": "药物研发者撰写的综述；系统筛选细节与Lau2015原始摘要交叉核对。不是本轮已读取2015全文的声明。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/knudsen2019.xml",
+        "research/revision-v3/raw/targeted-reading-excerpts.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope"
+    },
+    {
+      "id": "lasker2024",
+      "status": "verified",
+      "title": "GLP-1-based therapy for obesity — 2024 Lasker~DeBakey Clinical Medical Research Award",
+      "authors": "Lasker Foundation",
+      "year": "2024",
+      "url": "https://laskerfoundation.org/winners/glp-1-based-therapy-for-obesity/",
+      "retrievedAtUTC": "2026-10-08T03:22:13.095841+00:00",
+      "savedMetadata": "research\\verified_raw\\lasker2024.html",
+      "evidenceExcerpt": "For the discovery and development of GLP-1-based drugs",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "通俗历史叙事来源，实验数值以原论文为准；不新增伪造对白。",
+      "readScope": "V3在线403；明确复用并重新阅读V1已成功归档全文中的1964、Mojsov/Weir/Drucker及开发段落。",
+      "localEvidenceFiles": [
+        "research/verified_raw/lasker2024.html"
+      ]
+    },
+    {
+      "id": "membrane_openstax",
+      "doi": null,
+      "title": "Biology 2e, 5.1 Components and Structure",
+      "url": "https://openstax.org/books/biology-2e/pages/5-1-components-and-structure",
+      "readScope": "本轮HTTP200并实际读取质膜厚度段。",
+      "supportedClaims": [
+        "质膜厚度5–10nm。"
+      ],
+      "scopeAndLimit": "5nm为用于镜头的教学参考厚度，不是当前β细胞标本的专属测量；膜蛋白/glycocalyx外部延伸不属于双层核心厚度。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/membrane-openstax.html",
+        "research/revision-v3/raw/membrane-openstax-excerpts.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope"
+    },
+    {
+      "id": "mentlein1993",
+      "doi": "10.1111/j.1432-1033.1993.tb17986.x",
+      "title": "Dipeptidyl-peptidase IV hydrolyses gastric inhibitory polypeptide, glucagon-like peptide-1(7-36)amide, peptide histidine methionine and is responsible for their degradation in human serum.",
+      "url": "https://doi.org/10.1111/j.1432-1033.1993.tb17986.x",
+      "readScope": "本轮实际在线检索、读取原始论文摘要；未取全文。",
+      "supportedClaims": [
+        "纯化人体胎盘DPP-IV切去GLP-1 N端His-Ala；人血清产生相同降解片段。",
+        "加入DPP-IV特异抑制剂完全阻止该类片段生成，支持降解酶的因果识别。"
+      ],
+      "scopeAndLimit": "体外人血清与纯化酶实验，不能说1993人体治疗成功。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/dpp4-target-search.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope",
+      "authors": "Mentlein R, Gallwitz B, Schmidt WE.",
+      "year": "1993",
+      "pmid": "8100523"
+    },
+    {
+      "id": "mojsov1987",
+      "status": "verified",
+      "title": "Insulinotropin: glucagon-like peptide I (7-37) co-encoded in the glucagon gene is a potent stimulator of insulin release in the perfused rat pancreas.",
+      "authors": "Mojsov S, Weir GC, Habener JF.",
+      "year": "1987",
+      "journal": "The Journal of clinical investigation",
+      "doi": "10.1172/jci112855",
+      "pmid": "3543057",
+      "pmcid": "PMC424143",
+      "url": "https://doi.org/10.1172/jci112855",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A3543057&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:14.209092+00:00",
+      "savedMetadata": "research\\verified_raw\\mojsov1987.json",
+      "evidenceExcerpt": "GLP-I(7-37) is a potent stimulator of insulin secretion",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "口播短肽有效/长肽无效只限该实验；不是普遍认定长肽在所有体系绝对无效，不宣称两肽测试剂量相同。",
+      "readScope": "V3本轮JCI原刊网页HTTP200，实际阅读原始摘要。",
+      "supportedClaims": [
+        "固定6.6mM葡萄糖的离体灌流大鼠胰腺；GLP1(7–37)最低50pM有效，GLP1(1–37)至0.5μM无效。"
+      ],
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/mojsov1987.html"
+      ]
+    },
+    {
+      "id": "muller2019",
+      "status": "verified-full-text-sections",
+      "title": "Glucagon-like peptide 1 (GLP-1)",
+      "authors": "Müller TD et al.",
+      "year": "2019",
+      "journal": "Molecular Metabolism",
+      "doi": "10.1016/j.molmet.2019.09.010",
+      "pmid": "31767182",
+      "pmcid": "PMC6812410",
+      "url": "https://doi.org/10.1016/j.molmet.2019.09.010",
+      "fullTextUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6812410/fullTextXML",
+      "retrievedAtUTC": "2026-10-08T09:41:15.530856+00:00",
+      "savedFullText": "research/revision-v2/raw/muller2019.xml",
+      "savedExcerpts": "research/revision-v2/raw/muller2019-excerpts.json",
+      "evidenceExcerpt": "The subsequent Ca2+ influx promotes exocytosis of the insulin granules and acute secretion of insulin into the circulation.",
+      "scopeAndLimit": "综述全文下载；实际阅读L细胞刺激-分泌与β细胞cAMP/PKA/Epac、颗粒胞吐段及Figure 6图题。支持机制示意，不表示此动画直接记录真实分子运动。"
+    },
+    {
+      "id": "nauck1986",
+      "doi": "10.1210/jcem-63-2-492",
+      "title": "Incretin effects of increasing glucose loads in man calculated from venous insulin and C-peptide responses.",
+      "url": "https://doi.org/10.1210/jcem-63-2-492",
+      "readScope": "本轮实际在线检索并读取原始摘要。",
+      "supportedClaims": [
+        "6名健康受试者口服25、50、100g葡萄糖及对应等血糖静脉输糖。",
+        "口服和等血糖IV的β细胞分泌差异支持肠促胰素效应。"
+      ],
+      "scopeAndLimit": "相近血糖而非简单同剂量；外周胰岛素受肝清除影响，论文也分析C肽和计算分泌率。g010只讲定性结果。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/nauck1986.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope",
+      "authors": "Nauck MA, Homberger E, Siegel EG, Allen RC, Eaton RP, Ebert R, Creutzfeldt W.",
+      "year": "1986",
+      "pmid": "3522621"
+    },
+    {
+      "id": "nobel2026",
+      "status": "verified",
+      "title": "Press release: Nobel Prize in Physiology or Medicine 2026",
+      "authors": "Nobel Assembly / NobelPrize.org",
+      "year": "2026",
+      "url": "https://www.nobelprize.org/prizes/medicine/2026/press-release/",
+      "retrievedAtUTC": "2026-10-08T03:22:13.095078+00:00",
+      "savedMetadata": "research\\verified_raw\\nobel2026.html",
+      "evidenceExcerpt": "for their discoveries concerning light-gated ion channels and optogenetics",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "2026-10-05公布，Karl Deisseroth、Peter Hegemann、Georg Nagel；只可证明本届医学奖结果，不能证明GLP-1已被提名或进入决选。"
+    },
+    {
+      "id": "pdb5vai_scale",
+      "doi": "10.2210/pdb5VAI/pdb",
+      "title": "RCSB PDB 5VAI deposited atom coordinates",
+      "url": "https://files.rcsb.org/download/5VAI.pdb",
+      "readScope": "本轮重新下载PDB并对所有ATOM坐标按链测量，使用已保距的显示旋转矩阵。",
+      "supportedClaims": [
+        "GLP1R R链旋转后坐标包围盒4.759×10.628×4.813nm。",
+        "GLP1 P链包围盒1.804×3.743×3.029nm。"
+      ],
+      "scopeAndLimit": "PDB使用Å，除10为nm；这是方向依赖的沉积原子坐标范围，不是流体动力半径或完整缺失残基。R受体兔来源、P配体人来源；配体/受体结合态为2017结构，非1987实测动画。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/5VAI.pdb",
+        "research/revision-v3/scale-measurements.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope"
+    },
+    {
+      "id": "receptor2017",
+      "status": "verified",
+      "title": "Cryo-EM structure of the activated GLP-1 receptor in complex with a G protein.",
+      "authors": "Zhang Y, Sun B, Feng D, Hu H, Chu M, Qu Q, Tarrasch JT, Li S, Sun Kobilka T, Kobilka BK, Skiniotis G.",
+      "year": "2017",
+      "journal": "Nature",
+      "doi": "10.1038/nature22394",
+      "pmid": "28538729",
+      "pmcid": "PMC5587415",
+      "url": "https://doi.org/10.1038/nature22394",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A28538729&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:15.765833+00:00",
+      "savedMetadata": "research\\verified_raw\\receptor2017.json",
+      "evidenceExcerpt": "Conformational changes in the transmembrane domain",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "2017冷冻电镜实验结构，受体与配体结合把信号耦联到Gs蛋白；5VAI的GLP-1R来自兔，GLP-1配体来自人；图像仅用作机制结构参考。",
+      "readScope": "V3重新获取全文XML并阅读摘要、7TM/NTD结构和兔受体方法。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/receptor2017.xml"
+      ]
+    },
+    {
+      "id": "rorsman2018",
+      "doi": "10.1152/physrev.00008.2017",
+      "title": "Pancreatic β-Cell Electrical Activity and Insulin Secretion: Of Mice and Men.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5866358/",
+      "readScope": "EuropePMC全文XML500后，PMC HTML200；实际读取形态学、细胞直径、颗粒胞吐与膜电容相关段落。",
+      "supportedClaims": [
+        "综述β细胞平均直径13–18μm，15μm用于膜电容例子。",
+        "人/鼠分泌颗粒直径约0.3–0.4μm，胰岛素通过胞吐释放。"
+      ],
+      "scopeAndLimit": "13–18μm概括段落的原始引用221是小鼠完整胰岛电生理论文；所以15μm是合理教学代表值，不标成人β细胞专属实测均值。人细胞有大小/形态差异。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/rorsman2018-pmc.html",
+        "research/revision-v3/raw/rorsman2018-excerpts.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope",
+      "authors": "Rorsman P, Ashcroft FM.",
+      "year": "2018",
+      "pmid": "29212789",
+      "pmcid": "PMC5866358"
+    },
+    {
+      "id": "select",
+      "status": "verified",
+      "title": "Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes.",
+      "authors": "Lincoff AM, Brown-Frandsen K, Colhoun HM, Deanfield J, Emerson SS, Esbjerg S, Hardt-Lindberg S, Hovingh GK, Kahn SE, Kushner RF, Lingvay I, Oral TK, Michelsen MM, Plutzky J, Tornøe CW, Ryan DH, SELECT Trial Investigators.",
+      "year": "2023",
+      "journal": "The New England journal of medicine",
+      "doi": "10.1056/nejmoa2307563",
+      "pmid": "37952131",
+      "pmcid": null,
+      "url": "https://doi.org/10.1056/nejmoa2307563",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A37952131&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:14.792806+00:00",
+      "savedMetadata": "research\\verified_raw\\select.json",
+      "evidenceExcerpt": "6.5% versus 8.0%; hazard ratio, 0.80",
+      "excerptType": "numeric digest",
+      "scopeAndLimit": "17604人，≥45岁，有既往心血管病，BMI≥27，无糖尿病；2.4 mg/周；平均随访39.8个月；复合终点为心血管死亡、非致死心梗或非致死卒中；1.5个百分点是原始事件比例差；20%对应HR，不是所有人绝对获益20%。"
+    },
+    {
+      "id": "semaglutide2015",
+      "status": "verified",
+      "title": "Discovery of the Once-Weekly Glucagon-Like Peptide-1 (GLP-1) Analogue Semaglutide.",
+      "authors": "Lau J, Bloch P, Schäffer L, Pettersson I, Spetzler J, Kofoed J, Madsen K, Knudsen LB, McGuire J, Steensgaard DB, Strauss HM, Gram DX, Knudsen SM, Nielsen FS, Thygesen P, Reedtz-Runge S, Kruse T.",
+      "year": "2015",
+      "journal": "Journal of medicinal chemistry",
+      "doi": "10.1021/acs.jmedchem.5b00726",
+      "pmid": "26308095",
+      "pmcid": null,
+      "url": "https://doi.org/10.1021/acs.jmedchem.5b00726",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26308095&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:14.693988+00:00",
+      "savedMetadata": "research\\verified_raw\\semaglutide2015.json",
+      "evidenceExcerpt": "two amino acid substitutions compared to human GLP-1 (Aib(8), Arg(34))",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "Aib8、Arg34、Lys26侧链修饰；原摘要46.1小时是迷你猪IV，不是人体1周依据。",
+      "readScope": "V3本轮实际读取原论文摘要；系统侧链筛选细节另由开发者2019开放全文补充。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/semaglutide2015.json"
+      ]
+    },
+    {
+      "id": "step1",
+      "status": "verified",
+      "title": "Once-Weekly Semaglutide in Adults with Overweight or Obesity.",
+      "authors": "Wilding JPH, Batterham RL, Calanna S, Davies M, Van Gaal LF, Lingvay I, McGowan BM, Rosenstock J, Tran MTD, Wadden TA, Wharton S, Yokote K, Zeuthen N, Kushner RF, STEP 1 Study Group.",
+      "year": "2021",
+      "journal": "The New England journal of medicine",
+      "doi": "10.1056/nejmoa2032183",
+      "pmid": "33567185",
+      "pmcid": null,
+      "url": "https://doi.org/10.1056/nejmoa2032183",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A33567185&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:14.707013+00:00",
+      "savedMetadata": "research\\verified_raw\\step1.json",
+      "evidenceExcerpt": "−14.9% versus −2.4% at week 68",
+      "excerptType": "numeric digest",
+      "scopeAndLimit": "1961名无糖尿病的成年人；BMI≥30或≥27且有至少一种体重相关合并症；2.4 mg/周皮下注射或安慰剂；两组均生活方式干预。数字来自主要治疗政策估计量，不能与停药延伸子集17.3%混用。"
+    },
+    {
+      "id": "turton1996",
+      "doi": "10.1038/379069a0",
+      "title": "A role for glucagon-like peptide-1 in the central regulation of feeding.",
+      "url": "https://doi.org/10.1038/379069a0",
+      "readScope": "本轮在线DOI精确检索并读取原始摘要。",
+      "supportedClaims": [
+        "大鼠脑室给予GLP-1抑制进食。",
+        "先给予受体拮抗剂exendin(9–39)阻断GLP-1的进食抑制效应。"
+      ],
+      "scopeAndLimit": "大鼠脑室给药实验，不能画成人体药物注射进脑，也不能证明所有肠源GLP1自由进入大脑。",
+      "localEvidenceFiles": [
+        "research/revision-v3/raw/turton1996-doi.json"
+      ],
+      "verificationStatus": "verified-with-stated-scope",
+      "authors": "Turton MD, O'Shea D, Gunn I, Beak SA, Edwards CM, Meeran K, Choi SJ, Taylor GM, Heath MM, Lambert PD, Wilding JP, Smith DM, Ghatei MA, Herbert J, Bloom SR.",
+      "year": "1996",
+      "pmid": "8538742"
+    },
+    {
+      "id": "wegovy_pi",
+      "status": "verified",
+      "title": "WEGOVY (semaglutide) US Prescribing Information",
+      "authors": "Novo Nordisk official prescribing information",
+      "year": null,
+      "url": "https://www.novo-pi.com/wegovy.pdf",
+      "retrievedAtUTC": "2026-10-08T03:22:13.096877+00:00",
+      "savedMetadata": "research\\verified_raw\\wegovy_pi.pdf",
+      "evidenceExcerpt": "Semaglutide decreases calorie intake. The effects are likely mediated by affecting appetite.",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "第11节分子结构与白蛋白结合；12.2节葡萄糖依赖性胰岛素/胰高血糖素和胃排空；12.3节约一周消除半衰期；胃肠道反应/禁忌等遵循完整说明书，不提供用药方案。"
+    },
+    {
+      "id": "withdrawal",
+      "status": "verified",
+      "title": "Weight regain and cardiometabolic effects after withdrawal of semaglutide: The STEP 1 trial extension.",
+      "authors": "Wilding JPH, Batterham RL, Davies M, Van Gaal LF, Kandler K, Konakli K, Lingvay I, McGowan BM, Oral TK, Rosenstock J, Wadden TA, Wharton S, Yokote K, Kushner RF, STEP 1 Study Group.",
+      "year": "2022",
+      "journal": "Diabetes, obesity & metabolism",
+      "doi": "10.1111/dom.14725",
+      "pmid": "35441470",
+      "pmcid": "PMC9542252",
+      "url": "https://doi.org/10.1111/dom.14725",
+      "metadataUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A35441470&format=json&resultType=core&pageSize=3",
+      "retrievedAtUTC": "2026-10-08T03:22:15.713955+00:00",
+      "savedMetadata": "research\\verified_raw\\withdrawal.json",
+      "evidenceExcerpt": "participants regained two-thirds of their prior weight loss",
+      "excerptType": "short original excerpt",
+      "scopeAndLimit": "延伸分析327人；第68周停药且结束研究生活方式干预，随后随访52周；探索性延伸研究；原药物组平均回升11.6个百分点，仍比原基线低5.6%；不能说所有人必然完全反弹。"
+    }
+  ],
+  "scaleAnchors": [
+    {
+      "object": "selected illustrative human islet",
+      "value": 150,
+      "unit": "um",
+      "basis": "IEQ reference sphere; illustrative specimen selection, not universal size",
+      "sourceIds": [
+        "huang2018"
+      ]
+    },
+    {
+      "object": "illustrative beta cell",
+      "value": 15,
+      "unit": "um",
+      "basis": "General beta-cell scale13–18um in review; not a human-specimen-specific measurement",
+      "sourceIds": [
+        "rorsman2018"
+      ]
+    },
+    {
+      "object": "illustrative plasma membrane thickness",
+      "value": 5,
+      "unit": "nm",
+      "basis": "Teaching choice within textbook5–10nm range, not a beta-specific measured thickness",
+      "sourceIds": [
+        "membrane_openstax"
+      ]
+    },
+    {
+      "object": "GLP1R chainR oriented height",
+      "value": 10.6278554293,
+      "unit": "nm",
+      "basis": "All deposited atom coordinates; source-derived measurement",
+      "sourceIds": [
+        "pdb5vai_scale",
+        "receptor2017"
+      ]
+    }
+  ],
+  "scaleRatios": {
+    "isletToCell": 10,
+    "cellToReceptorHeight": 1411.3854012961456,
+    "cellToMembraneThickness": 3000
+  },
+  "animationConstraints": [
+    "人体→胰腺→150μm胰岛→15μm细胞→纳米膜/受体分段放大，标尺同步；不将米制空间压成错误并列比例。",
+    "人胰岛细胞混杂，避免照搬鼠β细胞核心/非β外壳模式。",
+    "GLP1R配体侧朝细胞外，Gs在细胞内；膜脂双层须夹持跨膜区。",
+    "1987活性肽前体加工与1993DPP4切活性肽失活是两件事，必须区分。",
+    "1987胰腺灌流实验与培养细胞实验分镜；现代结构2017必须标年代。",
+    "定性机制不伪造实验曲线和计数；临床只显示有来源的终点比较条。",
+    "迷走神经/食管/血管位置由解剖资产流程校验；此文档不声称已完成该几何审计。"
+  ],
+  "shotEvidence": [
+    {
+      "id": "g001",
+      "section": "news",
+      "caption": "今年诺奖开奖前，法新社把减肥药背后的肠道信号研究，列为医学奖热门。它特别在哪里？",
+      "sourceIds": [
+        "afp2026"
+      ],
+      "visualContract": "餐桌俯斜近景；左侧叠AFP真实新闻headline/date/source，不出现颁奖大厅或官方提名断言。"
+    },
+    {
+      "id": "g002",
+      "section": "news",
+      "caption": "它叫胰高血糖素样肽-1（GLP-1）。今年虽未获奖，却已成为重要药物的起点。故事，从一顿饭讲起。",
+      "sourceIds": [
+        "afp2026",
+        "nobel2026",
+        "knudsen2019"
+      ],
+      "visualContract": "保持餐桌俯斜近景；GLP-1名称与新闻连贯呈现；仅此一句提及2026未获奖。"
+    },
+    {
+      "id": "g003",
+      "section": "meal",
+      "caption": "晚饭吃完了，桌上还有一块甜点。明明觉得饱了，为什么还想来一口？",
+      "sourceIds": [],
+      "visualContract": "镜头移向饭菜，新闻文字退出；从新闻疑问落到日常晚饭。"
+    },
+    {
+      "id": "g004",
+      "section": "meal",
+      "caption": "胃里的空间只是一个因素。肠道、大脑和血液里的信号，也在参与这个决定。",
+      "sourceIds": [
+        "muller2019"
+      ],
+      "visualContract": "镜头掠过点心；明明吃饱仍想尝甜点，不要求人物伸手或拿取。"
+    },
+    {
+      "id": "g005",
+      "section": "meal",
+      "caption": "科学家最初追查它，却是为了血糖：吃下去的糖，为什么让身体作出不同反应？",
+      "sourceIds": [
+        "lasker2024"
+      ],
+      "visualContract": "镜头回到米饭；用微弱信号光点暗示器官通信，不要求放筷动作。"
+    },
+    {
+      "id": "g006",
+      "section": "meal",
+      "caption": "我们沿着食物的路线，找到信号从哪里来，再看看研究者怎样摸清它的作用。",
+      "sourceIds": [],
+      "visualContract": "镜头抬升进入人体，沿食物流启动身体探索。"
+    },
+    {
+      "id": "g007",
+      "section": "gut",
+      "caption": "食物经过胃，进入肠道。营养接触肠壁，一些感知营养的细胞，开始发送消息。",
+      "sourceIds": [
+        "muller2019"
+      ],
+      "visualContract": "食物经胃进入肠道；营养接近上皮，特殊内分泌细胞开始响应。"
+    },
+    {
+      "id": "g008",
+      "section": "gut",
+      "caption": "放大肠壁，可以看到L细胞。它从朝向身体内部的一侧，把小肽释放出去。",
+      "sourceIds": [
+        "eec2022",
+        "muller2019"
+      ],
+      "visualContract": "肠腔在上/外侧，血管在基底侧；L细胞释放小肽朝身体内部，不能向肠腔喷射。"
+    },
+    {
+      "id": "g009",
+      "section": "gut",
+      "caption": "小肽进入周围组织和毛细血管。食物还在肠道，消息却已经能传向其他器官。",
+      "sourceIds": [
+        "muller2019"
+      ],
+      "visualContract": "L细胞附近组织与毛细血管传递信号，食物颗粒不进入血管。"
+    },
+    {
+      "id": "g010",
+      "section": "gut",
+      "caption": "早期研究比较了喝糖水和静脉输糖。血糖升到相近水平时，喝糖水的一侧，胰岛素释放更多。",
+      "sourceIds": [
+        "lasker2024"
+      ],
+      "visualContract": "相近血糖水平的口服/静脉葡萄糖比较；口服胰岛素响应更强，不画成相同剂量即可保证等血糖。",
+      "additionalPrimarySourceIds": [
+        "nauck1986"
+      ]
+    },
+    {
+      "id": "g011",
+      "section": "gut",
+      "caption": "这个差别，提示肠道会帮助胰腺工作。研究者继续追查，找到了这条小肽。",
+      "sourceIds": [
+        "mojsov1987",
+        "muller2019"
+      ],
+      "visualContract": "肠道向胰腺的信号路径；肠促胰素包括GLP-1及GIP，避免说只存在这一种信号。"
+    },
+    {
+      "id": "g012",
+      "section": "pancreas",
+      "caption": "先找到胃后面的胰腺，再找到里面的胰岛。选其中一个放大，直径约零点一五毫米。",
+      "sourceIds": [
+        "huang2018",
+        "rorsman2018"
+      ],
+      "visualContract": "胃后胰腺真实位置→选定150μm胰岛教学实例；标尺150μm与口播0.15毫米一致。显示“选取一个示意胰岛”，不是所有胰岛直径或人均大小。"
+    },
+    {
+      "id": "g013",
+      "section": "pancreas",
+      "caption": "胰岛里，直径十几微米的β细胞分泌胰岛素。再放大上千倍，才看清膜上纳米级的受体。",
+      "sourceIds": [
+        "rorsman2018",
+        "receptor2017",
+        "pdb5vai_scale",
+        "membrane_openstax"
+      ],
+      "visualContract": "150μm胰岛→15μmβ细胞→10.6nm受体；分段对数缩放，受体始终在膜上，不让它在细胞全景中异常巨大。显示尺度标尺/当前尺度。"
+    },
+    {
+      "id": "g014",
+      "section": "pancreas",
+      "caption": "一九八七年，莫伊索夫等人把两种长度的小肽，分别加入离体大鼠胰腺。葡萄糖条件相同，短片段促进胰岛素释放，长片段却没有这个效果。",
+      "sourceIds": [
+        "mojsov1987"
+      ],
+      "visualContract": "1987离体灌流大鼠胰腺：6.6mM葡萄糖背景；GLP-1(1–37)37残基对照与GLP-1(7–37)31残基活性肽分开加入。展示两支合成肽、同一葡萄糖条件与流出液胰岛素测定结果；不伪造曲线、量具读数或同步同剂量实验。研究证明有效形式，非DPP4失活步骤。"
+    },
+    {
+      "id": "g015",
+      "section": "pancreas",
+      "caption": "同年，德鲁克等人在培养的大鼠细胞里发现，短片段让内部传信分子增加，制造胰岛素的分子指令和胰岛素释放，也跟着增加。",
+      "sourceIds": [
+        "drucker1987"
+      ],
+      "visualContract": "1987培养大鼠胰岛瘤细胞实验：短肽→cAMP增多、胰岛素mRNA增多及释放增强。明确“培养细胞实验”；随后才用现代受体机制图解释。2017结构不能贴成1987亲眼看见。"
+    },
+    {
+      "id": "g016",
+      "section": "pancreas",
+      "caption": "小肽结合膜上受体，把消息传进细胞。血糖较高时，装着胰岛素的小泡，更容易与细胞膜融合。",
+      "sourceIds": [
+        "muller2019",
+        "receptor2017"
+      ],
+      "visualContract": "β细胞胰岛素分泌小泡与细胞膜融合，内容物向胞外释放；外部血糖足够时增强，低糖时减弱。"
+    },
+    {
+      "id": "g017",
+      "section": "pancreas",
+      "caption": "胰岛素随之释放；催促肝脏放糖的胰高血糖素也受到抑制，一起帮助调节餐后血糖。",
+      "sourceIds": [
+        "muller2019",
+        "wegovy_pi"
+      ],
+      "visualContract": "胰高血糖素信号减弱与肝脏葡萄糖输出减少；不宣称完全关闭或所有血糖条件都相同。"
+    },
+    {
+      "id": "g018",
+      "section": "pancreas",
+      "caption": "研究者因此看到一种可能：顺着身体已有的信号，帮助治疗血糖异常。",
+      "sourceIds": [
+        "mojsov1987",
+        "drucker1987"
+      ],
+      "visualContract": "胰腺、肝脏、餐后血糖协同画面；非胰岛素把葡萄糖直接吃掉。"
+    },
+    {
+      "id": "g019",
+      "section": "brain",
+      "caption": "这条信号，会不会也影响想吃东西的感觉？接下来，研究转向了大脑。",
+      "sourceIds": [
+        "turton1996"
+      ],
+      "visualContract": "镜头沿人体由腹部到脑干、大脑，转入进食动机和饱腹调节。"
+    },
+    {
+      "id": "g020",
+      "section": "brain",
+      "caption": "一九九六年，研究者把小肽注入大鼠脑室，进食减少。先挡住对应受体，这个效果就被阻断了。",
+      "sourceIds": [
+        "turton1996"
+      ],
+      "visualContract": "1996大鼠脑室给GLP-1进食减少；先给予受体拮抗剂阻断效果。对照条仅表达定性强弱，不画虚构数字；标动物脑内实验，不误作人体用药路径。"
+    },
+    {
+      "id": "g021",
+      "section": "brain",
+      "caption": "后来的人体研究直接测量进食量。使用相关药物的人，饥饿感减轻，吃下的食物也减少了。",
+      "sourceIds": [
+        "appetite_semaglutide"
+      ],
+      "visualContract": "2021肥胖成人20周随机试验的食欲与自由进食量证据；只用定性结果，避免套用STEP1体重百分数。"
+    },
+    {
+      "id": "g022",
+      "section": "brain",
+      "caption": "日常的肠脑沟通，还会经过迷走神经等路线。食欲，是多条消息一起调节的。",
+      "sourceIds": [
+        "muller2019",
+        "turton1996"
+      ],
+      "visualContract": "胃排空减慢与食欲调节分开呈现；不把长期减重全归因于食物堵在胃里。"
+    },
+    {
+      "id": "g023",
+      "section": "brain",
+      "caption": "药物也会减慢胃排空。不过，长期减重，还要结合持续的食欲和能量摄入变化来理解。",
+      "sourceIds": [
+        "appetite_semaglutide",
+        "wegovy_pi"
+      ],
+      "visualContract": "摄入减少后随周/月推进体重改变；禁止药物分子直接溶解脂肪。"
+    },
+    {
+      "id": "g024",
+      "section": "brain",
+      "caption": "吃进去的能量持续减少，体重才在数周、数月里改变。这也让我们更理解减重为什么难。",
+      "sourceIds": [
+        "appetite_semaglutide",
+        "step1"
+      ],
+      "visualContract": "身体信号与生活环境共同影响进食；避免羞辱体型或归咎个人。"
+    },
+    {
+      "id": "g025",
+      "section": "drug",
+      "caption": "但做成药还有一个难题：天然活性小肽进入血液后，大约一两分钟就减少一半。",
+      "sourceIds": [
+        "knudsen2019"
+      ],
+      "visualContract": "天然循环活性GLP-1的分钟级消退，不等于总肽量/皮下注射表观半衰期。"
+    },
+    {
+      "id": "g026",
+      "section": "drug",
+      "caption": "研究者在人血清里发现，它开头会少掉两个氨基酸。抑制那把分子剪刀后，这种剪切就停了。",
+      "sourceIds": [
+        "mentlein1993",
+        "deacon1995"
+      ],
+      "visualContract": "1993 Mentlein人体血清+纯化DPP4→GLP1 N端His-Ala切下；DPP4抑制剂使这类片段不再出现。可定性显示保留活性结构，不虚构时间刻度/人体给药效果。"
+    },
+    {
+      "id": "g027",
+      "section": "drug",
+      "caption": "先保护剪切点。研究者换掉一个容易被剪的氨基酸，再检查受体还能不能认出它。",
+      "sourceIds": [
+        "semaglutide2015",
+        "knudsen2019"
+      ],
+      "visualContract": "明确“保护剪切点”：Ala8→Aib8，抗DPP4且保留受体作用；可旁注Arg34使Lys26成为侧链接点，不能声称只有这一个替换。"
+    },
+    {
+      "id": "g028",
+      "section": "drug",
+      "caption": "接着延长停留。给小肽接上侧链，就能暂时搭上血液中的白蛋白，减慢清除。",
+      "sourceIds": [
+        "semaglutide2015",
+        "knudsen2019"
+      ],
+      "visualContract": "白蛋白和脂肪二酸侧链引入；搭车是可逆结合比喻，显示解离与自由药物，绝不永久包裹。"
+    },
+    {
+      "id": "g029",
+      "section": "drug",
+      "caption": "侧链多长，怎样连接，都得比较。既要延长停留，也要保留激活受体的能力。",
+      "sourceIds": [
+        "semaglutide2015",
+        "knudsen2019"
+      ],
+      "visualContract": "展示不同链长、连接臂的比较/筛选，区分白蛋白结合与受体活性两个测量目标；无未核验数值。"
+    },
+    {
+      "id": "g030",
+      "section": "drug",
+      "caption": "比较多种组合后，十八个碳的脂肪二酸侧链，加上合适的连接臂，取得了好的平衡。",
+      "sourceIds": [
+        "semaglutide2015",
+        "knudsen2019"
+      ],
+      "visualContract": "C18脂肪二酸+γGlu-2×OEG连接臂的组合，源于Lau2015及Knudsen2019叙述；不称所有GLP1类药都如此。"
+    },
+    {
+      "id": "g031",
+      "section": "drug",
+      "caption": "这些改造组成了司美格鲁肽。它在人体内的半衰期约一周，支持每周一次皮下注射。",
+      "sourceIds": [
+        "wegovy_pi"
+      ],
+      "visualContract": "聚焦司美格鲁肽约一周人体消除半衰期→每周皮下注射。移除替尔泊肽/GIPR支线，以给研究设计留时长。"
+    },
+    {
+      "id": "g032",
+      "section": "trial",
+      "caption": "设计得巧，到了人身上能帮多少忙？这要用临床试验来检验。",
+      "sourceIds": [
+        "step1"
+      ],
+      "visualContract": "从分子设计转入真实试验论文和随机分组。"
+    },
+    {
+      "id": "g033",
+      "section": "trial",
+      "caption": "一项试验，将约两千名无糖尿病、符合超重或肥胖条件的成年人，随机分组。",
+      "sourceIds": [
+        "step1"
+      ],
+      "visualContract": "STEP 1：1961名成人，无糖尿病；BMI≥30或≥27伴至少一种相关合并症。"
+    },
+    {
+      "id": "g034",
+      "section": "trial",
+      "caption": "两组都有饮食运动指导，分别注射司美格鲁肽或安慰剂，观察六十八周。",
+      "sourceIds": [
+        "step1"
+      ],
+      "visualContract": "STEP 1两组均生活方式干预；司美格鲁肽目标2.4 mg/周与安慰剂，68周。"
+    },
+    {
+      "id": "g035",
+      "section": "trial",
+      "caption": "平均减重，药物组百分之十四点九，安慰剂组百分之二点四。",
+      "sourceIds": [
+        "step1"
+      ],
+      "visualContract": "STEP1真实终点均值比較条：68周−14.9%与−2.4%；同一起点、数字与柱长一致。不要伪造中途轨迹或以插值动画冒充原始逐周曲线。"
+    },
+    {
+      "id": "g036",
+      "section": "trial",
+      "caption": "这是群体平均结果。个人效果和耐受情况，还需要持续观察。",
+      "sourceIds": [
+        "step1",
+        "wegovy_pi"
+      ],
+      "visualContract": "维持组均值，同时显示个体结果不同，避免人人相同的承诺。"
+    },
+    {
+      "id": "g037",
+      "section": "trial",
+      "caption": "另一项试验，关注已有心血管病、超重或肥胖，却没有糖尿病的人。",
+      "sourceIds": [
+        "select"
+      ],
+      "visualContract": "SELECT：17604人，≥45岁，既往心血管病，BMI≥27，无糖尿病。"
+    },
+    {
+      "id": "g038",
+      "section": "trial",
+      "caption": "平均随访约四十个月，主要心血管事件比例，是百分之六点五，对百分之八。",
+      "sourceIds": [
+        "select"
+      ],
+      "visualContract": "SELECT平均随访39.8个月；首次主要终点事件人数比例6.5%与8.0%，终点为心血管死亡/非致死心梗/非致死卒中。"
+    },
+    {
+      "id": "g039",
+      "section": "trial",
+      "caption": "相当于每百人约少一点五人，发生心血管死亡、非致死性心梗或卒中。",
+      "sourceIds": [
+        "select"
+      ],
+      "visualContract": "每100名受试者平均相差约1.5名发生首次主要终点事件；图示小数是群体尺度换算，不把复发事件次数当人数。"
+    },
+    {
+      "id": "g040",
+      "section": "trial",
+      "caption": "同时，也有人出现恶心、呕吐、腹泻，甚至因此停止治疗。",
+      "sourceIds": [
+        "step1",
+        "select",
+        "wegovy_pi"
+      ],
+      "visualContract": "恶心、呕吐、腹泻与停药可能；完整用药风险和适用条件见原说明书。"
+    },
+    {
+      "id": "g041",
+      "section": "trial",
+      "caption": "停止药物和试验生活方式干预一年后，原药物组平均长回了此前减重的约三分之二。",
+      "sourceIds": [
+        "withdrawal"
+      ],
+      "visualContract": "STEP 1延伸327人；药物与试验生活方式支持均停止，52周随访，不能单独归因停药。"
+    },
+    {
+      "id": "g042",
+      "section": "trial",
+      "caption": "平均体重仍低于起点，却明显回升。怎样长期管理，成了必须继续回答的问题。",
+      "sourceIds": [
+        "withdrawal"
+      ],
+      "visualContract": "原司美格鲁肽组平均恢复此前减重的约2/3，末期仍低于基线；不是所有人或全部体重恢复。"
+    },
+    {
+      "id": "g043",
+      "section": "daily",
+      "caption": "回头看，发现来自具体的问题：哪个片段有效，经由哪个受体，为什么又很快失效？",
+      "sourceIds": [
+        "mojsov1987",
+        "turton1996",
+        "mentlein1993"
+      ],
+      "visualContract": "回扣未解决问题，与前面的具体实验画面呼应；不再重复药物效果三连总结。"
+    },
+    {
+      "id": "g044",
+      "section": "daily",
+      "caption": "研究者反复比较不同片段、不同侧链，再测量每种设计的结果。",
+      "sourceIds": [
+        "mojsov1987",
+        "semaglutide2015"
+      ],
+      "visualContract": "相同条件下反复比较不同片段、侧链和连接臂，测量每种设计的活性/稳定性；不虚构所有历史实验都严格只改变一个变量。"
+    },
+    {
+      "id": "g045",
+      "section": "daily",
+      "caption": "接着用对照试验，检验这些改动，究竟给患者带来了多少帮助。",
+      "sourceIds": [
+        "step1",
+        "select"
+      ],
+      "visualContract": "从候选分子到随机对照的人体数据，避免把机制动画当临床证据。"
+    },
+    {
+      "id": "g046",
+      "section": "daily",
+      "caption": "从找出身体的消息，到延长它的作用，这条路走了几十年，也仍在继续。",
+      "sourceIds": [
+        "knudsen2019"
+      ],
+      "visualContract": "不同证据层级的接力，短句收束；不要再次重复四步骤总结。"
+    },
+    {
+      "id": "g047",
+      "section": "outro",
+      "caption": "再回到这顿晚饭。饱腹背后，有器官之间细小的交流；刚刚追过的，只是其中一条。",
+      "sourceIds": [
+        "muller2019"
+      ],
+      "visualContract": "退回晚饭餐桌；器官协同回扣开头，人物无必须发生的手部动作。"
+    },
+    {
+      "id": "g048",
+      "section": "outro",
+      "caption": "一个吃饭的问题，就这样连起了肠道、细胞和药物。下一次感到吃饱了，也许你会想起这条小小的消息。",
+      "sourceIds": [],
+      "visualContract": "晚饭餐桌与恢复体表的人体收束，回扣吃饱的感受，不新增手部表演；随后进入真实论文页。"
+    }
+  ],
+  "clinicalConditions": {
+    "step1": "1961名无糖尿病的成年人；BMI≥30或≥27且有至少一种体重相关合并症；2.4 mg/周皮下注射或安慰剂；两组均生活方式干预。数字来自主要治疗政策估计量，不能与停药延伸子集17.3%混用。",
+    "select": "17604人，≥45岁，有既往心血管病，BMI≥27，无糖尿病；2.4 mg/周；平均随访39.8个月；复合终点为心血管死亡、非致死心梗或非致死卒中；1.5个百分点是原始事件比例差；20%对应HR，不是所有人绝对获益20%。",
+    "withdrawal": "延伸分析327人；第68周停药且结束研究生活方式干预，随后随访52周；探索性延伸研究；原药物组平均回升11.6个百分点，仍比原基线低5.6%；不能说所有人必然完全反弹。",
+    "appetite_semaglutide": "72名肥胖成人、20周、2.4mg每周与安慰剂；主观食欲和自由进食能量下降；20周用对乙酰氨基酚间接方法未见胃排空延迟。"
+  },
+  "omissions": [
+    "为集中司美格鲁肽研发主线，g031不再展开替尔泊肽双受体支线。",
+    "正文不朗读未经核验的实验数值、候选数量、研究者对白。",
+    "未给胰腺统一长度：使用真实来源模型的单位/边界，由解剖资产流程校准。"
+  ],
+  "knownLimitations": [
+    "部分原始文献本轮读取的是原摘要，绝不标为全文阅读。",
+    "15μm是合理β细胞教学代表值，其综述上游直径引用含鼠资料，不能称人β细胞精确平均值。",
+    "5nm膜是教材范围内选值，不是项目人体样本专属膜厚。",
+    "静态PDB坐标提供形状与尺度，不提供分子结合过程的真实运动轨迹。"
+  ]
+}

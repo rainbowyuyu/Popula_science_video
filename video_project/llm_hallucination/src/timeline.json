@@ -1,0 +1,3170 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "frames": 28268,
+  "source": "https://chatgpt.com/share/6aaf67a6-20ec-83ea-a428-90c3f6ccb901",
+  "chapters": [
+    {
+      "id": 0,
+      "tag": "问题",
+      "title": "幻觉，何时第一次发生？",
+      "subtitle": "从答案评分，走向生成过程",
+      "start": 0,
+      "frames": 1536,
+      "segments": [
+        {
+          "file": "audio/00_00.mp3",
+          "text": "同一个问题，大语言模型可能生成不同的回答。有的始终可靠，有的说到一半，开始编造事实。",
+          "duration": 9.888,
+          "frames": 297,
+          "from": 24
+        },
+        {
+          "file": "audio/00_01.mp3",
+          "text": "我们通常在回答结束以后判断对错。但这段讨论提出了另一个问题：事实可靠性，是怎样在生成过程中失去的？",
+          "duration": 10.584,
+          "frames": 318,
+          "from": 331
+        },
+        {
+          "file": "audio/00_02.mp3",
+          "text": "能否把幻觉的首次发生，理解成一条随机轨迹越过事实边界？",
+          "duration": 6.168,
+          "frames": 186,
+          "from": 659
+        },
+        {
+          "file": "audio/00_03.mp3",
+          "text": "接下来，我们从概率密度演化出发，建立事实状态、漂移、扩散和首次越界之间的联系。",
+          "duration": 9.312,
+          "frames": 280,
+          "from": 855
+        },
+        {
+          "file": "audio/00_04.mp3",
+          "text": "这是一套有待真实数据检验的研究框架。画面里的轨迹和数值例子属于教学演示，不代表已经发现了大模型的普适定律。",
+          "duration": 11.88,
+          "frames": 357,
+          "from": 1145
+        }
+      ],
+      "clip": "clips/Chapter00.mp4"
+    },
+    {
+      "id": 1,
+      "tag": "出发点",
+      "title": "概率守恒：追踪一群可能的回答",
+      "subtitle": "PDEM 的启发",
+      "start": 1536,
+      "frames": 1451,
+      "segments": [
+        {
+          "file": "audio/01_00.mp3",
+          "text": "李杰、陈建兵等发展的概率密度演化方法，关注随机系统的响应概率，怎样随着状态演化而重新分布。",
+          "duration": 9.96,
+          "frames": 299,
+          "from": 24
+        },
+        {
+          "file": "audio/01_01.mp3",
+          "text": "可以把每一次随机生成想成一个小点。很多次生成，就构成一团概率云。",
+          "duration": 7.056,
+          "frames": 212,
+          "from": 333
+        },
+        {
+          "file": "audio/01_02.mp3",
+          "text": "如果问题、模型和解码规则固定，再给定完整的采样随机数，生成轨迹也就确定了。",
+          "duration": 8.352,
+          "frames": 251,
+          "from": 555
+        },
+        {
+          "file": "audio/01_03.mp3",
+          "text": "我们把随机事件映射成文本，再把文本映射成事实状态。概率不会凭空增加，只是换了一个观察坐标。",
+          "duration": 9.504,
+          "frames": 286,
+          "from": 816
+        },
+        {
+          "file": "audio/01_04.mp3",
+          "text": "这是连接概率密度演化与语言模型的起点。但连接成立，不代表一个事实分数已经足以描述全部生成动力学。",
+          "duration": 10.152,
+          "frames": 305,
+          "from": 1112
+        }
+      ],
+      "clip": "clips/Chapter01.mp4"
+    },
+    {
+      "id": 2,
+      "tag": "离散基础",
+      "title": "先有离散生成，再谈连续方程",
+      "subtitle": "一步转移 ≠ 自动满足马尔可夫性",
+      "start": 2987,
+      "frames": 1460,
+      "segments": [
+        {
+          "file": "audio/02_00.mp3",
+          "text": "语言模型原生是离散的自回归过程。下一个词元的分布，取决于完整前缀以及实际提供给模型的上下文。",
+          "duration": 10.512,
+          "frames": 316,
+          "from": 24
+        },
+        {
+          "file": "audio/02_01.mp3",
+          "text": "把生成内容按可核验命题分段，就得到一串事实状态，记为 Z 下标 k。",
+          "duration": 7.128,
+          "frames": 214,
+          "from": 350
+        },
+        {
+          "file": "audio/02_02.mp3",
+          "text": "下一步的概率密度，可以用条件转移核对当前密度积分得到。这个一步关系来自全概率公式。",
+          "duration": 9.072,
+          "frames": 273,
+          "from": 574
+        },
+        {
+          "file": "audio/02_03.mp3",
+          "text": "但如果想重复使用同一个低维转移模型来预测未来，就必须检验：给定当前 Z 以后，更早的历史是否还影响下一步。",
+          "duration": 10.608,
+          "frames": 319,
+          "from": 857
+        },
+        {
+          "file": "audio/02_04.mp3",
+          "text": "因此，离散概率守恒是基础；连续扩散方程只是满足额外假设时的有效近似。",
+          "duration": 7.968,
+          "frames": 240,
+          "from": 1186
+        }
+      ],
+      "clip": "clips/Chapter02.mp4"
+    },
+    {
+      "id": 3,
+      "tag": "状态定义",
+      "title": "把事实性变成可测量的坐标",
+      "subtitle": "支持、反驳、未知：三者分开",
+      "start": 4447,
+      "frames": 1557,
+      "segments": [
+        {
+          "file": "audio/03_00.mp3",
+          "text": "关键不是先写方程，而是先定义事实状态。我们把回答拆成原子命题，再用独立证据进行核验。",
+          "duration": 9.432,
+          "frames": 283,
+          "from": 24
+        },
+        {
+          "file": "audio/03_01.mp3",
+          "text": "对每个命题，估计支持、反驳和未知三类概率。三者相加等于一，并且需要校准。",
+          "duration": 9.312,
+          "frames": 280,
+          "from": 317
+        },
+        {
+          "file": "audio/03_02.mp3",
+          "text": "最简单的事实坐标，是支持概率减去反驳概率；证据可用度，则是支持与反驳概率之和。",
+          "duration": 8.76,
+          "frames": 263,
+          "from": 607
+        },
+        {
+          "file": "audio/03_03.mp3",
+          "text": "例如，支持零点八、反驳零点一，对应 Z 为零点七，证据可用度为零点九。",
+          "duration": 7.632,
+          "frames": 229,
+          "from": 880
+        },
+        {
+          "file": "audio/03_04.mp3",
+          "text": "但支持和反驳都很小，Z 也会接近零。这意味着证据不足，不能直接判定为幻觉。因此还要保留证据可用度，并独立标注错误事件。",
+          "duration": 13.464,
+          "frames": 404,
+          "from": 1119
+        }
+      ],
+      "clip": "clips/Chapter03.mp4"
+    },
+    {
+      "id": 4,
+      "tag": "变量辨析",
+      "title": "不确定性，不等于事实错误",
+      "subtitle": "语义熵 S · 事实性 Z · 证据 A",
+      "start": 6004,
+      "frames": 1508,
+      "segments": [
+        {
+          "file": "audio/04_00.mp3",
+          "text": "语义熵衡量的是：多次回答在意义上有多分散。它不直接判断哪一种意义是真的。",
+          "duration": 8.136,
+          "frames": 245,
+          "from": 24
+        },
+        {
+          "file": "audio/04_01.mp3",
+          "text": "一个模型每次都自信地给出同一个错误答案，语义熵可以很低，事实状态却很差。",
+          "duration": 7.176,
+          "frames": 216,
+          "from": 279
+        },
+        {
+          "file": "audio/04_02.mp3",
+          "text": "反过来，同一个正确事实有多种合理表述，也可能产生不同程度的不确定性。",
+          "duration": 7.8,
+          "frames": 234,
+          "from": 505
+        },
+        {
+          "file": "audio/04_03.mp3",
+          "text": "所以更完整的候选状态是 Z、A、S，分别表示事实方向、证据可用度和语义不确定性。",
+          "duration": 9.744,
+          "frames": 293,
+          "from": 749
+        },
+        {
+          "file": "audio/04_04.mp3",
+          "text": "温度属于外部解码设置。它可能改变转移统计，但既不是事实状态，也不能直接等同于扩散系数。语义熵是否能预测扩散，同样要靠数据检验。",
+          "duration": 14.04,
+          "frames": 422,
+          "from": 1052
+        }
+      ],
+      "clip": "clips/Chapter04.mp4"
+    },
+    {
+      "id": 5,
+      "tag": "局部动力学",
+      "title": "漂移告诉方向，扩散告诉离散程度",
+      "subtitle": "从相同起点，观察下一步",
+      "start": 7512,
+      "frames": 1535,
+      "segments": [
+        {
+          "file": "audio/05_00.mp3",
+          "text": "现在把许多当前 Z 相近的轨迹放进同一个小区间，观察它们下一步的变化量。",
+          "duration": 6.84,
+          "frames": 206,
+          "from": 24
+        },
+        {
+          "file": "audio/05_01.mp3",
+          "text": "变化量的条件均值除以步长，近似给出漂移 a。它告诉我们，状态平均往哪里走。",
+          "duration": 8.568,
+          "frames": 258,
+          "from": 240
+        },
+        {
+          "file": "audio/05_02.mp3",
+          "text": "变化量的条件方差除以步长，近似给出扩散 b。它告诉我们，相同起点的轨迹散开得有多快。",
+          "duration": 9.72,
+          "frames": 292,
+          "from": 508
+        },
+        {
+          "file": "audio/05_03.mp3",
+          "text": "在连续扩散极限下，严格定义需要让步长趋近于零。真实命题步长有限，因此还必须检查不同步长下的偏差。",
+          "duration": 11.136,
+          "frames": 335,
+          "from": 810
+        },
+        {
+          "file": "audio/05_04.mp3",
+          "text": "此外，核验器本身的评分噪声，也会抬高观测方差。若不校准测量误差，就可能把评分抖动误认为模型的随机扩散。",
+          "duration": 11.52,
+          "frames": 346,
+          "from": 1155
+        }
+      ],
+      "clip": "clips/Chapter05.mp4"
+    },
+    {
+      "id": 6,
+      "tag": "密度演化",
+      "title": "从轨迹，走向概率云",
+      "subtitle": "Fokker–Planck 有效方程",
+      "start": 9047,
+      "frames": 1506,
+      "segments": [
+        {
+          "file": "audio/06_00.mp3",
+          "text": "如果小增量、近似马尔可夫性和扩散近似成立，我们就可以用随机微分方程描述 Z。",
+          "duration": 8.04,
+          "frames": 242,
+          "from": 24
+        },
+        {
+          "file": "audio/06_01.mp3",
+          "text": "其中，a 乘以语义步长，是平均变化；根号 b 乘以布朗增量，是随机波动。",
+          "duration": 7.8,
+          "frames": 234,
+          "from": 276
+        },
+        {
+          "file": "audio/06_02.mp3",
+          "text": "对应的福克普朗克方程包含两部分。漂移项搬运概率质量，扩散项让概率质量分散。",
+          "duration": 8.616,
+          "frames": 259,
+          "from": 520
+        },
+        {
+          "file": "audio/06_03.mp3",
+          "text": "同一条方程，也能写成密度变化加上概率流的散度等于零，这正是概率守恒。",
+          "duration": 7.512,
+          "frames": 226,
+          "from": 789
+        },
+        {
+          "file": "audio/06_04.mp3",
+          "text": "这里的扩散方程，不应直接等同于经典的输运型广义概率密度演化方程。后者在给定随机事件且轨迹可微时描述输运；布朗轨迹则不能直接当作普通可微曲线。",
+          "duration": 14.88,
+          "frames": 447,
+          "from": 1025
+        }
+      ],
+      "clip": "clips/Chapter06.mp4"
+    },
+    {
+      "id": 7,
+      "tag": "降维条件",
+      "title": "三维状态，何时能缩成一维？",
+      "subtitle": "边缘化是恒等操作，闭合是额外条件",
+      "start": 10553,
+      "frames": 1490,
+      "segments": [
+        {
+          "file": "audio/07_00.mp3",
+          "text": "在三维候选状态中，漂移是向量，扩散是矩阵，交叉项允许事实性、证据和语义不确定性相互耦合。",
+          "duration": 10.104,
+          "frames": 304,
+          "from": 24
+        },
+        {
+          "file": "audio/07_01.mp3",
+          "text": "把联合密度对 A 和 S 积分，可以得到 Z 的边缘密度。但边缘化并不自动消除记忆。",
+          "duration": 8.088,
+          "frames": 243,
+          "from": 338
+        },
+        {
+          "file": "audio/07_02.mp3",
+          "text": "要严格闭合，一种充分条件是：Z 的漂移和瞬时扩散只依赖 Z，并且消去方向没有净边界通量。",
+          "duration": 9.936,
+          "frames": 299,
+          "from": 591
+        },
+        {
+          "file": "audio/07_03.mp3",
+          "text": "近似闭合的另一条路，是 A 和 S 比 Z 快得多地松弛，形成给定 Z 的稳定条件分布。",
+          "duration": 8.16,
+          "frames": 245,
+          "from": 900
+        },
+        {
+          "file": "audio/07_04.mp3",
+          "text": "快变量消去也可能产生额外扩散或记忆效应。只有数据支持这些条件，才适合使用一维有效方程。",
+          "duration": 10.032,
+          "frames": 301,
+          "from": 1155
+        }
+      ],
+      "clip": "clips/Chapter07.mp4"
+    },
+    {
+      "id": 8,
+      "tag": "可证伪性",
+      "title": "先检验模型，再用模型预测",
+      "subtitle": "历史依赖 · 步长稳定 · 任务异质性",
+      "start": 12043,
+      "frames": 1652,
+      "segments": [
+        {
+          "file": "audio/08_00.mp3",
+          "text": "第一项检验，是比较直接观察到的两步转移，与两个一步转移相乘后的结果。这是查普曼科尔莫戈罗夫一致性检验。",
+          "duration": 10.92,
+          "frames": 328,
+          "from": 24
+        },
+        {
+          "file": "audio/08_01.mp3",
+          "text": "第二项检验，是在相同当前状态下，按照不同历史分组，看下一步分布是否仍然不同。",
+          "duration": 8.568,
+          "frames": 258,
+          "from": 362
+        },
+        {
+          "file": "audio/08_02.mp3",
+          "text": "第三项检验，是改变语义步长，检查漂移和扩散是否稳定，并检查大跳跃和高阶矩。",
+          "duration": 8.616,
+          "frames": 259,
+          "from": 630
+        },
+        {
+          "file": "audio/08_03.mp3",
+          "text": "这些检验通过，只能增加对近似模型的信心，不能单独证明马尔可夫性。不同问题混在一起，还可能制造虚假的记忆或扩散。",
+          "duration": 11.544,
+          "frames": 347,
+          "from": 899
+        },
+        {
+          "file": "audio/08_04.mp3",
+          "text": "如果一维失败，就增加证据、语义熵或历史变量；如果跳跃显著，就回到离散转移模型。失败结果同样能揭示理论的边界。",
+          "duration": 12.048,
+          "frames": 362,
+          "from": 1256
+        }
+      ],
+      "clip": "clips/Chapter08.mp4"
+    },
+    {
+      "id": 9,
+      "tag": "首次越界",
+      "title": "现在错误，与曾经错误，是两件事",
+      "subtitle": "首次到达时间 τH",
+      "start": 13695,
+      "frames": 1511,
+      "segments": [
+        {
+          "file": "audio/09_00.mp3",
+          "text": "看这条轨迹：它先进入错误区域，之后又回到事实区域。最终答案的状态可能改善了，但第一次错误已经发生。",
+          "duration": 10.56,
+          "frames": 317,
+          "from": 24
+        },
+        {
+          "file": "audio/09_01.mp3",
+          "text": "因此，某一时刻位于错误区域的概率，不等于此前至少发生过一次错误的概率。",
+          "duration": 6.936,
+          "frames": 209,
+          "from": 351
+        },
+        {
+          "file": "audio/09_02.mp3",
+          "text": "首次越界时间，定义为状态第一次到达预先校准的幻觉边界的生成位置。这里的时间，实际上可以按命题数计量。",
+          "duration": 10.752,
+          "frames": 323,
+          "from": 570
+        },
+        {
+          "file": "audio/09_03.mp3",
+          "text": "计算首次越界时，我们在边界处吸收轨迹：一旦越界，就从尚未失败的集合中移除。",
+          "duration": 7.968,
+          "frames": 240,
+          "from": 903
+        },
+        {
+          "file": "audio/09_04.mp3",
+          "text": "这只是统计首次错误的方法，不是在说模型无法纠正。边界是否真正对应事实错误，仍要用独立标注验证。",
+          "duration": 10.776,
+          "frames": 324,
+          "from": 1153
+        }
+      ],
+      "clip": "clips/Chapter09.mp4"
+    },
+    {
+      "id": 10,
+      "tag": "风险统计",
+      "title": "用存活曲线描述可靠性",
+      "subtitle": "R：尚未越界 · f：首次越界 · λ：条件风险",
+      "start": 15206,
+      "frames": 1417,
+      "segments": [
+        {
+          "file": "audio/10_00.mp3",
+          "text": "把所有尚未越界的概率质量加起来，就得到存活概率 R。它表示生成到当前位置，仍然一次都没有越界的概率。",
+          "duration": 10.704,
+          "frames": 322,
+          "from": 24
+        },
+        {
+          "file": "audio/10_01.mp3",
+          "text": "一减 R，是至少越界一次的累计概率。R 下降得有多快，对应首次越界的位置分布。",
+          "duration": 8.016,
+          "frames": 241,
+          "from": 356
+        },
+        {
+          "file": "audio/10_02.mp3",
+          "text": "首次越界密度再除以 R，就得到危险率：在此前一直安全的条件下，接下来发生首次错误的瞬时风险。",
+          "duration": 9.168,
+          "frames": 276,
+          "from": 607
+        },
+        {
+          "file": "audio/10_03.mp3",
+          "text": "如果上端没有概率流出，那么下端吸收边界流失的概率，恰好等于首次越界密度。",
+          "duration": 7.272,
+          "frames": 219,
+          "from": 893
+        },
+        {
+          "file": "audio/10_04.mp3",
+          "text": "危险率不一定是常数。只有在近似恒定危险率等条件下，存活曲线才接近指数衰减。",
+          "duration": 8.688,
+          "frames": 261,
+          "from": 1122
+        }
+      ],
+      "clip": "clips/Chapter10.mp4"
+    },
+    {
+      "id": 11,
+      "tag": "平均首达",
+      "title": "从局部统计，预测平均安全长度",
+      "subtitle": "后向方程 + 边界条件",
+      "start": 16623,
+      "frames": 1633,
+      "segments": [
+        {
+          "file": "audio/11_00.mp3",
+          "text": "我们还想知道：从某个事实状态开始，平均还能生成多长，才首次越界？把这个平均长度记为 T。",
+          "duration": 9.648,
+          "frames": 290,
+          "from": 24
+        },
+        {
+          "file": "audio/11_01.mp3",
+          "text": "先走一个很小的步长，再加上从新状态出发的剩余等待长度，就应该等于原来的 T。",
+          "duration": 7.296,
+          "frames": 219,
+          "from": 324
+        },
+        {
+          "file": "audio/11_02.mp3",
+          "text": "对这个递推关系做泰勒展开，并代入漂移和扩散，就得到后向方程：a 乘 T 的一阶导数，加二分之一 b 乘二阶导数，等于负一。",
+          "duration": 12.408,
+          "frames": 373,
+          "from": 553
+        },
+        {
+          "file": "audio/11_03.mp3",
+          "text": "在下端吸收边界，T 等于零。若上端设为反射边界，T 的一阶导数等于零。",
+          "duration": 7.848,
+          "frames": 236,
+          "from": 936
+        },
+        {
+          "file": "audio/11_04.mp3",
+          "text": "解出这个边值问题，就建立了局部 a、b 与整体首达长度的联系。反射上界是一项建模选择，必须做敏感性分析，不能只写方程而忽略边界。",
+          "duration": 13.872,
+          "frames": 417,
+          "from": 1182
+        }
+      ],
+      "clip": "clips/Chapter11.mp4"
+    },
+    {
+      "id": 12,
+      "tag": "无量纲化",
+      "title": "漂移和扩散，谁占主导？",
+      "subtitle": "尺度选择必须写清楚",
+      "start": 18256,
+      "frames": 1536,
+      "segments": [
+        {
+          "file": "audio/12_00.mp3",
+          "text": "选取事实状态的特征尺度 L，漂移尺度 a 零和扩散尺度 b 零。",
+          "duration": 6.84,
+          "frames": 206,
+          "from": 24
+        },
+        {
+          "file": "audio/12_01.mp3",
+          "text": "用 L 缩放状态，用 L 除以 a 零缩放生成长度，方程中自然出现一个无量纲比值：a 零乘 L，除以 b 零。",
+          "duration": 10.488,
+          "frames": 315,
+          "from": 240
+        },
+        {
+          "file": "audio/12_02.mp3",
+          "text": "它衡量漂移相对于随机扩散的强弱。如果把扩散常数定义成 b 的一半，那么通常的佩克莱数会多一个二。",
+          "duration": 10.2,
+          "frames": 306,
+          "from": 565
+        },
+        {
+          "file": "audio/12_03.mp3",
+          "text": "比值大，只说明漂移相对强，并不自动代表安全。如果漂移朝向错误区域，强漂移反而意味着更快失败。",
+          "duration": 10.248,
+          "frames": 308,
+          "from": 881
+        },
+        {
+          "file": "audio/12_04.mp3",
+          "text": "所以风险还取决于漂移方向、状态依赖、初始位置和边界，不能用一个人为指定的临界数字代替首达计算。",
+          "duration": 10.08,
+          "frames": 303,
+          "from": 1199
+        }
+      ],
+      "clip": "clips/Chapter12.mp4"
+    },
+    {
+      "id": 13,
+      "tag": "势垒",
+      "title": "指数规律，有明确的适用条件",
+      "subtitle": "稳定点 ZF · 不稳定点 ZC · 判定边界 ZH",
+      "start": 19792,
+      "frames": 1602,
+      "segments": [
+        {
+          "file": "audio/13_00.mp3",
+          "text": "只有当实测漂移支持一个稳定事实点，以及它与错误区域之间的不稳定点时，我们才有理由讨论逃逸势垒。",
+          "duration": 9.096,
+          "frames": 273,
+          "from": 24
+        },
+        {
+          "file": "audio/13_01.mp3",
+          "text": "稳定点会把小扰动拉回来；不稳定点的两侧，漂移会把轨迹推向不同方向。它不一定等于最终判定错误的边界。",
+          "duration": 10.344,
+          "frames": 311,
+          "from": 307
+        },
+        {
+          "file": "audio/13_02.mp3",
+          "text": "在原对话修正后的定义里，势垒数是从不稳定点到稳定点，对二倍漂移除以扩散进行积分。",
+          "duration": 8.256,
+          "frames": 248,
+          "from": 628
+        },
+        {
+          "file": "audio/13_03.mp3",
+          "text": "对于负势能梯度漂移和常数噪声，它等于势垒高度除以噪声强度。",
+          "duration": 7.224,
+          "frames": 217,
+          "from": 886
+        },
+        {
+          "file": "audio/13_04.mp3",
+          "text": "在亚稳态、弱噪声和稀有逃逸条件下，平均首达长度才近似按势垒数的指数增长。前因子也有影响，不能把这条渐近规律宣称为所有模型都满足的普适定律。",
+          "duration": 15.144,
+          "frames": 455,
+          "from": 1113
+        }
+      ],
+      "clip": "clips/Chapter13.mp4"
+    },
+    {
+      "id": 14,
+      "tag": "两条路径",
+      "title": "平均方向恶化，或随机波动增强",
+      "subtitle": "两种候选机制，需要实测区分",
+      "start": 21394,
+      "frames": 1485,
+      "segments": [
+        {
+          "file": "audio/14_00.mp3",
+          "text": "这个框架提出了两条可能的失败路径。第一条是漂移主导：平均变化本身就把事实状态推向错误边界。",
+          "duration": 10.368,
+          "frames": 312,
+          "from": 24
+        },
+        {
+          "file": "audio/14_01.mp3",
+          "text": "这种情形即使随机波动很小，也可能持续产生稳定的错误。低语义熵不能排除它。",
+          "duration": 8.088,
+          "frames": 243,
+          "from": 346
+        },
+        {
+          "file": "audio/14_02.mp3",
+          "text": "第二条是扩散主导：平均恢复方向还在，但随机波动让一部分轨迹越过边界。",
+          "duration": 7.704,
+          "frames": 232,
+          "from": 599
+        },
+        {
+          "file": "audio/14_03.mp3",
+          "text": "语义熵与扩散强度是否相关，只能作为待检验假设。相关性即使存在，也不能直接推出因果关系。",
+          "duration": 9.96,
+          "frames": 299,
+          "from": 841
+        },
+        {
+          "file": "audio/14_04.mp3",
+          "text": "这两条路径的价值，是把不同失败机制变成可比较的动力学量，而不是仅用一个置信分数解释所有幻觉。",
+          "duration": 10.032,
+          "frames": 301,
+          "from": 1150
+        }
+      ],
+      "clip": "clips/Chapter14.mp4"
+    },
+    {
+      "id": 15,
+      "tag": "教学仿真",
+      "title": "让首达预测在一个已知系统里工作",
+      "subtitle": "合成扩散数据，不是 LLM 实验结果",
+      "start": 22879,
+      "frames": 1722,
+      "segments": [
+        {
+          "file": "audio/15_00.mp3",
+          "text": "为了看清计算过程，我们模拟一个已知的随机系统。初始状态为一，漂移为负零点零九，扩散系数为零点零九，下端零点吸收。",
+          "duration": 12.24,
+          "frames": 368,
+          "from": 24
+        },
+        {
+          "file": "audio/15_01.mp3",
+          "text": "这里没有上端反射边界。这个常系数系统的平均首达时间，有精确结果：一除以零点零九，约为十一点一一。",
+          "duration": 10.344,
+          "frames": 311,
+          "from": 402
+        },
+        {
+          "file": "audio/15_02.mp3",
+          "text": "我们独立模拟一万条轨迹，再把实际的存活比例与解析存活曲线比较。",
+          "duration": 6.96,
+          "frames": 209,
+          "from": 723
+        },
+        {
+          "file": "audio/15_03.mp3",
+          "text": "两条曲线接近，说明在假设已知的教学系统中，局部动力学确实可以预测首次越界统计。有限时间步仍会带来小的离散误差。",
+          "duration": 11.928,
+          "frames": 358,
+          "from": 942
+        },
+        {
+          "file": "audio/15_04.mp3",
+          "text": "这验证的是计算链条，不是大模型幻觉理论。真正困难的一步，是从真实文本中得到可靠的 Z，并证明这些有效假设适用。",
+          "duration": 12.6,
+          "frames": 378,
+          "from": 1310
+        }
+      ],
+      "clip": "clips/Chapter15.mp4"
+    },
+    {
+      "id": 16,
+      "tag": "最小实验",
+      "title": "在 Qwen3-8B 上，完成预测闭环",
+      "subtitle": "先固定协议，再采集轨迹",
+      "start": 24601,
+      "frames": 1715,
+      "segments": [
+        {
+          "file": "audio/16_00.mp3",
+          "text": "原对话建议用开放权重的 Qwen 三，八十亿参数模型做最小实验，便于固定设置和访问生成概率。",
+          "duration": 9.504,
+          "frames": 286,
+          "from": 24
+        },
+        {
+          "file": "audio/16_01.mp3",
+          "text": "一个起步规模是一百个问题，每题五十次生成，每条最多十个可核验命题，约得到五万个状态观测。",
+          "duration": 9.432,
+          "frames": 283,
+          "from": 320
+        },
+        {
+          "file": "audio/16_02.mp3",
+          "text": "固定提示、解码方式和思考模式，记录随机种子、前缀、命题、证据以及独立核验结果。不能为了凑够命题数而强迫模型编造。",
+          "duration": 13.944,
+          "frames": 419,
+          "from": 613
+        },
+        {
+          "file": "audio/16_03.mp3",
+          "text": "先按问题划分估计集、校准集和盲测集，避免同一个问题的不同生成泄漏到两边。",
+          "duration": 8.16,
+          "frames": 245,
+          "from": 1042
+        },
+        {
+          "file": "audio/16_04.mp3",
+          "text": "只在估计集学习漂移和扩散，在校准集确定边界，冻结全部设置后，再预测盲测集的首达分布。本视频没有运行这项真实模型实验。",
+          "duration": 12.768,
+          "frames": 384,
+          "from": 1297
+        }
+      ],
+      "clip": "clips/Chapter16.mp4"
+    },
+    {
+      "id": 17,
+      "tag": "验证与收束",
+      "title": "真正的新意，要由盲预测证明",
+      "subtitle": "定义可测量 · 假设可检验 · 预测可失败",
+      "start": 26316,
+      "frames": 1952,
+      "segments": [
+        {
+          "file": "audio/17_00.mp3",
+          "text": "验证时，要比较完整存活曲线，并与离散转移、静态事实分数和语义熵等基线比较。",
+          "duration": 8.808,
+          "frames": 265,
+          "from": 24
+        },
+        {
+          "file": "audio/17_01.mp3",
+          "text": "生成结束时还没有错误的轨迹，需要按预先声明的目标处理。若估计持续生成的潜在首达时间，要报告右删失及其假设；若研究完整回答，则还要考虑停止生成这一竞争事件。",
+          "duration": 16.032,
+          "frames": 481,
+          "from": 299
+        },
+        {
+          "file": "audio/17_02.mp3",
+          "text": "从未失败的短轨迹，不能直接当作无限安全，也不能用已失败样本的平均值冒充整体平均首达时间。",
+          "duration": 9.096,
+          "frames": 273,
+          "from": 790
+        },
+        {
+          "file": "audio/17_03.mp3",
+          "text": "论文叙事可以围绕五组图展开：状态轨迹、漂移扩散、盲测存活、势垒条件，以及跨模型验证。跨模型标度和提前预警都属于下一步假设。",
+          "duration": 14.352,
+          "frames": 431,
+          "from": 1073
+        },
+        {
+          "file": "audio/17_04.mp3",
+          "text": "这套思路的核心，是用可测量的局部变化，预测尚未发生的首次错误。能否成立、是否具有足够创新性，要由独立数据和对照实验回答。",
+          "duration": 13.464,
+          "frames": 404,
+          "from": 1514
+        }
+      ],
+      "clip": "clips/Chapter17.mp4"
+    }
+  ],
+  "captions": [
+    {
+      "text": "同一个问题，",
+      "startMs": 800,
+      "endMs": 2213,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "大语言模型可能生成不同的回答。",
+      "startMs": 2213,
+      "endMs": 5744,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "有的始终可靠，",
+      "startMs": 5744,
+      "endMs": 7392,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "有的说到一半，",
+      "startMs": 7392,
+      "endMs": 9040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "开始编造事实。",
+      "startMs": 9040,
+      "endMs": 10688,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们通常在回答结束以后判断对错。",
+      "startMs": 11033,
+      "endMs": 14489,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但这段讨论提出了另一个问题：",
+      "startMs": 14489,
+      "endMs": 17513,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "事实可靠性，",
+      "startMs": 17513,
+      "endMs": 18809,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是怎样在生成过程中失去的？",
+      "startMs": 18809,
+      "endMs": 21617,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "能否把幻觉的首次发生，",
+      "startMs": 21967,
+      "endMs": 24480,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "理解成一条随机轨迹越过事实边界？",
+      "startMs": 24480,
+      "endMs": 28135,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "接下来，",
+      "startMs": 28500,
+      "endMs": 29455,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们从概率密度演化出发，",
+      "startMs": 29455,
+      "endMs": 32320,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "建立事实状态、漂移、扩散和首次越界之间的联系。",
+      "startMs": 32320,
+      "endMs": 37812,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这是一套有待真实数据检验的研究框架。",
+      "startMs": 38167,
+      "endMs": 42201,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "画面里的轨迹和数值例子属于教学演示，",
+      "startMs": 42201,
+      "endMs": 46236,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不代表已经发现了大模型的普适定律。",
+      "startMs": 46236,
+      "endMs": 50047,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "李杰、陈建兵等发展的概率密度演化方法，",
+      "startMs": 52000,
+      "endMs": 56205,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "关注随机系统的响应概率，",
+      "startMs": 56205,
+      "endMs": 58861,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "怎样随着状态演化而重新分布。",
+      "startMs": 58861,
+      "endMs": 61960,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "可以把每一次随机生成想成一个小点。",
+      "startMs": 62300,
+      "endMs": 66048,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "很多次生成，",
+      "startMs": 66048,
+      "endMs": 67372,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就构成一团概率云。",
+      "startMs": 67372,
+      "endMs": 69356,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果问题、模型和解码规则固定，",
+      "startMs": 69700,
+      "endMs": 73086,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "再给定完整的采样随机数，",
+      "startMs": 73086,
+      "endMs": 75795,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "生成轨迹也就确定了。",
+      "startMs": 75795,
+      "endMs": 78052,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们把随机事件映射成文本，",
+      "startMs": 78400,
+      "endMs": 81146,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "再把文本映射成事实状态。",
+      "startMs": 81146,
+      "endMs": 83680,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "概率不会凭空增加，",
+      "startMs": 83680,
+      "endMs": 85581,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只是换了一个观察坐标。",
+      "startMs": 85581,
+      "endMs": 87904,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这是连接概率密度演化与语言模型的起点。",
+      "startMs": 88267,
+      "endMs": 92285,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但连接成立，",
+      "startMs": 92285,
+      "endMs": 93554,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不代表一个事实分数已经足以描述全部生成动力学。",
+      "startMs": 93554,
+      "endMs": 98419,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "语言模型原生是离散的自回归过程。",
+      "startMs": 100367,
+      "endMs": 104023,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "下一个词元的分布，",
+      "startMs": 104023,
+      "endMs": 106080,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "取决于完整前缀以及实际提供给模型的上下文。",
+      "startMs": 106080,
+      "endMs": 110879,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "把生成内容按可核验命题分段，",
+      "startMs": 111233,
+      "endMs": 114168,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就得到一串事实状态，",
+      "startMs": 114168,
+      "endMs": 116265,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "记为 Z 下标 k。",
+      "startMs": 116265,
+      "endMs": 118361,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "下一步的概率密度，",
+      "startMs": 118700,
+      "endMs": 120691,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "可以用条件转移核对当前密度积分得到。",
+      "startMs": 120691,
+      "endMs": 124674,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这个一步关系来自全概率公式。",
+      "startMs": 124674,
+      "endMs": 127772,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但如果想重复使用同一个低维转移模型来预测未来，",
+      "startMs": 128133,
+      "endMs": 132737,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就必须检验：",
+      "startMs": 132737,
+      "endMs": 133938,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "给定当前 Z 以后，",
+      "startMs": 133938,
+      "endMs": 135939,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "更早的历史是否还影响下一步。",
+      "startMs": 135939,
+      "endMs": 138741,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "因此，",
+      "startMs": 139100,
+      "endMs": 139803,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "离散概率守恒是基础；",
+      "startMs": 139803,
+      "endMs": 142147,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "连续扩散方程只是满足额外假设时的有效近似。",
+      "startMs": 142147,
+      "endMs": 147068,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "关键不是先写方程，",
+      "startMs": 149033,
+      "endMs": 151054,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "而是先定义事实状态。",
+      "startMs": 151054,
+      "endMs": 153300,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们把回答拆成原子命题，",
+      "startMs": 153300,
+      "endMs": 155995,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "再用独立证据进行核验。",
+      "startMs": 155995,
+      "endMs": 158465,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对每个命题，",
+      "startMs": 158800,
+      "endMs": 160352,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "估计支持、反驳和未知三类概率。",
+      "startMs": 160352,
+      "endMs": 164232,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "三者相加等于一，",
+      "startMs": 164232,
+      "endMs": 166301,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并且需要校准。",
+      "startMs": 166301,
+      "endMs": 168112,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "最简单的事实坐标，",
+      "startMs": 168467,
+      "endMs": 170488,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是支持概率减去反驳概率；",
+      "startMs": 170488,
+      "endMs": 173184,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "证据可用度，",
+      "startMs": 173184,
+      "endMs": 174531,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "则是支持与反驳概率之和。",
+      "startMs": 174531,
+      "endMs": 177227,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "例如，",
+      "startMs": 177567,
+      "endMs": 178221,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "支持零点八、反驳零点一，",
+      "startMs": 178221,
+      "endMs": 180838,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对应 Z 为零点七，",
+      "startMs": 180838,
+      "endMs": 183018,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "证据可用度为零点九。",
+      "startMs": 183018,
+      "endMs": 185199,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但支持和反驳都很小，",
+      "startMs": 185533,
+      "endMs": 187815,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Z 也会接近零。",
+      "startMs": 187815,
+      "endMs": 189641,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这意味着证据不足，",
+      "startMs": 189641,
+      "endMs": 191695,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能直接判定为幻觉。",
+      "startMs": 191695,
+      "endMs": 193977,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "因此还要保留证据可用度，",
+      "startMs": 193977,
+      "endMs": 196715,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并独立标注错误事件。",
+      "startMs": 196715,
+      "endMs": 198997,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "语义熵衡量的是：",
+      "startMs": 200933,
+      "endMs": 202741,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "多次回答在意义上有多分散。",
+      "startMs": 202741,
+      "endMs": 205679,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它不直接判断哪一种意义是真的。",
+      "startMs": 205679,
+      "endMs": 209069,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "一个模型每次都自信地给出同一个错误答案，",
+      "startMs": 209433,
+      "endMs": 213420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "语义熵可以很低，",
+      "startMs": 213420,
+      "endMs": 215015,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "事实状态却很差。",
+      "startMs": 215015,
+      "endMs": 216609,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "反过来，",
+      "startMs": 216967,
+      "endMs": 217884,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "同一个正确事实有多种合理表述，",
+      "startMs": 217884,
+      "endMs": 221325,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也可能产生不同程度的不确定性。",
+      "startMs": 221325,
+      "endMs": 224767,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "所以更完整的候选状态是 Z、A、S，",
+      "startMs": 225100,
+      "endMs": 229485,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "分别表示事实方向、证据可用度和语义不确定性。",
+      "startMs": 229485,
+      "endMs": 234844,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "温度属于外部解码设置。",
+      "startMs": 235200,
+      "endMs": 237651,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它可能改变转移统计，",
+      "startMs": 237651,
+      "endMs": 239880,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但既不是事实状态，",
+      "startMs": 239880,
+      "endMs": 241886,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也不能直接等同于扩散系数。",
+      "startMs": 241886,
+      "endMs": 244783,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "语义熵是否能预测扩散，",
+      "startMs": 244783,
+      "endMs": 247234,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "同样要靠数据检验。",
+      "startMs": 247234,
+      "endMs": 249240,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "现在把许多当前 Z 相近的轨迹放进同一个小区间，",
+      "startMs": 251200,
+      "endMs": 255760,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "观察它们下一步的变化量。",
+      "startMs": 255760,
+      "endMs": 258040,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "变化量的条件均值除以步长，",
+      "startMs": 258400,
+      "endMs": 261410,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "近似给出漂移 a。",
+      "startMs": 261410,
+      "endMs": 263494,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它告诉我们，",
+      "startMs": 263494,
+      "endMs": 264884,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "状态平均往哪里走。",
+      "startMs": 264884,
+      "endMs": 266968,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "变化量的条件方差除以步长，",
+      "startMs": 267333,
+      "endMs": 270342,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "近似给出扩散 b。",
+      "startMs": 270342,
+      "endMs": 272425,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它告诉我们，",
+      "startMs": 272425,
+      "endMs": 273813,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "相同起点的轨迹散开得有多快。",
+      "startMs": 273813,
+      "endMs": 277053,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在连续扩散极限下，",
+      "startMs": 277400,
+      "endMs": 279488,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "严格定义需要让步长趋近于零。",
+      "startMs": 279488,
+      "endMs": 282736,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "真实命题步长有限，",
+      "startMs": 282736,
+      "endMs": 284824,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "因此还必须检查不同步长下的偏差。",
+      "startMs": 284824,
+      "endMs": 288536,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "此外，",
+      "startMs": 288900,
+      "endMs": 289578,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "核验器本身的评分噪声，",
+      "startMs": 289578,
+      "endMs": 292062,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也会抬高观测方差。",
+      "startMs": 292062,
+      "endMs": 294095,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "若不校准测量误差，",
+      "startMs": 294095,
+      "endMs": 296128,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就可能把评分抖动误认为模型的随机扩散。",
+      "startMs": 296128,
+      "endMs": 300420,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果小增量、近似马尔可夫性和扩散近似成立，",
+      "startMs": 302367,
+      "endMs": 306810,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们就可以用随机微分方程描述 Z。",
+      "startMs": 306810,
+      "endMs": 310407,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "其中，",
+      "startMs": 310767,
+      "endMs": 311417,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "a 乘以语义步长，",
+      "startMs": 311417,
+      "endMs": 313367,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是平均变化；",
+      "startMs": 313367,
+      "endMs": 314667,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "根号 b 乘以布朗增量，",
+      "startMs": 314667,
+      "endMs": 317267,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是随机波动。",
+      "startMs": 317267,
+      "endMs": 318567,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对应的福克普朗克方程包含两部分。",
+      "startMs": 318900,
+      "endMs": 322626,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "漂移项搬运概率质量，",
+      "startMs": 322626,
+      "endMs": 324954,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "扩散项让概率质量分散。",
+      "startMs": 324954,
+      "endMs": 327516,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "同一条方程，",
+      "startMs": 327867,
+      "endMs": 329192,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也能写成密度变化加上概率流的散度等于零，",
+      "startMs": 329192,
+      "endMs": 333611,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这正是概率守恒。",
+      "startMs": 333611,
+      "endMs": 335379,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这里的扩散方程，",
+      "startMs": 335733,
+      "endMs": 337434,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不应直接等同于经典的输运型广义概率密度演化方程。",
+      "startMs": 337434,
+      "endMs": 342536,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "后者在给定随机事件且轨迹可微时描述输运；",
+      "startMs": 342536,
+      "endMs": 346787,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "布朗轨迹则不能直接当作普通可微曲线。",
+      "startMs": 346787,
+      "endMs": 350613,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在三维候选状态中，",
+      "startMs": 352567,
+      "endMs": 354633,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "漂移是向量，",
+      "startMs": 354633,
+      "endMs": 356011,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "扩散是矩阵，",
+      "startMs": 356011,
+      "endMs": 357389,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "交叉项允许事实性、证据和语义不确定性相互耦合。",
+      "startMs": 357389,
+      "endMs": 362671,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "把联合密度对 A 和 S 积分，",
+      "startMs": 363033,
+      "endMs": 366114,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "可以得到 Z 的边缘密度。",
+      "startMs": 366114,
+      "endMs": 368618,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但边缘化并不自动消除记忆。",
+      "startMs": 368618,
+      "endMs": 371121,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "要严格闭合，",
+      "startMs": 371467,
+      "endMs": 372822,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "一种充分条件是：",
+      "startMs": 372822,
+      "endMs": 374628,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "Z 的漂移和瞬时扩散只依赖 Z，",
+      "startMs": 374628,
+      "endMs": 378241,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并且消去方向没有净边界通量。",
+      "startMs": 378241,
+      "endMs": 381403,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "近似闭合的另一条路，",
+      "startMs": 381767,
+      "endMs": 383621,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是 A 和 S 比 Z 快得多地松弛，",
+      "startMs": 383621,
+      "endMs": 387145,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "形成给定 Z 的稳定条件分布。",
+      "startMs": 387145,
+      "endMs": 389927,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "快变量消去也可能产生额外扩散或记忆效应。",
+      "startMs": 390267,
+      "endMs": 394933,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只有数据支持这些条件，",
+      "startMs": 394933,
+      "endMs": 397499,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "才适合使用一维有效方程。",
+      "startMs": 397499,
+      "endMs": 400299,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "第一项检验，",
+      "startMs": 402233,
+      "endMs": 403518,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是比较直接观察到的两步转移，",
+      "startMs": 403518,
+      "endMs": 406516,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "与两个一步转移相乘后的结果。",
+      "startMs": 406516,
+      "endMs": 409513,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这是查普曼科尔莫戈罗夫一致性检验。",
+      "startMs": 409513,
+      "endMs": 413153,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "第二项检验，",
+      "startMs": 413500,
+      "endMs": 414853,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是在相同当前状态下，",
+      "startMs": 414853,
+      "endMs": 417108,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "按照不同历史分组，",
+      "startMs": 417108,
+      "endMs": 419137,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "看下一步分布是否仍然不同。",
+      "startMs": 419137,
+      "endMs": 422068,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "第三项检验，",
+      "startMs": 422433,
+      "endMs": 423831,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是改变语义步长，",
+      "startMs": 423831,
+      "endMs": 425693,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "检查漂移和扩散是否稳定，",
+      "startMs": 425693,
+      "endMs": 428488,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并检查大跳跃和高阶矩。",
+      "startMs": 428488,
+      "endMs": 431049,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这些检验通过，",
+      "startMs": 431400,
+      "endMs": 432869,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只能增加对近似模型的信心，",
+      "startMs": 432869,
+      "endMs": 435598,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能单独证明马尔可夫性。",
+      "startMs": 435598,
+      "endMs": 438117,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不同问题混在一起，",
+      "startMs": 438117,
+      "endMs": 440006,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "还可能制造虚假的记忆或扩散。",
+      "startMs": 440006,
+      "endMs": 442944,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果一维失败，",
+      "startMs": 443300,
+      "endMs": 444862,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就增加证据、语义熵或历史变量；",
+      "startMs": 444862,
+      "endMs": 448208,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果跳跃显著，",
+      "startMs": 448208,
+      "endMs": 449770,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就回到离散转移模型。",
+      "startMs": 449770,
+      "endMs": 452001,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "失败结果同样能揭示理论的边界。",
+      "startMs": 452001,
+      "endMs": 455348,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "看这条轨迹：",
+      "startMs": 457300,
+      "endMs": 458593,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它先进入错误区域，",
+      "startMs": 458593,
+      "endMs": 460533,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "之后又回到事实区域。",
+      "startMs": 460533,
+      "endMs": 462688,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "最终答案的状态可能改善了，",
+      "startMs": 462688,
+      "endMs": 465489,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但第一次错误已经发生。",
+      "startMs": 465489,
+      "endMs": 467860,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "因此，",
+      "startMs": 468200,
+      "endMs": 468795,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "某一时刻位于错误区域的概率，",
+      "startMs": 468795,
+      "endMs": 471569,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不等于此前至少发生过一次错误的概率。",
+      "startMs": 471569,
+      "endMs": 475136,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "首次越界时间，",
+      "startMs": 475500,
+      "endMs": 477005,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "定义为状态第一次到达预先校准的幻觉边界的生成位置。",
+      "startMs": 477005,
+      "endMs": 482381,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这里的时间，",
+      "startMs": 482381,
+      "endMs": 483672,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "实际上可以按命题数计量。",
+      "startMs": 483672,
+      "endMs": 486252,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "计算首次越界时，",
+      "startMs": 486600,
+      "endMs": 488323,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们在边界处吸收轨迹：",
+      "startMs": 488323,
+      "endMs": 490692,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "一旦越界，",
+      "startMs": 490692,
+      "endMs": 491768,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就从尚未失败的集合中移除。",
+      "startMs": 491768,
+      "endMs": 494568,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这只是统计首次错误的方法，",
+      "startMs": 494933,
+      "endMs": 497914,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不是在说模型无法纠正。",
+      "startMs": 497914,
+      "endMs": 500436,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "边界是否真正对应事实错误，",
+      "startMs": 500436,
+      "endMs": 503417,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "仍要用独立标注验证。",
+      "startMs": 503417,
+      "endMs": 505709,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "把所有尚未越界的概率质量加起来，",
+      "startMs": 507667,
+      "endMs": 511092,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就得到存活概率 R。",
+      "startMs": 511092,
+      "endMs": 513233,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它表示生成到当前位置，",
+      "startMs": 513233,
+      "endMs": 515588,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "仍然一次都没有越界的概率。",
+      "startMs": 515588,
+      "endMs": 518371,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "一减 R，",
+      "startMs": 518733,
+      "endMs": 519761,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是至少越界一次的累计概率。",
+      "startMs": 519761,
+      "endMs": 522433,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "R 下降得有多快，",
+      "startMs": 522433,
+      "endMs": 524283,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对应首次越界的位置分布。",
+      "startMs": 524283,
+      "endMs": 526749,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "首次越界密度再除以 R，",
+      "startMs": 527100,
+      "endMs": 529492,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就得到危险率：",
+      "startMs": 529492,
+      "endMs": 530887,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在此前一直安全的条件下，",
+      "startMs": 530887,
+      "endMs": 533278,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "接下来发生首次错误的瞬时风险。",
+      "startMs": 533278,
+      "endMs": 536268,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果上端没有概率流出，",
+      "startMs": 536633,
+      "endMs": 538855,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "那么下端吸收边界流失的概率，",
+      "startMs": 538855,
+      "endMs": 541683,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "恰好等于首次越界密度。",
+      "startMs": 541683,
+      "endMs": 543905,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "危险率不一定是常数。",
+      "startMs": 544267,
+      "endMs": 546615,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只有在近似恒定危险率等条件下，",
+      "startMs": 546615,
+      "endMs": 550137,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "存活曲线才接近指数衰减。",
+      "startMs": 550137,
+      "endMs": 552955,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们还想知道：",
+      "startMs": 554900,
+      "endMs": 556435,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "从某个事实状态开始，",
+      "startMs": 556435,
+      "endMs": 558628,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "平均还能生成多长，",
+      "startMs": 558628,
+      "endMs": 560601,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "才首次越界？",
+      "startMs": 560601,
+      "endMs": 561917,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "把这个平均长度记为 T。",
+      "startMs": 561917,
+      "endMs": 564548,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "先走一个很小的步长，",
+      "startMs": 564900,
+      "endMs": 566820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "再加上从新状态出发的剩余等待长度，",
+      "startMs": 566820,
+      "endMs": 570084,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就应该等于原来的 T。",
+      "startMs": 570084,
+      "endMs": 572196,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对这个递推关系做泰勒展开，",
+      "startMs": 572533,
+      "endMs": 575178,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并代入漂移和扩散，",
+      "startMs": 575178,
+      "endMs": 577008,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就得到后向方程：",
+      "startMs": 577008,
+      "endMs": 578636,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "a 乘 T 的一阶导数，",
+      "startMs": 578636,
+      "endMs": 581077,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "加二分之一 b 乘二阶导数，",
+      "startMs": 581077,
+      "endMs": 583924,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "等于负一。",
+      "startMs": 583924,
+      "endMs": 584941,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在下端吸收边界，",
+      "startMs": 585300,
+      "endMs": 587094,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "T 等于零。",
+      "startMs": 587094,
+      "endMs": 588439,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "若上端设为反射边界，",
+      "startMs": 588439,
+      "endMs": 590681,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "T 的一阶导数等于零。",
+      "startMs": 590681,
+      "endMs": 593148,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "解出这个边值问题，",
+      "startMs": 593500,
+      "endMs": 595451,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "就建立了局部 a、b 与整体首达长度的联系。",
+      "startMs": 595451,
+      "endMs": 600219,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "反射上界是一项建模选择，",
+      "startMs": 600219,
+      "endMs": 602820,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "必须做敏感性分析，",
+      "startMs": 602820,
+      "endMs": 604771,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能只写方程而忽略边界。",
+      "startMs": 604771,
+      "endMs": 607372,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "选取事实状态的特征尺度 L，",
+      "startMs": 609333,
+      "endMs": 612326,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "漂移尺度 a 零和扩散尺度 b 零。",
+      "startMs": 612326,
+      "endMs": 616173,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "用 L 缩放状态，",
+      "startMs": 616533,
+      "endMs": 618250,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "用 L 除以 a 零缩放生成长度，",
+      "startMs": 618250,
+      "endMs": 621491,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "方程中自然出现一个无量纲比值：",
+      "startMs": 621491,
+      "endMs": 624352,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "a 零乘 L，",
+      "startMs": 624352,
+      "endMs": 625686,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "除以 b 零。",
+      "startMs": 625686,
+      "endMs": 627021,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它衡量漂移相对于随机扩散的强弱。",
+      "startMs": 627367,
+      "endMs": 630767,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果把扩散常数定义成 b 的一半，",
+      "startMs": 630767,
+      "endMs": 634379,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "那么通常的佩克莱数会多一个二。",
+      "startMs": 634379,
+      "endMs": 637567,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "比值大，",
+      "startMs": 637900,
+      "endMs": 638791,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只说明漂移相对强，",
+      "startMs": 638791,
+      "endMs": 640796,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并不自动代表安全。",
+      "startMs": 640796,
+      "endMs": 642801,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "如果漂移朝向错误区域，",
+      "startMs": 642801,
+      "endMs": 645252,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "强漂移反而意味着更快失败。",
+      "startMs": 645252,
+      "endMs": 648148,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "所以风险还取决于漂移方向、状态依赖、初始位置和边界，",
+      "startMs": 648500,
+      "endMs": 654076,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能用一个人为指定的临界数字代替首达计算。",
+      "startMs": 654076,
+      "endMs": 658580,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只有当实测漂移支持一个稳定事实点，",
+      "startMs": 660533,
+      "endMs": 663823,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "以及它与错误区域之间的不稳定点时，",
+      "startMs": 663823,
+      "endMs": 667113,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们才有理由讨论逃逸势垒。",
+      "startMs": 667113,
+      "endMs": 669629,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "稳定点会把小扰动拉回来；",
+      "startMs": 669967,
+      "endMs": 672500,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不稳定点的两侧，",
+      "startMs": 672500,
+      "endMs": 674189,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "漂移会把轨迹推向不同方向。",
+      "startMs": 674189,
+      "endMs": 676933,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它不一定等于最终判定错误的边界。",
+      "startMs": 676933,
+      "endMs": 680311,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在原对话修正后的定义里，",
+      "startMs": 680667,
+      "endMs": 683143,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "势垒数是从不稳定点到稳定点，",
+      "startMs": 683143,
+      "endMs": 686033,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对二倍漂移除以扩散进行积分。",
+      "startMs": 686033,
+      "endMs": 688923,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "对于负势能梯度漂移和常数噪声，",
+      "startMs": 689267,
+      "endMs": 693003,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "它等于势垒高度除以噪声强度。",
+      "startMs": 693003,
+      "endMs": 696491,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在亚稳态、弱噪声和稀有逃逸条件下，",
+      "startMs": 696833,
+      "endMs": 700564,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "平均首达长度才近似按势垒数的指数增长。",
+      "startMs": 700564,
+      "endMs": 704735,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "前因子也有影响，",
+      "startMs": 704735,
+      "endMs": 706490,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能把这条渐近规律宣称为所有模型都满足的普适定律。",
+      "startMs": 706490,
+      "endMs": 711977,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这个框架提出了两条可能的失败路径。",
+      "startMs": 713933,
+      "endMs": 717850,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "第一条是漂移主导：",
+      "startMs": 717850,
+      "endMs": 719924,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "平均变化本身就把事实状态推向错误边界。",
+      "startMs": 719924,
+      "endMs": 724301,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这种情形即使随机波动很小，",
+      "startMs": 724667,
+      "endMs": 727587,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也可能持续产生稳定的错误。",
+      "startMs": 727587,
+      "endMs": 730508,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "低语义熵不能排除它。",
+      "startMs": 730508,
+      "endMs": 732755,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "第二条是扩散主导：",
+      "startMs": 733100,
+      "endMs": 735139,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "平均恢复方向还在，",
+      "startMs": 735139,
+      "endMs": 737179,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "但随机波动让一部分轨迹越过边界。",
+      "startMs": 737179,
+      "endMs": 740804,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "语义熵与扩散强度是否相关，",
+      "startMs": 741167,
+      "endMs": 744178,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只能作为待检验假设。",
+      "startMs": 744178,
+      "endMs": 746494,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "相关性即使存在，",
+      "startMs": 746494,
+      "endMs": 748347,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也不能直接推出因果关系。",
+      "startMs": 748347,
+      "endMs": 751127,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这两条路径的价值，",
+      "startMs": 751467,
+      "endMs": 753429,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是把不同失败机制变成可比较的动力学量，",
+      "startMs": 753429,
+      "endMs": 757573,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "而不是仅用一个置信分数解释所有幻觉。",
+      "startMs": 757573,
+      "endMs": 761499,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "为了看清计算过程，",
+      "startMs": 763433,
+      "endMs": 765400,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们模拟一个已知的随机系统。",
+      "startMs": 765400,
+      "endMs": 768460,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "初始状态为一，",
+      "startMs": 768460,
+      "endMs": 769990,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "漂移为负零点零九，",
+      "startMs": 769990,
+      "endMs": 771958,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "扩散系数为零点零九，",
+      "startMs": 771958,
+      "endMs": 774143,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "下端零点吸收。",
+      "startMs": 774143,
+      "endMs": 775673,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这里没有上端反射边界。",
+      "startMs": 776033,
+      "endMs": 778404,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这个常系数系统的平均首达时间，",
+      "startMs": 778404,
+      "endMs": 781636,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "有精确结果：",
+      "startMs": 781636,
+      "endMs": 782929,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "一除以零点零九，",
+      "startMs": 782929,
+      "endMs": 784653,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "约为十一点一一。",
+      "startMs": 784653,
+      "endMs": 786377,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "我们独立模拟一万条轨迹，",
+      "startMs": 786733,
+      "endMs": 789428,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "再把实际的存活比例与解析存活曲线比较。",
+      "startMs": 789428,
+      "endMs": 793693,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "两条曲线接近，",
+      "startMs": 794033,
+      "endMs": 795551,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "说明在假设已知的教学系统中，",
+      "startMs": 795551,
+      "endMs": 798588,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "局部动力学确实可以预测首次越界统计。",
+      "startMs": 798588,
+      "endMs": 802491,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "有限时间步仍会带来小的离散误差。",
+      "startMs": 802491,
+      "endMs": 805961,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这验证的是计算链条，",
+      "startMs": 806300,
+      "endMs": 808591,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不是大模型幻觉理论。",
+      "startMs": 808591,
+      "endMs": 810882,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "真正困难的一步，",
+      "startMs": 810882,
+      "endMs": 812715,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是从真实文本中得到可靠的 Z，",
+      "startMs": 812715,
+      "endMs": 816151,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并证明这些有效假设适用。",
+      "startMs": 816151,
+      "endMs": 818900,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "原对话建议用开放权重的 Qwen 三，",
+      "startMs": 820833,
+      "endMs": 824759,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "八十亿参数模型做最小实验，",
+      "startMs": 824759,
+      "endMs": 827445,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "便于固定设置和访问生成概率。",
+      "startMs": 827445,
+      "endMs": 830337,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "一个起步规模是一百个问题，",
+      "startMs": 830700,
+      "endMs": 833487,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "每题五十次生成，",
+      "startMs": 833487,
+      "endMs": 835202,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "每条最多十个可核验命题，",
+      "startMs": 835202,
+      "endMs": 837774,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "约得到五万个状态观测。",
+      "startMs": 837774,
+      "endMs": 840132,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "固定提示、解码方式和思考模式，",
+      "startMs": 840467,
+      "endMs": 844202,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "记录随机种子、前缀、命题、证据以及独立核验结果。",
+      "startMs": 844202,
+      "endMs": 850178,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能为了凑够命题数而强迫模型编造。",
+      "startMs": 850178,
+      "endMs": 854411,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "先按问题划分估计集、校准集和盲测集，",
+      "startMs": 854767,
+      "endMs": 858847,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "避免同一个问题的不同生成泄漏到两边。",
+      "startMs": 858847,
+      "endMs": 862927,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "只在估计集学习漂移和扩散，",
+      "startMs": 863267,
+      "endMs": 866128,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "在校准集确定边界，",
+      "startMs": 866128,
+      "endMs": 868110,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "冻结全部设置后，",
+      "startMs": 868110,
+      "endMs": 869871,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "再预测盲测集的首达分布。",
+      "startMs": 869871,
+      "endMs": 872512,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "本视频没有运行这项真实模型实验。",
+      "startMs": 872512,
+      "endMs": 876035,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "验证时，",
+      "startMs": 878000,
+      "endMs": 878952,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "要比较完整存活曲线，",
+      "startMs": 878952,
+      "endMs": 881333,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "并与离散转移、静态事实分数和语义熵等基线比较。",
+      "startMs": 881333,
+      "endMs": 886808,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "生成结束时还没有错误的轨迹，",
+      "startMs": 887167,
+      "endMs": 890082,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "需要按预先声明的目标处理。",
+      "startMs": 890082,
+      "endMs": 892788,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "若估计持续生成的潜在首达时间，",
+      "startMs": 892788,
+      "endMs": 895911,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "要报告右删失及其假设；",
+      "startMs": 895911,
+      "endMs": 898202,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "若研究完整回答，",
+      "startMs": 898202,
+      "endMs": 899867,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "则还要考虑停止生成这一竞争事件。",
+      "startMs": 899867,
+      "endMs": 903199,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "从未失败的短轨迹，",
+      "startMs": 903533,
+      "endMs": 905394,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "不能直接当作无限安全，",
+      "startMs": 905394,
+      "endMs": 907668,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "也不能用已失败样本的平均值冒充整体平均首达时间。",
+      "startMs": 907668,
+      "endMs": 912629,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "论文叙事可以围绕五组图展开：",
+      "startMs": 912967,
+      "endMs": 916261,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "状态轨迹、漂移扩散、盲测存活、势垒条件，",
+      "startMs": 916261,
+      "endMs": 920966,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "以及跨模型验证。",
+      "startMs": 920966,
+      "endMs": 922848,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "跨模型标度和提前预警都属于下一步假设。",
+      "startMs": 922848,
+      "endMs": 927319,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "这套思路的核心，",
+      "startMs": 927667,
+      "endMs": 929462,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "是用可测量的局部变化，",
+      "startMs": 929462,
+      "endMs": 931930,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "预测尚未发生的首次错误。",
+      "startMs": 931930,
+      "endMs": 934623,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "能否成立、是否具有足够创新性，",
+      "startMs": 934623,
+      "endMs": 937989,
+      "timestampMs": null,
+      "confidence": null
+    },
+    {
+      "text": "要由独立数据和对照实验回答。",
+      "startMs": 937989,
+      "endMs": 941131,
+      "timestampMs": null,
+      "confidence": null
+    }
+  ]
+}

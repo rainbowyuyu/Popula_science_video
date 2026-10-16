@@ -1,0 +1,69 @@
+{
+  "id": "s035",
+  "text": "它叫调谐质量阻尼器。上海中心楼顶，悬着一块约一千吨的重物，可以相对大楼来回运动。",
+  "ttsText": "它叫调谐质量阻尼器。上海中心楼顶，悬着一块约一千吨的重物，可以相对大楼来回运动。",
+  "signature": "c76985b0d4d8031f6c940ad0512cade51cafb09a2cfaa23cb32863fe55221847",
+  "raw": "audio/raw/s035-c76985b0d4.wav",
+  "processed": "public/voice/s035.wav",
+  "rawDuration": 7.92,
+  "duration": 7.92,
+  "sha256": "453e9c1eefc7e5df1d55e0d2f7b0b29698d2bad41a7f648f066ab9b371bcd2ae",
+  "seed": 3345581488,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s035",
+    "s036",
+    "s044"
+  ],
+  "rawEndpointDB": -61.433046979050786,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "f11b1eb1b00f39c5bd366bea88579511ceda04629a768b4dbff1485ebaf768c7",
+    "outputSha256": "453e9c1eefc7e5df1d55e0d2f7b0b29698d2bad41a7f648f066ab9b371bcd2ae",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4526641367589335,
+    "input": {
+      "seconds": 7.92,
+      "peakDb": -6.52321632094499,
+      "activeRmsDb": -22.12357278635816,
+      "quietFrameP10Db": -60.03970794763979
+    },
+    "output": {
+      "seconds": 7.92,
+      "peakDb": -4.1659549963799325,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.152392425413474
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

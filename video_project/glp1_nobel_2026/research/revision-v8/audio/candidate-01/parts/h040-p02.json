@@ -1,0 +1,87 @@
+{
+  "id": "h040",
+  "partIndex": 1,
+  "ttsText": "肥肉、黄油里的饱和脂肪吃得多，会影响低密度脂蛋白；用适量植物油、鱼和坚果替换更合适。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 1,
+  "seed": 3808454894,
+  "signature": "e30068ee12fc098be15acfc732d4fd4f3ac6e7bb914947b8e6b618311c31df9a",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h040-p02",
+    "h041-p01",
+    "h041-p02"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\raw\\h040-p02.wav",
+  "rawSHA256": "58609a6ba6e51e2ce30f6809ee9202af6f5e004323be5df15a6881dcc12d699f",
+  "rawMetrics": {
+    "samples48k": 399360,
+    "seconds": 8.32,
+    "peakDBFS": -5.81487986316795,
+    "first20msDBFS": -86.48800473124139,
+    "last20msDBFS": -90.12456837038741,
+    "firstActiveMs": 270.0,
+    "lastActiveToEndMs": 350.0,
+    "activityThresholdDBFS": -48.254984440997916,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\guarded\\h040-p02.wav",
+  "guardedSHA256": "80e8e60669a63ae4ba82aca38ee333601b499a847a3058eaf1b222bec93e059e",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\processed\\h040-p02.wav",
+  "sha256": "dff1cd327d91136c18174962c769a0c0a8b944d53e005c1b9a65fd06600c016e",
+  "durationSeconds": 8.56,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "80e8e60669a63ae4ba82aca38ee333601b499a847a3058eaf1b222bec93e059e",
+    "outputSha256": "dff1cd327d91136c18174962c769a0c0a8b944d53e005c1b9a65fd06600c016e",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.9554999615994078,
+    "input": {
+      "seconds": 8.56,
+      "peakDb": -5.815324706535825,
+      "activeRmsDb": -21.55450556342021,
+      "quietFrameP10Db": -63.36134618089625
+    },
+    "output": {
+      "seconds": 8.56,
+      "peakDb": -3.7056695134745885,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.50467985002918
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

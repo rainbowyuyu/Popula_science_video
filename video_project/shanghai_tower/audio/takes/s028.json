@@ -1,0 +1,81 @@
+{
+  "id": "s028",
+  "text": "这一扭，改变了风撞上大楼的方式。越往高处走，迎风的轮廓就越不一样。",
+  "ttsText": "这一扭，改变了风撞上大楼的方式。越往高处走，迎风的轮廓就越不一样。",
+  "signature": "dc6d7efa4baf9d92c11f5c0e14d1c6fb7d1f5ddf91c9a7da1df31c055e26e183",
+  "raw": "audio/raw/s028-dc6d7efa4b.wav",
+  "processed": "public/voice/s028.wav",
+  "rawDuration": 6.48,
+  "duration": 6.72,
+  "sha256": "e03a38b4f2ce084ba109c292043af813df77148d2e9ab7da898b9196255a4f71",
+  "seed": 3698163450,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s028",
+    "s035"
+  ],
+  "rawEndpointDB": -97.1028964228949,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "fdf23cbed6b425faac659d1301df37cd680de47f02c80213da5a1cc1949b1b8b",
+    "outputSha256": "e03a38b4f2ce084ba109c292043af813df77148d2e9ab7da898b9196255a4f71",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.5653611341998968,
+    "input": {
+      "seconds": 6.72,
+      "peakDb": -6.5410608779731225,
+      "activeRmsDb": -21.049419564533007,
+      "quietFrameP10Db": -65.32119538952229
+    },
+    "output": {
+      "seconds": 6.72,
+      "peakDb": -4.500524015686289,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -66.28594093405388
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "8919d8577f92dc999171d4287ad0b2ede250f45979275fec0beece8f38398d76"
+  },
+  "subjectiveListeningChecked": false,
+  "candidateSource": "audio/candidates/v3-pronunciation/s028.wav",
+  "revision": "pronunciation-and-boundaries-v3"
+}

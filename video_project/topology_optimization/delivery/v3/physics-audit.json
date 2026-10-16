@@ -1,0 +1,20 @@
+{
+  "cantileverEulerBernoulliReferenceMm": 0.13327780091628488,
+  "stripFEMMm": 0.1361502303692532,
+  "relativeDifference": 0.02155219723930286,
+  "interpretation": "Beam reference omits shear deformation and local load introduction; close agreement is a sanity check, not full validation.",
+  "optimizedVersusStripReduction": 0.8570459109397304,
+  "modelChecks": {
+    "relativeResidual": 1.783434089608515e-12,
+    "reactionN": 100.00000000156544,
+    "loadN": 100,
+    "volumeFraction": 0.34999995622091506,
+    "doubleLoadLinearity": 0.0,
+    "stiffnessSymmetry": 9.094947017729282e-13,
+    "minDensity": 0.001,
+    "maxDensity": 1.0
+  },
+  "staticRigidModes": 3,
+  "formulation": "2D plane stress, 4-node isoparametric quadrilaterals, 2x2 Gauss integration, constant thickness, homogeneous isotropic E and nu",
+  "display": "Displacements use the solved nodal fields with the stated 200x exaggeration. Density replay colors describe density, not stress. Final polished solid is rho=0.5 contour reconstruction and has not been separately strength-certified."
+}

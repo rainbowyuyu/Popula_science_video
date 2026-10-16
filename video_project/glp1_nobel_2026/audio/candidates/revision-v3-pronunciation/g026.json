@@ -1,0 +1,66 @@
+{
+  "id": "g026",
+  "text": "研究者在人血清里发现，它开头会少掉两个氨基酸。抑制那把分子剪刀后，这种剪切就停了。",
+  "ttsText": "研究者在人血清里发现，它开头会少掉两个氨基酸。抑制那把分子剪刀后，这种剪切就停了。",
+  "signature": "1fc3a266862e5f4abf99b56323ef171c52a04007fa66ab579958f36db4f2b608",
+  "raw": "audio/raw/g026-1fc3a26686.wav",
+  "processed": "audio/candidates/revision-v3-pronunciation/g026.wav",
+  "rawDuration": 8.08,
+  "duration": 8.08,
+  "sha256": "e83bd96c5d8e256f3de29ffca0a2ba0541604a1f4366219f2f82b3a0e9842ad9",
+  "seed": 532914790,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g026"
+  ],
+  "rawEndpointDB": -94.72808034851681,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "2508f8b29be43549163eb21386c6c10ac512ffa9d81ad2e3fd9e968c84f966f7",
+    "outputSha256": "e83bd96c5d8e256f3de29ffca0a2ba0541604a1f4366219f2f82b3a0e9842ad9",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.3965594798107723,
+    "input": {
+      "seconds": 8.08,
+      "peakDb": -5.300329658209502,
+      "activeRmsDb": -22.099176364708256,
+      "quietFrameP10Db": -63.12796362904692
+    },
+    "output": {
+      "seconds": 8.08,
+      "peakDb": -2.929700301902603,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.579861992927356
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

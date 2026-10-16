@@ -1,0 +1,69 @@
+{
+  "id": "g008",
+  "text": "脂肪堆积、遗传和生活习惯等因素，会让肝脏、肌肉对胰岛素的反应变弱。这就叫胰岛素抵抗。",
+  "ttsText": "脂肪堆积、遗传和生活习惯等因素，会让肝脏、肌肉对胰岛素的反应变弱。这就叫胰岛素抵抗。",
+  "signature": "446f47063543ef8c74d9b60969f79f928ded26580a5f0d71acd6a2bb66c27412",
+  "raw": "audio/raw/g008-446f470635.wav",
+  "processed": "public/voice/g008.wav",
+  "rawDuration": 8.4,
+  "duration": 8.4,
+  "sha256": "96965e6dd555c79a8c8d25898a44d58e0454067e627dbf134fc8a5f42226d65b",
+  "seed": 3887286995,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g005",
+    "g006",
+    "g007",
+    "g008"
+  ],
+  "rawEndpointDB": -96.221633515935,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "3b026993765fe322a48492d849c0c605217de6db8d6ad88b377c1f4b72a347e5",
+    "outputSha256": "96965e6dd555c79a8c8d25898a44d58e0454067e627dbf134fc8a5f42226d65b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.401600924191108,
+    "input": {
+      "seconds": 8.4,
+      "peakDb": -7.849037889675133,
+      "activeRmsDb": -23.29547855551358,
+      "quietFrameP10Db": -60.09922626346772
+    },
+    "output": {
+      "seconds": 8.4,
+      "peakDb": -5.031582123798168,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.820053540348844
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

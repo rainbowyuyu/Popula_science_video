@@ -1,0 +1,83 @@
+{
+  "id": "h076",
+  "text": "抗栓治疗的另一面，是更容易出血。仅仅有三高，就自己加上阿司匹林或抗凝药，可能添出新的麻烦。",
+  "ttsText": "抗栓治疗的另一面，是更容易出血。仅仅有三高，就自己加上阿司匹林或抗凝药，可能添出新的麻烦。",
+  "signature": "62b4afbbdb7495ce8fb6fa9ed3f1fe4aeec514079356632d6e3e365beabda476",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h076-62b4afbbdb74-5932f1c834.wav",
+  "processed": "audio/revision-v5/voice/h076.wav",
+  "rawDuration": 8.800041666666667,
+  "duration": 8.800041666666667,
+  "sampleRate": 48000,
+  "sha256": "934d2beb051e96daa4178b5620e5f9a36d0feb565fb42794dd12110eccd2a1b6",
+  "rawSHA256": "e1f816ce7cce60e6eba4fa481def5cc3137ee514ce414ad56a886749bd5b73e9",
+  "seed": 1496510920,
+  "batchIds": [
+    "h076",
+    "h077",
+    "h078"
+  ],
+  "batchKey": "5932f1c834bc1a490250700fbee02aeda1bdcc09170e9006780d65e53f388e93",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -80.46734269270486,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "e1f816ce7cce60e6eba4fa481def5cc3137ee514ce414ad56a886749bd5b73e9",
+    "outputSha256": "934d2beb051e96daa4178b5620e5f9a36d0feb565fb42794dd12110eccd2a1b6",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.125567557804434,
+    "input": {
+      "seconds": 8.800041666666667,
+      "peakDb": -5.626884008242081,
+      "activeRmsDb": -21.568916939892627,
+      "quietFrameP10Db": -63.31616396326868
+    },
+    "output": {
+      "seconds": 8.800041666666667,
+      "peakDb": -6.058380458625373,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -64.28913880029026
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

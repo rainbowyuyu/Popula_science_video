@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "beso_ai_research_2026",
+  "title": "BESO 与 AI Engineer",
+  "category": "engineering",
+  "status": "source-library",
+  "currentVersion": "V20 launch + research film",
+  "workbench": {
+    "title": "AI工程师 · 研究与产品演示",
+    "seriesId": "independent",
+    "episode": null,
+    "useSeriesStyle": false
+  },
+  "entrypoints": [
+    "src/index-beso.tsx",
+    "src/index-launch-v20.tsx",
+    "scripts/render_launch_v20.mjs"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "studio": "remotion studio src/index-beso.tsx --no-open --port=3020",
+        "build": "remotion bundle src/index-beso.tsx build",
+        "preview": "npm run studio",
+        "typecheck": "tsc --noEmit",
+        "render": "node scripts/render_beso_film.mjs",
+        "qa": "node scripts/render_beso_film.mjs --stills"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "output/ai_engineer_launch_v20_1080p60.mp4",
+      "output/beso_ai_research_1080p60.mp4"
+    ],
+    "covers": [
+      "delivery/covers/AI-Engineer-16x9.jpg",
+      "delivery/covers/AI-Engineer-3x4.jpg",
+      "delivery/covers/AI-Engineer-4x3.jpg",
+      "delivery/covers/AI-Engineer-9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Blender (configure BLENDER_PATH; original D:/blender/blender.exe)"
+  ],
+  "notes": [
+    "README 的 V6 首段已过时；V20 成片与源码实际存在。完整科研片与发布片是不同作品，均保留。"
+  ],
+  "originalMetadata": {}
+}

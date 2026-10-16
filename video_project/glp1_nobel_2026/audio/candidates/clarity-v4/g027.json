@@ -1,0 +1,68 @@
+{
+  "id": "g027",
+  "text": "甘油三酯被逐步卸下，部分颗粒经过变化，形成低密度脂蛋白，简称LDL。化验单常测的，是它携带的胆固醇。",
+  "ttsText": "甘油三酯被逐步卸下，部分颗粒经过变化，形成低密度脂蛋白。化验单常测的，是它携带的胆固醇。",
+  "signature": "dc3d628bf1b4c7b04240f5caaec96491baa8061d462cecab85883137eb37d434",
+  "raw": "audio/raw/g027-dc3d628bf1.wav",
+  "processed": "audio/candidates/clarity-v4/g027.wav",
+  "rawDuration": 8.88,
+  "duration": 8.88,
+  "sha256": "52963e3aa4075e5dd1bd1d6f9fbe03ccdb4ccb705e4d56a07775ac153770ac92",
+  "seed": 1730612975,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g024",
+    "g027",
+    "g068"
+  ],
+  "rawEndpointDB": -96.95108195861641,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "98d341e1ca1cd0690e8f12445688cb2e22f8d534051c24af1a4b6a29d497ee70",
+    "outputSha256": "52963e3aa4075e5dd1bd1d6f9fbe03ccdb4ccb705e4d56a07775ac153770ac92",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.163587026852092,
+    "input": {
+      "seconds": 8.88,
+      "peakDb": -7.252496029928447,
+      "activeRmsDb": -22.99905806266326,
+      "quietFrameP10Db": -60.98109693891287
+    },
+    "output": {
+      "seconds": 8.88,
+      "peakDb": -4.589331782601455,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.46939252869218
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

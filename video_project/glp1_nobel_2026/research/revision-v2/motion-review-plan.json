@@ -1,0 +1,1662 @@
+{
+  "schemaVersion": 1,
+  "status": "planned-awaiting-final-encoded-v2",
+  "purpose": "最终编码 MP4 的短窗口动作交接抽查计划；不是完整逐帧或逐秒人工审片证明。",
+  "source": {
+    "timeline": "src/timeline.json",
+    "timelineSHA256": "aecb1dd5b85f16088bb870c1082c7feabe325cf64af3f52fcff97ed3d8f0240c",
+    "sourceAudit": "research/qa/camera-v2-source.json",
+    "sourceAuditCreatedUTC": "2026-10-08T10:10:02.755Z",
+    "fps": 30,
+    "durationFrames": 9776,
+    "video": "delivery/GLP1_1080p.mp4",
+    "finalRenderMarker": "tmp/final-render.json"
+  },
+  "execution": {
+    "readiness": "仅在 root 确认 V2 最终渲染成功且 qa_final 完成后提取或检查；记录最终 MP4 SHA256，防止旧 V1 文件混入。",
+    "frameNumberConvention": "零基视频帧索引；ffmpeg select=eq(n\\,FRAME)。",
+    "mainQA": "scripts/qa_final.py 已有代表帧及边界 ±45/20/0；当前脚本不会自动读取此补充计划。",
+    "supplementalExtraction": "按 frames[].frame 与 research/qa/final/frames 中已有帧取差集，仅补充缺失编码帧。建议另存 research/revision-v2/motion-review/frames/frame-NNNNNN.jpg，并为每个窗口生成 4×3 接触表。",
+    "reviewMethod": "按窗口顺序读取 12 帧接触表；可疑区域再打开 1920×1080 原帧。只有实际观看对应连续片段后，才能声称已完成动态播放检查。",
+    "authority": "不修改 src/public，不重建 bundle，不启动主渲染。"
+  },
+  "sampling": {
+    "categoryCount": 6,
+    "windowCount": 13,
+    "samplesPerWindow": 12,
+    "stepFrames": 10,
+    "uniqueFrameCount": 156,
+    "spanSecondsPerWindow": 3.6666666666666665,
+    "aggregateSampledWindowSeconds": 47.666666666666664,
+    "reasonForSplitting": "宏观/微观入口、出口及片尾回餐桌分布在不同短时段，因此每个多步交接拆成 2–3 个独立短窗口，避免抽取整分钟章节。"
+  },
+  "windows": [
+    {
+      "id": "meal_to_gut",
+      "group": "meal_to_gut",
+      "title": "餐桌进入胃",
+      "startFrame": 1065,
+      "endFrame": 1175,
+      "centerFrame": 1120,
+      "startSeconds": 35.5,
+      "endSeconds": 39.166667,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        1065,
+        1075,
+        1085,
+        1095,
+        1105,
+        1115,
+        1125,
+        1135,
+        1145,
+        1155,
+        1165,
+        1175
+      ],
+      "clipIds": [
+        "g006",
+        "g007"
+      ],
+      "basis": "g006→g007 边界；餐桌从 g007 开始下移。",
+      "checkpoints": [
+        "餐桌退出应在画外进行，人体及胃保持空间连续。",
+        "“胃”标签保持右侧；透明胃内食物颗粒不穿出胃壁。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "meal_to_gut.jpg"
+      }
+    },
+    {
+      "id": "gut_surface_to_micro",
+      "group": "meal_to_gut",
+      "title": "肠道表面进入 L 细胞",
+      "startFrame": 1350,
+      "endFrame": 1460,
+      "centerFrame": 1395,
+      "startSeconds": 45,
+      "endSeconds": 48.666667,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        1350,
+        1360,
+        1370,
+        1380,
+        1390,
+        1400,
+        1410,
+        1420,
+        1430,
+        1440,
+        1450,
+        1460
+      ],
+      "clipIds": [
+        "g008"
+      ],
+      "basis": "源审计 F1360–1440 显示肠道微观由 0 变为约 1。",
+      "checkpoints": [
+        "宏观肠道淡出与肠壁细胞放大相接，避免空场或突然出现微观孤岛。",
+        "微观清晰时宏观信号流隐藏，标签透明度随图层变化。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "gut_surface_to_micro.jpg"
+      }
+    },
+    {
+      "id": "gut_micro_exit",
+      "group": "gut_to_pancreas",
+      "title": "肠道微观退回器官",
+      "startFrame": 1765,
+      "endFrame": 1875,
+      "centerFrame": 1820,
+      "startSeconds": 58.833333,
+      "endSeconds": 62.5,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        1765,
+        1775,
+        1785,
+        1795,
+        1805,
+        1815,
+        1825,
+        1835,
+        1845,
+        1855,
+        1865,
+        1875
+      ],
+      "clipIds": [
+        "g010"
+      ],
+      "basis": "源审计 F1800–1860 显示微观退场、器官恢复。",
+      "checkpoints": [
+        "L 细胞及其标签一起淡出，真实肠道与胰腺在拉远时接上。",
+        "退出时保持可辨的真实物体，避免图层已消失而文字悬空。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "gut_micro_exit.jpg"
+      }
+    },
+    {
+      "id": "pancreas_to_beta",
+      "group": "gut_to_pancreas",
+      "title": "胰腺进入 β 细胞",
+      "startFrame": 2145,
+      "endFrame": 2255,
+      "centerFrame": 2200,
+      "startSeconds": 71.5,
+      "endSeconds": 75.166667,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        2145,
+        2155,
+        2165,
+        2175,
+        2185,
+        2195,
+        2205,
+        2215,
+        2225,
+        2235,
+        2245,
+        2255
+      ],
+      "clipIds": [
+        "g012"
+      ],
+      "basis": "源审计 F2160–2240 显示 β 图层由约 0 变为约 1。",
+      "checkpoints": [
+        "胰腺逐渐放大再交给 β 细胞，微观入口应位于实际器官。",
+        "胰腺标签保持右侧；细胞与 GLP-1 标签随实际可见图层出现。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "pancreas_to_beta.jpg"
+      }
+    },
+    {
+      "id": "beta_to_receptor",
+      "group": "beta_receptor_and_insulin_exit",
+      "title": "β 细胞进入真实受体",
+      "startFrame": 2296,
+      "endFrame": 2406,
+      "centerFrame": 2326,
+      "startSeconds": 76.533333,
+      "endSeconds": 80.2,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        2296,
+        2306,
+        2316,
+        2326,
+        2336,
+        2346,
+        2356,
+        2366,
+        2376,
+        2386,
+        2396,
+        2406
+      ],
+      "clipIds": [
+        "g012",
+        "g013"
+      ],
+      "basis": "g013 边界 F2326；受体权重在 F2316–2366 增大。",
+      "checkpoints": [
+        "GLP-1 配体不在跨句处重置到远端；镜头继续接近同一受体位置。",
+        "β 细胞符号与 5VAI 真实结构交接稳定，旧 β 标签同步退场。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "beta_to_receptor.jpg"
+      }
+    },
+    {
+      "id": "receptor_to_beta",
+      "group": "beta_receptor_and_insulin_exit",
+      "title": "真实受体返回 β 细胞",
+      "startFrame": 2914,
+      "endFrame": 3024,
+      "centerFrame": 2969,
+      "startSeconds": 97.133333,
+      "endSeconds": 100.8,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        2914,
+        2924,
+        2934,
+        2944,
+        2954,
+        2964,
+        2974,
+        2984,
+        2994,
+        3004,
+        3014,
+        3024
+      ],
+      "clipIds": [
+        "g015",
+        "g016"
+      ],
+      "basis": "g015 末 50 帧受体淡出；g016 从 F2969 开始。",
+      "checkpoints": [
+        "真实结构与结构标签一起退场，β 细胞小泡重新可辨。",
+        "未释放时标签写“胰岛素小泡”，指向实际胞内小泡。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "receptor_to_beta.jpg"
+      }
+    },
+    {
+      "id": "insulin_release_exit",
+      "group": "beta_receptor_and_insulin_exit",
+      "title": "胰岛素释放与细胞退出",
+      "startFrame": 3098,
+      "endFrame": 3208,
+      "centerFrame": 3198,
+      "startSeconds": 103.266667,
+      "endSeconds": 106.933333,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        3098,
+        3108,
+        3118,
+        3128,
+        3138,
+        3148,
+        3158,
+        3168,
+        3178,
+        3188,
+        3198,
+        3208
+      ],
+      "clipIds": [
+        "g016",
+        "g017"
+      ],
+      "basis": "g016 progress 约 0.765 对应 F3108；细胞权重于 F3153–3198 淡出。",
+      "checkpoints": [
+        "胞内小泡贴膜后释放；“胰岛素”标签随已释放颗粒质心移动。",
+        "细胞拉远时标签同步减淡；胰腺和肝脏恢复可见，避免标签残留。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "insulin_release_exit.jpg"
+      }
+    },
+    {
+      "id": "brain_micro_exit",
+      "group": "brain_to_drug",
+      "title": "脑网络退出",
+      "startFrame": 4106,
+      "endFrame": 4216,
+      "centerFrame": 4171,
+      "startSeconds": 136.866667,
+      "endSeconds": 140.533333,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        4106,
+        4116,
+        4126,
+        4136,
+        4146,
+        4156,
+        4166,
+        4176,
+        4186,
+        4196,
+        4206,
+        4216
+      ],
+      "clipIds": [
+        "g021",
+        "g022"
+      ],
+      "basis": "g021 末 45 帧脑网络淡出；F4171 进入 g022。",
+      "checkpoints": [
+        "脑网络和标签一起退场，大脑实体接回镜头。",
+        "微观出口不产生突然裁切或空间跳跃，后续沿身体向胃移动。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "brain_micro_exit.jpg"
+      }
+    },
+    {
+      "id": "drug_entry",
+      "group": "brain_to_drug",
+      "title": "宏观人体进入药物工程",
+      "startFrame": 4835,
+      "endFrame": 4945,
+      "centerFrame": 4900,
+      "startSeconds": 161.166667,
+      "endSeconds": 164.833333,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        4835,
+        4845,
+        4855,
+        4865,
+        4875,
+        4885,
+        4895,
+        4905,
+        4915,
+        4925,
+        4935,
+        4945
+      ],
+      "clipIds": [
+        "g025"
+      ],
+      "basis": "g025 从 F4802 开始；相机经肝脏进入 drug 锚点，微观可见性由距离控制。",
+      "checkpoints": [
+        "器官表面和药物微观层随镜头接近自然交接。",
+        "药物主链、酶和标签逐步可读；宏观流线完全微观时隐藏。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "drug_entry.jpg"
+      }
+    },
+    {
+      "id": "drug_to_trials",
+      "group": "drug_to_trials",
+      "title": "药物微观退出到试验",
+      "startFrame": 6087,
+      "endFrame": 6197,
+      "centerFrame": 6152,
+      "startSeconds": 202.9,
+      "endSeconds": 206.566667,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        6087,
+        6097,
+        6107,
+        6117,
+        6127,
+        6137,
+        6147,
+        6157,
+        6167,
+        6177,
+        6187,
+        6197
+      ],
+      "clipIds": [
+        "g031",
+        "g032"
+      ],
+      "basis": "g031 末 60 帧药物淡出；F6152 进入试验部分。",
+      "checkpoints": [
+        "药物与“可逆结合”等标签同步退场，不留下空中字幕或越界标签。",
+        "人体回到宏观构图，临床试验文字在镜头拉远时平稳接入。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "drug_to_trials.jpg"
+      }
+    },
+    {
+      "id": "closing_body_to_table",
+      "group": "closing_body_table_coda",
+      "title": "收束人体回到餐桌",
+      "startFrame": 9150,
+      "endFrame": 9260,
+      "centerFrame": 9250,
+      "startSeconds": 305,
+      "endSeconds": 308.666667,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        9150,
+        9160,
+        9170,
+        9180,
+        9190,
+        9200,
+        9210,
+        9220,
+        9230,
+        9240,
+        9250,
+        9260
+      ],
+      "clipIds": [
+        "g047"
+      ],
+      "basis": "餐桌回升于 F9170 完成；g047 相机在约 F9250 朝餐桌与躯干之间取景。",
+      "checkpoints": [
+        "镜头从人体下移回到同一餐桌，物体比例和移动方向连续。",
+        "餐桌回升已完成，餐具和食物不在可见画面中突然跳入。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "closing_body_to_table.jpg"
+      }
+    },
+    {
+      "id": "closing_skin_restore",
+      "group": "closing_body_table_coda",
+      "title": "餐桌场景恢复体表",
+      "startFrame": 9338,
+      "endFrame": 9448,
+      "centerFrame": 9444,
+      "startSeconds": 311.266667,
+      "endSeconds": 314.933333,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        9338,
+        9348,
+        9358,
+        9368,
+        9378,
+        9388,
+        9398,
+        9408,
+        9418,
+        9428,
+        9438,
+        9448
+      ],
+      "clipIds": [
+        "g048"
+      ],
+      "basis": "g048 F9328 开始恢复体表，约 F9444 完成。",
+      "checkpoints": [
+        "内脏逐步减淡，体表自然恢复，日常晚饭场景收束。",
+        "饭菜和点心无遮挡突变，镜头退出人体时没有器官悬浮。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "closing_skin_restore.jpg"
+      }
+    },
+    {
+      "id": "table_to_coda",
+      "group": "closing_body_table_coda",
+      "title": "餐桌离场与参考文献进入",
+      "startFrame": 9466,
+      "endFrame": 9576,
+      "centerFrame": 9506,
+      "startSeconds": 315.533333,
+      "endSeconds": 319.2,
+      "spanSeconds": 3.666667,
+      "sampleCount": 12,
+      "stepFrames": 10,
+      "frames": [
+        9466,
+        9476,
+        9486,
+        9496,
+        9506,
+        9516,
+        9526,
+        9536,
+        9546,
+        9556,
+        9566,
+        9576
+      ],
+      "clipIds": [
+        "g048",
+        "references"
+      ],
+      "basis": "参考文献 F9506 开始；源审计提示 F9511–9526 桌面覆盖约 3.51%→0.12%。",
+      "checkpoints": [
+        "桌面与人体向画外退出，文献覆盖接入时保持自然。",
+        "重点检查 F9511–9526 小片桌面下移是否仍显突兀；不将源层小覆盖率单独视作失败。",
+        "纸张/文献层进入后正文稳定、无遮挡、无黑帧。"
+      ],
+      "contactSheet": {
+        "columns": 4,
+        "rows": 3,
+        "filename": "table_to_coda.jpg"
+      }
+    }
+  ],
+  "frames": [
+    {
+      "frame": 1065,
+      "timeSeconds": 35.5,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1075,
+      "timeSeconds": 35.833333,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1085,
+      "timeSeconds": 36.166667,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1095,
+      "timeSeconds": 36.5,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1105,
+      "timeSeconds": 36.833333,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1115,
+      "timeSeconds": 37.166667,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1125,
+      "timeSeconds": 37.5,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1135,
+      "timeSeconds": 37.833333,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1145,
+      "timeSeconds": 38.166667,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1155,
+      "timeSeconds": 38.5,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1165,
+      "timeSeconds": 38.833333,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1175,
+      "timeSeconds": 39.166667,
+      "windows": [
+        "meal_to_gut"
+      ]
+    },
+    {
+      "frame": 1350,
+      "timeSeconds": 45,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1360,
+      "timeSeconds": 45.333333,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1370,
+      "timeSeconds": 45.666667,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1380,
+      "timeSeconds": 46,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1390,
+      "timeSeconds": 46.333333,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1400,
+      "timeSeconds": 46.666667,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1410,
+      "timeSeconds": 47,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1420,
+      "timeSeconds": 47.333333,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1430,
+      "timeSeconds": 47.666667,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1440,
+      "timeSeconds": 48,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1450,
+      "timeSeconds": 48.333333,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1460,
+      "timeSeconds": 48.666667,
+      "windows": [
+        "gut_surface_to_micro"
+      ]
+    },
+    {
+      "frame": 1765,
+      "timeSeconds": 58.833333,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1775,
+      "timeSeconds": 59.166667,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1785,
+      "timeSeconds": 59.5,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1795,
+      "timeSeconds": 59.833333,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1805,
+      "timeSeconds": 60.166667,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1815,
+      "timeSeconds": 60.5,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1825,
+      "timeSeconds": 60.833333,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1835,
+      "timeSeconds": 61.166667,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1845,
+      "timeSeconds": 61.5,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1855,
+      "timeSeconds": 61.833333,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1865,
+      "timeSeconds": 62.166667,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 1875,
+      "timeSeconds": 62.5,
+      "windows": [
+        "gut_micro_exit"
+      ]
+    },
+    {
+      "frame": 2145,
+      "timeSeconds": 71.5,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2155,
+      "timeSeconds": 71.833333,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2165,
+      "timeSeconds": 72.166667,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2175,
+      "timeSeconds": 72.5,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2185,
+      "timeSeconds": 72.833333,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2195,
+      "timeSeconds": 73.166667,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2205,
+      "timeSeconds": 73.5,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2215,
+      "timeSeconds": 73.833333,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2225,
+      "timeSeconds": 74.166667,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2235,
+      "timeSeconds": 74.5,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2245,
+      "timeSeconds": 74.833333,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2255,
+      "timeSeconds": 75.166667,
+      "windows": [
+        "pancreas_to_beta"
+      ]
+    },
+    {
+      "frame": 2296,
+      "timeSeconds": 76.533333,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2306,
+      "timeSeconds": 76.866667,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2316,
+      "timeSeconds": 77.2,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2326,
+      "timeSeconds": 77.533333,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2336,
+      "timeSeconds": 77.866667,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2346,
+      "timeSeconds": 78.2,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2356,
+      "timeSeconds": 78.533333,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2366,
+      "timeSeconds": 78.866667,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2376,
+      "timeSeconds": 79.2,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2386,
+      "timeSeconds": 79.533333,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2396,
+      "timeSeconds": 79.866667,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2406,
+      "timeSeconds": 80.2,
+      "windows": [
+        "beta_to_receptor"
+      ]
+    },
+    {
+      "frame": 2914,
+      "timeSeconds": 97.133333,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2924,
+      "timeSeconds": 97.466667,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2934,
+      "timeSeconds": 97.8,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2944,
+      "timeSeconds": 98.133333,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2954,
+      "timeSeconds": 98.466667,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2964,
+      "timeSeconds": 98.8,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2974,
+      "timeSeconds": 99.133333,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2984,
+      "timeSeconds": 99.466667,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 2994,
+      "timeSeconds": 99.8,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 3004,
+      "timeSeconds": 100.133333,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 3014,
+      "timeSeconds": 100.466667,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 3024,
+      "timeSeconds": 100.8,
+      "windows": [
+        "receptor_to_beta"
+      ]
+    },
+    {
+      "frame": 3098,
+      "timeSeconds": 103.266667,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3108,
+      "timeSeconds": 103.6,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3118,
+      "timeSeconds": 103.933333,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3128,
+      "timeSeconds": 104.266667,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3138,
+      "timeSeconds": 104.6,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3148,
+      "timeSeconds": 104.933333,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3158,
+      "timeSeconds": 105.266667,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3168,
+      "timeSeconds": 105.6,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3178,
+      "timeSeconds": 105.933333,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3188,
+      "timeSeconds": 106.266667,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3198,
+      "timeSeconds": 106.6,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 3208,
+      "timeSeconds": 106.933333,
+      "windows": [
+        "insulin_release_exit"
+      ]
+    },
+    {
+      "frame": 4106,
+      "timeSeconds": 136.866667,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4116,
+      "timeSeconds": 137.2,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4126,
+      "timeSeconds": 137.533333,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4136,
+      "timeSeconds": 137.866667,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4146,
+      "timeSeconds": 138.2,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4156,
+      "timeSeconds": 138.533333,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4166,
+      "timeSeconds": 138.866667,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4176,
+      "timeSeconds": 139.2,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4186,
+      "timeSeconds": 139.533333,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4196,
+      "timeSeconds": 139.866667,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4206,
+      "timeSeconds": 140.2,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4216,
+      "timeSeconds": 140.533333,
+      "windows": [
+        "brain_micro_exit"
+      ]
+    },
+    {
+      "frame": 4835,
+      "timeSeconds": 161.166667,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4845,
+      "timeSeconds": 161.5,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4855,
+      "timeSeconds": 161.833333,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4865,
+      "timeSeconds": 162.166667,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4875,
+      "timeSeconds": 162.5,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4885,
+      "timeSeconds": 162.833333,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4895,
+      "timeSeconds": 163.166667,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4905,
+      "timeSeconds": 163.5,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4915,
+      "timeSeconds": 163.833333,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4925,
+      "timeSeconds": 164.166667,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4935,
+      "timeSeconds": 164.5,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 4945,
+      "timeSeconds": 164.833333,
+      "windows": [
+        "drug_entry"
+      ]
+    },
+    {
+      "frame": 6087,
+      "timeSeconds": 202.9,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6097,
+      "timeSeconds": 203.233333,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6107,
+      "timeSeconds": 203.566667,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6117,
+      "timeSeconds": 203.9,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6127,
+      "timeSeconds": 204.233333,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6137,
+      "timeSeconds": 204.566667,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6147,
+      "timeSeconds": 204.9,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6157,
+      "timeSeconds": 205.233333,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6167,
+      "timeSeconds": 205.566667,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6177,
+      "timeSeconds": 205.9,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6187,
+      "timeSeconds": 206.233333,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 6197,
+      "timeSeconds": 206.566667,
+      "windows": [
+        "drug_to_trials"
+      ]
+    },
+    {
+      "frame": 9150,
+      "timeSeconds": 305,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9160,
+      "timeSeconds": 305.333333,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9170,
+      "timeSeconds": 305.666667,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9180,
+      "timeSeconds": 306,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9190,
+      "timeSeconds": 306.333333,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9200,
+      "timeSeconds": 306.666667,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9210,
+      "timeSeconds": 307,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9220,
+      "timeSeconds": 307.333333,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9230,
+      "timeSeconds": 307.666667,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9240,
+      "timeSeconds": 308,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9250,
+      "timeSeconds": 308.333333,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9260,
+      "timeSeconds": 308.666667,
+      "windows": [
+        "closing_body_to_table"
+      ]
+    },
+    {
+      "frame": 9338,
+      "timeSeconds": 311.266667,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9348,
+      "timeSeconds": 311.6,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9358,
+      "timeSeconds": 311.933333,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9368,
+      "timeSeconds": 312.266667,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9378,
+      "timeSeconds": 312.6,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9388,
+      "timeSeconds": 312.933333,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9398,
+      "timeSeconds": 313.266667,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9408,
+      "timeSeconds": 313.6,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9418,
+      "timeSeconds": 313.933333,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9428,
+      "timeSeconds": 314.266667,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9438,
+      "timeSeconds": 314.6,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9448,
+      "timeSeconds": 314.933333,
+      "windows": [
+        "closing_skin_restore"
+      ]
+    },
+    {
+      "frame": 9466,
+      "timeSeconds": 315.533333,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9476,
+      "timeSeconds": 315.866667,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9486,
+      "timeSeconds": 316.2,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9496,
+      "timeSeconds": 316.533333,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9506,
+      "timeSeconds": 316.866667,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9516,
+      "timeSeconds": 317.2,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9526,
+      "timeSeconds": 317.533333,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9536,
+      "timeSeconds": 317.866667,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9546,
+      "timeSeconds": 318.2,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9556,
+      "timeSeconds": 318.533333,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9566,
+      "timeSeconds": 318.866667,
+      "windows": [
+        "table_to_coda"
+      ]
+    },
+    {
+      "frame": 9576,
+      "timeSeconds": 319.2,
+      "windows": [
+        "table_to_coda"
+      ]
+    }
+  ],
+  "limitations": [
+    "0.333 秒抽样可检查关键交接的空间关系和淡入淡出趋势，不能单独排除两张样本之间的单帧闪烁。",
+    "未提取或检查任何 V2 最终编码帧；所有 reviewStatus 在执行后另行记录。",
+    "参考文献入口桌面下移为低优先级预览观察，须结合最终文献遮挡和连续播放再判断。"
+  ]
+}

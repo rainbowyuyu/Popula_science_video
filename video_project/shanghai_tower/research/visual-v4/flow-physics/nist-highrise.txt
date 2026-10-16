@@ -1,0 +1,63 @@
+DAD_ESWL v1.0 - DAD Software for High- and Mid-Rise Buildings DAD_ESWL v1.0 â Database-Assisted Design Software for High- and
+          Mid-Rise Buildings Introduction DAD_ESWL v1.0 This is the download page for DAD_ESWL v1.0 , a MATLAB-based
+      Database-Assisted Design (DAD) software package for high- and
+      mid-rise buildings. The package was developed for use by the
+      structural engineer in charge of the building design. The software, which incorporates a user-friendly graphical
+      interface, is an integrated design tool providing ( i ) time
+      series of calculated wind-induced floor loads acting at the center
+      of mass, based on time series of aerodynamic pressures and inertial
+      forces, ( ii ) time series of member demand-to-capacity
+      indexes, of inter-story drift ratios, and of accelerations. The software incorporates ASCE 7-16 Standard requirements,
+      ACI 318-10 requirements for reinforced concrete members, and AISC
+      Specifications 360-10 for Steel Buildings.  If requirements based on
+      other documents are used, the corresponding portions of the software
+      must be modified accordingly. For access to the source code, please
+      find contact information at the end of this web page. Required Input as MATLAB Files The following information is required as input for DAD_ESWL v1.0 : Details on structural members and whole structure Dimensions of members Cross-sectional shapes of sections (W or HSS
+             for steel structures) Reinforcement details (for RC structures) Number of stories Heights of floors Structural static and dynamic properties Number of modes and modal damping ratios Mass and mass moment of inertia with respect to mass center
+             for each floor Influence coefficients, defined as the internal forces
+             induced in cross sections of members by a unit load applied
+             to the center of mass of a given floor Internal forces in members induced by dead loads due to
+             self-weight, super-imposed dead loads, and live loads Mode shapes Modal periods Wind pressure data or wind loads Time-varying pressure coefficients for each pressure tap, or
+             wind loads applied at the mass center of each floor, obtained
+             from wind tunnel tests on rigid models or from CFD analyses Wind climate at building site Databases of directional wind speeds for each type of wind
+             occurring at the site (e.g., hurricane, thunderstorm, and
+             synoptic wind), provided by the wind engineering laboratory. All information required for DAD must be provided as a MATLAB
+      formatted file (.mat file) or be typed in the software. The details
+      are described in the accompanying User's Manual (downloaded below). Output DAD_ESWL v1.0 determines the following wind effects
+         corresponding to any specified mean recurrence intervals (MRIs): Peak demand to capacity indexes for all members Peak inter-story drift ratios calculated along selected
+             column lines Peak resultant accelerations calculated along selected
+             column lines Example A 60 story example is available for downloading below. How to run
+      this example is described in the User's Manual. The model scale time histories of the floor wind loads for the
+      60-story CAARC (Commonwealth Advisory Aeronautical Research Council)
+      building for 36 wind directions in 10 degree increments are also
+      available for download. The loads are based on simultaneous pressure
+      time histories on the external surfaces of the building model,
+      obtained from wind tunnel tests performed at the CRIAC IV Boundary
+      Layer Wind Tunnel, Prato, Italy. Downloading Software and Sample Datasets Requirements The DAD_ESWL v1.0 software was developed and tested in the
+      Microsoft Windows environment using MATLAB 2017a. Stand-alone Executable File You can download and run the "stand-alone" file below. This contains
+      a compiled version of the software with executable file. This
+      requires installation of Matlab Runtime (MCR) from MathWorks, Inc. Source Codes The source codes for the DAD_ESWL v1.0 (Matlab m-files) are
+      supplied individually on demand by e-mail. Please find contact
+      information at the end of this web page. Files Available for Download You can download the following files for the DAD_ESWL v1.0 software. User's manual including installation instructions
+             ( NIST Technical Note
+             2000: Database-Assisted Design and Equivalent Static Wind Loads
+             for Mid- and High-Rise Structures: Concepts, Software and
+             User's Manual , PDF format) Note: Last Updated 2018/06 NIST Technical Note for Introductory Tutorial
+             ( NIST Technical Note
+             2001: Introductory Tutorial for DAD: Design Examples of
+             High-Rise Building for Wind , PDF format)
+             Note: Last Updated 2018/06 Standalone executable version of the DAD_ESWL v1.0 software DAD_ESWL_v1p0.zip .  To run
+             standalone Matlab programs, you need to install the
+             MCRInstaller software from The Mathworks, Inc.  The current
+             version can be downloaded from http://www.mathworks.com/products/compiler/mcr/index.html . Sample 60-story Building Inputs for the User's Manual
+             ( 60_story_example.zip Note: Last Updated 2018/06 Five example projects for the Introductory Tutorial Project_01.zip Project_02.zip Project_03.zip Project_04.zip Project_05.zip Note: Last Updated 2018/06 Note: Pressure data have been obtained from wind tunnel tests
+             carried out at the CRIACIV Boundary Layer Wind Tunnel, Prato,
+             Italy, http://www.criaciv.unifi.it/ and Tokyo, Polytechnic
+             University Aerodynamic Database, http://wind.arch.t-kougei.ac.jp/system/eng/contents/code/tpu . Previous Versions You can download the following previous versions of DAD software HR_DAD v1.1 (2009) HR_DAD_RC_v1.0 (2010) Additional Information The DAD_ESWL v1.0 software includes the capability to use
+      OpenSees (Open System for Earthquake Engineering Simulation), the
+      open-source software framework for simulating dynamic responses of
+      structural systems provided by the Regents of the University of
+      California. The copyright agreement can be found at http://opensees.berkeley.edu/OpenSees/copyright.php . Contact Information The DAD_ESWL v1.0 software was developed by Dr. Sejun Park
+      at the Engineering Laboratory at NIST. Dr. DongHun Yeo and
+      Dr. Emil Simiu served as advisors. Please email any questions, comments, or requests for the software
+      (source code) to [email protected] or [email protected] . [ Extreme Winds Home | SED Home | Structures Group ] Date created: 06/26/2018 Last updated: 04/26/2023 Please email comments on this WWW page to [email protected]

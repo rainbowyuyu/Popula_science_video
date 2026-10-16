@@ -1,0 +1,593 @@
+{
+  "schema": "rainbow.dna.teaching-verification/v3",
+  "checkedAt": "2026-10-11T06:30:59.342Z",
+  "status": "passed",
+  "source": {
+    "path": "src/teaching-data.json",
+    "sha256": "4d0f5a4eb9ccdfd3fb86c62c89762923360592567c71ff83fc462d5e28254848"
+  },
+  "gcExamples": [
+    {
+      "sequence": "ATGCGT",
+      "length": 6,
+      "gcCount": 3,
+      "gcFraction": 0.5,
+      "longestHomopolymer": 1
+    },
+    {
+      "sequence": "GCTAGT",
+      "length": 6,
+      "gcCount": 3,
+      "gcFraction": 0.5,
+      "longestHomopolymer": 1
+    },
+    {
+      "sequence": "TACGAC",
+      "length": 6,
+      "gcCount": 3,
+      "gcFraction": 0.5,
+      "longestHomopolymer": 1
+    }
+  ],
+  "homopolymer": {
+    "sequence": "AAAAAA",
+    "longestRun": 6,
+    "teachingMaximumAllowedRun": 3,
+    "rejected": true,
+    "scope": "A maximum run length of three is an explicit fixed teaching constraint, not a universal chemical or platform limit."
+  },
+  "smithWaterman": {
+    "evidence": "fixed-teaching-example",
+    "reference": "GATTAC",
+    "query": "GATAC",
+    "scoring": {
+      "match": 2,
+      "mismatch": -1,
+      "gap": -2
+    },
+    "computedMatrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        6,
+        4,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        4,
+        5,
+        6,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        3,
+        4,
+        8
+      ]
+    ],
+    "bestScore": 8,
+    "providedPath": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "pathSteps": [
+      {
+        "from": [
+          0,
+          0
+        ],
+        "to": [
+          1,
+          1
+        ],
+        "kind": "match",
+        "reference": "G",
+        "query": "G",
+        "delta": 2,
+        "cumulativeScore": 2,
+        "matrixScore": 2,
+        "recurrenceMatches": true
+      },
+      {
+        "from": [
+          1,
+          1
+        ],
+        "to": [
+          2,
+          2
+        ],
+        "kind": "match",
+        "reference": "A",
+        "query": "A",
+        "delta": 2,
+        "cumulativeScore": 4,
+        "matrixScore": 4,
+        "recurrenceMatches": true
+      },
+      {
+        "from": [
+          2,
+          2
+        ],
+        "to": [
+          2,
+          3
+        ],
+        "kind": "gap-in-query",
+        "reference": "T",
+        "query": "-",
+        "delta": -2,
+        "cumulativeScore": 2,
+        "matrixScore": 2,
+        "recurrenceMatches": true
+      },
+      {
+        "from": [
+          2,
+          3
+        ],
+        "to": [
+          3,
+          4
+        ],
+        "kind": "match",
+        "reference": "T",
+        "query": "T",
+        "delta": 2,
+        "cumulativeScore": 4,
+        "matrixScore": 4,
+        "recurrenceMatches": true
+      },
+      {
+        "from": [
+          3,
+          4
+        ],
+        "to": [
+          4,
+          5
+        ],
+        "kind": "match",
+        "reference": "A",
+        "query": "A",
+        "delta": 2,
+        "cumulativeScore": 6,
+        "matrixScore": 6,
+        "recurrenceMatches": true
+      },
+      {
+        "from": [
+          4,
+          5
+        ],
+        "to": [
+          5,
+          6
+        ],
+        "kind": "match",
+        "reference": "C",
+        "query": "C",
+        "delta": 2,
+        "cumulativeScore": 8,
+        "matrixScore": 8,
+        "recurrenceMatches": true
+      }
+    ],
+    "pathScore": 8,
+    "alignedReference": "GATTAC",
+    "alignedQuery": "GA-TAC",
+    "scope": "Small local-alignment example. Does not establish that Smith–Waterman alone is a production DNA-storage decoder."
+  },
+  "fountain": {
+    "evidence": "fixed-teaching-example",
+    "scope": "A three-block XOR peeling demonstration only. It does not implement the robust soliton distribution, pseudorandom seed selection, sequence screening, Reed–Solomon protection, synthesis, sequencing, or measured DNA Fountain recovery performance.",
+    "inputs": [
+      {
+        "label": "A",
+        "bytes": [
+          72,
+          79,
+          77,
+          69
+        ],
+        "hex": "484f4d45",
+        "sha256": "36e65c39f83b8df92770b95b8cdad4947ebd58cc410ac6e8bbac7a21e8ce941c"
+      },
+      {
+        "label": "B",
+        "bytes": [
+          50,
+          48,
+          50,
+          54
+        ],
+        "hex": "32303236",
+        "sha256": "158a323a7ba44870f23d96f1516dd70aa48e9a72db4ebb026b0a89e212a208ab"
+      },
+      {
+        "label": "C",
+        "bytes": [
+          68,
+          78,
+          65,
+          33
+        ],
+        "hex": "444e4121",
+        "sha256": "98592ed7c05525bf5461b0df0adf86cc449b20fc58854cc2dbe8920273c8bdef"
+      }
+    ],
+    "transmittedRelations": [
+      {
+        "label": "A",
+        "bytes": [
+          72,
+          79,
+          77,
+          69
+        ],
+        "hex": "484f4d45",
+        "sha256": "36e65c39f83b8df92770b95b8cdad4947ebd58cc410ac6e8bbac7a21e8ce941c"
+      },
+      {
+        "label": "A XOR B",
+        "bytes": [
+          122,
+          127,
+          127,
+          115
+        ],
+        "hex": "7a7f7f73",
+        "sha256": "ade6c83e8e251835978ba9b845984e02926cc98c42322ac7db584fdaaa91c4a4"
+      },
+      {
+        "label": "B XOR C",
+        "bytes": [
+          118,
+          126,
+          115,
+          23
+        ],
+        "hex": "767e7317",
+        "sha256": "4d8065d02cee16a19b2d3ca5d876a50590b73074eae4195140bb48776954b36e"
+      },
+      {
+        "label": "A XOR B XOR C",
+        "bytes": [
+          62,
+          49,
+          62,
+          82
+        ],
+        "hex": "3e313e52",
+        "sha256": "624b22ce08707ad7743629e51c7484c5a1856e52c23a5bb721ceb98e1c47b4e7"
+      }
+    ],
+    "missingSourceBlocks": [
+      "B",
+      "C"
+    ],
+    "recoverySteps": [
+      {
+        "expression": "B = A XOR (A XOR B)",
+        "recovered": {
+          "label": "B",
+          "bytes": [
+            50,
+            48,
+            50,
+            54
+          ],
+          "hex": "32303236",
+          "sha256": "158a323a7ba44870f23d96f1516dd70aa48e9a72db4ebb026b0a89e212a208ab"
+        }
+      },
+      {
+        "expression": "C = B XOR (B XOR C)",
+        "recovered": {
+          "label": "C",
+          "bytes": [
+            68,
+            78,
+            65,
+            33
+          ],
+          "hex": "444e4121",
+          "sha256": "98592ed7c05525bf5461b0df0adf86cc449b20fc58854cc2dbe8920273c8bdef"
+        }
+      }
+    ],
+    "inputPayloadSha256": "c590ef090ef809c914567748361f1b4625e55a171792aa1bfba1150845a48167",
+    "recoveredPayloadSha256": "c590ef090ef809c914567748361f1b4625e55a171792aa1bfba1150845a48167"
+  },
+  "editorialLimits": [
+    {
+      "topic": "Tokenization",
+      "statement": "k-mer and BPE are alternative tokenization designs. The diagram must not imply a mandatory k-mer → BPE serial pipeline."
+    },
+    {
+      "topic": "Nucleotide Transformer",
+      "doi": "10.1038/s41592-024-02523-z",
+      "statement": "This paper supports genomic sequence representation and predictive modeling examples. It is not evidence for the performance, accuracy, cost, or recovery rate of the DNA-storage workflow in this film."
+    },
+    {
+      "topic": "Model-assisted feedback",
+      "statement": "Candidate scoring and device feedback are an illustrative proposal. Their performance requires data and validation for the corresponding device and protocol."
+    }
+  ],
+  "checks": [
+    {
+      "id": "gc-ATGCGT",
+      "pass": true,
+      "actual": 0.5,
+      "expected": 0.5
+    },
+    {
+      "id": "gc-GCTAGT",
+      "pass": true,
+      "actual": 0.5,
+      "expected": 0.5
+    },
+    {
+      "id": "gc-TACGAC",
+      "pass": true,
+      "actual": 0.5,
+      "expected": 0.5
+    },
+    {
+      "id": "homopolymer-length-AAAAAA",
+      "pass": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "id": "homopolymer-teaching-filter",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "smith-waterman-full-matrix",
+      "pass": true,
+      "actual": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          6,
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          4,
+          5,
+          6,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          3,
+          4,
+          8
+        ]
+      ],
+      "expected": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          6,
+          4,
+          2,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          4,
+          5,
+          6,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          3,
+          4,
+          8
+        ]
+      ],
+      "note": "Every cell checked, including zero row and zero column."
+    },
+    {
+      "id": "smith-waterman-optimum-independent",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "id": "smith-waterman-declared-best-score",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "id": "smith-waterman-path-valid-predecessors",
+      "pass": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "smith-waterman-path-score",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "id": "smith-waterman-path-reaches-optimum",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "id": "fountain-fixed-XOR-recovery-B",
+      "pass": true,
+      "actual": [
+        50,
+        48,
+        50,
+        54
+      ],
+      "expected": [
+        50,
+        48,
+        50,
+        54
+      ]
+    },
+    {
+      "id": "fountain-fixed-XOR-recovery-C",
+      "pass": true,
+      "actual": [
+        68,
+        78,
+        65,
+        33
+      ],
+      "expected": [
+        68,
+        78,
+        65,
+        33
+      ]
+    },
+    {
+      "id": "fountain-fixed-full-payload-hash",
+      "pass": true,
+      "actual": "c590ef090ef809c914567748361f1b4625e55a171792aa1bfba1150845a48167",
+      "expected": "c590ef090ef809c914567748361f1b4625e55a171792aa1bfba1150845a48167"
+    }
+  ]
+}

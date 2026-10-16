@@ -1,0 +1,165 @@
+{
+  "reviewedAtUTC": "2026-10-09T06:01:27.735496+00:00",
+  "status": "approved-for-local-patch-render-not-final-delivery-acceptance",
+  "sourcePersonSHA256": "972e6a59d90c482b893a3cbda2c4ff1ae58de50b486e513b3305afe408b65ffd",
+  "change": "Set fitted garment renderOrder=102 after skin depth/surface passes 100/101; alpha and depthWrite policy unchanged.",
+  "evidenceManifest": "manifest.json",
+  "pixelMetrics": "ab-pixels.json",
+  "actuallyOpenedContactSheets": [
+    "comparison-1.jpg",
+    "comparison-2.jpg",
+    "comparison-3.jpg"
+  ],
+  "viewedPairs": 22,
+  "findings": [
+    {
+      "frames": [
+        3525,
+        3526,
+        3527
+      ],
+      "result": "The old near-opaque teal-to-white discontinuity is absent. New garment is continuously visible while alpha falls from 0.9992 to 0.964."
+    },
+    {
+      "frames": [
+        3530,
+        3532,
+        3534,
+        3536,
+        3540,
+        3542
+      ],
+      "result": "Garment fades through translucency as camera enters anatomical muscle detail. Muscle context survives and garment is gone at zero opacity."
+    },
+    {
+      "frames": [
+        4306,
+        4307
+      ],
+      "result": "The previous threshold-based garment pop on return is absent; teal shorts are already present at 4306."
+    },
+    {
+      "frames": [
+        3524
+      ],
+      "result": "At alpha1 the new garment properly covers the muscle overlay, removing the old patch. This materially changes opaque frames, so overlap support was expanded."
+    },
+    {
+      "frames": [
+        0,
+        120,
+        4340,
+        18590,
+        24045
+      ],
+      "result": "Ordinary opaque samples look equivalent but are not pixel-identical. MAE ranges 0.000535–0.001942 in 8-bit RGB."
+    },
+    {
+      "frames": [
+        3542
+      ],
+      "result": "Zero-opacity case looks equivalent; 39 pixels differ by at most 1, MAE 0.0000177."
+    },
+    {
+      "frames": [
+        4278,
+        4280
+      ],
+      "result": "The returning figure does not cut a shorts silhouette out of the muscle; the low-opacity layers remain readable."
+    }
+  ],
+  "supportFile": "../wardrobe-final-support.json",
+  "patchRanges": [
+    [
+      546,
+      764
+    ],
+    [
+      2915,
+      3062
+    ],
+    [
+      3458,
+      3570
+    ],
+    [
+      4248,
+      4446
+    ],
+    [
+      4707,
+      4909
+    ],
+    [
+      8279,
+      8433
+    ],
+    [
+      9259,
+      9477
+    ],
+    [
+      11365,
+      11435
+    ],
+    [
+      11572,
+      11789
+    ],
+    [
+      12220,
+      12294
+    ],
+    [
+      12684,
+      12901
+    ],
+    [
+      14542,
+      14616
+    ],
+    [
+      14827,
+      15032
+    ],
+    [
+      18401,
+      18502
+    ],
+    [
+      19062,
+      19277
+    ],
+    [
+      21756,
+      21910
+    ],
+    [
+      22745,
+      22924
+    ],
+    [
+      23122,
+      23269
+    ],
+    [
+      23523,
+      23836
+    ],
+    [
+      24661,
+      25000
+    ],
+    [
+      25236,
+      25365
+    ]
+  ],
+  "totalPatchFrames": 3704,
+  "limitations": [
+    "World-only 1280x720 GPU previews, no final-film caption compositor.",
+    "Still/contact-sheet sampling cannot establish every interpolated frame is artifact-free. Root is rendering local patches and dense reviewing thresholds.",
+    "No audio changes or delivery installation performed by this review.",
+    "Close garment crotch remains angular and schematic; no claim of physical cloth simulation."
+  ]
+}

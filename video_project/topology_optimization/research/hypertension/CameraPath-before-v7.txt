@@ -1,0 +1,151 @@
+import * as T from 'three';
+import timeline from './timeline.json';
+
+type Knot={time:number;target:T.Vector3;distance:number;az:number;el:number;roll:number;fov:number};
+export type CinematicPose={position:T.Vector3;target:T.Vector3;roll:number;fov:number;distance:number};
+const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z);
+const clamp=(x:number)=>Math.max(0,Math.min(1,x));
+
+// Shape-preserving Hermite derivatives: neighboring shots share a tangent.
+// A monotone dolly keeps moving through its anchors, without overshooting a
+// microscopic target or braking to zero at every narrated sentence.
+const tangents=(times:number[],values:number[])=>{
+ const n=times.length,h=times.slice(1).map((t,i)=>t-times[i]);
+ const d=h.map((dt,i)=>(values[i+1]-values[i])/dt),m=new Array<number>(n).fill(0);
+ const end=(h0:number,h1:number,d0:number,d1:number)=>{
+  const q=((2*h0+h1)*d0-h0*d1)/(h0+h1);
+  return Math.sign(q)!==Math.sign(d0)?0:Math.sign(d0)!==Math.sign(d1)&&Math.abs(q)>3*Math.abs(d0)?3*d0:q;
+ };
+ m[0]=end(h[0],h[1],d[0],d[1]);
+ m[n-1]=end(h[n-2],h[n-3],d[n-2],d[n-3]);
+ for(let i=1;i<n-1;i++){
+  if(d[i-1]*d[i]<=0)continue;
+  const w1=2*h[i]+h[i-1],w2=h[i]+2*h[i-1];
+  m[i]=(w1+w2)/(w1/d[i-1]+w2/d[i]);
+ }
+ return m;
+};
+
+/** One timeline, one camera. Targets stay in the atlas coordinate system.
+ * Shared shape-preserving tangents carry velocity between observations;
+ * logarithmic dolly distance lets the lens move between anatomical scales.
+ * Scale changes happen before lateral transfers, with organ establishing poses
+ * on both sides of the microscopic observations.
+ */
+export class AnatomyCameraPath{
+ readonly knots:Knot[]=[];
+ private curves:number[][]=[];
+ private derivatives:number[][]=[];
+ constructor(anchors:Record<string,T.Vector3>){
+  const a=(name:string,offset=V())=>(anchors[name]??anchors.body??V()).clone().add(offset);
+  const heart=a('heart'),body=a('body'),vessel=a('vessel'),kidney=a('leftKidney'),brain=a('brain'),liver=a('liver');
+  const art=a('arteriole'),lipid=a('lipoprotein');
+  const renalPoint=(name:string,local:T.Vector3)=>anchors[name]?.clone()??kidney.clone().add(V(.085,.025,.06)).add(local.multiplyScalar(.012).applyAxisAngle(V(0,1,0),-.12));
+  const nephron=renalPoint('nephronFocus',V(.28,-.28,0)),filter=renalPoint('nephronFilter',V(-.70,.55,0));
+  const tubule=renalPoint('nephronTubule',V(.30,-.18,.03)),drain=renalPoint('nephronDrain',V(1.25,-.88,0));
+  const lipidPoint=(name:string,local:T.Vector3)=>anchors[name]?.clone()??lipid.clone().add(local.sub(V(.10,.08,0)).multiplyScalar(.025).applyAxisAngle(V(0,0,1),-.06));
+  const lipidSource=lipidPoint('lipoproteinSource',V(-1.08,.16,0));
+  const lipidFormation=lipidPoint('lipoproteinFormation',V(-.15,.16,.03));
+  const lipidClearance=lipidPoint('lipoproteinClearance',V(1.13,-.15,0));
+  const measureCuff=anchors.measureCuff?.clone()??V(11.1742,3.5993,-.105);
+  const measureForearm=anchors.measureForearm?.clone()??V(12.305,3.30,.195);
+  const add=(time:number,target:T.Vector3,distance:number,az=.12,el=.08,roll=0,fov=34)=>this.knots.push({time,target:target.clone(),distance,az,el,roll,fov});
+  const k=(id:string,fraction:number,target:T.Vector3,distance:number,az=.12,el=.08,roll=0,fov=34)=>{
+   const c=timeline.clips.find(c=>c.id===id);if(c)add((c.start+c.duration*fraction)/30,target,distance,az,el,roll,fov);
+  };
+  add(0,V(-12.8,2.98,.2),12.1,.20,.25);
+  k('h001',.9,V(-12.65,2.90,.22),11.5,.12,.22);
+  k('h002',.8,V(-12.55,2.85,.25),10.9,.015,.20);
+  k('h003',.55,V(-12.6,2.96,.20),11.4,-.06,.21);
+  k('h004',.55,body.clone().lerp(heart,.2),13.1,.02,.09);
+  k('h005',1,heart.clone().lerp(body,.16),5.5,.08,.06);
+  k('h006',.65,heart,2.60,.22,.12);
+  k('h007',.70,heart.clone().lerp(kidney,.40),3.4,.33,.06);
+  // Follow the descending flow along the same wall while the orbit steadily
+  // opens the cutaway; pressure observations are not repeated identical poses.
+  k('h008',.78,vessel.clone().add(V(0,.028,0)),.95,.30,.08,-.18);
+  k('h009',.70,vessel.clone().add(V(0,.024,0)),.64,.18,.07,-.12);
+  k('h010',.90,vessel.clone().add(V(0,.010,.004)),.59,.06,.09,-.055);
+  k('h011',.65,vessel.clone().add(V(0,.005,.005)),.52,-.08,.11,.01);
+  k('h012',.75,vessel.clone().add(V(0,-.015,.005)),.56,-.23,.09,.065);
+  k('h013',.80,vessel.clone().add(V(0,-.034,.004)),.72,-.32,.08,.10);
+  k('h014',.75,heart.clone().lerp(vessel,.35),2.8,.20,.07,-.06);
+  k('h015',.60,heart.clone().lerp(kidney,.3),3.1,.08,.07);
+  k('h016',.70,kidney.clone().lerp(vessel,.50),1.7,-.06,.10);
+  k('h017',.10,kidney,.80,-.10,.12);
+  k('h017',.62,art.clone().add(V(-.003,0,0)),.055,.01,.25,-.06);
+  k('h017',.92,art.clone().add(V(-.0025,0,0)),.034,.035,.40,-.10);
+  k('h018',.40,art.clone().add(V(-.002,0,0)),.030,.04,.48,-.12);
+  k('h019',.72,art.clone().add(V(-.0008,.0002,0)),.028,-.24,.46,-.14);
+  k('h020',.90,art.clone().add(V(.0013,0,0)),.029,.18,.34,-.10);
+  k('h021',.85,art,.035,.35,.32,-.08);
+  k('h022',.80,art.clone().add(V(-.001,0,0)),.038,.17,.43,-.06);
+  k('h023',.20,art,.14,.20,.30,-.03);
+  k('h023',.82,kidney,.75,.23,.07);
+  k('h024',.30,kidney,.82,.32,.11);
+  k('h024',.92,nephron,.23,.19,.14,-.02);
+  k('h025',.38,filter.clone().lerp(nephron,.55),.081,.11,.19,-.035);
+  k('h025',.90,nephron,.077,.03,.19,-.03);
+  k('h026',.72,tubule,.073,-.14,.22,-.025);
+  k('h027',.65,tubule.clone().lerp(drain,.45),.078,-.23,.18,-.015);
+  k('h028',.28,nephron,.090,-.15,.16,0);
+  k('h028',.70,nephron,.26,.01,.13);
+  k('h029',.18,kidney,.82,.19,.10);
+  k('h029',.85,kidney,1.25,.30,.08);
+  k('h030',.88,kidney.clone().lerp(heart,.25),2.7,.23,.07);
+  k('h031',.65,kidney.clone().lerp(heart,.24),2.8,.08,.05);
+  k('h032',.85,kidney.clone().lerp(heart,.18),2.25,-.05,.13);
+  k('h033',.80,kidney.clone().lerp(heart,.48),3.6,-.16,.05);
+  k('h034',.62,brain,2.15,.10,.16);
+  k('h035',.75,heart.clone().lerp(brain,.18),3.5,.30,.06);
+  k('h036',.90,body.clone().lerp(heart,.35),7.9,.18,.04);
+  k('h037',.85,heart.clone().lerp(vessel,.50),2.8,-.04,.08);
+  k('h038',.70,vessel.clone().add(V(0,-.024,0)),.76,.36,.13,.10);
+  k('h039',.80,vessel.clone().add(V(0,.006,.004)),.66,.14,.08,.04);
+  k('h040',.42,vessel.clone().add(V(0,.025,.005)),.70,.06,.09,-.04);
+  // Establish the liver before the new line, giving the following scale
+  // transition more time without delaying the visible VLDL release.
+  k('h040',.97,liver.clone().lerp(vessel,.30),1.48,.16,.13,-.04);
+  k('h040a',.08,liver,1.48,.19,.15,-.025);
+  k('h040a',.45,lipidSource,.26,.19,.20,-.02);
+  k('h040a',.72,lipidSource,.105,.05,.20,-.04);
+  k('h040b',.10,lipidSource.clone().lerp(lipidFormation,.45),.102,-.02,.21,-.04);
+  k('h040b',.64,lipidFormation.clone().lerp(lipidClearance,.35),.098,.12,.24,-.05);
+  k('h040b',.96,lipidClearance.clone().lerp(lipidFormation,.23),.092,.22,.27,-.055);
+  k('h040c',.58,lipidClearance,.103,.33,.29,-.045);
+  k('h040c',.79,lipid,.24,.29,.20,-.03);
+  k('h040c',.99,liver.clone().lerp(vessel,.25),1.10,.22,.12,-.08);
+  k('h041',.45,vessel.clone().add(V(-.005,.030,.0)),.63,.04,.11,-.23);
+  k('h042',.85,vessel.clone().add(V(.007,.047,-.008)),.42,-.14,.04,-.30);
+  k('h043',.82,vessel.clone().add(V(.006,.048,-.008)),.36,.20,.11,-.25);
+  k('h044',.82,heart.clone().lerp(kidney,.48),4.3,.28,.07,-.02);
+  k('h045',.28,body,13.8,.08,.10);
+  k('h045',.94,V(12.45,3.10,.15),14.0,.30,.17);
+  k('h046',.90,V(12.25,3.38,.15),12.3,.20,.16);
+  k('h047',.60,V(11.85,3.16,.3),11.8,.08,.13);
+  // Approach the cuff and supported forearm together; centering the monitor
+  // alone obscures whether the sleeve actually surrounds the upper arm.
+  k('h048',.55,measureCuff.clone().lerp(measureForearm,.35).add(V(.14,.02,.05)),6.8,-.18,.18);
+  k('h049',.82,V(12.45,3.15,.15),12.8,.15,.17);
+  k('h050',.92,V(12.45,3.10,.15),14.0,.25,.17);
+  add(timeline.duration/30,V(12.45,3.10,.15),14.3,.32,.17);
+  this.knots.sort((x,y)=>x.time-y.time);
+  const times=this.knots.map(k=>k.time);
+  this.curves=[this.knots.map(k=>k.target.x),this.knots.map(k=>k.target.y),this.knots.map(k=>k.target.z),this.knots.map(k=>Math.log(k.distance)),this.knots.map(k=>k.az),this.knots.map(k=>k.el),this.knots.map(k=>k.roll),this.knots.map(k=>k.fov)];
+  this.derivatives=this.curves.map(values=>tangents(times,values));
+ }
+ at(time:number):CinematicPose{
+  let i=0;while(i<this.knots.length-2&&time>this.knots[i+1].time)i++;
+  const a=this.knots[i],b=this.knots[i+1],h=Math.max(.001,b.time-a.time),q=clamp((time-a.time)/h),q2=q*q,q3=q2*q;
+  const value=(channel:number)=>{
+   const v=this.curves[channel],d=this.derivatives[channel];
+   return (2*q3-3*q2+1)*v[i]+(q3-2*q2+q)*h*d[i]+(-2*q3+3*q2)*v[i+1]+(q3-q2)*h*d[i+1];
+  };
+  const target=V(value(0),value(1),value(2)),distance=Math.exp(value(3));
+  const az=value(4)+.022*Math.sin(time*.17),el=value(5)+.008*Math.sin(time*.13+.7);
+  // Drift does not restart at chapter boundaries, including slow observation.
+  target.x+=distance*.0035*Math.sin(time*.12);target.y+=distance*.0028*Math.cos(time*.105);
+  const position=target.clone().add(V(Math.sin(az)*Math.cos(el),Math.sin(el),Math.cos(az)*Math.cos(el)).multiplyScalar(distance));
+  return {position,target,distance,roll:value(6)+.006*Math.sin(time*.11),fov:value(7)};
+ }
+}

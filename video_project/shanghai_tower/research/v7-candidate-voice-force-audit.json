@@ -1,0 +1,1253 @@
+{
+  "passed": true,
+  "scope": "Read-only candidate timeline; six measured clip durations substituted in memory; 5-frame inter-take gaps retained inside measured clip durations; canonical timeline and physical data unchanged.",
+  "candidateTimingMatchesCanonical": true,
+  "canonicalTimelineSHA256": "5793527aa2c6a49e7d800d34c81ebd1f2b210cd868244e60cf16a88b0d5a66c2",
+  "candidateTimelineFrames": 14909,
+  "candidateTimelineDuration_s": 496.96666666666664,
+  "candidateClips": [
+    {
+      "id": "s019",
+      "start": 5424,
+      "end": 5830,
+      "duration": 406
+    },
+    {
+      "id": "s020",
+      "start": 5830,
+      "end": 6291,
+      "duration": 461
+    },
+    {
+      "id": "s029",
+      "start": 8250,
+      "end": 8781,
+      "duration": 531
+    },
+    {
+      "id": "s030",
+      "start": 8781,
+      "end": 9598,
+      "duration": 817
+    },
+    {
+      "id": "s031",
+      "start": 9598,
+      "end": 10093,
+      "duration": 495
+    },
+    {
+      "id": "s032",
+      "start": 10093,
+      "end": 10499,
+      "duration": 406
+    }
+  ],
+  "clockOrigin": {
+    "clip": "s019",
+    "frame": 5424,
+    "seconds": 180.8,
+    "formula": "Actual physicalTimeAt: elapsed film seconds since s019 start within frame section; read unmodified high-resolution solver samples."
+  },
+  "signConvention": "Positive = tensile wind-induced axial stress increment; negative = compressive increment. This does not report gravity-plus-wind net stress.",
+  "sources": {
+    "public/physics/response.json": "c2b81b5cbda3688d40e06d28f90b8996130d3902994830649c94614575c5f71a",
+    "public/physics/cinematic-response.json": "0557bf7076ee46ee4f890cb623d7c665d20ffff3f464650d525e9c444df10780",
+    "public/physics/cinematic-response.f32": "78c76f78b65b19268a28cc72d0efd026410b3f014664478db105f1b4a4fd7142",
+    "src/PhysicsPlayback.ts": "51a22aa390d71e47c1291a0075ca4aaea3bb462462d6c4c693b8ab2083796d82",
+    "src/HighResolutionResponse.ts": "adf2b93eeec20df0ada49ef7388603d3263a41d5b9b5b0662208313a5da42453",
+    "src/visual.ts": "206b28a387eb903741b2c9151b2528ad67c24768f07d8e8370de982dd7287e03",
+    "src/MemberForceVisualization.ts": "180a74c1ec70a9ea00da5fa859dba6d41baac1477c97acfc505c0fb772712b0d",
+    "research/v7-final-candidate-cues.json": "8cc530d1573ca5139d78fd01b8a20f0835788caa36268334765e14af74d12a34"
+  },
+  "results": [
+    {
+      "phrase": "橙色",
+      "meshId": "FE_M_Z04_C03_OX1",
+      "memberId": "M_Z04_C03_OX1",
+      "expectedSign": "negative compression increment",
+      "voiceInterval_s": [
+        0.08,
+        0.84
+      ],
+      "candidateFilmFrames": [
+        5833,
+        5855
+      ],
+      "framesChecked": 23,
+      "physicalInterval_s": [
+        13.633333333333326,
+        14.366666666666646
+      ],
+      "signedMPaRange": [
+        -5.349205493927002,
+        -5.2108330726623535
+      ],
+      "selectedGlyphRevealRange": [
+        1,
+        1
+      ],
+      "expectedSignAllFrames": true,
+      "oppositeOrZeroFrames": [],
+      "samples": [
+        {
+          "frame": 5833,
+          "voiceTime_s": 0.1,
+          "physicalTime_s": 13.633333333333326,
+          "signedMPa": -5.344304084777832,
+          "forceMN": -0.7482025718688966,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5834,
+          "voiceTime_s": 0.13333333333333333,
+          "physicalTime_s": 13.666666666666657,
+          "signedMPa": -5.346673011779785,
+          "forceMN": -0.7485342216491699,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5835,
+          "voiceTime_s": 0.16666666666666666,
+          "physicalTime_s": 13.699999999999989,
+          "signedMPa": -5.348476886749268,
+          "forceMN": -0.7487867641448975,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5836,
+          "voiceTime_s": 0.2,
+          "physicalTime_s": 13.73333333333332,
+          "signedMPa": -5.349132537841797,
+          "forceMN": -0.7488785552978516,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5837,
+          "voiceTime_s": 0.23333333333333334,
+          "physicalTime_s": 13.766666666666652,
+          "signedMPa": -5.349205493927002,
+          "forceMN": -0.7488887691497803,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5838,
+          "voiceTime_s": 0.26666666666666666,
+          "physicalTime_s": 13.799999999999983,
+          "signedMPa": -5.348695755004883,
+          "forceMN": -0.7488174057006837,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5839,
+          "voiceTime_s": 0.3,
+          "physicalTime_s": 13.833333333333314,
+          "signedMPa": -5.347003936767578,
+          "forceMN": -0.748580551147461,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5840,
+          "voiceTime_s": 0.3333333333333333,
+          "physicalTime_s": 13.866666666666646,
+          "signedMPa": -5.34471321105957,
+          "forceMN": -0.7482598495483399,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5841,
+          "voiceTime_s": 0.36666666666666664,
+          "physicalTime_s": 13.899999999999977,
+          "signedMPa": -5.341823577880859,
+          "forceMN": -0.7478553009033204,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5842,
+          "voiceTime_s": 0.4,
+          "physicalTime_s": 13.933333333333309,
+          "signedMPa": -5.337719917297363,
+          "forceMN": -0.7472807884216309,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5843,
+          "voiceTime_s": 0.43333333333333335,
+          "physicalTime_s": 13.966666666666669,
+          "signedMPa": -5.333002090454102,
+          "forceMN": -0.7466202926635743,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5844,
+          "voiceTime_s": 0.4666666666666667,
+          "physicalTime_s": 14,
+          "signedMPa": -5.327670097351074,
+          "forceMN": -0.7458738136291505,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5845,
+          "voiceTime_s": 0.5,
+          "physicalTime_s": 14.033333333333331,
+          "signedMPa": -5.321094989776611,
+          "forceMN": -0.7449532985687256,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5846,
+          "voiceTime_s": 0.5333333333333333,
+          "physicalTime_s": 14.066666666666663,
+          "signedMPa": -5.313892364501953,
+          "forceMN": -0.7439449310302735,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5847,
+          "voiceTime_s": 0.5666666666666667,
+          "physicalTime_s": 14.099999999999994,
+          "signedMPa": -5.3060622215271,
+          "forceMN": -0.742848711013794,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5848,
+          "voiceTime_s": 0.6,
+          "physicalTime_s": 14.133333333333326,
+          "signedMPa": -5.296964168548584,
+          "forceMN": -0.7415749835968019,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5849,
+          "voiceTime_s": 0.6333333333333333,
+          "physicalTime_s": 14.166666666666657,
+          "signedMPa": -5.287227630615234,
+          "forceMN": -0.7402118682861328,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5850,
+          "voiceTime_s": 0.6666666666666666,
+          "physicalTime_s": 14.199999999999989,
+          "signedMPa": -5.276852607727051,
+          "forceMN": -0.7387593650817872,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5851,
+          "voiceTime_s": 0.7,
+          "physicalTime_s": 14.23333333333332,
+          "signedMPa": -5.26519250869751,
+          "forceMN": -0.7371269512176515,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5852,
+          "voiceTime_s": 0.7333333333333333,
+          "physicalTime_s": 14.266666666666652,
+          "signedMPa": -5.252888202667236,
+          "forceMN": -0.7354043483734132,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5853,
+          "voiceTime_s": 0.7666666666666667,
+          "physicalTime_s": 14.299999999999983,
+          "signedMPa": -5.239940166473389,
+          "forceMN": -0.7335916233062745,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5854,
+          "voiceTime_s": 0.8,
+          "physicalTime_s": 14.333333333333314,
+          "signedMPa": -5.225706100463867,
+          "forceMN": -0.7315988540649415,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5855,
+          "voiceTime_s": 0.8333333333333334,
+          "physicalTime_s": 14.366666666666646,
+          "signedMPa": -5.2108330726623535,
+          "forceMN": -0.7295166301727296,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        }
+      ]
+    },
+    {
+      "phrase": "向受压方向变化",
+      "meshId": "FE_M_Z04_C03_OX1",
+      "memberId": "M_Z04_C03_OX1",
+      "expectedSign": "negative compression increment",
+      "voiceInterval_s": [
+        1.34,
+        2.64
+      ],
+      "candidateFilmFrames": [
+        5871,
+        5909
+      ],
+      "framesChecked": 39,
+      "physicalInterval_s": [
+        14.899999999999977,
+        16.166666666666657
+      ],
+      "signedMPaRange": [
+        -4.866689205169678,
+        -3.6467173099517822
+      ],
+      "selectedGlyphRevealRange": [
+        1,
+        1
+      ],
+      "expectedSignAllFrames": true,
+      "oppositeOrZeroFrames": [],
+      "samples": [
+        {
+          "frame": 5871,
+          "voiceTime_s": 1.3666666666666667,
+          "physicalTime_s": 14.899999999999977,
+          "signedMPa": -4.866689205169678,
+          "forceMN": -0.681336488723755,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5872,
+          "voiceTime_s": 1.4,
+          "physicalTime_s": 14.933333333333309,
+          "signedMPa": -4.8393425941467285,
+          "forceMN": -0.6775079631805421,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5873,
+          "voiceTime_s": 1.4333333333333333,
+          "physicalTime_s": 14.966666666666669,
+          "signedMPa": -4.811604022979736,
+          "forceMN": -0.6736245632171631,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5874,
+          "voiceTime_s": 1.4666666666666666,
+          "physicalTime_s": 15,
+          "signedMPa": -4.783473968505859,
+          "forceMN": -0.6696863555908203,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5875,
+          "voiceTime_s": 1.5,
+          "physicalTime_s": 15.033333333333331,
+          "signedMPa": -4.754611492156982,
+          "forceMN": -0.6656456089019775,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5876,
+          "voiceTime_s": 1.5333333333333334,
+          "physicalTime_s": 15.066666666666663,
+          "signedMPa": -4.72540807723999,
+          "forceMN": -0.6615571308135987,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5877,
+          "voiceTime_s": 1.5666666666666667,
+          "physicalTime_s": 15.099999999999996,
+          "signedMPa": -4.695864200592041,
+          "forceMN": -0.6574209880828858,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5878,
+          "voiceTime_s": 1.6,
+          "physicalTime_s": 15.133333333333324,
+          "signedMPa": -4.665688991546631,
+          "forceMN": -0.6531964588165284,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5879,
+          "voiceTime_s": 1.6333333333333333,
+          "physicalTime_s": 15.166666666666655,
+          "signedMPa": -4.635222911834717,
+          "forceMN": -0.6489312076568604,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5880,
+          "voiceTime_s": 1.6666666666666667,
+          "physicalTime_s": 15.199999999999989,
+          "signedMPa": -4.604465484619141,
+          "forceMN": -0.6446251678466798,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5881,
+          "voiceTime_s": 1.7,
+          "physicalTime_s": 15.23333333333332,
+          "signedMPa": -4.573173999786377,
+          "forceMN": -0.6402443599700929,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5882,
+          "voiceTime_s": 1.7333333333333334,
+          "physicalTime_s": 15.266666666666652,
+          "signedMPa": -4.5416388511657715,
+          "forceMN": -0.6358294391632081,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5883,
+          "voiceTime_s": 1.7666666666666666,
+          "physicalTime_s": 15.299999999999983,
+          "signedMPa": -4.509860992431641,
+          "forceMN": -0.6313805389404298,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5884,
+          "voiceTime_s": 1.8,
+          "physicalTime_s": 15.333333333333316,
+          "signedMPa": -4.477644443511963,
+          "forceMN": -0.6268702220916749,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5885,
+          "voiceTime_s": 1.8333333333333333,
+          "physicalTime_s": 15.366666666666648,
+          "signedMPa": -4.44523286819458,
+          "forceMN": -0.6223326015472412,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5886,
+          "voiceTime_s": 1.8666666666666667,
+          "physicalTime_s": 15.399999999999975,
+          "signedMPa": -4.412626266479492,
+          "forceMN": -0.617767677307129,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5887,
+          "voiceTime_s": 1.9,
+          "physicalTime_s": 15.433333333333309,
+          "signedMPa": -4.379677772521973,
+          "forceMN": -0.6131548881530763,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5888,
+          "voiceTime_s": 1.9333333333333333,
+          "physicalTime_s": 15.46666666666667,
+          "signedMPa": -4.346583366394043,
+          "forceMN": -0.6085216712951661,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5889,
+          "voiceTime_s": 1.9666666666666666,
+          "physicalTime_s": 15.500000000000002,
+          "signedMPa": -4.313343048095703,
+          "forceMN": -0.6038680267333985,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5890,
+          "voiceTime_s": 2,
+          "physicalTime_s": 15.53333333333333,
+          "signedMPa": -4.27985954284668,
+          "forceMN": -0.5991803359985353,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5891,
+          "voiceTime_s": 2.033333333333333,
+          "physicalTime_s": 15.566666666666663,
+          "signedMPa": -4.246280193328857,
+          "forceMN": -0.5944792270660401,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5892,
+          "voiceTime_s": 2.066666666666667,
+          "physicalTime_s": 15.599999999999994,
+          "signedMPa": -4.212604522705078,
+          "forceMN": -0.589764633178711,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5893,
+          "voiceTime_s": 2.1,
+          "physicalTime_s": 15.633333333333326,
+          "signedMPa": -4.178787708282471,
+          "forceMN": -0.585030279159546,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5894,
+          "voiceTime_s": 2.1333333333333333,
+          "physicalTime_s": 15.666666666666657,
+          "signedMPa": -4.144927978515625,
+          "forceMN": -0.5802899169921876,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5895,
+          "voiceTime_s": 2.1666666666666665,
+          "physicalTime_s": 15.699999999999989,
+          "signedMPa": -4.111024379730225,
+          "forceMN": -0.5755434131622315,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5896,
+          "voiceTime_s": 2.2,
+          "physicalTime_s": 15.733333333333322,
+          "signedMPa": -4.077089786529541,
+          "forceMN": -0.5707925701141358,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5897,
+          "voiceTime_s": 2.2333333333333334,
+          "physicalTime_s": 15.76666666666665,
+          "signedMPa": -4.043169021606445,
+          "forceMN": -0.5660436630249024,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5898,
+          "voiceTime_s": 2.2666666666666666,
+          "physicalTime_s": 15.799999999999981,
+          "signedMPa": -4.009262561798096,
+          "forceMN": -0.5612967586517335,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5899,
+          "voiceTime_s": 2.3,
+          "physicalTime_s": 15.833333333333314,
+          "signedMPa": -3.975445508956909,
+          "forceMN": -0.5565623712539673,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5900,
+          "voiceTime_s": 2.3333333333333335,
+          "physicalTime_s": 15.866666666666646,
+          "signedMPa": -3.941704511642456,
+          "forceMN": -0.551838631629944,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5901,
+          "voiceTime_s": 2.3666666666666667,
+          "physicalTime_s": 15.899999999999977,
+          "signedMPa": -3.9080395698547363,
+          "forceMN": -0.5471255397796632,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5902,
+          "voiceTime_s": 2.4,
+          "physicalTime_s": 15.933333333333309,
+          "signedMPa": -3.8745920658111572,
+          "forceMN": -0.5424428892135621,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5903,
+          "voiceTime_s": 2.433333333333333,
+          "physicalTime_s": 15.966666666666669,
+          "signedMPa": -3.8412857055664062,
+          "forceMN": -0.5377799987792969,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5904,
+          "voiceTime_s": 2.466666666666667,
+          "physicalTime_s": 16,
+          "signedMPa": -3.8081209659576416,
+          "forceMN": -0.5331369352340699,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5905,
+          "voiceTime_s": 2.5,
+          "physicalTime_s": 16.03333333333333,
+          "signedMPa": -3.7753047943115234,
+          "forceMN": -0.5285426712036133,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5906,
+          "voiceTime_s": 2.533333333333333,
+          "physicalTime_s": 16.066666666666663,
+          "signedMPa": -3.7426955699920654,
+          "forceMN": -0.5239773797988893,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5907,
+          "voiceTime_s": 2.566666666666667,
+          "physicalTime_s": 16.099999999999994,
+          "signedMPa": -3.710293769836426,
+          "forceMN": -0.5194411277770996,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5908,
+          "voiceTime_s": 2.6,
+          "physicalTime_s": 16.133333333333326,
+          "signedMPa": -3.678370475769043,
+          "forceMN": -0.514971866607666,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5909,
+          "voiceTime_s": 2.6333333333333333,
+          "physicalTime_s": 16.166666666666657,
+          "signedMPa": -3.6467173099517822,
+          "forceMN": -0.5105404233932496,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        }
+      ]
+    },
+    {
+      "phrase": "蓝色",
+      "meshId": "FE_M_Z04_C03_OX2",
+      "memberId": "M_Z04_C03_OX2",
+      "expectedSign": "positive tension increment",
+      "voiceInterval_s": [
+        3,
+        3.56
+      ],
+      "candidateFilmFrames": [
+        5920,
+        5936
+      ],
+      "framesChecked": 17,
+      "physicalInterval_s": [
+        16.53333333333333,
+        17.066666666666663
+      ],
+      "signedMPaRange": [
+        3.267202138900757,
+        3.6200997829437256
+      ],
+      "selectedGlyphRevealRange": [
+        0.0000018304941019777443,
+        0.9833573534781654
+      ],
+      "expectedSignAllFrames": true,
+      "oppositeOrZeroFrames": [],
+      "samples": [
+        {
+          "frame": 5920,
+          "voiceTime_s": 3,
+          "physicalTime_s": 16.53333333333333,
+          "signedMPa": 3.6200997829437256,
+          "forceMN": 0.5068139696121217,
+          "selectedGlyphReveal": 0.0000018304941019777443,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5921,
+          "voiceTime_s": 3.033333333333333,
+          "physicalTime_s": 16.566666666666663,
+          "signedMPa": 3.593008518218994,
+          "forceMN": 0.5030211925506592,
+          "selectedGlyphReveal": 0.0019630290430126696,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5922,
+          "voiceTime_s": 3.066666666666667,
+          "physicalTime_s": 16.599999999999994,
+          "signedMPa": 3.566375732421875,
+          "forceMN": 0.49929260253906255,
+          "selectedGlyphReveal": 0.012444716472808407,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5923,
+          "voiceTime_s": 3.1,
+          "physicalTime_s": 16.633333333333326,
+          "signedMPa": 3.5406877994537354,
+          "forceMN": 0.495696291923523,
+          "selectedGlyphReveal": 0.036495824366317556,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5924,
+          "voiceTime_s": 3.1333333333333333,
+          "physicalTime_s": 16.666666666666657,
+          "signedMPa": 3.5154852867126465,
+          "forceMN": 0.49216794013977055,
+          "selectedGlyphReveal": 0.07676256622147493,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5925,
+          "voiceTime_s": 3.1666666666666665,
+          "physicalTime_s": 16.69999999999999,
+          "signedMPa": 3.4907681941986084,
+          "forceMN": 0.48870754718780524,
+          "selectedGlyphReveal": 0.1338261350036609,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5926,
+          "voiceTime_s": 3.2,
+          "physicalTime_s": 16.73333333333332,
+          "signedMPa": 3.467047691345215,
+          "forceMN": 0.48538667678833014,
+          "selectedGlyphReveal": 0.20654040069804078,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5927,
+          "voiceTime_s": 3.2333333333333334,
+          "physicalTime_s": 16.76666666666665,
+          "signedMPa": 3.443838119506836,
+          "forceMN": 0.4821373367309571,
+          "selectedGlyphReveal": 0.292369607861904,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5928,
+          "voiceTime_s": 3.2666666666666666,
+          "physicalTime_s": 16.799999999999983,
+          "signedMPa": 3.4211394786834717,
+          "forceMN": 0.47895952701568606,
+          "selectedGlyphReveal": 0.3877260731770032,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5929,
+          "voiceTime_s": 3.3,
+          "physicalTime_s": 16.833333333333314,
+          "signedMPa": 3.3994879722595215,
+          "forceMN": 0.47592831611633307,
+          "selectedGlyphReveal": 0.4883078830018935,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5930,
+          "voiceTime_s": 3.3333333333333335,
+          "physicalTime_s": 16.866666666666646,
+          "signedMPa": 3.37837290763855,
+          "forceMN": 0.472972207069397,
+          "selectedGlyphReveal": 0.589436590924272,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5931,
+          "voiceTime_s": 3.3666666666666667,
+          "physicalTime_s": 16.899999999999977,
+          "signedMPa": 3.3577938079833984,
+          "forceMN": 0.4700911331176758,
+          "selectedGlyphReveal": 0.6863949153133165,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5932,
+          "voiceTime_s": 3.4,
+          "physicalTime_s": 16.93333333333331,
+          "signedMPa": 3.3383123874664307,
+          "forceMN": 0.4673637342453003,
+          "selectedGlyphReveal": 0.7747644368720248,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5933,
+          "voiceTime_s": 3.433333333333333,
+          "physicalTime_s": 16.96666666666667,
+          "signedMPa": 3.319392681121826,
+          "forceMN": 0.4647149753570557,
+          "selectedGlyphReveal": 0.850763296189555,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5934,
+          "voiceTime_s": 3.466666666666667,
+          "physicalTime_s": 17,
+          "signedMPa": 3.3010342121124268,
+          "forceMN": 0.4621447896957398,
+          "selectedGlyphReveal": 0.911583891293563,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5935,
+          "voiceTime_s": 3.5,
+          "physicalTime_s": 17.03333333333333,
+          "signedMPa": 3.2838244438171387,
+          "forceMN": 0.45973542213439944,
+          "selectedGlyphReveal": 0.9557305752025428,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5936,
+          "voiceTime_s": 3.533333333333333,
+          "physicalTime_s": 17.066666666666663,
+          "signedMPa": 3.267202138900757,
+          "forceMN": 0.457408299446106,
+          "selectedGlyphReveal": 0.9833573534781654,
+          "physicsKind": "wind"
+        }
+      ]
+    },
+    {
+      "phrase": "向受拉方向变化",
+      "meshId": "FE_M_Z04_C03_OX2",
+      "memberId": "M_Z04_C03_OX2",
+      "expectedSign": "positive tension increment",
+      "voiceInterval_s": [
+        3.94,
+        5.18
+      ],
+      "candidateFilmFrames": [
+        5949,
+        5985
+      ],
+      "framesChecked": 37,
+      "physicalInterval_s": [
+        17.5,
+        18.69999999999999
+      ],
+      "signedMPaRange": [
+        3.112628936767578,
+        3.5000760555267334
+      ],
+      "selectedGlyphRevealRange": [
+        1,
+        1
+      ],
+      "expectedSignAllFrames": true,
+      "oppositeOrZeroFrames": [],
+      "samples": [
+        {
+          "frame": 5949,
+          "voiceTime_s": 3.966666666666667,
+          "physicalTime_s": 17.5,
+          "signedMPa": 3.1266911029815674,
+          "forceMN": 0.4377367544174195,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5950,
+          "voiceTime_s": 4,
+          "physicalTime_s": 17.53333333333333,
+          "signedMPa": 3.12229061126709,
+          "forceMN": 0.43712068557739264,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5951,
+          "voiceTime_s": 4.033333333333333,
+          "physicalTime_s": 17.566666666666663,
+          "signedMPa": 3.1185755729675293,
+          "forceMN": 0.43660058021545417,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5952,
+          "voiceTime_s": 4.066666666666666,
+          "physicalTime_s": 17.599999999999994,
+          "signedMPa": 3.1155457496643066,
+          "forceMN": 0.43617640495300297,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5953,
+          "voiceTime_s": 4.1,
+          "physicalTime_s": 17.633333333333326,
+          "signedMPa": 3.1138882637023926,
+          "forceMN": 0.435944356918335,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5954,
+          "voiceTime_s": 4.133333333333334,
+          "physicalTime_s": 17.666666666666657,
+          "signedMPa": 3.1129159927368164,
+          "forceMN": 0.43580823898315435,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5955,
+          "voiceTime_s": 4.166666666666667,
+          "physicalTime_s": 17.69999999999999,
+          "signedMPa": 3.112628936767578,
+          "forceMN": 0.435768051147461,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5956,
+          "voiceTime_s": 4.2,
+          "physicalTime_s": 17.73333333333332,
+          "signedMPa": 3.113705635070801,
+          "forceMN": 0.43591878890991215,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5957,
+          "voiceTime_s": 4.233333333333333,
+          "physicalTime_s": 17.76666666666665,
+          "signedMPa": 3.1154587268829346,
+          "forceMN": 0.43616422176361086,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5958,
+          "voiceTime_s": 4.266666666666667,
+          "physicalTime_s": 17.799999999999983,
+          "signedMPa": 3.1178882122039795,
+          "forceMN": 0.43650434970855717,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5959,
+          "voiceTime_s": 4.3,
+          "physicalTime_s": 17.833333333333314,
+          "signedMPa": 3.1216564178466797,
+          "forceMN": 0.4370318984985352,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5960,
+          "voiceTime_s": 4.333333333333333,
+          "physicalTime_s": 17.866666666666646,
+          "signedMPa": 3.1260852813720703,
+          "forceMN": 0.4376519393920899,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5961,
+          "voiceTime_s": 4.366666666666666,
+          "physicalTime_s": 17.899999999999977,
+          "signedMPa": 3.1311745643615723,
+          "forceMN": 0.43836443901062017,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5962,
+          "voiceTime_s": 4.4,
+          "physicalTime_s": 17.93333333333331,
+          "signedMPa": 3.1375648975372314,
+          "forceMN": 0.43925908565521243,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5963,
+          "voiceTime_s": 4.433333333333334,
+          "physicalTime_s": 17.96666666666667,
+          "signedMPa": 3.1445953845977783,
+          "forceMN": 0.440243353843689,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5964,
+          "voiceTime_s": 4.466666666666667,
+          "physicalTime_s": 18,
+          "signedMPa": 3.1522655487060547,
+          "forceMN": 0.4413171768188477,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5965,
+          "voiceTime_s": 4.5,
+          "physicalTime_s": 18.03333333333333,
+          "signedMPa": 3.161193609237671,
+          "forceMN": 0.442567105293274,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5966,
+          "voiceTime_s": 4.533333333333333,
+          "physicalTime_s": 18.066666666666663,
+          "signedMPa": 3.1707403659820557,
+          "forceMN": 0.4439036512374878,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5967,
+          "voiceTime_s": 4.566666666666666,
+          "physicalTime_s": 18.099999999999994,
+          "signedMPa": 3.18090558052063,
+          "forceMN": 0.4453267812728882,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5968,
+          "voiceTime_s": 4.6,
+          "physicalTime_s": 18.133333333333326,
+          "signedMPa": 3.1922881603240967,
+          "forceMN": 0.4469203424453736,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5969,
+          "voiceTime_s": 4.633333333333334,
+          "physicalTime_s": 18.166666666666657,
+          "signedMPa": 3.204270362854004,
+          "forceMN": 0.4485978507995606,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5970,
+          "voiceTime_s": 4.666666666666667,
+          "physicalTime_s": 18.19999999999999,
+          "signedMPa": 3.2168521881103516,
+          "forceMN": 0.45035930633544924,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5971,
+          "voiceTime_s": 4.7,
+          "physicalTime_s": 18.23333333333332,
+          "signedMPa": 3.2306172847747803,
+          "forceMN": 0.4522864198684693,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5972,
+          "voiceTime_s": 4.733333333333333,
+          "physicalTime_s": 18.26666666666665,
+          "signedMPa": 3.244966506958008,
+          "forceMN": 0.4542953109741211,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5973,
+          "voiceTime_s": 4.766666666666667,
+          "physicalTime_s": 18.299999999999983,
+          "signedMPa": 3.2599003314971924,
+          "forceMN": 0.456386046409607,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5974,
+          "voiceTime_s": 4.8,
+          "physicalTime_s": 18.333333333333314,
+          "signedMPa": 3.275989532470703,
+          "forceMN": 0.4586385345458985,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5975,
+          "voiceTime_s": 4.833333333333333,
+          "physicalTime_s": 18.366666666666646,
+          "signedMPa": 3.2926504611968994,
+          "forceMN": 0.460971064567566,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5976,
+          "voiceTime_s": 4.866666666666666,
+          "physicalTime_s": 18.399999999999977,
+          "signedMPa": 3.3098831176757812,
+          "forceMN": 0.4633836364746094,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5977,
+          "voiceTime_s": 4.9,
+          "physicalTime_s": 18.43333333333331,
+          "signedMPa": 3.3282487392425537,
+          "forceMN": 0.46595482349395756,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5978,
+          "voiceTime_s": 4.933333333333334,
+          "physicalTime_s": 18.46666666666667,
+          "signedMPa": 3.347175359725952,
+          "forceMN": 0.46860455036163334,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5979,
+          "voiceTime_s": 4.966666666666667,
+          "physicalTime_s": 18.5,
+          "signedMPa": 3.3666629791259766,
+          "forceMN": 0.47133281707763675,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5980,
+          "voiceTime_s": 5,
+          "physicalTime_s": 18.53333333333333,
+          "signedMPa": 3.3872621059417725,
+          "forceMN": 0.4742166948318482,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5981,
+          "voiceTime_s": 5.033333333333333,
+          "physicalTime_s": 18.566666666666663,
+          "signedMPa": 3.4084112644195557,
+          "forceMN": 0.47717757701873786,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5982,
+          "voiceTime_s": 5.066666666666666,
+          "physicalTime_s": 18.599999999999994,
+          "signedMPa": 3.430109977722168,
+          "forceMN": 0.48021539688110354,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5983,
+          "voiceTime_s": 5.1,
+          "physicalTime_s": 18.633333333333326,
+          "signedMPa": 3.4528958797454834,
+          "forceMN": 0.48340542316436774,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5984,
+          "voiceTime_s": 5.133333333333334,
+          "physicalTime_s": 18.666666666666657,
+          "signedMPa": 3.4762179851531982,
+          "forceMN": 0.4866705179214478,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        },
+        {
+          "frame": 5985,
+          "voiceTime_s": 5.166666666666667,
+          "physicalTime_s": 18.69999999999999,
+          "signedMPa": 3.5000760555267334,
+          "forceMN": 0.4900106477737427,
+          "selectedGlyphReveal": 1,
+          "physicsKind": "wind"
+        }
+      ]
+    }
+  ],
+  "wholeS020": [
+    {
+      "meshId": "FE_M_Z04_C03_OX1",
+      "signedMPaRange": [
+        -7.335397720336914,
+        -1.1427596807479858
+      ],
+      "positiveFrames": 0,
+      "negativeFrames": 461
+    },
+    {
+      "meshId": "FE_M_Z04_C03_OX2",
+      "signedMPaRange": [
+        1.330093502998352,
+        7.861813068389893
+      ],
+      "positiveFrames": 461,
+      "negativeFrames": 0
+    }
+  ]
+}

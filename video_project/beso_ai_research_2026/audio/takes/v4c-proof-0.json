@@ -1,0 +1,72 @@
+{
+  "id": "v4c-proof-0",
+  "text": "价值也要经得起复查。论文案例中，单位功率用钢量减少约百分之八点一。",
+  "ttsText": "价值也要经得起复查。论文案例中，单位功率用钢量减少约百分之八点一。",
+  "signature": "e0228c238d6c5b42df53c55864003ac2c1b2d1f4b8d55790284d01220cb53d4b",
+  "raw": "audio/raw/v4c-proof-0-e0228c238d.wav",
+  "processed": "public/voice/v4c-proof-0.wav",
+  "rawDuration": 6.575,
+  "duration": 6.815,
+  "sha256": "690d0ec28d16e02e9f33e25f9f67ffb8faddc7fb161ef7d0b730f53277e70a19",
+  "rawSHA256": "0b7d1bc7121e29cc477b20906d6ded84b9b3d30e21a330a25dc43149a8f9c021",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "rawEndpointDB": -31.068526788934534,
+  "rawEndpointFlag": true,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "48b523ba0bed2ec0ea5264af237682ac60604b1a0d8c8c7e7c50c59be431fb87",
+    "outputSha256": "690d0ec28d16e02e9f33e25f9f67ffb8faddc7fb161ef7d0b730f53277e70a19",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 6.815,
+      "peakDb": -9.364203317387567,
+      "activeRmsDb": -29.877938651017324,
+      "quietFrameP10Db": -72.11213648177802
+    },
+    "output": {
+      "seconds": 6.815,
+      "peakDb": -4.818376616606076,
+      "activeRmsDb": -26.284157319256384,
+      "quietFrameP10Db": -72.58010103910591
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "sourceCandidateId": "v4-proof-0",
+  "voiceSource": "Provider public voice; not personal clone",
+  "personalReferenceUploaded": false,
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "subjectiveListeningChecked": false
+}

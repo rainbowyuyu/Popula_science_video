@@ -1,0 +1,30 @@
+{
+  "version": "physics2026-v07-final",
+  "video": "delivery/physics2026_v07/2026诺贝尔物理学奖_一束蓝光穿过南极冰_v07_TTS与钢琴配乐1080p.mp4",
+  "videoSha256": "11391db60b9855adbc9d297644d682d0bb5cc932b349952e1673d8da4bea52c4",
+  "videoBytes": 67681023,
+  "resolution": "1920x1080",
+  "fps": 30,
+  "frames": 8679,
+  "durationSeconds": 289.3,
+  "audio": {
+    "path": "public/audio-v06/master.wav",
+    "sha256": "0878f99becad1fda5646286e32762e14d4e74af9113d95c9466a981be20f1b92",
+    "sampleRate": 48000,
+    "channels": 2,
+    "durationSeconds": 289.28,
+    "integratedLufs": -14.83,
+    "truePeakDbtp": -1.72,
+    "narration": "personal Qwen3-TTS-0.6B clone; reference hash dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "music": "Growing Up — Scott Buckley, CC-BY; sidechain ducking and speech-frequency carve"
+  },
+  "checks": {
+    "typescript": "npm run check passed",
+    "targetedStills": "passed",
+    "fullDecode": "ffmpeg video decode passed",
+    "audioOnlyTrack": "one AAC track, no legacy track",
+    "formula": "threshold SVG only on clip 007",
+    "timeline": "src/physics2026/timeline-v06.json"
+  },
+  "research": "research/nobelphysics2026/originals with facts-v08.md"
+}

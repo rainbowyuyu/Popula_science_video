@@ -1,0 +1,86 @@
+{
+  "nodes": 245339,
+  "seconds": 58.76969599723816,
+  "elementQuality": {
+    "Tetrahedron 4": {
+      "count": 1126752,
+      "minSICN": 0.05168578390288902,
+      "negative": 0,
+      "zero": 0
+    },
+    "Prism 6": {
+      "count": 117120,
+      "minSICN": 0.00036245053051463526,
+      "negative": 0,
+      "zero": 0
+    }
+  },
+  "bodyHeight": 632.0,
+  "crown": "film rim 615.5+16.5*cos(t-0.7); closed smooth top membrane approximation",
+  "twistDegrees": 120.0,
+  "wallLayerScope": "Tower only; base ring horizontal; no ground prism layer",
+  "firstLayer": 0.004,
+  "layers": 20,
+  "layerThicknessesCumulative": [
+    0.004,
+    0.0092,
+    0.015960000000000002,
+    0.024748000000000003,
+    0.03617240000000001,
+    0.051024120000000006,
+    0.07033135600000001,
+    0.09543076280000001,
+    0.12805999164000004,
+    0.17047798913200005,
+    0.22562138587160008,
+    0.2973078016330801,
+    0.39050014212300416,
+    0.5116501847599054,
+    0.669145240187877,
+    0.8738888122442401,
+    1.1400554559175122,
+    1.486072092692766,
+    1.9358937205005957,
+    2.5206618366507745
+  ],
+  "surfaceTargetSize": 9.0,
+  "domain": [
+    -3160.0,
+    9480.0,
+    -3160.0,
+    3160.0,
+    0,
+    3792.0
+  ],
+  "externalSurfaceGroups": {
+    "inlet": [
+      3723
+    ],
+    "outlet": [
+      3721
+    ],
+    "sides": [
+      3720,
+      3722
+    ],
+    "ceiling": [
+      3724
+    ],
+    "ground": [
+      325,
+      347,
+      369,
+      391,
+      413,
+      435,
+      3719
+    ]
+  },
+  "allExternalSurfacesClassified": true,
+  "geometry": "Film support-function rounded triangle, taper area ratio 0.45, 120 degree twist, ground attached; no surrounding city.",
+  "limitations": [
+    "Smooth reconstructed envelope, not as-built facade, openings or neighboring city.",
+    "A RANS setup/mesh is not yet a converged or validated flow solution.",
+    "Prescribed isolated-building inflow is not a measured Shanghai atmospheric boundary layer."
+  ]
+}

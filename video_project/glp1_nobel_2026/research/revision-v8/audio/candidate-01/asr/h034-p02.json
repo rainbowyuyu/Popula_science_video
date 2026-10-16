@@ -1,0 +1,136 @@
+{
+  "id": "h034",
+  "partIndex": 1,
+  "expected": "里面有甘油三酯，也有身体需要的胆固醇。",
+  "heard": "裡面有乾油三脂,也有身體需要的膽固醇",
+  "words": [
+    {
+      "text": "裡面",
+      "start": 0.0,
+      "end": 0.38,
+      "probability": 0.4289478361606598
+    },
+    {
+      "text": "有",
+      "start": 0.38,
+      "end": 0.62,
+      "probability": 0.9944149255752563
+    },
+    {
+      "text": "乾",
+      "start": 0.62,
+      "end": 0.8,
+      "probability": 0.2952364683151245
+    },
+    {
+      "text": "油",
+      "start": 0.8,
+      "end": 0.98,
+      "probability": 0.9665228128433228
+    },
+    {
+      "text": "三",
+      "start": 0.98,
+      "end": 1.16,
+      "probability": 0.8368538618087769
+    },
+    {
+      "text": "脂,",
+      "start": 1.16,
+      "end": 1.76,
+      "probability": 0.7275501638650894
+    },
+    {
+      "text": "也",
+      "start": 1.76,
+      "end": 1.92,
+      "probability": 0.9443768858909607
+    },
+    {
+      "text": "有",
+      "start": 1.92,
+      "end": 2.04,
+      "probability": 0.9967560172080994
+    },
+    {
+      "text": "身",
+      "start": 2.04,
+      "end": 2.2,
+      "probability": 0.9932041168212891
+    },
+    {
+      "text": "體",
+      "start": 2.2,
+      "end": 2.38,
+      "probability": 0.9989652633666992
+    },
+    {
+      "text": "需要",
+      "start": 2.38,
+      "end": 2.56,
+      "probability": 0.9965652823448181
+    },
+    {
+      "text": "的",
+      "start": 2.56,
+      "end": 2.76,
+      "probability": 0.9963818788528442
+    },
+    {
+      "text": "膽",
+      "start": 2.76,
+      "end": 2.9,
+      "probability": 0.8238428235054016
+    },
+    {
+      "text": "固",
+      "start": 2.9,
+      "end": 3.06,
+      "probability": 0.9924553334712982
+    },
+    {
+      "text": "醇",
+      "start": 3.06,
+      "end": 3.22,
+      "probability": 0.9957208931446075
+    }
+  ],
+  "sourceSHA256": "1d1fcbdd79294c4e24b4eb49cbb8e3482711072009c889c9c4cc4b78a0997823",
+  "ratio": 0.8823529411764706,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "甘",
+      "heard": "乾",
+      "end": 4
+    },
+    {
+      "op": "replace",
+      "expected": "酯",
+      "heard": "脂",
+      "end": 7
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 172800,
+    "seconds": 3.6,
+    "peakDBFS": -8.380213462312499,
+    "first20msDBFS": -69.04982946427072,
+    "last20msDBFS": -81.14370858219687,
+    "firstActiveMs": 140.0,
+    "lastActiveToEndMs": 300.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

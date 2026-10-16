@@ -1,0 +1,87 @@
+{
+  "id": "h038",
+  "partIndex": 0,
+  "ttsText": "当低密度脂蛋白在血中持续偏多，就更容易进入并滞留在动脉壁里。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 2,
+  "seed": 1594018007,
+  "signature": "5f02c8d79a1cb11f443bf6cb356676430a83b76adc7032e07aaded03f0253203",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h038-p01",
+    "h041-p02",
+    "h045-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-02\\raw\\h038-p01.wav",
+  "rawSHA256": "d0e77f914dd101fb9145e44f4556f4bd92a9bbc75078ed10a62d02d465f1e1b7",
+  "rawMetrics": {
+    "samples48k": 257280,
+    "seconds": 5.36,
+    "peakDBFS": -7.332452073118734,
+    "first20msDBFS": -56.71620942070671,
+    "last20msDBFS": -97.08016564903191,
+    "firstActiveMs": 260.0,
+    "lastActiveToEndMs": 260.0,
+    "activityThresholdDBFS": -48.987663069132395,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-02\\guarded\\h038-p01.wav",
+  "guardedSHA256": "32064df904234cbc53d0a9d6a667fdd41ba54704215b1e3adb43c7b8209532e0",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-02\\processed\\h038-p01.wav",
+  "sha256": "e56ade54c6d3f1595fb324f4a57896b7aa1b881bdba939f8a44432586ec5f187",
+  "durationSeconds": 5.6,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "32064df904234cbc53d0a9d6a667fdd41ba54704215b1e3adb43c7b8209532e0",
+    "outputSha256": "e56ade54c6d3f1595fb324f4a57896b7aa1b881bdba939f8a44432586ec5f187",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.620452037831363,
+    "input": {
+      "seconds": 5.6,
+      "peakDb": -7.331878713116917,
+      "activeRmsDb": -22.328298175620077,
+      "quietFrameP10Db": -66.14942971747523
+    },
+    "output": {
+      "seconds": 5.6,
+      "peakDb": -7.623407305847762,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -66.19802462158577
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

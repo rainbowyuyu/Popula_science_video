@@ -1,0 +1,237 @@
+[
+  {
+    "id": "gong2017",
+    "title": "Shanghai Tower",
+    "authors": [
+      "Jian Gong"
+    ],
+    "year": 2017,
+    "journal": "Frontiers of Engineering Management",
+    "volume": "4(1)",
+    "pages": "106–109",
+    "doi": "10.15302/J-FEM-2017001",
+    "url": "https://journal.hep.com.cn/fem/EN/10.15302/J-FEM-2017001",
+    "pdfUrl": "https://journal.hep.com.cn/fem/EN/PDF/10.15302/J-FEM-2017001",
+    "local": "papers/gong2017.pdf",
+    "license": "CC BY 4.0",
+    "kind": "施工方作者主源论文，全文和原版PDF已读取",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "gensler",
+    "title": "Shanghai Tower",
+    "authors": [
+      "Gensler"
+    ],
+    "year": null,
+    "url": "https://www.gensler.com/projects/shanghai-tower",
+    "local": "raw/gensler.txt",
+    "kind": "建筑设计方项目页面，全文已读取",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "ctbuh",
+    "title": "Shanghai Tower — The Skyscraper Center",
+    "authors": [
+      "Council on Vertical Urbanism (formerly CTBUH)"
+    ],
+    "year": null,
+    "url": "https://www.skyscrapercenter.com/building/shanghai-tower/56",
+    "local": "raw/ctbuh.txt",
+    "kind": "建筑数据库，当前页面已读取",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "archdaily",
+    "title": "Shanghai Tower / Gensler",
+    "authors": [
+      "Gensler (architect-provided description and drawings)",
+      "ArchDaily (publisher)"
+    ],
+    "year": 2016,
+    "url": "https://www.archdaily.com/783216/shanghai-tower-gensler",
+    "local": "raw/archdaily.txt",
+    "kind": "建筑师供稿和公开设计图，非施工图；图纸另见drawings/sources.json",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "rwdi",
+    "title": "Shanghai Tower — A unique shape and an unusual mechanism to control wind-induced motion",
+    "authors": [
+      "RWDI"
+    ],
+    "year": null,
+    "url": "https://rwdi.com/en_ca/projects/shanghai-tower/",
+    "local": "raw/rwdi.txt",
+    "kind": "风工程顾问项目页面；文本已读取，页面Download case study链接实际错误，未当作TMD图使用",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "wind_mechanism",
+    "title": "Form follows Physics",
+    "authors": [
+      "Jon Galsworthy",
+      "John Kilpatrick",
+      "Derek Kelley"
+    ],
+    "year": 2016,
+    "url": "https://www.structuremag.org/article/form-follows-physics/",
+    "local": "raw/form-follows-physics.txt",
+    "kind": "RWDI工程师发表于STRUCTURE的技术文章；正文已读取",
+    "caveat": "页面Figure4说明写180°，与Gong2017和设计主源120°冲突，本片120°以施工方/设计主源为准，不引用该图注。文中24%为比较方案风洞结果，本片不复刻、不承诺自算。",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "tmd_mechanism",
+    "title": "Feeling at Home in the Clouds",
+    "authors": [
+      "Trevor Haskett"
+    ],
+    "year": 2017,
+    "url": "https://www.structuremag.org/article/feeling-at-home-in-the-clouds/",
+    "local": "raw/feeling-at-home-in-the-clouds.txt",
+    "kind": "阻尼工程师技术说明，正文已读取",
+    "caveat": "原文1100-ton未核实单位制；当前质量采用Wu2021明确的1000 metric tons。网页2014 opened与CTBUH2015完成口径不一，不用该页支持开放年份。悬挂和磁体/铜板细节仍按公开构造图教学重建。",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "zhao2011",
+    "title": "Structural Design of Shanghai Tower for Wind Loads",
+    "authors": [
+      "X. Zhao",
+      "J. M. Ding",
+      "H. H. Sun"
+    ],
+    "year": 2011,
+    "doi": "10.1016/j.proeng.2011.07.221",
+    "url": "https://doi.org/10.1016/j.proeng.2011.07.221",
+    "local": "structural/zhao2011-archive.pdf",
+    "kind": "完整9页原论文已下载、提取并阅读。旧metadata-only状态已失效。",
+    "retrieved": "2026-10-08",
+    "pdfUrl": "https://scholar.archive.org/work/uijqo5swnnb6vm452fgvww5sza/access/wayback/https://core.ac.uk/download/pdf/82001482.pdf",
+    "caveat": "100年10分钟均值B类地形U10=31.7m/s、U500=50m/s。当前仿真U500=30m/s为缩放教学输入；特定形状比较24%是基底倾覆矩差异，不能普遍化为所有风力。"
+  },
+  {
+    "id": "foundation_mechanism",
+    "title": "桩基础侧阻/端阻及整体传力的基础工程学解释",
+    "authors": [],
+    "year": null,
+    "url": "https://journal.hep.com.cn/fem/EN/10.15302/J-FEM-2017001",
+    "kind": "结合Gong/Zhu桩筏体系的通俗解释；新增本地Zwind/OpenSees独立单桩梁+分层弹簧例题。",
+    "retrieved": "2026-10-08",
+    "caveat": "单桩8MN轴向+0.3MN侧向+自重为教学输入，土弹簧刚度/端弹簧均是假设，不是该楼桩承载力或真实沉降预测；层位标签参考Zhu设计稿Table1。"
+  },
+  {
+    "id": "structure_mechanism",
+    "title": "核心筒—伸臂—外柱的基本静力机理",
+    "authors": [],
+    "year": null,
+    "url": "https://journal.hep.com.cn/fem/EN/10.15302/J-FEM-2017001",
+    "kind": "结构体系参考Su/Zhu，实际执行Zwind/OpenSees等效线弹性梁杆求解，稳定ID驱动位移和轴应力增量显示。",
+    "retrieved": "2026-10-08",
+    "caveat": "真实执行不等于原工程模型：材料/截面/连接/风荷载等假设保留，未执行建筑CFD，未获得实测局部应力。"
+  },
+  {
+    "id": "education_model",
+    "title": "本片教学重建与动画说明",
+    "authors": [
+      "rainbow鱼"
+    ],
+    "year": 2026,
+    "kind": "本项目教育性分层模型，不是施工级BIM；外幕墙拆组数量、组件节点/配筋/管线/设备尺寸均可能为视觉简化",
+    "retrieved": "2026-10-08"
+  },
+  {
+    "id": "wu2021",
+    "title": "Monitoring dynamic characteristics of 600 m+ Shanghai Tower during two consecutive typhoons",
+    "authors": [
+      "Jie Wu",
+      "Ningtao Hu",
+      "You Dong",
+      "Qilin Zhang"
+    ],
+    "year": 2021,
+    "doi": "10.1002/stc.2666",
+    "url": "https://ira.lib.polyu.edu.hk/handle/10397/102471",
+    "pdfUrl": "https://ira.lib.polyu.edu.hk/bitstream/10397/102471/1/Dong_Monitoring_Dynamic_Characteristics.pdf",
+    "local": "structural/wu2021-typhoons.pdf",
+    "kind": "机构库作者稿，全文读取，原研究实测台风响应",
+    "facts": [
+      {
+        "pdfPage": 3,
+        "claim": "125层1000 metric tons被动涡流TMD"
+      },
+      {
+        "pdfPage": 10,
+        "claim": "2018运营监测谱峰约0.106、0.204、0.320、0.440 Hz，频率随响应幅值变化"
+      },
+      {
+        "pdfPage": [
+          16,
+          17
+        ],
+        "claim": "小振幅结构阻尼拟合截距约X0.57%、Y0.56%；TMD有效阻尼随幅值不同"
+      }
+    ],
+    "caveat": "该文没有提供本片质量块外形尺寸、吊点坐标、安装弹簧/阻尼完整表。求解使用1000t质量，弹簧按当前等效模型调谐、内部8%阻尼为显式教学假设；不能把0.57%结构阻尼与8%装置阻尼混写。",
+    "retrieved": "2026-10-08",
+    "sha256": "c9a2beb694a66319192c18f863253ef215752acd8a55e0f92107898f100f269d"
+  },
+  {
+    "id": "ding2013",
+    "title": "Structural analysis and health monitoring of Shanghai Tower in construction stage",
+    "authors": [
+      "Jiemin Ding",
+      "Qilin Zhang",
+      "Xin Zhao",
+      "Congzhi Yan",
+      "Lang Huang"
+    ],
+    "year": 2013,
+    "journal": "SHMII-6, Hong Kong, 9–11 December2013",
+    "url": "https://ishmii.org/wp-content/uploads/2015/04/MS05-01.pdf",
+    "local": "structural/ding2013-construction.pdf",
+    "kind": "设计/研究团队会议原文，完整PDF已读取",
+    "facts": [
+      {
+        "pdfPage": 2,
+        "claim": "伸臂设置于2、4、5、6、7、8区；幕墙荷载经径向桁架传环带/巨柱/核心筒"
+      },
+      {
+        "pdfPage": [
+          3,
+          4
+        ],
+        "claim": "核心先行；第7区施工锁定2/4/5区伸臂，第8区施工锁定6区，封顶锁定7/8区"
+      }
+    ],
+    "caveat": "完整施工历史包括时变收缩徐变及伸臂择时锁定；本片逐高度重新求解静力例题，不复现原工程历史内力。",
+    "retrieved": "2026-10-08",
+    "sha256": "703e3c28e02668afbde4c2957af9e6b286746f14c203d17239182e84aa47761d"
+  },
+  {
+    "id": "li2013",
+    "title": "Analysis and monitoring of construction phase internal forces of Shanghai Tower considering time-dependent effect",
+    "authors": [
+      "Han Li",
+      "Lu Chen",
+      "Jia Lv",
+      "Jia Hu",
+      "Qi-lin Zhang",
+      "Xin Zhao"
+    ],
+    "year": 2013,
+    "url": "https://ishmii.org/wp-content/uploads/2015/04/MS05-03.pdf",
+    "local": "structural/dingtimed2013-construction.pdf",
+    "kind": "SHMII-6作者原论文，完整PDF已读取",
+    "facts": [
+      {
+        "pdfPage": 2,
+        "claim": "巨柱落后核心筒6–9层；楼板再落后巨柱4–7层；下部8天/层至上部4天/层；幕墙在主体约1/3高后开工"
+      }
+    ],
+    "caveat": "本地旧文件名dingtimed仅检索标记，实际第一作者Li；没有以文件名推断作者。",
+    "retrieved": "2026-10-08",
+    "sha256": "172ceeea1487b07a1e83c14e7fbc58e4eb5354a0db37f44618a974e70939c2f3"
+  }
+]

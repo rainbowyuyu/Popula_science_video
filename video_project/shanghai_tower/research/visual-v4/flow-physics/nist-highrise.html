@@ -1,0 +1,468 @@
+<HTML>
+<HEAD>
+<script async type="text/javascript"
+        id="_fed_an_ua_tag"
+        src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NIST&pua=UA-37115410-50&yt=true&exts=ppsx,pps,f90,sch,rtf,wrl,txz,m1v,xlsm,msi,xsd,f,tif,eps,mpg,xml,pl,xlt,c">
+</script>
+<script language="javascript" type="text/javascript" src="../js/jquery-1.7.2.min.js"> </script>
+<script language="javascript" type="text/javascript" src="../js/jquery.leaveNotice.min.js"> </script>
+<link rel="stylesheet" type="text/css" href="../css/jquery.leaveNotice.css" />
+  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+  <script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"></script>
+  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
+<TITLE>
+DAD_ESWL v1.0 - DAD Software for High- and Mid-Rise Buildings
+</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY BGCOLOR=#FFFFFF topmargin="0" leftmargin="0" marginwidth="0"
+      marginheight="0" >
+
+<table border=0 cellpadding=0 cellspacing=0 vspace="0" hspace="0"
+       align="center" width="1005">
+  <tr> 
+     <!-- THIS IS WHERE THE HEADER GRAPHIC GOES. ALSO... CHANGE THE
+          ALT and NAME (ie the word "sample" to the appropriate name
+     -->
+     <td> 
+        <div align="center">
+        <img src="../../div_images/extreme_winds.gif"
+             width=1005 height=90 vspace="0" hspace="0" border="0"
+             alt="SED navigation bar"  usemap="#SED navigation bar">
+        <map name="SED navigation bar">
+        <area shape="rect" coords="19,9,210,15" 
+              href="https://www.nist.gov/itl/sed"
+              target="_self" alt="go to SED home page"> 
+        <area shape="rect" coords="19,20,210,46" 
+              href="homepage.htm"
+              target="_self" alt="go to Extreme Winds page"> 
+        <area shape="rect" coords="520,2,734,46"
+              href="https://www.nist.gov/" 
+              target="_self" alt="go to NIST home page">
+        <area shape="rect" coords="3,55,150,77"
+              href="https://www.nist.gov/itl/sed"
+              target="_self" alt="SED Home Page">
+        <area shape="rect" coords="160,55,305,77" href=
+              "https://www.nist.gov/staff/information-technology-laboratory/statistical-engineering-division"
+              target="_self" ALT="SED Staff">
+        <area shape="rect" coords="315,55,460,77"
+              href="https://www.nist.gov/itl/sed/programsprojects"
+              target="_self" alt="SED Projects">
+        <area shape="rect" coords="470,55,615,77" 
+              href="https://www.nist.gov/publications"
+              target="_self" alt="Extreme Winds Publications">
+        <area shape="rect" coords="625,55,750,77"
+              href="search.htm"
+              target="_self" alt="Search Wind Pages">
+        </map>
+        </div>
+    </td>
+  </tr>
+</table>
+
+
+
+<div>
+<font face="Arial, Helvetica, sans-serif">
+<!--  This is a table with the main information.  -->
+
+<table width="600" border="0" cellspacing="20" cellpadding="0"
+       align="center">
+
+<tr>
+   <td colspan=2 align=left>
+      <H1>DAD_ESWL v1.0 – Database-Assisted Design Software for High- and
+          Mid-Rise Buildings</H1>
+   </td>
+</tr>
+
+<!-- begin paragraph -->
+<!-- 
+<TR>
+   <TD VALIGN=TOP ALIGN=LEFT COLSPAN=2>
+      <img src="../gif/hr_dad.jpg"
+           alt="Sample Image">
+   </TD>
+</TR>
+ -->
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <I>
+      </I>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      <b>Introduction</b>
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="DAD_ESWL">
+      <I>
+      <b>DAD_ESWL v1.0</b>
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      This is the download page for <b>DAD_ESWL v1.0</b>, a MATLAB-based
+      Database-Assisted Design (DAD) software package for high- and
+      mid-rise buildings. The package was developed for use by the
+      structural engineer in charge of the building design.
+      <P>
+      The software, which incorporates a user-friendly graphical
+      interface, is an integrated design tool providing (<i>i</i>) time
+      series of calculated wind-induced floor loads acting at the center
+      of mass, based on time series of aerodynamic pressures and inertial
+      forces, (<i>ii</i>) time series of member demand-to-capacity
+      indexes, of inter-story drift ratios, and of accelerations. 
+      <P>
+      The software incorporates ASCE 7-16 Standard requirements,
+      ACI 318-10 requirements for reinforced concrete members, and AISC
+      Specifications 360-10 for Steel Buildings.  If requirements based on
+      other documents are used, the corresponding portions of the software
+      must be modified accordingly. For access to the source code, please
+      find contact information at the end of this web page.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="input">
+      <I>
+      Required Input as MATLAB Files
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      The following information is required as input for
+      <b>DAD_ESWL v1.0</b>:
+      <P>
+      Details on structural members and whole structure
+      <UL>
+         <LI>Dimensions of members
+         <LI>Cross-sectional shapes of sections (W or HSS
+             for steel structures)
+         <LI>Reinforcement details (for RC structures)
+         <LI>Number of stories
+         <LI>Heights of floors
+      </UL>
+      <P>
+      Structural static and dynamic properties
+      <UL>
+         <LI>Number of modes and modal damping ratios
+         <LI>Mass and mass moment of inertia with respect to mass center
+             for each floor
+         <LI>Influence coefficients, defined as the internal forces
+             induced in cross sections of members by a unit load applied
+             to the center of mass of a given floor
+         <LI>Internal forces in members induced by dead loads due to
+             self-weight, super-imposed dead loads, and live loads
+         <LI>Mode shapes
+         <LI>Modal periods
+      </UL>
+      <P>
+      Wind pressure data or wind loads
+      <UL>
+         <LI>Time-varying pressure coefficients for each pressure tap, or
+             wind loads applied at the mass center of each floor, obtained
+             from wind tunnel tests on rigid models or from CFD analyses
+      </UL>
+      <P>
+      Wind climate at building site
+      <UL>
+         <LI>Databases of directional wind speeds for each type of wind
+             occurring at the site (e.g., hurricane, thunderstorm, and
+             synoptic wind), provided by the wind engineering laboratory.
+      </UL>
+      <P>
+      All information required for DAD must be provided as a MATLAB
+      formatted file (.mat file) or be typed in the software. The details
+      are described in the accompanying User's Manual (downloaded below). 
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="output">
+      <I>
+      Output
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      <b>DAD_ESWL v1.0</b> determines the following wind effects
+         corresponding to any specified mean recurrence intervals (MRIs):
+      <UL>
+         <LI>Peak demand to capacity indexes for all members
+         <LI>Peak inter-story drift ratios calculated along selected
+             column lines
+         <LI>Peak resultant accelerations calculated along selected
+             column lines
+      </UL>
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="example">
+      <I>
+      Example
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      A 60 story example is available for downloading below. How to run
+      this example is described in the User's Manual.
+      <P>
+      The model scale time histories of the floor wind loads for the
+      60-story CAARC (Commonwealth Advisory Aeronautical Research Council)
+      building for 36 wind directions in 10 degree increments are also
+      available for download. The loads are based on simultaneous pressure
+      time histories on the external surfaces of the building model,
+      obtained from wind tunnel tests performed at the CRIAC IV Boundary
+      Layer Wind Tunnel, Prato, Italy.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="download">
+      <I>
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      <b>Downloading Software and Sample Datasets</b>
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="Matlab_Version">
+      <I>
+      Requirements
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      The <b>DAD_ESWL v1.0</b> software was developed and tested in the
+      Microsoft Windows environment using MATLAB 2017a.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="executablefile">
+      <I>
+      Stand-alone Executable File
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      You can download and run the "stand-alone" file below. This contains
+      a compiled version of the software with executable file. This
+      requires installation of Matlab Runtime (MCR) from MathWorks, Inc.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="sourcecodes">
+      <I>
+      Source Codes
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      The source codes for the <b>DAD_ESWL v1.0</b> (Matlab m-files) are
+      supplied individually on demand by e-mail. Please find contact
+      information at the end of this web page.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="files">
+      <I>
+      Files Available for Download
+      </I>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      You can download the following files for the
+      <b>DAD_ESWL v1.0</b> software.
+      <ul>
+         <li>User's manual including installation instructions
+             (<a href=
+             "https://doi.org/10.6028/NIST.TN.2000">NIST Technical Note
+             2000: Database-Assisted Design and Equivalent Static Wind Loads
+             for Mid- and High-Rise Structures: Concepts, Software and
+             User's Manual</a>, PDF format)
+             <p>
+             Note: Last Updated 2018/06
+             <p>
+         <li>NIST Technical Note for Introductory Tutorial
+             (<a href=
+             "https://doi.org/10.6028/NIST.TN.2001">NIST Technical Note
+             2001: Introductory Tutorial for DAD: Design Examples of
+             High-Rise Building for Wind</a>, PDF format)
+             Note: Last Updated 2018/06
+             <p>
+         <li>Standalone executable version of the <b>DAD_ESWL v1.0</b>
+             software <a href=
+             "DAD_ESWL_v1p0.zip"><b>DAD_ESWL_v1p0.zip</b></a>.  To run
+             standalone Matlab programs, you need to install the
+             MCRInstaller software from The Mathworks, Inc.  The current
+             version can be downloaded from <a href=
+             "http://www.mathworks.com/products/compiler/mcr/index.html"
+             target="external">
+             http://www.mathworks.com/products/compiler/mcr/index.html</a>.
+             <p>
+         <li>Sample 60-story Building Inputs for the User's Manual
+             (<a href="60_story_example.zip">60_story_example.zip</a>
+             <p>
+             Note: Last Updated 2018/06
+             <p>
+         <li>Five example projects for the Introductory Tutorial
+             <p>
+             <UL>
+                <LI><a href="Project_01.zip">Project_01.zip</a>
+                <LI><a href="Project_02.zip">Project_02.zip</a>
+                <LI><a href="Project_03.zip">Project_03.zip</a>
+                <LI><a href="Project_04.zip">Project_04.zip</a>
+                <LI><a href="Project_05.zip">Project_05.zip</a>
+             </UL>
+             <p>
+             Note: Last Updated 2018/06
+             <p>
+             Note: Pressure data have been obtained from wind tunnel tests
+             carried out at the CRIACIV Boundary Layer Wind Tunnel, Prato,
+             Italy, <a href=
+             "http://www.criaciv.unifi.it/" target="external">
+             http://www.criaciv.unifi.it/</a> and Tokyo, Polytechnic
+             University Aerodynamic Database, <a href=
+             "http://wind.arch.t-kougei.ac.jp/system/eng/contents/code/tpu"
+             target="external">
+             http://wind.arch.t-kougei.ac.jp/system/eng/contents/code/tpu</a>.
+      </ul>
+
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="PreviousVersions">
+      <I>
+      Previous Versions
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      You can download the following previous versions of DAD software
+      <p>
+      <ul>
+         <li><a href="../HR_DAD_1.1/hr_dad_1.1.htm">HR_DAD v1.1 (2009)</a>
+         <li><a href="../HR_DAD_RC_1.0/hr_dad_rc_1.0.htm">HR_DAD_RC_v1.0 (2010)</a>
+      </ul>
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="AdditionalInformation">
+      <I>
+      Additional Information
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      The <b>DAD_ESWL v1.0</b> software includes the capability to use
+      OpenSees (Open System for Earthquake Engineering Simulation), the
+      open-source software framework for simulating dynamic responses of
+      structural systems provided by the Regents of the University of
+      California. The copyright agreement can be found at <a href=
+      "http://opensees.berkeley.edu/OpenSees/copyright.php" target="external">
+      http://opensees.berkeley.edu/OpenSees/copyright.php</a>.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<TR>
+   <TD ALIGN=LEFT WIDTH=15% VALIGN=top>
+      <A NAME="ContactInformation">
+      <I>
+      Contact Information
+      </I>
+      </A>
+   </TD>
+   <TD VALIGN=TOP ALIGN=LEFT WIDTH=85%>
+      The <b>DAD_ESWL v1.0</b> software was developed by Dr. Sejun Park
+      at the Engineering Laboratory at NIST. Dr. DongHun Yeo and
+      Dr. Emil Simiu served as advisors.
+      <P>
+      Please email any questions, comments, or requests for the software
+      (source code) to
+      <A HREF="/cdn-cgi/l/email-protection#aacec5c4cdc2dfc484d3cfc5eac4c3d9de84cdc5dc"><span class="__cf_email__" data-cfemail="74101b1a131c011a5a0d111b341a1d07005a131b02">[email&#160;protected]</span></A> or
+      <A HREF="/cdn-cgi/l/email-protection#afdccac5dac181dfceddc4c4efc1c8c2cec6c381ccc0c2"><span class="__cf_email__" data-cfemail="bac9dfd0cfd494cadbc8d1d1faddd7dbd3d694d9d5d7">[email&#160;protected]</span></A>.
+   </TD>
+</TR>
+<!-- end paragraph -->
+
+
+
+<tr>
+   <td colspan=2 align=left>
+      <center>
+      [<a href="../homepage.htm">Extreme Winds Home</a>&nbsp;|&nbsp;
+      <a href="https://www.nist.gov/itl/sed">SED Home</a>&nbsp;|&nbsp;
+      <a href=
+      "https://www.nist.gov/el/materials-and-structural-systems-division-73100/structures-group-73101">
+      Structures Group</a>&nbsp;]
+      <p>
+      <font face="Arial, Helvetica, sans-serif" size="-1">
+      Date created: 06/26/2018<br>
+      Last updated: 04/26/2023<br></font>
+      Please email comments on this WWW page to
+      <A HREF="/cdn-cgi/l/email-protection#ca998f8e95bdafa8a7abb9beafb88aa4a3b9bee4ada5bc"><span class="__cf_email__" data-cfemail="07544243587062656a667473627547696e747329606871">[email&#160;protected]</span></A>
+      </font>
+      </p>
+      </center>
+
+      </td>
+   </tr>
+</table>
+</center>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script language="javascript" type="text/javascript"> $(function()
+{ $('a[target=external]').leaveNotice({siteName:'NIST Collaborate-I'}); });
+</script>
+
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47726d07aea86a7',t:'MTc5MTQ4MzU0Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></BODY>
+</HTML>

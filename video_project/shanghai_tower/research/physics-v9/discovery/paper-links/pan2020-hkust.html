@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HKUST SPD | The Institutional Repository</title>
+    <script src="https://cdn.jsdelivr.net/npm/@cap.js/widget@0.1.26/cap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+                <h4>We have detected some unusual traffic from your client.</h4>
+            </div>
+            <div class="row">
+                <h5>To protect our service, please complete the following Captcha Challenge.</h5>
+            </div>
+            <div class="row pt-4">
+                <cap-widget id="cap" data-cap-api-endpoint="/ir/captcha/"></cap-widget>
+            </div>
+            <div class="row pt-4">
+                <small>If you encountered any errors, please contact <a href="mailto:lbsystem@ust.hk">lbsystem@ust.hk</a>.</small>
+            </div>
+        </div>
+    </div>
+    <script>
+        const widget = document.querySelector("#cap");
+        // cap.js automated workflow
+        widget.addEventListener("solve", function(e) {
+            const verificationToken = e.detail.token;
+            fetch('/ir/captcha/validate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        token: verificationToken
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const redirectUrl = window.location.origin + decodeURIComponent(urlParams.get('redirect'));
+                        if (urlParams.get('redirect') == null) {
+                            window.location.replace(window.location.origin);
+                        } else {
+                            window.location.replace(redirectUrl);
+                        }
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>

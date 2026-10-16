@@ -1,0 +1,53 @@
+{
+  "status": "source_verified_capture_not_performed",
+  "checkedAtUTC": "2026-10-12T08:38:18.050775+00:00",
+  "currentServer": {
+    "portsChecked": "8000-8039",
+    "listenersFound": []
+  },
+  "actualUI": {
+    "entry": "http://127.0.0.1:8018/ui/",
+    "openButton": "#resultsViewerBtn",
+    "fileInput": "#rvFilesInput",
+    "fitButton": "#rvBtnFit",
+    "dimensionsButton": "#rvBtnDim"
+  },
+  "findings": [
+    "#rvBtnDim controls rvDimOverlay, not rvTopoAnno",
+    "parameters_summary.json enters parametric reconstruction with showAnno=true",
+    "no public UI control was found for parametric.showAnno",
+    "previewVtk loads actual geometry and does not create rvTopoAnno",
+    "v5 disabled-dimension capture still visibly contains topology annotations"
+  ],
+  "safeCaptureAlternative": {
+    "file": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\file043.vtk",
+    "label": "真实查看器 · 保存的BESO结果",
+    "type": "saved solver geometry, not a fresh solve or platform assembly"
+  },
+  "minimalLaunch": "& 'D:/python_project/beso_ai/.venv/Scripts/python.exe' -m uvicorn backend.app:app --app-dir 'D:/python_project/beso_ai' --host 127.0.0.1 --port 8018",
+  "sourceRecords": [
+    {
+      "file": "D:\\python_project\\beso_ai\\frontend_static\\flow_main.resultsViewer.js",
+      "sha256": "7ac5a44e432213b28b4e250edd88b28ff3a2f6ee5e43388bc9f4f6d73b46d64d",
+      "bytes": 180246
+    },
+    {
+      "file": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\parameters_summary.json",
+      "sha256": "63a2cd1551fc14908f2ade820688a3e4c16b55507f42fe5d6ae4245fca977258",
+      "bytes": 13374
+    },
+    {
+      "file": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\file043.vtk",
+      "sha256": "207df1620c3ba08340008f2a0c76d9eb1c16b2dc69d350975e3a70d1e090eb84",
+      "bytes": 9827747
+    },
+    {
+      "file": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v12\\geometry-model.png",
+      "sha256": "33bc23fafbe34f03a3da41cd4f0217255f8faf28cedcbcde573c92b54b96396a",
+      "bytes": 166683
+    }
+  ],
+  "productSourceChanged": false,
+  "imageEditing": false,
+  "captureClaim": "No clean screenshot created. This is not a live-capture manifest."
+}

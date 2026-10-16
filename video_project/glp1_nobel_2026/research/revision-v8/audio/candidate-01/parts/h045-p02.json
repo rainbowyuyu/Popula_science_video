@@ -1,0 +1,87 @@
+{
+  "id": "h045",
+  "partIndex": 1,
+  "ttsText": "体重和血脂，需要一起看。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 1,
+  "seed": 2603653281,
+  "signature": "9b3098a1ea30ed1f17bfc91f0ffef5323ef6c1ff01a60d8d62d564a72fa5adc1",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h045-p02",
+    "h060-p01",
+    "h060-p02"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\raw\\h045-p02.wav",
+  "rawSHA256": "24062c91df34b0ac6aef82126b2dea3d49928190c0092a8e52ae2f5b81df3540",
+  "rawMetrics": {
+    "samples48k": 130562,
+    "seconds": 2.7200416666666665,
+    "peakDBFS": -8.116984541153082,
+    "first20msDBFS": -70.29499537433647,
+    "last20msDBFS": -55.14266734989918,
+    "firstActiveMs": 220.0,
+    "lastActiveToEndMs": 320.0416666666667,
+    "activityThresholdDBFS": -49.89000057246936,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\guarded\\h045-p02.wav",
+  "guardedSHA256": "b4c94726cee3c049a79f269fc6ae70dffaae87dd5bc264506d585b8e6c085591",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\processed\\h045-p02.wav",
+  "sha256": "4cd1744d97936b655f27b41cfc2f046cf02ecba12ca7a43313dc93d74a77feb7",
+  "durationSeconds": 2.9600416666666667,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b4c94726cee3c049a79f269fc6ae70dffaae87dd5bc264506d585b8e6c085591",
+    "outputSha256": "4cd1744d97936b655f27b41cfc2f046cf02ecba12ca7a43313dc93d74a77feb7",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 2.9600416666666667,
+      "peakDb": -8.117531919803934,
+      "activeRmsDb": -24.52269010674263,
+      "quietFrameP10Db": -62.77383360507899
+    },
+    "output": {
+      "seconds": 2.9600416666666667,
+      "peakDb": -4.742282046362667,
+      "activeRmsDb": -21.668654739135874,
+      "quietFrameP10Db": -61.971710376628806
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

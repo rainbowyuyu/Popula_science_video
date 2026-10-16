@@ -1,0 +1,82 @@
+{
+  "id": "h026",
+  "partIndex": 1,
+  "ttsText": "研究者发现，一种分解酶，会从它的开头切掉两个氨基酸。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 1,
+  "seed": 1971177834,
+  "signature": "757dc96aaa97c85ea0678a7f9a76f3d99daf5b7ab70fe12e1c96fdf5550a6a86",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\raw\\h026-p02.wav",
+  "rawSHA256": "f35070278e9c88893f332252075a29280beed86c22308deade62461ac575cd3f",
+  "rawMetrics": {
+    "samples48k": 241920,
+    "seconds": 5.04,
+    "peakDBFS": -5.672794895239458,
+    "first20msDBFS": -65.47137986781598,
+    "last20msDBFS": -71.66222807751797,
+    "firstActiveMs": 270.0,
+    "lastActiveToEndMs": 370.0,
+    "activityThresholdDBFS": -48.09768839373347,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\guarded\\h026-p02.wav",
+  "guardedSHA256": "108130f4252dfde833eac31b865c284f5b1705604fe7ad8d470b357297fb75af",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\processed\\h026-p02.wav",
+  "sha256": "eee3235904e33edb65245d2fc227280862a3c59feab5d98254535419a1b6acc4",
+  "durationSeconds": 5.28,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "108130f4252dfde833eac31b865c284f5b1705604fe7ad8d470b357297fb75af",
+    "outputSha256": "eee3235904e33edb65245d2fc227280862a3c59feab5d98254535419a1b6acc4",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.174712777425981,
+    "input": {
+      "seconds": 5.28,
+      "peakDb": -5.672374217132543,
+      "activeRmsDb": -21.744657407849296,
+      "quietFrameP10Db": -63.329396791142216
+    },
+    "output": {
+      "seconds": 5.28,
+      "peakDb": -6.455568671574996,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -63.53269287036187
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

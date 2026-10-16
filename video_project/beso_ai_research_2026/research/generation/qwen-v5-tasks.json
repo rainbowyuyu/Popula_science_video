@@ -1,0 +1,181 @@
+{
+  "version": 5,
+  "tasks": {
+    "v5-web-to-platform": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T19:11:26.606115+08:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610115
+      },
+      "prompt": "连续五秒的高端工程发布片概念镜头。精确保持首尾图片右侧同一座三外柱半潜式风机平台的刚性构型，三根外倾圆筒、三根内腿、三根短径向梁、中心连接盘、细长白色塔筒、三片叶片和原有系泊线始终是同一实体，不改变数目、尺寸、连接方向和比例。摄影机沿首尾机位给定的方向轻柔侧移、略微靠近，逐渐稳定到尾帧构图；克制的连续运镜、柔和反射与真实金属表面为主要变化。海面只有微小自然细浪，青蓝天空与海面有唯一柔和地平线，光线连续不过度戏剧化。尾帧左侧的青蓝色方形BESO证据块和薄白色承托平面是另外一个独立的对象，必须完整保持方块形状，沿镜头侧向从画外缓缓滑入到尾帧的位置；不从风机长出来，也不把风机液化或变成方块。风机和证据块两者保持独立、稳定、不互相穿透。可以用极淡的纸面边缘反射帮助概念融合，但不产生额外纸页或卡片，不产生任何网页、文字、Logo、数字、数值、曲线、应力热力图或优化结果。末尾半秒轻柔减速并准确落在尾帧。无硬切、无闪白、无形变、无爆炸、无粒子、无额外构件、无新物理结果。这只是原生机位间的外观概念桥接，真实界面将后期独立叠回。",
+      "negativePrompt": "跳切、闪白、黑帧、液化、融化、模型变形、第四根浮筒、额外支臂、额外塔筒、额外叶片、爆炸、粒子、花哨光环、新增文字、伪造数字、Logo、水印、人物、手、应力图、计算结果、背景水平条带、抖动、闪烁、卡片翻页",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v5/native-anchors/frame-000900.png",
+          "sha256": "3f0eba223e5d9da75ea30350c01934f5a14d12930e452da8f95b732fec4caab2",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1204403
+        },
+        {
+          "path": "public/generated/v5/native-anchors/frame-001199.png",
+          "sha256": "9ecfa30457ce03890d6140dabbe3e6305b63bc2687c8d0c8e26ae585d9d7df0c",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1223416
+        }
+      ],
+      "fromFrame": 900,
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "accepted_v6",
+      "http": 200,
+      "requestId": "a9ba0030-a398-9e0f-afc4-c3b28ea6da73",
+      "taskId": "665e24b4-4ae9-4bf1-8f30-3394d36141f8",
+      "lastPolledAt": "2026-10-11T19:12:32.205091+08:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v5/v5-web-to-platform.mp4",
+      "sha256": "dc0785df53dec38c23b9fd74e8bad4480bcf100c388bd030abda58e2b6b77392",
+      "completedAt": "2026-10-11T19:12:33.152337+08:00",
+      "qa": "work/qwen-v5-qa/v5-web-to-platform/qa.json"
+    },
+    "v5-platform-to-viewer": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T19:11:47.009398+08:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610116
+      },
+      "prompt": "高端工程软件发布片的连续五秒概念镜头。起点是首帧风机浮体系泊线和连接处近景，摄影机沿现有系泊线方向平滑侧移，同时轻柔后移抬升，到达尾帧海面上同一风机的平台和塔筒视角。保持三根外倾圆筒、三根内腿、三根径向梁、中央连接盘、一个白色细长塔筒与原有全部系泊线的几何形状、连接关系、数量和尺寸比例完全恒定。部分外柱逐渐被海面遮挡由镜头高度和水线变化产生，钢壳不能消失、熔化或变形；海面只小幅自然细浪，水位和遮挡连续。主体表面精细柔和，海水青蓝低饱和，平滑高光和克制阴影。镜头匀顺、轻柔加减速、没有目标跳变，尾部半秒缓慢稳定至尾帧的准确构图。不要生成网页、按钮、卡片、文字、Logo、数字、张力或应力图、图表或计算结果，不新增线框与选中光环。真实软件界面将在后期独立叠加，这里只做外观和摄影机概念转场，不冒充仿真。无硬切、无闪白、无爆炸、无粒子、无多余浮筒或梁、无结构重新长出、无强烈浪花、无背景水平色带。",
+      "negativePrompt": "硬切、闪白、黑帧、融化、液化、结构变形、结构重构、额外浮筒、额外塔筒、爆炸、粒子云、闪烁、扭曲网页、新增数字、伪造曲线、生成应力图、新文字、Logo、水印、翻页、深重阴影、拥挤界面、水平色带",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v5/native-anchors/frame-002940.png",
+          "sha256": "57558198f1e44a03ad360e61a92b2fb3c40f437f17aa7ec6eb99139c769e87bb",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 940457
+        },
+        {
+          "path": "public/generated/v5/native-anchors/frame-003239.png",
+          "sha256": "1fe1a42332857c5f79fd09720e77c1fa1d485864592a2280d6ff2ef944207f2d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1205799
+        }
+      ],
+      "fromFrame": 2940,
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "rejected",
+      "http": 200,
+      "requestId": "c10beaf2-24d2-9346-9fc5-49da7f8bf56d",
+      "taskId": "cf07f175-0604-4b1e-8dd8-7e41ee76e297",
+      "lastPolledAt": "2026-10-11T19:12:35.307653+08:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v5/v5-platform-to-viewer.mp4",
+      "sha256": "96835fa7205edd7484910b31f64cc67df60736f6032ecd0591ecd6dbb3ee1790",
+      "completedAt": "2026-10-11T19:12:36.366869+08:00",
+      "qa": "work/qwen-v5-qa/v5-platform-to-viewer/qa.json",
+      "editorialReviewNote": "Right outer column separates from its radial beam around 3.0-3.5 seconds. Full-frame use rejected; original output and audit retained.",
+      "editorialReviewedAt": "2026-10-11T19:16:36.514393+08:00"
+    },
+    "v5-platform-to-viewer-r2": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T19:18:28.293865+08:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610117
+      },
+      "prompt": "一镜到底的高端工程软件发布片概念镜头。严格保持首尾图片同一座三外柱半潜式风机的刚性构型，三根外倾圆筒、三根内腿、三根径向梁、中央连接盘、单根白色塔筒和原有系泊线的数量尺寸、位置方向和连接关系恒定。全部外柱始终通过原有连接梁牢固连接中央结构，不允许任何外柱离开梁、不允许任何梁缩短消失、不让任何构件离开画面再突然重新变完整。摄影机仅轻柔水平弧线侧移与很小的后移，沿首尾给定机位缓慢到达尾帧构图；不抬升不下潜、不产生显著俯仰、水线高度固定、平台不摇晃也不形变。轻柔弧线运镜与精致表面反射作为唯一主要变化，青蓝海面只有低幅自然细浪，柔和光影与克制景深。可用极淡数字视窗边缘的外观反射做概念连接，但不生成实际窗口、按钮、文字、Logo、数字或数据；真实软件界面将在后期独立叠回。末尾半秒减速并精准落在尾帧的模型位置、观察角度和水线。钢壳保持实体坚硬恒定，没有融化、生长、粒子、爆炸、额外柱、额外梁、选中光环、求解图或伪造响应。这只是摄影机和外观概念桥接，不表示物理求解。",
+      "negativePrompt": "外柱脱离梁、构件断开、浮筒重新长出、梁消失、结构液化、几何变形、镜头俯仰大变、水线大变、平台下沉、大浪、剧烈摇晃、额外柱、额外梁、硬切、闪白、粒子、爆炸、文字、Logo、数字、图表、应力图、伪造数据、水平色带",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v5/native-anchors/frame-003239.png",
+          "sha256": "1fe1a42332857c5f79fd09720e77c1fa1d485864592a2280d6ff2ef944207f2d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1205799
+        },
+        {
+          "path": "public/generated/v5/native-anchors-replacement/frame-003539.png",
+          "sha256": "d3038969e438b6d02ff377fcfd6b5038f36a23fe8f7bd43226076f0f60cc33d8",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1282513
+        }
+      ],
+      "fromFrame": 3240,
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "accepted_v6",
+      "http": 200,
+      "requestId": "4cf62f4d-a14b-93bf-8b54-bb0b2b9b4281",
+      "taskId": "e33c00dc-b1a8-48ae-b7e6-49c966791f7b",
+      "lastPolledAt": "2026-10-11T19:19:27.970322+08:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v5/v5-platform-to-viewer-r2.mp4",
+      "sha256": "8188966644311993318e009c24ad32c69efad43b2ba6bfd9c2e87dec05ad98f9",
+      "completedAt": "2026-10-11T19:19:28.712687+08:00",
+      "qa": "work/qwen-v5-qa/v5-platform-to-viewer-r2/qa.json"
+    }
+  }
+}

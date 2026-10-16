@@ -1,0 +1,727 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; ">
+<title>GPU-Powered High-Performance Computing for the Analysis of Large-Scale 
+Structures Based on OpenSees</title>
+<style><!--
+.Normal
+	{text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:Calibri;}
+.MsoCommentReference
+	{}
+.a
+	{text-align:center;
+	line-height:21.0pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	color:black;
+	letter-spacing:.5pt;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+<IFRAME marginWidth=0 marginHeight=0 
+   src="../encommontop.html" frameBorder=0 width="881" 
+   height="135" scrolling=no topmargin="0"> </IFRAME> 
+<table width="881" border="0">
+    <tr>
+      
+    <td> 
+    	
+<div style='layout-grid:15.6pt'> 
+  <p align=center style='text-align:center'><b><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>GPU-Powered 
+    High-Performance Computing for the Analysis of Large-Scale Structures Based 
+    on OpenSees</span></b></p>
+  <p align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>Yuan Tian, Linlin Xie, 
+    Zhen Xu, Xinzheng Lu</span></p>
+  <p align=center style='text-align:center'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>Key Laboratory of Civil 
+    Engineering Safety and Durability of the China Education Ministry, Department 
+    of Civil Engineering, Tsinghua University, Beijing, P.R. China, 100084; PH 
+    (86 010) 62795364; </span><span lang=EN-US style='font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;;'>email: luxz@tsinghua.edu.cn</span></p>
+  <p align=center style='text-align:center'><font size="3">Proc. 2015 ASCE International 
+    Workshop on Computing in Civil Engineering, Jun. 21 - 23, 2015, Austin, TX, 
+    USA: 411-418. </font></p>
+        <p align=center style='text-align:center'><font size="3"><a href="http://dx.doi.org/10.1061/9780784479247.051"><b>Download 
+          Full Text</b><br>
+          http://dx.doi.org/10.1061/9780784479247.051</a></font></p>
+  <p><b><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";'>ABSTRACT </span></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";'>Numerical simulations 
+    using various finite element (FE) software packages have been widely adopted 
+    to investigate the seismic performance of large-scale important structures, 
+    such as super-tall buildings and large-span bridges. Among these FE software 
+    packages, </span><span lang=EN-US style='font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;'>Open System for Earthquake Engineering Simulation</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";'> (OpenSees), 
+    as an open-source FE software program, has increasingly become one of the 
+    most influential packages. However, the computational efficiency of the solvers 
+    for linear systems of equations (SOE) in OpenSees, which use the direct method, 
+    cannot satisfy the demand for numerical simulation of large-scale structures. 
+    Consequently, two new parallel-iterative solvers for the sparse SOE are proposed 
+    and implemented in OpenSees, based on two graphics processing unit (GPU)-based 
+    libraries, CuSP and CulaSparse. The time history analysis of a 141.8 m frame-core 
+    tube building and a super-tall building (the Shanghai Tower with a height 
+    of 632 m) are performed using the proposed solvers. The speed-up ratio of 
+    the proposed solvers is up to 9 to 15, with high accuracy in results when 
+    compared with the efficiency of the existing central processing unit (CPU)-based 
+    SparseSYM solver in OpenSees. This research outcome can provide an effective 
+    computing technology for the numerical analysis of the seismic behavior of 
+    large-scale structures.</span></p>
+  <p><b><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";'>KEY WORDS </span></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Large-scale 
+    structures; </span><span lang=EN-US style='font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+layout-grid-mode:line'>numerical</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'> analysis; 
+    OpenSees; GPU; parallel-iterative solver.</span></p>
+
+        <b><font color="#FF0000">If you need the PDF version of this paper, please 
+        email to <a href="mailto:luxinzheng@sina.com">luxinzheng@sina.com</a> 
+        </font></b> 
+    </div></td>
+  </tr>
+</table>
+<table width="881" border="0">
+    <tr>      
+      <td> 
+
+
+  <p style='line-height:150%'><b><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>INTRODUCTION</span></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>In recent years, more and 
+    more large-scale structures (e.g., high-rise buildings, super-tall buildings, 
+    large-span bridges and high dams) are being designed and built worldwide. 
+    Concurrently, research on the seismic behavior of large-scale structures has 
+    become increasingly common, owing to the important social function of these 
+    structures and the frequent occurrence of earthquakes. In addition, research 
+    to date indicates that numerical simulation, using </span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";'>finite element (FE) analysis, 
+    </span><span lang=EN-US style='font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;'>is an effective method of investigating 
+    the nonlinear seismic behavior of such structures (Lu et al. 2011, 2013a; 
+    Xu et al. 2013; Li et al. 2014; Xie et al. 2014a). Among existing FE software, 
+    OpenSees, an open-source FE program, has been widely used because it is versatile, 
+    extensible and shareable (McKenna et al. 2009). </span></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>A multi-layer shell element, 
+    based on the principles of composite material mechanics, has been developed 
+    in OpenSees for shear walls, core tubes and floor slabs, which are important 
+    components of large-scale structures (Lu et al. 2013b; Xie et al. 2014a, 2014</span><span
+lang=X-NONE style='font-size:12.0pt;font-family:"Times New Roman";'>b</span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>). 
+    This multi-layer shell element has been applied in investigating the seismic 
+    behavior of super-tall buildings and large-span bridges, providing useful 
+    references and an effective tool for further research on the seismic behavior 
+    of large-scale structures. However, the abovementioned research also indicated 
+    that the computational efficiency of OpenSees based on CPU computing </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";'>cannot satisfy 
+    the demand for numerical simulation of large-scale structures.</span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'> 
+    This restricts further investigation on the seismic behavior of such structures 
+    using this software package.</span></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>Recently, GPU have been 
+    rapidly developed and applied in the general computing field, due to their 
+    powerful parallel computing capability and low cost (</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Owens et al. 
+    2007</span><span lang=EN-US style='font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;'>). Further, seismic damage simulations 
+    of urban areas have been conducted by Lu et al. (2014a) using GPU/CPU cooperative 
+    computing. Their benchmark cases indicate that the computing efficiency of 
+    GPU could be up to almost 40 times that of a traditional CPU. Accordingly, 
+    a GPU may have the potential to provide a high-performance alternative for 
+    the seismic performance analysis of large-scale structures based on OpenSees.</span></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";'>In this study, two new 
+    parallel-iterative solvers for the sparse SOEs are proposed and implemented 
+    in OpenSees, based on GPU-powered high-performance computing. The nonlinear 
+    time history analysis (THA) of a 141.8 m frame-core tube building and a super-tall 
+    building (the Shanghai Tower with a height of 632 m) are performed using the 
+    proposed solvers. In comparison with the existing CPU-based SparseSYM solver 
+    in OpenSees, the speedup ratio using the proposed solver is up to 9 to 15, 
+    with high accuracy in result. The outcome of this study can provide an effective 
+    computing technology for numerical analysis of the seismic behavior of large-scale 
+    structures.</span></p>
+  <p><b><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>COMPUTING METHOD</span></b></p>
+  <p><b><i><span lang=EN-US style='font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+color:black'>Solvers for the Sparse SOEs in OpenSees</span></i></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>A critical issue for nonlinear 
+    THA, using OpenSees, is how to define the system of equations (SOE), which 
+    includes two basic classes: the Linear System of Equation (<i>LinearSOE</i>) 
+    class and the Linear System of Equation Solver (<i>LinearSOESolver</i>) class. 
+    The <i>LinearSOE</i> class and the <i>LinearSOESolver</i> class determine 
+    the storage and solution method of the SOE, respectively. </span></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>In the <i>LinearSOE</i> 
+    class, the SOE is usually composed of mass, stiffness and damping matrices. 
+    For large-scale structure models using <span style='color:black'>beam </span>and 
+    shell elements, the stiffness matrix and mass matrix usually exhibit significant 
+    sparse characteristics. The damping matrix will be also sparse, if classical 
+    Rayleigh damping is adopted. Hence, a storage method suitable for sparse SOE 
+    is required in the <i>LinearSOE</i> class.</span></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>The <i>LinearSOESolver</i> 
+    class in OpenSees (Version 2.4.3) integrates three types of sparse SOEs, namely: 
+    SuperLU SOE, UmfPack SOE and SparseSYM SOE. For these sparse SOEs, direct 
+    methods are generally adopted, such as triangular and elimination decomposition. 
+    However, direct methods are difficult to be highly parallelized. Based on 
+    CPU computing, only a few solvers can be paralleled with a low efficiency. 
+    The direct method is also not suitable for GPU-based parallel computing. Therefore, 
+    a new and efficient solver for the sparse SOEs is required in the <i>LinearSOESolver</i> 
+    class.</span></p>
+  <p><b><i><span lang=EN-US style='font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+color:black'>GPU-based Solvers for the Sparse SOEs in OpenSees</span></i></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>GPUs have powerful floating 
+    point operations and parallel computing capabilities, which are very favorable 
+    for large-scale computational problems. However, according to the above analysis, 
+    the<span style='color:black'> solvers for the sparse SOEs in</span> OpenSees 
+    are not suitable for parallel processing using a GPU. Therefore, it is necessary 
+    to develop a new solver for the sparse SOEs in OpenSees, which is more suitable 
+    for GPU-based parallel processing. To improve the performance of the <span
+style='color:black'>GPU-based solver</span> and retain compatibility with the 
+    original computing programs in OpenSees, the solver is developed based on 
+    the following rules:</span></p>
+  <p>(1) The iterative method including the conjugate gradient (CG) algorithm, 
+    Bi-CG algorithm and GMRES algorithm is used to maximize the parallel computing 
+    ability of the GPU.&nbsp; </p>
+  <p><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>(2) 
+    The SOE class (corresponding to the <i>LinearSOE</i> class) and the Solver 
+    class (corresponding to the <i>LinearSOESolver</i> class) are designed separately. 
+    The SOE class is designed inheriting the <i>LinearSOE</i> class, to improve 
+    the compatibility of the solver.</span></p>
+  <p><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>(3) 
+    The solving function in the Solver class is designed in the form of a dynamic-link 
+    library (DLL) to improve extensibility, which is convenient for modification.</span></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>Figure 1 illustrates the 
+    specific solving process of GPU-accelerated solvers. The matrix is integrated 
+    in CPU, and then copied into the graphics memory to perform parallel computing. 
+    Finally, the results are returned into CPU for subsequent computing.</span></p>
+  <p align=center style='text-align:center'><span lang=EN-US> <img width=346 height=296
+src="./GPU-OpenSees_ASCE_Workshop_2015.files/image002.png" v:shapes="_x0000_i1025" alt="Figure 1. Flow chart of GPU-based solvers for the sparse SOEs"> 
+    </span><span lang=EN-US style='font-size:12.0pt;font-family:
+&quot;Times New Roman&quot;'></span></p>
+  <p align=center style='text-align:center'><b><span lang=EN-US style='font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+color:black'>Figure 1. Flow chart of GPU-based solvers for the sparse SOEs</span></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>There exists several storage 
+    formats for sparse matrices. Among these, the compressed sparse row (CSR) 
+    format is commonly adopted. This storage format can quickly convert into the 
+    coordinate (COO) format, with less storage space than alternatives. Some useful 
+    matrix characteristic values, such as the number of non-zero elements in a 
+    row of the matrix, can be quickly obtained. In addition, the CSR format is 
+    convenient for the parallel computing of matrix multiplication and vector-matrix 
+    multiplication. Hence, this format is used to store the sparse matrices in 
+    this study. A <i>SparseGenRowLinSOE</i> class is provided in OpenSees, which 
+    can store sparse matrices in the CSR format. Therefore, this class is used 
+    directly as the designed SOE class in this work.</span></p>
+  <p><span class=MsoCommentReference><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>T</span></span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>he designed 
+    Solver class should be written in a language suitable for GPU computing. Therefore, 
+    two GPU-accelerated solving libraries for the sparse SOEs, based on Compute 
+    Unified Device Architecture (CUDA) (NVIDA, 2014a), are adopted, namely: (1) 
+    <i>CulaSparse</i>, which is a linear algebra function library (Humphrey et 
+    al. 2010) and (2) <i>CuSP</i>, which is an open source library for sparse 
+    linear algebra (NVIDIA, 2014b). The corresponding scripts of <i>CuSP</i> are 
+    provided in detail at<span style='color:black'> <a
+href="http://opensees.berkeley.edu/wiki/index.php/Cusp"><span style='color:
+black;text-decoration:none;text-underline:none'>http://opensees.berkeley.edu/wiki/index.php/Cusp</span></a></span>. 
+    The corresponding source codes that illustrate the implementation procedure 
+    of these two solvers in detail are available at the website of OpenSees (PEER, 
+    2014). This will facilitate the reproduction of this research.</span></p>
+  <p><b><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>CASE STUDY</span></b></p>
+  <p><span lang=EN-US style='font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;'>A performance benchmark is conducted 
+    for the proposed GPU-based solvers. Two structural models are adopted in this 
+    benchmark, named TBI2N model and Shanghai Tower model, respectively. The TBI2N 
+    model is a </span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";'>frame-core 
+    tube building designed according to the Chinese building design codes for 
+    the TBI program</span><span lang=EN-US style='font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;'> (<i>H</i> = 141.8 m) (Lu et al. 2014b). 
+    It contains 23,945 nodes, 23,024 fiber-beam elements and 16,032 multi-layer 
+    shell elements, as shown in Figure 2(a). The OpenSees model is freely assessable 
+    (Lu, 2014c), which can be conveniently shared and reused in the research community. 
+    The Shanghai Tower model (<i>H</i> = 623 m) (Lu et al. 2011) contains 53,006 
+    nodes, 48,774 fiber-beam elements and 39,315 multi-layer shell elements, as 
+    shown in Figure 2(b). </span></p>
+  <p><span lang=EN-US style='font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;'>The El-Centro EW ground motion is adopted 
+    to perform the nonlinear THA. According to the design conditions, peak ground 
+    acceleration (PGA) values of 1000 gal and 400 gal are selected for the TBI2N 
+    and Shanghai Tower models, respectively, to investigate the strong nonlinear 
+    behavior they would be subjected to in extremely rare earthquakes. Detailed 
+    information of the GPU and CPU hardware platforms and their respective solvers 
+    are illustrated in Table 1. </span></p>
+  <div align=center> 
+    <table border=0 cellspacing=0 cellpadding=0>
+      <tr> 
+        <td width=232 valign=top class="Normal"> 
+          <p align=center style='text-align:center'> <img border=0 width=134 height=189
+  src="./GPU-OpenSees_ASCE_Workshop_2015.files/image004.jpg" v:shapes="_x0000_i1026" alt="Figure 2. Benchmark models"> 
+            &nbsp;&nbsp;</p>
+        </td>
+        <td width=232 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman"'> <img border=0 width=85 height=189
+  src="./GPU-OpenSees_ASCE_Workshop_2015.files/image006.png" alt=Figure 2. Benchmark models v:shapes="图片_x0020_2"> 
+            </span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width=232 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman";'>(a) the TBI2N model</span><span lang=EN-US style='font-size:12.0pt;
+  font-family:&quot;Times New Roman&quot;'></span></p>
+        </td>
+        <td width=232 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman";'>(b) the Shanghai Tower 
+            model</span><span lang=EN-US style='font-size:
+  12.0pt;font-family:&quot;Times New Roman&quot;'></span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width=463 colspan=2 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><b><span lang=EN-US style='font-size:12.0pt;
+  font-family:&quot;Times New Roman&quot;;'>Figure 2. Benchmark models</span></b><b><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman"'></span></b></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p align=center style='text-align:center'><b><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Table 
+    1. Hardware platform and solvers for the comparison</span></b></p>
+  <div align=center> 
+    <table border=0 cellspacing=0 cellpadding=0 width="89%">
+      <tr> 
+        <td width="23%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Platform</span></p>
+        </td>
+        <td width="45%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Hardware</span></p>
+        </td>
+        <td width="31%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Solvers</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width="23%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>CPU computing</span></p>
+        </td>
+        <td width="45%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=IT style='font-size:12.0pt;font-family:"Times New Roman";'>Intel Core i7-3970X 
+            3.5GHz</span></p>
+        </td>
+        <td width="31%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>SparseSYM</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width="23%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>GPU computing</span></p>
+        </td>
+        <td width="45%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=IT style='font-size:12.0pt;font-family:"Times New Roman";'>Intel Core i7-4770X 
+            3.4GHz &amp;</span></p>
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>NVIDIA Geforce 
+            GTX Titan</span></p>
+        </td>
+        <td width="31%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>CulaSparse 
+            Solver &amp; CuSP Solver</span></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div align=center> 
+    <table border=0 cellspacing=0 cellpadding=0>
+      <tr> 
+        <td width=463 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman"'> <img border=0 width=349 height=184
+  src="./GPU-OpenSees_ASCE_Workshop_2015.files/image008.png" v:shapes="图片_x0020_3" alt="Figure 3. Comparison of top displacement time history curves"> 
+            </span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width=463 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman";'>(a) TBI2N model</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width=463 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman"'> <img border=0 width=347 height=184
+  src="./GPU-OpenSees_ASCE_Workshop_2015.files/image010.png" v:shapes="图片_x0020_4" alt="Figure 3. Comparison of top displacement time history curves"> 
+            </span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width=463 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><span lang=EN-US
+  style='font-size:12.0pt;font-family:"Times New Roman";'>(b) Shanghai Tower model</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width=463 valign=top class="Normal"> 
+          <p align=center style='text-align:center'><b><span lang=EN-US style='font-size:12.0pt;
+  font-family:&quot;Times New Roman&quot;;'>Figure 3. Comparison of </span></b><b><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>top displacement</span></b><b><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";'> time history 
+            curves</span></b></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p class=a style='line-height:normal'><b><span lang=EN-US style='font-size:12.0pt;letter-spacing:0pt'>Table 
+    2. Computing Time and speedup ratio of Three Solvers</span></b></p>
+  <div align=center> 
+    <table border=0 cellspacing=0 cellpadding=0 width="100%">
+      <tr> 
+        <td width="7%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Platform</span></p>
+        </td>
+        <td width="18%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Solvers</span></p>
+        </td>
+        <td width="20%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Computing 
+            time of the TBI2N model</span></p>
+        </td>
+        <td width="16%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Speedup ratio</span></p>
+        </td>
+        <td width="19%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Computing 
+            time of the Shanghai Tower model</span></p>
+        </td>
+        <td width="17%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Speedup ratio</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width="7%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>CPU</span></p>
+        </td>
+        <td width="18%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>SparseSYM</span></p>
+        </td>
+        <td width="20%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>168 h</span></p>
+        </td>
+        <td width="16%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>\</span></p>
+        </td>
+        <td width="19%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>409 h</span></p>
+        </td>
+        <td width="17%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>\</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width="7%" rowspan=2 class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>GPU</span></p>
+        </td>
+        <td width="18%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>CulaSparseSolver</span></p>
+        </td>
+        <td width="20%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>18 h</span></p>
+        </td>
+        <td width="16%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>9.33</span></p>
+        </td>
+        <td width="19%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>38 h</span></p>
+        </td>
+        <td width="17%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>10.76</span></p>
+        </td>
+      </tr>
+      <tr> 
+        <td width="18%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>CuSPSolver</span></p>
+        </td>
+        <td width="20%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>11 h</span></p>
+        </td>
+        <td width="16%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>15.27</span></p>
+        </td>
+        <td width="19%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>27.5 h</span></p>
+        </td>
+        <td width="17%" class="Normal"> 
+          <p align=center style='
+  text-align:center;'><span
+  lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>14.87</span></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>Based on above platforms, 
+    the performances of the three solvers (two GPU-based solvers and one CPU-based 
+    solver) are compared. Figure 3 presents the comparison of top displacement 
+    time-history curves. As shown in Figure 3, there are nearly negligible differences 
+    between the results of the CPU solver and the GPU solvers, which is acceptable. 
+    Table 2 shows the comparison of the computing times and the speed-up ratios. 
+    The speed-up ratio is up to 9-15 times by using the two proposed GPU-based 
+    solvers. Evidently, the GPU-based solvers in OpenSees exhibit significant 
+    reliability and high efficiency for the nonlinear THA of large-scale structures.</span></p>
+  <p><b><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>CONCLUSIONS</span></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>In this study</span><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";'>, two new parallel-iterative 
+    solvers for the sparse SOEs are proposed and implemented in OpenSees, based 
+    on two GPU-based libraries (CuSP and CulaSparse).</span><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'> 
+    The THAs of two high-rise buildings are conducted using the two proposed GPU-based 
+    solvers and an existing CPU-based solver. The results indicate that GPU-based 
+    solvers have a good agreement with CPU-based solver in accuracy. Furthermore, 
+    a speedup ratio of 9-15 times is achieved using the proposed solvers. This 
+    work provides an important computing technology for the high performance analysis 
+    of large-scale structures based on OpenSees.</span></p>
+  <p><b><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>ACKNOWLEDGEMENTS</span></b></p>
+  <p><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>The study is supported 
+    by National Key Technology R&amp;D Program (No. 2013BAJ08B02), National Natural 
+    Science Foundation of China <span style='color:black'>(No. 91315301</span></span><span
+style='font-size:12.0pt;font-family:宋体;
+color:black'>，</span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman";color:black'>51378299), 
+    and Beijing Natural Science Foundation (No. 8142024). The authors also acknowledge 
+    Bo Han and Mengke Li for their contributions to this work.</span></p>
+  <p><b><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>REFERENCES</span></b></p>
+  <p><span
+lang=IT style='font-size:12.0pt;font-family:"Times New Roman";'>Humphrey, J. R., 
+    Price, D. K., Spagnoli, K. E., Paolini, A. L., and Kelmelis, E. J. (2010). 
+    </span><span lang=EN-US style='font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;'>“CULA: hybrid GPU accelerated linear 
+    algebra routines.” <i>SPIE Defense, Security, and Sensing.</i> International 
+    Society for Optics and Photonics, 770502-770502.</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'><a href="Soil_Structure_Interaction_Super_Tall_JRMGE_2014.htm">Li, 
+    M. K., Lu, X., Lu, X. Z., and Ye, L. P. (2014). “Influence of the soil-structure 
+    interaction on the seismic collapse resistance of super-tall buildings.” <i>Journal 
+    of Rock Mechanics and Geotechnical Engineering</i>, doi:10.1016/j.jrmge.2014.04.006.</a></span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'><a href="../publication5/Shanghai_Tower_SCTS.htm">Lu, 
+    X., Lu, X. Z., Zhang, W. K., and Ye, L. P. (2011). “Collapse simulation of 
+    a super high-rise building subjected to extremely strong earthquakes.” <i>Sci. 
+    China. Ser. A.</i>, 54(10), 2549-2560. </a></span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'><a href="../publication5/Collapse_Simulation_RC_High_Rise_Building_Earthquakes_EESD_2013.htm">Lu, 
+    X., Lu, X. Z., Guan, H., and Ye, L. P. (2013a). “Collapse simulation of reinforced 
+    concrete high-rise building induced by extreme earthquakes.” <i>Earthq. Eng. 
+    Struct. D.</i>, 42(5), 705-723.</a></span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Lu, X. Z., Xie, 
+    L. L., Huang, Y. L., Lin, K. Q., Xiong, C., and Han, B. (2013b). “Nonlinear 
+    simulation of super tall building and large span bridges based on OpenSees.” 
+    <a
+href="http://www.luxinzheng.net/download/OpenSees_Workshop/LuXinzheng.pdf">http://www.luxinzheng.net/download/OpenSees_Workshop/LuXinzheng.pdf</a> 
+    &gt;(Feb. 6, 2015).</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'><a href="A_coarse-grained_parallel_GPU_CPU_cooperative_computing_ADES_2014.htm">Lu, 
+    X. Z., Han, B., Hori, M., Xiong, C., and Xu, Z. (2014a). “A coarse-grained 
+    parallel approach for seismic damage simulations of urban areas based on refined 
+    models and GPU/CPU cooperative computing.” <i>Adv. Eng. Softw.</i>, 70, 90-103.</a></span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Lu, X. Z., Li, 
+    M. K., Lu, X., and Ye, L. P. (2014b). “A comparison of the seismic design 
+    of tall RC frame-core tube structures in China and the United States.” <i>Proceedings 
+    of the 10<sup>th</sup> National Conference in Earthquake Engineering</i>, 
+    Earthquake Engineering Research Institute, Anchorage, AK,</span><span lang=EN-US> 
+    </span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'>doi: 10.4231/D3DZ03252.</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Lu, X. Z. (2014c). 
+    “OpenSees Tall Buildings.” <a
+href="http://www.luxinzheng.net/download/OpenSeesTallBuildings.zip">http://www.luxinzheng.net/download/OpenSeesTallBuildings.zip</a> 
+    &gt;(Feb. 6, 2015).</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>McKenna, F., 
+    Scott. M. H., and Fenves, G. L. (2009). “Nonlinear finite-element analysis 
+    software architecture using object composition.” <i>J. Comput. Civil Eng.</i>, 
+    24(1), 95-107.</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>NVIDIA (2014a). 
+    “CUDA C programming guide.” <a
+href="http://docs.NVIDIA.com/cuda/pdf/CUDA_C_Programming_Guide.pdf">http://docs.NVIDIA.com/cuda/pdf/CUDA_C_Programming_Guide.pdf</a> 
+    &gt;(Feb. 6, 2015).</span></p>
+  <p><span
+lang=PT-BR style='font-size:12.0pt;font-family:"Times New Roman";'>NVIDIA (2014b). 
+    “CuSP Home Page.” </span><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman"'><a
+href="http://cusplibrary.github.io/">http://cusplibrary.github.io/</a> &gt;(Feb. 
+    6, 2015).</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman";color:black'>Owens, 
+    J. D., Luebke, D., Govindaraju, N., Harris, M., Krüger, J., Lefohn, A. E., 
+    and Purcell, T. J. (2007). “A survey of general-purpose computation on graphics 
+    hardware.” <i>Comput. Graph. Forum.</i>, 26, 80–113.</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>PEER (2014). 
+    “Subversion Repositories.” <a
+href="http://opensees.berkeley.edu/WebSVN/listing.php?repname=OpenSees&amp;path=%2Ftrunk%2FSRC">http://opensees.berkeley.edu/WebSVN/listing.php?repname=OpenSees&amp;path=%2Ftrunk%2FSRC</a> 
+    &gt;(Feb. 6, 2015).</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Xie, L. L., 
+    Huang, Y. L., Lu, X. Z., Lin, K. Q., and Ye, L. P. (2014a). “Elasto-plastic 
+    analysis for super tall RC frame-core tube structures based on OpenSees.” 
+    <i>Engineering Mechanics</i>, 31(1), 64-71. (in Chinese)</span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'>Xie, L. L., 
+    Lu, X., Lu, X. Z., Huang, Y. L., and Ye, L. P. (2014b). “Multi-layer shell 
+    element for shear walls in OpenSees.” <i>Computing in Civil and Building Engineering</i>, 
+    ASCE, 1190-1197. </span></p>
+  <p><span
+lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman"'><a href="../publication5/Collision_Test_IJIE.htm">Xu, 
+    L. J., Lu, X. Z., Guan, H., and Zhang, Y. S. (2013). “Finite element and simplified 
+    models for collision simulation between over-height trucks and bridge superstructures.” 
+    <i>J. Bridge. Eng</i>., ASCE, 18(11), 1140-1151.</a></span></p>
+
+
+
+    </td>
+  </tr>
+</table>
+<table width="881" border="0">
+  <tr> 
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../english.htm">Introduction</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../enresearch.htm">Research</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../enpratical.htm">Application</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../enteaching.htm">Teaching</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../enpublications.htm">Publications</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../endownload.htm">Download</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../issues.htm">Issues</a></font></div>
+    </td>
+    <td width="115"> 
+      <div align="center"><font size="2" face="Arial, Helvetica, sans-serif"><a href="../others.htm">Others</a></font></div>
+    </td>
+  </tr>
+</table>
+<p style='text-align:justify;text-justify:inter-ideograph;
+line-height:18.0pt'>&nbsp;</p>
+<div id="floater" style="position:absolute; left:900px; top:160px; width:121px; height:600px; z-index:12"> 
+<IFRAME marginWidth=0 marginHeight=0 src="../enNews.htm" frameBorder=0 width="120" height="470" scrolling=no topmargin="0"> </IFRAME> 
+<p></p><div align="left"><font size="2" color="#0000FF"><a href="http://www.thu-civil.net/" target="_parent"><b>Our Lab</b></a></font></div>
+<p></p><div align="left"><font size="2" color="#0000FF"><a href="http://www.collapse-prevention.net/" target="_parent"><b>Collapse Prevention Committee</b></a></font></div>
+</div> 
+<SCRIPT language=JavaScript src="../java/floater.js"> </SCRIPT> 
+
+
+<IFRAME marginWidth=0 marginHeight=0 src="../horiz.htm" frameBorder=0 width="612" height="300" scrolling=no topmargin="0"> </IFRAME> 
+ 
+ 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-257704-1', 'auto');
+  ga('send', 'pageview');
+
+</script> </body>
+
+</html>
+
+
+
+
+
+

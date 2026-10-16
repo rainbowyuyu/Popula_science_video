@@ -1,0 +1,67 @@
+{
+  "id": "g042",
+  "text": "原药物组平均长回了此前减掉体重的约三分之二，提示长期管理仍然重要。",
+  "ttsText": "原药物组平均涨回了此前减掉体重的约三分之二，提示长期管理仍然重要。",
+  "signature": "6306cc45e61621588c8f078205510169ec8ba6bd312ff5f09003e3badc08e941",
+  "raw": "audio/raw/g042-6306cc45e6.wav",
+  "processed": "audio/candidates/pronunciation-v2/g042.wav",
+  "rawDuration": 6.56,
+  "duration": 6.56,
+  "sha256": "22985e2e6214cc689d1a6c9a75ec1caa824f4e53c3627d5fa48b2654e1c4f983",
+  "seed": 125182248,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g011",
+    "g042"
+  ],
+  "rawEndpointDB": -61.48028794802154,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "37bbe11cdd34af14ce4e536a43afa54dd81634e9d8fa548cdbbf83f32161139d",
+    "outputSha256": "22985e2e6214cc689d1a6c9a75ec1caa824f4e53c3627d5fa48b2654e1c4f983",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.607803677258957,
+    "input": {
+      "seconds": 6.56,
+      "peakDb": -7.695851542079114,
+      "activeRmsDb": -23.48166758359568,
+      "quietFrameP10Db": -62.27990477733408
+    },
+    "output": {
+      "seconds": 6.56,
+      "peakDb": -4.387519844102369,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.59539885578623
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

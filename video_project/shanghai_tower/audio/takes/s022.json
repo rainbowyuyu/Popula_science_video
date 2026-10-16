@@ -1,0 +1,70 @@
+{
+  "id": "s022",
+  "text": "骨架站稳以后，人要怎样在里面生活？上海中心把很高的一栋楼，分成了九个垂直分区。",
+  "ttsText": "骨架站稳以后，人要怎样在里面生活？上海中心把很高的一栋楼，分成了九个垂直分区。",
+  "signature": "a972b66a36b7ba976baeeb67bd8d9d82fac1c307e001c74d92fde7cd7b470f74",
+  "raw": "audio/raw/s022-a972b66a36.wav",
+  "processed": "public/voice/s022.wav",
+  "rawDuration": 7.28,
+  "duration": 7.28,
+  "sha256": "7d15e3b146d961ec71ae274cf5a7329ce4446a2b4089cc03278e381cb5d621e0",
+  "seed": 3162404505,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s021",
+    "s022",
+    "s023",
+    "s024"
+  ],
+  "rawEndpointDB": -96.76495651576546,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "d507f6c0f32cbf1ecac8aaf3fcbc2ca862f1710797dba29fd91f8bfb7bf07337",
+    "outputSha256": "7d15e3b146d961ec71ae274cf5a7329ce4446a2b4089cc03278e381cb5d621e0",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.1627557535801962,
+    "input": {
+      "seconds": 7.28,
+      "peakDb": -6.50498448080538,
+      "activeRmsDb": -23.048579386155353,
+      "quietFrameP10Db": -63.96101276936776
+    },
+    "output": {
+      "seconds": 7.28,
+      "peakDb": -2.938899985762597,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.693152284235566
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

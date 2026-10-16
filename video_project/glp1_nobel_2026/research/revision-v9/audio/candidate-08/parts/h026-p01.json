@@ -1,0 +1,87 @@
+{
+  "id": "h026",
+  "partIndex": 0,
+  "ttsText": "这条消息也有个麻烦：天然的胰高血糖素样肽一，进入血液后很快会被分解。研究者发现，一种分解酶，会从它的开头剪下两个氨基酸。少了这一小截，受体就不容易被激活。要做成药，得让这条消息多留一会儿。",
+  "storySHA256": "85cdc9a97a2f8269a7f33ebb9cfc5c6617c623ed907949a5c448a0164ecec7e2",
+  "attempt": 8,
+  "seed": 1327560160,
+  "signature": "4f20f5e0d70869bceefade8b6d5883618b73cafb3448420d24ed931d7024425c",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h026-p01",
+    "h027-p01",
+    "h036-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-08\\raw\\h026-p01.wav",
+  "rawSHA256": "03739d86af04f45d1be4e0a01fe91380cff690557ab1f427cfd687517508e65f",
+  "rawMetrics": {
+    "samples48k": 814080,
+    "seconds": 16.96,
+    "peakDBFS": -7.695256583609006,
+    "first20msDBFS": -87.51666343265619,
+    "last20msDBFS": -97.4538787094116,
+    "firstActiveMs": 60.0,
+    "lastActiveToEndMs": 420.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-08\\guarded\\h026-p01.wav",
+  "guardedSHA256": "ac829abd18893c3233ca64cce99c634bf1b012f5af7509feab50d6bdb2637c84",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-08\\processed\\h026-p01.wav",
+  "sha256": "b6f14872c839bc69446cb343d07aefcf10b73269c84e9a71f0ae7ffb92bb1419",
+  "durationSeconds": 17.2,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "ac829abd18893c3233ca64cce99c634bf1b012f5af7509feab50d6bdb2637c84",
+    "outputSha256": "b6f14872c839bc69446cb343d07aefcf10b73269c84e9a71f0ae7ffb92bb1419",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.7832442763859966,
+    "input": {
+      "seconds": 17.2,
+      "peakDb": -7.69462763566634,
+      "activeRmsDb": -22.642506451130675,
+      "quietFrameP10Db": -64.99257161527547
+    },
+    "output": {
+      "seconds": 17.2,
+      "peakDb": -4.208105687039582,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -65.07471029737926
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

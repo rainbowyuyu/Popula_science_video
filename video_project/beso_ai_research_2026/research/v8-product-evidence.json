@@ -1,0 +1,321 @@
+{
+  "schema": "ai-engineer-v8-product-evidence-v1",
+  "auditedAt": "2026-10-11T15:03:44.697643+00:00",
+  "productRoot": "D:\\python_project\\beso_ai",
+  "filmRoot": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026",
+  "features": [
+    {
+      "id": "requirements_same_checklist",
+      "title": "一句需求改动写回同一份设计清单",
+      "evidence": {
+        "parseRoute": "POST /api/design-requirements/parse",
+        "editRoute": "POST /api/design-requirements/{checklist_id}/clarify mode=edit",
+        "checklistId": "e149d485445d40e0b7ec261acaf65f1c",
+        "edits": [
+          "water_depth_m 45→55 m",
+          "steel_intensity_t_per_MW 300→280 t/MW"
+        ],
+        "screen": [
+          "brief.png",
+          "checklist.png",
+          "checklist-edited.png"
+        ],
+        "routeLog": "actual-ui-route-events.jsonl"
+      },
+      "sources": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+          "exists": true,
+          "bytes": 4909,
+          "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768",
+          "line": 51,
+          "claim": "parse and persist one checklist"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+          "exists": true,
+          "bytes": 4909,
+          "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768",
+          "line": 70,
+          "claim": "edit same checklist id"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\design_requirements\\clarifications.py",
+          "exists": true,
+          "bytes": 12095,
+          "sha256": "d3e8b43a92183e55ec37fc40648a98d9064121b4d571e3dc4953921e502f10ec",
+          "line": 186,
+          "claim": "explicit edits preserve other fields"
+        }
+      ],
+      "safeNarration": "说一句需求，参数进入同一份设计清单；改目标，网格与后续任务读到同一版本。",
+      "boundary": "This isolated UI run used rule_fallback because no Qwen key was loaded; it does not claim cloud LLM reasoning."
+    },
+    {
+      "id": "tool_handoff",
+      "title": "模型、几何、网格与BESO沿文件接力",
+      "evidence": {
+        "screen": [
+          "viewer-full.png",
+          "viewer-model.png"
+        ],
+        "source": "parameters_summary.json",
+        "model": "3-column + top disk reconstruction",
+        "savedCase": "seed17"
+      },
+      "sources": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "exists": true,
+          "bytes": 5015,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "line": 68,
+          "claim": "engineering tools registered"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\assistant_graph.py",
+          "exists": true,
+          "bytes": 10800,
+          "sha256": "97c26c201828147b5d97a1134968654a1ab0e5f29f9ed3c21e9f578cd88a7742",
+          "line": 136,
+          "claim": "tool results enter event trace"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "exists": true,
+          "bytes": 37623,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "line": 461,
+          "claim": "BESO dispatch requires loaded input"
+        }
+      ],
+      "safeNarration": "模型、网格、优化和结果沿文件接力，少一次手动导出，就少一次版本错位。",
+      "boundary": "The captured viewer imports a saved result; no new BESO solver was started in this capture."
+    },
+    {
+      "id": "human_edit_boundary",
+      "title": "网格前可停下来改几何",
+      "evidence": {
+        "screen": [
+          "design-domain.png"
+        ],
+        "actualSourceFile": "00_source.igs",
+        "session": "773730003f0345f3bb238bbb66792abd"
+      },
+      "sources": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "exists": true,
+          "bytes": 37623,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "line": 252,
+          "claim": "pause_before_mesh records HITL pause"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "exists": true,
+          "bytes": 37623,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "line": 315,
+          "claim": "geometry replacement invalidates downstream"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\oc4_design_domain_service.py",
+          "exists": true,
+          "bytes": 37574,
+          "sha256": "5cf52ceb36eb5498bf6948f4285e32ca403e0a47be1e60ab1a2fdd71581af86b",
+          "line": 126,
+          "claim": "rail-step invalidation"
+        }
+      ],
+      "safeNarration": "网格前可以亲手改截面；旧网格和载荷随之失效，下一轮从新几何开始。",
+      "boundary": "The isolated capture created a design-domain session but did not complete Build or mesh; blank preview is retained as a truthful negative record and excluded from the film."
+    },
+    {
+      "id": "failure_feedback",
+      "title": "失败线索写成下一轮任务",
+      "evidence": {
+        "records": [
+          "runs/_replan/a8fae827515c40b38fbfc7cfe92dc8de/replan_event.json",
+          "runs/_replan/1287428badb845fc947dc3f1097874d9/replan_event.json"
+        ],
+        "status": "awaiting_post_check"
+      },
+      "sources": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\engine.py",
+          "exists": true,
+          "bytes": 3794,
+          "sha256": "61ec0b594b7638bac1af3309cecb3f50a388a5d4c68194dd358d82216cdd25da",
+          "line": 13,
+          "claim": "diagnostics become FeedbackTuple"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\engine.py",
+          "exists": true,
+          "bytes": 3794,
+          "sha256": "61ec0b594b7638bac1af3309cecb3f50a388a5d4c68194dd358d82216cdd25da",
+          "line": 59,
+          "claim": "actions and theta persisted"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\executor.py",
+          "exists": true,
+          "bytes": 9671,
+          "sha256": "99f45229b7130d4fa7c1b3adb663159cfcb98e143bd84cb2ba137ca6ed0c2e8d",
+          "line": 32,
+          "claim": "persisted event execution and post-check"
+        }
+      ],
+      "safeNarration": "算不下去，先读日志：是哪一步、哪一个参数，下一轮要怎么改。",
+      "boundary": "The saved replan has not been verified as a recovery success; do not show a green success immediately after failure."
+    },
+    {
+      "id": "reviewable_delivery",
+      "title": "模型、输入、日志与报告留痕",
+      "evidence": {
+        "screen": [
+          "viewer-full.png"
+        ],
+        "artifacts": [
+          "review.json",
+          "evidence_manifest.json",
+          "file043_state1.inp",
+          "file043.vtk",
+          "parameters_summary.json"
+        ]
+      },
+      "sources": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\jobs\\manager.py",
+          "exists": true,
+          "bytes": 28676,
+          "sha256": "079fd3b444c2b83be21af8f6f70d3563273a68c4f306050189e6379023c35050",
+          "line": 262,
+          "claim": "rehydrates jobs from disk inputs/manifests/logs"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\tools\\inp_design_deliverables.py",
+          "exists": true,
+          "bytes": 7919,
+          "sha256": "6b98b332eac45df61a0170bd30f661bf4740de62833138e7338a951387e8aa4f",
+          "line": 122,
+          "claim": "four-file INP deliverables"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\tools\\cad_drawing_pack.py",
+          "exists": true,
+          "bytes": 55885,
+          "sha256": "4c4f411c0cc5712ea9c2887d3ac05d5b629b05081e17ef5dc90c43966b6b94c2",
+          "line": 1335,
+          "claim": "drawing PNG/PDF/SVG preview"
+        }
+      ],
+      "safeNarration": "最后交付的不只是一张图：输入、结果、日志和报告都能回查。",
+      "boundary": "Drawing packs are preview-level evidence, not certified construction drawings."
+    }
+  ],
+  "webAssets": [
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\brief.png",
+      "exists": true,
+      "bytes": 258148,
+      "sha256": "df3e69a26c7785f67a3e35379226b7f427543caf21cea94008db98599aa4d546"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\checklist.png",
+      "exists": true,
+      "bytes": 691963,
+      "sha256": "1b960002f4a61d4634217654531f067f8cccbe14a23a552654a8bdb1e1c58d58"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\checklist-edited.png",
+      "exists": true,
+      "bytes": 672019,
+      "sha256": "f650e469110ea787ad0b3e6b128649ce5a9abdac54d5a3a8c103f8bde8a324d0"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\checklist-edited.jpg",
+      "exists": true,
+      "bytes": 151960,
+      "sha256": "8c5e46c7a359a6e92ec94a7b34ec1adfce186898d286e6e19b3a776182fac8cc"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\viewer-full.png",
+      "exists": true,
+      "bytes": 215056,
+      "sha256": "1a70cfbd2dbe59a78fadec115a2fa8530945c105ea2afb6351781fa06422864d"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\viewer-full.jpg",
+      "exists": true,
+      "bytes": 47330,
+      "sha256": "5d404980fb9a74b3d5bcf09511f21d7a30c349f83eb72725d89167afe01d99cd"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\viewer-model.png",
+      "exists": true,
+      "bytes": 201237,
+      "sha256": "b106c5842430d26d55b967172af0e0b732689a6930e8cbb92c431e42cc093a80"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\viewer-model.jpg",
+      "exists": true,
+      "bytes": 34288,
+      "sha256": "9a21f7c4add54ad5da640d1ffc64df52e7ce2c4487a7358aa60e8ab1e9915be8"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\design-domain.png",
+      "exists": true,
+      "bytes": 372589,
+      "sha256": "7d20d00a95b82337610b8f55ab7cb668db32da853f19b565965437dfccfd9e91"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\design-domain.jpg",
+      "exists": true,
+      "bytes": 94434,
+      "sha256": "6c3c8be02d37f551ac640751dd9018313cef9a1a1cee86711cb7ae6ec006895e"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\web-live\\v8\\actual-ui-route-events.jsonl",
+      "exists": true,
+      "bytes": 33059,
+      "sha256": "7da4b4445a58fa29d255bff6f63f771aa05ad027bd5f91765c4593272074aaf1"
+    }
+  ],
+  "capturePolicy": {
+    "productSourceChanged": false,
+    "cloudLLMCalls": 0,
+    "newSolverStarts": 0,
+    "browser": "Codex in-app browser",
+    "workspaceRoot": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\work\\v8-product\\workspace",
+    "allowedActualRoutes": [
+      "POST /api/design-requirements/parse",
+      "POST /api/design-requirements/{id}/clarify",
+      "GET /api/design-requirements/{id}",
+      "POST /api/oc4/design-domain/session/bootstrap",
+      "saved-model import into results viewer"
+    ],
+    "blockedRoutes": [
+      "/api/assistant",
+      "/api/chat",
+      "solver/mesh/load routes during capture"
+    ]
+  },
+  "terminology": {
+    "Zwind": "Zwind（保留英文拼写，不写 Z 风）",
+    "mooring": "系泊，旁白读 xi（第四声）",
+    "BESO": "贝索"
+  },
+  "excludedClaims": [
+    "cloud Qwen parsed the captured UI",
+    "new BESO or Zwind solve",
+    "automatic recovery success",
+    "certified delivery",
+    "quantified time savings"
+  ],
+  "notes": [
+    "Use screenshot values only where visible in actual UI or saved evidence.",
+    "Qwen/WAN bridge footage may add visual polish, but must carry 概念画面 label and may not create engineering values."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "h048",
+  "text": "血液还要经过许多小动脉。管壁上的肌肉收紧，通道变窄；要维持流动，就得有更大的压力差。",
+  "ttsText": "血液还要经过许多小动脉。管壁上的肌肉收紧，通道变窄；要维持流动，就得有更大的压力差。",
+  "signature": "da14506f3faee2b3668655d03f286f1f22a05c2b1e2efa11e7b5634cc8cd063e",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h048-da14506f3fae-6b4d65f42d.wav",
+  "processed": "audio/revision-v5/voice/h048.wav",
+  "rawDuration": 8.56,
+  "duration": 8.56,
+  "sampleRate": 48000,
+  "sha256": "2af83a9f1ed6525356153188ec5fe4e5a9527a96e243eae1818c0a967956f5b4",
+  "rawSHA256": "531e7027416498c45fd6d734fa8a58dc3b01b93ca6e264af61759bdec4ad3a4b",
+  "seed": 1800234484,
+  "batchIds": [
+    "h048",
+    "h049",
+    "h050"
+  ],
+  "batchKey": "6b4d65f42d83b87fdf065a9a3d530bc0ea20e3a0888d119430fee5661c8dc257",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -96.74237192625313,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "531e7027416498c45fd6d734fa8a58dc3b01b93ca6e264af61759bdec4ad3a4b",
+    "outputSha256": "2af83a9f1ed6525356153188ec5fe4e5a9527a96e243eae1818c0a967956f5b4",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.3379478006233256,
+    "input": {
+      "seconds": 8.56,
+      "peakDb": -7.49235918388818,
+      "activeRmsDb": -22.00712214173052,
+      "quietFrameP10Db": -66.1969826270966
+    },
+    "output": {
+      "seconds": 8.56,
+      "peakDb": -5.315321285109293,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -67.39017938166965
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

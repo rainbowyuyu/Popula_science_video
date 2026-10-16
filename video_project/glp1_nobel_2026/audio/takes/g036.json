@@ -1,0 +1,69 @@
+{
+  "id": "g036",
+  "text": "在肾脏表面选一个位置，慢慢向里看。这里用一个肾单位的局部模型，说明过滤和回收是怎样发生的。",
+  "ttsText": "在肾脏表面选一个位置，慢慢向里看。这里用一个肾单位的局部模型，说明过滤和回收是怎样发生的。",
+  "signature": "95775a3a08e383223105d1e66577f86503571735c544ed19309fe2fb55c3714a",
+  "raw": "audio/raw/g036-95775a3a08.wav",
+  "processed": "public/voice/g036.wav",
+  "rawDuration": 8.4,
+  "duration": 8.4,
+  "sha256": "f13d19a6f74b6f26904ed7fa0a8ac2b15980b4bd2b5ebd96208faad616c94b98",
+  "seed": 2292552719,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g033",
+    "g034",
+    "g035",
+    "g036"
+  ],
+  "rawEndpointDB": -94.58621277270163,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "674a38a4e332a6a161108cbe2ea9fda4d5b81c757ef7089d365484ec04f8872f",
+    "outputSha256": "f13d19a6f74b6f26904ed7fa0a8ac2b15980b4bd2b5ebd96208faad616c94b98",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.1158220108667045,
+    "input": {
+      "seconds": 8.4,
+      "peakDb": -6.797098299346507,
+      "activeRmsDb": -21.732938678207905,
+      "quietFrameP10Db": -59.73145985246255
+    },
+    "output": {
+      "seconds": 8.4,
+      "peakDb": -4.218402525610902,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.488467147881366
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

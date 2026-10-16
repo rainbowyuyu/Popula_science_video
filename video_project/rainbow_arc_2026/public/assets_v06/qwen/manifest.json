@@ -1,0 +1,77 @@
+{
+  "provider": "Alibaba DashScope",
+  "model": "wan2.6-i2v",
+  "task_id": "3c618e99-d361-436b-93eb-40f1fd0539c0",
+  "source_generation": "existing V03 asset; no V06 generation claimed",
+  "new_generation_probe": {
+    "credential_present": true,
+    "host": "https://dashscope.aliyuncs.com",
+    "model": "wan2.6-i2v",
+    "probe": "getPolicy",
+    "submitted_new_tasks": false,
+    "http_status": 401,
+    "provider_code": "InvalidApiKey",
+    "provider_message": "Invalid API-key provided.",
+    "request_id": "ec87e9d8-a176-9663-89e5-bf60d411f205"
+  },
+  "planned_new_segments": 6,
+  "source_file": "public\\assets\\qwen\\qwen_rainbow_bridge_v03.mp4",
+  "source_sha256": "e3f16ad42d93f89b339888909a145bd35b501363b1d6915fccfb1412624fd1cf",
+  "video": "assets_v06/qwen/rain_garden_bridge_cfr_allintra.mp4",
+  "sequence_pattern": "assets_v06/qwen/bridge_frames/frame_%04d.jpg",
+  "frame_index_first": 1,
+  "frame_index_last": 150,
+  "fps": 30,
+  "duration_seconds": 5,
+  "width": 1920,
+  "height": 1080,
+  "has_audio": false,
+  "processing": "CFR30, 16:9 central crop, all-intra h264 and actual decoded JPG frame sequence. Each frame is from the original moving provider video, not a pan of a still.",
+  "quality_check": {
+    "decoded_frame_count": 150,
+    "mean_pixel_motion_deltas_0_45_90_149": [
+      17.295260416666668,
+      16.079907407407408,
+      16.13350115740741
+    ],
+    "manual_contact_sheet_viewed": true,
+    "contact_sheet": "assets_v06/qwen/contact.jpg",
+    "limitations": [
+      "Original video contains an artificial blue optical wedge at lower-left/mid-left. Avoid full-frame hero usage or obscure deliberately with model/spray foreground.",
+      "Single existing 5s video does not replace six newly generated distinct scene transitions."
+    ]
+  },
+  "use": "Atmospheric rain-garden bridge only. It is not physical ray-tracing evidence.",
+  "legacy_bridge_prepare_step_new_tasks_submitted": 0,
+  "new_generation_probe_scope": "Environment coding-plan key only; ordinary user-authorized fallback is injected privately into the new batch child by root.",
+  "generated_batch": {
+    "model": "wan2.6-t2v",
+    "task_ledgers": "assets_v06/qwen/generated/<slug>/provenance.json",
+    "status": "six_processed",
+    "slugs": [
+      "street",
+      "fountain",
+      "garden",
+      "droplet",
+      "waterfall",
+      "circle"
+    ],
+    "total_actual_video_frames": 900,
+    "manual_contact_sheets_reviewed": 6,
+    "full_subjective_playback": false,
+    "notes": [
+      "Street uses a right-biased crop excluding the visible forward sun.",
+      "Garden is excluded because its sun placement conflicts with the explanation.",
+      "Circle is artistic/generated atmosphere, not experimental evidence.",
+      "Six scene windows use five distinct accepted moving clips; final street return reuses the opening source for narrative closure."
+    ],
+    "selected_slugs_v06": [
+      "street",
+      "droplet",
+      "waterfall",
+      "circle",
+      "fountain"
+    ],
+    "scene_windows_v06": 6
+  }
+}

@@ -1,0 +1,5390 @@
+{
+  "createdUTC": "2026-10-04T14:45:10.090Z",
+  "scope": "Numerical HUD/World comparison over all speed-chapter frames only. Does not rerender or certify subtitles, image quality, splice decoding, or audio.",
+  "method": "Verify exact current Film HUD/progress expressions; use actual imported World.forceScaleForSpeedMultiplier, easing function, timeline, and balance.json; compare all 749 frames.",
+  "reproduce": "node --experimental-strip-types scripts/audit_metro_speed.mjs",
+  "sourceHashes": {
+    "src/metro/Film.tsx": "c6a17f9e3f01e149f2e1a915ca5bb8521bb0a99c7bab34731121eb3c6ae5d5ac",
+    "src/metro/World.ts": "eb4834f0b9cd418fb285348529973ba87b9757879fb9ded8e8eca743ecdbdcc6",
+    "src/metro/timeline.json": "d0d1453ad4cd4438584f3445f2b06c9cc2cc2ed5e8c62c603b5507765a5343c2",
+    "public/metro/physics/balance.json": "17469ebc36bc195ff6e06878c132523079e22608ea547a7a90ad3738c8941453"
+  },
+  "hudExpression": "(1+a)**2",
+  "windExpression": "1 + ease((p-.2)/.25)",
+  "frameRangeInclusive": [
+    6339,
+    7087
+  ],
+  "framesChecked": 749,
+  "analyticInterpolationErrorBound": 0.0006250000000000001,
+  "maxAbsoluteDifference": 0.0006249973943281972,
+  "worst": {
+    "frame": 6516,
+    "windMultiplier": 1.0249489542201493,
+    "hudForceMultiplier": 1.0505203587569778,
+    "worldForceMultiplier": 1.051145356151306,
+    "absoluteDifference": 0.0006249973943281972
+  },
+  "maxArrowLengthDifferenceModelUnits": 0.0002687488795611248,
+  "anchors": [
+    {
+      "windMultiplier": 1,
+      "quadratic": 1,
+      "world": 1,
+      "legacyHUD": 1
+    },
+    {
+      "windMultiplier": 1.25,
+      "quadratic": 1.5625,
+      "world": 1.5625,
+      "legacyHUD": 1.75
+    },
+    {
+      "windMultiplier": 1.5,
+      "quadratic": 2.25,
+      "world": 2.25,
+      "legacyHUD": 2.5
+    },
+    {
+      "windMultiplier": 1.75,
+      "quadratic": 3.0625,
+      "world": 3.0625,
+      "legacyHUD": 3.25
+    },
+    {
+      "windMultiplier": 2,
+      "quadratic": 4,
+      "world": 4,
+      "legacyHUD": 4
+    }
+  ],
+  "legacyFormula": {
+    "expression": "1+3*a",
+    "errorAtWindMultiplier1_5": {
+      "legacy": 2.5,
+      "correct": 2.25,
+      "absolute": 0.25,
+      "relative": 0.1111111111111111
+    },
+    "maxSampledAbsoluteError": 0.24999899464678998
+  },
+  "rounding": {
+    "digits": 1,
+    "worldRoundingIsNotDisplayedByHUD": true,
+    "differences": [
+      {
+        "frame": 6595,
+        "windMultiplier": 1.6277128934987815,
+        "hudForceMultiplier": 2.6494492636621754,
+        "worldForceMultiplier": 2.65006690387104,
+        "absoluteDifference": 0.0006176402088646782,
+        "hudRounded": "2.6",
+        "worldIfRounded": "2.7"
+      }
+    ],
+    "interpretation": "A tiny piecewise-linear data interpolation difference crosses one decimal rounding boundary at one frame. The HUD uses the correct analytic square; the World arrow is effectively identical in length."
+  },
+  "subtitleReview": {
+    "reviewType": "Read-only source-text review; no new audio listening or transcription",
+    "clips": [
+      {
+        "id": "044",
+        "text": "再把身体姿势和迎风面积固定，只改变吹来的风。",
+        "start": 6348,
+        "end": 6478
+      },
+      {
+        "id": "045",
+        "text": "常用的阻力估算里，风速加倍，力大约会变为四倍。",
+        "start": 6482,
+        "end": 6614
+      },
+      {
+        "id": "046",
+        "text": "这里用的是人身边的相对风速，不能直接拿列车速度代进去。",
+        "start": 6618,
+        "end": 6772
+      },
+      {
+        "id": "047",
+        "text": "列车速度、车型和隧道形状，会一起决定周围的风。",
+        "start": 6776,
+        "end": 6920
+      },
+      {
+        "id": "048",
+        "text": "这些变化交给工程师测量；我们先做好一件简单的事，留在线后。",
+        "start": 6924,
+        "end": 7088
+      }
+    ],
+    "conclusion": "The script fixes posture and frontal area, describes the standard drag estimate as approximately fourfold when relative wind speed doubles, and explicitly distinguishes local relative wind from train speed. No wording/audio change is needed for this HUD correction."
+  },
+  "previousVisualAudit": {
+    "path": "research/metro/visual-state-audit.json",
+    "worldStillCovered": true,
+    "priorFilmSHA256": "126efa04b4abbf2e13e9fc600e7772024679927c94fdaf4d1fb35378a09ca4f5",
+    "currentFilmSHA256": "c6a17f9e3f01e149f2e1a915ca5bb8521bb0a99c7bab34731121eb3c6ae5d5ac",
+    "filmSourceChanged": true,
+    "coversHUDChange": false,
+    "reason": "The prior audit explicitly excludes React HUD/text and its Film hash predates this change. Its unchanged World/data coverage remains valid. Corrected HUD appearance and patch seams require the targeted new segment checks.",
+    "fullWorldVisualAuditRerun": false
+  },
+  "checks": {
+    "filmUsesSquaredWindMultiplier": true,
+    "frameRangeIsIntendedPatch": true,
+    "finiteResults": true,
+    "interpolationWithinAnalyticBound": true,
+    "gridAnchorsMatchQuadratic": true,
+    "endpointsOneAndFour": true,
+    "worldUnchangedSinceVisualAudit": true,
+    "timelineUnchangedSinceVisualAudit": true,
+    "balanceDataUnchangedSinceVisualAudit": true
+  },
+  "allChecksPass": true,
+  "frameResults": [
+    {
+      "frame": 6339,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6340,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6341,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6342,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6343,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6344,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6345,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6346,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6347,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6348,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6349,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6350,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6351,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6352,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6353,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6354,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6355,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6356,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6357,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6358,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6359,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6360,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6361,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6362,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6363,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6364,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6365,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6366,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6367,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6368,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6369,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6370,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6371,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6372,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6373,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6374,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6375,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6376,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6377,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6378,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6379,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6380,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6381,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6382,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6383,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6384,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6385,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6386,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6387,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6388,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6389,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6390,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6391,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6392,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6393,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6394,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6395,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6396,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6397,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6398,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6399,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6400,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6401,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6402,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6403,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6404,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6405,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6406,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6407,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6408,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6409,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6410,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6411,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6412,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6413,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6414,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6415,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6416,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6417,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6418,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6419,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6420,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6421,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6422,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6423,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6424,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6425,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6426,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6427,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6428,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6429,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6430,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6431,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6432,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6433,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6434,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6435,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6436,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6437,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6438,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6439,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6440,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6441,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6442,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6443,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6444,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6445,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6446,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6447,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6448,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6449,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6450,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6451,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6452,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6453,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6454,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6455,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6456,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6457,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6458,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6459,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6460,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6461,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6462,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6463,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6464,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6465,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6466,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6467,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6468,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6469,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6470,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6471,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6472,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6473,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6474,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6475,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6476,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6477,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6478,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6479,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6480,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6481,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6482,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6483,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6484,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6485,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6486,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6487,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6488,
+      "windMultiplier": 1,
+      "hudForceMultiplier": 1,
+      "worldForceMultiplier": 1,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6489,
+      "windMultiplier": 1.0000000975574976,
+      "hudForceMultiplier": 1.0000001951150048,
+      "worldForceMultiplier": 1.0000001999928703,
+      "absoluteDifference": 4.877865444896656e-9
+    },
+    {
+      "frame": 6490,
+      "windMultiplier": 1.0000041492477094,
+      "hudForceMultiplier": 1.000008298512635,
+      "worldForceMultiplier": 1.000008505957804,
+      "absoluteDifference": 2.0744516904258603e-7
+    },
+    {
+      "frame": 6491,
+      "windMultiplier": 1.0000207353032933,
+      "hudForceMultiplier": 1.0000414710365393,
+      "worldForceMultiplier": 1.0000425073717512,
+      "absoluteDifference": 0.000001036335211868078
+    },
+    {
+      "frame": 6492,
+      "windMultiplier": 1.0000584778734687,
+      "hudForceMultiplier": 1.000116959166599,
+      "worldForceMultiplier": 1.0001198796406108,
+      "absoluteDifference": 0.0000029204740117361183
+    },
+    {
+      "frame": 6493,
+      "windMultiplier": 1.0001257122653902,
+      "hudForceMultiplier": 1.0002514403343539,
+      "worldForceMultiplier": 1.0002577101440497,
+      "absoluteDifference": 0.0000062698096958691
+    },
+    {
+      "frame": 6494,
+      "windMultiplier": 1.0002304900927972,
+      "hudForceMultiplier": 1.0004610333112773,
+      "worldForceMultiplier": 1.0004725046902343,
+      "absoluteDifference": 0.000011471378956962042
+    },
+    {
+      "frame": 6495,
+      "windMultiplier": 1.0003805824246654,
+      "hudForceMultiplier": 1.000761309692313,
+      "worldForceMultiplier": 1.0007801939705643,
+      "absoluteDifference": 0.000018884278251363185
+    },
+    {
+      "frame": 6496,
+      "windMultiplier": 1.0005834829338567,
+      "hudForceMultiplier": 1.0011673063200475,
+      "worldForceMultiplier": 1.0011961400144063,
+      "absoluteDifference": 0.000028833694358798567
+    },
+    {
+      "frame": 6497,
+      "windMultiplier": 1.0008464110457698,
+      "hudForceMultiplier": 1.001693538503198,
+      "worldForceMultiplier": 1.001735142643828,
+      "absoluteDifference": 0.00004160414062992501
+    },
+    {
+      "frame": 6498,
+      "windMultiplier": 1.0011763150869912,
+      "hudForceMultiplier": 1.0023540138911664,
+      "worldForceMultiplier": 1.002411445928332,
+      "absoluteDifference": 0.000057432037165572325
+    },
+    {
+      "frame": 6499,
+      "windMultiplier": 1.0015798754339458,
+      "hudForceMultiplier": 1.0031622468742782,
+      "worldForceMultiplier": 1.003238744639589,
+      "absoluteDifference": 0.0000764977653107124
+    },
+    {
+      "frame": 6500,
+      "windMultiplier": 1.002063507661546,
+      "hudForceMultiplier": 1.0041312733869614,
+      "worldForceMultiplier": 1.0042301907061693,
+      "absoluteDifference": 0.00009891731920785851
+    },
+    {
+      "frame": 6501,
+      "windMultiplier": 1.0026333656918445,
+      "hudForceMultiplier": 1.005273665998556,
+      "worldForceMultiplier": 1.0053983996682812,
+      "absoluteDifference": 0.00012473366972520772
+    },
+    {
+      "frame": 6502,
+      "windMultiplier": 1.0032953449426834,
+      "hudForceMultiplier": 1.006601549183658,
+      "worldForceMultiplier": 1.0067554571325008,
+      "absoluteDifference": 0.0001539079488428463
+    },
+    {
+      "frame": 6503,
+      "windMultiplier": 1.0040550854763446,
+      "hudForceMultiplier": 1.0081266146709096,
+      "worldForceMultiplier": 1.0083129252265064,
+      "absoluteDifference": 0.00018631055559681364
+    },
+    {
+      "frame": 6504,
+      "windMultiplier": 1.0049179751482016,
+      "hudForceMultiplier": 1.0098601367759614,
+      "worldForceMultiplier": 1.0100818490538133,
+      "absoluteDifference": 0.00022171227785183767
+    },
+    {
+      "frame": 6505,
+      "windMultiplier": 1.0058891527553686,
+      "hudForceMultiplier": 1.0118129876309132,
+      "worldForceMultiplier": 1.0120727631485056,
+      "absoluteDifference": 0.0002597755175923755
+    },
+    {
+      "frame": 6506,
+      "windMultiplier": 1.0069735111853522,
+      "hudForceMultiplier": 1.0139956522289566,
+      "worldForceMultiplier": 1.014295697929972,
+      "absoluteDifference": 0.0003000457010153834
+    },
+    {
+      "frame": 6507,
+      "windMultiplier": 1.0081757005647014,
+      "hudForceMultiplier": 1.0164182432091264,
+      "worldForceMultiplier": 1.0167601861576379,
+      "absoluteDifference": 0.00034194294851142004
+    },
+    {
+      "frame": 6508,
+      "windMultiplier": 1.009500131407658,
+      "hudForceMultiplier": 1.0190905153120786,
+      "worldForceMultiplier": 1.0194752693856988,
+      "absoluteDifference": 0.0003847540736201527
+    },
+    {
+      "frame": 6509,
+      "windMultiplier": 1.0109509777648074,
+      "hudForceMultiplier": 1.02202187944362,
+      "worldForceMultiplier": 1.022449504417855,
+      "absoluteDifference": 0.0004276249742349858
+    },
+    {
+      "frame": 6510,
+      "windMultiplier": 1.0125321803717295,
+      "hudForceMultiplier": 1.0252214162883286,
+      "worldForceMultiplier": 1.0256909697620455,
+      "absoluteDifference": 0.0004695534737169105
+    },
+    {
+      "frame": 6511,
+      "windMultiplier": 1.0142474497976486,
+      "hudForceMultiplier": 1.0286978894210337,
+      "worldForceMultiplier": 1.0292072720851795,
+      "absoluteDifference": 0.0005093826641457966
+    },
+    {
+      "frame": 6512,
+      "windMultiplier": 1.0161002695940844,
+      "hudForceMultiplier": 1.032459757869171,
+      "worldForceMultiplier": 1.0330055526678728,
+      "absoluteDifference": 0.0005457947987017597
+    },
+    {
+      "frame": 6513,
+      "windMultiplier": 1.018093899443502,
+      "hudForceMultiplier": 1.0365151880840757,
+      "worldForceMultiplier": 1.037092493859179,
+      "absoluteDifference": 0.0005773057751032873
+    },
+    {
+      "frame": 6514,
+      "windMultiplier": 1.0202313783079635,
+      "hudForceMultiplier": 1.040872065284167,
+      "worldForceMultiplier": 1.0414743255313252,
+      "absoluteDifference": 0.0006022602471582594
+    },
+    {
+      "frame": 6515,
+      "windMultiplier": 1.022515527577777,
+      "hudForceMultiplier": 1.0455380041376598,
+      "worldForceMultiplier": 1.046156831534443,
+      "absoluteDifference": 0.0006188273967830948
+    },
+    {
+      "frame": 6516,
+      "windMultiplier": 1.0249489542201493,
+      "hudForceMultiplier": 1.0505203587569778,
+      "worldForceMultiplier": 1.051145356151306,
+      "absoluteDifference": 0.0006249973943281972
+    },
+    {
+      "frame": 6517,
+      "windMultiplier": 1.0275340539278341,
+      "hudForceMultiplier": 1.0558262319813692,
+      "worldForceMultiplier": 1.0564448105520599,
+      "absoluteDifference": 0.0006185785706906977
+    },
+    {
+      "frame": 6518,
+      "windMultiplier": 1.0302730142677838,
+      "hudForceMultiplier": 1.061462483928425,
+      "worldForceMultiplier": 1.0620596792489567,
+      "absoluteDifference": 0.0005971953205317071
+    },
+    {
+      "frame": 6519,
+      "windMultiplier": 1.0331678178298005,
+      "hudForceMultiplier": 1.0674357397991918,
+      "worldForceMultiplier": 1.067994026551091,
+      "absoluteDifference": 0.000558286751899173
+    },
+    {
+      "frame": 6520,
+      "windMultiplier": 1.0362202453751854,
+      "hudForceMultiplier": 1.0737523969254095,
+      "worldForceMultiplier": 1.0742515030191302,
+      "absoluteDifference": 0.0004991060937207248
+    },
+    {
+      "frame": 6521,
+      "windMultiplier": 1.03943187898539,
+      "hudForceMultiplier": 1.0804186310510986,
+      "worldForceMultiplier": 1.0808353519200495,
+      "absoluteDifference": 0.0004167208689509483
+    },
+    {
+      "frame": 6522,
+      "windMultiplier": 1.042804105210667,
+      "hudForceMultiplier": 1.0874404018442196,
+      "worldForceMultiplier": 1.087748415681867,
+      "absoluteDifference": 0.0003080138376474473
+    },
+    {
+      "frame": 6523,
+      "windMultiplier": 1.0463381182187197,
+      "hudForceMultiplier": 1.0948234576374913,
+      "worldForceMultiplier": 1.0949931423483752,
+      "absoluteDifference": 0.00016968471088385506
+    },
+    {
+      "frame": 6524,
+      "windMultiplier": 1.0500349229433534,
+      "hudForceMultiplier": 1.1025733394006543,
+      "worldForceMultiplier": 1.1025750843282098,
+      "absoluteDifference": 0.0000017449275555581067
+    },
+    {
+      "frame": 6525,
+      "windMultiplier": 1.0538953382331266,
+      "hudForceMultiplier": 1.1106953839495164,
+      "worldForceMultiplier": 1.1108749772012223,
+      "absoluteDifference": 0.00017959325170591178
+    },
+    {
+      "frame": 6526,
+      "windMultiplier": 1.05792,
+      "hudForceMultiplier": 1.1191947264,
+      "worldForceMultiplier": 1.1195279999999996,
+      "absoluteDifference": 0.00033327359999968387
+    },
+    {
+      "frame": 6527,
+      "windMultiplier": 1.0621093643679878,
+      "hudForceMultiplier": 1.128076301878171,
+      "worldForceMultiplier": 1.1285351333911735,
+      "absoluteDifference": 0.00045883151300252223
+    },
+    {
+      "frame": 6528,
+      "windMultiplier": 1.0664637108218082,
+      "hudForceMultiplier": 1.1373448464998215,
+      "worldForceMultiplier": 1.1378969782668875,
+      "absoluteDifference": 0.0005521317670660331
+    },
+    {
+      "frame": 6529,
+      "windMultiplier": 1.070983145355535,
+      "hudForceMultiplier": 1.1470048976356348,
+      "worldForceMultiplier": 1.1476137625144,
+      "absoluteDifference": 0.000608864878765214
+    },
+    {
+      "frame": 6530,
+      "windMultiplier": 1.0756676036212458,
+      "hudForceMultiplier": 1.1570607934802737,
+      "worldForceMultiplier": 1.1576853477856783,
+      "absoluteDifference": 0.0006245543054046454
+    },
+    {
+      "frame": 6531,
+      "windMultiplier": 1.0805168540776746,
+      "hudForceMultiplier": 1.1675166719459147,
+      "worldForceMultiplier": 1.1681112362670003,
+      "absoluteDifference": 0.0005945643210856222
+    },
+    {
+      "frame": 6532,
+      "windMultiplier": 1.0855305011388618,
+      "hudForceMultiplier": 1.1783764689027885,
+      "worldForceMultiplier": 1.178890577448553,
+      "absoluteDifference": 0.0005141085457645023
+    },
+    {
+      "frame": 6533,
+      "windMultiplier": 1.0907079883228046,
+      "hudForceMultiplier": 1.1896439157911791,
+      "worldForceMultiplier": 1.1900221748940298,
+      "absoluteDifference": 0.00037825910285071984
+    },
+    {
+      "frame": 6534,
+      "windMultiplier": 1.0960486014001072,
+      "hudForceMultiplier": 1.201322536631131,
+      "worldForceMultiplier": 1.2015044930102305,
+      "absoluteDifference": 0.00018195637909945717
+    },
+    {
+      "frame": 6535,
+      "windMultiplier": 1.101551471542632,
+      "hudForceMultiplier": 1.213415644457738,
+      "worldForceMultiplier": 1.213490810970922,
+      "absoluteDifference": 0.00007516651318395517
+    },
+    {
+      "frame": 6536,
+      "windMultiplier": 1.1072155784721496,
+      "hudForceMultiplier": 1.2259263372114169,
+      "worldForceMultiplier": 1.2262350515623366,
+      "absoluteDifference": 0.00030871435091972543
+    },
+    {
+      "frame": 6537,
+      "windMultiplier": 1.1130397536089902,
+      "hudForceMultiplier": 1.2388574931139615,
+      "worldForceMultiplier": 1.2393394456202278,
+      "absoluteDifference": 0.00048195250626625885
+    },
+    {
+      "frame": 6538,
+      "windMultiplier": 1.1190226832206929,
+      "hudForceMultiplier": 1.2522117655624392,
+      "worldForceMultiplier": 1.252801037246559,
+      "absoluteDifference": 0.0005892716841198187
+    },
+    {
+      "frame": 6539,
+      "windMultiplier": 1.1251629115706574,
+      "hudForceMultiplier": 1.265991577574159,
+      "worldForceMultiplier": 1.266616551033979,
+      "absoluteDifference": 0.000624973459820044
+    },
+    {
+      "frame": 6540,
+      "windMultiplier": 1.1314588440667939,
+      "hudForceMultiplier": 1.2801991158169654,
+      "worldForceMultiplier": 1.2807823991502862,
+      "absoluteDifference": 0.0005832833333208054
+    },
+    {
+      "frame": 6541,
+      "windMultiplier": 1.137908750410174,
+      "hudForceMultiplier": 1.2948363242600436,
+      "worldForceMultiplier": 1.295294688422891,
+      "absoluteDifference": 0.00045836416284750214
+    },
+    {
+      "frame": 6542,
+      "windMultiplier": 1.1445107677436803,
+      "hudForceMultiplier": 1.3099048974812286,
+      "worldForceMultiplier": 1.3101492274232809,
+      "absoluteDifference": 0.0002443299420522571
+    },
+    {
+      "frame": 6543,
+      "windMultiplier": 1.1512629038006592,
+      "hudForceMultiplier": 1.3254062736675258,
+      "worldForceMultiplier": 1.3254678239315492,
+      "absoluteDifference": 0.00006155026402332453
+    },
+    {
+      "frame": 6544,
+      "windMultiplier": 1.158163040053569,
+      "hudForceMultiplier": 1.3413416273461247,
+      "worldForceMultiplier": 1.341683144125887,
+      "absoluteDifference": 0.00034151677976224093
+    },
+    {
+      "frame": 6545,
+      "windMultiplier": 1.1652089348626313,
+      "hudForceMultiplier": 1.3577118618837078,
+      "worldForceMultiplier": 1.3582409969271834,
+      "absoluteDifference": 0.0005291350434755149
+    },
+    {
+      "frame": 6546,
+      "windMultiplier": 1.1723982266244821,
+      "hudForceMultiplier": 1.3745176017922305,
+      "worldForceMultiplier": 1.375135832567533,
+      "absoluteDifference": 0.0006182307753024308
+    },
+    {
+      "frame": 6547,
+      "windMultiplier": 1.179728436920822,
+      "hudForceMultiplier": 1.391759184879646,
+      "worldForceMultiplier": 1.392361826763932,
+      "absoluteDifference": 0.0006026418842859371
+    },
+    {
+      "frame": 6548,
+      "windMultiplier": 1.1871969736670664,
+      "hudForceMultiplier": 1.4094366542842414,
+      "worldForceMultiplier": 1.4099128881176062,
+      "absoluteDifference": 0.0004762338333648142
+    },
+    {
+      "frame": 6549,
+      "windMultiplier": 1.1948011342609965,
+      "hudForceMultiplier": 1.427549750431364,
+      "worldForceMultiplier": 1.4277826655133419,
+      "absoluteDifference": 0.00023291508197798017
+    },
+    {
+      "frame": 6550,
+      "windMultiplier": 1.2025381087314098,
+      "hudForceMultiplier": 1.446097902951316,
+      "worldForceMultiplier": 1.4462183663919537,
+      "absoluteDifference": 0.0001204634406377636
+    },
+    {
+      "frame": 6551,
+      "windMultiplier": 1.2104049828867698,
+      "hudForceMultiplier": 1.4650802225971216,
+      "worldForceMultiplier": 1.4654922080725858,
+      "absoluteDifference": 0.00041198547546428266
+    },
+    {
+      "frame": 6552,
+      "windMultiplier": 1.2183987414638584,
+      "hudForceMultiplier": 1.4844954932007142,
+      "worldForceMultiplier": 1.485076916586453,
+      "absoluteDifference": 0.0005814233857388551
+    },
+    {
+      "frame": 6553,
+      "windMultiplier": 1.226516271276425,
+      "hudForceMultiplier": 1.504342163705825,
+      "worldForceMultiplier": 1.5049648646272413,
+      "absoluteDifference": 0.0006227009214163637
+    },
+    {
+      "frame": 6554,
+      "windMultiplier": 1.2347543643638375,
+      "hudForceMultiplier": 1.5246183403155442,
+      "worldForceMultiplier": 1.5251481926914017,
+      "absoluteDifference": 0.0005298523758574536
+    },
+    {
+      "frame": 6555,
+      "windMultiplier": 1.2431097211397317,
+      "hudForceMultiplier": 1.5453217787921016,
+      "worldForceMultiplier": 1.5456188167923426,
+      "absoluteDifference": 0.0002970380002409456
+    },
+    {
+      "frame": 6556,
+      "windMultiplier": 1.2515789535406643,
+      "hudForceMultiplier": 1.5664498769459443,
+      "worldForceMultiplier": 1.5665263315286937,
+      "absoluteDifference": 0.00007645458274940786
+    },
+    {
+      "frame": 6557,
+      "windMultiplier": 1.2601585881747615,
+      "hudForceMultiplier": 1.587999667350608,
+      "worldForceMultiplier": 1.5884043998456416,
+      "absoluteDifference": 0.00040473249503358844
+    },
+    {
+      "frame": 6558,
+      "windMultiplier": 1.2688450694703697,
+      "hudForceMultiplier": 1.6099678103192672,
+      "worldForceMultiplier": 1.6105549271494428,
+      "absoluteDifference": 0.0005871168301756491
+    },
+    {
+      "frame": 6559,
+      "windMultiplier": 1.277634762824707,
+      "hudForceMultiplier": 1.632350587178145,
+      "worldForceMultiplier": 1.6329686452030028,
+      "absoluteDifference": 0.0006180580248578149
+    },
+    {
+      "frame": 6560,
+      "windMultiplier": 1.2865239577525132,
+      "hudForceMultiplier": 1.6551438938711902,
+      "worldForceMultiplier": 1.6556360922689086,
+      "absoluteDifference": 0.000492198397718413
+    },
+    {
+      "frame": 6561,
+      "windMultiplier": 1.2955088710347002,
+      "hudForceMultiplier": 1.6783432349296037,
+      "worldForceMultiplier": 1.678547621138486,
+      "absoluteDifference": 0.0002043862088823012
+    },
+    {
+      "frame": 6562,
+      "windMultiplier": 1.3045856498670025,
+      "hudForceMultiplier": 1.7019437178389094,
+      "worldForceMultiplier": 1.702151972147557,
+      "absoluteDifference": 0.0002082543086476818
+    },
+    {
+      "frame": 6563,
+      "windMultiplier": 1.3137503750086281,
+      "hudForceMultiplier": 1.725940047835311,
+      "worldForceMultiplier": 1.7264384937728647,
+      "absoluteDifference": 0.0004984459375536598
+    },
+    {
+      "frame": 6564,
+      "windMultiplier": 1.3229990639309097,
+      "hudForceMultiplier": 1.7503265231620633,
+      "worldForceMultiplier": 1.7509475194169108,
+      "absoluteDifference": 0.0006209962548475723
+    },
+    {
+      "frame": 6565,
+      "windMultiplier": 1.3323276739659533,
+      "hudForceMultiplier": 1.7750970308155276,
+      "worldForceMultiplier": 1.7756683360097765,
+      "absoluteDifference": 0.0005713051942488612
+    },
+    {
+      "frame": 6566,
+      "windMultiplier": 1.3417321054552904,
+      "hudForceMultiplier": 1.8002450428094865,
+      "worldForceMultiplier": 1.8005900794565197,
+      "absoluteDifference": 0.00034503664703322556
+    },
+    {
+      "frame": 6567,
+      "windMultiplier": 1.351208204898528,
+      "hudForceMultiplier": 1.8257636129851027,
+      "worldForceMultiplier": 1.8258225634709524,
+      "absoluteDifference": 0.000058950485849695866
+    },
+    {
+      "frame": 6568,
+      "windMultiplier": 1.3607517681019996,
+      "hudForceMultiplier": 1.8516453743927181,
+      "worldForceMultiplier": 1.852067362280499,
+      "absoluteDifference": 0.0004219878877809169
+    },
+    {
+      "frame": 6569,
+      "windMultiplier": 1.3703585433274146,
+      "hudForceMultiplier": 1.8778825372704335,
+      "worldForceMultiplier": 1.8784859941503902,
+      "absoluteDifference": 0.0006034568799566653
+    },
+    {
+      "frame": 6570,
+      "windMultiplier": 1.3800242344405107,
+      "hudForceMultiplier": 1.9044668876431177,
+      "worldForceMultiplier": 1.9050666447114042,
+      "absoluteDifference": 0.0005997570682865216
+    },
+    {
+      "frame": 6571,
+      "windMultiplier": 1.389744504059702,
+      "hudForceMultiplier": 1.9313897865641472,
+      "worldForceMultiplier": 1.9317973861641806,
+      "absoluteDifference": 0.0004075996000334481
+    },
+    {
+      "frame": 6572,
+      "windMultiplier": 1.3995149767047323,
+      "hudForceMultiplier": 1.9586421700208476,
+      "worldForceMultiplier": 1.9586661859380141,
+      "absoluteDifference": 0.000024015917166497758
+    },
+    {
+      "frame": 6573,
+      "windMultiplier": 1.409331241945323,
+      "hudForceMultiplier": 1.9862145495231465,
+      "worldForceMultiplier": 1.9865940395441708,
+      "absoluteDifference": 0.00037949002102433127
+    },
+    {
+      "frame": 6574,
+      "windMultiplier": 1.4191888575498264,
+      "hudForceMultiplier": 2.0140970133935814,
+      "worldForceMultiplier": 2.014688244017005,
+      "absoluteDifference": 0.0005912306234234777
+    },
+    {
+      "frame": 6575,
+      "windMultiplier": 1.4290833526338738,
+      "hudForceMultiplier": 2.0422792287752727,
+      "worldForceMultiplier": 2.04288755500654,
+      "absoluteDifference": 0.0006083262312674975
+    },
+    {
+      "frame": 6576,
+      "windMultiplier": 1.4390102308090271,
+      "hudForceMultiplier": 2.0707504443730493,
+      "worldForceMultiplier": 2.071179157805727,
+      "absoluteDifference": 0.00042871343267769646
+    },
+    {
+      "frame": 6577,
+      "windMultiplier": 1.4489649733314292,
+      "hudForceMultiplier": 2.0994994939413494,
+      "worldForceMultiplier": 2.099550173994573,
+      "absoluteDifference": 0.000050680053223839394
+    },
+    {
+      "frame": 6578,
+      "windMultiplier": 1.4589430422504548,
+      "hudForceMultiplier": 2.128514800531012,
+      "worldForceMultiplier": 2.1288819746388414,
+      "absoluteDifference": 0.0003671741078292712
+    },
+    {
+      "frame": 6579,
+      "windMultiplier": 1.4689398835573613,
+      "hudForceMultiplier": 2.157784381505514,
+      "worldForceMultiplier": 2.158372656494216,
+      "absoluteDifference": 0.0005882749887016203
+    },
+    {
+      "frame": 6580,
+      "windMultiplier": 1.4789509303339379,
+      "hudForceMultiplier": 2.1872958543356202,
+      "worldForceMultiplier": 2.187905244485117,
+      "absoluteDifference": 0.0006093901494965692
+    },
+    {
+      "frame": 6581,
+      "windMultiplier": 1.4889716059011577,
+      "hudForceMultiplier": 2.2170364431798726,
+      "worldForceMultiplier": 2.2174662374084155,
+      "absoluteDifference": 0.0004297942285429457
+    },
+    {
+      "frame": 6582,
+      "windMultiplier": 1.4989973269678276,
+      "hudForceMultiplier": 2.2469929862566924,
+      "worldForceMultiplier": 2.2470421145550916,
+      "absoluteDifference": 0.00004912829839920363
+    },
+    {
+      "frame": 6583,
+      "windMultiplier": 1.5090235067792386,
+      "hudForceMultiplier": 2.277151944012311,
+      "worldForceMultiplier": 2.2775216956766777,
+      "absoluteDifference": 0.00036975166436681306
+    },
+    {
+      "frame": 6584,
+      "windMultiplier": 1.5190455582658164,
+      "hudForceMultiplier": 2.307499408087106,
+      "worldForceMultiplier": 2.30808895271074,
+      "absoluteDifference": 0.0005895446236343638
+    },
+    {
+      "frame": 6585,
+      "windMultiplier": 1.5290588971917738,
+      "hudForceMultiplier": 2.3380211110813236,
+      "worldForceMultiplier": 2.33862963643491,
+      "absoluteDifference": 0.0006085253535865753
+    },
+    {
+      "frame": 6586,
+      "windMultiplier": 1.5390589453037578,
+      "hudForceMultiplier": 2.368702437119515,
+      "worldForceMultiplier": 2.3691297831764615,
+      "absoluteDifference": 0.00042734605694638716
+    },
+    {
+      "frame": 6587,
+      "windMultiplier": 1.5490411334795027,
+      "hudForceMultiplier": 2.3995284332114624,
+      "worldForceMultiplier": 2.3995754571124834,
+      "absoluteDifference": 0.00004702390102107046
+    },
+    {
+      "frame": 6588,
+      "windMultiplier": 1.5590009048764797,
+      "hudForceMultiplier": 2.4304838214056823,
+      "worldForceMultiplier": 2.4308528503609113,
+      "absoluteDifference": 0.00036902895522894497
+    },
+    {
+      "frame": 6589,
+      "windMultiplier": 1.5689337180805485,
+      "hudForceMultiplier": 2.461553011730054,
+      "worldForceMultiplier": 2.4621412119537283,
+      "absoluteDifference": 0.000588200223674118
+    },
+    {
+      "frame": 6590,
+      "windMultiplier": 1.578835050254606,
+      "hudForceMultiplier": 2.4927201159124643,
+      "worldForceMultiplier": 2.4933304083020094,
+      "absoluteDifference": 0.0006102923895450196
+    },
+    {
+      "frame": 6591,
+      "windMultiplier": 1.5887004002872385,
+      "hudForceMultiplier": 2.5239689618728316,
+      "worldForceMultiplier": 2.5244062609048012,
+      "absoluteDifference": 0.00043729903196965125
+    },
+    {
+      "frame": 6592,
+      "windMultiplier": 1.5985252919413717,
+      "hudForceMultiplier": 2.5552831089762478,
+      "worldForceMultiplier": 2.5553546696153213,
+      "absoluteDifference": 0.00007156063907354238
+    },
+    {
+      "frame": 6593,
+      "windMultiplier": 1.6083052770029207,
+      "hudForceMultiplier": 2.5866458640354413,
+      "worldForceMultiplier": 2.5869921502594924,
+      "absoluteDifference": 0.00034628622405108445
+    },
+    {
+      "frame": 6594,
+      "windMultiplier": 1.6180359384294412,
+      "hudForceMultiplier": 2.6180402980492423,
+      "worldForceMultiplier": 2.618616799895684,
+      "absoluteDifference": 0.0005765018464418681
+    },
+    {
+      "frame": 6595,
+      "windMultiplier": 1.6277128934987815,
+      "hudForceMultiplier": 2.6494492636621754,
+      "worldForceMultiplier": 2.65006690387104,
+      "absoluteDifference": 0.0006176402088646782
+    },
+    {
+      "frame": 6596,
+      "windMultiplier": 1.6373317969577283,
+      "hudForceMultiplier": 2.680855413328824,
+      "worldForceMultiplier": 2.6813283401126173,
+      "absoluteDifference": 0.0004729267837935147
+    },
+    {
+      "frame": 6597,
+      "windMultiplier": 1.6468883441706632,
+      "hudForceMultiplier": 2.7122412181651887,
+      "worldForceMultiplier": 2.7123871185546555,
+      "absoluteDifference": 0.00014590038946682427
+    },
+    {
+      "frame": 6598,
+      "windMultiplier": 1.6563782742682098,
+      "hudForceMultiplier": 2.743588987467733,
+      "worldForceMultiplier": 2.7438672187985027,
+      "absoluteDifference": 0.0002782313307698736
+    },
+    {
+      "frame": 6599,
+      "windMultiplier": 1.665797373295884,
+      "hudForceMultiplier": 2.7748808888794665,
+      "worldForceMultiplier": 2.7754212005412113,
+      "absoluteDifference": 0.0005403116617448411
+    },
+    {
+      "frame": 6600,
+      "windMultiplier": 1.6751414773627458,
+      "hudForceMultiplier": 2.8060989691810425,
+      "worldForceMultiplier": 2.8067239491651987,
+      "absoluteDifference": 0.0006249799841562265
+    },
+    {
+      "frame": 6601,
+      "windMultiplier": 1.6844064757900499,
+      "hudForceMultiplier": 2.837225175683456,
+      "worldForceMultiplier": 2.837761693896667,
+      "absoluteDifference": 0.0005365182132113233
+    },
+    {
+      "frame": 6602,
+      "windMultiplier": 1.6935883142598964,
+      "hudForceMultiplier": 2.868241378197678,
+      "worldForceMultiplier": 2.8685208527706534,
+      "absoluteDifference": 0.00027947457297550216
+    },
+    {
+      "frame": 6603,
+      "windMultiplier": 1.7026829979638796,
+      "hudForceMultiplier": 2.8991293915552645,
+      "worldForceMultiplier": 2.8992563429753844,
+      "absoluteDifference": 0.0001269514201198696
+    },
+    {
+      "frame": 6604,
+      "windMultiplier": 1.7116865947517397,
+      "hudForceMultiplier": 2.9298709986528064,
+      "worldForceMultiplier": 2.9303187518935014,
+      "absoluteDifference": 0.00044775324069501465
+    },
+    {
+      "frame": 6605,
+      "windMultiplier": 1.7205952382800156,
+      "hudForceMultiplier": 2.9604479739918634,
+      "worldForceMultiplier": 2.9610535720660542,
+      "absoluteDifference": 0.0006055980741908051
+    },
+    {
+      "frame": 6606,
+      "windMultiplier": 1.7294051311606906,
+      "hudForceMultiplier": 2.9908421076849256,
+      "worldForceMultiplier": 2.9914477025043826,
+      "absoluteDifference": 0.0006055948194569893
+    },
+    {
+      "frame": 6607,
+      "windMultiplier": 1.7381125481098472,
+      "hudForceMultiplier": 3.021035229896906,
+      "worldForceMultiplier": 3.0214882909789726,
+      "absoluteDifference": 0.00045306108206677465
+    },
+    {
+      "frame": 6608,
+      "windMultiplier": 1.7467138390963153,
+      "hudForceMultiplier": 3.0510092356905885,
+      "worldForceMultiplier": 3.051162744882288,
+      "absoluteDifference": 0.00015350919169954125
+    },
+    {
+      "frame": 6609,
+      "windMultiplier": 1.7552054324903243,
+      "hudForceMultiplier": 3.0807461102435467,
+      "worldForceMultiplier": 3.0809792853406517,
+      "absoluteDifference": 0.0002331750971049651
+    },
+    {
+      "frame": 6610,
+      "windMultiplier": 1.7635838382121523,
+      "hudForceMultiplier": 3.110227954403107,
+      "worldForceMultiplier": 3.110722625653141,
+      "absoluteDifference": 0.0004946712500339956
+    },
+    {
+      "frame": 6611,
+      "windMultiplier": 1.7718456508807772,
+      "hudForceMultiplier": 3.139437010545125,
+      "worldForceMultiplier": 3.1400520606267595,
+      "absoluteDifference": 0.0006150500816346494
+    },
+    {
+      "frame": 6612,
+      "windMultiplier": 1.7799875529625273,
+      "hudForceMultiplier": 3.168355688701526,
+      "worldForceMultiplier": 3.168955813016972,
+      "absoluteDifference": 0.0006001243154458713
+    },
+    {
+      "frame": 6613,
+      "windMultiplier": 1.7880063179197325,
+      "hudForceMultiplier": 3.1969665929208797,
+      "worldForceMultiplier": 3.1974224286150505,
+      "absoluteDifference": 0.00045583569417084746
+    },
+    {
+      "frame": 6614,
+      "windMultiplier": 1.7958988133593734,
+      "hudForceMultiplier": 3.2252525478256056,
+      "worldForceMultiplier": 3.225440787425776,
+      "absoluteDifference": 0.00018823960017044783
+    },
+    {
+      "frame": 6615,
+      "windMultiplier": 1.8036620041817333,
+      "hudForceMultiplier": 3.253196625328867,
+      "worldForceMultiplier": 3.2533663152633263,
+      "absoluteDifference": 0.00016968993445942715
+    },
+    {
+      "frame": 6616,
+      "windMultiplier": 1.8112929557290471,
+      "hudForceMultiplier": 3.280782171473668,
+      "worldForceMultiplier": 3.2812192884110223,
+      "absoluteDifference": 0.00043711693735426493
+    },
+    {
+      "frame": 6617,
+      "windMultiplier": 1.818788836934154,
+      "hudForceMultiplier": 3.307992833356293,
+      "worldForceMultiplier": 3.3085792548096626,
+      "absoluteDifference": 0.0005864214533697343
+    },
+    {
+      "frame": 6618,
+      "windMultiplier": 1.826146923469147,
+      "hudForceMultiplier": 3.3348125860958304,
+      "worldForceMultiplier": 3.3354362706623863,
+      "absoluteDifference": 0.0006236845665559265
+    },
+    {
+      "frame": 6619,
+      "windMultiplier": 1.833364600894021,
+      "hudForceMultiplier": 3.3612257598112927,
+      "worldForceMultiplier": 3.361780793263177,
+      "absoluteDifference": 0.0005550334518842348
+    },
+    {
+      "frame": 6620,
+      "windMultiplier": 1.8404393678053284,
+      "hudForceMultiplier": 3.387217066567677,
+      "worldForceMultiplier": 3.387603692489448,
+      "absoluteDifference": 0.0003866259217710777
+    },
+    {
+      "frame": 6621,
+      "windMultiplier": 1.8473688389848264,
+      "hudForceMultiplier": 3.4127716272521456,
+      "worldForceMultiplier": 3.4128962622946166,
+      "absoluteDifference": 0.00012463504247106627
+    },
+    {
+      "frame": 6622,
+      "windMultiplier": 1.8541507485481277,
+      "hudForceMultiplier": 3.437874998341582,
+      "worldForceMultiplier": 3.438065307055479,
+      "absoluteDifference": 0.00019030871389702497
+    },
+    {
+      "frame": 6623,
+      "windMultiplier": 1.8607829530933495,
+      "hudForceMultiplier": 3.4625131985228066,
+      "worldForceMultiplier": 3.4629360741000608,
+      "absoluteDifference": 0.0004228755772541781
+    },
+    {
+      "frame": 6624,
+      "windMultiplier": 1.8672634348497696,
+      "hudForceMultiplier": 3.4866727351269597,
+      "worldForceMultiplier": 3.487237880686636,
+      "absoluteDifference": 0.0005651455596762389
+    },
+    {
+      "frame": 6625,
+      "windMultiplier": 1.8735903048264717,
+      "hudForceMultiplier": 3.5103406303397513,
+      "worldForceMultiplier": 3.510963643099269,
+      "absoluteDifference": 0.0006230127595174828
+    },
+    {
+      "frame": 6626,
+      "windMultiplier": 1.8797618059609973,
+      "hudForceMultiplier": 3.53350444714975,
+      "worldForceMultiplier": 3.53410677235374,
+      "absoluteDifference": 0.0006023252039901728
+    },
+    {
+      "frame": 6627,
+      "windMultiplier": 1.8857763162679964,
+      "hudForceMultiplier": 3.556152314997294,
+      "worldForceMultiplier": 3.5566611860049857,
+      "absoluteDifference": 0.0005088710076917025
+    },
+    {
+      "frame": 6628,
+      "windMultiplier": 1.8916323519878797,
+      "hudForceMultiplier": 3.5782729550871974,
+      "worldForceMultiplier": 3.5786213199545482,
+      "absoluteDifference": 0.0003483648673507922
+    },
+    {
+      "frame": 6629,
+      "windMultiplier": 1.897328570735465,
+      "hudForceMultiplier": 3.5998557053290825,
+      "worldForceMultiplier": 3.5999821402579935,
+      "absoluteDifference": 0.00012643492891095676
+    },
+    {
+      "frame": 6630,
+      "windMultiplier": 1.9028637746486337,
+      "hudForceMultiplier": 3.620890544870046,
+      "worldForceMultiplier": 3.6210255323972387,
+      "absoluteDifference": 0.0001349875271925427
+    },
+    {
+      "frame": 6631,
+      "windMultiplier": 1.908236913536975,
+      "hudForceMultiplier": 3.6413681181851207,
+      "worldForceMultiplier": 3.6417121171173537,
+      "absoluteDifference": 0.000343998932232914
+    },
+    {
+      "frame": 6632,
+      "windMultiplier": 1.9134470880304422,
+      "hudForceMultiplier": 3.661279758692179,
+      "worldForceMultiplier": 3.661771288917202,
+      "absoluteDifference": 0.0004915302250232401
+    },
+    {
+      "frame": 6633,
+      "windMultiplier": 1.9184935527279974,
+      "hudForceMultiplier": 3.6806175118588933,
+      "worldForceMultiplier": 3.68120017800279,
+      "absoluteDifference": 0.0005826661438965708
+    },
+    {
+      "frame": 6634,
+      "windMultiplier": 1.9233757193462693,
+      "hudForceMultiplier": 3.699374157770779,
+      "worldForceMultiplier": 3.6999965194831375,
+      "absoluteDifference": 0.0006223617123586322
+    },
+    {
+      "frame": 6635,
+      "windMultiplier": 1.9280931598681956,
+      "hudForceMultiplier": 3.7175432331305234,
+      "worldForceMultiplier": 3.718158665492553,
+      "absoluteDifference": 0.0006154323620295443
+    },
+    {
+      "frame": 6636,
+      "windMultiplier": 1.9326456096916806,
+      "hudForceMultiplier": 3.735119052660528,
+      "worldForceMultiplier": 3.7356855973129703,
+      "absoluteDifference": 0.0005665446524423245
+    },
+    {
+      "frame": 6637,
+      "windMultiplier": 1.9370329707782412,
+      "hudForceMultiplier": 3.7520967298819787,
+      "worldForceMultiplier": 3.7525769374962286,
+      "absoluteDifference": 0.00048020761424982794
+    },
+    {
+      "frame": 6638,
+      "windMultiplier": 1.941255314801659,
+      "hudForceMultiplier": 3.768472197245688,
+      "worldForceMultiplier": 3.768832961986387,
+      "absoluteDifference": 0.0003607647406993486
+    },
+    {
+      "frame": 6639,
+      "windMultiplier": 1.945312886296631,
+      "hudForceMultiplier": 3.7842422255917287,
+      "worldForceMultiplier": 3.784454612242029,
+      "absoluteDifference": 0.0002123866503001004
+    },
+    {
+      "frame": 6640,
+      "windMultiplier": 1.949206105807423,
+      "hudForceMultiplier": 3.7994044429169387,
+      "worldForceMultiplier": 3.7994435073585784,
+      "absoluteDifference": 0.00003906444163970235
+    },
+    {
+      "frame": 6641,
+      "windMultiplier": 1.952935573036512,
+      "hudForceMultiplier": 3.81395735243145,
+      "worldForceMultiplier": 3.814095513494223,
+      "absoluteDifference": 0.00013816106277309004
+    },
+    {
+      "frame": 6642,
+      "windMultiplier": 1.9565020699932445,
+      "hudForceMultiplier": 3.8279003498878508,
+      "worldForceMultiplier": 3.8281831764733165,
+      "absoluteDifference": 0.00028282658546574524
+    },
+    {
+      "frame": 6643,
+      "windMultiplier": 1.9599065641424855,
+      "hudForceMultiplier": 3.8412337401688026,
+      "worldForceMultiplier": 3.841630928362818,
+      "absoluteDifference": 0.0003971881940154631
+    },
+    {
+      "frame": 6644,
+      "windMultiplier": 1.9631502115532666,
+      "hudForceMultiplier": 3.8539587531216357,
+      "worldForceMultiplier": 3.8544433356354038,
+      "absoluteDifference": 0.0004845825137680393
+    },
+    {
+      "frame": 6645,
+      "windMultiplier": 1.9662343600474388,
+      "hudForceMultiplier": 3.866077558631161,
+      "worldForceMultiplier": 3.866625722187383,
+      "absoluteDifference": 0.0005481635562221143
+    },
+    {
+      "frame": 6646,
+      "windMultiplier": 1.9691605523483204,
+      "hudForceMultiplier": 3.8775932809247426,
+      "worldForceMultiplier": 3.878184181775866,
+      "absoluteDifference": 0.0005909008511233438
+    },
+    {
+      "frame": 6647,
+      "windMultiplier": 1.9719305292293519,
+      "hudForceMultiplier": 3.8885100121067517,
+      "worldForceMultiplier": 3.8891255904559405,
+      "absoluteDifference": 0.0006155783491887945
+    },
+    {
+      "frame": 6648,
+      "windMultiplier": 1.974546232662743,
+      "hudForceMultiplier": 3.898832824922631,
+      "worldForceMultiplier": 3.8994576190178343,
+      "absoluteDifference": 0.0006247940952031072
+    },
+    {
+      "frame": 6649,
+      "windMultiplier": 1.9770098089681238,
+      "hudForceMultiplier": 3.9085677847561775,
+      "worldForceMultiplier": 3.9091887454240895,
+      "absoluteDifference": 0.0006209606679119517
+    },
+    {
+      "frame": 6650,
+      "windMultiplier": 1.9793236119611952,
+      "hudForceMultiplier": 3.917721960867112,
+      "worldForceMultiplier": 3.918328267246721,
+      "absoluteDifference": 0.0006063063796091228
+    },
+    {
+      "frame": 6651,
+      "windMultiplier": 1.9814902061023831,
+      "hudForceMultiplier": 3.9263034368796648,
+      "worldForceMultiplier": 3.9268863141044137,
+      "absoluteDifference": 0.0005828772247489233
+    },
+    {
+      "frame": 6652,
+      "windMultiplier": 1.9835123696454802,
+      "hudForceMultiplier": 3.934321320536628,
+      "worldForceMultiplier": 3.9348738600996462,
+      "absoluteDifference": 0.0005525395630181507
+    },
+    {
+      "frame": 6653,
+      "windMultiplier": 1.985393097786309,
+      "hudForceMultiplier": 3.941785752737516,
+      "worldForceMultiplier": 3.942302736255921,
+      "absoluteDifference": 0.0005169835184046789
+    },
+    {
+      "frame": 6654,
+      "windMultiplier": 1.9871356058113596,
+      "hudForceMultiplier": 3.948707915883279,
+      "worldForceMultiplier": 3.9491856429548706,
+      "absoluteDifference": 0.00047772707159143835
+    },
+    {
+      "frame": 6655,
+      "windMultiplier": 1.9887433322464512,
+      "hudForceMultiplier": 3.9551000415547186,
+      "worldForceMultiplier": 3.955536162373482,
+      "absoluteDifference": 0.00043612081876354125
+    },
+    {
+      "frame": 6656,
+      "windMultiplier": 1.9902199420053732,
+      "hudForceMultiplier": 3.960975417555871,
+      "worldForceMultiplier": 3.9613687709212244,
+      "absoluteDifference": 0.00039335336535328835
+    },
+    {
+      "frame": 6657,
+      "windMultiplier": 1.9915693295385415,
+      "hudForceMultiplier": 3.9663483943585955,
+      "worldForceMultiplier": 3.966698851677239,
+      "absoluteDifference": 0.0003504573186434712
+    },
+    {
+      "frame": 6658,
+      "windMultiplier": 1.9927956219816494,
+      "hudForceMultiplier": 3.971234390989229,
+      "worldForceMultiplier": 3.971542706827515,
+      "absoluteDifference": 0.00030831583828616616
+    },
+    {
+      "frame": 6659,
+      "windMultiplier": 1.9939031823043178,
+      "hudForceMultiplier": 3.975649900403286,
+      "worldForceMultiplier": 3.9759175701020553,
+      "absoluteDifference": 0.0002676696987693461
+    },
+    {
+      "frame": 6660,
+      "windMultiplier": 1.9948966124587388,
+      "hudForceMultiplier": 3.9796124943993516,
+      "worldForceMultiplier": 3.9798416192120185,
+      "absoluteDifference": 0.0002291248126669032
+    },
+    {
+      "frame": 6661,
+      "windMultiplier": 1.9957807565283368,
+      "hudForceMultiplier": 3.9831408281288203,
+      "worldForceMultiplier": 3.9833339882869305,
+      "absoluteDifference": 0.00019316015811021714
+    },
+    {
+      "frame": 6662,
+      "windMultiplier": 1.9965607038764115,
+      "hudForceMultiplier": 3.9862546442634716,
+      "worldForceMultiplier": 3.9864147803118253,
+      "absoluteDifference": 0.00016013604835363182
+    },
+    {
+      "frame": 6663,
+      "windMultiplier": 1.9972417922947936,
+      "hudForceMultiplier": 3.988974776888919,
+      "worldForceMultiplier": 3.989105079564435,
+      "absoluteDifference": 0.0001303026755157255
+    },
+    {
+      "frame": 6664,
+      "windMultiplier": 1.9978296111524927,
+      "hudForceMultiplier": 3.99132315519772,
+      "worldForceMultiplier": 3.9914269640523465,
+      "absoluteDifference": 0.00010380885462657474
+    },
+    {
+      "frame": 6665,
+      "windMultiplier": 1.9983300045443426,
+      "hudForceMultiplier": 3.9933228070621922,
+      "worldForceMultiplier": 3.9934035179501537,
+      "absoluteDifference": 0.00008071088796146597
+    },
+    {
+      "frame": 6666,
+      "windMultiplier": 1.9987490744396645,
+      "hudForceMultiplier": 3.9949978625734155,
+      "worldForceMultiplier": 3.9950588440366746,
+      "absoluteDifference": 0.00006098146325905773
+    },
+    {
+      "frame": 6667,
+      "windMultiplier": 1.999093183830908,
+      "hudForceMultiplier": 3.9963735576391968,
+      "worldForceMultiplier": 3.996418076132087,
+      "absoluteDifference": 0.00004451849289033305
+    },
+    {
+      "frame": 6668,
+      "windMultiplier": 1.999368959882303,
+      "hudForceMultiplier": 3.9974762377408424,
+      "worldForceMultiplier": 3.9975073915350965,
+      "absoluteDifference": 0.00003115379425411291
+    },
+    {
+      "frame": 6669,
+      "windMultiplier": 1.9995832970785081,
+      "hudForceMultiplier": 3.9983333619553574,
+      "worldForceMultiplier": 3.998354023460107,
+      "absoluteDifference": 0.000020661504749774906
+    },
+    {
+      "frame": 6670,
+      "windMultiplier": 1.9997433603732722,
+      "hudForceMultiplier": 3.9989735073569865,
+      "worldForceMultiplier": 3.9989862734744253,
+      "absoluteDifference": 0.000012766117438722802
+    },
+    {
+      "frame": 6671,
+      "windMultiplier": 1.999856588338069,
+      "hudForceMultiplier": 3.9994263739191807,
+      "worldForceMultiplier": 3.9994335239353727,
+      "absoluteDifference": 0.0000071500161920035055
+    },
+    {
+      "frame": 6672,
+      "windMultiplier": 1.9999306963107615,
+      "hudForceMultiplier": 3.9997227900460475,
+      "worldForceMultiplier": 3.9997262504275084,
+      "absoluteDifference": 0.000003460381460929085
+    },
+    {
+      "frame": 6673,
+      "windMultiplier": 1.9999736795442438,
+      "hudForceMultiplier": 3.9998947188697414,
+      "worldForceMultiplier": 3.999896034199763,
+      "absoluteDifference": 0.000001315330021789407
+    },
+    {
+      "frame": 6674,
+      "windMultiplier": 1.9999938163550959,
+      "hudForceMultiplier": 3.999975265458621,
+      "worldForceMultiplier": 3.999975574602629,
+      "absoluteDifference": 3.091440081703922e-7
+    },
+    {
+      "frame": 6675,
+      "windMultiplier": 1.99999967127223,
+      "hudForceMultiplier": 3.9999986850890283,
+      "worldForceMultiplier": 3.9999987015253096,
+      "absoluteDifference": 1.6436281224940785e-8
+    },
+    {
+      "frame": 6676,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6677,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6678,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6679,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6680,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6681,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6682,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6683,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6684,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6685,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6686,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6687,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6688,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6689,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6690,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6691,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6692,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6693,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6694,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6695,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6696,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6697,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6698,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6699,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6700,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6701,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6702,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6703,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6704,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6705,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6706,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6707,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6708,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6709,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6710,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6711,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6712,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6713,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6714,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6715,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6716,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6717,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6718,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6719,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6720,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6721,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6722,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6723,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6724,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6725,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6726,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6727,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6728,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6729,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6730,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6731,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6732,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6733,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6734,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6735,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6736,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6737,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6738,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6739,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6740,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6741,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6742,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6743,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6744,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6745,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6746,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6747,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6748,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6749,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6750,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6751,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6752,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6753,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6754,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6755,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6756,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6757,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6758,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6759,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6760,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6761,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6762,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6763,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6764,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6765,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6766,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6767,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6768,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6769,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6770,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6771,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6772,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6773,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6774,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6775,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6776,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6777,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6778,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6779,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6780,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6781,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6782,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6783,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6784,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6785,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6786,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6787,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6788,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6789,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6790,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6791,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6792,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6793,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6794,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6795,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6796,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6797,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6798,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6799,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6800,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6801,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6802,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6803,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6804,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6805,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6806,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6807,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6808,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6809,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6810,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6811,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6812,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6813,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6814,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6815,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6816,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6817,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6818,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6819,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6820,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6821,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6822,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6823,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6824,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6825,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6826,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6827,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6828,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6829,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6830,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6831,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6832,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6833,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6834,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6835,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6836,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6837,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6838,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6839,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6840,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6841,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6842,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6843,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6844,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6845,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6846,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6847,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6848,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6849,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6850,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6851,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6852,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6853,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6854,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6855,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6856,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6857,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6858,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6859,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6860,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6861,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6862,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6863,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6864,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6865,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6866,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6867,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6868,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6869,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6870,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6871,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6872,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6873,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6874,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6875,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6876,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6877,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6878,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6879,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6880,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6881,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6882,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6883,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6884,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6885,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6886,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6887,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6888,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6889,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6890,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6891,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6892,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6893,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6894,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6895,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6896,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6897,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6898,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6899,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6900,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6901,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6902,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6903,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6904,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6905,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6906,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6907,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6908,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6909,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6910,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6911,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6912,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6913,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6914,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6915,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6916,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6917,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6918,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6919,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6920,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6921,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6922,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6923,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6924,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6925,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6926,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6927,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6928,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6929,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6930,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6931,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6932,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6933,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6934,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6935,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6936,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6937,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6938,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6939,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6940,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6941,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6942,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6943,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6944,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6945,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6946,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6947,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6948,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6949,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6950,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6951,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6952,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6953,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6954,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6955,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6956,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6957,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6958,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6959,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6960,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6961,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6962,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6963,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6964,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6965,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6966,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6967,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6968,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6969,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6970,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6971,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6972,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6973,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6974,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6975,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6976,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6977,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6978,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6979,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6980,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6981,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6982,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6983,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6984,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6985,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6986,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6987,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6988,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6989,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6990,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6991,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6992,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6993,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6994,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6995,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6996,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6997,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6998,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 6999,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7000,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7001,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7002,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7003,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7004,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7005,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7006,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7007,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7008,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7009,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7010,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7011,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7012,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7013,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7014,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7015,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7016,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7017,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7018,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7019,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7020,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7021,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7022,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7023,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7024,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7025,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7026,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7027,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7028,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7029,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7030,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7031,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7032,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7033,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7034,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7035,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7036,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7037,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7038,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7039,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7040,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7041,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7042,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7043,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7044,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7045,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7046,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7047,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7048,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7049,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7050,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7051,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7052,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7053,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7054,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7055,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7056,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7057,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7058,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7059,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7060,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7061,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7062,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7063,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7064,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7065,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7066,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7067,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7068,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7069,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7070,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7071,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7072,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7073,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7074,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7075,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7076,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7077,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7078,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7079,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7080,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7081,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7082,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7083,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7084,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7085,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7086,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    },
+    {
+      "frame": 7087,
+      "windMultiplier": 2,
+      "hudForceMultiplier": 4,
+      "worldForceMultiplier": 4,
+      "absoluteDifference": 0
+    }
+  ]
+}

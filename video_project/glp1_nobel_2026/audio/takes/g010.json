@@ -1,0 +1,69 @@
+{
+  "id": "g010",
+  "text": "研究者发现，同样把血糖升到相近水平，喝糖水引起的胰岛素反应，常比静脉输糖更强。肠道还传了什么消息？",
+  "ttsText": "研究者发现，同样把血糖升到相近水平，喝糖水引起的胰岛素反应，常比静脉输糖更强。肠道还传了什么消息？",
+  "signature": "cb56f7cd93ee3f3ef5603a89f8e939cf4724a9919ff76c3913bfcf527f304fca",
+  "raw": "audio/raw/g010-cb56f7cd93.wav",
+  "processed": "public/voice/g010.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "954c51311d28eb33620484db53901f928b27281c546ab56e2d7508b7c4fa21de",
+  "seed": 3016122916,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g009",
+    "g010",
+    "g011",
+    "g012"
+  ],
+  "rawEndpointDB": -97.43529953887992,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "5d2997b0c66f53011486185ec68f2ac83c72ff3e7f16518a266875594edfee6c",
+    "outputSha256": "954c51311d28eb33620484db53901f928b27281c546ab56e2d7508b7c4fa21de",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.5524217540205463,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -6.5399997942925605,
+      "activeRmsDb": -22.10567184845871,
+      "quietFrameP10Db": -64.26876749472733
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.167677671135978,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.52034737726112
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

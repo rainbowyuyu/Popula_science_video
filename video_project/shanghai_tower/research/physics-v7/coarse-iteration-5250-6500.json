@@ -1,0 +1,45 @@
+{
+  "reference": "research\\physics-v7\\foam-candidate-gauss5250",
+  "candidate": "research\\physics-v7\\foam-candidate-gauss6500",
+  "referencePressure_Pa": [
+    0.7604542315586451,
+    0.7648835580148515
+  ],
+  "velocitySlices": [
+    {
+      "height_m": 100,
+      "points": 12952,
+      "vectorRMSRelativeUref": 0.008657033555209637,
+      "speedRMSRelativeUref": 0.007734172511845827,
+      "vectorP95RelativeUref": 0.01985201984643936,
+      "CpRMS": 0.0023166288156062365
+    },
+    {
+      "height_m": 300,
+      "points": 13000,
+      "vectorRMSRelativeUref": 0.0009528279188089073,
+      "speedRMSRelativeUref": 0.0006557969027198851,
+      "vectorP95RelativeUref": 0.002132766181603074,
+      "CpRMS": 0.0004443699726834893
+    },
+    {
+      "height_m": 500,
+      "points": 13052,
+      "vectorRMSRelativeUref": 0.003207020228728652,
+      "speedRMSRelativeUref": 0.0027077319100499153,
+      "vectorP95RelativeUref": 0.003585228230804205,
+      "CpRMS": 0.0011198364663869143
+    }
+  ],
+  "method": "Probe native finite volume fields at identical fixed positions; points invalid/in solid in either mesh excluded, no extrapolation.",
+  "surfaceCp": {
+    "matchedPoints": 2046,
+    "coverage": 1.0,
+    "RMSDeltaCp": 0.02007562294602394,
+    "P95AbsoluteDeltaCp": 0.02373576909303665,
+    "meanDeltaCp": 0.0002763911325018853
+  },
+  "quality": {
+    "acceptedForFilm": false
+  }
+}

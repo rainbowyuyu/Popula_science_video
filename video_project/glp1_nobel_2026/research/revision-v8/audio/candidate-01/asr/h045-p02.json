@@ -1,0 +1,88 @@
+{
+  "id": "h045",
+  "partIndex": 1,
+  "expected": "体重和血脂，需要一起看。",
+  "heard": "体重和血汁需要一起看。",
+  "words": [
+    {
+      "text": "体",
+      "start": 0.0,
+      "end": 0.42,
+      "probability": 0.4390910863876343
+    },
+    {
+      "text": "重",
+      "start": 0.42,
+      "end": 0.62,
+      "probability": 0.9858431220054626
+    },
+    {
+      "text": "和",
+      "start": 0.62,
+      "end": 0.8,
+      "probability": 0.9760239720344543
+    },
+    {
+      "text": "血",
+      "start": 0.8,
+      "end": 1.0,
+      "probability": 0.911403477191925
+    },
+    {
+      "text": "汁",
+      "start": 1.0,
+      "end": 1.34,
+      "probability": 0.7298485487699509
+    },
+    {
+      "text": "需要",
+      "start": 1.34,
+      "end": 1.8,
+      "probability": 0.6704657077789307
+    },
+    {
+      "text": "一起",
+      "start": 1.8,
+      "end": 2.1,
+      "probability": 0.99294114112854
+    },
+    {
+      "text": "看。",
+      "start": 2.1,
+      "end": 2.38,
+      "probability": 0.9993120431900024
+    }
+  ],
+  "sourceSHA256": "4cd1744d97936b655f27b41cfc2f046cf02ecba12ca7a43313dc93d74a77feb7",
+  "ratio": 0.9,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "脂",
+      "heard": "汁",
+      "end": 5
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 130562,
+    "seconds": 2.7200416666666665,
+    "peakDBFS": -8.116984541153082,
+    "first20msDBFS": -70.29499537433647,
+    "last20msDBFS": -55.14266734989918,
+    "firstActiveMs": 220.0,
+    "lastActiveToEndMs": 320.0416666666667,
+    "activityThresholdDBFS": -49.89000057246936,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,925 @@
+{
+  "version": "V16",
+  "schema": "rainbow.v16.independent-spherical-ray-and-rendered-mesh/1",
+  "createdUTC": "2026-10-12T23:09:15.435Z",
+  "passed": true,
+  "tolerance": 0.000002,
+  "scope": "Independent spherical-angle solution and scalar Snell/reflection checks of actual WorldV10 paths, actual spectral meshes and per-wavelength contact coordinates. CPU verification; not GPU visual approval.",
+  "sourceHashes": [
+    {
+      "file": "src/optics.ts",
+      "sha256": "e5fba627c3c80a011c1e96179ef44957085ab3787328e18772be3f1ce93818ed"
+    },
+    {
+      "file": "src/RainbowAtmosphereV15.ts",
+      "sha256": "2977eefea7a293c498f3016a570625340af3fe21c7a21ea689ea76ad6620b1eb"
+    },
+    {
+      "file": "src/SpectralRibbonV15.ts",
+      "sha256": "bd2df062d09ee644d1e268abd04f1283496b0b276db52d4b14507d09fd82c963"
+    },
+    {
+      "file": "src/MacroLookV15.ts",
+      "sha256": "308b4a1c47e3263021a918d37c355c5e2e860f09853a0d7159842b983950993f"
+    },
+    {
+      "file": "src/MacroContactV12.ts",
+      "sha256": "af58835f67b4e3ee9bef16b2bbe3b2c342807f06f22d3727fb82a76c1ddb7df0"
+    },
+    {
+      "file": "src/OpticalRadianceV15.ts",
+      "sha256": "caee021800068b7335aa24a891ac02e554e1aec8c90e8bb70b73bde15a035674"
+    },
+    {
+      "file": "src/FountainDetailV09.ts",
+      "sha256": "bd9a98003bbad3d0a3cb1306b1ffc1008a40b2ea72ed67e378cf71599bf68d0d"
+    },
+    {
+      "file": "src/CinematicEnvironmentV16.ts",
+      "sha256": "6ce03a1b9b89f2593b27b1b75c5bcd00326eb5eb3690a38f57a34d3030258a15"
+    },
+    {
+      "file": "src/OpticalEnergyV15.ts",
+      "sha256": "f60bbc0d0c54a898ec0408745ccc723d69ab59f52f415eadacca214fc4241c12"
+    },
+    {
+      "file": "src/timeline.json",
+      "sha256": "18398c0e4f6db2220128bc680b1250941298af5da39f91b6d12d702bbdc490d9"
+    },
+    {
+      "file": "src/Timeline.ts",
+      "sha256": "216f16e22384d1bff2562228561c305cab4595edb5adcbd79de54e25ce959f56"
+    },
+    {
+      "file": "src/SpectrumDetailV10.ts",
+      "sha256": "41dbc47375378bfd09d012c8c45edd663c8a09c5308dbc867eb97eed3e360baf"
+    },
+    {
+      "file": "src/WorldV10.ts",
+      "sha256": "007e0fdc92157740a4637737cb9e227adbacf4f9e3092c40d5c96728f6f772e2"
+    },
+    {
+      "file": "scripts/check-optics-v16.mjs",
+      "sha256": "1d164da58556e63c56d6b74a071ea66ed619911bf84ed7db915312666e49a05c"
+    }
+  ],
+  "errors": [],
+  "extrema": [
+    {
+      "color": "red",
+      "wavelengthNm": 650,
+      "order": 1,
+      "impact": 0.8620714385305106,
+      "angle": 42.42828324324725,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 1.1430445635548515e-15,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 0,
+        "outgoingDirection": 3.510833468576701e-16,
+        "reflection": 1.1102230246251565e-16
+      }
+    },
+    {
+      "color": "red",
+      "wavelengthNm": 650,
+      "order": 2,
+      "impact": 0.9506248964883182,
+      "angle": 50.25987060266954,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 9.930136612989092e-16,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 1.1102230246251565e-16,
+        "outgoingDirection": 7.850462293418876e-16,
+        "reflection": 3.510833468576701e-16
+      }
+    },
+    {
+      "color": "orange",
+      "wavelengthNm": 600,
+      "order": 1,
+      "impact": 0.8610413628519626,
+      "angle": 42.1362789662447,
+      "residuals": {
+        "surface": 4.440892098500626e-16,
+        "independentContact": 6.087272963323595e-16,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 1.1102230246251565e-16,
+        "outgoingDirection": 0,
+        "reflection": 2.7755575615628914e-16
+      }
+    },
+    {
+      "color": "orange",
+      "wavelengthNm": 600,
+      "order": 2,
+      "impact": 0.9502747393945394,
+      "angle": 50.7859106639296,
+      "residuals": {
+        "surface": 0,
+        "independentContact": 9.43689570931383e-16,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 1.1102230246251565e-16,
+        "outgoingDirection": 1.7271017045521525e-15,
+        "reflection": 4.965068306494546e-16
+      }
+    },
+    {
+      "color": "yellow",
+      "wavelengthNm": 570,
+      "order": 1,
+      "impact": 0.8605252906318617,
+      "angle": 41.990947278482,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 5.775561153410717e-16,
+        "entrySnell": 0,
+        "exitSnell": 2.220446049250313e-16,
+        "outgoingDirection": 4.710277376051325e-16,
+        "reflection": 2.220446049250313e-16
+      }
+    },
+    {
+      "color": "yellow",
+      "wavelengthNm": 570,
+      "order": 2,
+      "impact": 0.950099419472719,
+      "angle": 51.04788569645831,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 1.247457973265988e-15,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 0,
+        "outgoingDirection": 8.005932084973442e-16,
+        "reflection": 2.482534153247273e-16
+      }
+    },
+    {
+      "color": "green",
+      "wavelengthNm": 530,
+      "order": 1,
+      "impact": 0.8600085074399544,
+      "angle": 41.84605996059199,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 7.550332863779066e-16,
+        "entrySnell": 0,
+        "exitSnell": 3.3306690738754696e-16,
+        "outgoingDirection": 4.002966042486721e-16,
+        "reflection": 5.661048867003676e-16
+      }
+    },
+    {
+      "color": "green",
+      "wavelengthNm": 530,
+      "order": 2,
+      "impact": 0.9499239365722876,
+      "angle": 51.30916825226282,
+      "residuals": {
+        "surface": 4.440892098500626e-16,
+        "independentContact": 2.6852712547870858e-15,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 3.3306690738754696e-16,
+        "outgoingDirection": 8.95090418262362e-16,
+        "reflection": 2.2887833992611187e-16
+      }
+    },
+    {
+      "color": "cyan",
+      "wavelengthNm": 500,
+      "order": 1,
+      "impact": 0.8584539756681226,
+      "angle": 41.414044990840154,
+      "residuals": {
+        "surface": 1.1102230246251565e-16,
+        "independentContact": 4.965068306494546e-16,
+        "entrySnell": 0,
+        "exitSnell": 3.3306690738754696e-16,
+        "outgoingDirection": 6.473657049138938e-16,
+        "reflection": 2.482534153247273e-16
+      }
+    },
+    {
+      "color": "cyan",
+      "wavelengthNm": 500,
+      "order": 2,
+      "impact": 0.9493964964477062,
+      "angle": 52.088892082431926,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 2.7938161855448883e-15,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 1.1102230246251565e-16,
+        "outgoingDirection": 4.965068306494546e-16,
+        "reflection": 3.3766115072321297e-16
+      }
+    },
+    {
+      "color": "blue",
+      "wavelengthNm": 460,
+      "order": 1,
+      "impact": 0.857414113081594,
+      "angle": 41.128221835587965,
+      "residuals": {
+        "surface": 4.440892098500626e-16,
+        "independentContact": 1.887379141862766e-15,
+        "entrySnell": 0,
+        "exitSnell": 3.3306690738754696e-16,
+        "outgoingDirection": 8.005932084973442e-16,
+        "reflection": 1.2412670766236366e-16
+      }
+    },
+    {
+      "color": "blue",
+      "wavelengthNm": 460,
+      "order": 2,
+      "impact": 0.9490440554809634,
+      "angle": 52.60530207635723,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 7.447602459741819e-16,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 1.1102230246251565e-16,
+        "outgoingDirection": 2.482534153247273e-16,
+        "reflection": 2.482534153247273e-16
+      }
+    },
+    {
+      "color": "violet",
+      "wavelengthNm": 410,
+      "order": 1,
+      "impact": 0.8558490345569143,
+      "angle": 40.70272995379426,
+      "residuals": {
+        "surface": 0,
+        "independentContact": 9.694605782913356e-16,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 0,
+        "outgoingDirection": 3.1401849173675503e-16,
+        "reflection": 2.220446049250313e-16
+      }
+    },
+    {
+      "color": "violet",
+      "wavelengthNm": 410,
+      "order": 2,
+      "impact": 0.9485141432423034,
+      "angle": 53.37486853420309,
+      "residuals": {
+        "surface": 2.220446049250313e-16,
+        "independentContact": 1.4946834900704542e-15,
+        "entrySnell": 1.1102230246251565e-16,
+        "exitSnell": 1.1102230246251565e-16,
+        "outgoingDirection": 1.4130832128153975e-15,
+        "reflection": 8.455206652451151e-16
+      }
+    }
+  ],
+  "sweep": {
+    "paths": 2786,
+    "maxResidual": 9.440976529270755e-15
+  },
+  "runtime": {
+    "primary": [
+      {
+        "color": "red",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.491575227865858,
+            0.5789674771668208,
+            0
+          ],
+          [
+            0.3320645569665128,
+            -1.5651623334359401,
+            0
+          ],
+          [
+            -1.2179924639744877,
+            -2.9819626834611332,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 1.1102230246251565e-15,
+          "independentContact": 2.0471501066083613e-15,
+          "entrySnell": 0,
+          "exitSnell": 2.220446049250313e-16,
+          "outgoingDirection": 9.550499576785472e-16,
+          "reflection": 5.978733960281817e-16
+        }
+      },
+      {
+        "color": "orange",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.4930472243919035,
+            0.5751608346676903,
+            0
+          ],
+          [
+            0.32407532703352726,
+            -1.5668360419674146,
+            0
+          ],
+          [
+            -1.2331895401189483,
+            -2.975710107855698,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 1.2947314098277875e-15,
+          "entrySnell": 0,
+          "exitSnell": 1.1102230246251565e-16,
+          "outgoingDirection": 2.482534153247273e-16,
+          "reflection": 2.2887833992611187e-16
+        }
+      },
+      {
+        "color": "yellow",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.4937773445485374,
+            0.5732619339477564,
+            0
+          ],
+          [
+            0.3200897632528523,
+            -1.5676551098569904,
+            0
+          ],
+          [
+            -1.2407528818109013,
+            -2.9725644440669905,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 2.010699415441723e-15,
+          "entrySnell": 1.1102230246251565e-16,
+          "exitSnell": 1.1102230246251565e-16,
+          "outgoingDirection": 5.551115123125783e-16,
+          "reflection": 2.482534153247273e-16
+        }
+      },
+      {
+        "color": "green",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.4945035710076464,
+            0.5713659740003715,
+            0
+          ],
+          [
+            0.31611024743266897,
+            -1.5684624035876853,
+            0
+          ],
+          [
+            -1.248292830602232,
+            -2.9694060175261363,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 6.661338147750939e-16,
+          "independentContact": 1.5553031891404223e-15,
+          "entrySnell": 0,
+          "exitSnell": 0,
+          "outgoingDirection": 9.42055475210265e-16,
+          "reflection": 2.7755575615628914e-16
+        }
+      },
+      {
+        "color": "cyan",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.4966590741373178,
+            0.5656956918718988,
+            0
+          ],
+          [
+            0.304208087341558,
+            -1.5708142600562272,
+            0
+          ],
+          [
+            -1.270772855482586,
+            -2.9598553068726168,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 6.280369834735101e-16,
+          "entrySnell": 0,
+          "exitSnell": 1.1102230246251565e-16,
+          "outgoingDirection": 1.0235750533041806e-15,
+          "reflection": 2.9893669801409083e-16
+        }
+      },
+      {
+        "color": "blue",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.4980769467818247,
+            0.5619301215639247,
+            0
+          ],
+          [
+            0.2963037322749411,
+            -1.5723244252506996,
+            0
+          ],
+          [
+            -1.2856435574174183,
+            -2.9534264390914577,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 6.661338147750939e-16,
+          "independentContact": 2.831068712794149e-15,
+          "entrySnell": 0,
+          "exitSnell": 0,
+          "outgoingDirection": 7.850462293418876e-16,
+          "reflection": 2.9893669801409083e-16
+        }
+      },
+      {
+        "color": "violet",
+        "impact": 0.8620714417844928,
+        "points": [
+          [
+            -3.450858830441274,
+            1.3793143068551885,
+            0
+          ],
+          [
+            -0.8108588304412742,
+            1.3793143068551885,
+            0
+          ],
+          [
+            1.5001754251160033,
+            0.5563035986563613,
+            0
+          ],
+          [
+            0.2844930079232135,
+            -1.574504280223717,
+            0
+          ],
+          [
+            -1.307776713058163,
+            -2.943692775517879,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 6.661338147750939e-16,
+          "independentContact": 1.6919522065759386e-15,
+          "entrySnell": 1.1102230246251565e-16,
+          "exitSnell": 0,
+          "outgoingDirection": 8.671119018262734e-16,
+          "reflection": 1.2412670766236366e-16
+        }
+      }
+    ],
+    "secondary": [
+      {
+        "color": "red",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.5103275243486065,
+            0.5281200329423328,
+            0
+          ],
+          [
+            0.559463319967262,
+            -1.4989999311578406,
+            0
+          ],
+          [
+            -1.4870219617088476,
+            -0.5905638707164295,
+            0
+          ],
+          [
+            -3.5328028917508996,
+            1.8700824643500866,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 6.2685830808342686e-15,
+          "entrySnell": 0,
+          "exitSnell": 2.220446049250313e-16,
+          "outgoingDirection": 8.95090418262362e-16,
+          "reflection": 2.7755575615628914e-16
+        }
+      },
+      {
+        "color": "orange",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.511937296214352,
+            0.5234936602443577,
+            0
+          ],
+          [
+            0.550274439326477,
+            -1.502397431249113,
+            0
+          ],
+          [
+            -1.4923832434801423,
+            -0.5768814909317949,
+            0
+          ],
+          [
+            -3.515478216476966,
+            1.9024504211435094,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 6.661338147750939e-16,
+          "independentContact": 1.793620188084545e-15,
+          "entrySnell": 0,
+          "exitSnell": 2.220446049250313e-16,
+          "outgoingDirection": 3.1401849173675503e-16,
+          "reflection": 8.617648093045562e-16
+        }
+      },
+      {
+        "color": "yellow",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.5127341456105121,
+            0.5211865354208943,
+            0
+          ],
+          [
+            0.5456879588818068,
+            -1.5040693639361882,
+            0
+          ],
+          [
+            -1.4950077675233242,
+            -0.570045414896855,
+            0
+          ],
+          [
+            -3.5067346538628543,
+            1.918519419456202,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 1.4217791915866692e-15,
+          "entrySnell": 1.1102230246251565e-16,
+          "exitSnell": 1.1102230246251565e-16,
+          "outgoingDirection": 2.482534153247273e-16,
+          "reflection": 2.220446049250313e-16
+        }
+      },
+      {
+        "color": "green",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.513525676777832,
+            0.5188834413760061,
+            0
+          ],
+          [
+            0.54110683198038,
+            -1.5057235458025349,
+            0
+          ],
+          [
+            -1.4975951243362298,
+            -0.5632129646628828,
+            0
+          ],
+          [
+            -3.497937748447622,
+            1.934511877300929,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 2.482534153247273e-15,
+          "entrySnell": 1.1102230246251565e-16,
+          "exitSnell": 0,
+          "outgoingDirection": 1.355199909595506e-15,
+          "reflection": 3.3306690738754696e-16
+        }
+      },
+      {
+        "color": "cyan",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.515868653430223,
+            0.5119982671334391,
+            0
+          ],
+          [
+            0.5273959154279165,
+            -1.5105805335664666,
+            0
+          ],
+          [
+            -1.5051360144580448,
+            -0.5427389593362115,
+            0
+          ],
+          [
+            -3.4712329540778626,
+            1.9820308963174853,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 6.661338147750939e-16,
+          "independentContact": 5.365950338995594e-15,
+          "entrySnell": 2.220446049250313e-16,
+          "exitSnell": 0,
+          "outgoingDirection": 1.1102230246251565e-16,
+          "reflection": 9.50197851991224e-16
+        }
+      },
+      {
+        "color": "blue",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.5174045796222335,
+            0.5074281641192905,
+            0
+          ],
+          [
+            0.518282691626772,
+            -1.5137314991636097,
+            0
+          ],
+          [
+            -1.5099807735699222,
+            -0.52911063441324,
+            0
+          ],
+          [
+            -3.4531739303243407,
+            2.013329208639649,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 4.440892098500626e-16,
+          "independentContact": 1.9100999153570945e-15,
+          "entrySnell": 2.220446049250313e-16,
+          "exitSnell": 0,
+          "outgoingDirection": 1.807312143953211e-15,
+          "reflection": 4.577566798522237e-16
+        }
+      },
+      {
+        "color": "violet",
+        "impact": 0.9506248915870685,
+        "points": [
+          [
+            -3.1365476086614357,
+            1.5209998265393097,
+            0
+          ],
+          [
+            -0.4965476086614355,
+            1.5209998265393097,
+            0
+          ],
+          [
+            1.519669951233272,
+            0.5006028758593626,
+            0
+          ],
+          [
+            0.5046545813929049,
+            -1.5183292638552262,
+            0
+          ],
+          [
+            -1.5169777739438266,
+            -0.5087026964351894,
+            0
+          ],
+          [
+            -3.425713272796777,
+            2.059707083062346,
+            0
+          ]
+        ],
+        "residuals": {
+          "surface": 2.220446049250313e-16,
+          "independentContact": 1.9389211565826713e-15,
+          "entrySnell": 0,
+          "exitSnell": 4.440892098500626e-16,
+          "outgoingDirection": 5.551115123125783e-16,
+          "reflection": 3.554447978966673e-16
+        }
+      }
+    ],
+    "primaryReflectedCrossing": {
+      "t": 0.33761608176061647,
+      "s": 0.3290905922968207,
+      "point": [
+        1.1001057783971975,
+        -0.14492522827501597,
+        0
+      ],
+      "insideBoth": true
+    },
+    "secondaryReflectedCrossing": {
+      "t": 0.3394970048542923,
+      "s": 0.3272442823673996,
+      "point": [
+        1.1875119749379803,
+        -0.16008112335001656,
+        0
+      ],
+      "insideBoth": true
+    }
+  },
+  "ribbon": {
+    "meshes": 65,
+    "vertices": 226525,
+    "triangles": 436800,
+    "maxXYDeviation": 1.3485928543192135e-7,
+    "maxContactOffset": 1.3485928543192135e-7,
+    "maxColorDeviation": 2.9499186759984752e-8,
+    "reflectionSegmentsChecked": 20
+  },
+  "radiance": {
+    "segments": 93,
+    "maxEndpointDeviation": 0
+  },
+  "contacts": {
+    "count": 37,
+    "maxRegistrationError": 0,
+    "counts": {
+      "primary:1": 1,
+      "primary:2": 7,
+      "primary:3": 7,
+      "secondary:1": 1,
+      "secondary:2": 7,
+      "secondary:3": 7,
+      "secondary:4": 7
+    }
+  },
+  "humanNormalSpeedPlayback": false,
+  "humanListening": false,
+  "colorOrder": {
+    "primaryRedOutside": true,
+    "secondaryVioletOutside": true,
+    "primaryAnglesDescending": true,
+    "secondaryAnglesAscending": true
+  },
+  "sourceChangesDuringCheck": []
+}

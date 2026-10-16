@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "scope": "Repeated nonsequential WebGPU seeks. <= 1/255 hardware pixel tolerance.",
+  "comparisons": [
+    {
+      "frames": [
+        "frame-0-48.png",
+        "frame-3-48.png"
+      ],
+      "maxChannelDifference": 1,
+      "meanChannelDifference": 1.1252572016460906e-06,
+      "pass": true
+    },
+    {
+      "frames": [
+        "frame-1-80.png",
+        "frame-4-80.png"
+      ],
+      "maxChannelDifference": 0,
+      "meanChannelDifference": 0.0,
+      "pass": true
+    },
+    {
+      "frames": [
+        "frame-2-0.png",
+        "frame-5-0.png"
+      ],
+      "maxChannelDifference": 1,
+      "meanChannelDifference": 2.57201646090535e-06,
+      "pass": true
+    }
+  ]
+}

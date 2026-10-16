@@ -1,0 +1,60 @@
+"""Record/recheck exact render inputs and finalize V5 paper-treatment notes."""
+from pathlib import Path
+import argparse,json,hashlib
+ROOT=Path(__file__).resolve().parents[1]
+Q=ROOT/'work/paper-upgrade';Q.mkdir(parents=True,exist_ok=True)
+def sha(p):
+ h=hashlib.sha256()
+ with p.open('rb') as f:
+  for b in iter(lambda:f.read(4*1024*1024),b''):h.update(b)
+ return h.hexdigest()
+p=argparse.ArgumentParser();p.add_argument('mode',choices=['freeze','verify','finish']);a=p.parse_args()
+manifest=Q/'render-inputs.json'
+if a.mode=='freeze':
+ files=[*sorted((ROOT/'src').glob('*.ts')),*sorted((ROOT/'src').glob('*.tsx')),*sorted((ROOT/'src').glob('*.json')),ROOT/'public/audio/master.wav',ROOT/'public/textures/paper-uncoated.png']
+ manifest.write_text(json.dumps({p.relative_to(ROOT).as_posix():sha(p) for p in files},ensure_ascii=False,indent=2),encoding='utf8')
+ print('Frozen',len(files),'inputs')
+else:
+ inputs={p.replace('\\','/'):d for p,d in json.loads(manifest.read_text(encoding='utf8')).items()};bad=[p for p,d in inputs.items() if sha(ROOT/p)!=d]
+ assert not bad,bad
+ if a.mode=='verify':print('All render inputs unchanged')
+ if a.mode=='finish':
+  e=json.loads((ROOT/'work/qa/encoded-final.json').read_text(encoding='utf8'))
+  v=json.loads((ROOT/'work/qa/visual-final.json').read_text(encoding='utf8'))
+  assert e['passed'] and v['videoSha256']==e['sha256'] and not v['blockingFindings']
+  doc='''# 密码学 V5｜纸张质感升级
+
+对应成片：密码学_纸张质感升级版_V5_1080p.mp4。1920×1080，30fps，9153帧，305.1秒。
+
+## 这次调整
+
+- 订单、密文、线路抄件、证书、证书复印件、数据核验单与恢复订单，共用暖白未涂布纸面。
+- 使用确定性微纤维、克制的凹凸与低镜面反射；纸面增加自然轻弓、自由角起伏和法线偏移薄边。
+- 印刷统一7%页边距、宋体主文和等宽字节，使用深青墨、细暖金线；关键认证字节保持深色，不用浅金承担重要信息。
+- 纸张以小幅斜角呈现。阴影仍由场景灯光和真实几何产生，不添加跟不上运动的假接触影。
+- 明文变密文采用同一张双面纸连续翻转，反面UV校正，消除两张弯纸在边缘切换产生的轮廓跳变。
+- 修复269.73秒起拒收单下沉穿过桌面的旧退场路径，改为向左平滑出画后隐藏；8092–8164帧局部重渲染，接回完整版时保留原AAC音频包。
+- 颜料瓶的标签改为贴合锥形瓶面的哑光纸贴，片尾真实论文保留原始图像，加入纸色、薄边和分层柔影。
+
+## 验证
+
+通过 TypeScript、逐帧摄影机数值检查、故事与词事件检查。检查代表性纸张静帧、翻转前中后和证书/核验动态状态；最终编码另做全片解码、帧数、黑场、静音、响度及音画同步检查。
+
+本次保留已有解说、音乐与时间线。配音和音乐母带由哈希核验，与上一版本相同。没有宣称全片逐帧人工观看或重新完成主观听审；具体抽查帧号见 `work/qa/visual-final.json`。
+
+## 复现
+
+```powershell
+npm run check
+node scripts/render.mjs --audio --output=delivery/密码学_纸张质感升级版_V5_1080p.mp4
+```
+
+核心文件：`src/Paper.ts`、`Design.ts`、`DocumentPrint.ts`、`World.ts`、`Mixing.ts`、`Film.tsx`。片尾纸纹由 `scripts/build_paper_finish.py` 生成，资产来源与哈希见 `docs/paper-finish-asset.json`。
+
+旧版MP4与旧工程恢复包保留用于回退。项目目录仍为 `v4`，V5是本次成片修订号。
+'''
+  (ROOT/'delivery/纸张质感升级说明_V5.md').write_text(doc,encoding='utf8')
+  verification={'sourceHashesUnchanged':True,'videoSha256':e['sha256'],'masterSha256':inputs['public/audio/master.wav'],'renderInputHashes':inputs,'reviewedFrames':v['reviewedEncodedFrames'],'renderProvenance':'docs/paper-exit-repair.json'}
+  (Q/'render-verification.json').write_text(json.dumps(verification,ensure_ascii=False,indent=2),encoding='utf8')
+  (ROOT/'docs/paper-render-verification.json').write_text(json.dumps(verification,ensure_ascii=False,indent=2),encoding='utf8')
+  print('Release notes and render verification saved')

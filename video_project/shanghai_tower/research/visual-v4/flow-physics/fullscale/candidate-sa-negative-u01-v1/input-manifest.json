@@ -1,0 +1,48 @@
+{
+  "schema": "rainbow.fullscale-rans-continuation/1",
+  "createdUTC": "2026-10-08T21:11:25.826889+00:00",
+  "status": "prepared",
+  "quality": {
+    "acceptedForCoupling": false
+  },
+  "sourceCase": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\visual-v4\\flow-physics\\fullscale\\tower-crown-resolved",
+  "purpose": "Actual SI flow solve at a reduced velocity as the first continuation stage. Not equivalent to the target U500=30 m/s case.",
+  "speed_m_s": 1.0,
+  "density_kg_m3": 1.225,
+  "viscosity_Pa_s": 1.81e-05,
+  "Re_H": 42773480.66298343,
+  "Re_D98": 6632596.685082873,
+  "pressureReference_Pa": 1.225,
+  "dynamicPressureReference_Pa": 0.6125,
+  "inletRange_m_s": [
+    0.634,
+    1.2661879561964022
+  ],
+  "model": "SA_NEG, no wall function, resolved near-wall mesh",
+  "changes": {
+    "SA_OPTIONS": "(NEGATIVE, WITHFT2)",
+    "INC_VELOCITY_INIT": "(1.0, 0.0, 0.0)",
+    "MARKER_INLET": "(inlet, 288.15, 1.0, 1.0, 0.0, 0.0)",
+    "CFL_NUMBER": "1.0",
+    "CFL_ADAPT": "NO",
+    "ITER": "600",
+    "LINEAR_SOLVER_ERROR": "0.0001",
+    "LINEAR_SOLVER_ITER": "80",
+    "CONV_FIELD": "(RMS_PRESSURE, RMS_VELOCITY-X, RMS_VELOCITY-Y, RMS_VELOCITY-Z, RMS_NU_TILDE)",
+    "OUTPUT_WRT_FREQ": "100",
+    "SCREEN_WRT_FREQ_INNER": "50",
+    "VOLUME_OUTPUT": "(COORDINATES, SOLUTION, PRIMITIVE, RESIDUAL)"
+  },
+  "meshUnchangedFromSource": true,
+  "hashes": {
+    "tower.su2": "cf350726d9d3269cfac7392f5ffb0ca1101ff5302efead40bf9f535e597f8013",
+    "inlet.dat": "d92e0f8a5a368ff7a25dc9687a7f3d5931648d49726259806650dc3f2358412b",
+    "rans.cfg": "0779e4186f915b8430513163fb9f9c81af3e108a314a4f1fd128d91eec12df70"
+  },
+  "limitations": [
+    "The complete ground shares 10 micrometre near-wall spacing; extreme tangential aspect ratio remains a candidate risk.",
+    "Power-law inlet clamps below 10m and is not a measured/equilibrium atmospheric boundary layer.",
+    "Steady pseudo-iterations are not physical flow time.",
+    "Do not couple, render or call this a converged flow until field, residual, force, wall and conservation gates pass."
+  ]
+}

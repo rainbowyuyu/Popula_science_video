@@ -1,0 +1,80 @@
+{
+  "id": "zwind-1",
+  "text": "气动推力作用在风机上，水动力推动平台，系泊提供恢复力，结构把这些作用连接起来。",
+  "ttsText": "气动推力作用在风机上，水动力推动平台，系泊提供恢复力，结构把这些作用连接起来。",
+  "signature": "086dbec166d5606f91122a939a0f733d1d209229703e12add57e0eda83a4f4ff",
+  "raw": "audio/raw/zwind-1-086dbec166.wav",
+  "processed": "public/voice/zwind-1.wav",
+  "rawDuration": 8.4,
+  "duration": 8.64,
+  "sha256": "b37a3c2a348f8ef83685610fd75286d7f75249c9106a7078c6a563e6f2c5a91d",
+  "seed": 141409985,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "zwind-1",
+    "zwind-2"
+  ],
+  "rawEndpointDB": -69.30256206470753,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "a955b4d3c7dfb294081e242022c0bac3905d3025ec813fa6a16d4098077633e9",
+    "outputSha256": "b37a3c2a348f8ef83685610fd75286d7f75249c9106a7078c6a563e6f2c5a91d",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.4971186648944936,
+    "input": {
+      "seconds": 8.64,
+      "peakDb": -9.366452376423169,
+      "activeRmsDb": -23.25006274368984,
+      "quietFrameP10Db": -63.52061542576371
+    },
+    "output": {
+      "seconds": 8.64,
+      "peakDb": -5.855145377259418,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -62.99076657674506
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.8533333333333334,
+    "unmodifiedRawSHA256": "76552f3126d6f17d982c657622e523943120327e16923a4a1de5d91564bb4008"
+  },
+  "subjectiveListeningChecked": false
+}

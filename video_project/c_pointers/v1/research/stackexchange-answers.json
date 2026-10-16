@@ -1,0 +1,21 @@
+{
+  "requestUrl": "https://api.stackexchange.com/2.3/questions/77062666;27609559/answers?site=stackoverflow&sort=votes&pagesize=5&filter=withbody",
+  "answers": [
+    {
+      "answerId": 27610073,
+      "questionId": 27609559,
+      "accepted": true,
+      "score": 1,
+      "author": "Philipp Murry",
+      "body": "When you pass a variable to a function, you only pass the value of this variable. You never pass the address, because a new variable is created in that function. The parameters that you see in the signature of the function are all local variables, just like you would write them in the function body. These parameters are filled with the value that you pass when you call the function - but again, you are just passing the value to new variables. void function(int a) { printf(a); }\n\nint a = 5;\nfunction(a); In this example, there exist two distinct variables which have completely different addresses. They just have the same value (which is 5), but their addresses are very different. The same happens in your debug function: num in there is not the same variable as num in main , they just have the same value (because you \"gave\" the value of num in main to num in debug ), but not the same address. Now since num_p in debug_p still points to num in main and not to num in debug , the addresses are different."
+    },
+    {
+      "answerId": 27609754,
+      "questionId": 27609559,
+      "accepted": false,
+      "score": 0,
+      "author": "Philipp Murry",
+      "body": "The reason why num and num_p have the same address in both functions is because of how the stack works: The first call to debug allocates a variable on the stack. Then, when the function returns, the stack is freed again. Now you call debug_p , and therefore another variable is allocated. It will use the same place in memory as before, because the stack is built up in the same way."
+    }
+  ]
+}

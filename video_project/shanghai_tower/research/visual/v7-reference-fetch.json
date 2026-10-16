@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Sky",
+    "url": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/jsm/objects/Sky.js",
+    "status": 200,
+    "bytes": 11526,
+    "sha256": "34121b60a3bd9adc004a5a637f6135e9d2b72757eeb9e476ae1988fe2db6a9fb",
+    "text": "import {\n\tBackSide,\n\tBoxGeometry,\n\tMesh,\n\tShaderMaterial,\n\tUniformsUtils,\n\tVector3\n} from 'three';\n\n/**\n * Represents a skydome for scene backgrounds. Based on [A Practical Analytic Model for Daylight](https://www.researchgate.net/publication/220720443_A_Practical_Analytic_Model_for_Daylight)\n * aka The Preetham Model, the de facto standard for analytical skydomes.\n *\n * Note that this class can only be used with {@link WebGLRenderer}.\n * When using {@link WebGPURenderer}, use {@link SkyMesh}.\n *\n * More references:\n *\n * - {@link http://simonwallner.at/project/atmospheric-scattering/}\n * - {@link http://blenderartists.org/forum/showthread.php?245954-preethams-sky-impementation-HDR}\n *\n *\n * ```js\n * const sky = new Sky();\n * sky.scale.setScalar( 10000 );\n * scene.add( sky );\n * ```\n *\n * It can be useful to hide the sun disc when generating an environment map to avoid artifacts\n *\n * ```js\n * // disable before rendering environment map\n * sky.material.uniforms.showSunDisc.value = fals"
+  },
+  {
+    "name": "PMREM",
+    "url": "https://threejs.org/docs/pages/PMREMGenerator.html",
+    "status": 200,
+    "bytes": 9942,
+    "sha256": "544b17b76e139ae222a0dc07da82b4ce037ee3537fe14c4efb1345a96a8230be",
+    "text": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"utf-8\">\n\t<title>PMREMGenerator - Three.js Docs</title>\n\t<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0\">\n\t<script src=\"../scripts/highlight.min.js\"></script>\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"../styles/highlight-three.css\">\n\t<link type=\"text/css\" rel=\"stylesheet\" href=\"../styles/page.css\">\n</head>\n<body>\n\t<h1 translate=\"no\">PMREMGenerator</h1>\n\t\t<section>\n\t\t\t<header>\n\t\t\t\t<div class=\"class-description\"><p>This class generates a Prefiltered, Mipmapped Radiance Environment Map\n(PMREM) from a cubeMap environment texture. This allows different levels of\nblur to be quickly accessed based on material roughness. It is packed into a\nspecial CubeUV format that allows us to perform custom interpolation so that\nwe can support nonlinear formats such as RGBE. Unlike a traditional mipmap\nchain, it only goes down to the LOD_MIN level (above), and then creates extra\neven more f"
+  },
+  {
+    "name": "Glass",
+    "url": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/webgl_materials_physical_transmission.html",
+    "status": 200,
+    "bytes": 6322,
+    "sha256": "53574f462a5578c31e7add5506415f78ddd0deaa68a71cad4bc993319b198060",
+    "text": "<!DOCTYPE html>\n<html lang=\"en\">\n\t<head>\n\t\t<title>threejs webgl - materials - transmission</title>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0\">\n\t\t<meta property=\"og:title\" content=\"threejs webgl - materials - transmission\">\n\t\t<meta property=\"og:type\" content=\"website\">\n\t\t<meta property=\"og:url\" content=\"https://threejs.org/examples/webgl_materials_physical_transmission.html\">\n\t\t<meta property=\"og:image\" content=\"https://threejs.org/examples/screenshots/webgl_materials_physical_transmission.jpg\">\n\t\t<link type=\"text/css\" rel=\"stylesheet\" href=\"main.css\">\n\t</head>\n\t<body>\n\n\t\t<div id=\"container\"></div>\n\t\t<div id=\"info\"><a href=\"https://threejs.org\" target=\"_blank\" rel=\"noopener\">threejs</a> - Transmission</div>\n\n\t\t<script type=\"importmap\">\n\t\t\t{\n\t\t\t\t\"imports\": {\n\t\t\t\t\t\"three\": \"../build/three.module.js\",\n\t\t\t\t\t\"three/addons/\": \"./jsm/\"\n\t\t\t\t}\n\t\t\t}\n\t\t</script>\n\n\t\t<script type=\"module\">\n\n\t\t\timport * as THRE"
+  },
+  {
+    "name": "ContactShadows",
+    "url": "https://raw.githubusercontent.com/pmndrs/drei/master/src/core/ContactShadows.tsx",
+    "status": 200,
+    "bytes": 5408,
+    "sha256": "ac47cde6a8c655ebc04753868e52b9a6d84e59110e8e6f46d8f67857b622780b",
+    "text": "// The author of the original code is @mrdoob https://twitter.com/mrdoob\n// https://threejs.org/examples/?q=con#webgl_shadow_contact\n\nimport * as React from 'react'\nimport * as THREE from 'three'\nimport { ThreeElements, useFrame, useThree } from '@react-three/fiber'\nimport { HorizontalBlurShader, VerticalBlurShader } from 'three-stdlib'\nimport { ForwardRefComponent } from '../helpers/ts-utils'\n\nexport type ContactShadowsProps = Omit<ThreeElements['group'], 'ref' | 'scale'> & {\n  opacity?: number\n  width?: number\n  height?: number\n  blur?: number\n  near?: number\n  far?: number\n  smooth?: boolean\n  resolution?: number\n  frames?: number\n  scale?: number | [x: number, y: number]\n  color?: THREE.ColorRepresentation\n  depthWrite?: boolean\n}\n\nexport const ContactShadows: ForwardRefComponent<ContactShadowsProps, THREE.Group> = /* @__PURE__ */ React.forwardRef(\n  (\n    {\n      scale = 10,\n      frames = Infinity,\n      opacity = 1,\n      width = 1,\n      height = 1,\n      blur = 1,\n      near ="
+  }
+]

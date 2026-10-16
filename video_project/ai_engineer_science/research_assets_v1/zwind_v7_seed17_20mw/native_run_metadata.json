@@ -1,0 +1,41 @@
+{
+  "schema": "native-zwind-run-v1",
+  "seed": 17,
+  "power_mw": 20.0,
+  "candidate_json": "D:\\python_project\\beso_ai\\runs\\zwind_campaign_full_v7\\mw_20\\seed_17\\native_candidate.json",
+  "model_power_mw": 20.0,
+  "model": "third_party/zwind_newmodel/test0820_hardcode.py",
+  "model_kind": "floating_semisubmersible_20mw",
+  "source_sha256": "3373b4ca03504840602b03ae5ddd093514b3b36417898602b8a98f3ee85de2c5",
+  "solver": "OpenSees + AeroLoad + HydroLoad + ServoLoad",
+  "active_components": {
+    "aero": true,
+    "hydro": true,
+    "servo": false,
+    "mooring": true
+  },
+  "hydro_driver_source": "D:\\python_project\\beso_ai\\third_party\\zwind_newmodel\\hydrodynNbody\\hd_driver.inp",
+  "hydro_driver_runtime": "D:\\python_project\\beso_ai\\runs\\zwind_campaign_full_v7\\mw_20\\seed_17\\hydro_driver_runtime.inp",
+  "hydro_driver_steps": 12001,
+  "hydro_driver_time_interval_s": 0.01,
+  "servo_mode": "external_discon",
+  "servo_driver_runtime": null,
+  "candidate_schema": "zwind-native-candidate-v1",
+  "seed_application": "topology_candidate_seed_consumed",
+  "native_input_variation": true,
+  "topology_loads_applied": true,
+  "units": {
+    "time": "s",
+    "force": "N",
+    "moment": "N m",
+    "mooring_tension": "N"
+  },
+  "output_units": {
+    "tower_top_acceleration.out": "m/s^2 and rad/s^2",
+    "tower_base_loads.out": "kN and kN m",
+    "mooring_fairlead_tension.out": "N",
+    "leg_forces.out": "N",
+    "response_max_abs.out": "source-channel units declared in source headers"
+  },
+  "topology_load_ramp_s": 1.0
+}

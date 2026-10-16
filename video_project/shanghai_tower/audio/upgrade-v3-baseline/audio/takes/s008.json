@@ -1,0 +1,70 @@
+{
+  "id": "s008",
+  "text": "桩的上面，是厚达六米的混凝土筏板。你可以把它理解成一块厚底盘，把基础连成整体。",
+  "ttsText": "桩的上面，是厚达六米的混凝土筏板。你可以把它理解成一块厚底盘，把基础连成整体。",
+  "signature": "e8a97f1a3ec39e10acc20c13a1df7224d0be113b438f3981d7171022095f1b63",
+  "raw": "audio/raw/s008-e8a97f1a3e.wav",
+  "processed": "public/voice/s008.wav",
+  "rawDuration": 7.36,
+  "duration": 7.36,
+  "sha256": "ca11ad6fee73f78ea2fbd85b58b20f377aaf23f2f924a6a5f7876f12d86577d0",
+  "seed": 864317252,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s005",
+    "s006",
+    "s007",
+    "s008"
+  ],
+  "rawEndpointDB": -75.45828461311926,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "5900153cd584b90e3f747940ed9ac0c0556e0a4d01a7b34727fe8f0a0885b8f0",
+    "outputSha256": "ca11ad6fee73f78ea2fbd85b58b20f377aaf23f2f924a6a5f7876f12d86577d0",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.44081399889129,
+    "input": {
+      "seconds": 7.36,
+      "peakDb": -7.85122674943909,
+      "activeRmsDb": -23.17719286055749,
+      "quietFrameP10Db": -59.34775989150289
+    },
+    "output": {
+      "seconds": 7.36,
+      "peakDb": -4.31778257000812,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.1334001526305
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,68 @@
+{
+  "id": "official-to-teaching-001",
+  "model": "wan2.7-i2v-2026-04-25",
+  "taskId": "3fcf7ab5-a8d4-47e9-ae77-e4ef82d5cd29",
+  "parameters": {
+    "resolution": "1080P",
+    "duration": 5,
+    "prompt_extend": false,
+    "watermark": false,
+    "seed": 1016006
+  },
+  "first": {
+    "path": "assets/v06/official/inverted-final-frame-407.4026.png",
+    "sha256": "f016dad4fa43f75ccbf7f2622e3bc5990e0e208d66b420ec0d44a9ef38d3b172",
+    "bytes": 1079180,
+    "width": 1920,
+    "height": 1080,
+    "mode": "RGB",
+    "mime": "image/png"
+  },
+  "last": {
+    "path": "assets/v06/transition/teaching-first-clean.png",
+    "sha256": "8b247663d8b39294b21d3c5cee5776061ae2e182d11a5ce6cc65614eb1678101",
+    "bytes": 227921,
+    "width": 1920,
+    "height": 1080,
+    "mode": "RGB",
+    "mime": "image/png"
+  },
+  "promptSHA256": "a555062cdb93e2bdd2c6e36fecea10c3092f489f2fc1961359b5e0bfb5b03741",
+  "providerSHA256": "62ec253fe152c1cfce478f08d22bb30268e7a91c46f86345abb5b707f985b8bd",
+  "nativeFrames": 150,
+  "nativeFPS": "30/1",
+  "nativeDuration": 5.0,
+  "estimatedPriceCNY": 5.0,
+  "actualBilledPriceCNY": null,
+  "scientificEvidence": false,
+  "purpose": "Illustrative visual bridge from actual Tesla footage to controlled teaching model; not actual vehicle demonstration",
+  "derivative": {
+    "asset": "assets/v06/transition/qwen-official-to-teaching-001.mp4",
+    "sha256": "a2d21054ca4bd6620a997baa64278c2494fc0f1525faf2334d22d277bdb43890",
+    "strategy": "Video bitstream copy, remove provider audio only; preserve all 150 native frames in order at 30fps. No freeze/repeat/reverse/interpolation.",
+    "needsMainAgentFinalJoinReview": true
+  },
+  "visualReview": {
+    "reviewedUTC": "2026-10-16T15:39:42.291965+00:00",
+    "status": "usable-illustrative-bridge-with-documented-limitations",
+    "providerSHA256": "62ec253fe152c1cfce478f08d22bb30268e7a91c46f86345abb5b707f985b8bd",
+    "reviewMethod": "15 representative native frames, 30 dense frames every five frames, full-resolution frames 45/60/75/90/149; all 150 frames decoded",
+    "positives": [
+      "The main car remains one traceable inverted vehicle attached below a platform.",
+      "Camera travels around a car end to the other side and pulls back to the supplied teaching view.",
+      "No main-car duplication, black cut, detached wheel or abrupt view replacement observed in inspected frames.",
+      "Supplied beginning/end composition, contact orientation and vehicle footprint are closely retained."
+    ],
+    "limitations": [
+      "Telemetry persists with original values then fades by about 2.2 seconds; it does not strictly slide out as requested.",
+      "Around 1.3-2.5 seconds the actual car end is simplified into the teaching model, including wheel-cover changes.",
+      "The dark stage transitions through lighting/material changes into the warm-gray studio; it is an AI explanatory bridge, not actual test footage."
+    ],
+    "integration": {
+      "asset": "assets/v06/transition/qwen-official-to-teaching-001.mp4",
+      "sha256": "a2d21054ca4bd6620a997baa64278c2494fc0f1525faf2334d22d277bdb43890",
+      "strategy": "Video bitstream copy, remove provider audio only; preserve all 150 native frames in order at 30fps. No freeze/repeat/reverse/interpolation.",
+      "needsMainAgentFinalJoinReview": true
+    }
+  }
+}

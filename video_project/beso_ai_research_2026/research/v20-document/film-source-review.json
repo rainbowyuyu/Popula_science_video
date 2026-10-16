@@ -1,0 +1,95 @@
+{
+  "schema": "v20-independent-source-content-review-v1",
+  "createdAt": "2026-10-14T17:20:08.740598+00:00",
+  "hashes": {
+    "src/LaunchV20.tsx": "cd52afd5f5a71cdff3957b9e65a472729bc5a5e43b6e6c116203c1f82e08aea6",
+    "src/ClosedLoopV20.tsx": "b0312950dde46a6fd4dee0bf6e868c001bf196f2e7db0bd953ae406bc330a9e9",
+    "src/launch-v20-story.json": "4a6a381587d31d94400f049202d70584742b48c371f9b47e2b9673899a859a44",
+    "src/launch-v20-captions.json": "f66317fb68519b954564a5f66b93b23caf95186587bb580356802bb038b972d3",
+    "src/launch-v20-direction.ts": "dfa54ccdd3bf33f388755ba46b4a17033af6b61cf9fb26b1dfe6552812fcd43e",
+    "public/beso-research/physics/zwind-response.json": "509c491df6bea647a3593fbc8e7e7d29675ec6dc3b64b0aaf9801e17982c6719"
+  },
+  "checks": [
+    {
+      "id": "duration_under_two_minutes",
+      "passed": true,
+      "seconds": 104.4
+    },
+    {
+      "id": "15_scenes",
+      "passed": true
+    },
+    {
+      "id": "latest_screen_numbers",
+      "passed": true
+    },
+    {
+      "id": "latest_scope_labels",
+      "passed": true
+    },
+    {
+      "id": "automatic_recheck",
+      "passed": true
+    },
+    {
+      "id": "selection_after_recovery_before_final_verification",
+      "passed": true
+    },
+    {
+      "id": "bounded_close_copy",
+      "passed": true
+    },
+    {
+      "id": "software_aip_scope",
+      "passed": true
+    },
+    {
+      "id": "mechanism_label",
+      "passed": true
+    },
+    {
+      "id": "independent_response_label",
+      "passed": true
+    }
+  ],
+  "allStaticChecksPassed": true,
+  "visualAccepted": false,
+  "normalSpeedWatchPerformed": false,
+  "humanListeningPerformed": false,
+  "sourceResponseScope": {
+    "sourceTitle": "20 MW Zwind native probe / seed 17 / 120 s",
+    "evidenceType": "saved_native_probe",
+    "screenLabel": "Zwind 原始输出回放 · 伺服关闭",
+    "claimBoundary": "Saved 20 MW aero-hydro-mooring probe with Servo disabled. Separate native geometry and run; not a coupled validation of BESO9 seed17 topology or paper Fig.2 design acceptance.",
+    "servoEnabled": false,
+    "solverProfile": "native_aero_hydro_mooring_servo_disabled_probe"
+  },
+  "reportedFindings": [
+    {
+      "id": "recheck_label",
+      "status": "resolved",
+      "evidence": "Component ending changed from 交给复查 to 自动复检."
+    },
+    {
+      "id": "close_absolute_claim",
+      "status": "resolved",
+      "evidence": "Final script uses 让设计过程，有据可查."
+    },
+    {
+      "id": "response_scope",
+      "status": "resolved",
+      "detail": "Final source and encoded frame 3082 explicitly label 存档独立回放 · 非论文验证. The product final-verification method and independent saved replay are not asserted to be the same paper-design run."
+    },
+    {
+      "id": "mesh_vs_solver_repair",
+      "status": "nonblocking",
+      "detail": "Main narration differentiates mesh defects and solver convergence; recovery SVG shows two control sliders together. Avoid implying timestep alone repairs mesh; sequence these controls if desired."
+    }
+  ],
+  "limits": [
+    "Static string checks alone do not prove visual readability; the separate encoded-boundaries/review.json records 55 sampled encoded frames from SHA-verified completed segments.",
+    "This source review and the sampled-frame report do not constitute a continuous normal-speed viewing or audio listening review.",
+    "Manuscript values, software AIP certificate scope and manual candidate selection were independently checked; evidence.json and script-review.json contain source locators and hashes."
+  ],
+  "revision": "2afc39fce9ba"
+}

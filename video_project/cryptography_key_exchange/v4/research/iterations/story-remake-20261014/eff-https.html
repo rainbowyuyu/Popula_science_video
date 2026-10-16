@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link href="https://ssd.eff.org/module/what-should-i-know-about-encryption" rel="alternate" hreflang="en" />
+    <link href="https://ssd.eff.org/am/module/what-should-i-know-about-encryption" rel="alternate" hreflang="am" />
+    <link href="https://ssd.eff.org/ar/module/what-should-i-know-about-encryption" rel="alternate" hreflang="ar" />
+    <link href="https://ssd.eff.org/es/module/what-should-i-know-about-encryption" rel="alternate" hreflang="es" />
+    <link href="https://ssd.eff.org/fr/module/what-should-i-know-about-encryption" rel="alternate" hreflang="fr" />
+    <link href="https://ssd.eff.org/ru/module/what-should-i-know-about-encryption" rel="alternate" hreflang="ru" />
+    <link href="https://ssd.eff.org/tr/module/what-should-i-know-about-encryption" rel="alternate" hreflang="tr" />
+    <link href="https://ssd.eff.org/vi/module/what-should-i-know-about-encryption" rel="alternate" hreflang="vi" />
+    <link href="https://ssd.eff.org/pt-br/module/what-should-i-know-about-encryption" rel="alternate" hreflang="pt-br" />
+    <link href="https://ssd.eff.org/zh-hans/module/what-should-i-know-about-encryption" rel="alternate" hreflang="zh-hans" />
+    <link href="https://ssd.eff.org/my/module/what-should-i-know-about-encryption" rel="alternate" hreflang="my" />
+    <link href="https://ssd.eff.org/ps/module/what-should-i-know-about-encryption" rel="alternate" hreflang="ps" />
+    <link href="https://ssd.eff.org/th/module/what-should-i-know-about-encryption" rel="alternate" hreflang="th" />
+    <link href="https://ssd.eff.org/ur/module/what-should-i-know-about-encryption" rel="alternate" hreflang="ur" />
+
+  <link rel="publisher" href="https://www.eff.org/" />
+
+  <meta property="og:url" content="https://ssd.eff.org/module/what-should-i-know-about-encryption" /><meta property="og:title" content="What Should I Know About Encryption?" /><meta property="og:type" content="website" /><meta property="og:url" content="https://ssd.eff.org/module/what-should-i-know-about-encryption" /><meta property="og:image" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="600" /><meta property="og:description" content="Perhaps you&#39;ve heard the word “encryption” used, but in so many different contexts it’s gotten confusing. You might have seen it referring to everything from protecting your laptop, chat app security, or guarding your shopping online. Regardless of when it’s used, when we talk about encryption, we’re referring to the..." /><meta property="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@eff" /><meta name="twitter:creator" content="@eff" />
+  <meta name="sentry-trace" content="11a84486eed04305a92eebf86ca707e2-f6e625a8fd734771-1">
+<meta name="baggage" content="sentry-trace_id=11a84486eed04305a92eebf86ca707e2,sentry-sample_rate=1.0,sentry-sample_rand=0.943503,sentry-sampled=true,sentry-environment=production,sentry-public_key=5e85922938ef56028dea6cc7ad5924e4,sentry-org_id=4505841381212160">
+
+  <title>What Should I Know About Encryption? | Surveillance Self-Defense</title>
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="5b8CfvVrnbm9acS4Tf_3PiYgFZpvE8OpUG7iC42xaKW-4KP8v8_lavt18SMNP3eP1JsL60h8scP6X1FhvrY8Sg" />
+  
+
+  <link rel="stylesheet" href="/assets/application-d5c55d5eac5da7e05047eec4f49bbb7508c72aca53c986862e29d67a222dd64e.css" media="all" />
+
+  
+</head>
+
+<body class="guides-section show-action guide-22 guide-what-should-i-know-about-encryption" lang="en">
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  
+  <div id="off-canvas" class="off-canvas" role="navigation" aria-label="mobile-navigaton">
+    <ul>
+      <li><a href="/pages/about-surveillance-self-defense">About</a></li>
+
+      <li class="has-dropdown">
+        <a href="#">Language</a>
+
+        <ul class="dropdown list">
+            <li dir="ltr" lang="en"><a class="active" href="https://ssd.eff.org/module/what-should-i-know-about-encryption"><span>English</span></a></li>
+            <li dir="ltr" lang="am"><a href="https://ssd.eff.org/am/module/%E1%88%9B%E1%88%98%E1%88%B5%E1%8C%A0%E1%88%AD-%E1%88%9D%E1%8A%95%E1%8B%B5%E1%8A%95-%E1%8A%90%E1%8B%8D"><span>አማርኛ</span></a></li>
+            <li dir="rtl" lang="ar"><a href="https://ssd.eff.org/ar/module/%D9%85%D8%A7-%D9%87%D9%88-%D8%A7%D9%84%D8%AA%D8%B4%D9%81%D9%8A%D8%B1%D8%9F"><span>العربية</span></a></li>
+            <li dir="ltr" lang="es"><a href="https://ssd.eff.org/es/module/%C2%BFqu%C3%A9-es-el-cifrado"><span>Español</span></a></li>
+            <li dir="ltr" lang="fr"><a href="https://ssd.eff.org/fr/module/que-devrais-je-savoir-au-sujet-du-chiffrement%E2%80%89"><span>Français</span></a></li>
+            <li dir="ltr" lang="ru"><a href="https://ssd.eff.org/ru/module/%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"><span>Русский</span></a></li>
+            <li dir="ltr" lang="tr"><a href="https://ssd.eff.org/tr/module/%C5%9Fifreleme-nedir"><span>Türkçe</span></a></li>
+            <li dir="ltr" lang="vi"><a href="https://ssd.eff.org/vi/module/m%C3%A3-h%C3%B3a-l%C3%A0-g%C3%AC"><span>Tiếng Việt</span></a></li>
+            <li dir="ltr" lang="pt-br"><a href="https://ssd.eff.org/pt-br/module/o-que-eu-deveria-saber-sobre-criptografia"><span>Português</span></a></li>
+            <li dir="ltr" lang="zh-hans"><a href="https://ssd.eff.org/zh-hans/module/257b007c-f06b-4262-9a4b-d7f1ea36709f"><span>Mandarin</span></a></li>
+            <li dir="ltr" lang="my"><a href="https://ssd.eff.org/my/module/%E1%80%80%E1%80%AF%E1%80%92%E1%80%BA%E1%80%96%E1%80%BC%E1%80%84%E1%80%B7%E1%80%BA%E1%80%95%E1%80%BC%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%E1%80%B8%E1%80%9C%E1%80%B2%E1%80%81%E1%80%BC%E1%80%84%E1%80%BA%E1%80%B8%E1%80%94%E1%80%B2%E1%80%B7%E1%80%95%E1%80%90%E1%80%BA%E1%80%9E%E1%80%80%E1%80%BA%E1%80%9C%E1%80%AD%E1%80%AF%E1%80%B7-%E1%80%98%E1%80%AC%E1%80%90%E1%80%BD%E1%80%B1%E1%80%9E%E1%80%AD%E1%80%91%E1%80%AC%E1%80%B8%E1%80%9E%E1%80%84%E1%80%B7%E1%80%BA%E1%80%9E%E1%80%9C%E1%80%B2%E1%81%8B"><span>Burmese</span></a></li>
+            <li dir="rtl" lang="ps"><a href="https://ssd.eff.org/ps/module/%D8%AF-%D8%A7%D9%86%DA%A9%D8%B1%D9%BE%D8%B4%D9%86-%D9%BE%D9%87-%D8%B1%D9%85%D8%B2-%D8%AF-%D9%BE%DB%8C%D8%BA%D8%A7%D9%85-%D8%A7%DA%93%D9%88%D9%84-%DA%85%D9%88-%D9%86%D9%88%D8%B1-%DB%8C%DB%90-%D9%88%D9%86%D8%B4%D9%8A-%D9%84%D9%88%D8%B3%D8%AA%D9%84%D8%A7%DB%8C-%D9%BE%D9%87-%D8%A7%DA%93%D9%87-%D8%B2%D9%87-%D8%A8%D8%A7%DB%8C%D8%AF-%D9%BE%D9%87-%DA%85%D9%87-%D8%A8%D8%A7%D9%86%D8%AF%D9%8A-%D9%BE%D9%88%D9%87-%D8%B4%D9%85%D8%9F"><span>پښتو</span></a></li>
+            <li dir="ltr" lang="th"><a href="https://ssd.eff.org/th/module/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%B1%E0%B8%AA%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3"><span>ภาษาไทย</span></a></li>
+            <li dir="rtl" lang="ur"><a href="https://ssd.eff.org/ur/module/%D8%AE%D9%81%DB%8C%DB%81-%DA%A9%D8%A7%D8%B1%DB%8C-%DA%A9%DB%8C%D8%A7-%DB%81%DB%92%D8%9F"><span>اردو</span></a></li>
+          <li><a href="/en/other-translations">More Translations</a></li>
+        </ul>
+      </li>
+
+      <li><a href="/#index">Index</a></li>
+      <li><a href="https://supporters.eff.org/donate/support-surveillance-self-defense">Donate</a></li>
+
+      <li class="search">
+        <form autocomplete="off" action="/search" accept-charset="UTF-8" method="get">
+          <label class="sr-only" for="q">Keywords</label>
+          <input type="text" name="q" id="q" />
+          <button>Search</button>
+</form>      </li>
+    </ul>
+    <div class="close-menu"><a href="#">&times;</a></div>
+  </div>
+
+  <div id="page">
+    <div id="branding-bar">
+      <nav id="navbar" class="top-bar" role="navigation">
+        <ul class="inline menu" dir="ltr">
+          <li><a href="/pages/about-surveillance-self-defense">About</a></li>
+
+          <li class="has-dropdown">
+            <a href="#" onclick="return false">Language</a>
+
+            <ul class="dropdown list">
+                <li dir="ltr" lang="en"><a class="active" href="https://ssd.eff.org/module/what-should-i-know-about-encryption"><span>English</span></a></li>
+                <li dir="ltr" lang="am"><a href="https://ssd.eff.org/am/module/%E1%88%9B%E1%88%98%E1%88%B5%E1%8C%A0%E1%88%AD-%E1%88%9D%E1%8A%95%E1%8B%B5%E1%8A%95-%E1%8A%90%E1%8B%8D"><span>አማርኛ</span></a></li>
+                <li dir="rtl" lang="ar"><a href="https://ssd.eff.org/ar/module/%D9%85%D8%A7-%D9%87%D9%88-%D8%A7%D9%84%D8%AA%D8%B4%D9%81%D9%8A%D8%B1%D8%9F"><span>العربية</span></a></li>
+                <li dir="ltr" lang="es"><a href="https://ssd.eff.org/es/module/%C2%BFqu%C3%A9-es-el-cifrado"><span>Español</span></a></li>
+                <li dir="ltr" lang="fr"><a href="https://ssd.eff.org/fr/module/que-devrais-je-savoir-au-sujet-du-chiffrement%E2%80%89"><span>Français</span></a></li>
+                <li dir="ltr" lang="ru"><a href="https://ssd.eff.org/ru/module/%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"><span>Русский</span></a></li>
+                <li dir="ltr" lang="tr"><a href="https://ssd.eff.org/tr/module/%C5%9Fifreleme-nedir"><span>Türkçe</span></a></li>
+                <li dir="ltr" lang="vi"><a href="https://ssd.eff.org/vi/module/m%C3%A3-h%C3%B3a-l%C3%A0-g%C3%AC"><span>Tiếng Việt</span></a></li>
+                <li dir="ltr" lang="pt-br"><a href="https://ssd.eff.org/pt-br/module/o-que-eu-deveria-saber-sobre-criptografia"><span>Português</span></a></li>
+                <li dir="ltr" lang="zh-hans"><a href="https://ssd.eff.org/zh-hans/module/257b007c-f06b-4262-9a4b-d7f1ea36709f"><span>Mandarin</span></a></li>
+                <li dir="ltr" lang="my"><a href="https://ssd.eff.org/my/module/%E1%80%80%E1%80%AF%E1%80%92%E1%80%BA%E1%80%96%E1%80%BC%E1%80%84%E1%80%B7%E1%80%BA%E1%80%95%E1%80%BC%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%E1%80%B8%E1%80%9C%E1%80%B2%E1%80%81%E1%80%BC%E1%80%84%E1%80%BA%E1%80%B8%E1%80%94%E1%80%B2%E1%80%B7%E1%80%95%E1%80%90%E1%80%BA%E1%80%9E%E1%80%80%E1%80%BA%E1%80%9C%E1%80%AD%E1%80%AF%E1%80%B7-%E1%80%98%E1%80%AC%E1%80%90%E1%80%BD%E1%80%B1%E1%80%9E%E1%80%AD%E1%80%91%E1%80%AC%E1%80%B8%E1%80%9E%E1%80%84%E1%80%B7%E1%80%BA%E1%80%9E%E1%80%9C%E1%80%B2%E1%81%8B"><span>Burmese</span></a></li>
+                <li dir="rtl" lang="ps"><a href="https://ssd.eff.org/ps/module/%D8%AF-%D8%A7%D9%86%DA%A9%D8%B1%D9%BE%D8%B4%D9%86-%D9%BE%D9%87-%D8%B1%D9%85%D8%B2-%D8%AF-%D9%BE%DB%8C%D8%BA%D8%A7%D9%85-%D8%A7%DA%93%D9%88%D9%84-%DA%85%D9%88-%D9%86%D9%88%D8%B1-%DB%8C%DB%90-%D9%88%D9%86%D8%B4%D9%8A-%D9%84%D9%88%D8%B3%D8%AA%D9%84%D8%A7%DB%8C-%D9%BE%D9%87-%D8%A7%DA%93%D9%87-%D8%B2%D9%87-%D8%A8%D8%A7%DB%8C%D8%AF-%D9%BE%D9%87-%DA%85%D9%87-%D8%A8%D8%A7%D9%86%D8%AF%D9%8A-%D9%BE%D9%88%D9%87-%D8%B4%D9%85%D8%9F"><span>پښتو</span></a></li>
+                <li dir="ltr" lang="th"><a href="https://ssd.eff.org/th/module/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%B1%E0%B8%AA%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3"><span>ภาษาไทย</span></a></li>
+                <li dir="rtl" lang="ur"><a href="https://ssd.eff.org/ur/module/%D8%AE%D9%81%DB%8C%DB%81-%DA%A9%D8%A7%D8%B1%DB%8C-%DA%A9%DB%8C%D8%A7-%DB%81%DB%92%D8%9F"><span>اردو</span></a></li>
+
+              <li><a href="/pages/other-translations">More Translations</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/#index">Index</a></li>
+
+          <li class="search">
+            <form autocomplete="off" action="/search" accept-charset="UTF-8" method="get">
+              <label class="sr-only" for="q">Keywords</label>
+              <input type="text" name="q" id="q" value="" class="hide" />
+              <button>Search</button>
+</form>          </li>
+        </ul>
+        <a href="/">ssd.eff.org</a>
+        <a href="#off-canvas" class="open-menu">&#x2261;</a>
+      </nav>
+    </div>
+
+    <header class="center">
+      <a class="logo" href="/" title="Home">
+        <img alt="Home" class="img-responsive" src="/assets/logo-eba4d85a4e344c3517f7dbff8da80c517937dd9dc3bf42c3f5b77444be4487b9.png" />
+      </a>
+
+      <div class="site-name">Surveillance<br/>Self-Defense</div>
+
+    </header>
+
+    <div id="main-content">
+      
+      <div class="content">
+    <p class="breadcrumbs" dir="ltr">
+      <a href="/module-categories/basics">&lt; Basics</a>
+    </p>
+
+  <h1 dir="ltr">What Should I Know About Encryption?</h1>
+
+    <p dir="ltr"><strong><span class="translation_missing" title="translation missing: en.guides.show.last_reviewed">Last Reviewed</span></strong>: January 01, 2025</p>
+
+
+
+
+  <div dir="ltr"><div class="content"><p>Perhaps you've heard the word “<a class="glossary-term" href="/glossary/encryption" data-term_id="96" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/encryption"&gt;Encryption&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+A process that takes a message and makes it unreadable except to a person who knows how to "decrypt" it back into a readable form.
+'>encryption <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>” used, but in so many different contexts it’s gotten confusing. You might have seen it referring to everything from protecting your laptop, chat app security, or guarding your shopping online. Regardless of when it’s used, when we talk about encryption, we’re referring to the same thing: the mathematical process of making a message unreadable except to a person who has the “<a class="glossary-term" href="/glossary/key" data-term_id="91" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/key"&gt;Key&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+In cryptography, a piece of data which gives you the capability to encrypt or decrypt a message.
+'>key <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>” to “<a class="glossary-term" href="/glossary/decrypt" data-term_id="93" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/decrypt"&gt;Decrypt&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Make a scrambled message or data intelligible. The goal of encryption is to make messages that can only be decrypted by the person or people who are meant to receive them.&lt;/p&gt;
+'>decrypt <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>” it. From there, it gets more complicated.</p>
+
+<p>People have used encryption to send messages to each other that (hopefully) couldn’t be read by anyone besides the intended recipient. Today, we have computers that are capable of performing encryption for us. Digital encryption technology has expanded beyond simple secret messages, and these days you can use encryption for more elaborate purposes, like not just hiding the content of messages from prying eyes, but also verifying the author of those messages.</p>
+
+<p>Encryption is the best technology we have to protect information from bad actors, governments, and service providers. When used correctly it is virtually impossible to break.</p>
+
+<p>In this guide, we’ll look at two major ways encryption is applied: to scramble <a class="glossary-term" href="/glossary/data" data-term_id="163" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/data"&gt;Data&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Any kind of information, typically stored in a digital form. Data can include documents, pictures, keys, programs, messages, and other digital information or files.&lt;/p&gt;
+'>data <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> at rest and data in transit.</p>
+
+<a name="encrypting-data-at-rest"> </a><h2>Encrypting Data At Rest <a href="#encrypting-data-at-rest" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<p><strong>Data “at rest” </strong>is data that is stored somewhere, like on a mobile device, laptop, server, or external hard drive. When data is at rest, it is not moving from one place to another.</p>
+
+<p>One example of a form of encryption that protects data at rest is <strong>“full-disk” encryption</strong> (also sometimes called “device encryption”). Enabling full-disk encryption encrypts all the information stored on a device and protects the information with a <a class="glossary-term" href="/glossary/passphrase" data-term_id="123" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/passphrase"&gt;Passphrase&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A passphrase is a kind of password. We use "passphrase" to convey the idea that a password which is a single word is far too short to protect you and a longer phrase is much better. The webcomic XKCD has a good explanation. http://xkcd.com/936/&lt;/p&gt;
+'>passphrase <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> or another authentication method. On a mobile device or laptop, this usually looks like a device lock screen, requiring a passcode, passphrase, or thumbprint. However, locking your device (i.e., requiring a <a class="glossary-term" href="/glossary/password" data-term_id="157" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/password&quot;&gt;Password&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A secret meant to be memorized or otherwise protected and kept private, and meant to limit access to something so that only someone who knows the password can gain access. It might limit access to an online account, a device, or something else. A long password based on multiple words may also be called a &quot;passphrase&quot; to remind us that it's not just one &quot;word.&quot; A master password is a main password used to unlock other passwords in a password manager or password safe application.&lt;/p&gt;
+">password <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> to “unlock” your device) does not always mean that full-disk encryption is enabled.</p>
+
+<table class="Table" width="618">
+	<tbody>
+		<tr>
+			<td valign="top">
+			<p align="center"><span><span><span> </span></span></span><img alt="" height="148" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1930/image-20250102095053-3.png" width="74"><span><span><span>             </span></span></span><img alt="" height="268" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1929/image-20250102095053-4.png" width="357"></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p align="center"><em>A smart phone and laptop that each have a password-protected “lock” screen.</em></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class="tip">Be sure to check how your <a class="glossary-term" href="/glossary/operating-system" data-term_id="120" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/operating-system&quot;&gt;Operating system&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A program that runs all the other programs on a computer or device. Windows, Linux, Android and Apple's macOS and iOS are all examples of operating systems.&lt;/p&gt;
+
+">operating system <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> enables and manages full-disk encryption. While some operating systems have full-disk encryption enabled by default, some operating systems do not. That means someone could access the data on your device by bypassing device lock and accessing the hard drive directly, without needing to break the <a class="glossary-term" href="/glossary/encryption-key" data-term_id="97" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/encryption-key"&gt;Encryption key&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A piece of information that is used to convert a message into an unreadable form. In some cases, you need the same encryption key to decode the message. In others, the encryption key and decryption key are different.&lt;/p&gt;
+
+'>encryption key <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> since the device itself is not encrypted. Some systems store unencrypted plaintext in<a href="https://en.wikipedia.org/wiki/Random-access_memory"> </a><a href="https://en.wikipedia.org/wiki/Random-access_memory">RAM</a>, even when you are using full-disk encryption. RAM is temporary storage, which means that after your device is powered down the memory typically can't be read, but a sophisticated <a href="https://ssd.eff.org/glossary/adversary">adversary</a> could attempt a<a href="https://en.wikipedia.org/wiki/Cold_boot_attack"> </a><a href="https://en.wikipedia.org/wiki/Cold_boot_attack">cold boot attack</a> and conceivably retrieve the RAM contents.</p>
+
+<p>Full-disk encryption can protect your devices from people who have physical access to them. This is useful if you want to protect your data from roommates, coworkers or employers, school officials, family members, partners, police officers, or other law enforcement officials. It also protects the data on your devices if they are stolen or lost, like if you accidentally leave your phone on a bus or at a restaurant.</p>
+
+<p>There are other ways to <a class="glossary-term" href="/glossary/encrypt" data-term_id="156" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/encrypt"&gt;Encrypt&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To scramble information or a message mathematically so that it seems meaningless, but can still be restored to its original form by a person or device that possesses a piece of data that can unscramble it (a key.) This limits who can access the information or message because without the right key, it is nearly impossible to reverse the encryption and recover the original information. Encryption is one of several technologies that make up the field called cryptography.&lt;/p&gt;
+'>encrypt <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> data at rest. One option, known as “file encryption,” encrypts only individual files on a computer or other storage device. Another option is “drive encryption” (also known as “disk encryption”) which encrypts all of the data on a specific storage area on a device.</p>
+
+<p>You can use these different types of encryption at rest in combination. For example, let’s say you wanted to protect sensitive information on your medical documents. You can use file encryption to encrypt an individual medical file stored on your device. You can then use drive encryption to encrypt the part of your device that this medical information is stored on. Finally, if you have enabled full-disk encryption on your device, everything—all medical information as well as every other file on the drive, including the files for the computer’s operating system—is encrypted. So, even if someone figured out your computer’s login password, they would still need to also know the password you used to encrypt the file with your medical information before they could access it.</p>
+
+<p>Check out our guides for enabling <a href="https://ssd.eff.org/module/how-encrypt-your-windows-device">full-disk encryption on your computer,</a> and <a href="https://ssd.eff.org/module/how-encrypt-your-iphone">iPhone</a> or <a href="https://ssd.eff.org/module/keeping-your-data-safe#encrypt-your-data">Android</a>.</p>
+
+<a name="encrypting-data-in-transit"> </a><h2>Encrypting Data In Transit <a href="#encrypting-data-in-transit" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<table class="Table" height="710" width="709">
+	<tbody>
+		<tr>
+			<td valign="top">
+			<p align="center"><img alt="" height="600" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1921/image-20250102090317-3.jpeg" width="1200"></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p><em>The diagram shows unencrypted data in transit. On the left, a smartphone sends a green, unencrypted message to another smartphone on the far right. Along the way, a cellphone tower passes the message along to company servers and then to another cellphone tower, which can each see the unencrypted “Hello” message. All computers and networks passing the unencrypted message are able to see the message. At the end, the other smartphone receives the unencrypted “Hello” message.</em></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Data “in transit” is information that is moving over a network from one place to another. For example, when you send a message on a messaging app, the message moves from your device, to the app company’s servers, and then to your recipient’s device. Another example is web browsing: when you go to a website, the data from that webpage travels from the website’s servers to your browser.</p>
+
+<p class="warning">Some popular apps offer features that seem to protect messages, such as disappearing messages. However, depending on <a href="https://ssd.eff.org/module/your-security-plan">your security plan</a>, disappearing messages may not provide the security properties you need. Just because a communication (like a chat or message) can feel secure, doesn’t mean it is secure. Computers passing along your message may be able to look at the contents of your message.</p>
+
+<p>There are two ways to encrypt data in transit: <strong><a class="glossary-term" href="/glossary/transport-encryption" data-term_id="139" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/transport-encryption"&gt;Transport encryption&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Encrypting data as it travels across the network, so that others spying on the network (such as a hacker at a coffee shop, or your ISP) cannot read it.&lt;/p&gt;
+'>transport-layer encryption <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a></strong> and <strong><a class="glossary-term" href="/glossary/end-to-end-encryption" data-term_id="98" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/end-to-end-encryption"&gt;End-to-end encryption&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="https://ssd.eff.org/en/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work"&gt;End-to-end encryption&lt;/a&gt; ensures that a message is turned into a secret message by its original sender, and decoded only by its final recipient.&lt;a href="https://ssd.eff.org/en/module/what-should-i-know-about-encryption"&gt; Other forms of encryption&lt;/a&gt; may depend on encryption performed by third-parties. That means that those parties have to be trusted with the original data.&lt;a href="https://ssd.eff.org/glossary/end-to-end-encryption"&gt; End-to-end encryption&lt;/a&gt; is generally regarded as safer, because it reduces the number of parties who might be able to interfere or break the encryption.&lt;/p&gt;
+
+'>end-to-end encryption <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a></strong>. The type of encryption a service provider supports can be an important factor in deciding what services are right for you. It’s important to know whether conversations are encrypted via transport-layer encryption or end-to-end encryption.</p>
+
+<a name="transport-layer-encryption"> </a><h2>Transport-layer encryption <a href="#transport-layer-encryption" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<table class="Table" width="624">
+	<tbody>
+		<tr>
+			<td valign="top">
+			<p align="center"><img alt="" height="600" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1919/image-20250102090317-4.png" width="1200"></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p><span><span><span><i>The diagram shows transport-layer encryption. On the left, a smartphone sends a green, unencrypted message: “Hello.” That message is encrypted, and then passed along to a cellphone tower. In the middle, the company servers are able to decrypt the message, re-encrypt it, and send it along to the next cellphone tower. At the end, the other smartphone receives the encrypted message, and decrypts it to read “Hello.”</i></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Transport-layer encryption, most commonly implemented using the <a class="glossary-term" href="/glossary/protocol" data-term_id="127" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/protocol"&gt;Protocol&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A communications protocol is a way of sending data between programs or computers. Software programs that use the same protocol can talk to each other. For example, web browsers and web servers speak the same protocol, called “http.” Some protocols use encryption to protect their contents. The secure version of the http protocol is called “https.”&lt;/p&gt;
+
+'>protocol <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> known as <a class="glossary-term" href="/glossary/secure-sockets-layer-ssl" data-term_id="162" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/secure-sockets-layer-ssl&quot;&gt;Secure Sockets Layer (SSL)&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The technology that permits you to maintain a secure, encrypted connection between your computer and some of the websites and internet services that you visit. When you're connected to a website through this technology, the address of the website will begin with HTTPS rather than HTTP. Officially, its name was changed to Transport Layer Security (TLS) in 1999, but many people still use the old name.&lt;/p&gt;
+
+">transport layer security <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> (TLS), protects messages as they travel from your device to the app’s servers, and then from the app’s servers to your recipient’s device. In the middle, your messaging service provider—or the website you are browsing, or the app you are using—can see unencrypted copies of your messages. Because your messages can be seen by (and are often stored on) company servers, they may be vulnerable to law enforcement requests or leaking if the company’s servers are compromised.</p>
+
+<a name="transport-layer-encryption-example-https"> </a><h3>Transport-layer encryption example: HTTPS <a href="#transport-layer-encryption-example-https" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h3>
+
+<p><img alt="" height="157" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1920/image-20250102090317-5.png" width="1200"></p>
+
+<p>If you inspect the URL bar in your browser, you might see a lock icon, or a menu icon you can click to get a dropdown that shows a lock with a message like, “Connection secure.” This means the website uses <a class="glossary-term" href="/glossary/https" data-term_id="104" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/https&quot;&gt;HTTPS&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you've ever seen a web address spelled out as “&lt;a href=&quot;http://www.example.com/&quot;&gt;http://www.example.com/&lt;/a&gt;”, you'll recognize the “http” bit of this term. HTTP (hypertext transfer protocol) is the way a web browser on your machine talks to a remote web server. Unfortunately, standard http sends text insecurely across the internet. HTTPS (the S stands for “secure”) uses encryption to better protect the data you send to websites, and the information they return to you, from prying eyes.&lt;/p&gt;
+
+">HTTPS <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>, an example of transport-layer encryption that we encounter frequently on the web. It provides more security than unencrypted HTTP.</p>
+
+<p>Why?</p>
+
+<p>The servers of an HTTPS website can see the data you enter while on their site (for example, messages, searches, credit card numbers, and logins), but this information is unreadable to eavesdroppers on the network.</p>
+
+<p>If someone is spying on the network and trying to see what websites users are visiting, an HTTP connection offers no protection. On the other hand, an HTTPS connection hides which specific page on a website you navigate to—that is, everything “after the slash.” For example, if you are using HTTPS to connect to “<a href="https://ssd.eff.org/en/module/what-encryption">https://ssd.eff.org/en/module/what-encryption</a>” an eavesdropper can only see “<a href="https://ssd.eff.org">https://ssd.eff.org</a>”.</p>
+
+<p>If you’re looking at your browser’s URL and wondering why you don’t see HTTPS or HTTP, <a href="https://www.eff.org/deeplinks/2021/09/https-actually-everywhere">that’s because HTTPS is so common these days</a>, many browsers do not even display the full URL by default anymore.</p>
+
+<p class="warning">Just because a service uses HTTPS does not mean that the service fully protects the privacy of its users visiting its website. For example, an HTTPS-protected site may still use tracking <a class="glossary-term" href="/glossary/cookies" data-term_id="89" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/cookies&quot;&gt;Cookies&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Cookies are a web technology that let websites recognize your browser. Cookies were originally designed to allow sites to offer online shopping carts, save preferences, or keep you logged on to a site. They also enable tracking and profiling so sites can recognize you and learn more about where you go, which devices you use, and what you are interested in—even if you don't have an account with that site, or aren't logged in.&lt;/p&gt;
+
+">cookies <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> or host <a class="glossary-term" href="/glossary/malware" data-term_id="114" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/malware"&gt;Malware&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Malware is short for malicious software: programs designed to conduct unwanted actions on your device. Computer viruses are malware. So are programs that steal passwords, secretly record you, or delete your data.&lt;/p&gt;
+
+'>malware <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>.</p>
+
+<a name="transport-layer-encryption-example-vpn"> </a><h3>Transport-layer encryption example: VPN <a href="#transport-layer-encryption-example-vpn" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h3>
+
+<p>A<a href="https://ssd.eff.org/glossary/vpn"> </a><a href="https://ssd.eff.org/glossary/vpn">Virtual Private Network</a> (<a href="https://ssd.eff.org/glossary/vpn">VPN</a>) is another example of transport-layer encryption. Without a <a class="glossary-term" href="/glossary/vpn" data-term_id="141" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/vpn&quot;&gt;VPN&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A virtual private network is a method for connecting your computer securely to the network of an organization on the other side of the internet. When you use a VPN, all of your computer's internet communications are packaged together, encrypted, and then relayed to this other organization, where they are decrypted, unpacked, and then sent on to their destination.&amp;nbsp;To the organization's network, or any other computer on the wider internet, it looks like your computer's request is coming from inside the organization, not from your location.&lt;/p&gt;
+
+&lt;p&gt;VPNs are used by businesses to provide secure access to internal resources (like file servers or printers). They are also used by individuals to bypass local censorship, or defeat local surveillance.&lt;/p&gt;
+
+">VPN <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>, your traffic travels over your internet service provider’s (ISP’s) connection. With a VPN, your traffic still travels over your ISP’s connection, but is encrypted between you and your VPN provider. If someone is spying on your local network and trying to see what websites you’re visiting, they will be able to see that you’re connected to a VPN and who that VPN provider is, but will <strong>not</strong> see what websites you are visiting.</p>
+
+<p>While using a VPN hides your traffic from your ISP, it also exposes all your traffic to the VPN provider itself. The VPN provider will be able to see, store, and modify your traffic. Using a VPN essentially shifts your trust from your ISP to the VPN, so it’s important to make sure you trust your VPN provider to protect your data.</p>
+
+<p>For further advice on choosing a VPN that’s right for you, <a href="https://ssd.eff.org/en/module/choosing-vpn-thats-right-you">read our guide</a> on VPNs.</p>
+
+<a name="end-to-end-encryption"> </a><h2>End-to-End Encryption <a href="#end-to-end-encryption" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<table class="Table" width="618">
+	<tbody>
+		<tr>
+			<td valign="top">
+			<p align="center"><img alt="" height="600" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1925/image-20250102090317-6.png" width="1200"></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+			<p><em>The diagram shows end-to-end encryption. On the left, a smart phone sends a green, unencrypted message: “Hello.” That message is encrypted, and then passed along to a cellphone tower and company servers. At the end, the other smartphone receives the encrypted message, and decrypts it to read “Hello.” Unlike with transport-layer encryption, your ISP’s servers are not able to decrypt the message. Only the endpoints (the original devices sending and receiving encrypted messages) can decrypt the message.</em><span><span><span><i> </i></span></span></span></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>End-to-end encryption protects messages in transit all the way from sender to receiver. It ensures that information is turned into a secret message by its original sender (the first “end”) and decoded only by its final recipient (the second “end”). No one, including the servers of the app you are using, can “listen in” and eavesdrop on your activity.</p>
+
+<p>Accessing end-to-end encrypted messages in an app on your device means that the app company itself can’t read them. However, while an app developer using end-to-end encryption cannot see the contents of a message, it may <a href="https://ssd.eff.org/module/what-should-i-know-about-encryption#what-encryption-in-transit-does-not-do">still collect certain types of metadata</a>, like what time a message is sent or your <a class="glossary-term" href="/glossary/ip-address" data-term_id="108" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/ip-address&quot;&gt;IP address&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;A device on the internet needs its own address to receive data, just like a home or business needs a street address to receive physical mail. This address is its IP (Internet&lt;a href=&quot;https://ssd.eff.org/glossary/protocol&quot;&gt; Protocol&lt;/a&gt;) address. When you connect to a website or other server online, you usually reveal your own &lt;a href=&quot;https://ssd.eff.org/glossary/ip-address&quot;&gt;IP address&lt;/a&gt;. This doesn't necessarily reveal either your identity (it's hard to map an IP address to a real address or a particular computer), but it can be combined with other pieces of information to identify you. An IP address can give away some information about you, however, such as your rough location or the name of your Internet Service Provider (ISP). Services like Tor let you hide your IP address, which helps give you anonymity online.&lt;/p&gt;
+
+">IP address <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>.</p>
+
+<p>We offer guides for using end-to-end encryption tools in our <a href="https://ssd.eff.org/en/module/communicating-others">Communicating With Others</a> guide and more details about the specifics in our <a href="https://ssd.eff.org/module/deep-dive-end-end-encryption-how-do-public-key-encryption-systems-work">Deep Dive on End-to-End Encryption guide</a>. We also have guides for using two of the most popular chat apps that use end-to-end encryption, <a href="https://ssd.eff.org/module/how-to-use-signal">Signal</a> and <a href="https://ssd.eff.org/module/how-to-use-whatsapp">WhatsApp</a>.</p>
+
+<a name="transport-layer-encryption-or-end-to-end-encryption"> </a><h2>Transport-Layer Encryption or End-to-End Encryption? <a href="#transport-layer-encryption-or-end-to-end-encryption" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<center>
+<p><img alt="" height="516" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1923/image-20250102090317-7.png" width="563"></p>
+</center>
+
+<p><strong>Important questions to ask to decide whether you need transport-layer encryption or end-to-end encryption are: </strong>Do you trust the app or service you are using? Do you trust its technical infrastructure? How about its policies to protect against law enforcement requests?</p>
+
+<p>If you answer “no,” to any of these questions, then you need end-to-end encryption. If you answer “yes,” then a service that supports only transport-layer encryption may suffice for you—but it is better to go with services that support end-to-end encryption when possible.</p>
+
+<a name="what-encryption-in-transit-does-not-do"> </a><h2>What Encryption In Transit Does <u>Not</u> Do <a href="#what-encryption-in-transit-does-not-do" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<p>Encryption is not a cure-all. Even if you are sending encrypted messages, the message will be decrypted by the person with whom you are communicating. If your endpoints (the devices that you are using for communication) are compromised, your encrypted communications can be compromised. Additionally, the person with whom you are communicating can take screenshots or keep records (logs) of your communication.</p>
+
+<p class="warning">If you automatically store backups of encrypted conversations to the cloud, be mindful to check that your backups are also encrypted. This ensures your conversations are not only encrypted in transit but also at rest.</p>
+
+<p><img alt="" height="600" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1924/image-20250102090317-8.png" width="1200"></p>
+
+<p>If you encrypt data in transit, it will protect the content of your communications, but will not encrypt <a class="glossary-term" href="/glossary/metadata" data-term_id="117" data-description="&lt;div class=&quot;header&quot;&gt;
+  &lt;h3&gt;&lt;a href=&quot;/glossary/metadata&quot;&gt;Metadata&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class=&quot;close&quot; aria-describedby=&quot;tooltip-action&quot;&gt;&lt;span class=&quot;icon&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ssd.eff.org/glossary/metadata&quot;&gt;Metadata&lt;/a&gt; (or &quot;data about data&quot;) is data that describes a piece of information, apart from the information itself. So, the content of a message is not metadata, but who sent it, when, where from, and to whom, are all examples of metadata. Legal systems often protect content more than metadata: for instance, in the United States, law enforcement needs a special warrant to listen to a person's telephone calls, but claims the right to obtain the list of who you have called far more easily. However, metadata can often reveal a great deal, and will often need to be protected as carefully as the data it describes. The U.S. legal system is &lt;a href=&quot;https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf&quot;&gt;slowly recognizing this&lt;/a&gt;.&lt;/p&gt;
+
+">metadata <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a>. For example, you can use encryption to scramble the messages between you and your friend into gibberish, but it does not hide:</p>
+
+<ul>
+	<li>That you and your friend are communicating.</li>
+	<li>That you are using encryption to communicate.</li>
+	<li>Other types of information about your communication, such as the location, times, and length of communication.</li>
+</ul>
+
+<p class="warning">People with heightened surveillance concerns (such as those worried about active monitoring of their networks) can put themselves at <a class="glossary-term" href="/glossary/risk-assessment" data-term_id="130" data-description='&lt;div class="header"&gt;
+  &lt;h3&gt;&lt;a href="/glossary/risk-assessment"&gt;Risk assessment&lt;/a&gt;&lt;/h3&gt;
+  &lt;button class="close" aria-describedby="tooltip-action"&gt;&lt;span class="icon"&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In computer security, risk analysis is calculating the chance that threats might succeed, so you know how much effort to spend defending against them. There may be many different ways that you might lose control or access to your data, but some of them are less likely than others. Conducting a risk assessment means deciding which threats you are going to take seriously, and which may be too rare or too harmless (or too difficult to combat) to worry about. See threat modeling.&lt;/p&gt;
+'>risk <img aria-hidden="true" src="/assets/efforg/info-7ae1fb29e1e734b20023f3e3470316c82b84a7e4b9f1d1e2f49e399f1f8de2d3.png"></a> by only using encryption during sensitive times or for specific activities. Why? If you only use encryption sometimes, it could tie your metadata to important dates and times. It can also reveal that you consider those communications especially sensitive. Therefore, use encryption as much as possible, even for mundane activities.</p>
+
+<p>If you’re the only person using encryption on a network, this metadata may be seen as suspicious. This is why many encryption enthusiasts encourage everyone to use encrypted tools whenever they are able: to normalize the use of encryption for people who really need it.</p>
+
+<a name="putting-it-all-together"> </a><h2>Putting It All Together <a href="#putting-it-all-together" class="anchor" aria-hidden="true" aria-label="anchor link">#</a>
+</h2>
+
+<center>
+<p><img alt="" height="281" src="https://ssd.eff.org/files/ssd/wysiwyg/pictures/1922/image-20250102090317-9.png" width="187"></p>
+</center>
+
+<p>Together, encrypting both data in transit and at rest will offer you more comprehensive security than using just one or the other. By utilizing multiple methods to defend your data, you can achieve a deeper level of protection. This is what information security experts call “defense in depth.”</p>
+
+<p>For example, if you send unencrypted messages (not encrypting your data in transit) from an encrypted mobile device (encrypting your data at rest), those messages will still be vulnerable to network eavesdropping and interception from governments, service providers, or technically skilled adversaries. The record of the messages on your mobile device, however, will be protected from someone with physical access to your mobile device if they don’t have the passcode.</p>
+
+<p>Conversely, if you send end-to-end encrypted messages (encrypting your data in transit) on an unencrypted device (not encrypting your data at rest), those messages will be safe from snooping and eavesdropping on the network. But someone will be able to access and read the messages if they get physical access to your mobile device.</p>
+
+<p>With these examples in mind, encrypting your data both while it’s in transit on the network and while it’s at rest on your device is ideal for protecting yourself from a wider range of potential risks.</p>
+
+<p>For a deeper dive on how to use encryption, continue onto our guide <a href="https://ssd.eff.org/en/module/key-concepts-encryption">Key Concepts in Encryption</a>.</p>
+</div></div>
+</div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="center">
+      <a class="logo" href="/" title="Home">
+        <img src="https://ssd.eff.org/assets/logo-footer-216585e7032331c8163db209c6fba94ae72baee66b6d4e62ef1b67fe534d7c84.png" alt="Surveillance Self-Defense logo" />
+      </a>
+
+      <div class="site-name">
+        Surveillance<br>Self-Defense
+      </div>
+
+      <div class="footer-nav" role="navigation">
+        <ul class="flex-parent" dir="ltr">
+          <li><a href="/pages/about-surveillance-self-defense">About</a></li>
+          <li><a href="/#index">Index</a></li>
+          <li><a href="/glossary">Glossary</a></li>
+          <li><a href="/pages/credits">Credits</a></li>
+          <li><a href="https://supporters.eff.org/donate/support-surveillance-self-defense">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div id="footer-bottom" class="center" dir="ltr">
+    <ul class="flex-parent">
+      <li><a href="https://www.eff.org/copyright">Copyright (CC BY)</a></li>
+      <li><a href="https://www.eff.org/policy">Privacy</a></li>
+    </ul>
+  </div>
+
+
+  <script type="importmap" data-turbo-track="reload">{
+  "imports": {
+    "jquery": "/assets/jquery-dffa084d8915bf507ac4c876f4dedea0cab68baacd9266ff82a66706ef56f264.js",
+    "ckeditor/ckeditor": "/assets/ckeditor/ckeditor-53b7205163eeca5b511b43e34f1df6b2b0b401d11cf2c6884adfbbc4150c2881.js",
+    "jquery-ui/jquery-ui": "/assets/jquery-ui/jquery-ui-0507eea9215b37aa68aced7033f3f0919a5f17b9a8c1ac7308e0fba7fd11e3bd.js",
+    "quill": "/assets/quill-22aa9dc07dfaceb4fc2544e2bce4990cf0f50a6398b20aecfa63e97bf19e7960.js",
+    "railsujs": "/assets/railsujs-57c6effce760f866866bfa973534bccaa9f2ae315c8a64066bad179fa22bce0f.js",
+    "select2/select2": "/assets/select2/select2-f79333530e65fc28b0339227e71cfc769d0229c39d7b2955c6045ad5e4f15f65.js",
+    "sortable": "/assets/sortable-37be89ef017d92ccb51699051b444072861ad6d6593081f9935b43c601d955b6.js",
+    "toastui-editor": "/assets/toastui-editor-b824a348e845a818ec06beadd61d1d53a267dd434b98e5fb02c9a80852b52ba2.js",
+    "datatables.net": "/assets/datatables.net-0f394ccc57627c8f9eb6e629fe6db7e959b2cc5d2819e95f0d7fe2ba83dec8b0.js",
+    "application": "/assets/application-48a5218f9ce75c4772ab1f2d4bd5da662eb82e8573e3ba95d4208eba9ed0cc66.js",
+    "cms": "/assets/cms-1b0c9275141f603f9878406f671d40ac25a6cd61b47a6b12530718d687dcd80c.js",
+    "otters/cms/analytics": "/assets/otters/cms/analytics-8e6c351a16668fe27601a562dcef4d608e38a9fadd1ae57d45a575ec1f35ab12.js",
+    "ckeditor/otters-ckeditor": "/assets/ckeditor/otters-ckeditor-011119a39f5d46fecab72019230c175a28c56f5c63369275e4159394afed2bf2.js",
+    "otters/cms": "/assets/otters/cms-ee5003beaa1a9e8629a23d073bb22ee64cda5d2e51a61575befbb16863d162de.js",
+    "otters/cms/menus": "/assets/otters/cms/menus-959fe4612c8eb1e48907cd009004aa0f2c333190cdf17adc10fb9ee10283e87c.js",
+    "otters/cms/nodes": "/assets/otters/cms/nodes-29eef130d12455ba9626f991b3e7959ef769e6e904bc4f8f453e023f66441340.js",
+    "otters/cms/search": "/assets/otters/cms/search-14f4bc996ed7335b9008ead51a6ebd30e7f895d1b9ff24583f802a11f180d422.js",
+    "efforg/application": "/assets/efforg/application-6347e50049948c3366032b3a4d0029ac2ebd1cb3db9eddca94662bfecd86eabc.js",
+    "efforg/cms": "/assets/efforg/cms-58103891f355379ea3b7ae6d9d9914d880265848a574a63e622303981ed790b2.js"
+  }
+}</script>
+<link rel="modulepreload" href="/assets/jquery-dffa084d8915bf507ac4c876f4dedea0cab68baacd9266ff82a66706ef56f264.js">
+<link rel="modulepreload" href="/assets/ckeditor/ckeditor-53b7205163eeca5b511b43e34f1df6b2b0b401d11cf2c6884adfbbc4150c2881.js">
+<link rel="modulepreload" href="/assets/jquery-ui/jquery-ui-0507eea9215b37aa68aced7033f3f0919a5f17b9a8c1ac7308e0fba7fd11e3bd.js">
+<link rel="modulepreload" href="/assets/quill-22aa9dc07dfaceb4fc2544e2bce4990cf0f50a6398b20aecfa63e97bf19e7960.js">
+<link rel="modulepreload" href="/assets/railsujs-57c6effce760f866866bfa973534bccaa9f2ae315c8a64066bad179fa22bce0f.js">
+<link rel="modulepreload" href="/assets/select2/select2-f79333530e65fc28b0339227e71cfc769d0229c39d7b2955c6045ad5e4f15f65.js">
+<link rel="modulepreload" href="/assets/sortable-37be89ef017d92ccb51699051b444072861ad6d6593081f9935b43c601d955b6.js">
+<link rel="modulepreload" href="/assets/toastui-editor-b824a348e845a818ec06beadd61d1d53a267dd434b98e5fb02c9a80852b52ba2.js">
+<link rel="modulepreload" href="/assets/datatables.net-0f394ccc57627c8f9eb6e629fe6db7e959b2cc5d2819e95f0d7fe2ba83dec8b0.js">
+<link rel="modulepreload" href="/assets/application-48a5218f9ce75c4772ab1f2d4bd5da662eb82e8573e3ba95d4208eba9ed0cc66.js">
+<link rel="modulepreload" href="/assets/cms-1b0c9275141f603f9878406f671d40ac25a6cd61b47a6b12530718d687dcd80c.js">
+<link rel="modulepreload" href="/assets/otters/cms/analytics-8e6c351a16668fe27601a562dcef4d608e38a9fadd1ae57d45a575ec1f35ab12.js">
+<link rel="modulepreload" href="/assets/ckeditor/otters-ckeditor-011119a39f5d46fecab72019230c175a28c56f5c63369275e4159394afed2bf2.js">
+<link rel="modulepreload" href="/assets/otters/cms-ee5003beaa1a9e8629a23d073bb22ee64cda5d2e51a61575befbb16863d162de.js">
+<link rel="modulepreload" href="/assets/otters/cms/menus-959fe4612c8eb1e48907cd009004aa0f2c333190cdf17adc10fb9ee10283e87c.js">
+<link rel="modulepreload" href="/assets/otters/cms/nodes-29eef130d12455ba9626f991b3e7959ef769e6e904bc4f8f453e023f66441340.js">
+<link rel="modulepreload" href="/assets/otters/cms/search-14f4bc996ed7335b9008ead51a6ebd30e7f895d1b9ff24583f802a11f180d422.js">
+<link rel="modulepreload" href="/assets/efforg/application-6347e50049948c3366032b3a4d0029ac2ebd1cb3db9eddca94662bfecd86eabc.js">
+<link rel="modulepreload" href="/assets/efforg/cms-58103891f355379ea3b7ae6d9d9914d880265848a574a63e622303981ed790b2.js">
+<script type="module">import "application"</script>
+
+    <noscript>
+      <img referrerpolicy="no-referrer-when-downgrade" src="https://anon-stats.eff.org/matomo.php?idsite=52&amp;rec=1" style="border:0" alt="" />
+    </noscript>
+
+    <script type="text/javascript">
+      var _paq = window._paq = window._paq || [];
+      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u="https://anon-stats.eff.org/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '52']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+
+</body>
+</html>

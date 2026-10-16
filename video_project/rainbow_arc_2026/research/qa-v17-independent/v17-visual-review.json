@@ -1,0 +1,88 @@
+{
+  "version": "V17-independent-review",
+  "reviewedUTC": "2026-10-13T03:20:00+08:00",
+  "video": "output-v16/delivery/彩虹为什么是弧形_V17_fish-pool_1080p.mp4",
+  "scope": "Independent full-resolution frame extraction of the V17 encoded MP4. 16:9 frame groups cover the whole film, all Qwen bridge endpoints, the Gaussian/garden opening, optical world, secondary rainbow, pool/fountain ending and coda. Contact sheets are provided for human review. This is a bounded frame review; it does not claim normal-speed playback or subjective audio listening.",
+  "contactSheets": "research/qa-v17-independent/contact-*.jpg",
+  "frameGroups": "research/qa-v17-independent/frame-groups.json",
+  "delivery": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationSeconds": 356.733333,
+    "videoFrames": 10702,
+    "source": "research/qa-v16/ffprobe-v17.json",
+    "automatedDeliveryAudit": "pass (see research/qa-v16/ffprobe-v17.json and audit-delivery-v16.py output)"
+  },
+  "findings": [
+    {
+      "id": "FISH-01",
+      "severity": "high",
+      "framesSeconds": [9.9, 14.9, 15.0, 20.0, 285.9, 286.1, 346.633, 347.733],
+      "finding": "The painted opening fish has the requested mint body, pink/purple fins, rounded cheek blush and large dark eyes. The authored 3D fish is much paler and nearly spherical: tail and dorsal/pectoral fins disappear in wide and frontal views, so it reads as a mascot ball rather than the same fish. The painted-to-3D handoff therefore changes silhouette and color identity. In the close pool shot the eyes and cheek material read well, but the missing tail remains obvious.",
+      "action": "Give the 3D rig the same pastel mint-to-lilac body gradient and saturated pink tail/dorsal fins as the reference; use a 3/4 camera heading during garden shots so tail and one pectoral fin remain visible. Keep frontal close-up only for the face beat. Add a short scale-matched eye-line handoff between painted and 3D endpoints."
+    },
+    {
+      "id": "FISH-02",
+      "severity": "medium",
+      "framesSeconds": [285.9, 286.1, 286.5, 287.0],
+      "finding": "The two-fish secondary transition is separated spatially, but the left fish is partly swallowed by foreground foliage and both are cropped low during the focus pull. Their nearly identical white material reduces depth separation.",
+      "action": "Offset the friend 0.6–0.9 world metres toward the open path and raise both eye anchors 0.15 m for the transition; tint the friend slightly lavender while retaining shared materials. Keep a minimum projected 120 px face-to-face separation."
+    },
+    {
+      "id": "GAUSS-01",
+      "severity": "high",
+      "framesSeconds": [14.5, 15.0, 16.0, 20.0, 24.0, 27.0],
+      "finding": "The garden after the painted/Qwen handoff has a fine-grain, stamped grass/flower field. It looks like a dense point/mesh treatment rather than a recognizable Gaussian-splat depth reveal; the pond and trees are comparatively opaque and the fish is tiny. The field also contains repeated pale flower clusters that read as rendering noise at wide scale.",
+      "action": "Increase depth-sorted splat opacity only around the near path, pond rim and tree trunks during 14.5–18 s, with a visible gather/scatter sweep anchored on the puddle reflection. Reduce far-field flower category gain and point scale; preserve a low-opacity conventional GLB support layer for the horizon. Add a 12–18 frame macro splat close-up before returning to the wide garden."
+    },
+    {
+      "id": "POOL-01",
+      "severity": "high",
+      "framesSeconds": [346.633, 347.233, 347.733, 349.233],
+      "finding": "The pool is readable as an oval water patch but the surface is pale/flat with little visible ripple direction. The irregular brown rock ring is visually busy and has a dry, crater-like appearance. White grass sparkles around the rim compete with the face and the orange light path passes behind the fish without a clear water-origin cue.",
+      "action": "Use a darker desaturated teal Fresnel water material with two broad concentric ripple bands and a small reflected-sun glint; lower rim stone count/contrast and mix 3–4 cool gray stone palettes. Suppress nearby flower sparkle particles in the 346–350 s close-up. Anchor the experiment ray to the pool centre and let it terminate at the visible mist above the water."
+    },
+    {
+      "id": "LIGHT-01",
+      "severity": "medium",
+      "framesSeconds": [170.833, 171.233, 180.0, 200.0, 215.0],
+      "finding": "The sunlight is a soft atmospheric wash and the rainbow is bright, but the solar source itself is not visible; the scene's red/orange demonstration ray can look like a floating line over grass. Tree shadows and pool highlights do not always reveal a common light direction in the wide world shots.",
+      "action": "Add a restrained camera-facing sun disc/glare only when the camera can see the solar direction, plus a short volumetric shaft through the rain curtain. Keep the teaching ray emissive but add a small endpoint glow and a translucent rain-plane intersection so it reads as an optical path, not a world-space cable."
+    },
+    {
+      "id": "TRANS-01",
+      "severity": "medium",
+      "framesSeconds": [26.967, 27.5, 36.967, 37.5, 166.833, 167.333, 170.833, 171.233, 286.1, 286.5, 290.5, 291.0, 349.233, 350.733],
+      "finding": "Qwen bridges are generally coherent, but their artistic blur/defocus can make the scene feel like a lens cut rather than a depth-sorted handoff. The garden→drop bridge passes through a strongly blurred frame; the drop→world bridge changes from black optics to a bright garden over only a few sampled frames. This is acceptable as an effect but does not yet feel like one continuous camera path.",
+      "action": "Regenerate only the problematic bridge endpoints with matched 3D anchors: preserve the outgoing optical line as the incoming screen-space streak and hold the same depth of field for 12–18 frames. Use a rendered water-droplet highlight wipe as the single transition matte; avoid adding an independent full-frame blur on top of the camera motion."
+    },
+    {
+      "id": "OPTICS-01",
+      "severity": "low",
+      "framesSeconds": [70.0, 80.0, 90.0, 110.0, 120.0, 140.0, 166.233, 296.567],
+      "finding": "The deterministic optical scenes are visually legible: the white incident ray enters from screen left, the spectral fan appears after the drop, and the one/two internal reflection paths are straight and consistent. Labels are large and avoid the sphere in inspected frames. The 42° and 51° marks are the strongest teaching beats.",
+      "action": "Retain geometry. Increase only the subtle volumetric bloom along the actual ray and add a small wavelength legend near the fan; do not move the labels or alter the validated path."
+    },
+    {
+      "id": "TEXT-01",
+      "severity": "low",
+      "framesSeconds": [0.0, 15.0, 70.0, 140.0, 200.0, 255.0, 286.1, 346.633, 354.0],
+      "finding": "Logo remains consistently top-left and subtitles are large/readable. Some garden subtitles sit on busy grass/path texture, especially at 255–286 s, while the dark optical labels have stronger contrast. The coda formulas/paper stack is readable at the final sampled frames.",
+      "action": "Keep font and safe area. Add a low-opacity localized bottom scrim only during bright garden subtitles; do not add a global card or shrink type."
+    }
+  ],
+  "passedChecks": [
+    "MP4 decodes to 10702 consecutive frames at 1920x1080, 30 fps.",
+    "Both audio/video durations are 356.733 s in ffprobe; no evidence of final-frame truncation in metadata.",
+    "Two-fish frame review found no body overlap; the issue is foliage occlusion and low framing, not intersection.",
+    "No black frame or subtitle-over-optics collision observed in the sampled contact sheets.",
+    "Optical ray geometry and 42°/51° teaching labels remain coherent in the sampled deterministic scenes."
+  ],
+  "limitations": [
+    "No normal-speed uninterrupted viewing or subjective audio listening was performed in this independent review.",
+    "Qwen clips remain artistic transition material and are not scientific evidence.",
+    "This report does not certify unsampled frame-level collisions or final platform re-encoding behavior."
+  ],
+  "recommendedOrder": ["FISH-01", "POOL-01", "GAUSS-01", "TRANS-01", "FISH-02", "LIGHT-01", "TEXT-01", "OPTICS-01"]
+}

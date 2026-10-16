@@ -1,0 +1,80 @@
+{
+  "id": "s007",
+  "text": "再看一根独立的桩模型，给它一段变化的侧向推力。桩头先移动，桩身跟着弯曲，周围的土沿着深度抵住它。颜色把桩身的受力标出来，哪一段更吃力，就更容易看清。推力撤掉以后，桩还会轻轻摆几下，能量逐渐耗散。这是一根桩的计算例子，用来读懂桩和土怎样配合。",
+  "ttsText": "再看一根独立的桩模型，给它一段变化的侧向推力。桩头先移动，桩身跟着弯曲，周围的土沿着深度抵住它。颜色把桩身的受力标出来，哪一段更吃力，就更容易看清。推力撤掉以后，桩还会轻轻摆几下，能量逐渐耗散。这是一根桩的计算例子，用来读懂桩和土怎样配合。",
+  "signature": "ff56cdb38c1bd2ea5d7471372e46fac455d33ad43b952d1bec667d003eafcacc",
+  "raw": "audio/raw/s007-ff56cdb38c.wav",
+  "processed": "audio/candidates/v7-flow-a/s007.wav",
+  "rawDuration": 23.04,
+  "duration": 23.28,
+  "sha256": "6f0edf6ae9c96c2c84db8ffc1d3a39d19e12170c424d602d3007bad2a01820d4",
+  "seed": 4283878835,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s007",
+    "s012",
+    "s018"
+  ],
+  "rawEndpointDB": -96.04231257922049,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "182930e913067dc63388e5cdbfc87b4c6633b6c88e9063f073b03140d70aa98a",
+    "outputSha256": "6f0edf6ae9c96c2c84db8ffc1d3a39d19e12170c424d602d3007bad2a01820d4",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.232945111942552,
+    "input": {
+      "seconds": 23.28,
+      "peakDb": -6.398114525300259,
+      "activeRmsDb": -21.85554907361793,
+      "quietFrameP10Db": -62.259848801515574
+    },
+    "output": {
+      "seconds": 23.28,
+      "peakDb": -4.434613183364511,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.365647319608996
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "c9a933009c14a00f2b7cec3ddd3d0eddd4ae65ad8fd03de1643c9dc090acdad4"
+  },
+  "subjectiveListeningChecked": false
+}

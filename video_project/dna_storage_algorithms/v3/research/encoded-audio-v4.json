@@ -1,0 +1,357 @@
+{
+  "schema": "rainbow.dna.encoded-audio/v4",
+  "checkedAt": "2026-10-11T11:42:28.920241+00:00",
+  "video": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\delivery\\DNA存储_连续数据之旅_V4_1080p.mp4",
+    "bytes": 92641089,
+    "sha256": "b0c10dae43cc0c857f4cea616e6a801dde292b90cbd692eb3f7b7d799ebd71a7"
+  },
+  "status": "pass",
+  "actualEncodedAudio": {
+    "integratedLufs": -16.04,
+    "truePeakDbtp": -1.41,
+    "loudnessRangeLu": 4.6
+  },
+  "loudnormMeasurement": {
+    "input_i": "-16.04",
+    "input_tp": "-1.41",
+    "input_lra": "4.60",
+    "input_thresh": "-26.50",
+    "output_i": "-16.03",
+    "output_tp": "-1.50",
+    "output_lra": "4.40",
+    "output_thresh": "-26.43",
+    "normalization_type": "dynamic",
+    "target_offset": "0.03"
+  },
+  "measurementNote": "The loudnorm input_* fields measure the actual decoded AAC. output_* describes the analysis filter output and is not claimed as the encoded file measurement.",
+  "silencedetect": {
+    "thresholdDbfs": -50,
+    "minimumDurationSec": 1,
+    "events": []
+  },
+  "master": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\audio\\v4\\master.wav",
+    "sha256": "45ae699b3d7d8f77620b2f06c6bd2414e498a850818f6836a2dcdf008a38655b"
+  },
+  "decodedMasterComparison": {
+    "checked": true,
+    "scope": "Decoded mono 8 kHz signal comparison identifies selected master content; it does not certify lossless AAC samples.",
+    "sampleRate": 8000,
+    "referenceFrames": 2400000,
+    "encodedFrames": 2400086,
+    "comparedSeconds": 300.0,
+    "correlation": 0.9999611790016087,
+    "gain": 0.9989294308324386,
+    "normalizedErrorRms": 0.008811384097060055,
+    "minimumTenSecondCorrelation": 0.9998889414247514,
+    "tenSecondWindows": [
+      {
+        "startSec": 0.0,
+        "correlation": 0.9999668307690328
+      },
+      {
+        "startSec": 10.0,
+        "correlation": 0.9999774754677759
+      },
+      {
+        "startSec": 20.0,
+        "correlation": 0.9999400992271555
+      },
+      {
+        "startSec": 30.0,
+        "correlation": 0.999955632010072
+      },
+      {
+        "startSec": 40.0,
+        "correlation": 0.9999627849856672
+      },
+      {
+        "startSec": 50.0,
+        "correlation": 0.9999831935722955
+      },
+      {
+        "startSec": 60.0,
+        "correlation": 0.9999380029426944
+      },
+      {
+        "startSec": 70.0,
+        "correlation": 0.9999292117502463
+      },
+      {
+        "startSec": 80.0,
+        "correlation": 0.9999750200648548
+      },
+      {
+        "startSec": 90.0,
+        "correlation": 0.9999527256289419
+      },
+      {
+        "startSec": 100.0,
+        "correlation": 0.9999542283611728
+      },
+      {
+        "startSec": 110.0,
+        "correlation": 0.9999797703082035
+      },
+      {
+        "startSec": 120.0,
+        "correlation": 0.9999655064808871
+      },
+      {
+        "startSec": 130.0,
+        "correlation": 0.9999686210494059
+      },
+      {
+        "startSec": 140.0,
+        "correlation": 0.9998889414247514
+      },
+      {
+        "startSec": 150.0,
+        "correlation": 0.9999496374709342
+      },
+      {
+        "startSec": 160.0,
+        "correlation": 0.9999726827649388
+      },
+      {
+        "startSec": 170.0,
+        "correlation": 0.9999842265392165
+      },
+      {
+        "startSec": 180.0,
+        "correlation": 0.9999434721467081
+      },
+      {
+        "startSec": 190.0,
+        "correlation": 0.9999710438448832
+      },
+      {
+        "startSec": 200.0,
+        "correlation": 0.9999819062565688
+      },
+      {
+        "startSec": 210.0,
+        "correlation": 0.9999571482318353
+      },
+      {
+        "startSec": 220.0,
+        "correlation": 0.9999773034265268
+      },
+      {
+        "startSec": 230.0,
+        "correlation": 0.999968485753629
+      },
+      {
+        "startSec": 240.0,
+        "correlation": 0.9999655258487309
+      },
+      {
+        "startSec": 250.0,
+        "correlation": 0.9999554116763875
+      },
+      {
+        "startSec": 260.0,
+        "correlation": 0.9999667223477186
+      },
+      {
+        "startSec": 270.0,
+        "correlation": 0.9999842908948098
+      },
+      {
+        "startSec": 280.0,
+        "correlation": 0.999951888940119
+      },
+      {
+        "startSec": 290.0,
+        "correlation": 0.9999936745131847
+      }
+    ]
+  },
+  "subjectiveListeningChecked": false,
+  "checks": [
+    {
+      "id": "complete-video-and-audio-decode",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "id": "no-black-interval-at-least-half-second",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "no-silence-at-least-one-second",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "actual-encoded-audio-loudness-measured",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "encoded-loudness-near-minus16-lufs",
+      "pass": true,
+      "detail": {
+        "actualLufs": -16.04,
+        "acceptableRangeLufs": [
+          -17,
+          -15
+        ]
+      }
+    },
+    {
+      "id": "encoded-true-peak-below-minus1-dbtp",
+      "pass": true,
+      "detail": {
+        "actualTruePeakDbtp": -1.41,
+        "maximumDbtp": -1
+      }
+    },
+    {
+      "id": "encoded-audio-matches-selected-master",
+      "pass": true,
+      "detail": {
+        "checked": true,
+        "scope": "Decoded mono 8 kHz signal comparison identifies selected master content; it does not certify lossless AAC samples.",
+        "sampleRate": 8000,
+        "referenceFrames": 2400000,
+        "encodedFrames": 2400086,
+        "comparedSeconds": 300.0,
+        "correlation": 0.9999611790016087,
+        "gain": 0.9989294308324386,
+        "normalizedErrorRms": 0.008811384097060055,
+        "minimumTenSecondCorrelation": 0.9998889414247514,
+        "tenSecondWindows": [
+          {
+            "startSec": 0.0,
+            "correlation": 0.9999668307690328
+          },
+          {
+            "startSec": 10.0,
+            "correlation": 0.9999774754677759
+          },
+          {
+            "startSec": 20.0,
+            "correlation": 0.9999400992271555
+          },
+          {
+            "startSec": 30.0,
+            "correlation": 0.999955632010072
+          },
+          {
+            "startSec": 40.0,
+            "correlation": 0.9999627849856672
+          },
+          {
+            "startSec": 50.0,
+            "correlation": 0.9999831935722955
+          },
+          {
+            "startSec": 60.0,
+            "correlation": 0.9999380029426944
+          },
+          {
+            "startSec": 70.0,
+            "correlation": 0.9999292117502463
+          },
+          {
+            "startSec": 80.0,
+            "correlation": 0.9999750200648548
+          },
+          {
+            "startSec": 90.0,
+            "correlation": 0.9999527256289419
+          },
+          {
+            "startSec": 100.0,
+            "correlation": 0.9999542283611728
+          },
+          {
+            "startSec": 110.0,
+            "correlation": 0.9999797703082035
+          },
+          {
+            "startSec": 120.0,
+            "correlation": 0.9999655064808871
+          },
+          {
+            "startSec": 130.0,
+            "correlation": 0.9999686210494059
+          },
+          {
+            "startSec": 140.0,
+            "correlation": 0.9998889414247514
+          },
+          {
+            "startSec": 150.0,
+            "correlation": 0.9999496374709342
+          },
+          {
+            "startSec": 160.0,
+            "correlation": 0.9999726827649388
+          },
+          {
+            "startSec": 170.0,
+            "correlation": 0.9999842265392165
+          },
+          {
+            "startSec": 180.0,
+            "correlation": 0.9999434721467081
+          },
+          {
+            "startSec": 190.0,
+            "correlation": 0.9999710438448832
+          },
+          {
+            "startSec": 200.0,
+            "correlation": 0.9999819062565688
+          },
+          {
+            "startSec": 210.0,
+            "correlation": 0.9999571482318353
+          },
+          {
+            "startSec": 220.0,
+            "correlation": 0.9999773034265268
+          },
+          {
+            "startSec": 230.0,
+            "correlation": 0.999968485753629
+          },
+          {
+            "startSec": 240.0,
+            "correlation": 0.9999655258487309
+          },
+          {
+            "startSec": 250.0,
+            "correlation": 0.9999554116763875
+          },
+          {
+            "startSec": 260.0,
+            "correlation": 0.9999667223477186
+          },
+          {
+            "startSec": 270.0,
+            "correlation": 0.9999842908948098
+          },
+          {
+            "startSec": 280.0,
+            "correlation": 0.999951888940119
+          },
+          {
+            "startSec": 290.0,
+            "correlation": 0.9999936745131847
+          }
+        ]
+      }
+    },
+    {
+      "id": "video-unchanged-through-audit",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "failedCheckIds": []
+}

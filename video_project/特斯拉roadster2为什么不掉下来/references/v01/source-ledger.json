@@ -1,0 +1,63 @@
+{
+  "status": "mechanism sources retrieved; vehicle claims and original clip unresolved",
+  "sources": [
+    {
+      "id": "user-original-clip",
+      "url": null,
+      "status": "not provided",
+      "supports": [],
+      "restriction": "Do not infer publisher, date, authenticity, rotation axis or Tesla capability. Preview is original teaching material, not a reconstruction of an identified clip."
+    },
+    {
+      "id": "tesla-roadster",
+      "url": "https://www.tesla.com/roadster",
+      "status": "HTTP 403; body not retrieved",
+      "record": "references/v01/fetch_report.json",
+      "supports": [],
+      "restriction": "No verified Tesla specifications or current flight demonstration claim. No access restriction bypass attempted."
+    },
+    {
+      "id": "nasa-thrust",
+      "title": "Rocket Thrust Equation",
+      "publisher": "NASA Glenn Research Center",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust-equation/",
+      "pageUpdated": "2024-07-19",
+      "retrievedDate": "2026-10-16",
+      "status": "HTTP 200 using normal Node fetch after Python certificate-chain failure; TLS validation not disabled",
+      "snapshot": "references/v01/nasa-thrust-node.html",
+      "supports": [
+        "Reaction thrust follows Newton's third law.",
+        "Rocket thrust includes momentum flow and nozzle-exit pressure terms: F = mdot Ve + Ae(pe-p0)."
+      ],
+      "scope": "General rocket-engine physics, not proof of a Roadster cold-gas system or actual flight performance.",
+      "useInVideo": "Original explanation and original diagrams only; no NASA image copied into preview."
+    },
+    {
+      "id": "openstax-projectile",
+      "title": "University Physics Volume 1, 4.3 Projectile Motion",
+      "publisher": "OpenStax",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+      "retrievedDate": "2026-10-16",
+      "status": "HTTP 200; relevant body read",
+      "snapshot": "references/v01/openstax-projectile.html",
+      "supports": ["Neglecting air resistance, horizontal velocity is constant and vertical acceleration is -g.", "At the apex vertical velocity is zero, but gravitational acceleration is not zero."],
+      "useInVideo": "Facts and independently drawn equations/animations; no copied textbook figure or narration.",
+      "licenseCaution": "Retrieved page states CC BY-NC-SA and additional use restrictions. Do not redistribute page or textbook artwork as video assets without checking permission."
+    },
+    {
+      "id": "openstax-angular",
+      "title": "University Physics Volume 1, 11.4 Precession of a Gyroscope",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/11-4-precession-of-a-gyroscope",
+      "status": "HTTP 200; body read; background only, not used as direct support for vehicle free-flight model",
+      "snapshot": "references/v01/openstax-angular.html",
+      "restriction": "Pivoted gyroscope gravity torque must not be confused with gravity torque about a freely moving centre of mass."
+    }
+  ],
+  "modelEvidence": {
+    "path": "source/v01/physics/assumptions.json",
+    "tests": "work/v01/checks/physics.json",
+    "type": "Original analytical teaching model, not experiment or manufacturer data",
+    "assumptions": ["constant mass approximation", "uniform gravity", "no aerodynamic force", "roll about principal x inertia axis", "prescribed orientation in fixed-nozzle force-decomposition segment"]
+  },
+  "notEstablished": ["Roadster 2 hovering demonstrated", "Roadster 2 aerial rolling demonstrated", "actual nozzle layout", "vehicle mass", "thrust or gas capacity", "possible hover duration", "authenticity of the user's unspecified clip"]
+}

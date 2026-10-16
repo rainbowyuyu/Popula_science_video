@@ -1,0 +1,81 @@
+{
+  "id": "s008",
+  "text": "桩的上面，是厚达六米的混凝土筏板。你可以把它理解成一块厚底盘，把基础连成整体。",
+  "ttsText": "桩的上面，是厚达六米的基础底板。你可以把它理解成一块厚底盘，把基础连成整体。",
+  "signature": "88cc3c0ef2abbe3e283a73e620d788dcf6dca3abfde189077f2f50049fe177bb",
+  "raw": "audio/raw/s008-88cc3c0ef2.wav",
+  "processed": "audio/candidates/v6-pronunciation/s008.wav",
+  "rawDuration": 7.36,
+  "duration": 7.6,
+  "sha256": "921c3419024ce4a1ea350170c4a099b41fb49de218116f5bbc536f4f8b8735a1",
+  "seed": 2965918880,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s003",
+    "s006",
+    "s007",
+    "s008"
+  ],
+  "rawEndpointDB": -97.39838718642335,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "2b5e8de8604c625394e3de0f5660683a01d4318838d1ff7911b2a44be43a6540",
+    "outputSha256": "921c3419024ce4a1ea350170c4a099b41fb49de218116f5bbc536f4f8b8735a1",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.5238012898902333,
+    "input": {
+      "seconds": 7.6,
+      "peakDb": -6.946776504039321,
+      "activeRmsDb": -23.193964981242488,
+      "quietFrameP10Db": -64.28074817819154
+    },
+    "output": {
+      "seconds": 7.6,
+      "peakDb": -3.4494340857640267,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -63.292449276383
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "6caf75131bff1b32630c10417aea449f3ac97bea92773fb410838e97f681f84b"
+  },
+  "subjectiveListeningChecked": false
+}

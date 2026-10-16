@@ -1,0 +1,166 @@
+{
+  "id": "h027",
+  "partIndex": 2,
+  "expected": "前一步让它更耐酶切，后一步让它留在体内更久。",
+  "heard": "前一步讓它更耐沒切,後一步讓它留在體內更久。",
+  "words": [
+    {
+      "text": "前",
+      "start": 0.0,
+      "end": 0.5,
+      "probability": 0.9919580221176147
+    },
+    {
+      "text": "一",
+      "start": 0.5,
+      "end": 0.66,
+      "probability": 0.9870613217353821
+    },
+    {
+      "text": "步",
+      "start": 0.66,
+      "end": 0.78,
+      "probability": 0.9198125600814819
+    },
+    {
+      "text": "讓",
+      "start": 0.78,
+      "end": 0.94,
+      "probability": 0.9077870845794678
+    },
+    {
+      "text": "它",
+      "start": 0.94,
+      "end": 1.08,
+      "probability": 0.919636607170105
+    },
+    {
+      "text": "更",
+      "start": 1.08,
+      "end": 1.26,
+      "probability": 0.9957199692726135
+    },
+    {
+      "text": "耐",
+      "start": 1.26,
+      "end": 1.44,
+      "probability": 0.9940823912620544
+    },
+    {
+      "text": "沒",
+      "start": 1.44,
+      "end": 1.6,
+      "probability": 0.5716694593429565
+    },
+    {
+      "text": "切,",
+      "start": 1.6,
+      "end": 1.86,
+      "probability": 0.9769440293312073
+    },
+    {
+      "text": "後",
+      "start": 2.22,
+      "end": 2.36,
+      "probability": 0.6227298378944397
+    },
+    {
+      "text": "一",
+      "start": 2.36,
+      "end": 2.52,
+      "probability": 0.9968034029006958
+    },
+    {
+      "text": "步",
+      "start": 2.52,
+      "end": 2.68,
+      "probability": 0.9979614019393921
+    },
+    {
+      "text": "讓",
+      "start": 2.68,
+      "end": 2.86,
+      "probability": 0.992302417755127
+    },
+    {
+      "text": "它",
+      "start": 2.86,
+      "end": 3.02,
+      "probability": 0.9882678389549255
+    },
+    {
+      "text": "留",
+      "start": 3.02,
+      "end": 3.18,
+      "probability": 0.9715489149093628
+    },
+    {
+      "text": "在",
+      "start": 3.18,
+      "end": 3.34,
+      "probability": 0.9969615340232849
+    },
+    {
+      "text": "體",
+      "start": 3.34,
+      "end": 3.52,
+      "probability": 0.9891285300254822
+    },
+    {
+      "text": "內",
+      "start": 3.52,
+      "end": 3.7,
+      "probability": 0.9905542731285095
+    },
+    {
+      "text": "更",
+      "start": 3.7,
+      "end": 3.86,
+      "probability": 0.99870765209198
+    },
+    {
+      "text": "久。",
+      "start": 3.86,
+      "end": 4.1,
+      "probability": 0.9989136457443237
+    }
+  ],
+  "sourceSHA256": "d56dbe344a94254b80723918f98e5ca335e4a76261fe1d68a50bc8329f085dc2",
+  "ratio": 0.9,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "酶",
+      "heard": "没",
+      "end": 8
+    },
+    {
+      "op": "replace",
+      "expected": "后",
+      "heard": "後",
+      "end": 10
+    }
+  ],
+  "rawTailNeedsReview": true,
+  "rawMetrics": {
+    "samples48k": 207362,
+    "seconds": 4.320041666666667,
+    "peakDBFS": -7.214808428599645,
+    "first20msDBFS": -69.52186478874201,
+    "last20msDBFS": -95.84926660608195,
+    "firstActiveMs": 290.0,
+    "lastActiveToEndMs": 40.041666666666664,
+    "activityThresholdDBFS": -49.38658548818019,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

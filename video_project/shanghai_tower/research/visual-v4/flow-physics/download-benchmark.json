@@ -1,0 +1,58 @@
+[
+  {
+    "file": "research\\visual-v4\\flow-physics\\official-cylinder\\incomp_cylinder.cfg",
+    "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/TestCases/incomp_navierstokes/cylinder/incomp_cylinder.cfg",
+    "status": 200,
+    "bytes": 2966,
+    "sha256": "e9ab72ac01a2daa192e473b471178d445ef0a28a12dc696028a7d4fe6b1323ca",
+    "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%                                                                              %\n% SU2 configuration file                                                       %\n% Case description: Steady incompressible laminar flow around a cylinder       %\n% Author: Francisco Palacios\t\t\t\t\t\t                           %\n% Institution: Stanford University                                             %\n% Date: 2012.03.14                                                             %\n% File Version 8.5.0 \"Harrier\"                                                 %\n%                                                                              %\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% ------------- DIRECT, ADJOINT, AND LINEARIZED PROBLEM DEFINITION ------------%\n%\nSOLVER= INC_NAVIER_STOKES\nKIND_TURB_MODEL= NONE\nMATH_PROBLEM= DIRECT\nRESTART_SOL= NO\n\n% ---------------- INCOMPRESSIBLE FLOW CONDITION DEFINITION -------------------%\n%\nINC_DENSITY_INIT= 998.2\nINC_VELOCITY_INIT= ( 0.000008, 0.0, 0.0 )\n\n% --------------------------- VISCOSITY MODEL ---------------------------------%\n%\nVISCOSITY_MODEL= CONSTANT_VISCOSITY\nMU_CONSTANT= 0.798E-3\n\n% ---------------------- REFERENCE VALUE DEFINITION ---------------------------%\n%\nREF_ORIGIN_MOMENT_X = 0.25\nREF_ORIGIN_MOMENT_Y = 0.00\nREF_ORIGIN_MOMENT_Z = 0.00\nREF_LENGTH= 1.0\nREF_AREA= 1.0\n\n% -------------------- BOUNDARY CONDITION DEFINITION --------------------------%\n%\nMARKER_HEATFLUX= ( cylinder, 0.0 )\nMARKER_FAR= ( farfield )\nMARKER_PLOTTING= ( cylinder )\nMARKER_MONITORING= ( cylinder )\n\n% ------------- COMMON PARAMETERS DEFINING THE NUMERICAL METHOD ---------------%\n%\nNUM_METHOD_GRAD= GREEN_GAUSS\nCFL_NUMBER= 100.0\nCFL_ADAPT= NO\nCFL_ADAPT_PARAM= ( 1.5, 0.5, 1.0, 100.0 )\nRK_ALPHA_COEFF= ( 0.66667, 0.66667, 1.000000 )\nITER= 5000\nVENKAT_LIMITER_COEFF= 0.01\n\n% -------------------------- MULTIGRID PARAMETERS -----------------------------%\n%\nMGLEVEL= 3\nMGCYCLE= V_CYCLE\nMG_PRE_SMOOTH= ( 4, 4, 4, 4 )\nMG_POST_SMOOTH= ( 4, 4, 4, 4 )\nMG_CORRECTION_SMOOTH= ( 1, 1, 1, 1 )\nMG_DAMP_RESTRICTION= 0.5\nMG_DAMP_PROLONGATION= 0.5\n\n% -------------------- FLOW NUMERICAL METHOD DEFINITION -----------------------%\n%\nCONV_NUM_METHOD_FLOW= FDS\nMUSCL_FLOW= YES\nSLOPE_LIMITER_FLOW= NONE\nJST_SENSOR_COEFF= ( 0.5, 0.04 )\nTIME_DISCRE_FLOW= EULER_IMPLICIT\n\n% --------------------------- CONVERGENCE PARAMETERS --------------------------%\n%\nCONV_RESIDUAL_MINVAL= -10\nCONV_STARTITER= 10\nCONV_CAUCHY_ELEMS= 100\nCONV_CAUCHY_EPS= 1E-6\n\n% ------------------------- INPUT/OUTPUT INFORMATION --------------------------%\n%\nMESH_FILENAME= mesh_cylinder_lam.su2\nMESH_FORMAT= SU2\nSOLUTION_FILENAME= solution_flow\nTABULAR_FORMAT= CSV\nCONV_FILENAME= history\nRESTART_FILENAME= restart_flow\nVOLUME_FILENAME= flow\nSURFACE_FILENAME= surface_flow\nOUTPUT_WRT_FREQ= 100\nSCREEN_OUTPUT= (INNER_ITER, RMS_PRESSURE, RMS_VELOCITY-X, LIFT, DRAG)\n"
+  },
+  {
+    "file": "research\\visual-v4\\flow-physics\\official-cylinder\\lam_cylinder.cfg",
+    "url": "https://raw.githubusercontent.com/su2code/SU2/v8.5.0/TestCases/navierstokes/cylinder/lam_cylinder.cfg",
+    "status": 200,
+    "bytes": 3284,
+    "sha256": "469da69c0dc2d8a5c59ba416f737bc23efd055c3eb5e561cf61681c97157b979",
+    "text": "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n%                                                                              %\n% SU2 configuration file                                                       %\n% Case description: Steady, laminar flow around a cylinder (Re 20)             %\n% Author: Thomas D. Economon                                                   %\n% Institution: Stanford University                                             %\n% Date: 2013.09.30                                                             %\n% File Version 8.5.0 \"Harrier\"                                                 %\n%                                                                              %\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n\n% ------------- DIRECT, ADJOINT, AND LINEARIZED PROBLEM DEFINITION ------------%\n%\nSOLVER= NAVIER_STOKES\nKIND_TURB_MODEL= NONE\nMATH_PROBLEM= DIRECT\nRESTART_SOL= NO\n\n% -------------------- COMPRESSIBLE FREE-STREAM DEFINITION --------------------%\n%\nMACH_NUMBER= 0.1\nAOA= 0.0\nFREESTREAM_TEMPERATURE= 288.15\nREYNOLDS_NUMBER= 40.0\nREYNOLDS_LENGTH= 1.0\n\n% ---------------------- REFERENCE VALUE DEFINITION ---------------------------%\n%\nREF_ORIGIN_MOMENT_X = 0.25\nREF_ORIGIN_MOMENT_Y = 0.00\nREF_ORIGIN_MOMENT_Z = 0.00\nREF_LENGTH= 1.0\nREF_AREA= 1.0\n\n% -------------------- BOUNDARY CONDITION DEFINITION --------------------------%\n%\nMARKER_HEATFLUX= ( cylinder, 0.0 )\nMARKER_FAR= ( farfield )\nMARKER_PLOTTING= ( cylinder )\nMARKER_MONITORING= ( cylinder )\n\n% ------------- COMMON PARAMETERS DEFINING THE NUMERICAL METHOD ---------------%\n%\nNUM_METHOD_GRAD= WEIGHTED_LEAST_SQUARES\nCFL_NUMBER= 500.0\nCFL_ADAPT= NO\nCFL_ADAPT_PARAM= ( 1.5, 0.5, 1.0, 100.0 )\nRK_ALPHA_COEFF= ( 0.66667, 0.66667, 1.000000 )\nITER= 99999\n\n% ------------------------ LINEAR SOLVER DEFINITION ---------------------------%\n%\nLINEAR_SOLVER= FGMRES\nLINEAR_SOLVER_PREC= LU_SGS\nLINEAR_SOLVER_ERROR= 1E-1\nLINEAR_SOLVER_ITER= 3\n\n% -------------------------- MULTIGRID PARAMETERS -----------------------------%\n%\nMGLEVEL= 3\nMGCYCLE= V_CYCLE\nMG_PRE_SMOOTH= ( 4, 4, 4, 4 )\nMG_POST_SMOOTH= ( 4, 4, 4, 4 )\nMG_CORRECTION_SMOOTH= ( 1, 1, 1, 1 )\nMG_DAMP_RESTRICTION= 0.5\nMG_DAMP_PROLONGATION= 0.5\n\n% -------------------- FLOW NUMERICAL METHOD DEFINITION -----------------------%\n%\nCONV_NUM_METHOD_FLOW= ROE\nMUSCL_FLOW= YES\nSLOPE_LIMITER_FLOW= VENKATAKRISHNAN\nVENKAT_LIMITER_COEFF= 10.0\nJST_SENSOR_COEFF= ( 0.5, 0.02 )\nTIME_DISCRE_FLOW= EULER_IMPLICIT\n\n% --------------------------- CONVERGENCE PARAMETERS --------------------------%\n%\nCONV_RESIDUAL_MINVAL= -12\nCONV_STARTITER= 10\nCONV_CAUCHY_ELEMS= 100\nCONV_CAUCHY_EPS= 1E-6\n\n% ------------------------- INPUT/OUTPUT INFORMATION --------------------------%\n%\nMESH_FILENAME= mesh_cylinder_lam.su2\nMESH_FORMAT= SU2\nMESH_OUT_FILENAME= mesh_out\nSOLUTION_FILENAME= solution_flow\nSOLUTION_ADJ_FILENAME= solution_adj\nTABULAR_FORMAT= CSV\nCONV_FILENAME= history\nRESTART_FILENAME= restart_flow\nRESTART_ADJ_FILENAME= restart_adj\nVOLUME_FILENAME= flow\nVOLUME_ADJ_FILENAME= adjoint\nGRAD_OBJFUNC_FILENAME= of_grad\nSURFACE_FILENAME= surface_flow\nSURFACE_ADJ_FILENAME= surface_adjoint\nOUTPUT_WRT_FREQ= 250\nSCREEN_OUTPUT = (INNER_ITER, RMS_DENSITY, RMS_ENERGY, LIFT, DRAG, TOTAL_HEATFLUX)\n"
+  },
+  {
+    "file": "research\\visual-v4\\flow-physics\\official-cylinder\\mesh_cylinder_lam.su2",
+    "url": "https://raw.githubusercontent.com/su2code/TestCases/master/incomp_navierstokes/cylinder/mesh_cylinder_lam.su2",
+    "status": 200,
+    "bytes": 1290618,
+    "sha256": "0ac6b183af781ba2a98620c083980a3a42b41bab6a09dc1b788241723fa9b549"
+  },
+  {
+    "file": "research\\visual-v4\\flow-physics\\tpu-BD11.html",
+    "url": "http://www.wind.arch.t-kougei.ac.jp/info_center/windpressure/highrise/Homepage/select_BD_11.html",
+    "status": 200,
+    "bytes": 3417,
+    "sha256": "fff14b28724c25f6a23b98c3f623e3bedd4572ac320c7af521ef337c6697318a",
+    "options": [
+      [
+        "def",
+        "Please select value on the list"
+      ],
+      [
+        "./select_BD_11_BH_11.html",
+        "1:1"
+      ],
+      [
+        "./select_BD_11_BH_12.html",
+        "1:2"
+      ],
+      [
+        "./select_BD_11_BH_13.html",
+        "1:3"
+      ],
+      [
+        "./select_BD_11_BH_14.html",
+        "1:4"
+      ],
+      [
+        "./select_BD_11_BH_15.html",
+        "1:5"
+      ]
+    ]
+  }
+]

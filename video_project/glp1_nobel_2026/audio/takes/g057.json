@@ -1,0 +1,69 @@
+{
+  "id": "g057",
+  "text": "肌肉活动起来，会增加能量和葡萄糖的利用。散步、骑车，再配合适合身体的力量练习，能从小量逐步开始。",
+  "ttsText": "肌肉活动起来，会增加能量和葡萄糖的利用。散步、骑车，再配合适合身体的力量练习，能从小量逐步开始。",
+  "signature": "c4fd9b47ae2809d78d327c0e69569e3a8c169153cb0c55f39f045496545720c9",
+  "raw": "audio/raw/g057-c4fd9b47ae.wav",
+  "processed": "public/voice/g057.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "82c478de176922a054b122b713fe613c7d23ce561c205b9b4b0c3b3e6d29b871",
+  "seed": 3304954695,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g057",
+    "g058",
+    "g059",
+    "g060"
+  ],
+  "rawEndpointDB": -96.7067076764489,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "62d0f4f69b99a7d60465845002de0569c033f53263a9d4bd5bdfb021417ce68c",
+    "outputSha256": "82c478de176922a054b122b713fe613c7d23ce561c205b9b4b0c3b3e6d29b871",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4272877270510023,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -5.165963203247031,
+      "activeRmsDb": -21.770927137398335,
+      "quietFrameP10Db": -58.0427469517749
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.429736715458498,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -57.7428898898102
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

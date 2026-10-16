@@ -1,0 +1,593 @@
+
+--- PDF PAGE 1 ---
+ 
+ 
+ 
+Multi-Layer Shell Element for Shear Walls in OpenSees 
+ 
+Linlin Xie1, Xiao Lu2, Xinzheng Lu1,*, Yuli Huang3, Lieping Ye1 
+ 
+1Department of Civil Engineering, Tsinghua University, Beijing, P.R. China, 100084; 
+2Department of Civil Engineering, Beijing Jiaotong University, Beijing, P.R. China, 
+100044; 
+3Arup, San Francisco, United States America. 
+ 
+ABSTRACT 
+ 
+Reinforced concrete (RC) shear walls is one of the most widely used lateral 
+force-resisting members of high-rise buildings. This research developed a multi-layer 
+shell element on an open-source FE code of OpenSees for shear walls. The 
+multi-layer shell element can simulate the coupled in-plane/out-of-plane bending as 
+well as the in-plane shear and coupled bending-shear behavior of RC shear walls, and 
+it comprehensively reflects the spatial mechanical behavior of the shell structures. 
+The simulation of rectangular walls, flanged walls and coupled walls under 
+pseudo-static loading was conducted. The simulated results agree well with the 
+experimental results, which validates the rationality and reliability of the proposed 
+model. The nonlinear seismic analyses of a super-tall building, namely Shanghai 
+Tower with a height of 632 m, were conducted based on the fiber beam and 
+multi-layer shell elements, and good agreement was achieved between the analytical 
+results of OpenSees and MSC.Marc. The outcome of this study provides an effective 
+tool and a useful reference for the simulation of high-rise buildings using OpenSees. 
+ 
+INTRODUCTION 
+ 
+In recent years, research on the seismic behavior of tall buildings and 
+super-tall buildings has become a popular issue with the frequent occurrence of 
+earthquakes worldwide. Extensive research indicates that numerical simulation is 
+effective for nonlinear seismic analyses of such building gs (Lu et al. 2012; Lu et al. 
+2011). As an object-oriented open-source finite-element (FE) program for numerical 
+simulation, the Open System for Earthquake Engineering Simulation (OpenSees), has 
+increasingly become one of the most influential open platforms for earthquake 
+engineering research due to its powerful nonlinear numerical simulation capabilities, 
+various effective algorithms, open framework and sustainable integration of the latest 
+                                                             
+* Corresponding author. Tel.: 86-10-62795364; E-mail address: luxz@tsinghua.edu.cn. 
+1190
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 2 ---
+research outcomes (Mazzoni et al. 2005; McKenna et al. 2009). Despite of the 
+abovementioned numerous advantages, the existing research using OpenSees 
+primarily studied the seismic behaviors of single specimens or small-scale structures. 
+Only a few reports exist on the research of complicated large-scale structures based 
+on OpenSees. 
+The fiber beam element model has been widely adopted in OpenSees to model 
+the specimens that are predominately controlled by flexural behavior (Spacone et al. 
+1996). However, this type of element is incapable of simulating the coupled 
+in-plane/out-of-plane bending as well as the in-plane shear and coupled 
+bending-shear behavior of RC shear walls (especially for the complex mechanic 
+behaviors of coupled walls, flanged walls and core tubes), which has hindered the 
+development of the nonlinear analysis of super-tall buildings using OpenSees. 
+This research proposed a numerical model for shear walls and implemented 
+the multi-layer shell element in the OpenSees environment. The simulation of various 
+types of shear walls under pseudo-static loading was conducted. The simulation 
+results are proven to agree well with the experimental data, thus validating the 
+rationality and reliability of the proposed models.  
+The nonlinear seismic analyses of Shanghai Tower were performed based on 
+the fiber beam and multi-layer shell elements, and good agreement was achieved 
+between the simulation results of OpenSees and MSC.Marc (Marc 2005), which 
+provides a shared open-source platform for the international collaborative research of 
+seismic behavior of super-tall buildings. 
+ 
+THE FORMULATION OF THE MULTI-LAYER SHELL ELEMENT  
+ 
+Theoretical background of the multi-layer shell element model.  The proposed 
+multi-layer shell formulation is implemented in OpenSees using the “ShellMITC4” 
+element, which is a four-node shell element based on the theory of mixed interpolated 
+of tensorial components (MITC) proposed by Dvorkin and Bathe (Dvorkin et al. 
+1995).  
+For each of the in-plane integration points, a layered/composites integrated 
+section is implemented to account for the nonlinear behavior of reinforced concrete, 
+i.e., this element simplifies the three-dimensional nonlinear behavior of the shear 
+walls to a shell situation by discretizing them into several fully bonded layers in the 
+thickness direction. Different material properties and thicknesses can be assigned to 
+each layer in accordance with the size of the wall and the distribution of the 
+reinforced bars, as illustrated in Figure 1. The bars are smeared into one or more 
+orthotropic layers according to their physical location and direction, as shown in 
+Figure 2. The axial strains and curvature of the middle layer are initially calculated, 
+the strains of each layer are subsequently obtained based on the plane-section 
+assumption. The stresses of each of the integration points on each layer are calculated 
+in accordance with the constitutive model of the corresponding layer. Lastly, the 
+1191
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 3 ---
+internal forces are calculated using the numerical integration method (Guan and Loo 
+1997). 
+ 
+ 
+Direction of first principal axis
+ 
+Figure 1. Multi-layer shell element. 
+Figure 2. Distribution of the bar layers.
+Multi-dimensional material constitutive model.  Concrete is assumed to be under 
+planar stress state in the multi-layer shell element; therefore, an accurate and robust 
+two-dimensional concrete constitutive model is required to simulate the complicated 
+mechanical behaviors of shear walls and core tubes induced by an earthquake, it is a 
+great challenge to produce such a reliable and robust model. The analytical model for 
+concrete proposed in this research is based on the damage mechanics and the smeared 
+crack model, which is a model with great computational stability and a simple 
+formulation. 
+  
+The constitutive equations (Eq. 1) of concrete are expressed as follow: 
+'
+1
+1
+'
+2
+1
+c
+e
+c
+D
+D
+D
+ε
+σ
+
+
+
+
+−
+−
+=
+ 
+(1) 
+where 
+'
+c
+σ , 
+'
+c
+ε are the stresses and strains, respectively, in the principal stress 
+coordinate system, and D1, D2 are the damage parameters for tension and 
+compression, respectively. The damage evolution curve under tension and 
+compression recommended by Løland (Løland 1980) and Mazars (Mazars 1986), 
+respectively, were implemented to calculate the damage parameters. 
+ 
+VALIDATION OF THE MULTI-LAYER SHELL ELEMENT 
+ 
+A series of rectangular walls (Zhang 2007), with different axial load ratios, 
+shear-span ratios, boundary zone widths, reinforcement ratios and stirrup ratios in the 
+boundary elements, are initially simulated. To further validate the adaptability of the 
+multi-layer shell elements, the simulation of H-shaped walls, T-shaped walls (Chen 
+and Qian 2005), coupled walls (Chen and Lv 2003) and symmetric double short-limb 
+walls (Huang et al. 2003) are performed subsequently. 
+The vertical reinforcing bars inside the main body of the shear wall and the 
+stirrups are smeared into one or more rebar layers, the essentially concentrated 
+reinforcing bars within the boundary zones are simulated with discrete truss elements, 
+which are incorporated into the shell element through the sharing of the same nodes. 
+1192
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 4 ---
+To validate the reliability of the simulation of the out-of-plane mechanical behavior, 
+the flanges and webs of H- or T-shaped walls are both simulated by using the shell 
+elements. The element mesh of the shear wall elements is shown in Figure 3. A 
+comparison between the experimental data and the simulation results of the shell 
+elements is presented in Table 1. Most of the results are practically in good 
+agreement with the experimental results, which validates the reliability and 
+robustness of the proposed element. 
+ 
+Figure 3. Finite element meshes. 
+Table 1. Comparison between the experimental results and the simulated results 
+of the shear walls 
+ 
+Specimen 
+no. 
+Shear-span 
+ratio 
+Axial 
+load 
+ratio 
+Error of 
+the yield 
+load 
+Error of 
+the yield 
+disp. 
+Error of 
+the peak 
+load 
+Rectangular walls 
+(Zhang 2007) 
+SW1-1 
+2.0 
+0.1 
+2.3% 
+6.4% 
+-3.1% 
+SW1-2 
+2.0 
+0.2 
+0.8% 
+0 
+1.5% 
+SW1-3 
+2.0 
+0.3 
+25.3% 
+9.6% 
+-4.5% 
+SW1-4 
+2.0 
+0.4 
+27% 
+11.2% 
+10.2% 
+SW2-1 
+1.0 
+0.3 
+3.6% 
+1.2% 
+9.6% 
+SW2-2 
+1.5 
+0.3 
+19.3% 
+5.6% 
+1.2% 
+SW4-1 
+2.0 
+0.3 
+7.9% 
+2.4% 
+2.9% 
+SW4-2 
+2.0 
+0.3 
+4.6% 
+2.9% 
+8.4% 
+SW5-1 
+2.0 
+0.3 
+2.6% 
+1.5% 
+2.1% 
+SW5-3 
+2.0 
+0.3 
+-2.2% 
+2.3% 
+2.2% 
+SW6-1 
+2.0 
+0.3 
+20.1% 
+3.2% 
+5.5% 
+SW6-3 
+2.0 
+0.3 
+9.6% 
+2.8% 
+-1.4% 
+Flange walls (Chen et 
+al. 2005) 
+SW-3 
+1.9 
+0.26 
+1.3% 
+4.5% 
+10.2% 
+SW-4 
+1.9 
+0.26 
+8.6% 
+5.7% 
+4.3% 
+Coupled wall (Chen et 
+al. 2003) 
+CW-3 
+- 
+- 
+-1.6% 
+0.6% 
+7.4% 
+Symmetric double 
+short-limb walls 
+(Huang et al. 2003) 
+SW1-1 
+- 
+- 
+9.6% 
+0 
+12.9% 
+SW1-2 
+- 
+- 
+11.2% 
+0 
+-5.8% 
+SW1-3 
+- 
+- 
+10.5% 
+0 
+9.4% 
+1193
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 5 ---
+Due to length limitations, only four typical walls are discussed in detail here, 
+the comparisons between the simulation results and experimental data are presented 
+in Figure 4.  
+Shear span ratio：2.0
+-210
+-140
+-70
+0
+70
+140
+210
+-24
+-16
+-8
+0
+8
+16
+24
+Lateral load/kN
+Top disp./ mm
+Test
+Shell
+ 
+-630
+-420
+-210
+0
+210
+420
+630
+-12
+-8
+-4
+0
+4
+8
+12
+Lateral load/kN
+Top disp./ mm
+Test
+Shell
+Shear span ratio：1.0
+ 
+(a) SW1-1 
+(b) SW2-1 
+-400
+-300
+-200
+-100
+0
+100
+200
+300
+400
+-18 -14 -10 -6 -2
+2
+6
+10 14 18
+Lateral load/kN
+Top disp./ mm
+Test
+Shell
+ 
+-120
+-80
+-40
+0
+40
+80
+120
+-24
+-16
+-8
+0
+8
+16
+24
+Lateral load/kN
+Top disp./ mm
+Test
+Shell
+ 
+(c) SW-4 
+(d) CW-3 
+Figure 4. Top force vs. displacement hysteretic curves of specimens. 
+ 
+For the rectangular wall with sufficient stirrups and high shear-span ratio, 
+such as SW1-1 in Figure 4(a), the multi-layer shell model is capable of capturing the 
+characteristic behaviors of the shear walls predominately controlled by flexural 
+behavior. In contrast, for specimens controlled by shear behavior, such as SW2-1 in 
+Figure 4(b), the results of the multi-layer shell model agree well with the 
+experimental results. For the flange wall in Figure 4(c), the multi-layer shell model 
+can accurately capture the characteristic behavior because such specimens with 
+relatively small flanges are still controlled by flexural behavior, which validates the 
+reliability of the modeling approach for flange walls with shell elements. The 
+hysteretic load-displacement relation curve of the coupled wall in Figure 4(d) is also 
+in good agreement with the test results.  
+Based on the above validations, it can be concluded that the proposed 
+multi-layer shell element developed in OpenSees is capable of replicating the 
+complex behavior of various types of shear walls. 
+1194
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 6 ---
+CONVERSION PROGRAM 
+ 
+The lack of a graphical user interface (GUI) makes it quite difficult to build 
+and check the FE model of high-rise buildings. Because there is a high degree of 
+similarity at the element level between MSC.Marc and OpenSees, and MSC.Marc has 
+a convenient GUI, a conversion program “Marc to OpenSees” was developed to 
+simplify the modeling process in OpenSees. Note that in the conversion program, the 
+fiber beam elements and the multi-layer shell elements in MSC.Marc are converted to 
+OpenSees fiber-by-fiber or layer-by-layer to ensure the absolute consistency between 
+the two models. This will also make the later validation of the OpenSees simulation 
+results with the results of the MSC.Marc very convenient. The corresponding 
+conversion relationship is shown in Figure 5. 
+ 
+Fiber beam 
+(THUFiber)
+Multi-layer 
+shell (Shell 140)
+MSC.Marc GUI Preprocess
+(matcode.dat  and *.dat file)
+Fiber beam 
+Multi-layer shell
+OpenSees
+( *.tcl file)
+ 
+632m
+巨柱
+伸臂桁架
+核心筒
+核心筒
+Core tube
+Mega 
+column
+Outrigger
+Core tube
+Figure 5. Conversion relationship “Marc 
+to OpenSees”. 
+Figure 6. FE model of Shanghai 
+Tower. 
+ 
+APPLICATION TO THE NONLINEAR DYNAMICAL ANALYSIS OF 
+SHANGHAI TOWER  
+ 
+The Shanghai Tower is a 124-story multi-functional office building under 
+construction in Shanghai, China. The total height of the main tower is 632 m. A 
+hybrid 
+lateral-force-resisting 
+system 
+referred 
+to 
+as 
+the 
+“mega-column/core-tube/outrigger” was adopted for the main tower. The details of 
+this super-tall building can be found in Lu et al. (Lu et al. 2011). 
+The entire model was initially constructed in MSC.Marc and subsequently 
+converted to OpenSees, as shown in Figure 6, which includes 53,006 nodes, 48,774 
+fiber beam elements and 39,315 multi-layer shell elements. The multi-layer shell 
+element was used to simulate the RC core tube composed by the shear walls and the 
+1195
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 7 ---
+coupling beams, as well as the perimetric mega-columns. The fiber beam element 
+was used to simulate the H-shape sub-frames and outriggers.  
+The El-Centro EW ground motion, which is scaled to a value of peak ground 
+acceleration (PGA) of 400 gal, was used as the earthquake input to the structure along 
+the X-axis after the gravity analysis was conducted. Such a ground motion is much 
+larger than the maximal considered earthquake for the design of Shanghai Tower (i.e., 
+PGA = 220 gal). Thus, significant nonlinear behavior will occur during the 
+simulation. During the nonlinear time-history analysis, the 5% Rayleigh damping 
+ratio was adopted. Illustrated in Figure 7 are the comparisons of the time-history 
+curves of the top floor and the envelope curves of the inter-story drift ratio. The 
+results of OpenSees are in strong agreement with the results of MSC.Marc, which 
+validates the feasibility and reliability of simulating real complex super-tall buildings 
+using OpenSees. 
+-1.2
+-0.8
+-0.4
+0
+0.4
+0.8
+1.2
+0
+5
+10 15 20 25 30 35 40 45
+Top disp./m
+Time/s
+PGA=400gal
+Marc
+OpenSees
+ 
+0
+35
+70
+105
+140
+0
+0.05 0.1 0.15 0.2 0.25 0.3 0.35
+Story
+Interstory drift ratio/%
+PGA=400gal
+Marc
+OpenSees
+ 
+(a) Time-top displacement curves  
+(b) Distribution of the drift ratio 
+Figure 7. Comparison of the time history analysis results.  
+ 
+CONCLUSIONS 
+ 
+A new numerical model, the multi-layer shell element, was formulated and 
+implemented in the OpenSees for the simulation of shear walls, core tubes and 
+eventually super-tall buildings, a series of shear walls with various types of sections 
+were simulated to validate the reliability and robustness of the new element. The 
+nonlinear dynamic analysis under a specified ground motion of Shanghai Tower was 
+conducted. The results of OpenSees are proven to agree well with the results 
+calculated by MSC.Marc with identical models and analyses, which validates the 
+reliability and rationality of the proposed elements and analysis method. The research 
+outcome assists in providing an effective tool and a useful reference for further 
+research on the seismic behavior of tall buildings using OpenSees. 
+ 
+ACKNOWLEDGEMENT 
+ 
+The authors are grateful for the support received from the Beijing Natural 
+Science Foundation (8142024) and the Fok Ying Dong Education Foundation 
+(131071). 
+1196
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 
+
+
+--- PDF PAGE 8 ---
+REFERENCES 
+ 
+Chen Q., and Qian J. R. (2005). “Static elasto-plastic analysis of RC shear walls with 
+one row opening.” Chinese Journal of Computational Mechanics, 22(1), 13-19. 
+Chen Y. T., and Lv X. L. (2003). “Seismic behavior of coupled shear 
+walls-experiment and theoretical analysis.” Chinese Journal of building 
+Structures, 24(4), 25-34. 
+Dvorkin, E. N., Pantuso, D., and Repetto, E. A. (1995). “A formulation of the MITC4 
+shell element for finite strain elasto-plastic analysis.” Computer methods in 
+applied mechanics and engineering, 125(1), 17-40. 
+Guan, H. and Loo, Y.C. (1997), "Layered Finite Element Method in Cracking and 
+Failure Analysis of Beams and Beam-Column-Slab Connections", Structural 
+Engineering and Mechanics - An International Journal, 5 (5), pp.645-662. 
+Huang D. S., Cheng W. X., and Peng F. (2003). “Study on elasto-plastic performances 
+of shear walls with short piers.” Journal of Southeast University (Natural science 
+Edition), 33(2), 164-167. 
+Løland, K. E. (1980). “Continuous damage model for load-response estimation of 
+concrete.” Cement and Concrete Research, 10(3), 395-402. 
+Lu, X., Lu, X., Guan, H., and Ye, L. (2012). “Collapse simulation of reinforced 
+concrete high‐rise building induced by extreme earthquakes.” Earthquake 
+Engineering & Structural Dynamics. 
+Lu, X., Lu, X., Zhang, W., and Ye, L. (2011). “Collapse simulation of a super 
+high-rise building subjected to extremely strong earthquakes.” Science China 
+Technological Sciences, 54(10), 2549-2560. 
+MSC.Marc.(2005). Volume A: Theory and User Information, Santa Ana, California. 
+Mazars J. (1986). “A description of micro-and macro-scale damage of concrete 
+structures.” Engineering Fracture Mechanics, 25(5), 729-737. 
+Mazzoni, S., McKenna, F., Scott, M. H., and Fenves, G. L. (2005). “OpenSees 
+command language manual.” Pacific Earthquake Engineering Research (PEER) 
+Center. 
+McKenna, F., Scott, M. H., and Fenves, G. L. (2009). “Nonlinear finite-element 
+analysis software architecture using object composition.” Journal of Computing 
+in Civil Engineering, 24(1), 95-107. 
+Spacone, E., Filippou, F. C., and Taucer, F. F. (1996). “Fiber beam-column model for 
+non-linear analysis of R/C frames: Part I. Formulation.” Earthquake Engineering 
+and Structural Dynamics, 25(7), 711-726. 
+Zhang H. M. (2007). “Study on the performance-based seismic design method for 
+shear wall structures.” Dissertation of Doctoral Degree. Shanghai: Tongji 
+University. 
+1197
+COMPUTING IN CIVIL AND BUILDING ENGINEERING ©ASCE 2014 

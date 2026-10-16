@@ -1,0 +1,125 @@
+{
+  "revision": "V7 person and props",
+  "status": "source stable for parent Film integration; not a full-film approval",
+  "created_at": "2026-10-09T18:08:14.907029+08:00",
+  "source_sha256": {
+    "src/V5Person.ts": "a223d3546847a42a00af9cc98651dc43fb6918868ef9f88b7d4369697be8ddc7",
+    "src/V7GripHand.ts": "ceefe6d0865385a6a3a3f64d7fc13db80ff7ef01424278a071c26b8000a7b462",
+    "src/V7Shorts.ts": "d58585f60fcfacb523edd714aa860bb525935d289bf9aeeb6dadad3c82af5e84",
+    "src/V5MealActions.ts": "4c121197c0c64cd8ac2ea98bdbdfa48b0cb579af5fdcc0fa5a77a51e66432851"
+  },
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  },
+  "typecheck": "npm run check / tsc --noEmit passed after last source change",
+  "rendered": {
+    "meal_front": "0–12 seconds inclusive at 10 fps; 121 frames, 1600×900",
+    "meal_side": "0–12 seconds inclusive at 10 fps; 121 frames, 1600×900",
+    "sitStand": "0–4.8 seconds every 0.4 seconds; 13 frames",
+    "walk": "0–4.8 seconds every 0.4 seconds; 13 frames",
+    "eat_to_neutral": "anatomyBlend 0.25 / 0.50 / 0.75",
+    "measurement": "front and side, measurementWeight=1"
+  },
+  "actually_inspected_images": [
+    "meal-rest-front.jpg",
+    "meal-lift-front.jpg",
+    "meal-rest-side.jpg",
+    "meal-lift-side.jpg",
+    "stand.jpg",
+    "sit.jpg",
+    "half-sit.jpg",
+    "walk-a.jpg",
+    "walk-b.jpg",
+    "measure-front.jpg",
+    "measure-side.jpg",
+    "eat-neutral-025.jpg",
+    "eat-neutral-050.jpg",
+    "eat-neutral-075.jpg",
+    "cycle-front.jpg",
+    "cycle-side.jpg",
+    "cycle-sitStand.jpg",
+    "cycle-walk.jpg",
+    "continuous-front-lift.jpg",
+    "continuous-front-return.jpg",
+    "continuous-side-lift.jpg",
+    "continuous-side-return.jpg",
+    "sitStand-05.jpg"
+  ],
+  "inspection_scope": "Contact sheets plus native keyframes. Dense front/side strips inspect 1.4–4.4 and 8.2–11.2 seconds every 0.2 seconds. Continuous 10 fps MP4s supplied; this report does not claim every video frame was manually watched.",
+  "metrics_metres": {
+    "foodToHandSurface": {
+      "min": 0.1167902756766671,
+      "max": 0.12008233244294154
+    },
+    "gripToHandSurface": {
+      "min": 0.004177809913934455,
+      "max": 0.004177809913934607
+    },
+    "tinesToHandSurface": {
+      "min": 0.10893388633282662,
+      "max": 0.112457675349789
+    },
+    "utensilToTableTop": {
+      "min": 0.10006114670301225,
+      "max": 0.20506114670301256
+    }
+  },
+  "metric_method": "Closest points on posed connected grip-hand triangles; 4 zero-area marching-cubes triangles skipped. Food clearance subtracts conservative 9 mm food radius; tine clearance subtracts 2 mm; table clearance tests fork/food mesh vertices against y=0.707 m. Grip clearance is unsigned surface distance and is a contact check, not exhaustive volumetric collision proof.",
+  "determinism": {
+    "maxSeekDifference": 0,
+    "sourceUpperArmLength": 0.2994027387984285,
+    "posedUpperArmLengths": [
+      0.2994027387984283,
+      0.2994027387984283,
+      0.2994027387984283,
+      0.2994027387984283,
+      0.2994027387984283,
+      0.2994027387984283,
+      0.29940273879842855,
+      0.2994027387984283,
+      0.2994027387984283,
+      0.29940273879842844,
+      0.29940273879842844,
+      0.2994027387984283,
+      0.2994027387984283,
+      0.2994027387984283
+    ],
+    "sourceForearmLength": 0.2033961651555899,
+    "posedForearmLengths": [
+      0.20339616515558998,
+      0.2033961651555898,
+      0.20339616515558998,
+      0.2033961651555898,
+      0.20339616515558998,
+      0.20339616515558998,
+      0.2033961651555901,
+      0.20339616515558998,
+      0.20339616515558998,
+      0.20339616515558998,
+      0.20339616515558998,
+      0.2033961651555898,
+      0.2033961651555898,
+      0.2033961651555898
+    ]
+  },
+  "changes": [
+    "Fixed-size food bound to a fixed-direction fork; one restrained presentation lift and return, no false swallowing.",
+    "Connected palm/phalange grip at atlas wrist scale; dorsal-up with curved fingers and thumb countergrip.",
+    "Pose-first fixed-length arm transforms with pronation on local forearm axis; eliminates ribbon-like intermediate forearms.",
+    "Independent connected shorts with two separated legs; neutral genital silhouette; shared leg IK and measurement pose.",
+    "Fixed-length leg IK and modest forward trunk hinge during sit/stand.",
+    "Parked drinks hidden; opening sweet drink and late water state are explicit."
+  ],
+  "integration": {
+    "anatomyBlend": "0→1 resets seated and all actions/adiposity; reveal static atlas organs only once poseResidual < 0.001. World must coordinate final measurement writer.",
+    "sitStand": "Do not pass seatedWeight=0 for ordinary sitStand; leave undefined so internal action is allowed to sit.",
+    "drink": "Parent removed exchange demonstration from h012; only initial sweet and final water state are used. Moving exchange lane has not been approved for arbitrary side-camera final shots.",
+    "props": "Parent World owns table/cuff exit and writer handoff; complete Film preview02 must verify h078/h079 and h066–h068, h087."
+  },
+  "limitations": [
+    "A teaching rig, not motion capture, cloth simulation or patient-specific anatomy.",
+    "Atlas skin retains original faceting and a small grip-hand/wrist junction can be seen in extreme closeup.",
+    "Cloth checked visually at sampled action poses; no exhaustive fabric/skin collision solver was run.",
+    "No full-film, final overlay, audio or delivery render was changed or approved by this subtask."
+  ]
+}

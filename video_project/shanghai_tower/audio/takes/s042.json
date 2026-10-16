@@ -1,0 +1,80 @@
+{
+  "id": "s042",
+  "text": "巨柱通常落后核心筒六到九层，楼面再落后巨柱四到七层。几个工作面，一前一后，把大楼越盖越高。",
+  "ttsText": "巨型柱通常落后中间的骨架六到九层，楼面再落后巨型柱四到七层。几个工作面，一前一后，把大楼越盖越高。",
+  "signature": "87b3cf394e9543b14621a4e497f3e448b39136e6280e8c26d7fff9350fa8770a",
+  "raw": "audio/raw/s042-87b3cf394e.wav",
+  "processed": "public/voice/s042.wav",
+  "rawDuration": 10.08,
+  "duration": 10.32,
+  "sha256": "9aaf7be0293d130fba4f1e973a497447acdce0834e10de7efb2c8c55732a379e",
+  "seed": 2276708153,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s042",
+    "s048"
+  ],
+  "rawEndpointDB": -97.32343933729035,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "7acfdf1e01379f7a3a49da3e6f74aa8850c6ceca281913b5913223c7c2c7b578",
+    "outputSha256": "9aaf7be0293d130fba4f1e973a497447acdce0834e10de7efb2c8c55732a379e",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.8676769249916454,
+    "input": {
+      "seconds": 10.32,
+      "peakDb": -6.587431936456932,
+      "activeRmsDb": -21.314979500372516,
+      "quietFrameP10Db": -60.76608832152224
+    },
+    "output": {
+      "seconds": 10.32,
+      "peakDb": -5.301583427428019,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -61.40260820672003
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "c06f86f5e1877468c8156cf183366b2ae27b81ddcd055122124f2c4dffbb7bb7"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s042.wav"
+}

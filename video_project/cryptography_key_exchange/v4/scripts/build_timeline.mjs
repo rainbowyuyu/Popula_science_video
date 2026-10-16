@@ -1,0 +1,9 @@
+import fs from 'node:fs';import path from 'node:path';import{fileURLToPath}from'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,''));
+const source=read('src/story.json');let data,captions;
+if(fs.existsSync(path.join(root,'src/narration.json'))){data=read('src/narration.json');captions=read('src/captions.json');data.actualVoice=true;}
+else{let at=.65;const n=source.cues.reduce((s,c)=>s+c.spokenText.length,0);const cues=source.cues.map(c=>{const start=at;at+=278*c.spokenText.length/n;const end=at;at+=c.pauseAfterSec+.1;return{...c,start,end,startSec:start,endSec:end,startFrame:Math.round(start*30),endFrame:Math.round(end*30)};});data={fps:30,durationFrames:Math.ceil((at+7.5)*30),durationSec:Math.ceil((at+7.5)*30)/30,cues,coda:{startSec:at,startFrame:Math.round(at*30)},actualVoice:false};captions={cues:cues.flatMap(c=>{const chunks=c.text.split(/(?<=[，。？！；])/).flatMap(s=>s.length>23?s.match(/.{1,20}/g):[s]).filter(Boolean);let at=c.startSec;const sum=chunks.reduce((s,t)=>s+t.length,0);return chunks.map((text,i)=>{const start=at;at+=(c.endSec-c.startSec)*text.length/sum;return{id:c.id+'-'+i,text,startFrame:Math.round(start*30),endFrame:Math.round(at*30)};});})};}
+captions.cues=captions.cues.map(c=>({...c,text:c.text.replace(/^[，。；：、！？\s]+/,'')}));
+data.groups=[...new Set(source.cues.map(c=>c.scene))].map((id,index)=>{const cues=data.cues.filter(c=>c.scene===id);return{id,index,start:index===0?0:cues[0].startSec,end:cues.at(-1).endSec,cueIds:cues.map(c=>c.id)};});
+fs.writeFileSync(path.join(root,'src/timeline-data.json'),JSON.stringify(data,null,2));fs.writeFileSync(path.join(root,'src/captions-data.json'),JSON.stringify(captions,null,2));console.log(JSON.stringify({actualVoice:data.actualVoice,seconds:data.durationSec,frames:data.durationFrames}));

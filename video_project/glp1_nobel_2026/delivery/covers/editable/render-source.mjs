@@ -1,0 +1,5 @@
+import fs from 'node:fs';import path from 'node:path';import{fileURLToPath}from'node:url';import{bundle}from'@remotion/bundler';import{openBrowser,selectComposition,renderStill}from'@remotion/renderer';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
+const served=await bundle({entryPoint:path.join(root,'delivery/covers/editable/CoverAnatomy.tsx'),publicDir:path.join(root,'public'),outDir:path.join(root,'tmp/cover-anatomy-v5-bundle')});
+const browserExecutable=path.join(root,'node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe'),browser=await openBrowser('chrome',{browserExecutable,chromiumOptions:{gl:'angle'}});
+try{const options={serveUrl:served,browserExecutable,pupeteerInstance:browser,chromiumOptions:{gl:'angle'}},composition=await selectComposition({...options,id:'CoverAnatomy'});await renderStill({...options,composition,frame:0,output:path.join(root,'delivery/covers/source-body.jpg'),imageFormat:'jpeg',jpegQuality:97,timeoutInMilliseconds:180000});console.log('Cover anatomy rendered');}finally{await browser.close({silent:true});}

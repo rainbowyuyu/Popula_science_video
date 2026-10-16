@@ -1,0 +1,83 @@
+{
+  "id": "h037",
+  "text": "送出去以后，还要收回来。肝细胞表面的LDL受体，就像接货的位置，把血里的这些颗粒带进细胞处理。",
+  "ttsText": "送出去以后，还要收回来。肝细胞表面的L D L受体，就像接货的位置，把血里的这些颗粒带进细胞处理。",
+  "signature": "9a3dc233cd36d5ff3c15bae9639dd0dc03aa0744ff6b2a1e1517460ba919e4eb",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h037-9a3dc233cd36-171af6a0b6.wav",
+  "processed": "audio/revision-v5/candidates/clarity/voice/h037.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.720041666666667,
+  "sampleRate": 48000,
+  "sha256": "7c3b140ec42d67ba7ee9db8c41d3d10129c84dde146557a0c71c7bf172a1b4f3",
+  "rawSHA256": "142b9e55f506a244c524558c87a197490c91027290981d964156f0f1cffbf470",
+  "seed": 387643040,
+  "batchIds": [
+    "h007",
+    "h024",
+    "h037"
+  ],
+  "batchKey": "171af6a0b6dfd0354666acd72321572ad0d2a07bd09031ec951026a946374db9",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -73.4449239797717,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "142b9e55f506a244c524558c87a197490c91027290981d964156f0f1cffbf470",
+    "outputSha256": "7c3b140ec42d67ba7ee9db8c41d3d10129c84dde146557a0c71c7bf172a1b4f3",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.869113027653345,
+    "input": {
+      "seconds": 8.720041666666667,
+      "peakDb": -6.612351664005882,
+      "activeRmsDb": -21.463318741180508,
+      "quietFrameP10Db": -62.627714227887274
+    },
+    "output": {
+      "seconds": 8.720041666666667,
+      "peakDb": -4.041313795515041,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.713928107941214
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,86 @@
+{
+  "seconds": 300.0,
+  "sampleRate": 48000,
+  "channels": 2,
+  "timeStretch": false,
+  "truncation": false,
+  "voiceSource": "User local Qwen3-TTS-0.6B and rainbow鱼 reference, all cues freshly synthesized",
+  "voiceModel": "D:/python_project/tts/models/Qwen3-TTS-0.6B",
+  "rawClipSeconds": 237.920375,
+  "musicTitle": "DNA档案微光 / DNA Archive Glow",
+  "musicLoudnessBeforeDuckingTarget": -26.5,
+  "duckDb": 4.8,
+  "musicRmsDuringVoiceDb": -33.15546075045407,
+  "voiceRmsDuringVoiceDb": -23.055680393025213,
+  "voiceMusicDifferenceDb": 10.099780357428855,
+  "wav": {
+    "input_i": "-16.03",
+    "input_tp": "-1.49",
+    "input_lra": "4.60",
+    "input_thresh": "-26.49",
+    "output_i": "-16.03",
+    "output_tp": "-1.50",
+    "output_lra": "4.40",
+    "output_thresh": "-26.43",
+    "normalization_type": "dynamic",
+    "target_offset": "0.03"
+  },
+  "aac": {
+    "input_i": "-16.04",
+    "input_tp": "-1.41",
+    "input_lra": "4.60",
+    "input_thresh": "-26.50",
+    "output_i": "-16.03",
+    "output_tp": "-1.50",
+    "output_lra": "4.40",
+    "output_thresh": "-26.43",
+    "normalization_type": "dynamic",
+    "target_offset": "0.03"
+  },
+  "subjectiveListeningChecked": false,
+  "silenceDetect": [],
+  "inputs": [
+    {
+      "role": "narration",
+      "path": "work/audio-v4/narration.wav",
+      "sha256": "4cabe261507b96aa6c5c01fabf81ac558666f51eed7158a36456df9ea051e9bb"
+    },
+    {
+      "role": "music",
+      "path": "public/music/dna_archive_glow_v4.wav",
+      "sha256": "178a8f5a46b324ff8b6a5649599fc880a5058ba2df6957d071a66ef632eb038c"
+    },
+    {
+      "role": "transitions",
+      "path": "public/music/dna_archive_transitions_v4.wav",
+      "sha256": "bca1c2bde4eba93ea923aad89101c4c97286df30c8cf5557b351c3ef8f3c9377"
+    },
+    {
+      "role": "timeline",
+      "path": "work/audio-v4/narration.json",
+      "sha256": "9637748c9a18b45cf46fcb00c8f2cfa6d9577d0e6252e39635fc8ee2039ae388"
+    }
+  ],
+  "files": [
+    {
+      "path": "work/audio-v4/master.wav",
+      "sha256": "45ae699b3d7d8f77620b2f06c6bd2414e498a850818f6836a2dcdf008a38655b",
+      "duration": 300.0
+    },
+    {
+      "path": "work/audio-v4/narration.wav",
+      "sha256": "4cabe261507b96aa6c5c01fabf81ac558666f51eed7158a36456df9ea051e9bb",
+      "duration": 300.0
+    },
+    {
+      "path": "work/audio-v4/music-ducked.wav",
+      "sha256": "c525d0fb72b8ff9658a035d15c0fd1cc42aaee2b3cf59e84036616d3de9991b9",
+      "duration": 300.0
+    },
+    {
+      "path": "work/audio-v4/master-preview.m4a",
+      "sha256": "230793e88d2ed32675912fdd132b897e41d678c2ed1cfdeb5312552f261553f0",
+      "duration": 300.0
+    }
+  ]
+}

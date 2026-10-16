@@ -1,0 +1,37 @@
+{
+  "status": "REVIEW_COMPLETE_WITH_AUTHORIZED_FIXES",
+  "scope": "V5 final source, actual timeline/caption contract, reproduction manifest and audio QA field compatibility; CPU only.",
+  "fixedBlockingFindings": [
+    {
+      "file": "scripts/qa_delivery_v5.py",
+      "problem": "WAV and clean clip sample rates were accidentally replaced with 58000.",
+      "fix": "Both comparisons restored to actual 48000. AST numeric-literal comparison against V4 confirms no other accidental constant change; only schema/version 4 becomes 5."
+    },
+    {
+      "file": "scripts/build_v5_manifest.py",
+      "problem": "Manifest required nonexistent audio-sync-qa.json and omitted transitive runtime and music-license inputs.",
+      "fix": "Use actual work/audio-v5/qa-audio-v5.json, accept hashed inputs and optional files, require passed current QA, follow all relative render imports including narration.json, preserve dependency package/lock, audio helper scripts/OpenCC assets, processing records, music sample/license and same-film score provenance."
+    }
+  ],
+  "validation": {
+    "pythonSyntax": "PASS",
+    "typescript": "npm run check passed",
+    "relativeRenderDependencyClosure": 17,
+    "actualAudioReportSchemaCompatibility": "audio-mix-v5 inputs/files 8 records, qa-audio-v5 inputs 6 records, music-arrangement files 2 records parsed without hashing audio.",
+    "runtimeContractReport": "research/v5-final-code-runtime-review.json",
+    "runtimeContractChecks": 79,
+    "runtimeContractResult": "PASS"
+  },
+  "currentTimelineSnapshot": {
+    "durationSec": 321.8,
+    "frames": 9654,
+    "note": "Parallel final voice repair changed the timeline from 322.333s during this review; this is not a frozen delivery certification."
+  },
+  "remainingRequiredFinalization": [
+    "Finish the three replacement voice clips and repeat preparation, alignment, mixing and audio QA.",
+    "Activate finalized V5 assets, then build the source manifest against their real hashes.",
+    "Render with audio and run final encoded-file QA; this source review does not certify an unrendered file."
+  ],
+  "researchBoundary": "No new scientific blocker found. Historical train-film claim is sourced independently; actual digital recovery is fixed high-redundancy XOR-chain with known packet/read identities; no wet-lab or full DNA Fountain reproduction claim. Model section requires device data and does not claim validated storage improvement.",
+  "readOnlyBoundaries": "Only the two explicitly authorized QA/manifest scripts were changed. No entry, animation source or audio was edited by this review. After the re-recording notice, no mutable audio bytes were read or hashed and no final source manifest was generated."
+}

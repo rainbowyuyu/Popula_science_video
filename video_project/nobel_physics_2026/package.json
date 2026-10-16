@@ -1,0 +1,43 @@
+{
+  "name": "rainbow-nobel-physics-2026",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "audio": "python scripts/build_audio.py",
+    "audio:v03": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v03_user_tts.py --generate",
+    "audio:v03:mix": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v03_user_tts.py",
+    "render": "node scripts/render_physics2026_v01.mjs",
+    "stills": "node scripts/render_physics2026_v01.mjs stills",
+    "render:v02": "node scripts/render_physics2026_v02_chunked.mjs",
+    "render:v09": "node scripts/render_physics2026_v09.mjs",
+    "stills:v09": "node scripts/render_physics2026_v09.mjs stills",
+    "render:v10": "node scripts/render_physics2026_v10.mjs",
+    "stills:v10": "node scripts/render_physics2026_v10.mjs stills",
+    "render:v02:single": "node scripts/render_physics2026_v02.mjs",
+    "stills:v02": "node scripts/render_physics2026_v02.mjs stills",
+    "qa:v02": "python scripts/qa_physics2026_v02.py",
+    "qa": "python scripts/qa_physics2026_v01.py --mode full",
+    "render:v11": "node scripts/render_physics2026_v11.mjs",
+    "stills:v11": "node scripts/render_physics2026_v11.mjs stills",
+    "render:v12": "node scripts/render_physics2026_v12.mjs",
+    "stills:v12": "node scripts/render_physics2026_v12.mjs stills"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.526",
+    "@remotion/media": "4.0.526",
+    "@remotion/renderer": "4.0.526",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.526"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}
+
+

@@ -1,0 +1,984 @@
+{
+  "createdUTC": "2026-10-09T06:16:42.093550+00:00",
+  "officialShanghaiTowerInputObtained": false,
+  "sourceFinding": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\physics-v8\\recompute\\discovery\\SOURCE_FINDINGS.md",
+  "modelKind": "Executed frozen teaching equivalent model, not official/as-built Shanghai Tower model",
+  "resultsRoot": "C:\\Users\\zju\\.codex\\visualizations\\2026\\10\\08\\01a11ae1-4ffb-79e2-b2fc-3add8874f339\\shanghai-physics-v8",
+  "counts": {
+    "nodes": 1541,
+    "members": 1984,
+    "stages": 9,
+    "dynamicSamples": 60
+  },
+  "checks": {
+    "cantileverBenchmarkPassed": true,
+    "gravityAndWindForceBalancePassed": true,
+    "allNineConstructionStages": true,
+    "allStageForceBalancePassed": true,
+    "twoDynamicRunsNoFailedSteps": true,
+    "extendedEnvironmentNineteenChecksPassed": true,
+    "allComparedFieldsFinite": true,
+    "repeatabilityRelativeL2Below1e-9": true,
+    "productionInputsUnchanged": true,
+    "pileMeshAndTimeConvergencePassed": true,
+    "pileDynamicForceAndEnergyPassed": true
+  },
+  "complete": true,
+  "allChecksPassed": true,
+  "comparison": {
+    "static.gravity.u": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.gravity.r": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.gravity.axialMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.gravity.extremeMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.gravity.localForces": {
+      "shape": [
+        1984,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windPlusGravity.u": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windPlusGravity.r": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windPlusGravity.axialMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windPlusGravity.extremeMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windPlusGravity.localForces": {
+      "shape": [
+        1984,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windOnly.u": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windOnly.r": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windOnly.axialMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windOnly.extremeMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "static.windOnly.localForces": {
+      "shape": [
+        1984,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage1.u": {
+      "shape": [
+        104,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage1.r": {
+      "shape": [
+        104,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage1.axialMPa": {
+      "shape": [
+        139
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage1.extremeMPa": {
+      "shape": [
+        139
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage1.localForces": {
+      "shape": [
+        139,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage2.u": {
+      "shape": [
+        315,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage2.r": {
+      "shape": [
+        315,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage2.axialMPa": {
+      "shape": [
+        414
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage2.extremeMPa": {
+      "shape": [
+        414
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage2.localForces": {
+      "shape": [
+        414,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage3.u": {
+      "shape": [
+        536,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage3.r": {
+      "shape": [
+        536,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage3.axialMPa": {
+      "shape": [
+        683
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage3.extremeMPa": {
+      "shape": [
+        683
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage3.localForces": {
+      "shape": [
+        683,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage4.u": {
+      "shape": [
+        747,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage4.r": {
+      "shape": [
+        747,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage4.axialMPa": {
+      "shape": [
+        958
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage4.extremeMPa": {
+      "shape": [
+        958
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage4.localForces": {
+      "shape": [
+        958,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage5.u": {
+      "shape": [
+        984,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage5.r": {
+      "shape": [
+        984,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage5.axialMPa": {
+      "shape": [
+        1259
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage5.extremeMPa": {
+      "shape": [
+        1259
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage5.localForces": {
+      "shape": [
+        1259,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage6.u": {
+      "shape": [
+        1170,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage6.r": {
+      "shape": [
+        1170,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage6.axialMPa": {
+      "shape": [
+        1501
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage6.extremeMPa": {
+      "shape": [
+        1501
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage6.localForces": {
+      "shape": [
+        1501,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage7.u": {
+      "shape": [
+        1347,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage7.r": {
+      "shape": [
+        1347,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage7.axialMPa": {
+      "shape": [
+        1734
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage7.extremeMPa": {
+      "shape": [
+        1734
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage7.localForces": {
+      "shape": [
+        1734,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage8.u": {
+      "shape": [
+        1533,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage8.r": {
+      "shape": [
+        1533,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage8.axialMPa": {
+      "shape": [
+        1976
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage8.extremeMPa": {
+      "shape": [
+        1976
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage8.localForces": {
+      "shape": [
+        1976,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage9.u": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage9.r": {
+      "shape": [
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage9.axialMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage9.extremeMPa": {
+      "shape": [
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "stage9.localForces": {
+      "shape": [
+        1984,
+        12
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "dynamic.u": {
+      "shape": [
+        60,
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "dynamic.r": {
+      "shape": [
+        60,
+        1541,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "dynamic.axialMPa": {
+      "shape": [
+        60,
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "dynamic.extremeMPa": {
+      "shape": [
+        60,
+        1984
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "dynamic.modalPeriods_s": {
+      "shape": [
+        4
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "extendedTmd.supportX_m": {
+      "shape": [
+        1201
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "extendedTmd.massX_m": {
+      "shape": [
+        1201
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "extendedTmd.relativeX_m": {
+      "shape": [
+        1201
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "extendedTmd.forceOnSupport_N": {
+      "shape": [
+        1201
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "extendedTmd.dissipatedEnergy_J": {
+      "shape": [
+        1201
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "extendedTmd.nodeU": {
+      "shape": [
+        1201,
+        133,
+        3
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "coreWindSection.extremeMPa": {
+      "shape": [
+        61,
+        132
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "coreWindSection.axialMPa": {
+      "shape": [
+        61,
+        132
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "coreWindSection.momentY_Nm": {
+      "shape": [
+        61,
+        132,
+        2
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "coreWindSection.momentZ_Nm": {
+      "shape": [
+        61,
+        132,
+        2
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "pile.peakHeadLateral_mm": {
+      "shape": [],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "pile.headStaticSettlement_mm": {
+      "shape": [],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "pile.maxAbsMoment_kNm": {
+      "shape": [],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "pile.maxAbsShear_kN": {
+      "shape": [],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    },
+    "pile.firstFrequencies_Hz": {
+      "shape": [
+        8
+      ],
+      "finite": true,
+      "maxAbsoluteDifference": 0.0,
+      "relativeL2": 0.0
+    }
+  },
+  "tower": {
+    "modalPeriods_s": [
+      9.109619899331474,
+      9.100676596096685,
+      2.9905730817028835,
+      2.987185114665982
+    ],
+    "gravity_N": 6431976941.676372,
+    "maxStaticWindDisplacement_m": 0.31676858061434293,
+    "dynamicPeaks": {
+      "supportX_m": {
+        "value": 0.72426182,
+        "time_s": 59.1
+      },
+      "relativeX_m": {
+        "value": -1.80793972,
+        "time_s": 56.85
+      },
+      "supportAccelerationX_m_s2": {
+        "value": 0.19848727,
+        "time_s": 54.4
+      },
+      "forceOnSupport_N": {
+        "value": -871123.34613,
+        "time_s": 56.6
+      }
+    },
+    "windBaseShear_N": 29117118.69684425,
+    "tmdPeakTopReductionFraction": 0.1502439610406192,
+    "tmdRmsTopReductionFraction": 0.05439721104101436,
+    "coreWindBendingNormalStressPeak": {
+      "valueMPa": 5.69957906,
+      "memberId": "M_CORE_001",
+      "time_s": 50.0
+    },
+    "environmentQA": {
+      "checks": {
+        "schema": true,
+        "allValuesFinite": true,
+        "time1201Uniform005": true,
+        "frozenInputsUnchanged": true,
+        "allTmdSignalsSameTimeLength": true,
+        "relativeEqualsMassMinusSupport": true,
+        "forcesFromRealMotion": true,
+        "massDynamicEquilibrium": true,
+        "dissipationNondecreasing": true,
+        "sameTowerTimeHistory": true,
+        "windLoadsExactlyFrozen": true,
+        "pileNoZeroLengthSegments": true,
+        "pileLengthAndDiameter": true,
+        "pileSelfWeightUnits": true,
+        "pileEquilibriumIncludingSelfWeight": true,
+        "elasticPileLinearity": true,
+        "coreExtremeFormulaCorrect": true,
+        "coreStressNoGravityMixture": true,
+        "noFalseCfdClaim": true
+      },
+      "allPassed": true,
+      "details": {
+        "relativeIdentityError_m": 1.0000000161269895e-08,
+        "forceReconstructionError_N": 0.002851483499398455,
+        "independentMassBalance_N": 0.005000000069685484,
+        "coreVsFrozenResponse_m": 3.0000000039720476e-08,
+        "fullWindBaseShear_N": 29117118.69684425,
+        "minPileSegment_m": 0.20000000000000284,
+        "pileSelfWeightExpected_N": 1001276.2368806062,
+        "independentPileBalanceMax_N": 0.0006439271833599603,
+        "pileLinearityError_m": 5.000000006041838e-10,
+        "coreExtremeRecalculationError_MPa": 4.998716170157014e-09,
+        "coreWindExtremeMax_MPa": 5.69957906
+      },
+      "environmentResponseSHA256": "21c15239f99f32803f15d6c4ae7a885d80fb8df2318a8b83bd91570684b4996e",
+      "scope": "Numerical and schema checks of teaching examples, not a real-building validation."
+    },
+    "fullTimeMemberPeaks": [
+      {
+        "role": "belt",
+        "memberId": "M_Z05_C01_BX1B",
+        "meshIds": [
+          "FE_M_Z05_C01_BX1B"
+        ],
+        "position_m": [
+          12.60180315,
+          309.8,
+          -23.636223100000002
+        ],
+        "time_s": 59.1,
+        "windAxialIncrementMPa": -54.75675735611909,
+        "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+      },
+      {
+        "role": "cornercolumn",
+        "memberId": "M_K02_037",
+        "meshIds": [
+          "CORNERCOL_Z03_C02"
+        ],
+        "position_m": [
+          -23.8336668,
+          164.6875,
+          -23.8336668
+        ],
+        "time_s": 59.1,
+        "windAxialIncrementMPa": 3.8006987223927444,
+        "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+      },
+      {
+        "role": "megacolumn",
+        "memberId": "M_C01_052",
+        "meshIds": [
+          "MEGACOL_Z04_C01"
+        ],
+        "position_m": [
+          29.99335055,
+          230.357143,
+          -5.0
+        ],
+        "time_s": 59.1,
+        "windAxialIncrementMPa": -5.695474045200912,
+        "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+      },
+      {
+        "role": "outrigger",
+        "memberId": "M_Z04_C05_OX2",
+        "meshIds": [
+          "FE_M_Z04_C05_OX2"
+        ],
+        "position_m": [
+          -22.48894245,
+          235.10000000000002,
+          5.0
+        ],
+        "time_s": 50.0,
+        "windAxialIncrementMPa": 109.83027398528448,
+        "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+      },
+      {
+        "role": "core",
+        "memberId": "M_CORE_001",
+        "meshIds": [
+          "CORE_Z01_W1",
+          "CORE_Z01_W2",
+          "CORE_Z01_W3",
+          "CORE_Z01_W4",
+          "CORE_Z01_CELLS"
+        ],
+        "position_m": [
+          0.0,
+          2.7775,
+          0.0
+        ],
+        "time_s": 50.0,
+        "windBendingNormalStressEnvelopeMPa": 5.69957906,
+        "colorMeaning": "section bending normal-stress envelope; the core net wind axial increment is zero in this symmetric equivalent model"
+      }
+    ]
+  },
+  "pile": {
+    "cantileverBackendBenchmark": {
+      "analysisCode": 0,
+      "expectedDisplacement_m": 0.00013333333333333334,
+      "measuredDisplacement_m": 0.00013333333333333334,
+      "relativeError": 0.0,
+      "baseReaction": [
+        -1000.0000000000008,
+        0.0,
+        10000.000000000004
+      ],
+      "passed": true
+    },
+    "timeStepCoarse": {
+      "headLateralRelativeL2": 0.00022022717203126104,
+      "headLateralPeakDifferenceRatio": 0.00017687597786776238,
+      "peakMomentRelativeDifference": 4.623839749329228e-05,
+      "peakShearRelativeDifference": 7.240127719732037e-05
+    },
+    "timeStepFine": {
+      "headLateralRelativeL2": 5.507586584572414e-05,
+      "headLateralPeakDifferenceRatio": 4.4173500190331014e-05,
+      "peakMomentRelativeDifference": 1.504983498423762e-05,
+      "peakShearRelativeDifference": 3.878282189839766e-06
+    },
+    "mesh1to05": {
+      "headLateralRelativeL2": 0.012108811014050105,
+      "headLateralPeakDifferenceRatio": 0.013355267960666963,
+      "peakMomentRelativeDifference": 0.008745045246434047,
+      "peakShearRelativeDifference": 0.10050170363659638
+    },
+    "mesh05to025": {
+      "headLateralRelativeL2": 0.002429656263490447,
+      "headLateralPeakDifferenceRatio": 0.0026676514271045744,
+      "peakMomentRelativeDifference": 0.002029420794043557,
+      "peakShearRelativeDifference": 0.048548215501008296
+    },
+    "meshRefinement": {
+      "headLateralRelativeL2": 0.0006110565901251595,
+      "headLateralPeakDifferenceRatio": 0.0006702870683455654,
+      "peakMomentRelativeDifference": 0.0008039836907154374,
+      "peakShearRelativeDifference": 0.023750537745891642
+    },
+    "passed": true,
+    "base": {
+      "failedSteps": 0,
+      "independentStaticRelativeError": 4.541093008495027e-13,
+      "elementForceMaximumDifference_N_Nm": 0.0004272931982995942,
+      "maxEquationResidual_N_Nm": 0.0011865577995422427,
+      "relativeEquationResidual": 2.966399768748645e-09,
+      "maxGlobalForceBalance_N": 2.185065326898439e-06,
+      "maxMomentBalance_Nm": 8.0170524285883e-06,
+      "energyRelativeResidual": 5.729292075031297e-10,
+      "dampingEnergyMonotonic": true,
+      "postLoadEnergyMonotonic": true,
+      "staticAppliedVertical_N": 9001276.2368806,
+      "staticShaftSupport_N": 8388671.103062198,
+      "staticToeSupport_N": 612605.1338183229,
+      "peakHeadLateral_mm": 14.431480301385061,
+      "headStaticSettlement_mm": 11.12041509847912,
+      "maxAbsMoment_kNm": 549.6284944044196,
+      "maxAbsShear_kN": 303.99202589890155,
+      "firstFrequencies_Hz": [
+        0.816437276504041,
+        4.781652672829376,
+        14.965721216769781,
+        15.64798017526621,
+        17.395324794728722,
+        18.665465013898427,
+        21.081195776386593,
+        22.929109095582746
+      ],
+      "firstModalDampingRatios": [
+        0.018811150166589248,
+        0.07809474647768092,
+        0.44471097329139087,
+        0.45751707914218254,
+        0.4493789222151222,
+        0.5148906323205155,
+        0.45620619713094757,
+        0.577125908794385
+      ],
+      "elapsedSeconds": 24.008443899991107
+    },
+    "dateUTC": "2026-10-09T06:13:39.639191+00:00",
+    "selectedMeshTimeStep": {
+      "mesh_m": 0.125,
+      "dtCoarse_s": 0.01,
+      "dtFine_s": 0.005,
+      "headLateralRelativeL2": 5.3206636105704973e-05,
+      "headLateralPeakDifferenceRatio": 4.2526811818696454e-05,
+      "peakMomentRelativeDifference": 1.0161343910741749e-05,
+      "peakShearRelativeDifference": 1.063103854126446e-05,
+      "passed": true
+    }
+  },
+  "literatureComparison": {
+    "source": "Lu et al. author lecture, PDF p9; not a calibration target established by this task",
+    "authorModelNodes": 53006,
+    "authorPeriods_s": [
+      9.5238,
+      9.4518,
+      4.6847
+    ],
+    "currentFirstPeriodDifferenceFraction": -0.04348895405914932,
+    "caution": "Modal ordering must be verified by shapes. Third author mode is torsion; the equivalent model third eigenvalue cannot be compared by index alone. Period proximity does not validate unknown member sections."
+  },
+  "limitations": [
+    "Fixed-base linear beam/truss teaching model; no as-built calibration, cracking, yield, buckling, soil-structure interaction, creep or locked construction stress.",
+    "Tower is driven by prescribed power-law wind loads and deterministic gusts, not by the separately computed OpenFOAM surface pressures.",
+    "The separate CFD was not recomputed in this task. Its accepted scope remains educational mean-flow visualization, not converged design-grade or coupled forces.",
+    "Pile is an independent 52m x 1m linear Winkler beam; soil color can represent interface reactions only, not continuum soil stress.",
+    "No compatible Diffusion inverse checkpoint exists for this model; no inference or inverse-load result is claimed.",
+    "Only 705 semantic rendered parts map to solved members; 282 teaching geometry parts have no independent stress solution.",
+    "TMD spring is tuned to this equivalent model and 8% internal damping is assumed. Peak/RMS reductions apply only to this synthetic 60s load record."
+  ]
+}

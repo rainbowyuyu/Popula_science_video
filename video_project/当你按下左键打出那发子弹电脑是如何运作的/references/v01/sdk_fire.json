@@ -1,0 +1,24 @@
+{
+  "id": "sdk_fire",
+  "url": "https://raw.githubusercontent.com/ValveSoftware/source-sdk-2013/master/src/game/shared/baseentity_shared.cpp",
+  "scope": "Valve Source SDK 2013 code; generic Source illustration only",
+  "accessedAt": "2026-10-16T04:39:37.408457+00:00",
+  "status": "retrieved",
+  "httpStatus": 200,
+  "sha256": "7d0976419c887e88f719f713c542de7b80abf666cb7dc5b7c59db9727f720ae1",
+  "bytes": 70311,
+  "excerpts": [
+    {
+      "term": "FireBullets",
+      "excerpt": "-------------------- void CBaseEntity::SetAllowPrecache( bool allow ) { m_bAllowPrecache = allow; } /* ================ FireBullets Go to the trouble of combining multiple pellets into a single damage call. ================ */ #if defined( GAME_DLL ) class CBulletsTraceFilter : public CTraceFilterSimpleList { public: CBulletsTraceFilter( int collisionGroup ) : CTraceFilterSimpleList( collisionGroup ) {} bool ShouldHitEntity( IHandleEntity *pHandleEntity, int contentsMask ) { if ( m_PassEntities.Count() ) { CBaseEntity *pEntity = EntityFromEntityHandle( pHandleEnti"
+    },
+    {
+      "term": "TraceRay",
+      "excerpt": "fo.m_vecSrc, vecEnd ); pShootThroughPortal = UTIL_Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( pShootThroughPortal, rayBullet, MASK_SHOT, &traceFilter, &tr ) ) { pShootThroughPortal = NULL; } #else AI_TraceHull( info.m_vecSrc, vecEnd, Vector( -3, -3, -3 ), Vector( 3, 3, 3 ), MASK_SHOT, &traceFilter, &tr ); #endif //#ifdef PORTAL } else { #ifdef PORTAL Ray_t rayBullet; rayBullet.Init( info.m_vecSrc, vecEnd ); pShootThroughPortal = UTIL_Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( "
+    },
+    {
+      "term": "MASK_SHOT",
+      "excerpt": "Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( pShootThroughPortal, rayBullet, MASK_SHOT, &traceFilter, &tr ) ) { pShootThroughPortal = NULL; } #else AI_TraceHull( info.m_vecSrc, vecEnd, Vector( -3, -3, -3 ), Vector( 3, 3, 3 ), MASK_SHOT, &traceFilter, &tr ); #endif //#ifdef PORTAL } else { #ifdef PORTAL Ray_t rayBullet; rayBullet.Init( info.m_vecSrc, vecEnd ); pShootThroughPortal = UTIL_Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( pShootThroughPortal, rayBullet, MASK_SHOT, &traceF"
+    }
+  ]
+}

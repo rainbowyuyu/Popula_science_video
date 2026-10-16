@@ -1,0 +1,961 @@
+{
+  "schema": "rainbow.cfd-structure-mapping-qa/1",
+  "passed": true,
+  "sourceAcceptedForCoupling": false,
+  "solverRun": false,
+  "counts": {
+    "nodes": 1541,
+    "members": 1984,
+    "windLoadNodes": 132,
+    "cfdBins": 64
+  },
+  "topologySHA256": "6cbc87924dcbde647b980879eb7488d602d047fb94b2b57b89067c05c1d30a40",
+  "transformationToThree": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0
+    ]
+  ],
+  "momentOriginInThree_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sourceForce_N": [
+    10.0,
+    0.0,
+    0.0
+  ],
+  "sourceMomentAboutStructuralOrigin_Nm": [
+    0.0,
+    75.0,
+    -6320.0
+  ],
+  "mappedForce_N": [
+    10.0,
+    0.0,
+    0.0
+  ],
+  "mappedMomentAboutStructuralOrigin_Nm": [
+    0.0,
+    75.0,
+    -6320.0
+  ],
+  "forceResidual_N": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "momentResidual_Nm": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "tolerance": {
+    "force_N": 1e-05,
+    "moment_Nm": 0.0001
+  },
+  "forceOnlyMomentError_Nm": [
+    0.0,
+    -75.0,
+    520.0
+  ],
+  "maximumNodalCouple_Nm": 525.3808142671371,
+  "requiresMomentDOFs": true,
+  "assignment": [
+    {
+      "bin": 0,
+      "height_m": 5.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_001",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "bin": 1,
+      "height_m": 15.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_002",
+          "weight": 0.29972997299729964
+        },
+        {
+          "nodeId": "N_CORE_003",
+          "weight": 0.7002700270027004
+        }
+      ]
+    },
+    {
+      "bin": 2,
+      "height_m": 25.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_005",
+          "weight": 0.9497487437185934
+        },
+        {
+          "nodeId": "N_CORE_006",
+          "weight": 0.050251256281406566
+        }
+      ]
+    },
+    {
+      "bin": 3,
+      "height_m": 35.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_007",
+          "weight": 0.6646059043642134
+        },
+        {
+          "nodeId": "N_CORE_008",
+          "weight": 0.33539409563578654
+        }
+      ]
+    },
+    {
+      "bin": 4,
+      "height_m": 45.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_009",
+          "weight": 0.500772812911331
+        },
+        {
+          "nodeId": "N_CORE_010",
+          "weight": 0.499227187088669
+        }
+      ]
+    },
+    {
+      "bin": 5,
+      "height_m": 55.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_011",
+          "weight": 0.33693972145844964
+        },
+        {
+          "nodeId": "N_CORE_012",
+          "weight": 0.6630602785415504
+        }
+      ]
+    },
+    {
+      "bin": 6,
+      "height_m": 65.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_013",
+          "weight": 0.17310663000556692
+        },
+        {
+          "nodeId": "N_CORE_014",
+          "weight": 0.8268933699944331
+        }
+      ]
+    },
+    {
+      "bin": 7,
+      "height_m": 75.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_015",
+          "weight": 0.06024090542894267
+        },
+        {
+          "nodeId": "N_CORE_016",
+          "weight": 0.9397590945710573
+        }
+      ]
+    },
+    {
+      "bin": 8,
+      "height_m": 85.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_018",
+          "weight": 0.9518073178255212
+        },
+        {
+          "nodeId": "N_CORE_019",
+          "weight": 0.048192682174478856
+        }
+      ]
+    },
+    {
+      "bin": 9,
+      "height_m": 95.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_021",
+          "weight": 0.8433735193787203
+        },
+        {
+          "nodeId": "N_CORE_022",
+          "weight": 0.15662648062127968
+        }
+      ]
+    },
+    {
+      "bin": 10,
+      "height_m": 105.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_023",
+          "weight": 0.7027027027027026
+        },
+        {
+          "nodeId": "N_CORE_024",
+          "weight": 0.2972972972972973
+        }
+      ]
+    },
+    {
+      "bin": 11,
+      "height_m": 115.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_025",
+          "weight": 0.5405405405405406
+        },
+        {
+          "nodeId": "N_CORE_026",
+          "weight": 0.4594594594594595
+        }
+      ]
+    },
+    {
+      "bin": 12,
+      "height_m": 125.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_027",
+          "weight": 0.3783783783783784
+        },
+        {
+          "nodeId": "N_CORE_028",
+          "weight": 0.6216216216216216
+        }
+      ]
+    },
+    {
+      "bin": 13,
+      "height_m": 135.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_029",
+          "weight": 0.21621621621621623
+        },
+        {
+          "nodeId": "N_CORE_030",
+          "weight": 0.7837837837837838
+        }
+      ]
+    },
+    {
+      "bin": 14,
+      "height_m": 145.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_031",
+          "weight": 0.09018567639257524
+        },
+        {
+          "nodeId": "N_CORE_032",
+          "weight": 0.9098143236074248
+        }
+      ]
+    },
+    {
+      "bin": 15,
+      "height_m": 155.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_034",
+          "weight": 0.9681697612732084
+        },
+        {
+          "nodeId": "N_CORE_035",
+          "weight": 0.03183023872679162
+        }
+      ]
+    },
+    {
+      "bin": 16,
+      "height_m": 165.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_036",
+          "weight": 0.121212121212116
+        },
+        {
+          "nodeId": "N_CORE_037",
+          "weight": 0.878787878787884
+        }
+      ]
+    },
+    {
+      "bin": 17,
+      "height_m": 175.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_039",
+          "weight": 0.7199999913846139
+        },
+        {
+          "nodeId": "N_CORE_040",
+          "weight": 0.2800000086153861
+        }
+      ]
+    },
+    {
+      "bin": 18,
+      "height_m": 185.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_041",
+          "weight": 0.5661537712662694
+        },
+        {
+          "nodeId": "N_CORE_042",
+          "weight": 0.4338462287337305
+        }
+      ]
+    },
+    {
+      "bin": 19,
+      "height_m": 195.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_043",
+          "weight": 0.4123077665325482
+        },
+        {
+          "nodeId": "N_CORE_044",
+          "weight": 0.5876922334674518
+        }
+      ]
+    },
+    {
+      "bin": 20,
+      "height_m": 205.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_045",
+          "weight": 0.2584615464141994
+        },
+        {
+          "nodeId": "N_CORE_046",
+          "weight": 0.7415384535858006
+        }
+      ]
+    },
+    {
+      "bin": 21,
+      "height_m": 215.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_047",
+          "weight": 0.1445782573668133
+        },
+        {
+          "nodeId": "N_CORE_048",
+          "weight": 0.8554217426331867
+        }
+      ]
+    },
+    {
+      "bin": 22,
+      "height_m": 225.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_049",
+          "weight": 0.03614466214252876
+        },
+        {
+          "nodeId": "N_CORE_050",
+          "weight": 0.9638553378574712
+        }
+      ]
+    },
+    {
+      "bin": 23,
+      "height_m": 235.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_053",
+          "weight": 0.9277108713165908
+        },
+        {
+          "nodeId": "N_CORE_054",
+          "weight": 0.07228912868340923
+        }
+      ]
+    },
+    {
+      "bin": 24,
+      "height_m": 245.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_055",
+          "weight": 0.7855421394106537
+        },
+        {
+          "nodeId": "N_CORE_056",
+          "weight": 0.2144578605893464
+        }
+      ]
+    },
+    {
+      "bin": 25,
+      "height_m": 255.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_057",
+          "weight": 0.6168673883582495
+        },
+        {
+          "nodeId": "N_CORE_058",
+          "weight": 0.3831326116417505
+        }
+      ]
+    },
+    {
+      "bin": 26,
+      "height_m": 265.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_059",
+          "weight": 0.44819285417332133
+        },
+        {
+          "nodeId": "N_CORE_060",
+          "weight": 0.5518071458266787
+        }
+      ]
+    },
+    {
+      "bin": 27,
+      "height_m": 275.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_061",
+          "weight": 0.27951810312091485
+        },
+        {
+          "nodeId": "N_CORE_062",
+          "weight": 0.7204818968790851
+        }
+      ]
+    },
+    {
+      "bin": 28,
+      "height_m": 285.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_063",
+          "weight": 0.13554214263680942
+        },
+        {
+          "nodeId": "N_CORE_064",
+          "weight": 0.8644578573631906
+        }
+      ]
+    },
+    {
+      "bin": 29,
+      "height_m": 295.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_065",
+          "weight": 0.027108344190014955
+        },
+        {
+          "nodeId": "N_CORE_066",
+          "weight": 0.972891655809985
+        }
+      ]
+    },
+    {
+      "bin": 30,
+      "height_m": 305.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_068",
+          "weight": 0.5645163111342892
+        },
+        {
+          "nodeId": "N_CORE_069",
+          "weight": 0.4354836888657107
+        }
+      ]
+    },
+    {
+      "bin": 31,
+      "height_m": 315.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_071",
+          "weight": 0.8048192724052884
+        },
+        {
+          "nodeId": "N_CORE_072",
+          "weight": 0.19518072759471164
+        }
+      ]
+    },
+    {
+      "bin": 32,
+      "height_m": 325.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_073",
+          "weight": 0.6361445213528818
+        },
+        {
+          "nodeId": "N_CORE_074",
+          "weight": 0.36385547864711815
+        }
+      ]
+    },
+    {
+      "bin": 33,
+      "height_m": 335.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_075",
+          "weight": 0.46746988578893633
+        },
+        {
+          "nodeId": "N_CORE_076",
+          "weight": 0.5325301142110637
+        }
+      ]
+    },
+    {
+      "bin": 34,
+      "height_m": 345.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_077",
+          "weight": 0.2987952361155435
+        },
+        {
+          "nodeId": "N_CORE_078",
+          "weight": 0.7012047638844565
+        }
+      ]
+    },
+    {
+      "bin": 35,
+      "height_m": 355.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_079",
+          "weight": 0.13012048506314766
+        },
+        {
+          "nodeId": "N_CORE_080",
+          "weight": 0.8698795149368523
+        }
+      ]
+    },
+    {
+      "bin": 36,
+      "height_m": 365.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_081",
+          "weight": 0.0053050397877936195
+        },
+        {
+          "nodeId": "N_CORE_082",
+          "weight": 0.9946949602122064
+        }
+      ]
+    },
+    {
+      "bin": 37,
+      "height_m": 375.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_084",
+          "weight": 0.8832891246684335
+        },
+        {
+          "nodeId": "N_CORE_085",
+          "weight": 0.11671087533156656
+        }
+      ]
+    },
+    {
+      "bin": 38,
+      "height_m": 385.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_087",
+          "weight": 0.922829581993566
+        },
+        {
+          "nodeId": "N_CORE_088",
+          "weight": 0.07717041800643402
+        }
+      ]
+    },
+    {
+      "bin": 39,
+      "height_m": 395.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_089",
+          "weight": 0.6179775280898891
+        },
+        {
+          "nodeId": "N_CORE_090",
+          "weight": 0.3820224719101108
+        }
+      ]
+    },
+    {
+      "bin": 40,
+      "height_m": 405.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_091",
+          "weight": 0.3707865168539284
+        },
+        {
+          "nodeId": "N_CORE_092",
+          "weight": 0.6292134831460716
+        }
+      ]
+    },
+    {
+      "bin": 41,
+      "height_m": 415.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_093",
+          "weight": 0.12359550561798038
+        },
+        {
+          "nodeId": "N_CORE_094",
+          "weight": 0.8764044943820196
+        }
+      ]
+    },
+    {
+      "bin": 42,
+      "height_m": 425.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_096",
+          "weight": 0.8764044943820196
+        },
+        {
+          "nodeId": "N_CORE_097",
+          "weight": 0.1235955056179804
+        }
+      ]
+    },
+    {
+      "bin": 43,
+      "height_m": 435.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_098",
+          "weight": 0.663013698630132
+        },
+        {
+          "nodeId": "N_CORE_099",
+          "weight": 0.336986301369868
+        }
+      ]
+    },
+    {
+      "bin": 44,
+      "height_m": 445.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_100",
+          "weight": 0.47123287671232383
+        },
+        {
+          "nodeId": "N_CORE_101",
+          "weight": 0.5287671232876762
+        }
+      ]
+    },
+    {
+      "bin": 45,
+      "height_m": 455.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_102",
+          "weight": 0.2794520547945155
+        },
+        {
+          "nodeId": "N_CORE_103",
+          "weight": 0.7205479452054845
+        }
+      ]
+    },
+    {
+      "bin": 46,
+      "height_m": 465.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_105",
+          "weight": 0.0876712328767073
+        },
+        {
+          "nodeId": "N_CORE_106",
+          "weight": 0.9123287671232927
+        }
+      ]
+    },
+    {
+      "bin": 47,
+      "height_m": 475.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_108",
+          "weight": 0.8453865241509663
+        },
+        {
+          "nodeId": "N_CORE_109",
+          "weight": 0.1546134758490337
+        }
+      ]
+    },
+    {
+      "bin": 48,
+      "height_m": 485.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_110",
+          "weight": 0.6009974961598481
+        },
+        {
+          "nodeId": "N_CORE_111",
+          "weight": 0.39900250384015185
+        }
+      ]
+    },
+    {
+      "bin": 49,
+      "height_m": 495.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_112",
+          "weight": 0.35660846816873004
+        },
+        {
+          "nodeId": "N_CORE_113",
+          "weight": 0.64339153183127
+        }
+      ]
+    },
+    {
+      "bin": 50,
+      "height_m": 505.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_114",
+          "weight": 0.11221944017761187
+        },
+        {
+          "nodeId": "N_CORE_115",
+          "weight": 0.8877805598223881
+        }
+      ]
+    },
+    {
+      "bin": 51,
+      "height_m": 515.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_117",
+          "weight": 0.9178082191780822
+        },
+        {
+          "nodeId": "N_CORE_118",
+          "weight": 0.0821917808219178
+        }
+      ]
+    },
+    {
+      "bin": 52,
+      "height_m": 525.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_119",
+          "weight": 0.726027397260274
+        },
+        {
+          "nodeId": "N_CORE_120",
+          "weight": 0.273972602739726
+        }
+      ]
+    },
+    {
+      "bin": 53,
+      "height_m": 535.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_122",
+          "weight": 0.6037151702786343
+        },
+        {
+          "nodeId": "N_CORE_123",
+          "weight": 0.39628482972136564
+        }
+      ]
+    },
+    {
+      "bin": 54,
+      "height_m": 545.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_124",
+          "weight": 0.368421052631579
+        },
+        {
+          "nodeId": "N_CORE_125",
+          "weight": 0.631578947368421
+        }
+      ]
+    },
+    {
+      "bin": 55,
+      "height_m": 555.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_126",
+          "weight": 0.26315789473684215
+        },
+        {
+          "nodeId": "N_CORE_127",
+          "weight": 0.7368421052631579
+        }
+      ]
+    },
+    {
+      "bin": 56,
+      "height_m": 565.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_128",
+          "weight": 0.06976744186045525
+        },
+        {
+          "nodeId": "N_CORE_129",
+          "weight": 0.9302325581395448
+        }
+      ]
+    },
+    {
+      "bin": 57,
+      "height_m": 575.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_131",
+          "weight": 0.8196721311475379
+        },
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 0.18032786885246208
+        }
+      ]
+    },
+    {
+      "bin": 58,
+      "height_m": 585.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "bin": 59,
+      "height_m": 595.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "bin": 60,
+      "height_m": 605.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "bin": 61,
+      "height_m": 615.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "bin": 62,
+      "height_m": 625.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 1.0
+        }
+      ]
+    },
+    {
+      "bin": 63,
+      "height_m": 631.0,
+      "targets": [
+        {
+          "nodeId": "N_CORE_132",
+          "weight": 1.0
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Conservative equivalent layer wrench mapping; it does not reconstruct individual facade connection forces.",
+    "The 580–632 m crown maps to the existing 580 m node with its full additional bending/torsional couple.",
+    "Structural torsional stiffness remains the existing approximate equivalent J, not an independently calibrated as-built torsion model."
+  ],
+  "inputs": {
+    "cfd": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\visual-v4\\one-way-coupling\\synthetic-crown-and-torque.fixture.json",
+      "sha256": "0cccc70fdfe54a2f23640dec551f8e0122495815cb70924a35432f7a8034b58e"
+    },
+    "graph": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\public\\physics\\structural-graph.json",
+      "sha256": "633d41c10a6f27c49aac14f7e2803046b36fa44f445683f54b95745316802e79"
+    }
+  }
+}

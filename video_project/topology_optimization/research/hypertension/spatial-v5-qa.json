@@ -1,0 +1,852 @@
+{
+  "createdAt": "2026-10-07T18:56:08.008Z",
+  "scope": "Invokes current production geometry builders, physics integration and render state update; rendering backend is a no-op. Verifies CPU geometry, opacity and camera state, not pixels, visual taste or full-speed playback. Atlas world bounds are normalized from the asset manifest; no body-geometry surface containment claim is made.",
+  "sourceHashes": {
+    "src/hypertension/World.ts": "765f79fcd7d7a6324842d75fd2a77c3088603553f892046511a8e3e7c035b92b",
+    "src/hypertension/VascularDetail.ts": "c2bdb06a4447c274a3f59728cb624693236dadb7d11c103f6defd71568569575",
+    "src/hypertension/CameraPath.ts": "d2506ffde8dacbeeef375aef4d33e6f189b83cd0cb1756897dec367235d2179f",
+    "src/hypertension/timeline.json": "7d9f4bd1dc0b74a9c8a9d0936f233bce38653dad2cae444b5dacaac2e7bdfe42",
+    "public/hypertension/models/asset-manifest.json": "b7776fa7d3fd34cd93d597370ca930606fc35a48fa3dcfd8ed51663b3de35f27",
+    "research/hypertension/anatomy-camera-design.json": "1c63bd882efe57f86c1b2b35f9c0c88ed05f9af5cccbcf209cc80242236d1c05"
+  },
+  "nephron": {
+    "worldScale": [
+      0.012,
+      0.012,
+      0.012
+    ],
+    "kidneyBox": {
+      "min": [
+        0.13082703275286028,
+        4.313188447704156,
+        -0.16097909054830348
+      ],
+      "max": [
+        0.3600662517639144,
+        4.735254313070205,
+        0.0007369998404160718
+      ]
+    },
+    "nephronBox": {
+      "min": [
+        0.3134273848996788,
+        4.533621380959385,
+        -0.024322660318536856
+      ],
+      "max": [
+        0.3461131632138689,
+        4.5598917802962,
+        -0.017550971537048377
+      ]
+    },
+    "nephronMaxExtentToKidneyHeight": 0.07744236384963854,
+    "entireBoxInsideKidney": true,
+    "focus": {
+      "nephronFocus": {
+        "position": [
+          0.3337824792748563,
+          4.545861380387181,
+          -0.01971881233745293
+        ],
+        "insideKidney": true,
+        "insideNephron": true
+      },
+      "nephronFilter": {
+        "position": [
+          0.3221070497172148,
+          4.55582138038718,
+          -0.02112662789517062
+        ],
+        "insideKidney": true,
+        "insideNephron": true
+      },
+      "nephronTubule": {
+        "position": [
+          0.3339776569528372,
+          4.547061380387181,
+          -0.019332670298796196
+        ],
+        "insideKidney": true,
+        "insideNephron": true
+      },
+      "nephronDrain": {
+        "position": [
+          0.3453387717961953,
+          4.538661380387181,
+          -0.018325362244609907
+        ],
+        "insideKidney": true,
+        "insideNephron": true
+      }
+    },
+    "passed": true
+  },
+  "aorta": {
+    "measuredRestOuterRadius": 0.035784001258992365,
+    "measuredRestInnerRadius": 0.03077999889566504,
+    "expectedOuterRadius": 0.0358,
+    "expectedInnerRadius": 0.0308,
+    "measuredLength": 0.30960000000000004,
+    "expectedLength": 0.3102,
+    "center": [
+      0.033008,
+      4.8,
+      0.007975
+    ],
+    "roundingTolerance": 0.00025,
+    "outerRelativeError": 0.000446892206917135,
+    "passed": true
+  },
+  "signals": {
+    "routes": [
+      {
+        "mode": "nerve",
+        "guideTypes": [
+          "Mesh",
+          "Line",
+          "Line"
+        ],
+        "dots": [
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961
+        ]
+      },
+      {
+        "mode": "nerve",
+        "guideTypes": [
+          "Mesh",
+          "Line",
+          "Line"
+        ],
+        "dots": [
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961
+        ]
+      },
+      {
+        "mode": "hormone",
+        "guideTypes": [
+          "Mesh",
+          "Line",
+          "Line"
+        ],
+        "dots": [
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961
+        ]
+      },
+      {
+        "mode": "aldosterone",
+        "guideTypes": [
+          "Mesh",
+          "Line",
+          "Line"
+        ],
+        "dots": [
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961,
+          0.00800000037997961
+        ]
+      }
+    ],
+    "largestSemanticRadius": 0.00800000037997961,
+    "largestDotToAortaRadius": 0.2235636065983327,
+    "passed": true
+  },
+  "renderVisibility": [
+    {
+      "id": "h003",
+      "kind": "intro",
+      "frame": 520,
+      "scene": "intro",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -13.621468725954669,
+        4.535095780327133,
+        7.337711844849761
+      ],
+      "focus": [
+        -13.365712320154493,
+        3.364974779406751,
+        -0.42864178607635267
+      ],
+      "passed": true
+    },
+    {
+      "id": "h003",
+      "kind": "intro",
+      "frame": 573,
+      "scene": "intro",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -7.814712986055162,
+        4.590522746094893,
+        8.696141112458438
+      ],
+      "focus": [
+        -7.719054361358078,
+        3.4342213040554,
+        -0.28396251871178285
+      ],
+      "passed": true
+    },
+    {
+      "id": "h003",
+      "kind": "intro",
+      "frame": 618,
+      "scene": "intro",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.189827188373159,
+        4.588026071253349,
+        10.36675533758031
+      ],
+      "focus": [
+        -0.25776400112771614,
+        3.551460720549177,
+        -0.00464792754078607
+      ],
+      "passed": true
+    },
+    {
+      "id": "h024",
+      "kind": "kidney",
+      "frame": 4103,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.4719677215946363,
+        4.612045607885649,
+        0.6613007061283646
+      ],
+      "focus": [
+        0.24960937506123884,
+        4.524990824590725,
+        -0.07607395530496074
+      ],
+      "passed": true
+    },
+    {
+      "id": "h024",
+      "kind": "kidney",
+      "frame": 4162,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.396577738757466,
+        4.589377077803521,
+        0.35687489582617815
+      ],
+      "focus": [
+        0.30695685650595333,
+        4.537693060345958,
+        -0.03727403769251379
+      ],
+      "passed": true
+    },
+    {
+      "id": "h024",
+      "kind": "kidney",
+      "frame": 4211,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.3676082810503539,
+        4.576604816580388,
+        0.18999208872529091
+      ],
+      "focus": [
+        0.33303497003826266,
+        4.545964911288914,
+        -0.01972674858748002
+      ],
+      "passed": true
+    },
+    {
+      "id": "h027",
+      "kind": "kidney",
+      "frame": 4657,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.3233871370183559,
+        4.558700874873687,
+        0.054132045005749745
+      ],
+      "focus": [
+        0.338222978405571,
+        4.543716623976432,
+        -0.01893198264133237
+      ],
+      "passed": true
+    },
+    {
+      "id": "h027",
+      "kind": "kidney",
+      "frame": 4706,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.3231379413740323,
+        4.557557462235509,
+        0.05651570644431338
+      ],
+      "focus": [
+        0.33901076372710776,
+        4.5431579237294715,
+        -0.018890829455302113
+      ],
+      "passed": true
+    },
+    {
+      "id": "h027",
+      "kind": "kidney",
+      "frame": 4747,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.32198301562506676,
+        4.558447928113767,
+        0.05911652677927287
+      ],
+      "focus": [
+        0.3369961337188616,
+        4.54417842390021,
+        -0.01921674956689788
+      ],
+      "passed": true
+    },
+    {
+      "id": "h030",
+      "kind": "control",
+      "frame": 5191,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.749272784782071,
+        4.77829710450418,
+        1.9527825007609392
+      ],
+      "focus": [
+        0.22891029072986208,
+        4.6389305292594125,
+        -0.05481135236742019
+      ],
+      "passed": true
+    },
+    {
+      "id": "h030",
+      "kind": "control",
+      "frame": 5236,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.7886145240163639,
+        4.86963248263383,
+        2.4530103815598436
+      ],
+      "focus": [
+        0.2161400479305462,
+        4.705124374409338,
+        -0.03999591167585227
+      ],
+      "passed": true
+    },
+    {
+      "id": "h030",
+      "kind": "control",
+      "frame": 5273,
+      "scene": "kidney",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.7521730567693409,
+        4.884845482939449,
+        2.617988169487743
+      ],
+      "focus": [
+        0.21286676186843803,
+        4.719779099476549,
+        -0.036813848668284
+      ],
+      "passed": true
+    },
+    {
+      "id": "h033",
+      "kind": "control",
+      "frame": 5657,
+      "scene": "control",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.1486358082206851,
+        4.9894097855570765,
+        2.929458522829601
+      ],
+      "focus": [
+        0.19262866933896014,
+        4.742661669382473,
+        -0.017946196872226847
+      ],
+      "passed": true
+    },
+    {
+      "id": "h033",
+      "kind": "control",
+      "frame": 5714,
+      "scene": "control",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.32458139247914475,
+        5.042747282065929,
+        3.505267148800401
+      ],
+      "focus": [
+        0.16754852953256266,
+        4.847029207707336,
+        0.001317424706882776
+      ],
+      "passed": true
+    },
+    {
+      "id": "h033",
+      "kind": "control",
+      "frame": 5761,
+      "scene": "control",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.28362699340345854,
+        5.295582477717898,
+        3.4064839147753867
+      ],
+      "focus": [
+        0.13505388126680792,
+        5.076890725269921,
+        -0.004198858709567146
+      ],
+      "passed": true
+    },
+    {
+      "id": "h035",
+      "kind": "control",
+      "frame": 6023,
+      "scene": "control",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.8490348408300807,
+        6.163517909185609,
+        2.802135895918303
+      ],
+      "focus": [
+        0.04563717247521641,
+        5.892410554751937,
+        0.03153428094212304
+      ],
+      "passed": true
+    },
+    {
+      "id": "h035",
+      "kind": "control",
+      "frame": 6072,
+      "scene": "control",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        1.073986232346392,
+        5.789473326972766,
+        3.307989625921635
+      ],
+      "focus": [
+        0.06026423007642183,
+        5.552953104923515,
+        0.061024008233699134
+      ],
+      "passed": true
+    },
+    {
+      "id": "h035",
+      "kind": "control",
+      "frame": 6112,
+      "scene": "control",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        1.1977753802968676,
+        5.5294944246647875,
+        3.8151012011238756
+      ],
+      "focus": [
+        0.05849034032109497,
+        5.28482889467515,
+        0.06024861401130647
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040a",
+      "kind": "lipid",
+      "frame": 6998,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.001528609067614553,
+        4.877541856812002,
+        0.5735625920187359
+      ],
+      "focus": [
+        -0.06685490233417311,
+        4.812817928442317,
+        0.2533342100174902
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040a",
+      "kind": "lipid",
+      "frame": 7052,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.060156146782729215,
+        4.834334724285527,
+        0.3651178553059946
+      ],
+      "focus": [
+        -0.06791345252518935,
+        4.813329239515787,
+        0.26111250162259186
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040a",
+      "kind": "lipid",
+      "frame": 7097,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.06251580184697555,
+        4.833998661031247,
+        0.36207393147717243
+      ],
+      "focus": [
+        -0.06343006177270608,
+        4.813096315339644,
+        0.26129369191395435
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040b",
+      "kind": "lipid",
+      "frame": 7184,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.040989140238294676,
+        4.833441497648126,
+        0.3589555833291994
+      ],
+      "focus": [
+        -0.04511039701812171,
+        4.8108931650188556,
+        0.2615623877790667
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040b",
+      "kind": "lipid",
+      "frame": 7241,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.018731368992547563,
+        4.831863580406695,
+        0.35475439342746207
+      ],
+      "focus": [
+        -0.03127089640753862,
+        4.807865971050012,
+        0.26157621496933486
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040b",
+      "kind": "lipid",
+      "frame": 7288,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        -0.002780625656255805,
+        4.829578904978544,
+        0.34795128423093286
+      ],
+      "focus": [
+        -0.021003000893028107,
+        4.8045547324167295,
+        0.261291776607608
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040c",
+      "kind": "lipid",
+      "frame": 7379,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.01299460076966984,
+        4.830696680781262,
+        0.34983419862580983
+      ],
+      "focus": [
+        -0.014301907795469294,
+        4.802444275631785,
+        0.26112985457739935
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040c",
+      "kind": "lipid",
+      "frame": 7438,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.012215905206092968,
+        4.844097324373145,
+        0.3981041916102106
+      ],
+      "focus": [
+        -0.028964247587781287,
+        4.806634202137453,
+        0.26111250162259186
+      ],
+      "passed": true
+    },
+    {
+      "id": "h040c",
+      "kind": "lipid",
+      "frame": 7487,
+      "scene": "remodel",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        0.1731189542642825,
+        4.929453268870303,
+        1.0336821345674316
+      ],
+      "focus": [
+        -0.030294839499185044,
+        4.799265151976215,
+        0.09899330724425587
+      ],
+      "passed": true
+    },
+    {
+      "id": "h045",
+      "kind": "measure",
+      "frame": 8263,
+      "scene": "measure",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        2.5183027541709406,
+        4.802797030384526,
+        13.730268116245036
+      ],
+      "focus": [
+        1.076792623001846,
+        3.3580680996215153,
+        0.015223571314499501
+      ],
+      "passed": true
+    },
+    {
+      "id": "h045",
+      "kind": "measure",
+      "frame": 8318,
+      "scene": "measure",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        11.813735866031077,
+        5.174643926390816,
+        13.560182896371481
+      ],
+      "focus": [
+        8.640277437676694,
+        3.1399211550910584,
+        0.1044910989511466
+      ],
+      "passed": true
+    },
+    {
+      "id": "h045",
+      "kind": "measure",
+      "frame": 8364,
+      "scene": "measure",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        16.49688833473189,
+        5.371668873518865,
+        13.367893979867317
+      ],
+      "focus": [
+        12.49369060454626,
+        3.0788404628126305,
+        0.15
+      ],
+      "passed": true
+    },
+    {
+      "id": "h047",
+      "kind": "measure",
+      "frame": 8638,
+      "scene": "measure",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        13.112445998365844,
+        4.871750314914564,
+        12.08195645263468
+      ],
+      "focus": [
+        11.941971534767077,
+        3.2166227835793904,
+        0.2700470523964569
+      ],
+      "passed": true
+    },
+    {
+      "id": "h047",
+      "kind": "measure",
+      "frame": 8701,
+      "scene": "measure",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        12.218464250631847,
+        4.757858804005026,
+        11.645272208620717
+      ],
+      "focus": [
+        11.814975015781107,
+        3.1913294910250714,
+        0.29085045929934916
+      ],
+      "passed": true
+    },
+    {
+      "id": "h047",
+      "kind": "measure",
+      "frame": 8753,
+      "scene": "measure",
+      "aortaOpacity": 0,
+      "arterioleOpacity": 0,
+      "camera": [
+        11.260697920284176,
+        4.7752451800020275,
+        9.68035940270418
+      ],
+      "focus": [
+        11.75389110244111,
+        3.3036667969599165,
+        0.21215760666565445
+      ],
+      "passed": true
+    }
+  ],
+  "positiveControls": [
+    {
+      "id": "h012",
+      "frame": 2057,
+      "aortaOpacity": 1,
+      "arterioleOpacity": 0
+    },
+    {
+      "id": "h018",
+      "frame": 3130,
+      "aortaOpacity": 0,
+      "arterioleOpacity": 1
+    },
+    {
+      "id": "h020",
+      "frame": 3524,
+      "aortaOpacity": 0,
+      "arterioleOpacity": 1
+    },
+    {
+      "id": "h043",
+      "frame": 7950,
+      "aortaOpacity": 1,
+      "arterioleOpacity": 0
+    }
+  ],
+  "actualProductionRenderCalls": 37,
+  "passed": true
+}

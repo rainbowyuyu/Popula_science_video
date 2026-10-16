@@ -1,0 +1,53 @@
+/* Both work surfaces share stable navigation geometry. */
+:root{--app-header-height:64px;--app-nav-ease:cubic-bezier(.22,1,.36,1)}
+.app-header.topbar,.app-header.learn-header{position:sticky;top:0;z-index:70;display:grid;grid-template-columns:196px auto minmax(0,1fr);align-items:center;gap:28px;height:var(--app-header-height);min-height:var(--app-header-height);padding:0 22px;box-sizing:border-box;background:#f9fbfc;border-bottom:1px solid #e1e9ed;view-transition-name:app-header}
+.app-header .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#294958;font-family:inherit;font-size:18px;font-weight:650;line-height:1.2;letter-spacing:0;white-space:nowrap;min-width:0}
+.app-header .brand img{width:36px;height:36px;flex-shrink:0;object-fit:contain}
+.app-header .brand small{display:block;margin-top:4px;font-size:10px;font-weight:400;color:#6e8290;letter-spacing:.5px}
+.app-header nav.app-navigation{display:flex;align-items:center;gap:5px;padding:0;margin:0;white-space:nowrap}
+.app-header .app-navigation a,.app-header .app-navigation .selected{display:block;padding:12px 18px;border-radius:11px;color:#54717f;font-size:13px;font-weight:500;line-height:18px;text-decoration:none;border:0;background:transparent;transition:background .2s,color .2s}
+.app-header .app-navigation a:hover{background:#edf3f5;color:#285d74}
+.app-header .app-navigation a.selected{color:#316d83;background:#e8f2f5;view-transition-name:app-tab-active}
+.app-header .app-navigation a{flex:none;min-width:max-content;max-width:none}
+.app-header .app-navigation a:focus-visible{outline:2px solid #528da1;outline-offset:3px}
+.app-header .header-actions{justify-self:end;display:flex;align-items:center;gap:14px;min-width:0}
+.app-header .header-center{font-size:11px;color:#728894;gap:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app-header .background-state{justify-self:end;margin-left:0;font-size:12px;white-space:nowrap}
+.app-header .local-badge{display:none}
+.learn-layout{height:calc(100dvh - var(--app-header-height))}
+@media(max-width:1100px){
+ :root{--app-header-height:60px}
+ .app-header.topbar,.app-header.learn-header{grid-template-columns:174px auto minmax(0,1fr);padding:0 14px;gap:16px}
+ .app-header .header-center{display:none}.app-header .header-actions{gap:7px}
+ .app-header .brand{font-size:17px}.app-header .app-navigation a,.app-header .app-navigation a.selected{padding:11px 15px}
+}
+@media(max-width:620px){
+ :root{--app-header-height:104px}
+ .app-header.topbar,.app-header.learn-header{grid-template-columns:1fr auto;grid-template-rows:52px 52px;gap:0 12px;padding:0 14px}
+ .app-header .brand{grid-column:1;grid-row:1;font-size:16px;gap:9px}.app-header .brand img{width:31px;height:31px}.app-header .brand small{display:none}
+ .app-header nav.app-navigation{grid-row:2;grid-column:1/-1;justify-self:start;gap:6px;align-self:start;padding-top:3px}
+ .app-header .app-navigation a,.app-header .app-navigation a.selected{display:block;padding:10px 18px;font-size:13px}
+ .app-header .header-actions,.app-header .background-state{grid-column:2;grid-row:1}
+ .app-header .background-state{font-size:11px}.app-header .header-actions{gap:6px}
+ .workspace.is-resizable,.workspace{height:calc(100dvh - 194px)}
+ body.library-drawer-open .workspace>.library{top:149px}
+ .learn-layout{height:auto;min-height:calc(100dvh - var(--app-header-height))}
+}
+/* Cross-document transitions preserve the header while the work surface glides. */
+@view-transition{navigation:auto}
+::view-transition-group(root),::view-transition-group(app-header),::view-transition-group(app-tab-active){animation-duration:380ms;animation-timing-function:var(--app-nav-ease)}
+::view-transition-old(root){animation:380ms var(--app-nav-ease) both app-surface-out}
+::view-transition-new(root){animation:380ms var(--app-nav-ease) both app-surface-in}
+::view-transition-old(app-header),::view-transition-new(app-header){animation:none;mix-blend-mode:normal}
+::view-transition-old(app-tab-active),::view-transition-new(app-tab-active){animation-duration:220ms;mix-blend-mode:normal}
+html[data-nav-direction="back"]{--app-nav-distance:-24px}
+html[data-nav-direction="forward"]{--app-nav-distance:24px}
+@keyframes app-surface-in{from{opacity:.25;transform:translateX(var(--app-nav-distance,24px))}to{opacity:1;transform:translateX(0)}}
+@keyframes app-surface-out{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(calc(-1 * var(--app-nav-distance,24px)))}}
+html.app-navigation-enter .workspace,html.app-navigation-enter .learn-layout{animation:340ms var(--app-nav-ease) both app-surface-in}
+@media(prefers-reduced-motion:reduce){
+ @view-transition{navigation:none}
+ .app-header .app-navigation a{transition:none}
+ ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation-duration:0s!important}
+ html.app-navigation-enter .workspace,html.app-navigation-enter .learn-layout{animation:none}
+}

@@ -1,0 +1,157 @@
+{
+  "version": "V16",
+  "scope": "All integer frames7550..8740 inclusive; live WorldV10, FishObserverV16 and CinematicRouteV10 with Stage bank, world→camera→actors order",
+  "status": "pass-camera-space-conservative-separation",
+  "frameCount": 1191,
+  "sources": [
+    {
+      "path": "src/WorldV10.ts",
+      "sha256": "d055020750ca781a768c14ff19f93a201c697b21a67fc6cbff8b3fde20728830"
+    },
+    {
+      "path": "src/FishObserverV16.ts",
+      "sha256": "f6d57ca677787bdde7016ee23a53f6b57e74ae8fa79938efeb246cb8ca353989"
+    },
+    {
+      "path": "src/FishMotionV14.ts",
+      "sha256": "78315adee6e83bd7f6cdb99d7e181fe88f124f31a0463bc8825329f9c40add3e"
+    },
+    {
+      "path": "src/CinematicRouteV10.ts",
+      "sha256": "6b7b8605dc30e7fa881f378b782239d357720573cc95993a0643a806ff578c64"
+    },
+    {
+      "path": "src/CameraPathV06.ts",
+      "sha256": "109abe49693913d6384651d8fc50a237f5ee81b5f3d584bfcf147a232ebf008f"
+    },
+    {
+      "path": "src/Timeline.ts",
+      "sha256": "216f16e22384d1bff2562228561c305cab4595edb5adcbd79de54e25ce959f56"
+    },
+    {
+      "path": "src/timeline.json",
+      "sha256": "45baaad624da03309b6d01159c5e76d9d08c09af3d7494da2d5c6de48baf1b1a"
+    },
+    {
+      "path": "src/V11RainbowArcFilm.tsx",
+      "sha256": "a208ff128109c24c6e2b21136ad6bbe7abcaa4ae66c1b421647e5c6ac3ba206f"
+    },
+    {
+      "path": "public/assets_v16/characters/rainbow_fish_v16.glb",
+      "sha256": "1622f5ff7a87a54a6f411ca37cfbf7a00d5e1b977f3d289941b92dc0719a2ae6"
+    }
+  ],
+  "viewport": [
+    1920,
+    1080
+  ],
+  "minimumClippedWidthAndHeightForBothLargePx": 40,
+  "minimumOpacityForBothLarge": 0.1,
+  "bothLargeFrames": 944,
+  "minSeparationGapPx": 150.31867391168066,
+  "worstFrame": 8505,
+  "worstCase": {
+    "frame": 8505,
+    "gap": 150.31867391168066,
+    "eyeDistance": 263.50711552990396,
+    "observer": {
+      "renderVisible": true,
+      "maxOpacity": 1,
+      "eye": {
+        "x": 753.3258884058768,
+        "y": 836.1560291063855,
+        "z": 0.9969019195763155
+      },
+      "bounds": {
+        "minX": 700.1586041802968,
+        "maxX": 805.1695038404,
+        "minY": 782.5272784765788,
+        "maxY": 895.968030759462,
+        "width": 105.01089966010318,
+        "height": 113.44075228288318,
+        "clipped": {
+          "minX": 700.1586041802968,
+          "maxX": 805.1695038404,
+          "minY": 782.5272784765788,
+          "maxY": 895.968030759462
+        },
+        "clippedWidth": 105.01089966010318,
+        "clippedHeight": 113.44075228288318
+      },
+      "activeMeshes": [
+        "ContinuousPearlBody",
+        "EyeIrisL",
+        "EyeIrisR",
+        "V16_Anal",
+        "V16_CatchlightL",
+        "V16_CatchlightR",
+        "V16_CatchlightSmallL",
+        "V16_CatchlightSmallR",
+        "V16_Dorsal",
+        "V16_PectoralL",
+        "V16_PectoralR",
+        "V16_PelvicL",
+        "V16_PelvicR",
+        "V16_ShortHeartTail",
+        "V16_TinySmile"
+      ]
+    },
+    "friend": {
+      "renderVisible": true,
+      "maxOpacity": 1,
+      "eye": {
+        "x": 490.1525355968432,
+        "y": 822.897586281448,
+        "z": 0.997070251693495
+      },
+      "bounds": {
+        "minX": 444.98194475566385,
+        "maxX": 549.8399302686162,
+        "minY": 772.4412531138504,
+        "maxY": 879.1618897324254,
+        "width": 104.85798551295233,
+        "height": 106.72063661857499,
+        "clipped": {
+          "minX": 444.98194475566385,
+          "maxX": 549.8399302686162,
+          "minY": 772.4412531138504,
+          "maxY": 879.1618897324254
+        },
+        "clippedWidth": 104.85798551295233,
+        "clippedHeight": 106.72063661857499
+      },
+      "activeMeshes": [
+        "ContinuousPearlBody",
+        "EyeIrisL",
+        "EyeIrisR",
+        "V16_Anal",
+        "V16_CatchlightL",
+        "V16_CatchlightR",
+        "V16_CatchlightSmallL",
+        "V16_CatchlightSmallR",
+        "V16_Dorsal",
+        "V16_PectoralL",
+        "V16_PectoralR",
+        "V16_PelvicL",
+        "V16_PelvicR",
+        "V16_ShortHeartTail",
+        "V16_TinySmile"
+      ]
+    }
+  },
+  "conservativeOverlapWarningCount": 0,
+  "warningFrames": [],
+  "conservativeBoundMethod": "Union of positive-weight per-bone support AABBs transformed through mesh bind, current bone world, inverse bind and mesh world. This contains convex blended skin; no body-centre or rigid mesh proxy.",
+  "exactSkinContainmentValidation": {
+    "frames": 22,
+    "allActiveSkinVerticesAtValidationFrames": true,
+    "maxProjectedEscapePx": 0
+  },
+  "limitations": [
+    "Projected support boxes are conservative and ignore environment/other-mesh occlusion. Their overlap alone does not prove silhouette or mesh overlap.",
+    "No GPU render or normal-speed playback is claimed. Exact frame-index data and source hashes make the result reviewable."
+  ],
+  "sourcesModified": false,
+  "rowsPath": "research/qa-v16/friend-projection-frames-v16.json",
+  "warningsPath": "research/qa-v16/friend-projection-warnings-v16.json"
+}

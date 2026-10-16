@@ -1,0 +1,78 @@
+{
+  "id": "v4c-proof-1",
+  "text": "强度、运动和系泊缆绳逐项检查。模型、图纸、日志和报告，一起成为可追溯的交付。",
+  "ttsText": "强度、运动和寄泊缆绳逐项检查。模型、图纸、日志和报告，一起成为可追溯的交付。",
+  "signature": "5686fad3d2ca2b191ef26e7ee39ee05eba7e2e745caac03fdf78c8ccff72cfc9",
+  "raw": "audio/raw/v4c-proof-1-5686fad3d2.wav",
+  "processed": "public/voice/v4c-proof-1.wav",
+  "rawDuration": 7.728041666666667,
+  "duration": 7.968041666666666,
+  "sha256": "bf9309e89e328390afa23a343f34c1c30a3050a79861544096c86388aa45996c",
+  "rawSHA256": "8d1e0088349baa35ed0d943920ec3b1e37b41bb81e2911a84be620d512d2aaf6",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "segments": [
+    {
+      "text": "强度、运动和寄泊缆绳逐项检查。模型、图纸、日志和报告，一起成为可追溯的交付。",
+      "language": "auto"
+    }
+  ],
+  "rawEndpointDB": -70.23249868954854,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "567b24c51571dea104a8419c4963c9c44cf0388e297ba4bc6a42f762df6278a1",
+    "outputSha256": "bf9309e89e328390afa23a343f34c1c30a3050a79861544096c86388aa45996c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 7.968041666666666,
+      "peakDb": -9.264176896426802,
+      "activeRmsDb": -27.6657292864369,
+      "quietFrameP10Db": -74.64849445127479
+    },
+    "output": {
+      "seconds": 7.968041666666666,
+      "peakDb": -5.454861099177765,
+      "activeRmsDb": -24.348224393587202,
+      "quietFrameP10Db": -78.31435261154996
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "sourceCandidateId": "v4-proof-1",
+  "voiceSource": "Provider public voice; not personal clone",
+  "personalReferenceUploaded": false,
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "subjectiveListeningChecked": false
+}

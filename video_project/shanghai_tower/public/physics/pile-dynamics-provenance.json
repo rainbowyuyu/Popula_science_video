@@ -1,0 +1,198 @@
+{
+  "acceptedForFilm": true,
+  "acceptedForEngineeringDesign": false,
+  "decision": "All numerical gates pass for the stated independent linear single-pile example.",
+  "solver": {
+    "name": "local Zwind/OpenSees",
+    "version": "3.8.0",
+    "binary": "D:\\python_project\\os2zwind\\bin\\opensees.pyd",
+    "binarySHA256": "691b78a308e0b3a66c94096d32c4986b0db797d18f7e8119cb157254f3cd84a4",
+    "scriptSHA256": "8b3b4249c0d323ce16278197bd3b9ce20535788ae723d66a0f68158e81cb89ac"
+  },
+  "source": {
+    "pdf": "research/structural/zhu2012-http.pdf",
+    "sha256": "816ded5b30123c3701b339e8a8278b21b2cc1d076a0ed2dbd4adb6b146dd05b9",
+    "title": "Structural Design Challenges of Shanghai Tower",
+    "authors": "Yi Zhu; Dennis Poon; Emmanuel E. Velivasakis; Steve Zuo; Paul Fu",
+    "year": null,
+    "evidence": "PDF p8: 947 piles, 1m diameter, 52–56m effective length, 6m mat, toe layer9-2-1; Table1 soil depths. p10 mat top -25.4m; 31.4m pile head derived from top+6m thickness, not measured as-built."
+  },
+  "assumptions": [
+    "E=32GPa, rho=2500kg/m3, all stiffnesses/dashpots and 8MN head load are assumptions, not site calibrated.",
+    "Head is free to rotate; zero imposed head moment. P/G cap tributary lumped mass participates, no rigid raft stiffness or group interaction.",
+    "Elastic beam, small displacement, linear t-z/p-y/toe analogues; no gapping/yielding, groundwater coupling, consolidation, radiation-domain or continuum soil-stress solve.",
+    "Dynamic load is prescribed 40s synthetic 0.3MN lateral envelope plus +/-0.4MN vertical modulation, not CFD or tower-reaction transfer.",
+    "Depth corrected to source-derived31.4m; previous display model33m differs. Do not move source layers to match the old model."
+  ],
+  "validation": {
+    "cantileverBackendBenchmark": {
+      "analysisCode": 0,
+      "expectedDisplacement_m": 0.00013333333333333334,
+      "measuredDisplacement_m": 0.00013333333333333334,
+      "relativeError": 0.0,
+      "baseReaction": [
+        -1000.0000000000008,
+        0.0,
+        10000.000000000004
+      ],
+      "passed": true
+    },
+    "timeStepCoarse": {
+      "headLateralRelativeL2": 0.00022022717203126104,
+      "headLateralPeakDifferenceRatio": 0.00017687597786776238,
+      "peakMomentRelativeDifference": 4.623839749329228e-05,
+      "peakShearRelativeDifference": 7.240127719732037e-05
+    },
+    "timeStepFine": {
+      "headLateralRelativeL2": 5.507586584572414e-05,
+      "headLateralPeakDifferenceRatio": 4.4173500190331014e-05,
+      "peakMomentRelativeDifference": 1.504983498423762e-05,
+      "peakShearRelativeDifference": 3.878282189839766e-06
+    },
+    "mesh1to05": {
+      "headLateralRelativeL2": 0.012108811014050105,
+      "headLateralPeakDifferenceRatio": 0.013355267960666963,
+      "peakMomentRelativeDifference": 0.008745045246434047,
+      "peakShearRelativeDifference": 0.10050170363659638
+    },
+    "mesh05to025": {
+      "headLateralRelativeL2": 0.002429656263490447,
+      "headLateralPeakDifferenceRatio": 0.0026676514271045744,
+      "peakMomentRelativeDifference": 0.002029420794043557,
+      "peakShearRelativeDifference": 0.048548215501008296
+    },
+    "meshRefinement": {
+      "headLateralRelativeL2": 0.0006110565901251595,
+      "headLateralPeakDifferenceRatio": 0.0006702870683455654,
+      "peakMomentRelativeDifference": 0.0008039836907154374,
+      "peakShearRelativeDifference": 0.023750537745891642
+    },
+    "passed": true,
+    "base": {
+      "failedSteps": 0,
+      "independentStaticRelativeError": 4.541093008495027e-13,
+      "elementForceMaximumDifference_N_Nm": 0.0004272931982995942,
+      "maxEquationResidual_N_Nm": 0.0011865577995422427,
+      "relativeEquationResidual": 2.966399768748645e-09,
+      "maxGlobalForceBalance_N": 2.185065326898439e-06,
+      "maxMomentBalance_Nm": 8.0170524285883e-06,
+      "energyRelativeResidual": 5.729292075031297e-10,
+      "dampingEnergyMonotonic": true,
+      "postLoadEnergyMonotonic": true,
+      "staticAppliedVertical_N": 9001276.2368806,
+      "staticShaftSupport_N": 8388671.103062198,
+      "staticToeSupport_N": 612605.1338183229,
+      "peakHeadLateral_mm": 14.431480301385061,
+      "headStaticSettlement_mm": 11.12041509847912,
+      "maxAbsMoment_kNm": 549.6284944044196,
+      "maxAbsShear_kN": 303.99202589890155,
+      "firstFrequencies_Hz": [
+        0.816437276504041,
+        4.781652672829376,
+        14.965721216769781,
+        15.64798017526621,
+        17.395324794728722,
+        18.665465013898427,
+        21.081195776386593,
+        22.929109095582746
+      ],
+      "firstModalDampingRatios": [
+        0.018811150166589248,
+        0.07809474647768092,
+        0.44471097329139087,
+        0.45751707914218254,
+        0.4493789222151222,
+        0.5148906323205155,
+        0.45620619713094757,
+        0.577125908794385
+      ],
+      "elapsedSeconds": 10.817460799997207
+    },
+    "dateUTC": "2026-10-09T01:44:59.380880+00:00",
+    "selectedMeshTimeStep": {
+      "mesh_m": 0.125,
+      "dtCoarse_s": 0.01,
+      "dtFine_s": 0.005,
+      "headLateralRelativeL2": 5.3206636105704973e-05,
+      "headLateralPeakDifferenceRatio": 4.2526811818696454e-05,
+      "peakMomentRelativeDifference": 1.0161343910741749e-05,
+      "peakShearRelativeDifference": 1.063103854126446e-05,
+      "passed": true
+    }
+  },
+  "originalPublicPhysicsModified": false,
+  "upperTowerFiniteElementModelModified": false,
+  "fieldAuthority": "Displacement and beam stress are executed FE results. Soil is represented by linear springs/dashpots; only interface traction is solved.",
+  "excludedClaims": [
+    "No actual Shanghai Tower pile-group dynamics.",
+    "No measured geotechnical stiffness or consolidated settlement prediction.",
+    "No CFD-derived load applied to this independent pile.",
+    "No Diffusion-trained pile inversion."
+  ],
+  "diffusion": {
+    "used": false,
+    "compatible": false,
+    "inspected": [
+      "D:/python_project/OVOW/research/inverse_loads/neural_surrogate/README.md",
+      "D:/python_project/OVOW/research/inverse_loads/temporal_diffusion/README.zh-CN.md"
+    ],
+    "availableCheckpoints": [
+      "D:/python_project/OVOW/research/inverse_loads/neural_surrogate/results/offshore_rom_s17/diffusion_best.pt",
+      "D:/python_project/OVOW/research/inverse_loads/neural_surrogate/results/oc4_s43/diffusion_best.pt"
+    ],
+    "reason": "Existing trained contracts are NREL5MW farm/OC4 offshore platform/6-turbine horizontal ROM, with fixed response channels. Unknown soil/structure explicitly unsupported. Pile axial/lateral DOFs and interface reaction fields do not match. No valid trained pile inverse model found; no inference claim made."
+  },
+  "artifacts": {
+    "case.json": {
+      "path": "research/physics-v7/pile/case.json",
+      "sha256": "2630596d963e64c0aa3686218c86f7e3e6df448dc2cceb8064f70119c3afc8b9",
+      "bytes": 153659
+    },
+    "playback.json": {
+      "path": "research/physics-v7/pile/playback.json",
+      "sha256": "21c7ae31bd2ddff07d88f832ede00c8c353acdd18aac8c4b9065564e1f009861",
+      "bytes": 7099370
+    },
+    "dynamic.json": {
+      "path": "research/physics-v7/pile/dynamic.json",
+      "sha256": "224a564a5d46e0337b9f74cb3c02e3c1c67897b45e9e6d3234fb3f37cc92f218",
+      "bytes": 73931218
+    },
+    "static.json": {
+      "path": "research/physics-v7/pile/static.json",
+      "sha256": "6b428f141353250168aeecbec3887de5a92a19cf3b31563f79f1bc8f6df0737a",
+      "bytes": 2423899
+    },
+    "validation.json": {
+      "path": "research/physics-v7/pile/validation.json",
+      "sha256": "05a3926a9f2516af40877eda1c7e2dc6824f83dc5d3674ee27f6e036908e73a9",
+      "bytes": 3447
+    },
+    "fine-clock-qa.json": {
+      "path": "research/physics-v7/pile/fine-clock-qa.json",
+      "sha256": "23e2d1d285b40ae017bba0110b9f53c10408d451ad580ecc91d6645e6b5d9981",
+      "bytes": 318
+    },
+    "pile-analysis.png": {
+      "path": "research/physics-v7/pile/pile-analysis.png",
+      "sha256": "4a5d0932fee22afe2b97fa2c47db274a1719ba0c1c7b946c1024f7134b2ee2b2",
+      "bytes": 399874
+    },
+    "solve_pile.py": {
+      "path": "research/physics-v7/pile/solve_pile.py",
+      "sha256": "8b3b4249c0d323ce16278197bd3b9ce20535788ae723d66a0f68158e81cb89ac",
+      "bytes": 16551
+    },
+    "verify_fine_clock.py": {
+      "path": "research/physics-v7/pile/verify_fine_clock.py",
+      "sha256": "2d9b18160b9977ca773bc348690d134ebdd836b53f4c19831db0948f580849d7",
+      "bytes": 1277
+    },
+    "export_playback.py": {
+      "path": "research/physics-v7/pile/export_playback.py",
+      "sha256": "cfac3d1c9cdd7fca009ea095923e3214ebc26b9caf5b42de1657d90d46cee36f",
+      "bytes": 6821
+    }
+  },
+  "createdUTC": "2026-10-09T01:50:29.035343+00:00"
+}

@@ -1,0 +1,16 @@
+import {openBrowser} from '@remotion/renderer';import path from 'node:path';import fs from 'node:fs';
+const browser=await openBrowser('chrome',{browserExecutable:path.resolve('node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe'),chromiumOptions:{gl:'angle'}});
+const errors=[];const page=await browser.newPage({context:()=>null,logLevel:'error',indent:false,pageIndex:0,onBrowserLog:null,onLog:()=>{}});page.on('error',e=>errors.push(String(e)));
+await page.setViewport({width:1600,height:1000,deviceScaleFactor:1});
+await page.goto({url:process.env.WEB_REPLAY_URL??'file:///'+path.resolve('public/v3/index.html').replaceAll('\\','/'),timeout:30000});
+await page.evaluate(()=>new Promise((resolve,reject)=>{const limit=setTimeout(()=>{clearInterval(t);reject(new Error('Replay controls did not mount within 15 seconds'))},15000);const t=setInterval(()=>{if(document.querySelector('input')){clearInterval(t);clearTimeout(limit);resolve(true)}},100)}));
+await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+const initial=await page.evaluate(()=>({value:document.querySelector('input').value,text:document.body.innerText,canvas:document.querySelector('canvas').toDataURL().length}));
+await page.evaluate(()=>{document.querySelector('button').click()});
+await new Promise(r=>setTimeout(r,1100));
+await page.evaluate(()=>document.querySelector('button').click());
+const after=await page.evaluate(()=>({value:document.querySelector('input').value,text:document.body.innerText}));
+const screenshot=await page._client().send('Page.captureScreenshot',{format:'jpeg',quality:90});fs.writeFileSync('output/v3/web-check.jpg',Buffer.from(screenshot.value.data,'base64'));
+if(!(Number(after.value)<50&&Number(after.value)>0&&initial.canvas>10000))throw new Error('Web replay failed');
+fs.writeFileSync('research/v3/web-check.json',JSON.stringify({initial,after,errors,passed:errors.length===0},null,2));
+console.log('Interactive replay verified:',initial.value,'to',after.value);await browser.close({silent:true});

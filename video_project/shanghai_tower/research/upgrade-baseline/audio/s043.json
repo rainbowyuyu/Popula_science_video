@@ -1,0 +1,70 @@
+{
+  "id": "s043",
+  "text": "弯曲的外幕墙也要分块安装，还得适应结构变形。你看到的完整曲面，是许多构件精细配合的结果。",
+  "ttsText": "弯曲的外幕墙也要分块安装，还得适应结构变形。你看到的完整曲面，是许多构件精细配合的结果。",
+  "signature": "7c6f1cfff2f2c58682bdc6b3b15456c6a7b629eb3127fe5af17431cf53d747c9",
+  "raw": "audio/raw/s043-7c6f1cfff2.wav",
+  "processed": "public/voice/s043.wav",
+  "rawDuration": 8.4,
+  "duration": 8.4,
+  "sha256": "0b284a9df5dfc1b217ca91e3af852756ead90b5ad92e622a99c135f4e083f732",
+  "seed": 870444210,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s041",
+    "s042",
+    "s043",
+    "s044"
+  ],
+  "rawEndpointDB": -60.830663800490505,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b43c0d5ec26cef619fd0531f330571832fada264c2b5b0b495ca5ed3689c5d1c",
+    "outputSha256": "0b284a9df5dfc1b217ca91e3af852756ead90b5ad92e622a99c135f4e083f732",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.372475606881082,
+    "input": {
+      "seconds": 8.4,
+      "peakDb": -6.392645394055072,
+      "activeRmsDb": -22.044212710348493,
+      "quietFrameP10Db": -59.16301042447279
+    },
+    "output": {
+      "seconds": 8.4,
+      "peakDb": -4.825722892847477,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.083129203231195
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

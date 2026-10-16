@@ -1,0 +1,223 @@
+{
+  "pdbId": "5VAI",
+  "sourceFiles": [
+    {
+      "path": "5VAI.pdb",
+      "url": "https://files.rcsb.org/download/5VAI.pdb",
+      "sha256": "630fb7a93072b571cdce27f48b75db3b3c90a4d88a3539c0849a27edd6adb334"
+    },
+    {
+      "path": "5VAI.cif",
+      "url": "https://files.rcsb.org/download/5VAI.cif",
+      "sha256": "0560ed3786d2d939de11061183391562ecc93f06ad9614e4b7dc0fdbc0dea810"
+    },
+    {
+      "path": "5VAI-entry.json",
+      "url": "https://data.rcsb.org/rest/v1/core/entry/5VAI",
+      "sha256": "4eaf0ac79c0dbd7c805d8c97391d48b890834c1fac4226804b29acf3604e14c0"
+    }
+  ],
+  "chains": [
+    {
+      "id": "R",
+      "role": "receptor",
+      "name": "GLP-1 receptor",
+      "organism": "Oryctolagus cuniculus",
+      "modeledResidues": 387,
+      "modeledResidueRange": [
+        29,
+        421
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "endExclusive": 100,
+          "startResid": 29,
+          "endResid": 128
+        },
+        {
+          "start": 100,
+          "endExclusive": 387,
+          "startResid": 135,
+          "endResid": 421
+        }
+      ]
+    },
+    {
+      "id": "P",
+      "role": "ligand",
+      "name": "GLP-1(7–37)",
+      "organism": "Homo sapiens",
+      "modeledResidues": 31,
+      "modeledResidueRange": [
+        7,
+        37
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "endExclusive": 31,
+          "startResid": 7,
+          "endResid": 37
+        }
+      ]
+    },
+    {
+      "id": "A",
+      "role": "gs_alpha",
+      "name": "Gs alpha",
+      "organism": "Homo sapiens",
+      "modeledResidues": 234,
+      "modeledResidueRange": [
+        9,
+        394
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "endExclusive": 51,
+          "startResid": 9,
+          "endResid": 59
+        },
+        {
+          "start": 51,
+          "endExclusive": 102,
+          "startResid": 205,
+          "endResid": 255
+        },
+        {
+          "start": 102,
+          "endExclusive": 234,
+          "startResid": 263,
+          "endResid": 394
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "role": "gs_beta",
+      "name": "G beta 1",
+      "organism": "Rattus norvegicus",
+      "modeledResidues": 340,
+      "modeledResidueRange": [
+        1,
+        340
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "endExclusive": 340,
+          "startResid": 1,
+          "endResid": 340
+        }
+      ]
+    },
+    {
+      "id": "G",
+      "role": "gs_gamma",
+      "name": "G gamma 2",
+      "organism": "Bos taurus",
+      "modeledResidues": 58,
+      "modeledResidueRange": [
+        5,
+        62
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "endExclusive": 58,
+          "startResid": 5,
+          "endResid": 62
+        }
+      ]
+    },
+    {
+      "id": "N",
+      "role": "nanobody",
+      "name": "Nanobody 35 (experimental stabilizer)",
+      "organism": "Lama glama",
+      "modeledResidues": 128,
+      "modeledResidueRange": [
+        1,
+        128
+      ],
+      "segments": [
+        {
+          "start": 0,
+          "endExclusive": 128,
+          "startResid": 1,
+          "endResid": 128
+        }
+      ]
+    }
+  ],
+  "bindingPose": {
+    "boundInDepositedModel": true,
+    "ligandChain": "P",
+    "receptorChain": "R",
+    "minimumHeavyAtomDistanceAngstrom": 2.162,
+    "closestLigand": {
+      "resid": 13,
+      "resname": "THR",
+      "name": "OG1"
+    },
+    "closestReceptor": {
+      "resid": 197,
+      "resname": "LYS",
+      "name": "NZ"
+    },
+    "note": "Native deposited bound coordinates retained. Distance contacts are geometric proximity, not automatically hydrogen bonds."
+  },
+  "contactResiduePairsWithin4_5Angstrom": 62,
+  "displayTransform": {
+    "originAngstrom": [
+      139.37388596491223,
+      135.1517192982456,
+      121.81470175438596
+    ],
+    "rotationRowMajor": [
+      [
+        0.3079224472496194,
+        -0.7147964543536561,
+        0.627893140051113
+      ],
+      [
+        0.9449073842754215,
+        0.3067976166122567,
+        -0.11412825059037518
+      ],
+      [
+        -0.11105764999128077,
+        0.6284435147922846,
+        0.7698863208902555
+      ]
+    ],
+    "formula": "display = rotationRowMajor * (originalPosition - originAngstrom)",
+    "unitsAfterTransform": "angstrom",
+    "yAxis": "approximately extracellular (+) to intracellular (-)",
+    "preservesAllInteratomicDistances": true,
+    "scaleForThreeJs": 0.05,
+    "bounds": [
+      [
+        -33.176190181202465,
+        -86.47959426114537,
+        -30.310742478061563
+      ],
+      [
+        46.96142808517196,
+        71.4575359137599,
+        41.19367372053983
+      ]
+    ],
+    "center": [
+      6.892618951984748,
+      -7.511029173692734,
+      5.441465621239132
+    ],
+    "size": [
+      80.13761826637443,
+      157.93713017490526,
+      71.50441619860139
+    ]
+  }
+}

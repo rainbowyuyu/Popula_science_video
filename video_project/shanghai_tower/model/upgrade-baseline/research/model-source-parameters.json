@@ -1,0 +1,47 @@
+{
+  "schema": "rainbow.architectural-reconstruction-sources/1",
+  "parameters": {
+    "height": 632.0,
+    "twist_degrees": 120.0,
+    "excavation_depth": 33.0,
+    "diaphragm_inner_diameter": 121.0,
+    "raft_thickness": 6.0,
+    "zone_boundaries": [0, 38, 100, 170, 240, 312, 387, 468, 559, 583],
+    "source_status": "Global height/twist/foundation dimensions verified; zone interfaces proportionally reconstructed from public architect section. Intermediate floor heights, member sizes, pile arrangement and TMD physical size are teaching approximations."
+  },
+  "verified": [
+    {
+      "source": "Jian Gong, Shanghai Tower, Frontiers of Engineering Management 4(1), 106–109 (2017)",
+      "doi": "10.15302/J-FEM-2017001",
+      "url": "https://journal.hep.com.cn/fem/EN/10.15302/J-FEM-2017001",
+      "claims": ["632 m architectural height", "120 degree external curtain-wall rotation", "33 m excavation", "121 m inside diameter circular diaphragm wall", "6 m foundation mat thickness", "five underground storeys", "steel-concrete core, megacolumns, belt/outrigger trusses and composite floors"]
+    },
+    {
+      "source": "Gensler public section and diagrams, ArchDaily Shanghai Tower / Gensler (2016)",
+      "url": "https://www.archdaily.com/783216/shanghai-tower-gensler",
+      "local_images": ["research/drawings/archdaily-section-1.jpg", "research/drawings/archdaily-diagram-1.jpg", "research/drawings/archdaily-diagram-2.jpg", "research/drawings/archdaily-diagram-3.jpg"],
+      "claims": ["rounded triangular rotating outer shell", "circular internal occupied tower", "multiple vertical atrium zones", "uneven open crown", "suspended rectangular TMD schematic"],
+      "measurement_note": "Section y=1067 ground and y=0 top gives approximately 1.688 pixels per metre. Interzone deck traces near y=1005,899,780,661,540,414,277,124 imply approximately 37,100,170,240,312,387,468,559 m. Boundaries are rounded graphic estimates, not surveyed dimensions or working drawings."
+    },
+    {
+      "source": "Trevor Haskett, Feeling at Home in the Clouds, STRUCTURE (2017)",
+      "url": "https://www.structuremag.org/article/feeling-at-home-in-the-clouds/",
+      "claims": ["Shanghai Tower suspended-mass TMD", "rare-earth magnet array moves with mass", "copper plate fixed to floor dissipates motion via eddy currents"],
+      "limitation": "Concept geometry is illustrated. Exact mass-block dimensions, suspension length, support-frame detail and installation elevation are not taken from an as-built drawing."
+    }
+  ],
+  "explicit_approximations": {
+    "outer_plan": "Smooth harmonic rounded-triangle approximation r(theta)=r0[1+0.145 cos(3theta)] with 120 degree total twist; not the architect's fabrication spline.",
+    "base_outer_radius_m": 49.0,
+    "top_to_base_area_ratio": 0.45,
+    "occupied_cylinder_radii_m": [38.0, 22.6],
+    "core_widths_m": [30.0, 18.0],
+    "floor_levels": "Uniform spacing under 583 m produces representative decks; it is not the documented numbered-floor schedule.",
+    "mega_columns": "Eight paired perimeter columns shown for the primary structural mechanism, with indicative rectangular sections.",
+    "pile_group": "947 representative 1 m diameter cylinders, 52 m below raft: retained as illustrative dense geometry, not a verified pile layout, quantity survey or design length.",
+    "tmd": "Rectangular suspended mass at illustrative centre 578 m, four visible suspension lines, simplified rare-earth blocks and fixed copper plate.",
+    "six_skin_sectors": "Animation decomposition groups only, not six real fabrication seams.",
+    "crown": "Nonlevel open rim visually reconstructed from public section; only the 632 m maximum is source verified."
+  },
+  "scientific_scope": "No computational fluid dynamics, finite-element stresses, structural safety validation or construction-ready BIM is supplied by this asset. Forces drawn along this model are explanatory load paths unless an independent solver is explicitly connected."
+}

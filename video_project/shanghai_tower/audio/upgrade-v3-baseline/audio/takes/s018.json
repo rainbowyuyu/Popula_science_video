@@ -1,0 +1,68 @@
+{
+  "id": "s018",
+  "text": "连接它们的，是六处关键高度上的伸臂桁架。看起来像横着伸出去的小钢桥，把核心筒和外圈接在一起。",
+  "ttsText": "连接它们的，是六处关键高度上的伸臂横架。看起来像横着伸出去的小钢桥，把核心筒和外圈接在一起。",
+  "signature": "930b36b6a86cbae2dca2910660c5c496160cacfd7a35a23a1af55bb5cc67da00",
+  "raw": "audio/raw/s018-930b36b6a8.wav",
+  "processed": "public/voice/s018.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "9a8cd6870ba5eca1151a79ea35504326d3affedcc31a2c169b62cdc4c872be2b",
+  "seed": 807566561,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s011",
+    "s018"
+  ],
+  "rawEndpointDB": -97.10677410633582,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "4a3451e439a831b2a9e1c52b5981c61c1e78b81362f39e6f82aa770b8aabb0c1",
+    "outputSha256": "9a8cd6870ba5eca1151a79ea35504326d3affedcc31a2c169b62cdc4c872be2b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.589701004048038,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -5.033089606840565,
+      "activeRmsDb": -22.018356178735395,
+      "quietFrameP10Db": -61.7800679769983
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -3.0286752171882396,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.58594624316531
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

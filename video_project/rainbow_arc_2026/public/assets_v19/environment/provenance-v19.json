@@ -1,0 +1,52 @@
+{
+  "version": "V19",
+  "derivedFrom": "public/assets_v18/environment/rain_garden_v18.blend",
+  "derivedFromSHA256": "e764b3b2f0517bf8f119154de324cddceaf96641b3e8114b7ef778343ec44f4e",
+  "sourceAssetBytesModified": false,
+  "styleProfile": "hand-painted botanical accents + physically based rain garden",
+  "changes": [
+    "Retained V18 photographic botanical volume; low-poly cluster prototype is disabled after static review to keep close shots clean.",
+    "Added up to 96 sparse crossed-blade grass tufts with clear path/pond exclusions.",
+    "Added low-energy warm sunbreak, cool mist fill, and cyan wet-rim source lights with frame keyframes.",
+    "Recorded rainbow optical scale anchor 1.18 for the runtime geometry integrator."
+  ],
+  "wind": {
+    "seed": 190713,
+    "mode": "runtime deterministic shader + source keyframes",
+    "strength": 0.034,
+    "gustPeriodSeconds": 8.2
+  },
+  "rainLight": {
+    "mode": "warm-sunbreak + cool-mist-fill + cyan-wet-rim",
+    "animated": true
+  },
+  "rainbowScale": 1.18,
+  "rainbowScaleDeltaFromV18": 0.06,
+  "newObjects": {
+    "foliageClusters": 0,
+    "grassTufts": 96,
+    "reviewLights": 3
+  },
+  "runtimeCompatibility": {
+    "windMaterialNameFragments": [
+      "tree_small_02_leaves",
+      "living_meadow_blades"
+    ],
+    "waterOwner": "Three.js WaterPoolV16/V18",
+    "opticsOwner": "Three.js deterministic rainbow geometry",
+    "integrationNote": "Switch only the environment GLB path after V19 static review; V18 remains rollback target."
+  },
+  "files": [
+    {
+      "file": "rain_garden_v19.blend",
+      "bytes": 89766883,
+      "sha256": "44b7496232e26bb1bffe8ae0355e6e8dcc0967ae711cd1fa1ac58b817937eb60"
+    },
+    {
+      "file": "rain_garden_v19.glb",
+      "bytes": 132303328,
+      "sha256": "f9a8ba1cce1a1f737bf8ab5ed9b456fa495bc8437d028ce4fe20d06b892b2b60"
+    }
+  ],
+  "generatedUTC": "2026-10-12T22:11:53.734983+00:00"
+}

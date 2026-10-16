@@ -1,0 +1,85 @@
+{
+  "id": "h077",
+  "partIndex": 0,
+  "ttsText": "如果突然嘴歪、说不清话、一侧胳膊没力，要立即拨打一、二、零急救电话。急症来时，不能等吃点药、睡一觉再看看。",
+  "storySHA256": "3dbdd64f585f1902501a8d3bbaf4f6171428df334a9ac8e35e35035f5ccd61f8",
+  "attempt": 11,
+  "seed": 3001215353,
+  "signature": "b2e2e97965e9d2314a7f419763ce324d3bfc4bef7fe410455aeb11211c9b36c1",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h077-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-11\\raw\\h077-p01.wav",
+  "rawSHA256": "ed86a25fb822bc6662fb9445a34ce9ec3c0958aeaf8f253ba4e544a278cde606",
+  "rawMetrics": {
+    "samples48k": 510720,
+    "seconds": 10.64,
+    "peakDBFS": -6.469300249840978,
+    "first20msDBFS": -37.20927188648353,
+    "last20msDBFS": -97.15898238139025,
+    "firstActiveMs": 10.0,
+    "lastActiveToEndMs": 420.0,
+    "activityThresholdDBFS": -48.19620142637875,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-11\\guarded\\h077-p01.wav",
+  "guardedSHA256": "1c8ca8bc0e00f24043810a2c689bc6cc7ad5ad25f6f322438abc7aecab26830c",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-11\\processed\\h077-p01.wav",
+  "sha256": "c190a0df2fb1f6bd6b4feea992315658b06a6a2478c49dfaec753c055317157d",
+  "durationSeconds": 10.88,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "1c8ca8bc0e00f24043810a2c689bc6cc7ad5ad25f6f322438abc7aecab26830c",
+    "outputSha256": "c190a0df2fb1f6bd6b4feea992315658b06a6a2478c49dfaec753c055317157d",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.6113166984755267,
+    "input": {
+      "seconds": 10.88,
+      "peakDb": -6.468764824514439,
+      "activeRmsDb": -22.303229694801775,
+      "quietFrameP10Db": -64.88145627724619
+    },
+    "output": {
+      "seconds": 10.88,
+      "peakDb": -6.236424868066863,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -65.91165091815606
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

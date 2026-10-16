@@ -1,0 +1,58 @@
+{
+  "title": "需求写回同一份设计清单",
+  "parser": "规则解析（未调用云模型）",
+  "checklistId": "89291082ee664ffca38900d586c4fb66",
+  "steps": [
+    {
+      "name": "解析工程需求",
+      "capacityMW": 20,
+      "steelTargetTperMW": 300,
+      "waterDepthM": 45
+    },
+    {
+      "name": "修改目标与场址",
+      "capacityMW": 20,
+      "steelTargetTperMW": 280,
+      "waterDepthM": 55
+    },
+    {
+      "name": "读取持久化结果",
+      "capacityMW": 20,
+      "steelTargetTperMW": 280,
+      "waterDepthM": 55
+    },
+    {
+      "name": "应用20MW产品预设",
+      "preset": {
+        "id": "20",
+        "label": "20 MW FOWT demo (legacy manuscript target)",
+        "target_power_mw": 20.0,
+        "base_rated_power_mw": 5.0,
+        "rotor_dia_m": 252.0,
+        "hub_height_m": 180.0,
+        "rna_mass_kg": 999139.7510484894,
+        "draft_m": 20.0,
+        "wall_thickness_m": 0.06,
+        "cload_mag": -20000000.0,
+        "horizontal_thrust_n": 1124000.0,
+        "band_scale": 1.22,
+        "z_fix_band": 800.0,
+        "steel_intensity_t_per_mw": 300.0,
+        "notes": [
+          "Horizontal scale √(P/5) = 2.0000",
+          "Geometry remains OC4/BESO semisub family unless user replaces CAD."
+        ],
+        "horizontal_scale": 2.0,
+        "column_thresholds": {
+          "center_r_min": 2400.0,
+          "center_r_max": 4400.0,
+          "center_len_min": 20000.0,
+          "vertical_r_min": 2400.0,
+          "vertical_len_min": 5000.0,
+          "outer_len_min": 18000.0
+        }
+      }
+    }
+  ],
+  "claimBoundary": "真实产品路由与工具执行；展示参数操作，不是本轮新BESO或Z-wind求解，也不是浏览器点击录屏。"
+}

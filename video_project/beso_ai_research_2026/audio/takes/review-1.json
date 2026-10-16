@@ -1,0 +1,80 @@
+{
+  "id": "review-1",
+  "text": "它参考十一个浮式风电项目，从容量、用钢、成本、可建造性和疲劳寿命五个维度评分。",
+  "ttsText": "它参考十一个浮式风电项目，从容量、用钢、成本、可建造性和疲劳寿命五个维度评分。",
+  "signature": "be6e96a6bbf3cfaa621813d6903c3426d813028b8d2e6a1e4a3fc9ec848df230",
+  "raw": "audio/raw/review-1-be6e96a6bb.wav",
+  "processed": "public/voice/review-1.wav",
+  "rawDuration": 8.08,
+  "duration": 8.32,
+  "sha256": "0bdcfbfb86310fe7c95fc25d354201502bf330adaf0db69472be8c852771eaef",
+  "seed": 3194918566,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "review-1",
+    "review-2"
+  ],
+  "rawEndpointDB": -95.94851862956368,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "6a71aafa73c0ddfcf0e4017becc9a720b1538a900b715fd76343bc8a491aec81",
+    "outputSha256": "0bdcfbfb86310fe7c95fc25d354201502bf330adaf0db69472be8c852771eaef",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.9001875907354915,
+    "input": {
+      "seconds": 8.32,
+      "peakDb": -9.316239907482258,
+      "activeRmsDb": -23.91947278963557,
+      "quietFrameP10Db": -67.72945571932833
+    },
+    "output": {
+      "seconds": 8.32,
+      "peakDb": -5.580759229853002,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -67.00459733129993
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.836923076923077,
+    "unmodifiedRawSHA256": "7ee43d2b796d38466d3e8d832ab0f65cc2f5a194c02fe4b2c783dd55d4a49ad2"
+  },
+  "subjectiveListeningChecked": false
+}

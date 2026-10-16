@@ -1,0 +1,81 @@
+{
+  "id": "s036",
+  "text": "风推着大楼左右摇，重物就跟着相对摆动。把它的节奏调好，就能在运动中牵住大楼，减轻晃动。",
+  "ttsText": "气流把大楼推得左右摇，重物就跟着相对摆动。把它的节奏调到合适，就能在运动中牵住大楼，减轻晃动。",
+  "signature": "1ad0892553506c95eff384823c1a5b4dc0739224d6399e83cf87a5100188ac10",
+  "raw": "audio/raw/s036-1ad0892553.wav",
+  "processed": "audio/candidates/v6-pronunciation/s036.wav",
+  "rawDuration": 9.44,
+  "duration": 9.68,
+  "sha256": "9623d5b86a4d13c116025c91be4dd35bb2acf42402fbf3b62768dd4c38337377",
+  "seed": 3973129038,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s025",
+    "s032",
+    "s033",
+    "s036"
+  ],
+  "rawEndpointDB": -97.40444424919943,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "768fd2247938b667ca07865de4225c9f1e8063bbc7ae11bc64cba6265926df6d",
+    "outputSha256": "9623d5b86a4d13c116025c91be4dd35bb2acf42402fbf3b62768dd4c38337377",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.305987549407611,
+    "input": {
+      "seconds": 9.68,
+      "peakDb": -5.593841753807939,
+      "activeRmsDb": -21.99513418217156,
+      "quietFrameP10Db": -63.65624329839969
+    },
+    "output": {
+      "seconds": 9.68,
+      "peakDb": -4.231131627614348,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.5314515308934
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "3c5f7b25cb74853b200b842f6e9571a063b84f9e6325abc8e7ce21af704a7bb0"
+  },
+  "subjectiveListeningChecked": false
+}

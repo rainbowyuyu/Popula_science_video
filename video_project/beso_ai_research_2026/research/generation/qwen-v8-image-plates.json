@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "createdAt": "2026-10-11T14:58:00.227696+00:00",
+  "records": [
+    {
+      "id": "demand",
+      "source": "public/generated/v8/v8-web-demand-redraw.png",
+      "sourceSHA256": "7748e8c2fd08b2d261f151c570eda641e2c57b38d8fe20d953914b0bd7e29176",
+      "asset": "public/generated/v8/v8-web-demand-plate-clean.png",
+      "sha256": "12afaf6dc3f9a97d11f6df951b04d4ab99a8a1231af2fecbd310481d88e54d8d",
+      "width": 1920,
+      "height": 1080,
+      "uiSafeRegionPixels": {
+        "x": 60,
+        "y": 193,
+        "width": 760,
+        "height": 750
+      },
+      "transformation": "Program removed hallucinated tiny sidebar; overlay original UI across clean panel.",
+      "conceptNotEvidence": true
+    },
+    {
+      "id": "geometry",
+      "source": "public/generated/v8/v8-web-geometry-redraw.png",
+      "sourceSHA256": "b36a6cb730a5581dd2b185f1d6673ba5919dfc18bd5b66cae9feb0407cd34ae5",
+      "asset": "public/generated/v8/v8-web-geometry-plate-clean.png",
+      "sha256": "26384d762be39918cbe8f8d8ebdd98e31c85b197896ed30ecced235b9501ecd7",
+      "width": 1920,
+      "height": 1080,
+      "uiSafeRegionPixels": {
+        "x": 60,
+        "y": 79,
+        "width": 713,
+        "height": 947
+      },
+      "transformation": "Concept model only; left empty plane reserved for true geometry page crop.",
+      "conceptNotEvidence": true
+    },
+    {
+      "id": "report",
+      "source": "public/generated/v8/v8-web-report-redraw.png",
+      "sourceSHA256": "97561de6f57276bfed345e967a840c27f7bb7b7d06eca5af76f54e7fb933c404",
+      "asset": "public/generated/v8/v8-web-report-plate-clean.png",
+      "sha256": "f5d6a16133cff2f7f85b90af64a20a2153635e23cea7326b78ca60993ad75c55",
+      "width": 1920,
+      "height": 1080,
+      "uiSafeRegionPixels": {
+        "x": 74,
+        "y": 100,
+        "width": 712,
+        "height": 801
+      },
+      "transformation": "Concept model/paper only; left blank plane reserved for true report/files.",
+      "conceptNotEvidence": true
+    }
+  ],
+  "trueWebReferences": {
+    "demand": "public/beso-research/web-live/v8/brief.png",
+    "geometry": "public/beso-research/web-live/v8/viewer-model.png",
+    "report": "public/beso-research/web-live/v8/checklist-edited.png",
+    "actualEvents": "public/beso-research/web-live/v8/actual-ui-route-events.jsonl"
+  }
+}

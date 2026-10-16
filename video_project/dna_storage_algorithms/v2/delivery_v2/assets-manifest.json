@@ -1,0 +1,1199 @@
+{
+  "schema": "rainbow.dna-storage.delivery-assets/v2",
+  "version": "2026-10-11-r4",
+  "project": "dna_storage_algorithms",
+  "root": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms",
+  "timeline": "v2/src/timeline.json",
+  "render": {
+    "compositionId": "DNAStorageAlgorithmsV2",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "durationFrames": 9000,
+    "durationSec": 300
+  },
+  "generatedAtUtc": "2026-10-10T21:15:06Z",
+  "assets": [
+    {
+      "id": "logo-rainbow",
+      "kind": "logo",
+      "path": "brand/logo.png",
+      "description": "rainbow鱼标识",
+      "license": "provided",
+      "resolvedPath": "v2/public/brand/logo.png",
+      "status": "available",
+      "source": "timeline asset declaration",
+      "bytes": 13501,
+      "sha256": "d06cdbd8377a82513ba4a4f5172defb6eccfb5e3f17f4ddebe2af2a9bfb9637a",
+      "media": {
+        "width": 347,
+        "height": 410,
+        "format": "PNG"
+      }
+    },
+    {
+      "id": "file-world",
+      "kind": "three-scene",
+      "path": "3d/lab_environment.glb",
+      "description": "家庭视频、文件块和存储介质的连续场景",
+      "optional": true,
+      "fallbackId": "three-file-world",
+      "resolvedPath": "v2/public/3d/lab_environment.glb",
+      "status": "available",
+      "source": "timeline asset declaration",
+      "license": "project/generated",
+      "bytes": 66876,
+      "sha256": "b64d15880e7b567b578a48d091fbe84f214bf579ca722dc6353ecf1c8eb7ad6a",
+      "fallback": "programmatic fallback referenced by three-file-world"
+    },
+    {
+      "id": "three-file-world",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/FileWorld.ts",
+      "description": "Three.js 文件块替代场景",
+      "resolvedPath": null,
+      "status": "missing",
+      "source": "timeline asset declaration",
+      "license": "project/generated"
+    },
+    {
+      "id": "dna-helix",
+      "kind": "gltf",
+      "path": "3d/dna_double_helix.glb",
+      "description": "带材质的 DNA 双螺旋",
+      "optional": true,
+      "fallbackId": "three-dna-helix",
+      "resolvedPath": "v2/public/3d/dna_double_helix.glb",
+      "status": "available",
+      "source": "timeline asset declaration",
+      "license": "project/generated",
+      "bytes": 2262152,
+      "sha256": "5f8a6d5db089d4a2edbc1ab38c334c10418a0761416429f0ec6d44dbd95b67d9",
+      "fallback": "programmatic fallback referenced by three-dna-helix"
+    },
+    {
+      "id": "three-dna-helix",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/DNAHelix.ts",
+      "description": "Three.js DNA 双螺旋替代场景",
+      "resolvedPath": null,
+      "status": "missing",
+      "source": "timeline asset declaration",
+      "license": "project/generated"
+    },
+    {
+      "id": "fountain-droplets",
+      "kind": "gltf",
+      "path": "3d/dna_droplet.glb",
+      "description": "DNA Fountain 液滴关系模型",
+      "optional": true,
+      "fallbackId": "three-fountain",
+      "resolvedPath": "v2/public/3d/dna_droplet.glb",
+      "status": "available",
+      "source": "timeline asset declaration",
+      "license": "project/generated",
+      "bytes": 768892,
+      "sha256": "e65a532adf7839be341e1079fbb9bed4c9d1c830d4031e5b694479222c27ba50",
+      "fallback": "programmatic fallback referenced by three-fountain"
+    },
+    {
+      "id": "three-fountain",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/Fountain.ts",
+      "description": "Three.js Fountain 替代场景",
+      "resolvedPath": null,
+      "status": "missing",
+      "source": "timeline asset declaration",
+      "license": "project/generated"
+    },
+    {
+      "id": "water-surface",
+      "kind": "water-surface",
+      "path": "v2/src/water/WaterProSurface.ts",
+      "description": "用于湿实验段的微观液面与光泽",
+      "optional": true,
+      "resolvedPath": null,
+      "status": "optional-missing",
+      "source": "timeline asset declaration",
+      "license": "project/generated"
+    },
+    {
+      "id": "qwen-lab-cutaway",
+      "kind": "qwen-video",
+      "path": "media/qwen-lab-cutaway.mp4",
+      "description": "合成、测序设备的电影感过场",
+      "optional": true,
+      "fallbackId": "three-lab-cutaway",
+      "resolvedPath": null,
+      "status": "optional-missing",
+      "source": "timeline asset declaration",
+      "license": "project/generated",
+      "fallback": "programmatic fallback referenced by three-lab-cutaway"
+    },
+    {
+      "id": "three-lab-cutaway",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/LabCutaway.ts",
+      "description": "Three.js 实验链路替代场景",
+      "resolvedPath": null,
+      "status": "missing",
+      "source": "timeline asset declaration",
+      "license": "project/generated"
+    },
+    {
+      "id": "music-dna",
+      "kind": "audio",
+      "path": "public/music/dna_ambient.wav",
+      "description": "环境音乐底床",
+      "resolvedPath": "public/music/dna_ambient.wav",
+      "status": "available",
+      "source": "timeline asset declaration",
+      "license": "project/generated",
+      "bytes": 95040044,
+      "sha256": "b66b382bcd1f065b14c803ad70b5da8d90c43c1fcde83410a53d9138f002991d",
+      "media": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "sampleWidthBits": 24,
+        "frames": 15840000,
+        "durationSec": 330.0
+      }
+    },
+    {
+      "id": "narration-000",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/000.wav",
+      "resolvedPath": "v2/public/audio/raw/000.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 276524,
+      "sha256": "67db3e9511322afa05aedd01fd24278e1e028d999c07b8511dcc4204041af73f",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 253440,
+        "durationSec": 10.56
+      }
+    },
+    {
+      "id": "narration-001",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/001.wav",
+      "resolvedPath": "v2/public/audio/raw/001.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 218924,
+      "sha256": "c420e1f994b35c5e4fe1ecd662913c41d21f9a423441db8ea036199fdf2e369e",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 253440,
+        "durationSec": 10.56
+      }
+    },
+    {
+      "id": "narration-002",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/002.wav",
+      "resolvedPath": "v2/public/audio/raw/002.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 241964,
+      "sha256": "e0d329bc24e002c8077fd19d9934461246ef9daeccb527ced3ed0aace376afea",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 192000,
+        "durationSec": 8.0
+      }
+    },
+    {
+      "id": "narration-003",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/003.wav",
+      "resolvedPath": "v2/public/audio/raw/003.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 420524,
+      "sha256": "fefe60fe4e2f3f7c43a45dcca1f3fc2add015a3f8b9f2ff79dba5ca727eabaa2",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 140160,
+        "durationSec": 5.84
+      }
+    },
+    {
+      "id": "narration-004",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/004.wav",
+      "resolvedPath": "v2/public/audio/raw/004.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 374444,
+      "sha256": "087693bffb166e67e1a9aa56af3f53adff63ee4a0377198606d15179229e5593",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 182400,
+        "durationSec": 7.6
+      }
+    },
+    {
+      "id": "narration-005",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/005.wav",
+      "resolvedPath": "v2/public/audio/raw/005.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 259244,
+      "sha256": "129a4737488fd0b9c46c614c5e44a92db891373e73ad4444e8a4b770e4eb2cac",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 155520,
+        "durationSec": 6.48
+      }
+    },
+    {
+      "id": "narration-006",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/006.wav",
+      "resolvedPath": "v2/public/audio/raw/006.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 322604,
+      "sha256": "425d09c8df03b7ec07f21a0c4dcbc684be39717293a4a5f2412c5646df9c86c6",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 190080,
+        "durationSec": 7.92
+      }
+    },
+    {
+      "id": "narration-007",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/007.wav",
+      "resolvedPath": "v2/public/audio/raw/007.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 478128,
+      "sha256": "fe0db0bad9a0714832b929e4428b0cc53c968a8390d6846cc8da1c38b2f276cd",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 222720,
+        "durationSec": 9.28
+      }
+    },
+    {
+      "id": "narration-008",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/008.wav",
+      "resolvedPath": "v2/public/audio/raw/008.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 397484,
+      "sha256": "d20cba8cf65acfe0a19b403d9e7729324dce7e4ee51812e2eeaff5530504ebe5",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 190080,
+        "durationSec": 7.92
+      }
+    },
+    {
+      "id": "narration-009",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/009.wav",
+      "resolvedPath": "v2/public/audio/raw/009.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 385964,
+      "sha256": "265e9d964909effb7515e0535b13fea6afc43dcc3f518c96de5e1fb0411c31e2",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 128640,
+        "durationSec": 5.36
+      }
+    },
+    {
+      "id": "narration-010",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/010.wav",
+      "resolvedPath": "v2/public/audio/raw/010.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 489644,
+      "sha256": "5167a7152bd111786225527dd1aa08dcbe2b9bfad65fb7c877904e9c15c0ce69",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 163200,
+        "durationSec": 6.8
+      }
+    },
+    {
+      "id": "narration-011",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/011.wav",
+      "resolvedPath": "v2/public/audio/raw/011.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 397484,
+      "sha256": "1bbde2a3775dfe138a9164e8def27011b9344a398f748d743e2aae14adde1877",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 132480,
+        "durationSec": 5.52
+      }
+    },
+    {
+      "id": "narration-012",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/012.wav",
+      "resolvedPath": "v2/public/audio/raw/012.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 627888,
+      "sha256": "b6fde5663e5a4190dc6615ce1af7f32a12aa5f3f2c44a4a58c1efdebd6cc538c",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 209281,
+        "durationSec": 8.720042
+      }
+    },
+    {
+      "id": "narration-013",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/013.wav",
+      "resolvedPath": "v2/public/audio/raw/013.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 558764,
+      "sha256": "9240123585afc463b9f8dc50d07dd61ca06429a1b8652c2c9967791673391786",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 220801,
+        "durationSec": 9.200042
+      }
+    },
+    {
+      "id": "narration-014",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/014.wav",
+      "resolvedPath": "v2/public/audio/raw/014.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 351404,
+      "sha256": "4003a419b9e1e57d9a7b86a51e5eef7775c2fa8b09fca5a845a78168ecbb8c3f",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 117120,
+        "durationSec": 4.88
+      }
+    },
+    {
+      "id": "narration-015",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/015.wav",
+      "resolvedPath": "v2/public/audio/raw/015.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 437804,
+      "sha256": "f819e22699252a3924f0ea808ff2cb7f1384add760ddff813072ce0a4d500db6",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 145920,
+        "durationSec": 6.08
+      }
+    },
+    {
+      "id": "narration-016",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/016.wav",
+      "resolvedPath": "v2/public/audio/raw/016.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 362924,
+      "sha256": "77e9d602b3d327fae34e5854488e16ad4800479b525b6314b02ded52651c31fc",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 120960,
+        "durationSec": 5.04
+      }
+    },
+    {
+      "id": "narration-017",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/017.wav",
+      "resolvedPath": "v2/public/audio/raw/017.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 518448,
+      "sha256": "2fbf2d99cb3925f2191d5e8b1542580029dc380007dc5cf02ab3f8c5452220b7",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 172801,
+        "durationSec": 7.200042
+      }
+    },
+    {
+      "id": "narration-018",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/018.wav",
+      "resolvedPath": "v2/public/audio/raw/018.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 518448,
+      "sha256": "0a7d212fb360207ab122c6a9807a488333348f47e7b70b7a0c039b89f4e2538c",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 172801,
+        "durationSec": 7.200042
+      }
+    },
+    {
+      "id": "narration-019",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/019.wav",
+      "resolvedPath": "v2/public/audio/raw/019.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 374444,
+      "sha256": "c69856233d255db431119b674c79fab5ce4bc35dbbdc80e454db7e1fdaf318f7",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 124800,
+        "durationSec": 5.2
+      }
+    },
+    {
+      "id": "narration-020",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/020.wav",
+      "resolvedPath": "v2/public/audio/raw/020.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 328368,
+      "sha256": "92e651ec3b17a7dbee82e9858b27e4989b831d28e423453b25ef0d47cd9b4493",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 109441,
+        "durationSec": 4.560042
+      }
+    },
+    {
+      "id": "narration-021",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/021.wav",
+      "resolvedPath": "v2/public/audio/raw/021.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 241964,
+      "sha256": "82865b2f0c7fc3cfd4ec9423816827ce964bedf693a3eba0776989d7a5c31ab9",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 172801,
+        "durationSec": 7.200042
+      }
+    },
+    {
+      "id": "narration-022",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/022.wav",
+      "resolvedPath": "v2/public/audio/raw/022.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 518448,
+      "sha256": "4df53c33e356d63ada811e9607343441c5d78ddab84969b5d5d6af4848b372c1",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 172801,
+        "durationSec": 7.200042
+      }
+    },
+    {
+      "id": "narration-023",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/023.wav",
+      "resolvedPath": "v2/public/audio/raw/023.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 455084,
+      "sha256": "8f0172a9a8a2520d542648dfe66f4960e996f7eb95ddf9c48bd8a037e7582fa7",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 151680,
+        "durationSec": 6.32
+      }
+    },
+    {
+      "id": "narration-024",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/024.wav",
+      "resolvedPath": "v2/public/audio/raw/024.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 305324,
+      "sha256": "cfaca13d5bca0962790e1a76e75a428d17f97470c0345e2db20bf5b5954f8dee",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 101760,
+        "durationSec": 4.24
+      }
+    },
+    {
+      "id": "narration-025",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/025.wav",
+      "resolvedPath": "v2/public/audio/raw/025.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 518448,
+      "sha256": "92d61a508d9db837d90ea9b1aca8019c18be614fcd4792b318f78d1bb12dbb1f",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 172801,
+        "durationSec": 7.200042
+      }
+    },
+    {
+      "id": "narration-026",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/026.wav",
+      "resolvedPath": "v2/public/audio/raw/026.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 420524,
+      "sha256": "dd2032b049a2c78f8b3a0fd96ecf635a46450bf598a3814364fe2b47c074e0a5",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 140160,
+        "durationSec": 5.84
+      }
+    },
+    {
+      "id": "narration-027",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/027.wav",
+      "resolvedPath": "v2/public/audio/raw/027.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 432048,
+      "sha256": "e3c0d3b855188d41679830df04f887c1b6403d6c69919a465dff2da2f0ff52af",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 144001,
+        "durationSec": 6.000042
+      }
+    },
+    {
+      "id": "narration-028",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/028.wav",
+      "resolvedPath": "v2/public/audio/raw/028.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 627888,
+      "sha256": "10047f92cabf67abafea781fb17d2d034350ca514629a68b10f75fda5d970e75",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 209281,
+        "durationSec": 8.720042
+      }
+    },
+    {
+      "id": "narration-029",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/029.wav",
+      "resolvedPath": "v2/public/audio/raw/029.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 432048,
+      "sha256": "a0480fbaa030c74d7b2e83cd1b45d80e5078d9e0b2ed502720f82cbb62baa7c3",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 144001,
+        "durationSec": 6.000042
+      }
+    },
+    {
+      "id": "narration-030",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/030.wav",
+      "resolvedPath": "v2/public/audio/raw/030.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 391724,
+      "sha256": "92a7c4890b93aad3538791f3e363d46436605d74da8e3bec63ebc21d21a285a6",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 130560,
+        "durationSec": 5.44
+      }
+    },
+    {
+      "id": "narration-031",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/031.wav",
+      "resolvedPath": "v2/public/audio/raw/031.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 380204,
+      "sha256": "fc1be2f7c2c83822f59a7b554d8fbdb2a88e6707d543e202c709edac65263cf7",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 126720,
+        "durationSec": 5.28
+      }
+    },
+    {
+      "id": "narration-032",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/032.wav",
+      "resolvedPath": "v2/public/audio/raw/032.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 472364,
+      "sha256": "6403dca22165a569eb3f8ee384336f37c4056a21e61259cc7b7f6777e8f6c700",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 157440,
+        "durationSec": 6.56
+      }
+    },
+    {
+      "id": "narration-033",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/033.wav",
+      "resolvedPath": "v2/public/audio/raw/033.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 351404,
+      "sha256": "29fbfcbbd6fde264eb45b04dec584495ee24147d056df5a37107d11ba050e06b",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 117120,
+        "durationSec": 4.88
+      }
+    },
+    {
+      "id": "narration-034",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/034.wav",
+      "resolvedPath": "v2/public/audio/raw/034.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 506924,
+      "sha256": "ea5a4bfe363a586aeae2ed9a25564ab8a8a56a867bcf84c9f734cb170b32abf3",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 168960,
+        "durationSec": 7.04
+      }
+    },
+    {
+      "id": "narration-035",
+      "kind": "narration-clip",
+      "path": "v2/public/audio/raw/035.wav",
+      "resolvedPath": "v2/public/audio/raw/035.wav",
+      "status": "available",
+      "source": "v2/scripts/voice_v2.py / Qwen3-TTS-0.6B",
+      "license": "generated",
+      "bytes": 466604,
+      "sha256": "e5dd24bd010de76f9645fb3611605ea1a5372f1b2c73f250324c3641a49c165a",
+      "media": {
+        "sampleRate": 24000,
+        "channels": 1,
+        "sampleWidthBits": 24,
+        "frames": 155520,
+        "durationSec": 6.48
+      }
+    },
+    {
+      "id": "audio-narration",
+      "kind": "audio",
+      "path": "v2/public/audio/narration.wav",
+      "resolvedPath": "v2/public/audio/narration.wav",
+      "status": "available",
+      "source": "v2/scripts/mix_v2.py",
+      "license": "generated",
+      "description": "voice-only narration mixed to timeline",
+      "bytes": 86400044,
+      "sha256": "1dc95acf12b668efea5c39f5fe6170670a97f47d7593ebbad05848dc908dd06b",
+      "media": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "sampleWidthBits": 24,
+        "frames": 14400000,
+        "durationSec": 300.0
+      }
+    },
+    {
+      "id": "audio-master",
+      "kind": "audio",
+      "path": "v2/public/audio/master.wav",
+      "resolvedPath": "v2/public/audio/master.wav",
+      "status": "available",
+      "source": "v2/scripts/mix_v2.py",
+      "license": "generated",
+      "description": "narration plus ducked ambient music",
+      "bytes": 86400044,
+      "sha256": "64cfea934a6143c833fa12de16b061860d2e26f79090e184669f42448000708b",
+      "media": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "sampleWidthBits": 24,
+        "frames": 14400000,
+        "durationSec": 300.0
+      }
+    },
+    {
+      "id": "still-s01-hook",
+      "kind": "still",
+      "path": "v2/delivery/s01-hook.jpg",
+      "resolvedPath": "v2/delivery/s01-hook.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 113874,
+      "sha256": "fe06c479dadc8278c0adaedb16c820b61dddd01f0f7059a9d963beeb2aaa561b",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s02-encode",
+      "kind": "still",
+      "path": "v2/delivery/s02-encode.jpg",
+      "resolvedPath": "v2/delivery/s02-encode.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 162691,
+      "sha256": "69677abe49c04b6a701b7225f092931005261256e2cad4c1285bea3cd8ed4639",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s03-constraint",
+      "kind": "still",
+      "path": "v2/delivery/s03-constraint.jpg",
+      "resolvedPath": "v2/delivery/s03-constraint.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 141363,
+      "sha256": "65f4de2e722e4a0d8d6305e163b75c053371cbe4a71b271027a93cff1f3c8967",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s04-fountain",
+      "kind": "still",
+      "path": "v2/delivery/s04-fountain.jpg",
+      "resolvedPath": "v2/delivery/s04-fountain.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 191345,
+      "sha256": "9c98ec6e755996ff54bc055efeb285396958322e1c61b76c4d104db2361ad69c",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s05-wet-lab",
+      "kind": "still",
+      "path": "v2/delivery/s05-wet-lab.jpg",
+      "resolvedPath": "v2/delivery/s05-wet-lab.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 227346,
+      "sha256": "afb4b4b7146232431c08fab4134f6eca7047f688bba9391e5ac79e97f31ba886",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s06-decode",
+      "kind": "still",
+      "path": "v2/delivery/s06-decode.jpg",
+      "resolvedPath": "v2/delivery/s06-decode.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 165394,
+      "sha256": "b965a211265ac63354b28fd7e6111e9a69766b32f9fab58b0cc233b465d40eab",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s07-model-assist",
+      "kind": "still",
+      "path": "v2/delivery/s07-model-assist.jpg",
+      "resolvedPath": "v2/delivery/s07-model-assist.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 201292,
+      "sha256": "a86b0c91a8812407f4b99cdc34ea9c76ddcf789744f87d71f461b404c3690b7f",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s08-return",
+      "kind": "still",
+      "path": "v2/delivery/s08-return.jpg",
+      "resolvedPath": "v2/delivery/s08-return.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 131145,
+      "sha256": "c91e44defa75e46bea5a2dab7a3e9526c0c77fb637c8210d80f0fa21167eb5b1",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "still-s09-evidence",
+      "kind": "still",
+      "path": "v2/delivery/s09-evidence.jpg",
+      "resolvedPath": "v2/delivery/s09-evidence.jpg",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --stills",
+      "license": "generated",
+      "bytes": 265881,
+      "sha256": "286df685d36f07fdc3fa838aef92ceb5bc8053d161fa7f6ff2b4962d8a3dc43c",
+      "media": {
+        "width": 1920,
+        "height": 1080,
+        "format": "JPEG"
+      }
+    },
+    {
+      "id": "video-master",
+      "kind": "video",
+      "path": "v2/delivery/DNA存储与生信算法_V2_1080p.mp4",
+      "resolvedPath": "v2/delivery/DNA存储与生信算法_V2_1080p.mp4",
+      "status": "available",
+      "source": "v2/scripts/render_v2.mjs --audio",
+      "license": "generated",
+      "bytes": 116890261,
+      "sha256": "a6cc0cf389b99d49305a6634c733ad2af8d5330bbed69a604b9890b3ce070210",
+      "media": {
+        "durationSec": 300.0,
+        "frames": 9000,
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "audioDurationSec": 300.010667,
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "note": "Final master after clean render, audio trim, and decode QA.",
+      "durationSec": 300.0
+    },
+    {
+      "id": "delivery-master",
+      "kind": "delivery-audio",
+      "path": "v2/delivery_v2/master.wav",
+      "resolvedPath": "v2/delivery_v2/master.wav",
+      "status": "available",
+      "source": "copied from v2/public/audio",
+      "license": "generated",
+      "bytes": 86400044,
+      "sha256": "64cfea934a6143c833fa12de16b061860d2e26f79090e184669f42448000708b",
+      "media": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "sampleWidthBits": 24,
+        "frames": 14400000,
+        "durationSec": 300.0
+      }
+    },
+    {
+      "id": "delivery-narration",
+      "kind": "delivery-audio",
+      "path": "v2/delivery_v2/narration.wav",
+      "resolvedPath": "v2/delivery_v2/narration.wav",
+      "status": "available",
+      "source": "copied from v2/public/audio",
+      "license": "generated",
+      "bytes": 86400044,
+      "sha256": "1dc95acf12b668efea5c39f5fe6170670a97f47d7593ebbad05848dc908dd06b",
+      "media": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "sampleWidthBits": 24,
+        "frames": 14400000,
+        "durationSec": 300.0
+      }
+    },
+    {
+      "id": "audio-mix-manifest",
+      "kind": "metadata",
+      "path": "v2/delivery_v2/audio-mix-manifest.json",
+      "resolvedPath": "v2/delivery_v2/audio-mix-manifest.json",
+      "status": "available",
+      "source": "v2/scripts/mix_v2.py",
+      "license": "generated",
+      "bytes": 13480,
+      "sha256": "25b7dae631ad9d5353748c5dca566050292d4d69a6959df10c0e2aa0dfa86687"
+    },
+    {
+      "id": "delivery-video-master",
+      "kind": "delivery-video",
+      "path": "v2/delivery_v2/DNA存储与生信算法_V2_1080p.mp4",
+      "resolvedPath": "v2/delivery_v2/DNA存储与生信算法_V2_1080p.mp4",
+      "status": "available",
+      "source": "copied from v2/delivery after final QA",
+      "license": "generated",
+      "bytes": 116890261,
+      "sha256": "a6cc0cf389b99d49305a6634c733ad2af8d5330bbed69a604b9890b3ce070210",
+      "media": {
+        "durationSec": 300.0,
+        "frames": 9000,
+        "width": 1920,
+        "height": 1080,
+        "fps": "30/1",
+        "audioDurationSec": 300.010667,
+        "audioSampleRate": 48000,
+        "audioChannels": 2
+      },
+      "durationSec": 300.0
+    },
+    {
+      "id": "paper-transformer",
+      "kind": "paper-scan",
+      "path": "public/papers/nucleotide-transformer-2024-01.png",
+      "description": "Nucleotide Transformer publisher PDF first page",
+      "optional": false,
+      "resolvedPath": "v2/public/papers/nucleotide-transformer-2024-01.png",
+      "status": "available",
+      "source": "https://www.nature.com/articles/s41592-024-02523-z.pdf",
+      "license": "Publisher PDF; Springer Nature copyright and reuse terms apply. Included as an editorial/source reference.",
+      "bytes": 456644,
+      "sha256": "7de7289d6acc7a459a0ee83740a9f5bcbb67f22564a290e18cea7f773dc9ded4",
+      "media": {
+        "width": 1500,
+        "height": 1993,
+        "format": "PNG"
+      },
+      "renderedFrom": "public/papers/nucleotide-transformer-2024.pdf"
+    },
+    {
+      "id": "paper-transformer-pdf",
+      "kind": "paper-scan",
+      "path": "public/papers/nucleotide-transformer-2024.pdf",
+      "description": "Nucleotide Transformer source publisher PDF",
+      "optional": false,
+      "resolvedPath": "v2/public/papers/nucleotide-transformer-2024.pdf",
+      "status": "available",
+      "source": "https://www.nature.com/articles/s41592-024-02523-z.pdf",
+      "license": "Publisher PDF; Springer Nature copyright and reuse terms apply. Included as an editorial/source reference.",
+      "bytes": 4690509,
+      "sha256": "a5510f4b4b0aaf4817140a3b279d69c3a1b163bd986c5282294b9c65c6644b02",
+      "media": {
+        "pages": 20,
+        "format": "PDF"
+      },
+      "role": "source-pdf"
+    },
+    {
+      "id": "paper-fountain",
+      "kind": "paper-scan",
+      "path": "public/papers/dna-fountain-preprint-01.png",
+      "description": "DNA Fountain bioRxiv preprint first page",
+      "optional": false,
+      "resolvedPath": "v2/public/papers/dna-fountain-preprint-01.png",
+      "status": "available",
+      "source": "https://www.biorxiv.org/content/biorxiv/early/2016/12/04/074237.full.pdf",
+      "license": "CC BY-NC 4.0 as stated on the preprint first page / bioRxiv record. Non-commercial editorial reference.",
+      "bytes": 195268,
+      "sha256": "71a4182b9bc27daca54de718fb8302b61278f82a3831dd965940296539cf7b57",
+      "media": {
+        "width": 1500,
+        "height": 1942,
+        "format": "PNG"
+      },
+      "renderedFrom": "public/papers/dna-fountain-2017-preprint.pdf"
+    },
+    {
+      "id": "paper-fountain-pdf",
+      "kind": "paper-scan",
+      "path": "public/papers/dna-fountain-2017-preprint.pdf",
+      "description": "DNA Fountain source PDF (bioRxiv preprint)",
+      "optional": false,
+      "resolvedPath": "v2/public/papers/dna-fountain-2017-preprint.pdf",
+      "status": "available",
+      "source": "https://www.biorxiv.org/content/biorxiv/early/2016/12/04/074237.full.pdf",
+      "license": "CC BY-NC 4.0 as stated on the preprint first page / bioRxiv record. Non-commercial editorial reference.",
+      "bytes": 4413894,
+      "sha256": "5e09af042a9c3450c9eac4023d543a76741c90a0dbf400634dd1c7dfc207549b",
+      "media": {
+        "pages": 53,
+        "format": "PDF"
+      },
+      "role": "source-pdf"
+    },
+    {
+      "id": "paper-goldman",
+      "kind": "paper-scan",
+      "path": "public/papers/goldman-2013-page.png",
+      "description": "Goldman 2013 PMC author-manuscript first-page capture",
+      "optional": false,
+      "resolvedPath": "v2/public/papers/goldman-2013-page.png",
+      "status": "available",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3672958/",
+      "license": "PMC author manuscript page; retain PMC/NLM and publisher copyright notices. Screenshot is source evidence, not a re-typeset paper card.",
+      "bytes": 1012402,
+      "sha256": "4bce889977c164cd0e1f699b343644d699e6d898b2a6c17707bca7bd9cc80596",
+      "media": {
+        "width": 1500,
+        "height": 2000,
+        "format": "PNG"
+      },
+      "note": "Actual PMC page capture; no PDF claimed."
+    }
+  ],
+  "notes": [
+    "Paths in the timeline are resolved against the self-contained v2/public static tree unless explicitly rooted at project public/.",
+    "Optional Qwen/Lux3D/PDF assets remain explicit when absent; procedural Three.js/Blender fallbacks are used.",
+    "tmp-bundle is excluded from this manifest.",
+    "Final master is the 300-second decode-checked file; v2/delivery_v2 keeps a copied release artifact for QA.",
+    "Verified paper assets are recorded in v2/research/paper-sources.json; PDFs begin with %PDF- and first-page PNGs are rendered at >=1500px width."
+  ],
+  "paperSources": {
+    "path": "v2/research/paper-sources.json",
+    "resolvedPath": "v2/research/paper-sources.json",
+    "status": "available",
+    "bytes": 5617,
+    "sha256": "b9867665c3b6aefb1db0f48c95d9c3f98265d04f279f8fcbe95387cd71bde1cb",
+    "downloadScript": {
+      "path": "research/download_paper_assets.py",
+      "bytes": 2913,
+      "sha256": "40ef9d2d32b34e6b63842adab77c0fb53ac5f8fc14d5e6e30db00e6f46314303",
+      "verifyCommand": "python v2/research/download_paper_assets.py",
+      "downloadCommand": "python v2/research/download_paper_assets.py --download"
+    }
+  }
+}

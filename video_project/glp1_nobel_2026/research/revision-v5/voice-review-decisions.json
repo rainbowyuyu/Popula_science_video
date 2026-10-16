@@ -1,0 +1,45 @@
+{
+  "decisions": {
+    "h054": {
+      "selectedSourceSHA256": "9bde12466e56a75cfb8f1945933105be9e00833e6cf09fe9b686a342e939e40f",
+      "disposition": "accepted-asr-homophone",
+      "reason": "Unprompted recognition preserves sentence structure and endpoints but substitutes medical homophones. A separate short 10-term vocabulary pass reaches 0.974 alignment and differs only in 醛/全 (both quan2); no missing clause, truncation, clipping, or endpoint signal. This is an ASR evidence review, not subjective listening certification.",
+      "evidencePaths": [
+        "audio/revision-v5/asr/records/h054/9e2edd33a1211a10a39e45e44cb86551d85026b6de9f53b029b797866212a9e5.json",
+        "audio/revision-v5/asr-domain/records/h054/37981621bfa2d01bb18e15b48fd2cd49e16a22535098dec6fe8cedfbd53319d6.json"
+      ],
+      "subjectiveListeningChecked": false
+    },
+    "h064": {
+      "selectedSourceSHA256": "6f80cdb183616341a623e42d7de94c38c084f00e23ebd7438358b3d3b40758b7",
+      "disposition": "accepted-asr-homophone",
+      "reason": "First-pass low character match is concentrated in rare medical spellings. A separate short vocabulary pass preserves every clause and differs only in 噻嗪/塞琴 (sai1 qin2) and 钠/纳 (na4); the first-pass 样/酿 ambiguity is absent in the short-vocabulary pass. Waveform is complete, unclipped, and has a silent endpoint. This accepts an ASR orthographic ambiguity, not a subjective listening certification.",
+      "evidencePaths": [
+        "audio/revision-v5/asr/records/h064/9cebe391357afebf9160338b495398107df037fcbdbb4e9d499df771d70260fd.json",
+        "audio/revision-v5/asr-domain/records/h064/1b0bcb750612531400b9e230d9278cdf7548f57bf36444d1b5cb195f80c5a7b7.json"
+      ],
+      "subjectiveListeningChecked": false
+    },
+    "h007": {
+      "selectedSourceSHA256": "6355cb77b8cef0f1b9db8ed5977e1c90cfcdfb37176c037982fc46ec283a249c",
+      "disposition": "accepted-selected-alternate-with-asr-ambiguity",
+      "reason": "Selected complete attempt-2 fixes the first take fan/fang ambiguity: the unprompted pass now reads 饭后, and the short-vocabulary pass reads 泛后 with the same fan4 onset. Short-vocabulary medical terms recover 胰岛、胰岛素、血液、肌肉; remaining 胰腺/一线 and 少/稍 are written recognition/tone ambiguities. Both passes retain every clause; waveform duration is intact with no clipping or endpoint flag. Low character ratio is retained and reviewed, not hidden or treated as subjective pronunciation certification.",
+      "evidencePaths": [
+        "audio/revision-v5/asr/records/h007/8bb635e7a9926660a392b0bbc3efb50d3c36bc70af0b26060d47a83bf45cec0a.json",
+        "audio/revision-v5/candidates/clarity/asr-domain/records/h007/ac5c985e79beb04886775ee45382e8903f22c39e6184701c9bccfda4a4c8bdaf.json"
+      ],
+      "subjectiveListeningChecked": false
+    },
+    "h027": {
+      "selectedSourceSHA256": "859e11a36fcc17a0397038c7859246ae24e4ffb13efe9d1bd971ce2f9f55e710",
+      "disposition": "accepted-endpoint-screen",
+      "reason": "The complete regenerated pronunciation take has a raw-endpoint screen flag but no clipping; the unprompted ASR preserves the full sentence and the selected waveform is retained unchanged. This accepts an automated endpoint warning as reviewed evidence and does not claim subjective listening.",
+      "evidencePaths": [
+        "audio/revision-v5/asr/h027.json",
+        "audio/revision-v5/asr/records/h027/c6288b2deaa4b3afbabce7a3087c0ff0ff963a7992dc5125bc29d6f5421f0ad7.json"
+      ],
+      "subjectiveListeningChecked": false
+    }
+  },
+  "subjectiveListeningChecked": false
+}

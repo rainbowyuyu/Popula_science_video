@@ -1,0 +1,211 @@
+{
+  "id": "beso-3",
+  "expected": "空间滤波会平滑邻近单元的判断，减少零碎孔洞和棋盘状结果。",
+  "heard": "空间绿波会平滑临近单元的判断,减少零岁孔洞和期盘状结果。",
+  "words": [
+    {
+      "text": "空",
+      "start": 0.0,
+      "end": 0.5,
+      "probability": 0.9803524017333984
+    },
+    {
+      "text": "间",
+      "start": 0.5,
+      "end": 0.68,
+      "probability": 0.491811603307724
+    },
+    {
+      "text": "绿",
+      "start": 0.68,
+      "end": 0.86,
+      "probability": 0.8017061948776245
+    },
+    {
+      "text": "波",
+      "start": 0.86,
+      "end": 1.06,
+      "probability": 0.9227132797241211
+    },
+    {
+      "text": "会",
+      "start": 1.06,
+      "end": 1.28,
+      "probability": 0.957747757434845
+    },
+    {
+      "text": "平",
+      "start": 1.28,
+      "end": 1.48,
+      "probability": 0.9273248314857483
+    },
+    {
+      "text": "滑",
+      "start": 1.48,
+      "end": 1.68,
+      "probability": 0.9590099453926086
+    },
+    {
+      "text": "临",
+      "start": 1.68,
+      "end": 1.82,
+      "probability": 0.7146685421466827
+    },
+    {
+      "text": "近",
+      "start": 1.82,
+      "end": 1.96,
+      "probability": 0.952349841594696
+    },
+    {
+      "text": "单",
+      "start": 1.96,
+      "end": 2.12,
+      "probability": 0.9791520237922668
+    },
+    {
+      "text": "元",
+      "start": 2.12,
+      "end": 2.26,
+      "probability": 0.9742923974990845
+    },
+    {
+      "text": "的",
+      "start": 2.26,
+      "end": 2.36,
+      "probability": 0.9916292428970337
+    },
+    {
+      "text": "判",
+      "start": 2.36,
+      "end": 2.52,
+      "probability": 0.9994939565658569
+    },
+    {
+      "text": "断,",
+      "start": 2.52,
+      "end": 2.8,
+      "probability": 0.9997080266475677
+    },
+    {
+      "text": "减",
+      "start": 3.04,
+      "end": 3.22,
+      "probability": 0.9970039427280426
+    },
+    {
+      "text": "少",
+      "start": 3.22,
+      "end": 3.4,
+      "probability": 0.9982905983924866
+    },
+    {
+      "text": "零",
+      "start": 3.4,
+      "end": 3.58,
+      "probability": 0.8518495559692383
+    },
+    {
+      "text": "岁",
+      "start": 3.58,
+      "end": 3.7,
+      "probability": 0.7794581353664398
+    },
+    {
+      "text": "孔",
+      "start": 3.7,
+      "end": 3.88,
+      "probability": 0.8498453199863434
+    },
+    {
+      "text": "洞",
+      "start": 3.88,
+      "end": 4.1,
+      "probability": 0.99221470952034
+    },
+    {
+      "text": "和",
+      "start": 4.1,
+      "end": 4.28,
+      "probability": 0.9950354099273682
+    },
+    {
+      "text": "期",
+      "start": 4.28,
+      "end": 4.44,
+      "probability": 0.46299487352371216
+    },
+    {
+      "text": "盘",
+      "start": 4.44,
+      "end": 4.6,
+      "probability": 0.9575301706790924
+    },
+    {
+      "text": "状",
+      "start": 4.6,
+      "end": 4.78,
+      "probability": 0.9742624163627625
+    },
+    {
+      "text": "结",
+      "start": 4.78,
+      "end": 4.98,
+      "probability": 0.9924260377883911
+    },
+    {
+      "text": "果。",
+      "start": 4.98,
+      "end": 5.24,
+      "probability": 0.998496413230896
+    }
+  ],
+  "ratio": 0.8461538461538461,
+  "flags": [],
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "滤",
+      "heard": "绿",
+      "start": 2,
+      "end": 3
+    },
+    {
+      "op": "replace",
+      "expected": "邻",
+      "heard": "临",
+      "start": 7,
+      "end": 8
+    },
+    {
+      "op": "replace",
+      "expected": "碎",
+      "heard": "岁",
+      "start": 17,
+      "end": 18
+    },
+    {
+      "op": "replace",
+      "expected": "棋",
+      "heard": "期",
+      "start": 21,
+      "end": 22
+    }
+  ],
+  "sourceSHA256": "9eebefbfce8312a001f43bee1dce1e9897a738e51b29e2b13c329636c6895790",
+  "duration": 6.0,
+  "charactersPerSecond": 4.513888888888889,
+  "subjectiveListeningChecked": false,
+  "edgeCoverage": {
+    "expectedFirst": "空间滤波",
+    "heardFirst": "空间绿波",
+    "expectedLast": "盘状结果",
+    "heardLast": "盘状结果",
+    "firstWordStart": 0.0,
+    "lastWordEnd": 5.24
+  },
+  "recognitionRun": "fresh",
+  "pronunciationListeningVerified": false,
+  "literalInitialRatio": 0.8461538461538461,
+  "typographyNormalizationVersion": 3
+}

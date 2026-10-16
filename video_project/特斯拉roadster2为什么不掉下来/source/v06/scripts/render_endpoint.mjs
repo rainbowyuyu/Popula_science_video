@@ -1,0 +1,20 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+import {createServer} from 'node:http';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const old=path.resolve(root,'../v05'),req=createRequire(path.join(old,'package.json'));
+const {build}=req('esbuild');
+const {chromium}=req('C:/Users/zju/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const work=path.join(root,'work/endpoint'),out=path.resolve(root,'../../assets/v06/transition');
+await fs.mkdir(work,{recursive:true});await fs.mkdir(out,{recursive:true});
+await build({entryPoints:[path.join(root,'scripts/endpoint.ts')],bundle:true,format:'iife',outfile:path.join(work,'endpoint.js'),nodePaths:[path.join(old,'node_modules')]});
+const html='<!doctype html><html><body style="margin:0;width:1920px;height:1080px;overflow:hidden;background:#f0f0ea"><script src="/endpoint.js"></script></body></html>';
+const server=createServer(async(r,s)=>{s.setHeader('Content-Type',r.url==='/endpoint.js'?'application/javascript':'text/html');s.end(r.url==='/endpoint.js'?await fs.readFile(path.join(work,'endpoint.js')):html);});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+try{const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1});
+await page.goto(`http://127.0.0.1:${server.address().port}`);await page.waitForFunction(()=>window.ready,{timeout:120000});
+await page.screenshot({path:path.join(out,'teaching-first-clean.png')});console.log('ENDPOINT_READY');
+}finally{await browser.close();await new Promise(r=>server.close(r));}

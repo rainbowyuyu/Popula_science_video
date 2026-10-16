@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+physics_root=/data/home/fusion/project/shanghai_physics_v7
+source "$physics_root/runtime/openfoam-env.sh"
+cd "$physics_root/steady-positive-L9"
+foamDictionary system/controlDict -entry stopAt -set writeNow
+/home/fusion/miniconda3/envs/cfd_flow/bin/python - <<'PY'
+from pathlib import Path
+import shutil,re,json
+r=Path('/data/home/fusion/project/shanghai_physics_v7');src=r/'foam-tower-L9';dst=r/'steady-bootstrap-L9';dst.mkdir(exist_ok=True)
+for sub in ['constant','system','0']:shutil.copytree(src/sub,dst/sub,dirs_exist_ok=True)
+for name in ['fvSchemes','fvSolution','controlDict']:shutil.copyfile(r/'steady-positive-L12/system'/name,dst/'system'/name)
+p=dst/'system/controlDict';s=p.read_text();s=re.sub(r'endTime\s+\d+;','endTime 6000;',s);p.write_text(s)
+p=dst/'system/fvSchemes';p.write_text(p.read_text().replace('bounded Gauss linearUpwindV grad(U)','bounded Gauss upwind'))
+p=dst/'system/fvSolution';s=p.read_text().replace('p 0.25','p 0.15').replace('U 0.6; k 0.6; omega 0.6','U 0.3; k 0.3; omega 0.3');p.write_text(s)
+(dst/'initialization-provenance.json').write_text(json.dumps({'source':'Uniform 30 m/s, native input k/omega; first order stabilization only, final acceptance requires second-order momentum','quality':{'acceptedForFilm':False}},indent=2)+'\n')
+PY
+cd "$physics_root/steady-bootstrap-L9"
+decomposePar > decompose.log 2>&1
+mpirun.openmpi --mca btl self,vader --mca pml ob1 -np 24 simpleFoam -parallel > run.log 2>&1 & echo $! > job.pid
+wait

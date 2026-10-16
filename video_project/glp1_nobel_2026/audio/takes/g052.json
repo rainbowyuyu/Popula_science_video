@@ -1,0 +1,69 @@
+{
+  "id": "g052",
+  "text": "主食可以适量用全谷物、杂豆替换一部分精白米面。每餐有安排、总量适合自己，比今天饿一天更容易坚持。",
+  "ttsText": "主食可以适量用全谷物、杂豆替换一部分精白米面。每餐有安排、总量适合自己，比今天饿一天更容易坚持。",
+  "signature": "1115bd1a1bc08008f97c51e917112b16d658f3671c800e89b85ab218bc8fe860",
+  "raw": "audio/raw/g052-1115bd1a1b.wav",
+  "processed": "public/voice/g052.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "a8b6bf503e278a95e583b1c95992550380353f6ca10c9abde43e28cd77ec40e5",
+  "seed": 2922153191,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g049",
+    "g050",
+    "g051",
+    "g052"
+  ],
+  "rawEndpointDB": -95.8969555775211,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "05e7d52184c590a3a10b9d4762b49e85d1c8f02f02d901bcf0b680ee6c698660",
+    "outputSha256": "a8b6bf503e278a95e583b1c95992550380353f6ca10c9abde43e28cd77ec40e5",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.9195459140205529,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -6.084720090888258,
+      "activeRmsDb": -21.60143974291568,
+      "quietFrameP10Db": -61.570723192770615
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.411410939435339,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.35618595627004
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,83 @@
+{
+  "id": "h007",
+  "text": "这时，胰腺里的胰岛会增加胰岛素分泌。它沿血液到达肌肉，也提醒肝脏，饭后少往血里放糖。",
+  "ttsText": "这时，胰腺里的胰岛会增加胰岛素分泌。它沿血液到达肌肉，也提醒肝脏，饭后少往血里放糖。",
+  "signature": "7b38f205a3e0ee8f068747c230cc4c000b27343ee5304100ce028b7c1ef7b226",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h007-7b38f205a3e0-7a578a1739.wav",
+  "processed": "audio/revision-v5/voice/h007.wav",
+  "rawDuration": 8.960041666666667,
+  "duration": 8.960041666666667,
+  "sampleRate": 48000,
+  "sha256": "979d2772c64f487dec42896f667e0fdbf193716c2fc768cdfe191db12165c96c",
+  "rawSHA256": "83a6ade4137b39cb493fb5cb4e8d12203af8eccd43de715f7f17a906a8baf450",
+  "seed": 2052557335,
+  "batchIds": [
+    "h005",
+    "h006",
+    "h007"
+  ],
+  "batchKey": "7a578a17394461c3a03cd6f77b19793dcde260bc66ad4144ee891a88dad48351",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -66.18015573740914,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "83a6ade4137b39cb493fb5cb4e8d12203af8eccd43de715f7f17a906a8baf450",
+    "outputSha256": "979d2772c64f487dec42896f667e0fdbf193716c2fc768cdfe191db12165c96c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.4279293687938086,
+    "input": {
+      "seconds": 8.960041666666667,
+      "peakDb": -5.5588819734577495,
+      "activeRmsDb": -22.17602145602976,
+      "quietFrameP10Db": -61.64755161966272
+    },
+    "output": {
+      "seconds": 8.960041666666667,
+      "peakDb": -4.102946566595032,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.62771442072995
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

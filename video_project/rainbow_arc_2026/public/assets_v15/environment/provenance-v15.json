@@ -1,0 +1,46 @@
+{
+  "version": "V15",
+  "authored": true,
+  "notPhotogrammetry": true,
+  "coordinates": "glTF Y-up metres, original world origin; no asset scale/transform required",
+  "waterAnchor": [
+    -3,
+    0.025,
+    3
+  ],
+  "heroClearanceAnchor": [
+    0,
+    4,
+    0
+  ],
+  "sourceLicenses": "source-licenses-v15.json",
+  "license": "Authored geometry and Poly Haven CC0-1.0 assets; inherited grass/stone/fern maps retain their existing provenance",
+  "visualDesign": "Continuous damp meadow with unique photo-ground map, rounded wet textured stone ribbon, shallow pebble creek, genuine CC0 leafy trees with whole leaf topology, layered shrubs/ferns/blue wildflowers, mossy banks and 94000 fine curved geometric grass blades; no old circular platform",
+  "objects": 2201,
+  "sourceMeshesCopiedButGeometryShared": true,
+  "generatedUTC": "2026-10-12T11:47:36.712250+00:00",
+  "files": [
+    {
+      "file": "rain_garden_v15.glb",
+      "sha256": "c37180fb1aa801c316f5aae958df124fc137a6d8d384214d20c8545192e43f25",
+      "bytes": 132370876
+    },
+    {
+      "file": "rain_garden_v15.blend",
+      "sha256": "8c5820c028ba5446c34b0817d8b310b6ba15944232819b2ad566c6bfa3712bda",
+      "bytes": 91681945
+    }
+  ],
+  "groundMapProvenance": "ground-map-provenance-v15.json",
+  "runtimeSourceSHA256": {
+    "src/EnvironmentV09.ts": "3b777bb859bc648a68b5c438668b57b71c6146aab426bcf72a10b78244cd8378",
+    "src/CinematicLensV15.ts": "0a51e557a125aaca2cf85f56f61dd2cab3c577ff53e9764541f4bce66ccfbae2",
+    "src/GaussianSceneV15.ts": "f5329fe9cf84f23c4eb96e558544ba02a761ed6d852b0470af0b5b40fcbceb9e",
+    "src/V11RainbowArcFilm.tsx": "9485aadd33fcfc220cb0fc3d328616dc093afdff88b65684c2e499d8a21de55f"
+  },
+  "runtimeRepair": "Historical initial repair retained mesh depth and continuous focus gain. Final integration now renders complete opaque mesh and complete Gaussian representations separately through the same camera/Lens, then blends their finished plates with the original gs curve. No partial mesh opacity or shared depth buffer is used during that short handoff. Endpoints still use one original branch. GLB/Blend/splats unchanged.",
+  "runtimeRepairEvidence": [
+    "research/v15/environment/review/complete-plate-handoff/review.json",
+    "research/v15/environment/review/complete-plate-endpoint/review.json"
+  ]
+}

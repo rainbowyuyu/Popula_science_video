@@ -1,0 +1,517 @@
+{
+  "title": "拓扑优化重建构型 — 几何参数汇总",
+  "units": "mm",
+  "source_files": {
+    "beso9_reconstructed_fcstd": "rebuilt.FCStd",
+    "beso9_reconstructed_step": "rebuilt.step",
+    "beso9_measurements": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\measurements.json",
+    "beso9_inp": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\file043_state1.inp",
+    "beso9_design_fcstd": "D:\\python_project\\beso_ai\\examples\\beso\\beso9\\BESO9.FCStd",
+    "design_spec": "D:\\python_project\\beso_ai\\examples\\beso\\beso9\\design_spec.json",
+    "run_dir": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run"
+  },
+  "beso9_method1_topology_reconstructed": {
+    "description": "由 BESO9 拓扑优化末步 INP 边界网格 PCA 拟合得到的三柱 + 顶盘（可设计域优化结果的外形）",
+    "method": "PCA 圆柱拟合 + 顶盘圆盘拟合，Part.makeLoft / makeCylinder 布尔合并",
+    "legs": [
+      {
+        "id": 1,
+        "name": "优化结果柱 1",
+        "radius_mm": 6512.4232,
+        "diameter_mm": 13024.8465,
+        "length_mm": 64429.5307,
+        "station_fracs": [
+          0.0,
+          0.333,
+          0.667,
+          1.0
+        ],
+        "station_radii_mm": [
+          9126.26,
+          6530.69,
+          6207.74,
+          4601.32
+        ],
+        "axis_unit": [
+          -0.1093,
+          0.8471,
+          -0.52
+        ],
+        "base_xyz_mm": [
+          4960.88,
+          -4872.6,
+          14360.7
+        ],
+        "top_xyz_mm": [
+          -2082.75,
+          49708.67,
+          -19142.09
+        ],
+        "center_xyz_mm": [
+          1310.29,
+          23415.95,
+          -3003.23
+        ],
+        "element_count": 5301
+      },
+      {
+        "id": 2,
+        "name": "优化结果柱 2",
+        "radius_mm": 7023.1102,
+        "diameter_mm": 14046.2203,
+        "length_mm": 58362.3047,
+        "station_fracs": [
+          0.0,
+          0.333,
+          0.667,
+          1.0
+        ],
+        "station_radii_mm": [
+          6948.14,
+          7065.28,
+          7057.88,
+          4552.2
+        ],
+        "axis_unit": [
+          -0.7001,
+          -0.4199,
+          -0.5775
+        ],
+        "base_xyz_mm": [
+          -1687.42,
+          -1441.3,
+          14720.26
+        ],
+        "top_xyz_mm": [
+          -42548.36,
+          -25946.69,
+          -18984.75
+        ],
+        "center_xyz_mm": [
+          -23126.39,
+          -14298.82,
+          -2964.13
+        ],
+        "element_count": 5968
+      },
+      {
+        "id": 3,
+        "name": "优化结果柱 3",
+        "radius_mm": 6962.1313,
+        "diameter_mm": 13924.2626,
+        "length_mm": 59745.6842,
+        "station_fracs": [
+          0.0,
+          0.333,
+          0.667,
+          1.0
+        ],
+        "station_radii_mm": [
+          4588.96,
+          7385.1,
+          6921.72,
+          7412.25
+        ],
+        "axis_unit": [
+          -0.7778,
+          0.2756,
+          0.5649
+        ],
+        "base_xyz_mm": [
+          44328.1,
+          -23374.42,
+          -19011.07
+        ],
+        "top_xyz_mm": [
+          -2141.23,
+          -6910.35,
+          14739.24
+        ],
+        "center_xyz_mm": [
+          21856.23,
+          -15412.64,
+          -2689.93
+        ],
+        "element_count": 6268
+      }
+    ],
+    "legs_statistics": {
+      "radius_mm": {
+        "min": 6512.4232,
+        "max": 7023.1102,
+        "mean": 6832.5549
+      },
+      "diameter_mm": {
+        "min": 13024.8465,
+        "max": 14046.2203,
+        "mean": 13665.1098
+      },
+      "length_mm": {
+        "min": 58362.3047,
+        "max": 64429.5307,
+        "mean": 60845.8399
+      }
+    },
+    "hub_top_plate": {
+      "name": "顶部圆盘（连接三柱）",
+      "center_xy_mm": [
+        28.28,
+        -3916.99
+      ],
+      "radius_mm": 19304.3872,
+      "diameter_mm": 38608.7743,
+      "thickness_mm": 6725.83,
+      "z_bottom_mm": 10374.17,
+      "z_top_mm": 17100.0,
+      "element_count": 3744
+    },
+    "assembly_from_fcstd": {
+      "volume_mm3": 29908038191662.32,
+      "volume_m3": 29908.0382,
+      "bounding_box_mm": {
+        "x_length": 93011.1188,
+        "y_length": 82894.8553,
+        "z_length": 46483.9802,
+        "x_min": -45798.7212,
+        "x_max": 47212.3976,
+        "y_min": -30479.2245,
+        "y_max": 52415.6308,
+        "z_min": -23493.2289,
+        "z_max": 22990.7514
+      }
+    }
+  },
+  "beso9_design_domain_from_fcstd": {
+    "description": "可设计域：等边三棱柱（边长 95 m，高 38 m，水面 z=0），三顶点挖圆柱 R=7.5 m；顶面中心 Ø12 m 圆环施力 2.45e+07 N（−Z）。",
+    "model_role": {
+      "design_domain_solid": "BooleanFragments / Pad001（全域可拓扑优化）",
+      "nondesign_solids": "无（BESO9 不设 nondesign_space）"
+    },
+    "z_levels_mm": {
+      "waterline": 0.0,
+      "prism_bottom": -21000.0,
+      "prism_top": 17000.0,
+      "load_ring_top": 17100.0
+    },
+    "design_domain_prism": {
+      "name": "三棱柱设计域（可拓扑优化）",
+      "side_length_mm": 95000.0,
+      "side_length_m": 95.0,
+      "height_total_mm": 38000.0,
+      "height_below_waterline_mm": 21000.0,
+      "height_above_waterline_mm": 17000.0,
+      "sharp_equilateral_vertices_xy_mm": [
+        [
+          0.0,
+          54848.2756
+        ],
+        [
+          47500.0,
+          -27424.1378
+        ],
+        [
+          -47500.0,
+          -27424.1378
+        ]
+      ],
+      "bounding_box_mm": {
+        "x_length": 87500.0,
+        "y_length": 75777.2228,
+        "z_length": 38100.0,
+        "x_min": -43750.0,
+        "x_max": 43750.0,
+        "y_min": -27424.1378,
+        "y_max": 48353.085,
+        "z_min": -21000.0,
+        "z_max": 17100.0
+      },
+      "volume_mm3": 145144870381278.72,
+      "volume_m3": 145144.8704
+    },
+    "corner_cylinder_digouts": {
+      "style": "cylinder_digout_at_vertices",
+      "radius_mm": 7500.0,
+      "radius_m": 7.5,
+      "diameter_mm": 15000.0,
+      "count": 3,
+      "centers_xy_mm": [
+        [
+          -47500.0,
+          -27424.1378
+        ],
+        [
+          47500.0,
+          -27424.1378
+        ],
+        [
+          0.0,
+          54848.2756
+        ]
+      ],
+      "bottom_notch_arcs_from_fcstd": [
+        {
+          "edge_index": 9,
+          "radius_mm": 7500.0,
+          "length_mm": 7853.9816,
+          "center_xy_mm": [
+            -47500.0,
+            -27424.1378
+          ]
+        },
+        {
+          "edge_index": 15,
+          "radius_mm": 7500.0,
+          "length_mm": 7853.9816,
+          "center_xy_mm": [
+            47500.0,
+            -27424.1378
+          ]
+        },
+        {
+          "edge_index": 18,
+          "radius_mm": 7500.0,
+          "length_mm": 7853.9816,
+          "center_xy_mm": [
+            0.0,
+            54848.2756
+          ]
+        }
+      ]
+    },
+    "load_ring": {
+      "name": "顶面中心载荷圆环（圆周施力）",
+      "center_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "outer_diameter_mm": 12000.0,
+      "outer_diameter_m": 12.0,
+      "outer_radius_mm": 6000.0,
+      "wall_thickness_mm": 200.0,
+      "height_mm": 100.0,
+      "z_bottom_mm": 17000.0,
+      "z_top_mm": 17100.0,
+      "load_application": "circumference_edge",
+      "force_n": 24500000.0,
+      "force_direction": "-Z",
+      "load_edge_from_fcstd": {
+        "edge_index": 20,
+        "radius_mm": 6000.0,
+        "length_mm": 37699.1118,
+        "center_xyz_mm": [
+          0.0,
+          0.0,
+          17100.0
+        ]
+      }
+    },
+    "beso_settings": {
+      "mass_goal_ratio": 0.15,
+      "optimization_base": "stiffness",
+      "filter": [
+        "simple",
+        "auto"
+      ]
+    },
+    "assembly_from_fcstd": {
+      "volume_mm3": 145144870381278.72,
+      "volume_m3": 145144.8704,
+      "bounding_box_mm": {
+        "x_length": 87500.0,
+        "y_length": 75777.2228,
+        "z_length": 38100.0,
+        "x_min": -43750.0,
+        "x_max": 43750.0,
+        "y_min": -27424.1378,
+        "y_max": 48353.085,
+        "z_min": -21000.0,
+        "z_max": 17100.0
+      },
+      "face_count": 12,
+      "edge_count": 24
+    }
+  },
+  "comparison_notes": [
+    "BESO9 method1 三柱参数来自拓扑优化末步 INP 外形拟合（平均柱径约 13.67 m，平均长度约 60.85 m），反映优化后设计域连顶盘的整体形态。",
+    "设计域：边长 95 m 等边三棱柱，高 38 m（水下 21 / 水上 17），三顶点挖圆柱 R=7.5 m。",
+    "载荷：Ø12 m 圆周 Edge，重力 2.45e+07 N，方向 −Z；质量目标比 mass_goal_ratio=0.15。",
+    "直径 = 2 × 半径；柱站位半径取 0%/33%/67%/100% 条带中位数。",
+    "拟合装配体体积/包围盒来自 method1 重建实体（rebuilt.FCStd）；设计域体积来自 BESO9.FCStd。"
+  ],
+  "beso7_method1_topology_reconstructed": {
+    "description": "由 BESO9 拓扑优化末步 INP 边界网格 PCA 拟合得到的三柱 + 顶盘（可设计域优化结果的外形）",
+    "method": "PCA 圆柱拟合 + 顶盘圆盘拟合，Part.makeLoft / makeCylinder 布尔合并",
+    "legs": [
+      {
+        "id": 1,
+        "name": "优化结果柱 1",
+        "radius_mm": 6512.4232,
+        "diameter_mm": 13024.8465,
+        "length_mm": 64429.5307,
+        "station_fracs": [
+          0.0,
+          0.333,
+          0.667,
+          1.0
+        ],
+        "station_radii_mm": [
+          9126.26,
+          6530.69,
+          6207.74,
+          4601.32
+        ],
+        "axis_unit": [
+          -0.1093,
+          0.8471,
+          -0.52
+        ],
+        "base_xyz_mm": [
+          4960.88,
+          -4872.6,
+          14360.7
+        ],
+        "top_xyz_mm": [
+          -2082.75,
+          49708.67,
+          -19142.09
+        ],
+        "center_xyz_mm": [
+          1310.29,
+          23415.95,
+          -3003.23
+        ],
+        "element_count": 5301
+      },
+      {
+        "id": 2,
+        "name": "优化结果柱 2",
+        "radius_mm": 7023.1102,
+        "diameter_mm": 14046.2203,
+        "length_mm": 58362.3047,
+        "station_fracs": [
+          0.0,
+          0.333,
+          0.667,
+          1.0
+        ],
+        "station_radii_mm": [
+          6948.14,
+          7065.28,
+          7057.88,
+          4552.2
+        ],
+        "axis_unit": [
+          -0.7001,
+          -0.4199,
+          -0.5775
+        ],
+        "base_xyz_mm": [
+          -1687.42,
+          -1441.3,
+          14720.26
+        ],
+        "top_xyz_mm": [
+          -42548.36,
+          -25946.69,
+          -18984.75
+        ],
+        "center_xyz_mm": [
+          -23126.39,
+          -14298.82,
+          -2964.13
+        ],
+        "element_count": 5968
+      },
+      {
+        "id": 3,
+        "name": "优化结果柱 3",
+        "radius_mm": 6962.1313,
+        "diameter_mm": 13924.2626,
+        "length_mm": 59745.6842,
+        "station_fracs": [
+          0.0,
+          0.333,
+          0.667,
+          1.0
+        ],
+        "station_radii_mm": [
+          4588.96,
+          7385.1,
+          6921.72,
+          7412.25
+        ],
+        "axis_unit": [
+          -0.7778,
+          0.2756,
+          0.5649
+        ],
+        "base_xyz_mm": [
+          44328.1,
+          -23374.42,
+          -19011.07
+        ],
+        "top_xyz_mm": [
+          -2141.23,
+          -6910.35,
+          14739.24
+        ],
+        "center_xyz_mm": [
+          21856.23,
+          -15412.64,
+          -2689.93
+        ],
+        "element_count": 6268
+      }
+    ],
+    "legs_statistics": {
+      "radius_mm": {
+        "min": 6512.4232,
+        "max": 7023.1102,
+        "mean": 6832.5549
+      },
+      "diameter_mm": {
+        "min": 13024.8465,
+        "max": 14046.2203,
+        "mean": 13665.1098
+      },
+      "length_mm": {
+        "min": 58362.3047,
+        "max": 64429.5307,
+        "mean": 60845.8399
+      }
+    },
+    "hub_top_plate": {
+      "name": "顶部圆盘（连接三柱）",
+      "center_xy_mm": [
+        28.28,
+        -3916.99
+      ],
+      "radius_mm": 19304.3872,
+      "diameter_mm": 38608.7743,
+      "thickness_mm": 6725.83,
+      "z_bottom_mm": 10374.17,
+      "z_top_mm": 17100.0,
+      "element_count": 3744
+    },
+    "assembly_from_fcstd": {
+      "volume_mm3": 29908038191662.32,
+      "volume_m3": 29908.0382,
+      "bounding_box_mm": {
+        "x_length": 93011.1188,
+        "y_length": 82894.8553,
+        "z_length": 46483.9802,
+        "x_min": -45798.7212,
+        "x_max": 47212.3976,
+        "y_min": -30479.2245,
+        "y_max": 52415.6308,
+        "z_min": -23493.2289,
+        "z_max": 22990.7514
+      }
+    }
+  },
+  "optimization_info": {
+    "target_power_MW": 20.0,
+    "wall_thickness_m": 0.06,
+    "steel_density_kgpm3": 7850.0
+  }
+}

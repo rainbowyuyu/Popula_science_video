@@ -1,0 +1,80 @@
+{
+  "id": "s019",
+  "text": "核心筒向一边弯，就会带着伸臂一起转动。伸臂的一头向下压，另一头向上提，这个动作把外圈的巨型柱也调动起来。你看，力从中间走到两边，柱子的颜色跟着改变。",
+  "ttsText": "核心筒向一边弯，就会带着伸臂一起转动。伸臂的一头向下压，另一头向上提，这个动作把外圈的巨型柱也调动起来。你看，力从中间走到两边，柱子的颜色跟着改变。",
+  "signature": "347a5ca6ac1e3b50fd6b4b46ec56f76b1f73b9d34f63c54c15c6529d0284fce2",
+  "raw": "audio/raw/s019-347a5ca6ac.wav",
+  "processed": "audio/candidates/v7-flow-a/s019.wav",
+  "rawDuration": 13.44,
+  "duration": 13.68,
+  "sha256": "1c7dcacb210f9c7934fe7dac8435c3fe0531a3c8610c0269461bbd02125a146b",
+  "seed": 3239441836,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s013",
+    "s018",
+    "s019"
+  ],
+  "rawEndpointDB": -44.145528716950295,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "7619fb311ded0cc109dc7be0723745d17e3f76166267f04a686f65b7649d745e",
+    "outputSha256": "1c7dcacb210f9c7934fe7dac8435c3fe0531a3c8610c0269461bbd02125a146b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.8710583143074864,
+    "input": {
+      "seconds": 13.68,
+      "peakDb": -8.246971880192653,
+      "activeRmsDb": -22.65635654995634,
+      "quietFrameP10Db": -62.91976074568058
+    },
+    "output": {
+      "seconds": 13.68,
+      "peakDb": -4.552442735045291,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.66215292221212
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "670dd6b144b7dc8de4be3ffee8f94356c520ddc4198bc6e28378145f82036b49"
+  },
+  "subjectiveListeningChecked": false
+}

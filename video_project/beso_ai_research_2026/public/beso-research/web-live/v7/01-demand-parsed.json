@@ -1,0 +1,125 @@
+{
+  "checklist_id": "89291082ee664ffca38900d586c4fb66",
+  "checklist": {
+    "meta": {
+      "checklist_id": "89291082ee664ffca38900d586c4fb66",
+      "created_at": "2026-10-11T12:07:51Z",
+      "source_text": "设计一台20MW半潜式漂浮风机基础，水深45m，有效波高12m，谱峰周期14s，参考风速11.4m/s，目标钢耗300t/MW，静倾角限值5度，疲劳设计寿命25年，CCS AIP。",
+      "parser": "rule_fallback",
+      "reasoning_summary": "规则回退：正则抽取关键数值并合并 design_checklist_defaults.yaml"
+    },
+    "project": {
+      "title": "20 MW 漂浮式风电基础概念设计",
+      "owner_intent_zh": "设计一台20MW半潜式漂浮风机基础，水深45m，有效波高12m，谱峰周期14s，参考风速11.4m/s，目标钢耗300t/MW，静倾角限值5度，疲劳设计寿命25年，CCS AIP。",
+      "target_capacity_mw": 20.0,
+      "platform_type": "semi_submersible"
+    },
+    "site": {
+      "location_name": "阳江三山 III 示范场址（参考）",
+      "water_depth_m": 45.0,
+      "Hs_m": 12.0,
+      "Tp_s": 14.0,
+      "wind_ref_m_s": 11.4,
+      "sea_state_envelope": {
+        "reference": "Yangjiang Sanshan III 50-yr H1–H6",
+        "labels": [
+          "H1",
+          "H2",
+          "H3",
+          "H4",
+          "H5",
+          "H6"
+        ],
+        "zwind_envelope_check": true
+      }
+    },
+    "regulatory": {
+      "certification_path": "CCS_AIP",
+      "standards": [
+        "DNV-ST-0437:2024",
+        "DNVGL-OS-C301:2018",
+        "DNVGL-RP-0286:2019"
+      ],
+      "clause_ids": [
+        "rp0286_dt_ratio",
+        "rp0286_thickness_floor",
+        "tuqiang_target",
+        "fleet_benchmark",
+        "c301_draft_general",
+        "c301_watertight_envelope",
+        "st0437_layout_spacing",
+        "st0437_column_sizing"
+      ],
+      "reviewer_threshold": {
+        "S_min": 85.0,
+        "subscore_min": 60.0
+      }
+    },
+    "performance_targets": {
+      "steel_intensity_t_per_MW": 300.0,
+      "unit_cost_cny_per_MW": 2500.0,
+      "pitch_limit_deg": 5.0,
+      "fatigue_design_life_years": 25.0,
+      "excitation_bands_hz": {
+        "one_p": {
+          "hz_min": 0.08,
+          "hz_max": 0.12
+        },
+        "three_p": {
+          "hz_min": 0.24,
+          "hz_max": 0.35
+        }
+      }
+    },
+    "structural_assumptions": {
+      "draft_m": 20.0,
+      "wall_thickness_m": 0.06,
+      "scale_factor": 1.0
+    },
+    "job_descriptor": {
+      "phase": "I",
+      "theta": {
+        "beso": {
+          "mass_goal_ratio": 0.15,
+          "filter_radius": 2.0,
+          "optimization_base": "stiffness",
+          "save_every": 1
+        },
+        "oc4_loads": {
+          "band_scale": 1.22,
+          "z_fix_band": 800.0,
+          "cload_mag": -5000000.0
+        },
+        "sizing": {
+          "optimizer": "SLSQP"
+        }
+      },
+      "retry_policy": {
+        "max_retries": 3,
+        "on_mesh_fail": "refine_mesh",
+        "on_solver_fail": "relax_increment"
+      }
+    },
+    "assumptions": [],
+    "gaps": [],
+    "clarified_field_ids": []
+  },
+  "markdown": "# 设计清单（Phase I）\n\n**清单 ID**：`89291082ee664ffca38900d586c4fb66`  \n**解析方式**：rule_fallback  \n**生成时间**：2026-10-11T12:07:51Z\n\n## 1 项目概况\n\n- **项目名称**：20 MW 漂浮式风电基础概念设计\n- **业主意图**：设计一台20MW半潜式漂浮风机基础，水深45m，有效波高12m，谱峰周期14s，参考风速11.4m/s，目标钢耗300t/MW，静倾角限值5度，疲劳设计寿命25年，CCS AIP。\n- **目标容量**：20.0 MW\n- **平台型式**：semi_submersible\n\n## 2 场址与环境\n\n- **场址**：阳江三山 III 示范场址（参考）\n- **水深**：45.0 m\n- **有效波高 Hs**：12.0 m\n- **谱峰周期 Tp**：14.0 s\n- **参考风速**：11.4 m/s\n- **海况包络**：Yangjiang Sanshan III 50-yr H1–H6\n- **Zwind 包络校验**：是\n\n## 3 规范与认证\n\n- **认证路径**：CCS_AIP\n- **适用规范**：DNV-ST-0437:2024, DNVGL-OS-C301:2018, DNVGL-RP-0286:2019\n- **关联条款 ID**：rp0286_dt_ratio, rp0286_thickness_floor, tuqiang_target, fleet_benchmark, c301_draft_general, c301_watertight_envelope, st0437_layout_spacing, st0437_column_sizing\n- **内审终止阈值**：S ≥ 85.0，子分 ≥ 60.0\n\n## 4 性能目标\n\n- **钢耗强度目标**：300.0 t/MW\n- **单位造价参考**：2500.0 万元/MW\n- **静倾限值**：5.0°\n- **疲劳设计寿命**：25.0 年\n- **1P 避让频带**：0.08–0.12 Hz\n- **3P 避让频带**：0.24–0.35 Hz\n\n## 5 结构假设\n\n- **吃水**：20.0 m\n- **壁厚**：0.06 m\n- **水平缩放因子**：1.0\n\n## 6 任务参数（job descriptor J）\n\n- **相位**：I\n- **BESO**：mass_goal_ratio=0.15, filter_radius=2.0 mm, optimization_base=stiffness, save_every=1\n- **OC4 载荷默认**：band_scale=1.22, z_fix_band=800.0, cload_mag=-5000000.0\n- **尺寸优化器**：SLSQP\n- **重试策略**：max_retries=3, mesh=refine_mesh, solver=relax_increment\n\n## 解析说明\n\n规则回退：正则抽取关键数值并合并 design_checklist_defaults.yaml\n\n## 附录：原始自然语言输入\n\n```\n设计一台20MW半潜式漂浮风机基础，水深45m，有效波高12m，谱峰周期14s，参考风速11.4m/s，目标钢耗300t/MW，静倾角限值5度，疲劳设计寿命25年，CCS AIP。\n```\n",
+  "artifact_urls": {
+    "checklist_json": "/api/design-requirements/89291082ee664ffca38900d586c4fb66",
+    "markdown": "/api/design-requirements/89291082ee664ffca38900d586c4fb66/export/markdown"
+  },
+  "parser": "rule_fallback",
+  "pending_clarifications": [
+    {
+      "field_id": "unit_cost_cny_per_MW",
+      "question": "单位造价目标是多少（万元/MW）？",
+      "default_value": 2500.0,
+      "default_display": "2500.0 万元/MW",
+      "section": "performance"
+    }
+  ],
+  "clarification_complete": false,
+  "context_summary": "【当前设计清单·会话上下文】\nchecklist_id=89291082ee664ffca38900d586c4fb66\n容量=20.0 MW · 型式=semi_submersible\n场址=阳江三山 III 示范场址（参考） · Hs=12.0 m · Tp=14.0 s · 水深=45.0 m · 风速=11.4 m/s\n钢耗目标=300.0 t/MW · 静倾≤5.0° · 疲劳寿命=25.0 年\n吃水假设=20.0 m · 壁厚=0.06 m\n待确认参数（1）：单位造价目标是多少（万元/MW）？\n用户答复后系统会写回清单；你可提醒用户用「钢耗改为 280」等方式继续修改。",
+  "out_dir": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\work\\v7-product-api-workspace\\runs\\_design_brief\\89291082ee664ffca38900d586c4fb66"
+}

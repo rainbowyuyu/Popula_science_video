@@ -1,0 +1,82 @@
+{
+  "id": "s040",
+  "text": "这栋楼又是怎么造起来的？施工时，核心筒先向上爬升，后面的工序接着跟上。",
+  "ttsText": "这栋楼又是怎么造起来的？施工时，楼中央的骨架先向上长，后面的工序接着跟上。",
+  "signature": "093a606f8c91eb2363f1fddfc5e5da6a778f61b72705394ef314b23435684a10",
+  "raw": "audio/raw/s040-093a606f8c.wav",
+  "processed": "public/voice/s040.wav",
+  "rawDuration": 7.44,
+  "duration": 7.68,
+  "sha256": "c1a80cac8132c59cec0748959da6b3a490d1d647a0337c5fe10593f9c3c1b5d1",
+  "seed": 4252779791,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s018",
+    "s019",
+    "s020",
+    "s040"
+  ],
+  "rawEndpointDB": -96.83204974761709,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "f359631393886fb8ab6035922894f468f2e238f0085f49df3979f8e47b9f6d91",
+    "outputSha256": "c1a80cac8132c59cec0748959da6b3a490d1d647a0337c5fe10593f9c3c1b5d1",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.176611666627977,
+    "input": {
+      "seconds": 7.68,
+      "peakDb": -7.832259031216422,
+      "activeRmsDb": -23.009151255761733,
+      "quietFrameP10Db": -60.055400965402406
+    },
+    "output": {
+      "seconds": 7.68,
+      "peakDb": -3.5617073526991794,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.32313223830923
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "d54260df33a94999993a70d224ca3a0c86297e167a4db0eebf5829543f6e7203"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s040.wav"
+}

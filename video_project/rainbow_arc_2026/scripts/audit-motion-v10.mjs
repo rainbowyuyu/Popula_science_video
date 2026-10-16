@@ -1,0 +1,1 @@
+import {build} from 'esbuild';import {pathToFileURL} from 'node:url';await build({entryPoints:['scripts/audit-motion-v10.ts'],outfile:'work/audit-motion-v10.mjs',bundle:true,format:'esm',platform:'node',packages:'external'});await import(pathToFileURL(process.cwd()+'/work/audit-motion-v10.mjs'));

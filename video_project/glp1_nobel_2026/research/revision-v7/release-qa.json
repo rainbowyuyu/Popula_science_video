@@ -1,0 +1,60 @@
+{
+  "createdUTC": "2026-10-09T11:30:33.315364+00:00",
+  "releaseApproved": true,
+  "videoSHA256": "0618a242b3f035469a8e6ce9954642ab6e4003e5e10326c81f8b48d6bf8c5c0f",
+  "audioVerified": true,
+  "sourceStable": true,
+  "technical": {
+    "frames": 25621,
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationSeconds": 854.0333333333333,
+    "fullDecode": true,
+    "blackIntervals": 0,
+    "report": "tmp/v7-corrected-qa/technical.json"
+  },
+  "visualReview": {
+    "originalFullEncodeSHA256": "d0cd00c79945f09e331c370bdc7c08949a666bc2cbd39301d7af31b90650cfd8",
+    "all89NarrationClipsSampledBeforeLocalRepair": true,
+    "sampledNarrationFrames": 267,
+    "paperCodaSamples": 2,
+    "denseFilm04Samples": 410,
+    "priorReports": [
+      "research/revision-v7/person/encoded-review-person.json",
+      "research/revision-v7/encoded-review-camera.json",
+      "research/revision-v7/encoded-review-h046-h089.json",
+      "research/revision-v7/encoded-review-root.json"
+    ],
+    "correctedSegment": "h054 frames15115–15404; adrenal pointer moved from paired center to actual FJ3129 surface",
+    "correctedSegmentFramesActuallyViewed": [
+      15112,
+      15114,
+      15115,
+      15116,
+      15118,
+      15140,
+      15200,
+      15268,
+      15360,
+      15402,
+      15404,
+      15405,
+      15406,
+      15408
+    ],
+    "correctionObserved": "Leader lands on pale-yellow left adrenal above kidney. Organ geometry/camera continuous across replacement boundaries. Caption/label changes coincide with existing sentence boundaries.",
+    "unchangedSampleCorrespondence": "tmp/v7-corrected-qa/sample-correspondence.json",
+    "maxUnchangedMeanAbsoluteRGBDifference": 0.6014041602366255,
+    "lowMotionScan": "Nine low-motion intervals reviewed as gently moving instructional shots; last assembly produces same intervals within0.1s. See encoded-review-root.json."
+  },
+  "audioReport": "research/revision-v7/audio/final-corrected-mp4-check/verification.json",
+  "subtitleReport": "research/revision-v7/subtitle-validation.json",
+  "limitations": [
+    "Manual QA consists of actual targeted frame/contact-sheet inspection, not watching every frame in real-time",
+    "No complete subjective audio listening",
+    "Systems overview h082-h083 is restrained; furniture exits include soft transparency",
+    "Microscopic mechanisms and functional links are representative teaching diagrams, not patient-specific physiological simulation",
+    "Person uses deterministic pose and garment geometry, not motion capture or cloth simulation"
+  ]
+}

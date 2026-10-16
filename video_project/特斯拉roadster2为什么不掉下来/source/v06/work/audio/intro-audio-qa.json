@@ -1,0 +1,346 @@
+{
+  "checks": [
+    {
+      "name": "exact-delayed-narration",
+      "passed": true,
+      "detail": {
+        "offsetFrames": 439,
+        "offsetSamples": 702400,
+        "offsetSec": 14.633333333333333
+      }
+    },
+    {
+      "name": "intro-narration-silence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pre-first-cue-narration-silence",
+      "passed": true,
+      "detail": 15.133333333333333
+    },
+    {
+      "name": "all-cue-windows-exactly-shifted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "intro-mix-only-background-music",
+      "passed": true,
+      "detail": {
+        "maximumPremasterVsMusicError": 1.1894735507667065e-07,
+        "clipSourceAudioIncluded": false
+      }
+    },
+    {
+      "name": "first-cue-duck-anticipation",
+      "passed": true,
+      "detail": [
+        {
+          "timeSec": 13.253333333333334,
+          "gainDB": 5.0
+        },
+        {
+          "timeSec": 13.753333333333334,
+          "gainDB": 5.0
+        },
+        {
+          "timeSec": 14.353333333333333,
+          "gainDB": 2.5
+        },
+        {
+          "timeSec": 14.953333333333333,
+          "gainDB": -3.956
+        },
+        {
+          "timeSec": 15.133333333333333,
+          "gainDB": -7.45
+        },
+        {
+          "timeSec": 15.533333333333333,
+          "gainDB": -8.0
+        }
+      ]
+    },
+    {
+      "name": "master.wav-duration",
+      "passed": true,
+      "detail": {
+        "samples": 15902400,
+        "durationSec": 331.3
+      }
+    },
+    {
+      "name": "score.wav-duration",
+      "passed": true,
+      "detail": {
+        "samples": 15902400,
+        "durationSec": 331.3
+      }
+    },
+    {
+      "name": "narration.wav-duration",
+      "passed": true,
+      "detail": {
+        "samples": 15902400,
+        "durationSec": 331.3
+      }
+    },
+    {
+      "name": "loop-1-seam-202.663771",
+      "passed": true,
+      "detail": {
+        "timeSec": 202.66377083333333,
+        "sampleStep": 0.002404928207397461,
+        "localDerivativeP999": 0.026821760460734367
+      }
+    },
+    {
+      "name": "loop-1-seam-206.448625",
+      "passed": true,
+      "detail": {
+        "timeSec": 206.448625,
+        "sampleStep": 0.010556221008300781,
+        "localDerivativeP999": 0.026821760460734367
+      }
+    },
+    {
+      "name": "loop-2-seam-320.087083",
+      "passed": true,
+      "detail": {
+        "timeSec": 320.08708333333334,
+        "sampleStep": 0.002323150634765625,
+        "localDerivativeP999": 0.056959934532642365
+      }
+    },
+    {
+      "name": "loop-2-seam-323.871938",
+      "passed": true,
+      "detail": {
+        "timeSec": 323.8719375,
+        "sampleStep": 0.0238187313079834,
+        "localDerivativeP999": 0.056959934532642365
+      }
+    },
+    {
+      "name": "aac-precheck-loudness",
+      "passed": true,
+      "detail": {
+        "input_i": "-16.00",
+        "input_tp": "-1.35",
+        "input_lra": "3.00",
+        "input_thresh": "-26.59",
+        "output_i": "-16.27",
+        "output_tp": "-1.50",
+        "output_lra": "2.80",
+        "output_thresh": "-26.84",
+        "normalization_type": "dynamic",
+        "target_offset": "0.27"
+      }
+    },
+    {
+      "name": "aac-precheck-true-peak",
+      "passed": true,
+      "detail": "-1.35"
+    },
+    {
+      "name": "no-unexpected-full-mix-silence",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "ending-fades-to-zero",
+      "passed": true,
+      "detail": {
+        "lastSamplePeak": 2.384185791015625e-07
+      }
+    }
+  ],
+  "allPassed": true,
+  "duckEnvelopeSamples": [
+    {
+      "timeSec": 13.253333333333334,
+      "gainDB": 5.0
+    },
+    {
+      "timeSec": 13.753333333333334,
+      "gainDB": 5.0
+    },
+    {
+      "timeSec": 14.353333333333333,
+      "gainDB": 2.5
+    },
+    {
+      "timeSec": 14.953333333333333,
+      "gainDB": -3.956
+    },
+    {
+      "timeSec": 15.133333333333333,
+      "gainDB": -7.45
+    },
+    {
+      "timeSec": 15.533333333333333,
+      "gainDB": -8.0
+    }
+  ],
+  "musicLoopSeams": [
+    {
+      "index": 1,
+      "startSec": 202.66377083333333,
+      "endSec": 206.448625,
+      "measurements": [
+        {
+          "timeSec": 202.66377083333333,
+          "sampleStep": 0.002404928207397461,
+          "localDerivativeP999": 0.026821760460734367
+        },
+        {
+          "timeSec": 206.448625,
+          "sampleStep": 0.010556221008300781,
+          "localDerivativeP999": 0.026821760460734367
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "startSec": 320.08708333333334,
+      "endSec": 323.8719375,
+      "measurements": [
+        {
+          "timeSec": 320.08708333333334,
+          "sampleStep": 0.002323150634765625,
+          "localDerivativeP999": 0.056959934532642365
+        },
+        {
+          "timeSec": 323.8719375,
+          "sampleStep": 0.0238187313079834,
+          "localDerivativeP999": 0.056959934532642365
+        }
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "name": "intro-music",
+      "start": 0.5,
+      "duration": 12.633333333333333,
+      "loudness": {
+        "input_i": "-16.51",
+        "input_tp": "-6.13",
+        "input_lra": "0.60",
+        "input_thresh": "-26.51",
+        "output_i": "-16.07",
+        "output_tp": "-5.61",
+        "output_lra": "0.70",
+        "output_thresh": "-26.07",
+        "normalization_type": "dynamic",
+        "target_offset": "0.07"
+      }
+    },
+    {
+      "name": "first-cue-entrance",
+      "start": 13.133333333333333,
+      "duration": 12,
+      "loudness": {
+        "input_i": "-14.54",
+        "input_tp": "-1.49",
+        "input_lra": "0.60",
+        "input_thresh": "-24.80",
+        "output_i": "-15.76",
+        "output_tp": "-2.36",
+        "output_lra": "1.10",
+        "output_thresh": "-26.05",
+        "normalization_type": "dynamic",
+        "target_offset": "-0.24"
+      }
+    },
+    {
+      "name": "ending-with-final-narration",
+      "start": 311.3,
+      "duration": 14,
+      "loudness": {
+        "input_i": "-17.37",
+        "input_tp": "-1.99",
+        "input_lra": "6.70",
+        "input_thresh": "-27.90",
+        "output_i": "-17.05",
+        "output_tp": "-2.31",
+        "output_lra": "2.50",
+        "output_thresh": "-27.57",
+        "normalization_type": "dynamic",
+        "target_offset": "1.05"
+      }
+    },
+    {
+      "name": "final-music-fade",
+      "start": 325.3,
+      "duration": 6,
+      "loudness": {
+        "input_i": "-22.44",
+        "input_tp": "-10.54",
+        "input_lra": "5.20",
+        "input_thresh": "-33.56",
+        "output_i": "-16.74",
+        "output_tp": "-5.59",
+        "output_lra": "4.60",
+        "output_thresh": "-27.65",
+        "normalization_type": "dynamic",
+        "target_offset": "0.74"
+      }
+    },
+    {
+      "name": "loop-1",
+      "start": 199.66377083333333,
+      "duration": 9.784854166666667,
+      "loudness": {
+        "input_i": "-16.16",
+        "input_tp": "-2.45",
+        "input_lra": "0.90",
+        "input_thresh": "-26.78",
+        "output_i": "-16.07",
+        "output_tp": "-2.09",
+        "output_lra": "0.80",
+        "output_thresh": "-26.64",
+        "normalization_type": "dynamic",
+        "target_offset": "0.07"
+      }
+    },
+    {
+      "name": "loop-2",
+      "start": 317.08708333333334,
+      "duration": 9.784854166666667,
+      "loudness": {
+        "input_i": "-18.94",
+        "input_tp": "-2.47",
+        "input_lra": "4.70",
+        "input_thresh": "-29.11",
+        "output_i": "-17.24",
+        "output_tp": "-1.50",
+        "output_lra": "3.80",
+        "output_thresh": "-27.46",
+        "normalization_type": "dynamic",
+        "target_offset": "1.24"
+      }
+    }
+  ],
+  "aacPrecheck": {
+    "input_i": "-16.00",
+    "input_tp": "-1.35",
+    "input_lra": "3.00",
+    "input_thresh": "-26.59",
+    "output_i": "-16.27",
+    "output_tp": "-1.50",
+    "output_lra": "2.80",
+    "output_thresh": "-26.84",
+    "normalization_type": "dynamic",
+    "target_offset": "0.27"
+  },
+  "aacPrecheckSha256": "f834e77f9874083eb4adba92eb7d072817dc8ffb47d278f94de80da690e498ae",
+  "masterSha256": "04c6c3c82e0ce2f745fc750ce1b4e5c8707e2fce15e1e82bdb4a867551493d2a",
+  "verificationScriptSha256": "352a65c10f4bb85daac5ceb3e19c79c303a5754b7d9d962a27d7e32cf42f9a6a",
+  "subjectiveListeningChecked": false,
+  "limitations": [
+    "Waveform and loudness checks do not certify musical phrasing or subjective quality.",
+    "AAC precheck is not the final muxed MP4; final encoded audio still needs checking."
+  ]
+}

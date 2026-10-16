@@ -1,0 +1,124 @@
+{
+  "id": "h027",
+  "partIndex": 0,
+  "expected": "司美格鲁肽的设计，就从这里下手。",
+  "heard": "丝美格鲁态的设计就从这里下手",
+  "words": [
+    {
+      "text": "丝",
+      "start": 0.0,
+      "end": 0.6,
+      "probability": 0.6063364073634148
+    },
+    {
+      "text": "美",
+      "start": 0.6,
+      "end": 0.74,
+      "probability": 0.43230465054512024
+    },
+    {
+      "text": "格",
+      "start": 0.74,
+      "end": 0.9,
+      "probability": 0.8275691270828247
+    },
+    {
+      "text": "鲁",
+      "start": 0.9,
+      "end": 1.0,
+      "probability": 0.9599608580271403
+    },
+    {
+      "text": "态",
+      "start": 1.0,
+      "end": 1.18,
+      "probability": 0.7128755897283554
+    },
+    {
+      "text": "的",
+      "start": 1.18,
+      "end": 1.28,
+      "probability": 0.9926977753639221
+    },
+    {
+      "text": "设",
+      "start": 1.28,
+      "end": 1.44,
+      "probability": 0.9933731555938721
+    },
+    {
+      "text": "计",
+      "start": 1.44,
+      "end": 1.74,
+      "probability": 0.9995622038841248
+    },
+    {
+      "text": "就",
+      "start": 1.74,
+      "end": 2.2,
+      "probability": 0.8554188013076782
+    },
+    {
+      "text": "从",
+      "start": 2.2,
+      "end": 2.34,
+      "probability": 0.995725154876709
+    },
+    {
+      "text": "这里",
+      "start": 2.34,
+      "end": 2.56,
+      "probability": 0.9910810589790344
+    },
+    {
+      "text": "下",
+      "start": 2.56,
+      "end": 2.8,
+      "probability": 0.9992541670799255
+    },
+    {
+      "text": "手",
+      "start": 2.8,
+      "end": 3.0,
+      "probability": 0.9928731918334961
+    }
+  ],
+  "sourceSHA256": "55a47ad53ba1a5ff37bf4b523365477e9752c27eee65e03db26526789b5135e7",
+  "ratio": 0.8571428571428571,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "司",
+      "heard": "丝",
+      "end": 1
+    },
+    {
+      "op": "replace",
+      "expected": "肽",
+      "heard": "态",
+      "end": 5
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 161280,
+    "seconds": 3.36,
+    "peakDBFS": -6.953401120076275,
+    "first20msDBFS": -88.18526945134809,
+    "last20msDBFS": -64.02150253248786,
+    "firstActiveMs": 350.0,
+    "lastActiveToEndMs": 390.0,
+    "activityThresholdDBFS": -49.411871078607525,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

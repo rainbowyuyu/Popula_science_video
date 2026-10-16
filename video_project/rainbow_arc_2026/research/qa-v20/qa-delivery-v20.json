@@ -1,0 +1,75 @@
+{
+  "version": "V20",
+  "schema": "rainbow.v20.delivery-encode-qa/1",
+  "createdUTC": "2026-10-13T01:03:54.499976+00:00",
+  "video": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\output-v20\\delivery\\彩虹为什么是弧形_V20_optimized_1080p.mp4",
+  "videoSHA256": "8c62a466e6a29d93b654787370a04e322b7aab49b2fa8cad7a2a672011f237f8",
+  "sourceAudit": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\research\\qa-v20\\audit-v20.json",
+  "renderRecord": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\research\\qa-v20\\render-start-v20.json",
+  "renderStatus": "completed",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 10702,
+    "duration": 356.73333333333335,
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "checks": {
+    "V20 source audit passed": true,
+    "V20 render record completed": true,
+    "Delivery path matches V20 render record": true,
+    "Delivery SHA256 matches V20 render record": true,
+    "Render record binds current V20 audit": true,
+    "V20 master WAV exists": true,
+    "V20 source audit binds current master WAV": true,
+    "Video and audio streams exist": true,
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "avgFPS": 30.0,
+    "nominalFPS": 30.0,
+    "frameCount": 10702,
+    "videoSeconds": 356.733333,
+    "audioSeconds": 356.733,
+    "Video is 1920x1080": true,
+    "Video is 30 fps": true,
+    "V20 frame count is 10702": true,
+    "V20 duration matches 10702 frames": true,
+    "Audio codec is AAC": true,
+    "Audio is 48 kHz stereo": true,
+    "Audio/video drift <= two frames": true,
+    "Strict FFmpeg audio/video decode passes": true
+  },
+  "errors": [],
+  "warnings": [],
+  "passed": true,
+  "scope": "ffprobe metadata, strict FFmpeg decode, black/silence reports, AAC loudness measurement and source/render provenance. No normal-speed visual playback or human listening is claimed.",
+  "audio": {
+    "master": "public/audio_v18/master-v18.wav",
+    "masterSHA256": "d2edf3cbc4059c7ef1f2e67009b4a54e959a2daad2d03fdfcf9db713ba40beaf",
+    "decodedAACLoudnorm": {
+      "input_i": "-16.06",
+      "input_tp": "-1.91",
+      "input_lra": "2.60",
+      "input_thresh": "-26.65",
+      "output_i": "-16.09",
+      "output_tp": "-1.63",
+      "output_lra": "2.40",
+      "output_thresh": "-26.66",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "blackDetect": {
+    "spans": [],
+    "longSpans": [],
+    "automaticPassPolicy": "reported-only"
+  },
+  "silenceDetect": {
+    "spans": [],
+    "longSpans": [],
+    "automaticPassPolicy": "reported-only"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "schema": true,
+    "allValuesFinite": true,
+    "time1201Uniform005": true,
+    "frozenInputsUnchanged": true,
+    "allTmdSignalsSameTimeLength": true,
+    "relativeEqualsMassMinusSupport": true,
+    "forcesFromRealMotion": true,
+    "massDynamicEquilibrium": true,
+    "dissipationNondecreasing": true,
+    "sameTowerTimeHistory": true,
+    "windLoadsExactlyFrozen": true,
+    "pileNoZeroLengthSegments": true,
+    "pileLengthAndDiameter": true,
+    "pileSelfWeightUnits": true,
+    "pileEquilibriumIncludingSelfWeight": true,
+    "elasticPileLinearity": true,
+    "coreExtremeFormulaCorrect": true,
+    "coreStressNoGravityMixture": true,
+    "noFalseCfdClaim": true
+  },
+  "allPassed": true,
+  "details": {
+    "relativeIdentityError_m": 1.0000000161269895e-08,
+    "forceReconstructionError_N": 0.002851483499398455,
+    "independentMassBalance_N": 0.005000000069685484,
+    "coreVsFrozenResponse_m": 3.0000000039720476e-08,
+    "fullWindBaseShear_N": 29117118.69684425,
+    "minPileSegment_m": 0.20000000000000284,
+    "pileSelfWeightExpected_N": 1001276.2368806062,
+    "independentPileBalanceMax_N": 0.0006439271833599603,
+    "pileLinearityError_m": 5.000000006041838e-10,
+    "coreExtremeRecalculationError_MPa": 4.998716170157014e-09,
+    "coreWindExtremeMax_MPa": 5.69957906
+  },
+  "environmentResponseSHA256": "c4292f0ca38da5425e929bb3645332ecdb92236e325ec04934eee3aaa2737919",
+  "scope": "Numerical and schema checks of teaching examples, not a real-building validation."
+}

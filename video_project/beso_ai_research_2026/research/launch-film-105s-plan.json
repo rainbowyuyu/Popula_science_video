@@ -1,0 +1,106 @@
+{
+  "title": "AI Engineer · Product Launch Film",
+  "version": "105s-cinematic-restructure",
+  "fps": 60,
+  "durationSeconds": 105,
+  "safeArea": {"left": 120, "right": 120, "top": 90, "bottom": 92},
+  "logo": {"asset": "zju-horizontal-vector", "anchor": "top-right", "right": 72, "top": 42, "width": 252, "height": 64, "opacity": 0.94},
+  "palette": {"ink": "#103A53", "teal": "#0A8D91", "coral": "#D66F4C", "gold": "#E7B66A", "mist": "#EDF4F4", "navy": "#092B40"},
+  "motionRules": {
+    "transition": "shared-world camera spline; no fade-to-black or hard pop-in",
+    "camera": "each scene exits by dolly/orbit through the next scene's anchor",
+    "text": "kinetic labels attached to world objects; one claim per shot",
+    "ui": "browser panels float on tracked planes; cursor and button state are animated",
+    "qwen": "optional 1.2-1.6s concept bridge only; never used as calculation evidence"
+  },
+  "scenes": [
+    {
+      "id": "hero",
+      "from": 0,
+      "to": 7,
+      "title": "AI ENGINEER",
+      "claim": "从一句需求，到可交付方案",
+      "visual": "WaterPro-style dawn ocean; drone skims wave crest, dives toward a floating wind turbine; Gaussian mist reveals a clean native model",
+      "camera": "24mm aerial push-in → low orbit around platform → match-cut on tower highlight",
+      "onScreen": ["AI ENGINEER", "Design with evidence"],
+      "voice": "复杂工程，往往不是缺少算法，而是需求、模型和证据彼此断开。"
+    },
+    {
+      "id": "brief",
+      "from": 7,
+      "to": 19,
+      "title": "一句话，变成任务图",
+      "claim": "语言 → 结构化工程输入",
+      "visual": "Live AI Engineer web capture; type ‘20 MW 浮式风机 / 深海 / 质量约束’, cursor clicks Run; typed tokens fly into an orbiting task graph",
+      "camera": "tower highlight becomes UI cursor trail; 3D plane rotates into full browser frame, then pushes through the Run button",
+      "onScreen": ["需求", "几何", "网格", "载荷", "约束"],
+      "voice": "AI Engineer，把它们接成一条可以运行的链路。你输入目标、海况和约束，系统把语言拆成几何、网格、材料和载荷。"
+    },
+    {
+      "id": "topology",
+      "from": 19,
+      "to": 34,
+      "title": "让材料沿着力留下",
+      "claim": "BESO 迭代，保留有效路径",
+      "visual": "Native VTK mesh explodes into voxels; 44 state thumbnails flow along a ribbon; low-contribution cells dissolve, load paths glow teal; final skeleton reassembles",
+      "camera": "macro fly-through one cell → spiral pull-back to full mesh → snap to final skeleton",
+      "onScreen": ["BESO", "44 states", "25% material"],
+      "voice": "设计域生成后，BESO 沿着受力路径增减材料，四十四个状态实时留下轨迹。"
+    },
+    {
+      "id": "physics",
+      "from": 34,
+      "to": 52,
+      "title": "把结构放进真实环境",
+      "claim": "风、浪与系泊，绑定到同一个模型",
+      "visual": "WaterPro-style layered waves; platform heave/pitch follows controlled response; camera dives below surface to show moorings and flow vectors; Zwind chart is pinned to tower base",
+      "camera": "surface orbit → underwater dive → cable-following dolly → rise to tower-top response dot",
+      "onScreen": ["Z，风", "120 s response", "纵荡 · 纵摇 · 系泊"],
+      "voice": "结构成形，不等于设计完成。把它放进风浪场，Z，风回放一百二十秒响应，纵荡、纵摇和系泊张力都绑定到模型。"
+    },
+    {
+      "id": "interaction",
+      "from": 52,
+      "to": 65,
+      "title": "改一个参数，整条链路响应",
+      "claim": "交互、计算、记录同步发生",
+      "visual": "Real browser capture on a tracked glass plane; mass ratio slider moves 0.25→0.30; Run button pulses; queue, iteration counter and chart update; keep label ‘saved run playback’ if not a live solve",
+      "camera": "push through chart line into browser plane; parallax across tabs; exit through download icon",
+      "onScreen": ["质量比 0.25 → 0.30", "Run", "日志已归档"],
+      "voice": "网页里改一次质量比，任务重新排队，参数、日志和结果一起归档。"
+    },
+    {
+      "id": "toolchain",
+      "from": 65,
+      "to": 78,
+      "title": "模型、仿真、报告",
+      "claim": "同一份证据，贯穿每个工具",
+      "visual": "Hero model becomes a clean Blender/Lux3D turntable; wireframe overlays Three.js scene; three tool nodes orbit and connect to a single evidence spine; optional Qwen concept bridge as a 1.4s Gaussian splash",
+      "camera": "dolly through model surface → wireframe tunnel → orbit around three nodes → land on report thumbnail",
+      "onScreen": ["Three.js", "Blender / Lux3D", "Evidence spine"],
+      "voice": "拓扑骨架重建成构件，再交给 Three.js、Blender 和报告模板；模型、仿真、报告，共用一条证据链。"
+    },
+    {
+      "id": "proof",
+      "from": 78,
+      "to": 94,
+      "title": "结果，必须能对照",
+      "claim": "轻量化不是一句口号",
+      "visual": "Two turbine silhouettes share one baseline; metric ribbon animates 278 → 255.5 t/MW; 8.1% reduction appears as a single large kinetic number; small source tag stays in margin",
+      "camera": "report page folds into 3D metric ribbon; lateral track across bars; end on highlighted 255.5",
+      "onScreen": ["255.5 t/MW", "278 t/MW", "−8.1%"],
+      "voice": "论文案例里，单位功率用钢量由二百七十八降到二百五十五点五吨，约降百分之八点一。数字之外，每一步都能回看、复算、追责。"
+    },
+    {
+      "id": "close",
+      "from": 94,
+      "to": 105,
+      "title": "AI ENGINEER",
+      "claim": "让设计，带着证据交付",
+      "visual": "Metric ribbon becomes the tower's structural spine; completed turbine rises above horizon; tiny workflow chips collapse into the wordmark; ZJU logo remains right-top",
+      "camera": "slow crane-up from tower base to horizon; 50mm compression; final 1.2s hold with subtle parallax, no fade",
+      "onScreen": ["需求 → 模型 → 仿真 → 证据", "AI ENGINEER"],
+      "voice": "这就是 AI Engineer：让智能负责衔接，让工程计算负责验证，让设计带着证据交付。"
+    }
+  ]
+}

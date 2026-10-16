@@ -1,0 +1,69 @@
+{
+  "id": "s028",
+  "text": "这一扭，改变了风撞上大楼的方式。楼越往上长，迎着风的轮廓就越不一样。",
+  "ttsText": "这一扭，改变了风撞上大楼的方式。楼越往上长，迎着风的轮廓就越不一样。",
+  "signature": "bdfd5045fd3860af28bb81f7532af67c4560e88435bd8546bfb5e0424a46ab48",
+  "raw": "audio/raw/s028-bdfd5045fd.wav",
+  "processed": "public/voice/s028.wav",
+  "rawDuration": 6.72,
+  "duration": 6.72,
+  "sha256": "ad769a0256c71d4a6e1747bc889d52563812e95021a226d6f9e43b273ae97d65",
+  "seed": 3187494981,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s028",
+    "s032",
+    "s033"
+  ],
+  "rawEndpointDB": -89.55574843874395,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "6402cf210f4cd66528570d2f2c3d202da972b755af72d80d5a93f7384332dc08",
+    "outputSha256": "ad769a0256c71d4a6e1747bc889d52563812e95021a226d6f9e43b273ae97d65",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.88865399229973,
+    "input": {
+      "seconds": 6.72,
+      "peakDb": -7.411276005195365,
+      "activeRmsDb": -21.597126122630712,
+      "quietFrameP10Db": -65.7116209343882
+    },
+    "output": {
+      "seconds": 6.72,
+      "peakDb": -4.484208203925826,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -66.19251581484296
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

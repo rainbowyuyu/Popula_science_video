@@ -1,0 +1,38 @@
+{
+  "profile": {
+    "name": "rainbow-narration-v2",
+    "highpassHz": 65,
+    "lowpassHz": 10600,
+    "noiseReductionDb": 3,
+    "noiseFloorDb": -55,
+    "adaptiveNoiseTracking": false,
+    "lowMidEqDb": -1.4,
+    "presenceEqDb": 0.7,
+    "deesserIntensity": 0.12,
+    "compressionRatio": 1.65,
+    "edgeFadeMs": 8,
+    "timeStretch": false,
+    "hardGate": false,
+    "targetActiveRmsDb": -21,
+    "maximumClipGainDb": 4
+  },
+  "inputSha256": "5a38fe53e9c2c25154314506ed604582cd2564626b2f9aecb100c38670996172",
+  "outputSha256": "bc77ce48a19051ede4b9d9f6cf90c96925ca65ca309f8af432b03ca3a5479ed9",
+  "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+  "measuredLatencySamples": 1196,
+  "gainDb": 2.7514032679356575,
+  "input": {
+    "seconds": 10.72,
+    "peakDb": -6.648852091278888,
+    "activeRmsDb": -22.366833565698172,
+    "quietFrameP10Db": -60.079754192317324
+  },
+  "output": {
+    "seconds": 10.72,
+    "peakDb": -4.012310473863675,
+    "activeRmsDb": -20.999999999999996,
+    "quietFrameP10Db": -59.452618303120666
+  },
+  "preservedLengthSamples": true,
+  "subjectiveListeningChecked": false
+}

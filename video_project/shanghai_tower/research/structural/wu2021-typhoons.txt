@@ -1,0 +1,1522 @@
+--- PDF PAGE 1 ---
+Monitoring dynamic characteristics of 600 m+ Shanghai Tower during two consecutive 
+typhoons 
+Jie Wua, Ningtao Hua, You Dongb, and Qilin Zhanga 
+a College of Civil Engineering, Tongji University, 1239 Siping Road, Shanghai 200092, PR China 
+b Department of Civil and Environmental Engineering, The Hong Kong Polytechnic University, Hong Kong, PR China 
+Abstract: 
+Though the dynamic performance of high‐rise buildings under wind has been widely 
+investigated, there have been relatively limited studies focusing on the wind effects on 600 m+ 
+super high-rise buildings based on real measured data during typhoons. This paper presents the 
+field measurement results of structural dynamic characteristics and wind-induced responses of 
+the Shanghai Tower with a height of 632 m during the two typhoons, from August 12 to 18, 
+2018. Additionally, based on the analytical mode decomposition method, a modified discrete 
+time Fourier transformation method combined with moving window technology in time domain 
+is developed to analyze the time-varying characteristics of natural frequencies. The relationship 
+between the mean wind speed and acceleration amplitudes is investigated as well. In addition, 
+the relative proportions of the displacement mode components are obtained by using the 
+acceleration data. The predominance of the first mode is confirmed. A numerical experiment is 
+carried out to verify the effectiveness of the random decrement technique, by using which the 
+time-varying average damping ratios of the first mode associated with the Shanghai Tower are 
+identified. The analytical results can provide useful information for the dynamic characteristics 
+as well as the wind-resistant design for 600 m+ super high-rise buildings. 
+Keywords: Dynamic characteristics, Shanghai Tower, Typhoon, Field measurement, Discrete 
+time Fourier transformation, Damping ratio 
+1. Introduction
+Wind-resistant is a dominant factor in the design and response analysis of super high-rise 
+buildings due to their low stiffness and low damping ratio. Since the collapse of the Tacoma 
+Narrow Bridge in 1940, attention has been paid to the dynamic excitation of structures caused 
+by wind loads. Many studies have been conducted in this area, promoting the scientific 
+understanding of the structural aerodynamics. In the past few decades, though wind tunnel tests 
+have been widely employed in the structural design, it is still difficult to reveal the actual states 
+of structures since the scaled models and some assumptions are made during the tunnel tests. 
+For instance, damping ratios are generally taken as empirical constant values in the structural 
+design stage. Current wind codes or design standards cannot fully cover the wind-resistant 
+design of skyscrapers1. With the development of monitoring technology, field measurement is 
+becoming the most effective means to study the wind effects on structures, thus, in this way the 
+real dynamic states of structures can be evaluated and the original design can be calibrated. 
+Based on the measured data of super high-rise buildings, many researchers have studied 
+the dynamic characteristics of structures under wind-induced vibration. By using random 
+decrement technique (RDT), Hilbert-Huang transform (HHT) and other methods, Li et al.2-15 
+analyzed the measured data of wind and acceleration from more than a dozen of super high-rise 
+buildings in China. Some of these buildings are CITIC Plaza Tower2 in Guangzhou, Di Wang 
+building3-6 in Shenzhen, Central Plaza Tower6,7, Bank of China Tower8 and International 
+Finance Centre (IFC) 9-11 in Hong Kong, Jin Mao Building12,13 and World Financial Center14 in 
+This is the peer reviewed version of the following article: Wu, J, Hu, N, Dong, Y, Zhang, Q. Monitoring dynamic characteristics of 600 m+ Shanghai Tower during two consecutive typhoons. Struct Control 
+Health Monit. 2021; 28(2):e2666, which has been published in final form at https://doi.org/10.1002/stc.2666. This article may be used for non-commercial purposes in accordance with Wiley Terms and 
+Conditions for Use of Self-Archived Versions. This article may not be enhanced, enriched or otherwise transformed into a derivative work, without express permission from Wiley or by statutory rights 
+under applicable legislation. Copyright notices must not be removed, obscured or modified. The article must be linked to Wiley’s version of record on Wiley Online Library and any embedding, framing or 
+otherwise making available the article or pages thereof by third parties from platforms, services and websites other than Wiley Online Library must be prohibited.
+This is the Pre-Published Version.
+
+--- PDF PAGE 2 ---
+ 
+ 
+Shanghai and Taipei 101 Tower15. The relevant studies focused on different aspects, such as 
+variation law of natural frequencies, variation of damping ratios with vibration amplitudes, 
+comparison of the field measurement with the wind tunnel test, verification of the reliability of 
+wind tunnel test, assessment of the finite element models, and among others. In this study, the 
+wind effects on 600 m+ super high-rise buildings are assessed by the real measured data during 
+typhoons. 
+By introducing the wavelet framework, Kijewski-Correa16 provided a flexible criterion for 
+the separation of closely spaced modal contributions, discretization of the time-frequency plane, 
+and identification and melioration of end effects through a reflective padding scheme. Based 
+on the approach, Kijewski-Correa and Pirnia17 studied the effects of coupling, beat phenomenon, 
+amplitude dependence, and structural system type on dynamic properties, as well as correlating 
+observed periods of vibration against finite element predictions. Besides, they also analyzed the 
+dynamic properties of a 245.7 m high building in Boston16, a 264 m high building16-18 in Seoul, 
+and four tall buildings19 in Chicago under wind load. Quan et al.20 identified the natural 
+frequencies and damping ratios of the Shanghai World Financial Center based on the measured 
+data by using HHT and random decrement (RD) methods. Zhang et al.21 utilized the fast 
+Bayesian method to analyze the ambient vibration data of the Shanghai Tower at different 
+construction stages, and identified the dynamic parameters of the structure, which are compared 
+with the results from finite element analysis. Fu et al.22 evaluated the dynamic characteristics 
+and wind effects on the Guangzhou West Tower by using the RD method. 
+Although the dynamic performance of high‐rise buildings under wind has been widely 
+investigated by the full-scale measurements, there have been very limited studies on the 
+comprehensive field investigation of wind effects on 600 m+ super-tall buildings23. Furthermore, 
+the Shanghai Tower has a torsion curtain wall formed by a rounded triangular with a concave 
+angle (see Fig. 1) leading to disparate wind-induced vibration responses from other tall 
+buildings. Therefore, it is necessary to study the wind effects and dynamic responses of such 
+super high-rise buildings under typhoon effects. During August 12-18, 2018, the Shanghai area 
+suffered from two successive typhoons, which provided an excellent opportunity to study the 
+dynamic characteristics of high-rise buildings under strong wind. The relevant studies and 
+analytical results are presented in this study. 
+In general, the dynamic characteristics of high-rise buildings are related to the vibration 
+amplitude, which is usually stimulated by the wind load, thus the integration of building and 
+wind environment can be regarded as a time-varying system. Currently, the discrete Fourier 
+transformation (DFT) method is commonly employed to calculate the power spectral density 
+(PSD) of discrete-time digital signals. However, there exists a deficiency with respect to the 
+low frequency resolution for this method. For example, the variation of natural frequencies 
+caused by the nonlinear stiffness of the structure tends to be on the level of 10-3 Hz, or even 
+smaller. To address this deficiency, this paper presents a modified discrete time Fourier 
+transformation (DTFT) method combined with moving window to analyze the time-varying 
+characteristics of structural dynamic responses, and obtains the variation law of natural 
+frequencies with acceleration amplitudes for the Shanghai Tower. In addition, few studies 
+focused on the proportion of displacement modes of high-rise buildings. This paper proposes a 
+method to calculate the relative proportion of the displacement modes by using the acceleration 
+signals, which is of great significance in the study of wind resistance for super high-rise 
+buildings.  
+With respect to the damping characteristics of structures, traditional RDT has been widely 
+
+--- PDF PAGE 3 ---
+ 
+ 
+employed to identify the time-varying damping ratios. This paper proposes a modified RDT 
+algorithm to identify the variation of damping ratios with acceleration amplitudes, which is 
+verified by a numerical example and then is applied to analyze the damping ratios of the 
+Shanghai Tower. The analytical results can provide useful information for the wind-resistant 
+design of super high-rise buildings. 
+2. Shanghai Tower and filed measurement profile 
+The Shanghai Tower (Fig. 1), located in Lujiazui financial center, Shanghai, China, is the 
+second tallest building in the world with a height of 632 m and structural height of 580 m. It 
+consists of a 121-story main building, a 5-story podium building, and a 5-story basement. The 
+location surrounded by several super high-rise buildings belongs to a typical rough underlying 
+surface of urban. 
+ 
+Figure 1. Panorama and surrounding of Shanghai Tower 
+ 
+Figure 2. Structural system of Shanghai Tower 
+As shown in Fig. 2, the structure is a “giant frame - core tube - outrigger” structural 
+resistance system. A passive eddy current tuned mass damper (TMD) with weight of 1000 t, 
+the largest single-mass damper device in the world, was installed on the 125th floor of the 
+building. In addition, it is the first application of eddy current technology with variable 
+damping in passive dampers. The damper can significantly reduce the wind-excited vibration 
+amplitude of the structure and improve the structural serviceability. In order to provide the 
+construction guidance as well as structural evaluation criterion, a complete structural health 
+monitoring (SHM) system23-25 was deployed by the cooperation of Tongji University, the Hong 
+Kong Polytechnic University, and Tongji Architectural Design (Group) Co. Ltd. The SHM 
+system consists of the following four parts: a sensor system, a data acquisition and 
+transmission system, a data storage system, and a structural health assessment system. 
+As indicated in Fig. 3, an ultrasonic anemometer with acquisition sampling rate (ASR) of 
+100Hz was installed at the top of the Shanghai Tower, which can provide detailed data of local 
+wind condition. The specific parameters of the anemometer are listed in Table 1. In addition, 
+36 accelerometers with ASR of 100 Hz were installed at 9 floors. For detail information of the 
+sensors, please refer to reference 25. In this paper, the acceleration data collected by the 
+accelerometers at the 117th floor were used, as shown in Fig. 4. The acceleration in X direction 
+(East-West) and Y direction (North-South) were monitored by the accelerometers labeled AC-
+117-01 and AC-117-04, respectively. The specific parameters of the accelerometer are listed 
+in Table 2. 
+ 
+Shanghai Tower
+Radial truss
+Core tube
+Belt truss
+Outrigger truss
+Prism
+Giant column
+
+--- PDF PAGE 4 ---
+ 
+ 
+      
+ 
+Figure 3. Anemometer installation location 
+ 
+Table 1. Specific parameters of ultrasonic anemometer 
+Wind speed parameter 
+Technical index 
+Wind direction parameter 
+Technical index 
+Range 
+0~40m 
+Range of wind direction 
+0.0~359.9º 
+Resolving power 
+0.1m/s 
+Range of angle 
+±60 º  
+Threshold 
+0.01m/s 
+Resolving power 
+0.1 º 
+Precision 
+±1%rms ± 0.05m/s 
+Precision 
+±2 º(1~30m/s)  
+ 
+ 
+ 
+ 
+Figure 4. Layout of 117th accelerometers 
+ 
+Table 2. Specific parameters of acceleration sensor 
+Voltage sensitivity 
+Range 
+Resonant frequency 
+Frequency range  
+Resolving power 
+50 V/g 
+0.1g 
+1.6Hz 
+0.05-500 Hz 
+4×10-7 g 
+ 
+3. Data processing  
+3.1 Mean wind speed and direction  
+In this paper, the stationary wind speed model was used to analyze the data of wind speed. In 
+the three-dimensional airflow field, the wind speed vector in the horizontal direction can be 
+decomposed into two components: X and Y directions, which are perpendicular with each other. 
+Denote the wind speed at time i as V(i) and the incoming wind direction angle as α(i). To obtain 
+the mean wind speed and wind direction, a Cartesian coordinate system is established to 
+N
+E
+Wind direction angle
+Ultrasonic anemometer
+
+--- PDF PAGE 5 ---
+ 
+ 
+decompose the wind speed into X and Y components: 
+ 
+( )
+( )sin
+( )
+x
+u i
+V i
+i
+
+
+ 
+ (1) 
+ 
+( )
+( )cos ( )
+y
+u i
+V i
+i
+
+
+ 
+(2) 
+ 
+1
+1
+( )
+N
+x
+x
+i
+u
+u i
+N
+
+
+
+ 
+(3) 
+ 
+1
+1
+( )
+N
+y
+y
+i
+u
+u i
+N
+
+
+
+ 
+(4) 
+where 
+x
+u and 
+y
+u are the mean wind speed in X and Y directions, respectively; and N is the 
+number of data. The mean wind speed denoted by U and the mean wind direction angle denoted 
+by D can be calculated as follows: 
+                         
+2
+2
+x
+y
+U
+u
+u
+
+
+                                (5) 
+arctan(
+)
+(1
+(
+)) 180 ,
+0
+90
+(
+) 180 ,
+0
+y
+x
+x
+x
+y
+x
+u
+H u
+u
+u
+D
+H
+u
+u
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  (6) 
+where H(•) is Heaviside step function: 
+ 
+1,
+0
+( )
+0 ,
+0
+i
+H i
+i
+
+
+
+
+
+                            (7) 
+3.2 Acceleration data  
+3.2.1 Modified DTFT and frequency resolution 
+In general, DFT method could be employed to calculate the PSD of discrete-time digital signals. 
+However, there exists a deficiency of frequency resolution for this method. According to the 
+calculation formula of DFT: 
+ 
+1
+2
+/
+0
+[ ]
+[ ]
+N
+imn N
+n
+x m
+x n e
+
+
+
+
+
+ 
+(8) 
+where 
+0,1,
+,
+1
+m
+N
+
+ ; 
+[ ]
+x n is the signal sequence in time domain; N is the number of 
+sequence data; 
+1
+i 
+ ; and 
+[ ]
+x m  is the spectrum sequence in frequency domain. The 
+frequency resolution depends on the sampling frequency and the number of samples, and it can 
+be derived as 
+2
+(log
+)
+/ 2Int
+N
+sf
+, where 
+sf is the sampling frequency; and Int(•) denotes rounding 
+down. Generally, the variation of natural frequencies caused by the nonlinear stiffness of the 
+structure tends to be on the level of 10-3 Hz, or even smaller. For instance, the frequency 
+resolution identified by DFT is 0.00305 Hz if 10 min sampling duration time and 100 Hz 
+sampling frequency are used. The natural frequencies identified by this method are 
+characterized as jumping, and it is difficult to identify the smaller change of natural frequencies. 
+In fact, the deficiency arises from the dispersion of the frequency sequence m in equation (8). 
+Fig. 5 manifests the variation of the first natural frequencies with acceleration amplitudes 
+
+--- PDF PAGE 6 ---
+ 
+ 
+identified by using the DFT method based on the acceleration data of the Shanghai Tower. As 
+indicated, the identified natural frequencies are discontinuous. 
+ 
+Figure 5. Variation of the first natural frequencies with amplitudes identified by DFT 
+To overcome the limitation, DTFT is employed in this paper to calculate the frequency 
+component of the signal. The definition of DTFT is 
+ 
+1
+0
+(
+)
+[ ]
+N
+i
+i n
+n
+x e
+x n e
+
+
+
+
+
+
+ 
+(9) 
+where ω is the angular frequency with continuity. Thus, the relevant frequency components can 
+be identified. Applying it to the discrete-time signals, the above definitions are discretized and 
+the independent variables of frequencies are scale-transformed to obtain the modified DTFT: 
+ 
+1
+2
+/(2 )
+0
+[ ]
+[ ]
+N
+ifn
+B
+n
+x f
+x n e
+
+
+
+
+
+ 
+(10) 
+where f is the natural frequency (Hz) and 2B is the sampling frequency; and B is the Nyquist 
+frequency (Hz). In this paper, the interval of the sequence f is set as10-4 Hz. The latter 
+calculation results indicate that the frequencies exhibit better continuity by using this method. 
+3.2.2 Analytical modal decomposition (AMD) 
+The sampling frequency of acceleration in the Shanghai Tower is 100 Hz. Such high-frequency 
+sampling generates massive data, which causes great challenges to the data processing. The 
+empirical model decomposition (EMD)26 has been employed to extract frequency components 
+from the measured data. In 2012, Chen and Wang27 proposed analytical mode decomposition 
+(AMD) method, which is capable of separating multi-modes composite signals into multiple 
+signal components. The AMD theorem is superior to the filtering technique, wave-group 
+method, and tempered signal approach to deal with the decomposition of closely spaced modes, 
+beating effects, and small intermittent fluctuations27. The AMD is more much efficient than the 
+EMD, since the latter needs to extract recursively the single component from the original signal 
+and as well to be fitted with cubic spline curves, which would consume a lot of computing 
+resources. Differently, only a bisecting frequency 
+b
+ is needed to separate the low-order 
+signals in the AMD. The signal component 
+( )
+bs t below frequency 
+b
+ can be extracted as 
+follows: 
+( )
+sin(
+)
+[ ( )cos(
+)]
+cos(
+)
+[ ( )sin(
+)]
+b
+b
+b
+b
+b
+s t
+t H u t
+t
+t H u t
+t
+
+
+
+
+
+
+             (11) 
+where H[•] denotes the Hilbert transform, and u(t) is the original signal. To perform bandpass 
+
+--- PDF PAGE 7 ---
+ 
+ 
+filtering within the frequency range [b1, b2], the bandpass signal 
+1, 2( )
+b b
+s
+t can be obtained by 
+the subtraction of the two low frequency signals: 
+ 
+1, 2
+2
+1
+( )
+( )
+( )
+b b
+b
+b
+s
+t
+s
+t
+s
+t
+
+
+                              (12) 
+Chen and Wang27 suggested that 
+b
+ should be set as the mid-value of the frequencies of 
+the adjacent two frequency components, which can effectively separate the two components 
+even if they are very close. Fig. 6 shows an acceleration sample of the Shanghai Tower with a 
+duration time of 3 min. The first frequency component of acceleration signal was extracted by 
+the AMD within the frequency range [0.05, 0.155]. Besides, the PSDs of the original and 
+extracted signals were calculated separately, as shown in Fig. 7, which indicates that the AMD 
+method can effectively extract the first frequency component from the original signals. 
+ 
+Figure 6. Acceleration sample and the first frequency component 
+ 
+Figure 7. Power spectral density of acceleration signal 
+4. Measured wind speed and wind-induced vibration  
+In general, the identification of dynamic characteristics of structures is greatly affected by the 
+ratio of signal to noise. Since the Shanghai Tower is under the weak wind environment in most 
+of the time, which could hardly motivate the structure and produce large structural responses. 
+The ratio of signal to noise of the acceleration signal is too low to identify the dynamic 
+characteristics of the structure accurately. To analyze the dynamic responses of the Shanghai 
+Tower under excitations of various wind speeds, the data during August, 2018 was analyzed. 
+The wind speed atop the tower and the acceleration of the 117th floor from August 12 to 18, 
+2018, were selected as the analysis data in this paper. During this period, two typhoons, named 
+Yagi and Rumbia, transited through the Shanghai Tower, and the paths of them are shown in 
+
+--- PDF PAGE 8 ---
+ 
+ 
+Fig. 8. 
+ 
+Figure 8. Paths of typhoons 
+4.1 Wind speed and direction 
+Based on the wind speed model described in section 3.1, the 10-min mean values of wind speed 
+and wind direction were calculated, as indicated in Fig. 9. The wind speed increases 
+significantly during the two typhoons, and the maximum mean wind speed occurred on August 
+17 during the Rumbia, up to 29.2 m/s along with the wind direction angle of around 30°. During 
+the Yagi, the maximum mean wind speed is 23.5 m/s along with the wind direction angle of 35° 
+approximately. The mean wind direction angle mainly varies between 15° and 90° from August 
+12 to 18. 
+ 
+ 
+(a) 10-min mean wind speed 
+ 
+(b) 10-min mean wind direction 
+Figure 9. Mean wind speed and wind direction 
+4.2 Wind-induced structural vibration 
+To eliminate the influence of wind direction as much as possible and consider the structural 
+vibration under both normal wind and two typhoons, the data of wind speed and acceleration 
+were selected within the wind direction angle of 40° ± 15°. The relationship between the mean 
+wind speed and acceleration amplitude (i.e., the root mean square (RMS)) in X and Y directions 
+
+--- PDF PAGE 9 ---
+ 
+ 
+were investigated and the regression curves are expressed as: 
+ 
+2
+1
+(
+)
+c
+A
+cU
+gal
+
+ 
+(13) 
+where A is the acceleration amplitude in gal (cm/s2); U is the 10-min mean wind speed; and c1 
+and c2 are the fitting coefficients. The fitting results are plotted in Figs. 10 (a) and (b). 
+   
+ 
+(a) X-direction                                     (b) Y-direction 
+   
+ (c) Relationship of acceleration between X and Y directions 
+Figure 10. Variation of RMS acceleration responses with 10-min mean speed 
+As indicated in Fig. 10, the acceleration amplitudes in X-direction vary more sharply than 
+that in Y-direction, and both of them are less than 0.15 gal, when the mean wind speed is lower 
+than 15 m/s. When the mean wind speed is larger than 15 m/s, the X-direction acceleration 
+amplitudes increase rapidly with the mean wind speed, reaching at the maximum amplitude of 
+1.27 gal. As the wind speed increases, the structural responses in the X-direction are more 
+violent than that in the Y-direction, with maximum amplitude of X-direction being 2.15 times 
+of that associate with Y-direction. Moreover, the relationship of acceleration amplitudes 
+between X and Y directions is also plotted in Fig. 10 (c). It shows that the growth rate of 
+acceleration amplitudes with the wind speed in X-direction is almost the same as that in Y-
+direction, when the latter is less than 0.42 gal. Nevertheless, the growth rate in X-direction is 
+around 4.96 times of that in Y-direction, when the latter is larger than 0.42 gal. 
+Several researchers have observed the relationship between the acceleration amplitudes 
+and the wind speed for high-rise buildings under wind excitation. Table 3 lists the fitting results 
+of other six super high-rise buildings in China. It can be concluded that the acceleration 
+amplitudes under distinct wind excitations vary significantly from each other, even for the same 
+building, such as the Hong Kong International Finance Centre9,11,28. The parameter c2 in Table 
+3 denotes the growth rate of the acceleration amplitudes with wind speed. As listed in the table, 
+the growth rate of acceleration amplitudes of the Shanghai Tower in the X direction is 2 to 3 
+
+--- PDF PAGE 10 ---
+ 
+ 
+times faster than that of the other buildings, but they are similar in the downwind directions. 
+ 
+Table 3. Comparison of fitting parameters 
+Building 
+Height /m 
+X direction 
+c1 
+X direction 
+c2 
+Y direction 
+c1 
+Y direction 
+c2 
+Shanghai Tower 
+632 
+1.698×10-8 
+5.764 
+3.401×10-4 
+2.321 
+International Finance Centre (IFC)11 in 
+Hong Kong 
+420 
+3×10-4 
+2.55 
+3×10-4 
+2.49 
+IFC9 in Hong Kong 
+420 
+7.589×10-5 
+3.107 
+6.916×10-5 
+3.105 
+IFC28 in Hong Kong 
+420 
+4.797×10-3 
+1.601 
+2×10-4 
+2.701 
+Building B28 in Hong Kong 
+484 
+6.376×10-4 
+2.219 
+3.52×10-4 
+2.505 
+CITIC Plaza building in Guangzhou2 
+391 
+9.4×10-4 
+2.572 
+1.6×10-4 
+2.439 
+Jinmao Building13 in Shanghai 
+420.5 
+2.11×10-5 
+3.70 
+3.00×10-5 
+3.45 
+Central Plaza Tower in Hong Kong6  
+374 
+1.10×10-5 
+3.10 
+4.84×10-6 
+3.35 
+Di Wang Tower in Shenzhen6  
+384 
+2.85×10-5 
+3.31 
+4.83×10-6 
+3.72 
+ 
+5. Analysis of dynamic characteristics under wind-induced vibration 
+To eliminate the influences of noise and long-range trend components on the signal, the AMD 
+bandpass filter of 0.05 ~ 1.0 Hz was applied before the acceleration data was analyzed. Since 
+the first 4 natural frequencies of the Shanghai Tower are less than 0.5 Hz, the upper limit of the 
+filtered frequencies was set as 1.0 Hz to eliminate the influence of high frequency noise. The 
+vibration signals of the first 4 modes of the structure were analyzed in the following sections. 
+5.1 Time-frequency spectrum  
+To identify the time-varying characteristics of structural natural frequencies under wind 
+excitation, the normalized frequency spectrum of acceleration was analyzed by using the 
+modified DTFT combined with moving window technique, which can not only improve the 
+frequency resolution but also capture the frequency variation. To eliminate unbalanced 
+spectrum weights due to the divergence of excitation energies in different periods, the norm 
+PSD is: 
+ 
+0
+( )
+( )=
+( )
+B
+norm
+n
+S n
+S
+n
+S n dn
+
+ 
+(14) 
+where n is frequency (Hz); 
+B
+n is the upper limit of frequency, taken 0.5 Hz; and 
+( )
+S n is the 
+power spectrum. In this paper, the modified DTFT was adopted to calculate the spectrum 
+between 0.05 Hz and 0.5 Hz for each 10-min acceleration data. The normalized time-frequency 
+spectrums with the logarithm value are plotted in Fig. 11. As indicated, in addition to the natural 
+frequencies of 0.106 Hz, 0.204 Hz, 0.320 Hz, and 0.440 Hz, several spectral peaks also occur 
+near 0.067 Hz and 0.138 Hz, and these non-structural vibrations may be caused by the sensors 
+and the data acquisition system themselves. It can be observed that the proportion of the signals 
+caused by the non-structural vibration increases with the decrease of the acceleration amplitudes. 
+Therefore, these non-structural vibration signals should be paid special attention to in the 
+analysis of structural modal analysis to ensure that the natural frequencies of the structure can 
+
+--- PDF PAGE 11 ---
+ 
+ 
+be identified accurately. 
+As shown in Fig. 11, the width of the spectral peak (or the ridge) reflects the relative values 
+of damping ratios. Note that these spectral peaks become wider with the increase of the 
+acceleration amplitudes, which indicates large damping ratios are associated with these times. 
+The figure also depicts the change of relative contribution of each mode with time. For large 
+acceleration amplitudes, the peaks are more prominent and there is less overlaps (i.e., less 
+coupling of modes). But some overlaps occur for the small acceleration amplitudes, which is 
+more obvious for the spectral peaks of torsional modes (the 2rd and 4th modes). Therefore, when 
+the structural vibration amplitude is large, the structural vibration behaves as a linear 
+superposition of each single mode, which is beneficial for structural dynamic analysis. However, 
+the structural modes are often coupled for the small vibration amplitude. Although it is 
+unfavorable to the dynamic analysis, the structural dynamic effects of such a low amplitude are 
+often negligible during the structural analysis. 
+ 
+ (a) X-direction 
+ 
+(b) Y-direction 
+Figure 11. DTFT acceleration time-frequency spectrum 
+5.2 Natural frequencies 
+Based on the time-frequency spectrum above, the peak picking (PP) method was applied to 
+identify the natural frequencies of structure at each time. Fig. 12 demonstrates the variations of 
+the first natural frequencies with the acceleration amplitudes, which can be linearly fitted by 
+the following equation: 
+ 
+0
+1
+f
+A
+
+
+
+
+ 
+(15) 
+where A is the acceleration amplitude; f is the first natural frequency; α0 and α1 are the regression 
+coefficients; α0 denotes the change rate of frequency with acceleration amplitude; and α1 
+
+--- PDF PAGE 12 ---
+ 
+ 
+denotes the frequency with zero amplitude. Comparing the results of Fig. 12(a) with Fig. 5, it 
+can be concluded that the modified DTFT can identify smaller changes of natural frequencies. 
+As shown in Fig. 12, the first natural frequencies associated with the X and Y directions 
+decrease with the increase of acceleration amplitudes. The natural frequencies in X-direction 
+decrease from 0.1069 Hz to 0.1031 Hz with a descent of 3.55% as the acceleration amplitudes 
+increase from 0.110 gal to 1.906 gal. The natural frequencies in Y-direction decrease from 
+0.1067 Hz to 0.1043 Hz with a descent of 2.25% along with the increasing of acceleration 
+amplitudes from 0.103 gal to 1.497 gal. Based on the Bayesian FFT method, the first natural 
+frequencies of X and Y directions are 0.1090 Hz and 0.1080 Hz21, respectively, which are higher 
+than the values in this paper. The differences may be caused by the different analysis methods. 
+In addition, the finite element analysis shows that the first natural frequencies in X and Y 
+directions are 0.1116 Hz and 0.1104 Hz, respectively, slightly larger than those in this paper and 
+reference 21. 
+The decrease of the natural frequencies with the increase of acceleration amplitudes may 
+be caused by several factors including: the nonlinear response of the structure under large 
+vibration, the slip of rigid node, and the interaction between the structural members and the 
+non-structural ones29. Table 4 lists the fitting parameters α0 and α1 of the Shanghai Tower and 
+the other three buildings. All the values of α1 fall within the range of 0.09 ~ 0.20, which indicates 
+that the stiffness of super high-rise buildings is relatively small. The value of α1 of the Shanghai 
+Tower is smaller than that of the World Financial Center due to the fact that the height of the 
+former is larger than that of the latter. Although the main structure of the Shanghai Tower is 126 
+m higher than that of the Canton Tower, its α1 is greater than that of the Canton Tower, which 
+indicates that the structural stiffness of the former is slightly larger than that of the latter. 
+ 
+(a) X-direction                                  (b) Y-direction 
+Figure 12. The variation of the first natural frequencies with acceleration amplitudes 
+ 
+Table 4. Coefficientsα0 andα1 of Shanghai Tower and other super-tall buildings 
+Building 
+Main structure 
+height /m 
+X-direction 
+α0/Hz•mg-1 
+X-direction 
+α1/Hz 
+Y-direction 
+α0/Hz•mg-1 
+Y-direction 
+α1/Hz 
+Shanghai Tower 
+580 
+-2.16×10-3 
+0.1072 
+-1.77×10-3 
+0.1069 
+Canton Tower30 
+454 
+-3.69×10-3 
+0.092 
+-3.05×10-3 
+0.092 
+Shanghai World 
+Financial Center31 
+492 
+-3.30×10-3 
+0.1513 
+-2.35×10-3 
+0.1540 
+Seoul building17 
+264 
+-2.7×10-3 
+0.1992 
+-2.3×10-3 
+0.2076 
+ 
+In addition, as shown in Fig. 12, the identified natural frequencies are widely dispersed at 
+the low amplitude region, where the ratios of signal to noise are relatively small due to the weak 
+
+--- PDF PAGE 13 ---
+ 
+ 
+vibration. Since the Fourier transform affected by the noise is prone to uncertainty, it is 
+necessary to use the identification method of weak signal, which is beyond the scope of this 
+paper. In general, the noise can be regarded as a stationary zero-mean process, and the identified 
+natural frequencies fluctuate around the true one.  
+5.3 Contribution of displacement modes 
+In order to study the relative contribution of displacement modes in dynamic responses, the 
+following equations are derived based on the relationship between the PSD and the magnitude 
+of each component signal. In general, a stationary random vibration signal x(t) for a period of 
+time can be described by the superposition of a series of sinusoidal signals with different 
+frequencies and gently changing amplitudes: 
+ 
+1
+1
+( )
+( )
+( )sin(
+)
+M
+M
+i
+i
+i
+i
+i
+i
+x t
+x t
+A t
+t
+
+
+
+
+
+
+
+
+
+ 
+(16) 
+where M is the number of components; 
+i
+ is the angular frequency; Ai(t) is the changing 
+amplitude; and 
+i
+ is the initial phase. 
+The acceleration signal can be obtained by implementing the second derivative to the 
+displacement signal: 
+ 
+2
+1
+1
+( )
+[
+( )cos(
+)]
+[
+( )cos(
+)
+2
+( )sin(
+)]
+M
+M
+i
+i
+i
+i
+i
+i
+i
+i
+i
+i
+i
+i
+i
+x t
+A t
+t
+A t
+t
+A t
+t
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+(17) 
+In a short period of time, 
+( )
+iA t changes much slower than sine function, resulting in both 
+( )
+iA t and 
+( )
+iA t approaching zero. Thus, equation (17) can be written as follows: 
+ 
+2
+1
+1
+( )
+( )
+[
+( )cos(
+)]
+M
+M
+i
+i
+i
+i
+i
+i
+i
+x t
+x t
+A t
+t
+
+
+
+
+
+
+
+
+
+
+
+ 
+(18) 
+Then, 
+2
+1
+||
+( ) ||
+||
+( ) ||
+i
+i
+x t
+x t
+
+
+                          
+(19) 
+According to the Wiener-Khintchine formula, the variance of the acceleration signal 
+denoted by 
+2
+acc
+
+ is: 
+ 
+2
+0
+( )
+B
+n
+acc
+acc
+S
+n dn
+
+
+  
+(20) 
+where 
+acc
+S
+ is the PSD of acceleration signal. For signals with sparse modes, the component 
+signals of are independent with each other, so 
+ 
+2
+1
+2
+2
+,
+1
+1
+=
+( )
+i
+i
+M
+M
+n
+acc
+acc i
+acc
+n
+i
+i
+S
+n dn
+
+
+
+
+
+
+ 
+(21) 
+where 
+1in and 
+2
+in are the lower and upper limits of the integral intervals, respectively. For 
+
+--- PDF PAGE 14 ---
+ 
+ 
+example, the PSD of 10-min acceleration signal and the integral intervals [
+1
+2
+,
+i
+i
+n
+n ] of the 
+Shanghai Tower are plotted in Fig. 13. 
+ 
+Figure 13. Schematic diagram of integral intervals 
+Derived from Eqs. (19) and (20), the variance of displacement signal denoted by 
+2
+,
+dis i
+
+ 
+can be computed as: 
+ 
+2
+2
+,
+,
+4
+1
+dis i
+acc i
+
+
+
+
+ 
+(22) 
+Therefore, we can define the proportion coefficient of displacement mode, which reflects 
+the relative contribution of displacement mode. It is denoted by 
+ip and defined as follows: 
+ 
+,
+,
+1
+dis i
+i
+M
+dis i
+i
+p
+
+
+
+
+
+ 
+(23) 
+where 
+,
+dis i
+
+ is the RMS of the displacement signal. And 
+ip reflects the relative contribution 
+of displacement mode. 
+In this paper, only the first 4 component signals are used for calculation, each of which is 
+with respect to one mode of vibration. The variation of the first 4 proportion coefficients of 
+displacement modes with time is shown in Fig. 14. It indicates that the trend of proportion of 
+the first and second modes is completely opposite, i.e. one falls and another rises, and vice versa. 
+Moreover, the first mode is predominant during most of the time, even the proportion is over 
+than 90% with the large vibration amplitude. The third and fourth modes manifest a uniform 
+variation trend during most of the time, among which the proportions of the third and the fourth 
+modes are lower than 10% and 5%, respectively. During the high vibration amplitude phase, 
+the proportions of both the third and the fourth modes keep at a very low level. Therefore, only 
+the first mode needs to be considered in the analysis of the wind-induced vibration effects of 
+structures under high wind speed. 
+ 
+(a) X-direction 
+2
+,1
+acc
+
+2
+,2
+acc
+
+2
+,3
+acc
+
+2
+,4
+acc
+
+PSD (gal2/Hz)
+
+--- PDF PAGE 15 ---
+ 
+ 
+ 
+ (b) Y-direction 
+Figure 14. The variation of proportion coefficients of displacement modes with time 
+5.4 Damping ratios 
+Due to flexibility of super high-rise buildings, the reliable information on the damping ratios is 
+of great importance in the dynamic analysis. In this study, the damping ratios of the Shanghai 
+Tower are estimated by the RDT, which was proposed by Cole32,33 and was applied to the 
+parameter identification and damage assessment of aerospace structures. This technology was 
+improved and applied to civil structures by many researchers. For instance, Jeary34 applied the 
+RDT to identify the nonlinear damping of structures and concluded that this method can identify 
+the varying of damping with amplitude. Chen35 verified the validity and reliability of the RDT 
+in damping identification for single and multiple degree freedom structures, and suggested that 
+the usage of this method requires two conditions: the excitation of structures must be caused by 
+ergodic Gaussian white noise and the signal should be long enough. 
+Guo30 divided the acceleration signals into several segments of 1 h, then identified the 
+damping ratio of each segment by RDT, and analyzed the variation of damping ratios with 
+amplitudes. Actually, the damping ratio identified by this method is an average one in time, 
+which is different from that proposed by Jeary34. In this paper, we adopted the method presented 
+by Guo30 and improved it appropriately to study the damping ratios of the Shanghai Tower 
+under the normal wind and typhoon. The specific calculation steps are listed as follows: 
+(1) First, the mirror image technique about the first or the last maxima/minima of the 
+original signal was used to minimize the end effects of AMD decomposition27. Then, the 
+frequency component a(t) corresponding to first modal vibration is obtained by AMD with 
+bandpass filtering of 0.05 ~ 0.155 Hz; 
+(2) The k-th fragment ak(t) is selected by window function; 
+(3) ak(t) is cut by the trigger value that is the 1.5 times standard deviation of ak(t) to obtain 
+N1 points, namely ak(ti), where i=1, 2, …, N1; 
+(4) For each ti, obtain sequence ak(t i+ τ) that has 20 cycles in time, so there are N1 
+sequences in all; 
+(5) a(t) is inverted to obtain -a(t), and steps (3) and (4) are followed to obtain N2 sequences; 
+(6) Average the (N1+ N2) signals obtained in (4) and (5) to obtain a free decay signal Dk(τ); 
+(7) The Dk(τ) is subjected to Hilbert transform to obtain Hk(τ) and we can get the sequence 
+of analysis signal Ak(τ) = Dk(τ) + iHk(τ), where 
+1
+i 
+; 
+(8) Calculate the modulo of Ak(τ) to obtain the envelope sequence Ek(τ). Finally, Ek(τ) is 
+fitted to obtain the average damping ratio of the first mode in k-th fragment; and 
+(9) Move the window function, so k = k + 1 and repeat (2) ~ (8) until the calculation is 
+completed. 
+To verify the efficiency of this method, it was applied to a three-degree-of-freedom time-
+
+--- PDF PAGE 16 ---
+ 
+ 
+varying system to identify the damping ratios. The simulation model is shown in Fig. 15, in 
+which the mass of the three blocks are m1 = 2761 kg, m2 = 2760 kg, and m3 = 2300 kg; spring 
+stiffness are k1 = 2.485×105 N/m, k2 = 1.921×105 N/m, and k3 = 1.522×105 N/m; damping 
+coefficients are c2 = 1.5×103 N·s/m and c3 = 1.1×103 N·s/m, whereas c1 = 2.0×103 ~ 8.0×103 
+N·s/m, which varies with time. The solid line in Fig. 16 refers to the variation of the first mode 
+damping ratios of the system. The system was stimulated by white noise and the dynamic 
+responses were calculated by means of the Newmark - β method. Some noise was added to the 
+acceleration response of m3, which was resampled with 100 Hz to simulate the sampling process 
+in actual situation. The results shown in Fig. 16 demonstrate that the algorithm above can 
+effectively identify the change trend of damping ratios. 
+ 
+Figure 15. Simulation model 
+ 
+Figure 16. identification and theoretical values of damping 
+According to the numerical test and calculation process stated above, the algorithm has 
+two characteristics: 
+(1) Discreteness: to identify the damping ratios accurately by means of the RDT method, 
+excitation load must be the ergodic stationary stochastic process. However, it is difficult to meet 
+this condition in practice, thus, the excitation signals in each time window can only be 
+approximated as a stationary process, resulting in the discreteness of the damping ratios shown 
+in Fig. 16; and 
+(2) Stability: the fault-tolerant of this method is improved by window technology, which 
+enhances the precision of identification results of damping ratios. 
+The calculation process above was carried out to analyze the measured acceleration data 
+of the Shanghai Tower within 7 days. The variations of the first mode damping ratios with the 
+acceleration amplitudes in X and Y directions are identified, and the results are fitted by the 
+following equation: 
+ 
+A
+
+
+
+
+
+ 
+(24) 
+where ζ is the first mode damping ratio; A is the acceleration amplitude; and α, β, and γ are the 
+fitted coefficients, respectively. The fitting results are plotted in Fig. 17, which demonstrates 
+that the damping ratios increase with the increase of the acceleration amplitudes nonlinearly. It 
+is also indicated that the damping ratios in X-direction are around 2.75% as the acceleration 
+amplitudes are greater than 0.5 gal. Whereas, the damping ratios in Y-direction increase to 2.44% 
+as the acceleration amplitudes reach at 0.751 gal, which increase slowly than that in X-direction. 
+
+--- PDF PAGE 17 ---
+ 
+ 
+The coefficient γ represents the damping characteristic of the structure itself for A = 0 (i.e., the 
+damper does not work). The values of γ in X and Y directions are 0.57% and 0.56%, respectively. 
+It indicates that there is no significant difference in structural damping in both directions, which 
+may result from the symmetry of the structure. 
+    
+ 
+     (a) X-direction                                      (b) Y-direction 
+Figure17. Variation of the first mode damping ratios with acceleration amplitudes 
+6. Conclusions 
+This paper investigated the time-varying dynamic characteristics of the Shanghai Tower under 
+the excitation of normal wind and typhoon by using the modified DTFT and RDT methods. 
+Some conclusions are drawn as follows: 
+(1) The variations of acceleration amplitudes with mean wind speed in X and Y directions 
+are 
+8
+5.764
+1.698 10
+xA
+U
+
+
+
+ and 
+4
+2.321
+3.401 10
+y
+A
+U
+
+
+
+ , respectively. When the mean wind 
+speed is larger than 15 m/s, the growth rate of acceleration amplitudes in X-direction is 4.96 
+times of that in Y-direction. In addition, the growth rate of acceleration amplitudes with wind 
+speed is 2 - 3 times faster than that of the other high-rise buildings near the crosswind direction, 
+nevertheless, they are basically consistent with each other in the downwind direction. 
+(2) The analytical results of normalized time-frequency spectrum show that there is no 
+obviously coupling among the first 4 modes under high acceleration amplitudes in both X and 
+Y directions. As the acceleration amplitudes become small, there are some couplings among the 
+2nd, 3rd and 4th modes, especially the 2nd and 4th ones, which are associated with torsional modes. 
+By implementing the modified DTFT and PP method, the variations of the first natural 
+frequencies with acceleration amplitudes in X and Y directions are 
+0.00216
+0.1072
+x
+x
+f
+A
+
+
+ 
+and 
+0.00177
+0.1069
+y
+y
+f
+A
+
+
+, respectively. It indicates that the structural stiffness decreases 
+with the increase of acceleration amplitudes, moreover, the rate of decrease in X-direction is 
+faster than that in Y-direction. 
+(3) The proportion coefficients of the first 4 displacement modes were calculated based on 
+the acceleration data. The calculation results show that the variation trend of the proportion 
+coefficients for the first and second modes are opposite, i.e., one falls and other rises, and vice 
+versa. In addition, the first mode is predominant during most of the time, even the proportion 
+is over than 90% with the large vibration amplitude. Therefore, only the first mode needs to be 
+considered in the analysis of the wind-induced vibration effects of structures under high wind 
+speed. 
+(4) By designing a three-degree-of-freedom system with time-varying damping, a 
+
+--- PDF PAGE 18 ---
+ 
+ 
+numerical example was carried out to verify the effectiveness of the modified RDT. Based on 
+this method, the variations of the damping ratios with acceleration amplitudes in X and Y 
+directions are 
+1.862
+=0.0840
+0.0057
+x
+xA
+
+
+  and 
+2.723
+=0.0409
+0.0056
+y
+y
+A
+
+
+ , respectively. 
+Furthermore, the damping ratios in X-direction are around 2.75% as the acceleration amplitudes 
+are greater than 0.5 gal. Whereas, the damping ratios in Y-direction increase to 2.44% as the 
+acceleration amplitudes reach at 0.751 gal, which increase slowly than that in X-direction. The 
+critical damping ratio of 3.0% is recommended under high vibration amplitude. 
+Acknowledgments 
+The research described in this paper was financially supported by the National Natural Science 
+Fund of China (NSFC) (grant No. 51878475). The financial support is gratefully acknowledged. 
+References 
+1. He YH, Li QS, Zhu HP, Han XL, He YC, Li X. Monitoring of structural modal parameters 
+and dynamic responses of a 600m-high skyscraper during a typhoon. Structural Design of 
+Tall and Special Buildings. 2018;27:e1456. https://doi.org/10.1002/tal.1456 
+2. Li QS, Wu JR, Fu JY, Li ZN, Xiao YQ. Wind effects on the world's tallest reinforced 
+concrete building. Proceedings of the Institution of Civil Engineers-Structures and 
+Buildings. 2010;163:97-110. https://doi.org/10.1680/stbu.2009.1632.97 
+3. Xu YL, Chen SW, Zhang RC. Modal identification of Di Wang Building under Typhoon 
+York using the Hilbert-Huang transform method. Structural Design of Tall and Special 
+Buildings. 2003;12:21-47. https://doi.org/10.1002/tal.211 
+4. Li QS, Xiao YQ, Wong CK, Jeary AP. Field measurements of typhoon effects on a super 
+tall 
+building. 
+Engineering 
+Structures. 
+2004;26:233-244. 
+https://doi.org/10.1016/j.engstruct.2003.09.013 
+5. Li QS, Wu JR. Correlation of dynamic characteristics of a super-tall building from full-
+scale measurements and numerical analysis with various finite element models. 
+Earthquake 
+Engineering 
+and 
+Structural 
+Dynamics. 
+2004;33:1311-1336. 
+https://doi.org/10.1002/eqe.405 
+6. Li QS, Xiao YQ, Wong CK. Full-scale monitoring of typhoon effects on super tall buildings. 
+Journal 
+of 
+Fluids 
+and 
+Structures. 
+2005;20:697-717. 
+https://doi.org/10.1016/j.jfluidstructs.2005.04.003 
+7. Li QS, Xiao YQ, Wong CK, Jeary AP. Field measurements of wind effects on the tallest 
+building in Hong Kong. Structural Design of Tall and Special Buildings. 2003;12:67-82. 
+https://doi.org/10.1002/tal.213 
+8. Li QS, Yang K, Wong CK, Jeary AP. The effect of amplitude-dependent damping on wind-
+induced vibrations of a super tall building. Journal of Wind Engineering and Industrial 
+Aerodynamics. 2003;91:1175-1198. https://doi.org/10.1016/s0167-6105(03)00080-1 
+9. Yi J, Zhang JW, Li QS. Dynamic characteristics and wind-induced responses of a super-
+tall building during typhoons. Journal of Wind Engineering and Industrial Aerodynamics. 
+2013;121:116-130. https://doi.org/10.1016/j.jweia.2013.08.006 
+10. Li QS, Zhi LH, Yi J, To A, Xie JM. Monitoring of typhoon effects on a super-tall building 
+in Hong Kong. Structural Control and Health Monitoring. 2014;21:926-949. 
+
+--- PDF PAGE 19 ---
+ 
+ 
+https://doi.org/10.1002/stc.1622 
+11. Li X, Li QS. Observations of typhoon effects on a high-rise building and verification of 
+wind tunnel predictions. Journal of Wind Engineering and Industrial Aerodynamics. 
+2019;184:174-184. https://doi.org/10.1016/j.jweia.2018.11.026 
+12. Li QS, Fu JY, Xiao YQ, Li ZN, Ni ZH, Xie ZN, Gu M. Wind tunnel and full-scale study of 
+wind effects on China’s tallest building. Engineering Structures. 2006;28:1745-1758. 
+https://doi.org/10.1016/j.engstruct.2006.02.017 
+13. Li QS, Xiao YQ, Fu JY, Li ZN. Full-scale measurements of wind effects on the Jin Mao 
+building. Journal of Wind Engineering and Industrial Aerodynamics. 2007;95:445-466. 
+https://doi.org/10.1016/j.jweia.2006.09.002 
+14. He YC, Li QS. Dynamic responses of a 492-m-high tall building with active tuned mass 
+damping system during a typhoon. Structural Control and Health Monitoring. 
+2014;21:705-720. https://doi.org/10.1002/stc.1596 
+15. Li QS, Zhi LH, Tuan AY, Kao CS, Su SC, Wu CF. Dynamic Behavior of Taipei 101 Tower: 
+Field Measurement and Numerical Analysis. Journal of Structural Engineering-ASCE. 
+2011;137:143-155. https://doi.org/10.1061/(asce)st.1943-541x.0000264 
+16. Kijewski-Correa T. Full-scale measurements and system identification: a time-frequency 
+perspective. Notre Dame: The University of Notre Dame. 2003 
+17. Kijewski-Correa T, Pirnia JD. Dynamic behavior of tall buildings under wind: Insights 
+from full-scale monitoring. Structural Design of Tall and Special Buildings. 2007;16:471-
+486. https://doi.org/10.1002/tal.415 
+18. Pitnia JD. Full-scale validation of wind-induced response of tall buildings: investigation of 
+amplitude-dependent dynamic properties. Structures Congress: New Horizons and Better 
+Practices-ASCE. 2007. https://doi.org/10.1061/40946(248)38 
+19. Kijewski-Correa T, Bentz A. Wind-induced vibrations of buildings: role of transient events. 
+Proceedings of the Institution of Civil Engineers-Structures and Buildings. 2011;164:273-
+284. https://doi.org/10.1680/stbu.2011.164.4.273 
+20. Quan Y, Wang S, Gu M, Kuang J. Field Measurement of Wind Speeds and Wind-Induced 
+Responses atop the Shanghai World Financial Center under Normal Climate Conditions. 
+Mathematical Problem in Engineering. 2013. http://dx.doi.org/10.1155/2013/902643 
+21. Zhang FL, Xiong HB, Shi WX, Ou X. Structural health monitoring of Shanghai Tower 
+during different stages using a Bayesian approach. Structural Control and Health 
+Monitoring. 2016;23:1366-1384. https://doi.org/10.1002/stc.1840 
+22. Fu JY, Wu JR, Xu A, Li QS, Xiao YQ. Full-scale measurements of wind effects on 
+Guangzhou 
+West 
+Tower. 
+Engineering 
+Structures. 
+2012;35:120-139. 
+https://doi.org/10.1016/j.engstruct.2011.10.022 
+23. Wu J, Xu HJ, Zhang QL. Dynamic performance evaluation of Shanghai Tower under winds 
+based on full‐scale data. Structural Design of Tall and Special Buildings. 2019;28:e1611. 
+https://doi.org/10.1002/tal.1611 
+24. Su JZ, Xia Y, Chen L, Zhao X, Zhang QL, Xu YL, Ding JM, Xiong HB, Ma RJ, Lv XL, 
+Chen AR. Long-term structural performance monitoring system for the Shanghai Tower. 
+Journal 
+of 
+Civil 
+Structural 
+Health 
+Monitoring. 
+2013;3:49-61. 
+https://doi.org/10.1007/s13349-012-0034-z 
+25. Zhang Q, Tang X, Wu J, Yang B. Online automatic structural health assessment of the 
+Shanghai 
+Tower, 
+Smart 
+Structures 
+and 
+Systems. 
+2019;24:319-332. 
+https://doi.org/10.12989/sss.2019.24.3.319 
+
+--- PDF PAGE 20 ---
+ 
+ 
+26. Huang NE, Shen Z, Long SR, Wu MC. Shih HH, Zheng QN, Yen NC, Tung CC, Liu HH. 
+The empirical mode decomposition and the Hilbert spectrum for nonlinear and non-
+stationary time series analysis. Proceedings of the Royal Society A: Mathematical, Physical 
+and Engineering Sciences. 1998;454:903-995. https://doi.org/10.1098/rspa.1998.0193 
+27. Chen GD, Wang ZC. A signal decomposition theorem with Hilbert transform and its 
+application to narrowband time series with closely spaced frequency components. 
+Mechanical 
+System 
+and 
+Signal 
+Processing. 
+2012;28:258-279. 
+https://doi.org/10.1016/j.ymssp.2011.02.002 
+28. Li QS, Yi J. Monitoring of dynamic behaviour of super-tall buildings during typhoons. 
+Structural 
+Infrastructural 
+Engineering. 
+2016;12:289-311. 
+https://doi.org/10.1080/15732479.2015.1010223 
+29. Celebi M, Phan LT, Marshall RD. Dynamic characteristics of five tall buildings during 
+strong and low-amplitude motions. Structural Design of Tall Buildings. 1993;2:1-15 
+30. Guo YL, Kareem A, Ni YQ, Liao WY. Performance evaluation of Canton Tower under 
+winds based on full-scale data. Journal of Wind Engineering and Industrial Aerodynamics. 
+2012;104:116-128. https://doi.org/10.1016/j.jweia.2012.04.001 
+31. Huang YJ, Gu M, Huang ZF. Field measurement of wind and acceleration on Shanghai 
+World Financial Center. Journal of Tongji University (Natural Science) . 2017;45:821-826. 
+https://doi.org/10.11908/j.issn.0253-374x.2017.06.005 (in Chinese) 
+32. Cole HA. Method and apparatus for measuring the damping characteristics of a structure. 
+US, US3620069A [P], 1971 
+33. Cole HA. On-line failure detection and damping measurement of aerospace structures by 
+random decrement signatures:NASA CR-2205[R], California: NASA, 1973 
+34. Jeary AP. The description and measurement of nonlinear damping in structures. Journal of 
+Wind 
+Engineering 
+and 
+Industrial 
+Aerodynamics. 
+1996;59:103-114. 
+https://doi.org/10.1016/0167-6105(96)00002-5 
+35. Chen DC, Jiang SJ. Method and theory of random decrement technique. Journal of 
+Vibration and Shock. 1984;4:31-40. https://doi.org/10.13465/j.cnki.jvs.1984.04.004 (in 
+Chinese) 

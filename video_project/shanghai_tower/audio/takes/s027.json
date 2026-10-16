@@ -1,0 +1,82 @@
+{
+  "id": "s027",
+  "text": "再回头看外形：圆润的三角轮廓，一边向上收小，一边旋转，最终累计转过一百二十度。",
+  "ttsText": "再回头看外形：圆润的三角轮廓，一边向上收小，一边旋转，最终一共转过一百二十度。",
+  "signature": "eb68ddcea601bcb48e26464fb3571a4efa430fa3645b38be7ee8e4cd2ab6af19",
+  "raw": "audio/raw/s027-eb68ddcea6.wav",
+  "processed": "public/voice/s027.wav",
+  "rawDuration": 7.36,
+  "duration": 7.6,
+  "sha256": "8effdd086707d0ecbf3aea5f1ba1e277f1aabdfa25cc6cb32943c02653a72338",
+  "seed": 3949518286,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s027",
+    "s029",
+    "s032",
+    "s033"
+  ],
+  "rawEndpointDB": -95.79851316747649,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "abd15d8beebe7125af9412c9a1cf58c1b308597c56fc828ff03bea1be332f5a3",
+    "outputSha256": "8effdd086707d0ecbf3aea5f1ba1e277f1aabdfa25cc6cb32943c02653a72338",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4968211618319245,
+    "input": {
+      "seconds": 7.6,
+      "peakDb": -7.411215012825789,
+      "activeRmsDb": -22.154850785332666,
+      "quietFrameP10Db": -64.22656358450428
+    },
+    "output": {
+      "seconds": 7.6,
+      "peakDb": -5.321627544771593,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -64.7627105910456
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "2c871469d199f21a55de9a67d15b3e26f9dd9dddb1934bc70f4f48733806dd94"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s027.wav"
+}

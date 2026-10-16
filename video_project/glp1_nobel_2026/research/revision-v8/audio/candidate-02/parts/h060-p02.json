@@ -1,0 +1,86 @@
+{
+  "id": "h060",
+  "partIndex": 1,
+  "ttsText": "像氨氯地平，会减少钙进入管壁肌肉细胞，让小动脉放松。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 2,
+  "seed": 3749420252,
+  "signature": "df7b9cdc81d9c64cfdc84d8a7eb6357557082db28aa2de5c3b55b837929240a1",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h060-p02",
+    "h077-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-02\\raw\\h060-p02.wav",
+  "rawSHA256": "2653c2c90dc5f0e2a69b614aa280e4646daea07d51eac433f67026adb5b0de23",
+  "rawMetrics": {
+    "samples48k": 264960,
+    "seconds": 5.52,
+    "peakDBFS": -6.756615023784499,
+    "first20msDBFS": -88.40913099753237,
+    "last20msDBFS": -98.44905704101828,
+    "firstActiveMs": 70.0,
+    "lastActiveToEndMs": 420.0,
+    "activityThresholdDBFS": -49.92036917964807,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-02\\guarded\\h060-p02.wav",
+  "guardedSHA256": "aeec4865b99969d9517edcb01b06ce4a786e19ec9f9b9d4f566e3764754d6221",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-02\\processed\\h060-p02.wav",
+  "sha256": "1018269f4e9c13eb445cd1e1fc6fb7f7025e41bed3cef24b344818a340016c79",
+  "durationSeconds": 5.76,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "aeec4865b99969d9517edcb01b06ce4a786e19ec9f9b9d4f566e3764754d6221",
+    "outputSha256": "1018269f4e9c13eb445cd1e1fc6fb7f7025e41bed3cef24b344818a340016c79",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.4091503942839374,
+    "input": {
+      "seconds": 5.76,
+      "peakDb": -6.757112376345269,
+      "activeRmsDb": -21.990354699212944,
+      "quietFrameP10Db": -61.5915344979419
+    },
+    "output": {
+      "seconds": 5.76,
+      "peakDb": -3.6696378796999696,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.71081963960762
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

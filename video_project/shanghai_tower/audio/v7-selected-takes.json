@@ -1,0 +1,111 @@
+{
+  "selected": {
+    "s001": "v7-flow-a",
+    "s002": "v7-flow-a",
+    "s003": "v7-flow-a",
+    "s006": "v7-flow-a",
+    "s007": "v7-flow-a",
+    "s012": "v7-flow-a",
+    "s013": "v7-flow-a",
+    "s018": "v7-flow-a",
+    "s019": "v7-physics-final",
+    "s020": "v7-physics-final",
+    "s021": "v7-flow-a",
+    "s034": "v7-flow-a",
+    "s040": "v7-flow-a",
+    "s043": "v7-flow-a",
+    "s046": "v7-flow-a",
+    "s047": "v7-flow-a",
+    "s048": "v7-flow-a",
+    "s029": "v7-cfd-provisional",
+    "s030": "v7-cfd-provisional",
+    "s031": "v7-cfd-provisional",
+    "s032": "v7-cfd-provisional"
+  },
+  "draft": false,
+  "pendingCFD": [],
+  "cfdAcceptance": "research/physics-v7/final-educational-cfd-acceptance.json",
+  "acceptedCFDArtifacts": [
+    {
+      "file": "computed-wind-paths.json",
+      "sha256": "d75b2778d22a23a592e9cabd01db507ee036bdf8665964725610c98f111c16b2",
+      "quality": {
+        "acceptedForFilm": true,
+        "acceptedForCoupling": false,
+        "notes": "Accepted for the explicitly restricted qualitative film scope after native conservation, same-location sensitivity, export/geometry and independent topology review; not claimed converged or engineering-validated.",
+        "acceptedForEngineeringDesign": false,
+        "acceptedForQuantitativeLocalPressure": false,
+        "acceptedForResolvedTransientVortices": false,
+        "strictResidualTargetPassed": false,
+        "strictResidualTarget": 1e-06,
+        "gridIndependent": false,
+        "acceptanceScope": "Qualitative film visualization only: broad flow deflection, side acceleration, downstream lower-speed region and relative mean pressure sign on an idealized isolated reconstruction.",
+        "displayCaption": "鐞嗘兂鍖栨ā鍨嬬殑骞冲潎缁曟祦璁＄畻绀烘剰",
+        "limitations": [
+          "Normalized residuals did not all reach the original 1e-6 target. This target is explicitly not passed; finite-iteration approximate RANS fields are retained only for the independently reviewed qualitative scope.",
+          "Two-resolution sensitivity is not grid independence or a calibrated absolute error bar. Exact wake-core length/area and local pressure peaks are not accepted.",
+          "Uniform 30 m/s inlet, 5% turbulence intensity, slip ground, isolated smooth educational reconstruction and simplified closed crown; no atmospheric boundary layer, surrounding city or as-built openings.",
+          "Streamline travel-time animation explains paths through a stationary modeled mean velocity field; it is not a resolved transient-vortex simulation.",
+          "Structural demonstration uses independent prescribed educational forces; CFD-to-structure coupling and engineering design are not accepted.",
+          "2.5 m display sampling interpolates native finite-volume cells and is not 2.5 m CFD mesh resolution; invalid and solid positions are masked without filling.",
+          "Surface Cp uses native point interpolation for display; raw native cell extrema are retained separately. Values are not clipped to manufacture a result.",
+          "Fine mesh has thin-wall-cell determinant/low-interpolation-weight advisories and 15 faces above 70-degree nonorthogonality; all volumes/face tetrahedra are positive, no unclassified boundary holes."
+        ]
+      }
+    },
+    {
+      "file": "computed-pressure.json",
+      "sha256": "77e73ab2918350e3f6f08390823840ba50c13c73781928c47693375d0ed872ae",
+      "quality": {
+        "acceptedForFilm": true,
+        "acceptedForCoupling": false,
+        "notes": "Accepted for the explicitly restricted qualitative film scope after native conservation, same-location sensitivity, export/geometry and independent topology review; not claimed converged or engineering-validated.",
+        "acceptedForEngineeringDesign": false,
+        "acceptedForQuantitativeLocalPressure": false,
+        "acceptedForResolvedTransientVortices": false,
+        "strictResidualTargetPassed": false,
+        "strictResidualTarget": 1e-06,
+        "gridIndependent": false,
+        "acceptanceScope": "Qualitative film visualization only: broad flow deflection, side acceleration, downstream lower-speed region and relative mean pressure sign on an idealized isolated reconstruction.",
+        "displayCaption": "鐞嗘兂鍖栨ā鍨嬬殑骞冲潎缁曟祦璁＄畻绀烘剰",
+        "limitations": [
+          "Normalized residuals did not all reach the original 1e-6 target. This target is explicitly not passed; finite-iteration approximate RANS fields are retained only for the independently reviewed qualitative scope.",
+          "Two-resolution sensitivity is not grid independence or a calibrated absolute error bar. Exact wake-core length/area and local pressure peaks are not accepted.",
+          "Uniform 30 m/s inlet, 5% turbulence intensity, slip ground, isolated smooth educational reconstruction and simplified closed crown; no atmospheric boundary layer, surrounding city or as-built openings.",
+          "Streamline travel-time animation explains paths through a stationary modeled mean velocity field; it is not a resolved transient-vortex simulation.",
+          "Structural demonstration uses independent prescribed educational forces; CFD-to-structure coupling and engineering design are not accepted.",
+          "2.5 m display sampling interpolates native finite-volume cells and is not 2.5 m CFD mesh resolution; invalid and solid positions are masked without filling.",
+          "Surface Cp uses native point interpolation for display; raw native cell extrema are retained separately. Values are not clipped to manufacture a result.",
+          "Fine mesh has thin-wall-cell determinant/low-interpolation-weight advisories and 15 faces above 70-degree nonorthogonality; all volumes/face tetrahedra are positive, no unclassified boundary holes."
+        ]
+      }
+    },
+    {
+      "file": "computed-flow-slices.json",
+      "sha256": "b4457cc9fee550e72887c3a96b59cbdaf8d6136cb41f3d001adb74e3672d8e94",
+      "quality": {
+        "acceptedForFilm": true,
+        "acceptedForCoupling": false,
+        "notes": "Accepted for the explicitly restricted qualitative film scope after native conservation, same-location sensitivity, export/geometry and independent topology review; not claimed converged or engineering-validated.",
+        "acceptedForEngineeringDesign": false,
+        "acceptedForQuantitativeLocalPressure": false,
+        "acceptedForResolvedTransientVortices": false,
+        "strictResidualTargetPassed": false,
+        "strictResidualTarget": 1e-06,
+        "gridIndependent": false,
+        "acceptanceScope": "Qualitative film visualization only: broad flow deflection, side acceleration, downstream lower-speed region and relative mean pressure sign on an idealized isolated reconstruction.",
+        "displayCaption": "鐞嗘兂鍖栨ā鍨嬬殑骞冲潎缁曟祦璁＄畻绀烘剰",
+        "limitations": [
+          "Normalized residuals did not all reach the original 1e-6 target. This target is explicitly not passed; finite-iteration approximate RANS fields are retained only for the independently reviewed qualitative scope.",
+          "Two-resolution sensitivity is not grid independence or a calibrated absolute error bar. Exact wake-core length/area and local pressure peaks are not accepted.",
+          "Uniform 30 m/s inlet, 5% turbulence intensity, slip ground, isolated smooth educational reconstruction and simplified closed crown; no atmospheric boundary layer, surrounding city or as-built openings.",
+          "Streamline travel-time animation explains paths through a stationary modeled mean velocity field; it is not a resolved transient-vortex simulation.",
+          "Structural demonstration uses independent prescribed educational forces; CFD-to-structure coupling and engineering design are not accepted.",
+          "2.5 m display sampling interpolates native finite-volume cells and is not 2.5 m CFD mesh resolution; invalid and solid positions are masked without filling.",
+          "Surface Cp uses native point interpolation for display; raw native cell extrema are retained separately. Values are not clipped to manufacture a result.",
+          "Fine mesh has thin-wall-cell determinant/low-interpolation-weight advisories and 15 faces above 70-degree nonorthogonality; all volumes/face tetrahedra are positive, no unclassified boundary holes."
+        ]
+      }
+    }
+  ]
+}

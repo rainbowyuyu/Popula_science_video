@@ -1,0 +1,38 @@
+The fleet spans 2–20 MW and includes global prototypes and Chinese flagship platforms 
+(Methods; Extended Data Table 1). 
+A parallel regulatory channel scored the same projects against classification-society rules (DNV-
+ST-0437, DNVGL-OS-C301, DNVGL-RP-0286). For the commissioned subset of the fleet (n = 
+9), Automated Reviewer and regulatory scores show Spearman rank correlation 0.717, mean 
+absolute deviation 3.9 points, and 89% high agreement (both scores ≥60 with absolute difference 
+≤15) (Fig. 3; Extended Data Fig. 1). The full roster of 11 projects (including planned entries) is 
+listed in Extended Data Table 1. The orchestrator terminates exploration when composite score 
+**S ≥ 85** (grade A) and no sub-score falls below 60. This gate is analytical (minutes per 
+candidate) and enables high-throughput screening before any AIP submission. 
+Third-party Approval in Principle 
+As gold-standard calibration, we submitted the single highest-scoring candidate (**S = 91**, 
+grade A) to CCS for AIP, with a dossier matching the CCS checklist (design basis, arrangements, 
+stability, hydrodynamics, global strength, mooring and codes list). Appraisal proceeded through 
+preparation, application, independent review and certification. CCS issued three rounds of 
+clarification—on design rationale and static performance; strength and fatigue under combined 
+loads; and station-keeping under extremes—after which all items closed and the AIP certificate 
+was issued. Because the orchestrator retains WebSocket logs, SHA-256 integrity manifests and 
+solver input decks, each clarification could be traced to the emitting computational step, 
+accelerating responses. 
+Two implications follow. First, clearing **S ≥ 85** predicted successful AIP for the selected 
+candidate. Second, AIP is a one-time calibration of the internal gate, not a daily objective 
+function: subsequent candidates can be screened at negligible marginal cost while remaining 
+aligned with third-party practice. AIP does not replace detailed design, fabrication inspection or 
+type approval; those remain out of scope. 
+Discussion 
+The AI Engineer shows that agentic loops coupled to deterministic solvers can move from 
+natural-language requirements to third-party-certifiable artefacts. Unlike open-ended discovery 
+agents judged by novelty and later laboratory validation, this system operates in a **verification-
+closed** regime: every proposal is scored against physics and codified limit states, and failures 
+trigger deterministic replanning rather than textual caveats. The routine terminal condition is the 
+Automated Reviewer gate; AIP sits outside the daily loop as external proof that the gate tracks 
+professional judgment. 
+A two-stage cascade resolves the cost–credibility trade-off: cheap internal scoring across 
+thousands of candidates; rare external certification for the selected concept. Transfer to other 
+domains requires deterministic solvers, thresholdable codes and a reference fleet for calibration—
+conditions met by many offshore, civil and aerospace structures—but fabrication-hard constraints, 
+basin-scale hydrodynamics and LLM sampling variance remain limitations (Methods). For 

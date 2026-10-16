@@ -1,0 +1,84 @@
+{
+  "id": "s046",
+  "text": "我们在城市里看到的是一条轻巧的曲线，支撑它的，却是一条从天空到泥土、始终接得上的传力路。",
+  "ttsText": "我们在城市里看到的是一条轻巧的曲线，支撑它的，却是一条从天空到泥土、始终接得上的传力路。",
+  "signature": "d4357ca234f73aac0ae675c8964e05e9d78f9e0be8a06e6fa7254b966c182a5e",
+  "raw": "audio/raw/s046-6eec024776.wav",
+  "processed": "audio/candidates/v3-pronunciation/s046.wav",
+  "rawDuration": 7.44,
+  "duration": 7.68,
+  "sha256": "8d1bfb28333db18f371ec71329da0b41faac7e059daa3c0a92b1628be41311a5",
+  "seed": 3117466693,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s045",
+    "s046",
+    "s047",
+    "s048"
+  ],
+  "rawEndpointDB": -96.45785267449583,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8254bfaaeb4468c942ea034ee78e3e46fe98d1e363e26bbb7f2c316de47771fa",
+    "outputSha256": "8d1bfb28333db18f371ec71329da0b41faac7e059daa3c0a92b1628be41311a5",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.1057227577938633,
+    "input": {
+      "seconds": 7.68,
+      "peakDb": -7.698375143301053,
+      "activeRmsDb": -22.885852991109527,
+      "quietFrameP10Db": -61.376266179233085
+    },
+    "output": {
+      "seconds": 7.68,
+      "peakDb": -6.918274530627311,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.73077338639082
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "03a86fc696e0e8b31ae257ff6a57a7176b97860573aeec22cc361dd3eba6cab8"
+  },
+  "subjectiveListeningChecked": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "previousSignature": "6eec0247760d65e44a447e5fa46e2d1f391d74cfa05f4ec006a46329705f47d6",
+  "synthesisRetained": true,
+  "revisionReason": "Reprocess untouched raw once with silence outside the cleaner edge tapers; no resynthesis, trimming or stretching"
+}

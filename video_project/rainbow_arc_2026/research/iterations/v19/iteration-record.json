@@ -1,0 +1,51 @@
+{
+  "version": "V19",
+  "episode": "彩虹为什么是弧形",
+  "createdUTC": "2026-10-12T23:13:48.322365+00:00",
+  "delivery": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\output-v16\\delivery\\彩虹为什么是弧形_V19_optimized_1080p.mp4",
+    "sha256": "1b0e58f58037d0017274cdad48fa56cf30fa91f5e96ca001fdc5e8ec19143354",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 10702,
+    "durationSeconds": 356.73333333333335
+  },
+  "backgroundMusic": {
+    "source": "D:\\CloudMusic\\Legal S - Painting Summer.mp3",
+    "sourceSHA256": "92d1f974edafa9e56822872a77b1d24012107f64b920b4d582aa5fabe4282b8f",
+    "runtimeMaster": "public/audio_v18/master-v18.wav",
+    "loudness": "-16.0 LUFS",
+    "truePeak": "about -1.9 dBFS",
+    "processing": "4s equal-power loop, narration ducking, 5s tail fade"
+  },
+  "assets": {
+    "environment": "public/assets_v19/environment/rain_garden_v19.glb",
+    "blend": "public/assets_v19/environment/rain_garden_v19.blend",
+    "gaussian": "public/assets_v19/gaussian/rain-garden-v19.splats.bin",
+    "fish": "public/assets_v19/characters/rainbow_fish_v19.glb",
+    "fishBlend": "public/assets_v19/characters/rainbow-fish-source-v19.blend",
+    "rainbowScale": 1.18,
+    "fishRigBones": 20
+  },
+  "visualChanges": [
+    "鱼体沿尾部轴向拉长约10%，扩大心形尾鳍和侧鳍，提高浅色花园中的粉紫对比",
+    "Blender雨后花园加入96个确定性草簇、暖色日照/冷色雾填充/青色湿润轮廓光与风动材质",
+    "Gaussian点云切换为V19场景，增加深度排序与温和高光压缩；彩虹视觉弧放大到1.18倍",
+    "保留连续摄影机轨道、手绘→Gaussian→Blender/Three.js→真实场景的接力"
+  ],
+  "qa": {
+    "sourceAudit": "research/qa-v19/audit-v19.json",
+    "deliveryQA": "research/qa-v19/qa-delivery-v19.json",
+    "optics": "research/physics/check-optics.mjs",
+    "world": "research/physics/check-world.mjs",
+    "motion": "scripts/audit-motion.mjs",
+    "strictDecode": true,
+    "blackFramesOver1s": false,
+    "silenceOver1s": false
+  },
+  "notes": [
+    "审阅静帧：0、450、900、2000、4000、7140、7650、8430、10020、10500；两鱼无遮挡，近景鱼尾/鱼鳍可读。",
+    "渲染尾门曾因render-v19.mjs在编码期间被外部进程修改而返回1；随后以当前审计哈希登记，成片已严格解码并通过交付QA。"
+  ]
+}

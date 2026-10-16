@@ -1,0 +1,82 @@
+{
+  "id": "h039",
+  "text": "免疫细胞吞下这些脂质，装得越来越多，形成泡沫细胞。局部炎症和组织变化，也让这块斑块慢慢长起来。",
+  "ttsText": "免疫细胞吞下这些脂质，装得越来越多，形成泡沫细胞。局部炎症和组织变化，也让这块斑块慢慢堆积起来。",
+  "signature": "0f14bdbd3a7b07dba01a1a13c0a8c080fe292a334c42bb7dea9037e978deec6d",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h039-0f14bdbd3a7b-4349f3fa93.wav",
+  "processed": "audio/revision-v5/candidates/pron-v2/voice/h039.wav",
+  "rawDuration": 9.12,
+  "duration": 9.12,
+  "sampleRate": 48000,
+  "sha256": "0a80230e7c5343f971d1b635b4143627dd3932ff2ff0f40262afbfb08fb6ba3a",
+  "rawSHA256": "98505f9d35b71052f2a8364e7c1211a9a18a1263b5fbdf58a28fca61651d65b5",
+  "seed": 1128920058,
+  "batchIds": [
+    "h039",
+    "h055"
+  ],
+  "batchKey": "4349f3fa93984090b21be7751d7c5a0d391296af95f8e12cd05fb87f437542b4",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -96.39343280277089,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "98505f9d35b71052f2a8364e7c1211a9a18a1263b5fbdf58a28fca61651d65b5",
+    "outputSha256": "0a80230e7c5343f971d1b635b4143627dd3932ff2ff0f40262afbfb08fb6ba3a",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.1293990017492206,
+    "input": {
+      "seconds": 9.12,
+      "peakDb": -7.16770471288656,
+      "activeRmsDb": -21.795727776912642,
+      "quietFrameP10Db": -58.96514773473639
+    },
+    "output": {
+      "seconds": 9.12,
+      "peakDb": -5.781878452212663,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.53568028943596
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

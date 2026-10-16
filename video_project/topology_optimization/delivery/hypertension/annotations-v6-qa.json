@@ -1,0 +1,2018 @@
+{
+  "createdAt": "2026-10-07T08:17:31.469Z",
+  "scope": "All 9671 production World.render state updates on the actual GLB loaded by production loadAtlas/GLTFLoader, including real anatomical positions, normalized transforms, material opacity and dynamic geometry. Camera world/inverse matrices explicitly updated after each no-op GPU render. getAnnotations is executed from current production source; no browser/GPU pixels or full-speed playback are claimed. Screen canvas drawing is stubbed; body geometry and all material/animation updates are real.",
+  "sourceHashes": {
+    "src/hypertension/World.ts": "316a4f9809f5bee71a93dd65de75909933c19b5360fedd30055eb4e1235a7adc",
+    "src/hypertension/CameraPath.ts": "7f102bef917cf1c43762b9626f0b481967be972bf0a506f0961a0ca438aab128",
+    "src/hypertension/VascularDetail.ts": "92d4738efb36db27be99ace290c8aba464d96cee7fc6f356a329d80e75cbbed3",
+    "src/hypertension/Annotations.ts": "c899ef628ee501f076e02178beffbdf3ee7c89268a79e6db444c8c42149f95f7",
+    "src/hypertension/Film.tsx": "4a0332cff07715396ca8e5c0e2f76d3d1c417770b9a2948a775d881b41de277d",
+    "src/hypertension/timeline.json": "5487802be3ce7d7c4e672ef7d38d698a36416c54bbc1f9f1134cc4e9df191640",
+    "public/hypertension/physics.json": "b9ef46da1a7febaaff2287a283858cce5cecc715db69016673b9ffee2fb9958a",
+    "public/hypertension/models/human-atlas-hypertension.glb": "9a555d2f5bea5c30340e611cf133ccaaff330fa8a39cf2e82e0153add654c430"
+  },
+  "sourceStable": true,
+  "actualAtlas": {
+    "resourceReads": [
+      {
+        "path": "public\\hypertension\\models\\human-atlas-hypertension.glb",
+        "bytes": 26314792
+      },
+      {
+        "path": "public\\hypertension\\physics.json",
+        "bytes": 130118
+      }
+    ],
+    "loadedAtlasMeshes": 33,
+    "loadedAtlasPositions": 597056,
+    "sourceCommit": "1c38bf35c254a891200d3cedecfd57abebe83d8d"
+  },
+  "frames": 9671,
+  "preflight": [
+    {
+      "id": "heart-intro",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 687,
+          "alpha": 0.990272002883691
+        },
+        {
+          "frame": 696,
+          "alpha": 1
+        },
+        {
+          "frame": 705,
+          "alpha": 1
+        },
+        {
+          "frame": 714,
+          "alpha": 1
+        },
+        {
+          "frame": 723,
+          "alpha": 1
+        },
+        {
+          "frame": 732,
+          "alpha": 1
+        },
+        {
+          "frame": 741,
+          "alpha": 0.9993977855999997
+        }
+      ]
+    },
+    {
+      "id": "kidney-intro",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 687,
+          "alpha": 0.990272002883691
+        },
+        {
+          "frame": 696,
+          "alpha": 1
+        },
+        {
+          "frame": 705,
+          "alpha": 1
+        },
+        {
+          "frame": 714,
+          "alpha": 1
+        },
+        {
+          "frame": 723,
+          "alpha": 1
+        },
+        {
+          "frame": 732,
+          "alpha": 1
+        },
+        {
+          "frame": 741,
+          "alpha": 0.9993977855999997
+        }
+      ]
+    },
+    {
+      "id": "heart",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 952,
+          "alpha": 1
+        },
+        {
+          "frame": 966,
+          "alpha": 1
+        },
+        {
+          "frame": 979,
+          "alpha": 1
+        },
+        {
+          "frame": 993,
+          "alpha": 1
+        },
+        {
+          "frame": 1007,
+          "alpha": 1
+        },
+        {
+          "frame": 1020,
+          "alpha": 1
+        },
+        {
+          "frame": 1034,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "aorta-context",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 1102,
+          "alpha": 0
+        },
+        {
+          "frame": 1116,
+          "alpha": 0.10114108643663625
+        },
+        {
+          "frame": 1131,
+          "alpha": 0.5502177451230731
+        },
+        {
+          "frame": 1145,
+          "alpha": 0.8970127221896769
+        },
+        {
+          "frame": 1160,
+          "alpha": 0.99813303730899
+        },
+        {
+          "frame": 1174,
+          "alpha": 1
+        },
+        {
+          "frame": 1189,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "pressure-wall",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 1325,
+          "alpha": 1
+        },
+        {
+          "frame": 1336,
+          "alpha": 1
+        },
+        {
+          "frame": 1348,
+          "alpha": 1
+        },
+        {
+          "frame": 1360,
+          "alpha": 1
+        },
+        {
+          "frame": 1372,
+          "alpha": 1
+        },
+        {
+          "frame": 1383,
+          "alpha": 1
+        },
+        {
+          "frame": 1395,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "elastic-wall",
+      "peakAlpha": 0.9999992421102691,
+      "samples": [
+        {
+          "frame": 1462,
+          "alpha": 0.9999992421102691
+        },
+        {
+          "frame": 1479,
+          "alpha": 0.996077176348157
+        },
+        {
+          "frame": 1497,
+          "alpha": 0.9760608755567434
+        },
+        {
+          "frame": 1515,
+          "alpha": 0.936333626886534
+        },
+        {
+          "frame": 1533,
+          "alpha": 0.8939184265769763
+        },
+        {
+          "frame": 1551,
+          "alpha": 0.8875746499400137
+        },
+        {
+          "frame": 1569,
+          "alpha": 0.8871174383496965
+        }
+      ]
+    },
+    {
+      "id": "recoil",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 1968,
+          "alpha": 1
+        },
+        {
+          "frame": 1985,
+          "alpha": 1
+        },
+        {
+          "frame": 2002,
+          "alpha": 1
+        },
+        {
+          "frame": 2019,
+          "alpha": 1
+        },
+        {
+          "frame": 2036,
+          "alpha": 1
+        },
+        {
+          "frame": 2053,
+          "alpha": 1
+        },
+        {
+          "frame": 2070,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "arteriole",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 2942,
+          "alpha": 0.8566682702879032
+        },
+        {
+          "frame": 2949,
+          "alpha": 1
+        },
+        {
+          "frame": 2957,
+          "alpha": 1
+        },
+        {
+          "frame": 2965,
+          "alpha": 1
+        },
+        {
+          "frame": 2972,
+          "alpha": 1
+        },
+        {
+          "frame": 2980,
+          "alpha": 1
+        },
+        {
+          "frame": 2987,
+          "alpha": 0.936001742774585
+        }
+      ]
+    },
+    {
+      "id": "muscle",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 3047,
+          "alpha": 1
+        },
+        {
+          "frame": 3065,
+          "alpha": 1
+        },
+        {
+          "frame": 3083,
+          "alpha": 1
+        },
+        {
+          "frame": 3101,
+          "alpha": 1
+        },
+        {
+          "frame": 3119,
+          "alpha": 1
+        },
+        {
+          "frame": 3137,
+          "alpha": 1
+        },
+        {
+          "frame": 3155,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "lumen",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 3243,
+          "alpha": 1
+        },
+        {
+          "frame": 3261,
+          "alpha": 1
+        },
+        {
+          "frame": 3280,
+          "alpha": 1
+        },
+        {
+          "frame": 3299,
+          "alpha": 1
+        },
+        {
+          "frame": 3318,
+          "alpha": 1
+        },
+        {
+          "frame": 3337,
+          "alpha": 1
+        },
+        {
+          "frame": 3356,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "relax-muscle",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 3772,
+          "alpha": 1
+        },
+        {
+          "frame": 3785,
+          "alpha": 1
+        },
+        {
+          "frame": 3797,
+          "alpha": 1
+        },
+        {
+          "frame": 3810,
+          "alpha": 1
+        },
+        {
+          "frame": 3822,
+          "alpha": 1
+        },
+        {
+          "frame": 3835,
+          "alpha": 1
+        },
+        {
+          "frame": 3847,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "kidney",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 4049,
+          "alpha": 0.9982497296263614
+        },
+        {
+          "frame": 4061,
+          "alpha": 1
+        },
+        {
+          "frame": 4073,
+          "alpha": 1
+        },
+        {
+          "frame": 4084,
+          "alpha": 1
+        },
+        {
+          "frame": 4096,
+          "alpha": 1
+        },
+        {
+          "frame": 4108,
+          "alpha": 1
+        },
+        {
+          "frame": 4119,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "glomerulus",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 4293,
+          "alpha": 1
+        },
+        {
+          "frame": 4306,
+          "alpha": 1
+        },
+        {
+          "frame": 4320,
+          "alpha": 1
+        },
+        {
+          "frame": 4334,
+          "alpha": 1
+        },
+        {
+          "frame": 4348,
+          "alpha": 1
+        },
+        {
+          "frame": 4362,
+          "alpha": 1
+        },
+        {
+          "frame": 4376,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "tubule",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 4441,
+          "alpha": 1
+        },
+        {
+          "frame": 4458,
+          "alpha": 1
+        },
+        {
+          "frame": 4476,
+          "alpha": 1
+        },
+        {
+          "frame": 4494,
+          "alpha": 1
+        },
+        {
+          "frame": 4511,
+          "alpha": 1
+        },
+        {
+          "frame": 4529,
+          "alpha": 1
+        },
+        {
+          "frame": 4546,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "reabsorption",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 4626,
+          "alpha": 1
+        },
+        {
+          "frame": 4641,
+          "alpha": 0.9995819266210998
+        },
+        {
+          "frame": 4656,
+          "alpha": 0.9804979823940466
+        },
+        {
+          "frame": 4671,
+          "alpha": 0.9396336235047094
+        },
+        {
+          "frame": 4686,
+          "alpha": 0.9131469074214169
+        },
+        {
+          "frame": 4701,
+          "alpha": 0.929023971892824
+        },
+        {
+          "frame": 4716,
+          "alpha": 0.9803397221157947
+        }
+      ]
+    },
+    {
+      "id": "kidney-signal",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 5168,
+          "alpha": 1
+        },
+        {
+          "frame": 5181,
+          "alpha": 1
+        },
+        {
+          "frame": 5194,
+          "alpha": 1
+        },
+        {
+          "frame": 5207,
+          "alpha": 1
+        },
+        {
+          "frame": 5220,
+          "alpha": 1
+        },
+        {
+          "frame": 5233,
+          "alpha": 1
+        },
+        {
+          "frame": 5246,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "hormone-signal",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 5333,
+          "alpha": 1
+        },
+        {
+          "frame": 5346,
+          "alpha": 1
+        },
+        {
+          "frame": 5358,
+          "alpha": 1
+        },
+        {
+          "frame": 5370,
+          "alpha": 1
+        },
+        {
+          "frame": 5382,
+          "alpha": 1
+        },
+        {
+          "frame": 5395,
+          "alpha": 1
+        },
+        {
+          "frame": 5407,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "salt-retention",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 5471,
+          "alpha": 1
+        },
+        {
+          "frame": 5484,
+          "alpha": 1
+        },
+        {
+          "frame": 5497,
+          "alpha": 1
+        },
+        {
+          "frame": 5510,
+          "alpha": 1
+        },
+        {
+          "frame": 5523,
+          "alpha": 1
+        },
+        {
+          "frame": 5536,
+          "alpha": 1
+        },
+        {
+          "frame": 5549,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "brain",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 5858,
+          "alpha": 1
+        },
+        {
+          "frame": 5870,
+          "alpha": 1
+        },
+        {
+          "frame": 5882,
+          "alpha": 1
+        },
+        {
+          "frame": 5895,
+          "alpha": 1
+        },
+        {
+          "frame": 5907,
+          "alpha": 1
+        },
+        {
+          "frame": 5919,
+          "alpha": 1
+        },
+        {
+          "frame": 5931,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "heart-response",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 6029,
+          "alpha": 0
+        },
+        {
+          "frame": 6040,
+          "alpha": 0
+        },
+        {
+          "frame": 6051,
+          "alpha": 0.6675610267408347
+        },
+        {
+          "frame": 6061,
+          "alpha": 1
+        },
+        {
+          "frame": 6072,
+          "alpha": 1
+        },
+        {
+          "frame": 6083,
+          "alpha": 1
+        },
+        {
+          "frame": 6094,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "stiff-wall",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 6539,
+          "alpha": 1
+        },
+        {
+          "frame": 6550,
+          "alpha": 1
+        },
+        {
+          "frame": 6562,
+          "alpha": 1
+        },
+        {
+          "frame": 6574,
+          "alpha": 1
+        },
+        {
+          "frame": 6585,
+          "alpha": 1
+        },
+        {
+          "frame": 6597,
+          "alpha": 1
+        },
+        {
+          "frame": 6609,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "liver",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 6940,
+          "alpha": 0.8679227209420636
+        },
+        {
+          "frame": 6947,
+          "alpha": 1
+        },
+        {
+          "frame": 6955,
+          "alpha": 1
+        },
+        {
+          "frame": 6962,
+          "alpha": 1
+        },
+        {
+          "frame": 6970,
+          "alpha": 0.9760789643257266
+        },
+        {
+          "frame": 6977,
+          "alpha": 0.12561904964984447
+        },
+        {
+          "frame": 6985,
+          "alpha": 0
+        }
+      ]
+    },
+    {
+      "id": "vldl",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7057,
+          "alpha": 0.744184406927707
+        },
+        {
+          "frame": 7063,
+          "alpha": 1
+        },
+        {
+          "frame": 7069,
+          "alpha": 1
+        },
+        {
+          "frame": 7076,
+          "alpha": 1
+        },
+        {
+          "frame": 7082,
+          "alpha": 1
+        },
+        {
+          "frame": 7089,
+          "alpha": 1
+        },
+        {
+          "frame": 7095,
+          "alpha": 0.8479326452187677
+        }
+      ]
+    },
+    {
+      "id": "idl",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7197,
+          "alpha": 0.7847768370286932
+        },
+        {
+          "frame": 7204,
+          "alpha": 1
+        },
+        {
+          "frame": 7210,
+          "alpha": 1
+        },
+        {
+          "frame": 7217,
+          "alpha": 1
+        },
+        {
+          "frame": 7224,
+          "alpha": 1
+        },
+        {
+          "frame": 7231,
+          "alpha": 1
+        },
+        {
+          "frame": 7238,
+          "alpha": 0.8234406594000269
+        }
+      ]
+    },
+    {
+      "id": "ldl",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7291,
+          "alpha": 1
+        },
+        {
+          "frame": 7306,
+          "alpha": 1
+        },
+        {
+          "frame": 7320,
+          "alpha": 1
+        },
+        {
+          "frame": 7335,
+          "alpha": 1
+        },
+        {
+          "frame": 7349,
+          "alpha": 1
+        },
+        {
+          "frame": 7364,
+          "alpha": 1
+        },
+        {
+          "frame": 7378,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "receptor",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7339,
+          "alpha": 1
+        },
+        {
+          "frame": 7351,
+          "alpha": 1
+        },
+        {
+          "frame": 7362,
+          "alpha": 1
+        },
+        {
+          "frame": 7374,
+          "alpha": 1
+        },
+        {
+          "frame": 7386,
+          "alpha": 1
+        },
+        {
+          "frame": 7397,
+          "alpha": 1
+        },
+        {
+          "frame": 7409,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "intima",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7560,
+          "alpha": 1
+        },
+        {
+          "frame": 7571,
+          "alpha": 1
+        },
+        {
+          "frame": 7582,
+          "alpha": 1
+        },
+        {
+          "frame": 7594,
+          "alpha": 1
+        },
+        {
+          "frame": 7605,
+          "alpha": 1
+        },
+        {
+          "frame": 7616,
+          "alpha": 1
+        },
+        {
+          "frame": 7627,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "foam",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7692,
+          "alpha": 0.840966836042351
+        },
+        {
+          "frame": 7700,
+          "alpha": 1
+        },
+        {
+          "frame": 7707,
+          "alpha": 1
+        },
+        {
+          "frame": 7715,
+          "alpha": 1
+        },
+        {
+          "frame": 7722,
+          "alpha": 1
+        },
+        {
+          "frame": 7730,
+          "alpha": 1
+        },
+        {
+          "frame": 7737,
+          "alpha": 0.9552804509697678
+        }
+      ]
+    },
+    {
+      "id": "plaque",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7760,
+          "alpha": 0.846946648388272
+        },
+        {
+          "frame": 7767,
+          "alpha": 1
+        },
+        {
+          "frame": 7774,
+          "alpha": 1
+        },
+        {
+          "frame": 7781,
+          "alpha": 1
+        },
+        {
+          "frame": 7788,
+          "alpha": 1
+        },
+        {
+          "frame": 7795,
+          "alpha": 1
+        },
+        {
+          "frame": 7803,
+          "alpha": 0.8679227209419802
+        }
+      ]
+    },
+    {
+      "id": "thrombus",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 7921,
+          "alpha": 0.998678755707919
+        },
+        {
+          "frame": 7932,
+          "alpha": 1
+        },
+        {
+          "frame": 7942,
+          "alpha": 1
+        },
+        {
+          "frame": 7952,
+          "alpha": 1
+        },
+        {
+          "frame": 7962,
+          "alpha": 1
+        },
+        {
+          "frame": 7973,
+          "alpha": 1
+        },
+        {
+          "frame": 7983,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "arm-support",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 8622,
+          "alpha": 1
+        },
+        {
+          "frame": 8636,
+          "alpha": 1
+        },
+        {
+          "frame": 8651,
+          "alpha": 1
+        },
+        {
+          "frame": 8665,
+          "alpha": 1
+        },
+        {
+          "frame": 8680,
+          "alpha": 1
+        },
+        {
+          "frame": 8694,
+          "alpha": 1
+        },
+        {
+          "frame": 8709,
+          "alpha": 1
+        }
+      ]
+    },
+    {
+      "id": "cuff",
+      "peakAlpha": 1,
+      "samples": [
+        {
+          "frame": 8791,
+          "alpha": 1
+        },
+        {
+          "frame": 8807,
+          "alpha": 1
+        },
+        {
+          "frame": 8824,
+          "alpha": 1
+        },
+        {
+          "frame": 8840,
+          "alpha": 1
+        },
+        {
+          "frame": 8856,
+          "alpha": 1
+        },
+        {
+          "frame": 8872,
+          "alpha": 1
+        },
+        {
+          "frame": 8888,
+          "alpha": 1
+        }
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "id": "heart-intro",
+      "text": "心脏",
+      "target": "heart",
+      "from": 675.36,
+      "to": 753.48,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 77,
+      "readableFrames": 65,
+      "firstReadableFrame": 682,
+      "lastReadableFrame": 746,
+      "maxConsecutiveReadableFrames": 65,
+      "maxAnchorStep": 6.872726421590144,
+      "maxAnchorStepFrame": 683,
+      "maxBoxStep": 6.795587474265176,
+      "maxBoxStepFrame": 683,
+      "readableSeconds": 2.1666666666666665,
+      "maxConsecutiveReadableSeconds": 2.1666666666666665,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 65,
+      "peakAlpha": 1,
+      "representativeFrame": 714,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "kidney-intro",
+      "text": "肾脏",
+      "target": "leftKidney",
+      "from": 675.36,
+      "to": 753.48,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 77,
+      "readableFrames": 65,
+      "firstReadableFrame": 682,
+      "lastReadableFrame": 746,
+      "maxConsecutiveReadableFrames": 65,
+      "maxAnchorStep": 6.737921969114949,
+      "maxAnchorStepFrame": 683,
+      "maxBoxStep": 6.737921969114949,
+      "maxBoxStepFrame": 683,
+      "readableSeconds": 2.1666666666666665,
+      "maxConsecutiveReadableSeconds": 2.1666666666666665,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 65,
+      "peakAlpha": 1,
+      "representativeFrame": 714,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "heart",
+      "text": "心脏",
+      "target": "heart",
+      "from": 935,
+      "to": 1052,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 116,
+      "readableFrames": 104,
+      "firstReadableFrame": 942,
+      "lastReadableFrame": 1045,
+      "maxConsecutiveReadableFrames": 104,
+      "maxAnchorStep": 1.2144288334382558,
+      "maxAnchorStepFrame": 968,
+      "maxBoxStep": 1.2144288334382558,
+      "maxBoxStepFrame": 968,
+      "readableSeconds": 3.466666666666667,
+      "maxConsecutiveReadableSeconds": 3.466666666666667,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 104,
+      "peakAlpha": 1,
+      "representativeFrame": 993,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "aorta-context",
+      "text": "主动脉",
+      "target": "aortaContext",
+      "from": 1083.44,
+      "to": 1208.18,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 101,
+      "readableFrames": 72,
+      "firstReadableFrame": 1130,
+      "lastReadableFrame": 1201,
+      "maxConsecutiveReadableFrames": 72,
+      "maxAnchorStep": 1.5801101256377026,
+      "maxAnchorStepFrame": 1131,
+      "maxBoxStep": 0.17379377052611744,
+      "maxBoxStepFrame": 1131,
+      "readableSeconds": 2.4,
+      "maxConsecutiveReadableSeconds": 2.4,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 72,
+      "peakAlpha": 1,
+      "representativeFrame": 1189,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "pressure-wall",
+      "text": "血液推向管壁",
+      "target": "aortaWall",
+      "from": 1310.27,
+      "to": 1410.44,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 99,
+      "readableFrames": 87,
+      "firstReadableFrame": 1317,
+      "lastReadableFrame": 1403,
+      "maxConsecutiveReadableFrames": 87,
+      "maxAnchorStep": 1.439439725936291,
+      "maxAnchorStepFrame": 1330,
+      "maxBoxStep": 1.439439725936291,
+      "maxBoxStepFrame": 1330,
+      "readableSeconds": 2.9,
+      "maxConsecutiveReadableSeconds": 2.9,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 87,
+      "peakAlpha": 1,
+      "representativeFrame": 1360,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "elastic-wall",
+      "text": "弹性管壁",
+      "target": "aortaWall",
+      "from": 1439.2,
+      "to": 1592.08,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 152,
+      "readableFrames": 140,
+      "firstReadableFrame": 1446,
+      "lastReadableFrame": 1585,
+      "maxConsecutiveReadableFrames": 140,
+      "maxAnchorStep": 1.316672556695678,
+      "maxAnchorStepFrame": 1505,
+      "maxBoxStep": 1.3083654260395354,
+      "maxBoxStepFrame": 1480,
+      "readableSeconds": 4.666666666666667,
+      "maxConsecutiveReadableSeconds": 4.666666666666667,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 140,
+      "peakAlpha": 1,
+      "representativeFrame": 1462,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "recoil",
+      "text": "主动脉",
+      "target": "aortaWall",
+      "from": 1946.92,
+      "to": 2092.08,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 144,
+      "readableFrames": 132,
+      "firstReadableFrame": 1954,
+      "lastReadableFrame": 2085,
+      "maxConsecutiveReadableFrames": 132,
+      "maxAnchorStep": 1.3448421861136528,
+      "maxAnchorStepFrame": 1955,
+      "maxBoxStep": 1.3448421861136528,
+      "maxBoxStepFrame": 1955,
+      "readableSeconds": 4.4,
+      "maxConsecutiveReadableSeconds": 4.4,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 132,
+      "peakAlpha": 1,
+      "representativeFrame": 2019,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "arteriole",
+      "text": "小动脉",
+      "target": "arterioleWall",
+      "from": 2932.7,
+      "to": 2997.3,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 63,
+      "readableFrames": 51,
+      "firstReadableFrame": 2940,
+      "lastReadableFrame": 2990,
+      "maxConsecutiveReadableFrames": 51,
+      "maxAnchorStep": 0.9904683837238499,
+      "maxAnchorStepFrame": 2941,
+      "maxBoxStep": 0.9904683837238499,
+      "maxBoxStepFrame": 2941,
+      "readableSeconds": 1.7,
+      "maxConsecutiveReadableSeconds": 1.7,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 51,
+      "peakAlpha": 1,
+      "representativeFrame": 2965,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "muscle",
+      "text": "平滑肌",
+      "target": "muscle",
+      "from": 3024.08,
+      "to": 3178.64,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 154,
+      "readableFrames": 142,
+      "firstReadableFrame": 3031,
+      "lastReadableFrame": 3172,
+      "maxConsecutiveReadableFrames": 142,
+      "maxAnchorStep": 0.28863138568423696,
+      "maxAnchorStepFrame": 3075,
+      "maxBoxStep": 0.28863138568423696,
+      "maxBoxStepFrame": 3075,
+      "readableSeconds": 4.733333333333333,
+      "maxConsecutiveReadableSeconds": 4.733333333333333,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 142,
+      "peakAlpha": 1,
+      "representativeFrame": 3101,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "lumen",
+      "text": "管腔",
+      "target": "lumen",
+      "from": 3218.82,
+      "to": 3380.7,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 161,
+      "readableFrames": 149,
+      "firstReadableFrame": 3226,
+      "lastReadableFrame": 3374,
+      "maxConsecutiveReadableFrames": 149,
+      "maxAnchorStep": 0.6674595499341593,
+      "maxAnchorStepFrame": 3374,
+      "maxBoxStep": 0.6674595499341593,
+      "maxBoxStepFrame": 3374,
+      "readableSeconds": 4.966666666666667,
+      "maxConsecutiveReadableSeconds": 4.966666666666667,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 149,
+      "peakAlpha": 1,
+      "representativeFrame": 3299,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "relax-muscle",
+      "text": "平滑肌",
+      "target": "muscle",
+      "from": 3756.6,
+      "to": 3864.04,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 106,
+      "readableFrames": 94,
+      "firstReadableFrame": 3764,
+      "lastReadableFrame": 3857,
+      "maxConsecutiveReadableFrames": 94,
+      "maxAnchorStep": 0.5039051578477287,
+      "maxAnchorStepFrame": 3765,
+      "maxBoxStep": 0.5039051578477287,
+      "maxBoxStepFrame": 3765,
+      "readableSeconds": 3.1333333333333333,
+      "maxConsecutiveReadableSeconds": 3.1333333333333333,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 94,
+      "peakAlpha": 1,
+      "representativeFrame": 3810,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "kidney",
+      "text": "肾脏",
+      "target": "leftKidney",
+      "from": 4034.8,
+      "to": 4134.76,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 99,
+      "readableFrames": 87,
+      "firstReadableFrame": 4042,
+      "lastReadableFrame": 4128,
+      "maxConsecutiveReadableFrames": 87,
+      "maxAnchorStep": 2.6902291018734164,
+      "maxAnchorStepFrame": 4128,
+      "maxBoxStep": 2.6902291018733036,
+      "maxBoxStepFrame": 4128,
+      "readableSeconds": 2.9,
+      "maxConsecutiveReadableSeconds": 2.9,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 87,
+      "peakAlpha": 1,
+      "representativeFrame": 4096,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "glomerulus",
+      "text": "肾小球",
+      "target": "glomerulus",
+      "from": 4275.33,
+      "to": 4393.92,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 118,
+      "readableFrames": 106,
+      "firstReadableFrame": 4282,
+      "lastReadableFrame": 4387,
+      "maxConsecutiveReadableFrames": 106,
+      "maxAnchorStep": 2.6848154755994726,
+      "maxAnchorStepFrame": 4339,
+      "maxBoxStep": 1.98081711734676,
+      "maxBoxStepFrame": 4339,
+      "readableSeconds": 3.533333333333333,
+      "maxConsecutiveReadableSeconds": 3.533333333333333,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 106,
+      "peakAlpha": 1,
+      "representativeFrame": 4334,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "tubule",
+      "text": "肾小管",
+      "target": "tubule",
+      "from": 4418.72,
+      "to": 4569.6,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 149,
+      "readableFrames": 138,
+      "firstReadableFrame": 4426,
+      "lastReadableFrame": 4563,
+      "maxConsecutiveReadableFrames": 138,
+      "maxAnchorStep": 0.8331878025183215,
+      "maxAnchorStepFrame": 4563,
+      "maxBoxStep": 0.8331878025183215,
+      "maxBoxStepFrame": 4563,
+      "readableSeconds": 4.6,
+      "maxConsecutiveReadableSeconds": 4.6,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 138,
+      "peakAlpha": 1,
+      "representativeFrame": 4494,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "reabsorption",
+      "text": "水、钠回到血液",
+      "target": "reabsorption",
+      "from": 4607.5,
+      "to": 4736.2,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 127,
+      "readableFrames": 115,
+      "firstReadableFrame": 4615,
+      "lastReadableFrame": 4729,
+      "maxConsecutiveReadableFrames": 115,
+      "maxAnchorStep": 1.6091246439660933,
+      "maxAnchorStepFrame": 4729,
+      "maxBoxStep": 1.6091246439660933,
+      "maxBoxStepFrame": 4729,
+      "readableSeconds": 3.8333333333333335,
+      "maxConsecutiveReadableSeconds": 3.8333333333333335,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 115,
+      "peakAlpha": 1,
+      "representativeFrame": 4626,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "kidney-signal",
+      "text": "肾脏",
+      "target": "leftKidney",
+      "from": 5152,
+      "to": 5263,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 110,
+      "readableFrames": 98,
+      "firstReadableFrame": 5159,
+      "lastReadableFrame": 5256,
+      "maxConsecutiveReadableFrames": 98,
+      "maxAnchorStep": 1.3175171952823466,
+      "maxAnchorStepFrame": 5160,
+      "maxBoxStep": 1.3175171952823759,
+      "maxBoxStepFrame": 5160,
+      "readableSeconds": 3.2666666666666666,
+      "maxConsecutiveReadableSeconds": 3.2666666666666666,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 98,
+      "peakAlpha": 1,
+      "representativeFrame": 5207,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "hormone-signal",
+      "text": "肾素信号",
+      "target": "hormone",
+      "from": 5318.12,
+      "to": 5423.2,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 104,
+      "readableFrames": 92,
+      "firstReadableFrame": 5325,
+      "lastReadableFrame": 5416,
+      "maxConsecutiveReadableFrames": 92,
+      "maxAnchorStep": 0.08460238723364759,
+      "maxAnchorStepFrame": 5326,
+      "maxBoxStep": 0.08460238723364759,
+      "maxBoxStepFrame": 5326,
+      "readableSeconds": 3.066666666666667,
+      "maxConsecutiveReadableSeconds": 3.066666666666667,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 92,
+      "peakAlpha": 1,
+      "representativeFrame": 5370,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "salt-retention",
+      "text": "肾脏",
+      "target": "leftKidney",
+      "from": 5454.8,
+      "to": 5566.58,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 110,
+      "readableFrames": 99,
+      "firstReadableFrame": 5462,
+      "lastReadableFrame": 5560,
+      "maxConsecutiveReadableFrames": 99,
+      "maxAnchorStep": 0.08732127637376604,
+      "maxAnchorStepFrame": 5489,
+      "maxBoxStep": 0.08732127637376604,
+      "maxBoxStepFrame": 5489,
+      "readableSeconds": 3.3,
+      "maxConsecutiveReadableSeconds": 3.3,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 99,
+      "peakAlpha": 1,
+      "representativeFrame": 5510,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "brain",
+      "text": "脑",
+      "target": "brain",
+      "from": 5843.16,
+      "to": 5946.9,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 103,
+      "readableFrames": 91,
+      "firstReadableFrame": 5850,
+      "lastReadableFrame": 5940,
+      "maxConsecutiveReadableFrames": 91,
+      "maxAnchorStep": 7.971436419423821,
+      "maxAnchorStepFrame": 5851,
+      "maxBoxStep": 7.971436419423821,
+      "maxBoxStepFrame": 5851,
+      "readableSeconds": 3.033333333333333,
+      "maxConsecutiveReadableSeconds": 3.033333333333333,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 91,
+      "peakAlpha": 1,
+      "representativeFrame": 5895,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "heart-response",
+      "text": "心脏",
+      "target": "heart",
+      "from": 6015.7,
+      "to": 6108.04,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 67,
+      "readableFrames": 52,
+      "firstReadableFrame": 6050,
+      "lastReadableFrame": 6101,
+      "maxConsecutiveReadableFrames": 52,
+      "maxAnchorStep": 4.672518718924695,
+      "maxAnchorStepFrame": 6051,
+      "maxBoxStep": 3.5494752628054753,
+      "maxBoxStepFrame": 6101,
+      "readableSeconds": 1.7333333333333334,
+      "maxConsecutiveReadableSeconds": 1.7333333333333334,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 52,
+      "peakAlpha": 1,
+      "representativeFrame": 6083,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "stiff-wall",
+      "text": "主动脉壁",
+      "target": "aortaWall",
+      "from": 6524,
+      "to": 6624.5,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 99,
+      "readableFrames": 87,
+      "firstReadableFrame": 6531,
+      "lastReadableFrame": 6617,
+      "maxConsecutiveReadableFrames": 87,
+      "maxAnchorStep": 3.1246753236160316,
+      "maxAnchorStepFrame": 6555,
+      "maxBoxStep": 3.1246753236159894,
+      "maxBoxStepFrame": 6555,
+      "readableSeconds": 2.9,
+      "maxConsecutiveReadableSeconds": 2.9,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 87,
+      "peakAlpha": 1,
+      "representativeFrame": 6574,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "liver",
+      "text": "肝脏",
+      "target": "liver",
+      "from": 6930.58,
+      "to": 6995.02,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 53,
+      "readableFrames": 36,
+      "firstReadableFrame": 6938,
+      "lastReadableFrame": 6973,
+      "maxConsecutiveReadableFrames": 36,
+      "maxAnchorStep": 4.442144278118265,
+      "maxAnchorStepFrame": 6973,
+      "maxBoxStep": 4.442144278118265,
+      "maxBoxStepFrame": 6973,
+      "readableSeconds": 1.2,
+      "maxConsecutiveReadableSeconds": 1.2,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 36,
+      "peakAlpha": 1,
+      "representativeFrame": 6955,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "vldl",
+      "text": "VLDL 颗粒",
+      "target": "lipid",
+      "from": 7048.72,
+      "to": 7104.21,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 54,
+      "readableFrames": 42,
+      "firstReadableFrame": 7056,
+      "lastReadableFrame": 7097,
+      "maxConsecutiveReadableFrames": 42,
+      "maxAnchorStep": 2.2901259127561238,
+      "maxAnchorStepFrame": 7097,
+      "maxBoxStep": 2.2901259127561238,
+      "maxBoxStepFrame": 7097,
+      "readableSeconds": 1.4,
+      "maxConsecutiveReadableSeconds": 1.4,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 42,
+      "peakAlpha": 1,
+      "representativeFrame": 7076,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "idl",
+      "text": "IDL 颗粒",
+      "target": "lipid",
+      "from": 7188.38,
+      "to": 7246.97,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 58,
+      "readableFrames": 46,
+      "firstReadableFrame": 7195,
+      "lastReadableFrame": 7240,
+      "maxConsecutiveReadableFrames": 46,
+      "maxAnchorStep": 3.36669113401549,
+      "maxAnchorStepFrame": 7196,
+      "maxBoxStep": 3.36669113401549,
+      "maxBoxStepFrame": 7196,
+      "readableSeconds": 1.5333333333333334,
+      "maxConsecutiveReadableSeconds": 1.5333333333333334,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 46,
+      "peakAlpha": 1,
+      "representativeFrame": 7217,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "ldl",
+      "text": "LDL 颗粒",
+      "target": "lipid",
+      "from": 7273.43,
+      "to": 7397.04,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 122,
+      "readableFrames": 111,
+      "firstReadableFrame": 7280,
+      "lastReadableFrame": 7390,
+      "maxConsecutiveReadableFrames": 111,
+      "maxAnchorStep": 5.240586186822474,
+      "maxAnchorStepFrame": 7373,
+      "maxBoxStep": 5.240586186822474,
+      "maxBoxStepFrame": 7373,
+      "readableSeconds": 3.7,
+      "maxConsecutiveReadableSeconds": 3.7,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 111,
+      "peakAlpha": 1,
+      "representativeFrame": 7335,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "receptor",
+      "text": "LDL 受体",
+      "target": "receptor",
+      "from": 7324.52,
+      "to": 7424.48,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 98,
+      "readableFrames": 86,
+      "firstReadableFrame": 7332,
+      "lastReadableFrame": 7417,
+      "maxConsecutiveReadableFrames": 86,
+      "maxAnchorStep": 3.087995921998543,
+      "maxAnchorStepFrame": 7417,
+      "maxBoxStep": 2.2591696330136983,
+      "maxBoxStepFrame": 7417,
+      "readableSeconds": 2.8666666666666667,
+      "maxConsecutiveReadableSeconds": 2.8666666666666667,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 86,
+      "peakAlpha": 1,
+      "representativeFrame": 7374,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "intima",
+      "text": "动脉内膜",
+      "target": "intima",
+      "from": 7545.9,
+      "to": 7642.29,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 95,
+      "readableFrames": 83,
+      "firstReadableFrame": 7553,
+      "lastReadableFrame": 7635,
+      "maxConsecutiveReadableFrames": 83,
+      "maxAnchorStep": 1.6400328925863843,
+      "maxAnchorStepFrame": 7554,
+      "maxBoxStep": 1.6400328925862764,
+      "maxBoxStepFrame": 7554,
+      "readableSeconds": 2.7666666666666666,
+      "maxConsecutiveReadableSeconds": 2.7666666666666666,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 83,
+      "peakAlpha": 1,
+      "representativeFrame": 7594,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "foam",
+      "text": "泡沫细胞",
+      "target": "foam",
+      "from": 7682.86,
+      "to": 7747.64,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 64,
+      "readableFrames": 52,
+      "firstReadableFrame": 7690,
+      "lastReadableFrame": 7741,
+      "maxConsecutiveReadableFrames": 52,
+      "maxAnchorStep": 0.3011504874869939,
+      "maxAnchorStepFrame": 7691,
+      "maxBoxStep": 0.3011504874869939,
+      "maxBoxStepFrame": 7691,
+      "readableSeconds": 1.7333333333333334,
+      "maxConsecutiveReadableSeconds": 1.7333333333333334,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 52,
+      "peakAlpha": 1,
+      "representativeFrame": 7715,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "plaque",
+      "text": "脂质斑块",
+      "target": "plaque",
+      "from": 7750.8,
+      "to": 7812.42,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 60,
+      "readableFrames": 48,
+      "firstReadableFrame": 7758,
+      "lastReadableFrame": 7805,
+      "maxConsecutiveReadableFrames": 48,
+      "maxAnchorStep": 0.19493962996610636,
+      "maxAnchorStepFrame": 7759,
+      "maxBoxStep": 0.19493962996610636,
+      "maxBoxStepFrame": 7759,
+      "readableSeconds": 1.6,
+      "maxConsecutiveReadableSeconds": 1.6,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 48,
+      "peakAlpha": 1,
+      "representativeFrame": 7781,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "thrombus",
+      "text": "血栓",
+      "target": "thrombus",
+      "from": 7908.68,
+      "to": 7996.54,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 86,
+      "readableFrames": 75,
+      "firstReadableFrame": 7916,
+      "lastReadableFrame": 7990,
+      "maxConsecutiveReadableFrames": 75,
+      "maxAnchorStep": 1.6231357048428925,
+      "maxAnchorStepFrame": 7990,
+      "maxBoxStep": 1.623135704842784,
+      "maxBoxStepFrame": 7990,
+      "readableSeconds": 2.5,
+      "maxConsecutiveReadableSeconds": 2.5,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 75,
+      "peakAlpha": 1,
+      "representativeFrame": 7962,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "arm-support",
+      "text": "手臂承托",
+      "target": "measureForearm",
+      "from": 8603.5,
+      "to": 8728.24,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 123,
+      "readableFrames": 111,
+      "firstReadableFrame": 8611,
+      "lastReadableFrame": 8721,
+      "maxConsecutiveReadableFrames": 111,
+      "maxAnchorStep": 0.6645945213510743,
+      "maxAnchorStepFrame": 8612,
+      "maxBoxStep": 0.6645945213508817,
+      "maxBoxStepFrame": 8612,
+      "readableSeconds": 3.7,
+      "maxConsecutiveReadableSeconds": 3.7,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 111,
+      "peakAlpha": 1,
+      "representativeFrame": 8665,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    },
+    {
+      "id": "cuff",
+      "text": "袖带贴合上臂",
+      "target": "measureCuff",
+      "from": 8770.66,
+      "to": 8909.86,
+      "peakOpacity": 1,
+      "anyVisibleFrames": 138,
+      "readableFrames": 126,
+      "firstReadableFrame": 8778,
+      "lastReadableFrame": 8903,
+      "maxConsecutiveReadableFrames": 126,
+      "maxAnchorStep": 0.6115546023323292,
+      "maxAnchorStepFrame": 8788,
+      "maxBoxStep": 0.6115546023323292,
+      "maxBoxStepFrame": 8788,
+      "readableSeconds": 4.2,
+      "maxConsecutiveReadableSeconds": 4.2,
+      "neverVisible": false,
+      "neverReadable": false,
+      "underOneSecondReadable": false,
+      "visibleFrames": 126,
+      "peakAlpha": 1,
+      "representativeFrame": 8840,
+      "representativeSelection": "Actual production preflight sample at maximum sampled alpha; midpoint among ties"
+    }
+  ],
+  "layout": {
+    "maxSimultaneous": 2,
+    "meaningfulOpacityThreshold": 0.5,
+    "safeBox": {
+      "x": 60,
+      "y": 300,
+      "width": 1800,
+      "height": 467
+    },
+    "reservedBoxes": [
+      {
+        "id": "brand",
+        "x": 54,
+        "y": 38,
+        "width": 420,
+        "height": 115
+      },
+      {
+        "id": "chapter-heading",
+        "x": 54,
+        "y": 172,
+        "width": 1750,
+        "height": 110
+      },
+      {
+        "id": "learning-cue",
+        "x": 0,
+        "y": 780,
+        "width": 1920,
+        "height": 95
+      },
+      {
+        "id": "mechanism-note",
+        "x": 0,
+        "y": 880,
+        "width": 1920,
+        "height": 61
+      },
+      {
+        "id": "subtitles",
+        "x": 100,
+        "y": 948,
+        "width": 1720,
+        "height": 104
+      }
+    ],
+    "continuityThresholdPixelsPerFrame": 30,
+    "issues": [],
+    "issueCount": 0
+  },
+  "determinism": {
+    "nonSequentialFrames": 99,
+    "maxAllowedNumericError": 1e-06,
+    "errors": [],
+    "passed": true
+  },
+  "neverVisibleOrReadable": [],
+  "shortReadableCues": [],
+  "actualProductionRenderCalls": 9995,
+  "passed": true,
+  "annotationCount": 32,
+  "maxActive": 2,
+  "visibleFramesOpacityThreshold": 0.5
+}

@@ -1,0 +1,202 @@
+{
+  "id": "h027",
+  "partIndex": 1,
+  "expected": "把容易被剪的位置换一换，再接上一条能暂时依附白蛋白的侧链。",
+  "heard": "把容易被剪的位置换一换,再接上一条能暂时衣服白淡白的侧链",
+  "words": [
+    {
+      "text": "把",
+      "start": 0.0,
+      "end": 0.5,
+      "probability": 0.9267256259918213
+    },
+    {
+      "text": "容易",
+      "start": 0.5,
+      "end": 0.7,
+      "probability": 0.9880379438400269
+    },
+    {
+      "text": "被",
+      "start": 0.7,
+      "end": 0.94,
+      "probability": 0.9923100471496582
+    },
+    {
+      "text": "剪",
+      "start": 0.94,
+      "end": 1.1,
+      "probability": 0.9007147252559662
+    },
+    {
+      "text": "的",
+      "start": 1.1,
+      "end": 1.2,
+      "probability": 0.9976164102554321
+    },
+    {
+      "text": "位",
+      "start": 1.2,
+      "end": 1.32,
+      "probability": 0.9974477291107178
+    },
+    {
+      "text": "置",
+      "start": 1.32,
+      "end": 1.48,
+      "probability": 0.9998965263366699
+    },
+    {
+      "text": "换",
+      "start": 1.48,
+      "end": 1.72,
+      "probability": 0.6385073512792587
+    },
+    {
+      "text": "一",
+      "start": 1.72,
+      "end": 1.84,
+      "probability": 0.9955720901489258
+    },
+    {
+      "text": "换,",
+      "start": 1.84,
+      "end": 2.06,
+      "probability": 0.9946022927761078
+    },
+    {
+      "text": "再",
+      "start": 2.44,
+      "end": 2.5,
+      "probability": 0.9312179684638977
+    },
+    {
+      "text": "接",
+      "start": 2.5,
+      "end": 2.66,
+      "probability": 0.9620678424835205
+    },
+    {
+      "text": "上",
+      "start": 2.66,
+      "end": 2.82,
+      "probability": 0.9968558549880981
+    },
+    {
+      "text": "一",
+      "start": 2.82,
+      "end": 2.94,
+      "probability": 0.990010678768158
+    },
+    {
+      "text": "条",
+      "start": 2.94,
+      "end": 3.06,
+      "probability": 0.9178001284599304
+    },
+    {
+      "text": "能",
+      "start": 3.06,
+      "end": 3.26,
+      "probability": 0.9374741911888123
+    },
+    {
+      "text": "暂",
+      "start": 3.26,
+      "end": 3.48,
+      "probability": 0.992485761642456
+    },
+    {
+      "text": "时",
+      "start": 3.48,
+      "end": 3.66,
+      "probability": 0.9966031312942505
+    },
+    {
+      "text": "衣",
+      "start": 3.66,
+      "end": 3.8,
+      "probability": 0.7718363106250763
+    },
+    {
+      "text": "服",
+      "start": 3.8,
+      "end": 3.94,
+      "probability": 0.9691420793533325
+    },
+    {
+      "text": "白",
+      "start": 3.94,
+      "end": 4.14,
+      "probability": 0.9956154823303223
+    },
+    {
+      "text": "淡",
+      "start": 4.14,
+      "end": 4.3,
+      "probability": 0.8562467396259308
+    },
+    {
+      "text": "白",
+      "start": 4.3,
+      "end": 4.46,
+      "probability": 0.9988908171653748
+    },
+    {
+      "text": "的",
+      "start": 4.46,
+      "end": 4.58,
+      "probability": 0.9976086616516113
+    },
+    {
+      "text": "侧",
+      "start": 4.58,
+      "end": 4.78,
+      "probability": 0.9260693788528442
+    },
+    {
+      "text": "链",
+      "start": 4.78,
+      "end": 4.96,
+      "probability": 0.936760942141215
+    }
+  ],
+  "sourceSHA256": "446ff7f068b95cf97819f61c1b4f011e481c85e9e0cb602fb945261319b1bb48",
+  "ratio": 0.8888888888888888,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "依附",
+      "heard": "衣服",
+      "end": 21
+    },
+    {
+      "op": "replace",
+      "expected": "蛋",
+      "heard": "淡",
+      "end": 23
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 245760,
+    "seconds": 5.12,
+    "peakDBFS": -8.496994822769944,
+    "first20msDBFS": -66.44204375131822,
+    "last20msDBFS": -98.0236346250471,
+    "firstActiveMs": 360.0,
+    "lastActiveToEndMs": 170.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

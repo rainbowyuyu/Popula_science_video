@@ -1,0 +1,109 @@
+{
+  "schema": "rainbow.shanghai-physics-v8/1",
+  "resultsRoot": "C:\\Users\\zju\\.codex\\visualizations\\2026\\10\\08\\01a11ae1-4ffb-79e2-b2fc-3add8874f339\\shanghai-physics-v8",
+  "keepCurrentProductionNumbers": true,
+  "fieldRules": [
+    "Wind load arrows originate at displaced windLoads.nodeXYZ_m positions and point along baseForce_N * windFactor; no facade pressure units on net nodal-force arrows.",
+    "Use fixed role scales and symmetric blue/amber signed increments for outrigger/belt/columns. Label increments; a positive increment may only relieve existing compression.",
+    "Core wind response is bending normal stress from coreWindSection, not the zero net axial increment. Show opposite wall-face signs only from the section moment/coordinates.",
+    "A closeup can select the identified high-response member. Keep the deformed load attachment and camera target on the same interpolated state.",
+    "Present TMD relative motion, spring force, damping force and dissipated energy from the same t.time sample. Do not force 180-degree phase or arbitrary motion.",
+    "Pile show head-load -> shaft reaction -> toe reaction, preserving the exported signs and aggregate couples; never paint a computed soil-volume stress field."
+  ],
+  "highResponseTargets": [
+    {
+      "role": "belt",
+      "memberId": "M_Z05_C01_BX1B",
+      "meshIds": [
+        "FE_M_Z05_C01_BX1B"
+      ],
+      "position_m": [
+        12.60180315,
+        309.8,
+        -23.636223100000002
+      ],
+      "time_s": 59.1,
+      "windAxialIncrementMPa": -54.75675735611909,
+      "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+    },
+    {
+      "role": "cornercolumn",
+      "memberId": "M_K02_037",
+      "meshIds": [
+        "CORNERCOL_Z03_C02"
+      ],
+      "position_m": [
+        -23.8336668,
+        164.6875,
+        -23.8336668
+      ],
+      "time_s": 59.1,
+      "windAxialIncrementMPa": 3.8006987223927444,
+      "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+    },
+    {
+      "role": "megacolumn",
+      "memberId": "M_C01_052",
+      "meshIds": [
+        "MEGACOL_Z04_C01"
+      ],
+      "position_m": [
+        29.99335055,
+        230.357143,
+        -5.0
+      ],
+      "time_s": 59.1,
+      "windAxialIncrementMPa": -5.695474045200912,
+      "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+    },
+    {
+      "role": "outrigger",
+      "memberId": "M_Z04_C05_OX2",
+      "meshIds": [
+        "FE_M_Z04_C05_OX2"
+      ],
+      "position_m": [
+        -22.48894245,
+        235.10000000000002,
+        5.0
+      ],
+      "time_s": 50.0,
+      "windAxialIncrementMPa": 109.83027398528448,
+      "colorMeaning": "signed axial stress increment, not total tension; core bending must use coreWindSection"
+    },
+    {
+      "role": "core",
+      "memberId": "M_CORE_001",
+      "meshIds": [
+        "CORE_Z01_W1",
+        "CORE_Z01_W2",
+        "CORE_Z01_W3",
+        "CORE_Z01_W4",
+        "CORE_Z01_CELLS"
+      ],
+      "position_m": [
+        0.0,
+        2.7775,
+        0.0
+      ],
+      "time_s": 50.0,
+      "windBendingNormalStressEnvelopeMPa": 5.69957906,
+      "colorMeaning": "section bending normal-stress envelope; the core net wind axial increment is zero in this symmetric equivalent model"
+    }
+  ],
+  "deformationDisplay": {
+    "tower": 48,
+    "pile": 300,
+    "tmdRelative": 1,
+    "requireLabels": true
+  },
+  "sourceAndClaimLimitations": [
+    "Fixed-base linear beam/truss teaching model; no as-built calibration, cracking, yield, buckling, soil-structure interaction, creep or locked construction stress.",
+    "Tower is driven by prescribed power-law wind loads and deterministic gusts, not by the separately computed OpenFOAM surface pressures.",
+    "The separate CFD was not recomputed in this task. Its accepted scope remains educational mean-flow visualization, not converged design-grade or coupled forces.",
+    "Pile is an independent 52m x 1m linear Winkler beam; soil color can represent interface reactions only, not continuum soil stress.",
+    "No compatible Diffusion inverse checkpoint exists for this model; no inference or inverse-load result is claimed.",
+    "Only 705 semantic rendered parts map to solved members; 282 teaching geometry parts have no independent stress solution.",
+    "TMD spring is tuned to this equivalent model and 8% internal damping is assumed. Peak/RMS reductions apply only to this synthetic 60s load record."
+  ]
+}

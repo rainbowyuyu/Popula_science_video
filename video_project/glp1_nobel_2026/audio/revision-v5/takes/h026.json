@@ -1,0 +1,83 @@
+{
+  "id": "h026",
+  "text": "但天然GLP-1在体内很快就会被酶拆解。要把这条发现变成药，研究者先得解决：怎样让信号多留一会儿。",
+  "ttsText": "但天然G L P 一在体内很快就会被酶拆解。要把这条发现变成药，研究者先得解决：怎样让信号多留一会儿。",
+  "signature": "202e4971471d4a23ac7cbe3c3b91ab5f58a855ec07c8d60b243afd3099b1c0e9",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h026-202e4971471d-76d969c45b.wav",
+  "processed": "audio/revision-v5/voice/h026.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "2d429eefcb11ac99b639704f455d82eb9a55eaf9a513a0f5b9064fc6a9a4590e",
+  "rawSHA256": "b015a88070c669e2a6b5bd50c3704816d9df4bb7c0c081955c09e7f2524c30d6",
+  "seed": 1993959876,
+  "batchIds": [
+    "h024",
+    "h025",
+    "h026"
+  ],
+  "batchKey": "76d969c45b2ac297700cb0312607db299530fa28cc706d9a915fa23a6909ce84",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -57.848527965098874,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b015a88070c669e2a6b5bd50c3704816d9df4bb7c0c081955c09e7f2524c30d6",
+    "outputSha256": "2d429eefcb11ac99b639704f455d82eb9a55eaf9a513a0f5b9064fc6a9a4590e",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.8870404723396987,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -8.161125675371453,
+      "activeRmsDb": -22.680176274683884,
+      "quietFrameP10Db": -59.14026156184008
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.917251505875974,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.92501637053964
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

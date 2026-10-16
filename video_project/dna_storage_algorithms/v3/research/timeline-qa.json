@@ -1,0 +1,6185 @@
+{
+  "schema": "rainbow.dna.timeline-qa/v3",
+  "checkedAt": "2026-10-11T06:29:57.964Z",
+  "status": "automated-checks-pass-visual-review-separate",
+  "releaseApproved": false,
+  "sourceHashes": {
+    "src/index.tsx": "3786316b10afad112031e1a28def387b6042db7969a3d9efbfbb9e4ea0be397b",
+    "src/Film.tsx": "73cc0cb6e640b7662597f41433373e3e7ae09db5e5f9584a25f260d5300391f1",
+    "src/World.ts": "4a83e970c33a5cf98a0b6770da5b191f57db27c26b09c39fdebac75b8e7b29cd",
+    "src/CameraPathV3.ts": "dae0cdc8d86997c7fff1dcd39c89e3ca13eb0e3caa1efd8bf9ea518fb31d32e5",
+    "src/narration.json": "a4e3099e67d477e8a12f5c872d4848423d6d096b96eaf590c33f10ccb887c625",
+    "src/captions.json": "25aab416a973717523fb14c21d3bb3fbcf73f06740b36d9313f26908c94faa5a"
+  },
+  "composition": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "totalFrames": 9000,
+    "durationSec": 300
+  },
+  "cueCount": 37,
+  "captionCount": 84,
+  "coverage": {
+    "method": "Independently decoded clean WAV samples;10ms RMS bins active above max(.002,7% maximum clip-bin RMS). Compare active-bin midpoint to that cue’s real caption frames; silence and uncaptioned inter-cue breaths need no text.",
+    "minimumPerCue": 0.9882352941176471,
+    "aggregate": 0.9996347476715164,
+    "activeSeconds": 164.27,
+    "captionedActiveSeconds": 164.21,
+    "allowedFinalBreathTailSec": 0.12,
+    "subjectiveListeningChecked": false
+  },
+  "captionLength": {
+    "maximumHan": 21,
+    "maximumAllCharacters": 23
+  },
+  "layoutEstimate": {
+    "fontSizePx": 48,
+    "leftPx": 90,
+    "rightPx": 90,
+    "bottomPx": 42,
+    "maxCaptionCharacters": 23,
+    "conservativeGlyphWidthPx": 1104,
+    "paddingWidthPx": 52,
+    "availableWidthPx": 1740,
+    "method": "Conservative one-em-per-character static estimate of the single-line source style; not actual font raster bounds or a rendered occlusion test.",
+    "renderedReadabilityVerified": false
+  },
+  "master": {
+    "status": "present",
+    "sampleRate": 48000,
+    "channels": 2,
+    "bits": 24,
+    "samples": 14400000,
+    "durationSec": 300,
+    "sha256": "80e592330890a490d93b900cb1e1b4a892f41067b6fb1d52c2c84ea6c5fa274f"
+  },
+  "compile": {
+    "command": "npm --prefix v3 run check",
+    "executedEquivalent": "node <project>/node_modules/typescript/bin/tsc --noEmit -p v3/tsconfig.json",
+    "exitCode": 0,
+    "output": "",
+    "error": null
+  },
+  "finalVideo": {
+    "status": "probed",
+    "path": "delivery/DNA存储_连续数据之旅_V3_1080p.mp4",
+    "releaseApproved": false,
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "r_frame_rate": "30/1",
+          "duration": "300.000000",
+          "nb_frames": "9000",
+          "side_data_list": [
+            {}
+          ]
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "duration": "300.000000",
+          "nb_frames": "14064"
+        }
+      ],
+      "format": {
+        "duration": "300.000000"
+      }
+    },
+    "bytes": 96008716,
+    "sha256": "133e9b61617770962eaef5647497553fc9bd88f46dcabf2caf127e6d8cb44af8"
+  },
+  "cues": [
+    {
+      "id": "n01",
+      "station": "hook",
+      "startSec": 0.34,
+      "endSec": 7.38,
+      "source": "audio/clean/n01.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 337920,
+        "durationSec": 7.04,
+        "sha256": "7b342f51f3c2e16d5cb3039e1701a9bde70cd602c9e1b1e724365de65d21c101"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014976177554311314,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.69,
+      "captionedActiveSeconds": 4.69,
+      "activeCoverage": 1,
+      "firstActiveSec": 0.7450000000000001,
+      "lastActiveSec": 6.855,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n02",
+      "station": "hook",
+      "startSec": 8.56,
+      "endSec": 17.52,
+      "source": "audio/clean/n02.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 430080,
+        "durationSec": 8.96,
+        "sha256": "06660ce2ea3d7687f0d844dbce46d014ce39a184a34699c6feca4f882921a398"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.01414381905616058,
+      "activityBinSec": 0.01,
+      "activeSeconds": 5.38,
+      "captionedActiveSeconds": 5.38,
+      "activeCoverage": 1,
+      "firstActiveSec": 8.925,
+      "lastActiveSec": 17.075000000000003,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n03",
+      "station": "encode",
+      "startSec": 18.4352,
+      "endSec": 25.7952,
+      "source": "audio/clean/n03.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 353280,
+        "durationSec": 7.36,
+        "sha256": "ea93b0e3ef7452f962c33573182466e4c4c4f6c7528accad9e6fa0d072cf855c"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014459156709388273,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.43,
+      "captionedActiveSeconds": 4.43,
+      "activeCoverage": 1,
+      "firstActiveSec": 18.830199999999998,
+      "lastActiveSec": 25.1302,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n04",
+      "station": "encode",
+      "startSec": 26.5504,
+      "endSec": 33.0304,
+      "source": "audio/clean/n04.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 311040,
+        "durationSec": 6.48,
+        "sha256": "033b68b41c4fe620decbaac9a0057669ca9390da38de7582945ed6e6fcb2c010"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.012335083151192604,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.04,
+      "captionedActiveSeconds": 4.04,
+      "activeCoverage": 1,
+      "firstActiveSec": 26.915399999999998,
+      "lastActiveSec": 32.5554,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n05",
+      "station": "encode",
+      "startSec": 33.7856,
+      "endSec": 43.3856,
+      "source": "audio/clean/n05.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 460800,
+        "durationSec": 9.6,
+        "sha256": "37959b2a146cb796399017552b2987e0cb06b311aa067874c7a4377054ee86f7"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.013577406700137757,
+      "activityBinSec": 0.01,
+      "activeSeconds": 6.42,
+      "captionedActiveSeconds": 6.42,
+      "activeCoverage": 1,
+      "firstActiveSec": 34.1606,
+      "lastActiveSec": 42.8206,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n06",
+      "station": "constraints",
+      "startSec": 44.6868,
+      "endSec": 51.1668,
+      "source": "audio/clean/n06.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 311040,
+        "durationSec": 6.48,
+        "sha256": "5e3ce588153a6f1dc8fcb13b64480a6f6de1da651d34e11dd6a8d2e588566ad5"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.0145489504304016,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.87,
+      "captionedActiveSeconds": 3.87,
+      "activeCoverage": 1,
+      "firstActiveSec": 44.821799999999996,
+      "lastActiveSec": 50.7818,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n07",
+      "station": "constraints",
+      "startSec": 51.961333,
+      "endSec": 58.921333,
+      "source": "audio/clean/n07.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 334080,
+        "durationSec": 6.96,
+        "sha256": "1eee9df6ccd9a9efdf0adbcaa557cedf90b0ebc4b095556dc6a7ca4bec65c795"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014007384012716551,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.5,
+      "captionedActiveSeconds": 4.5,
+      "activeCoverage": 1,
+      "firstActiveSec": 52.326333000000005,
+      "lastActiveSec": 58.446333,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n08",
+      "station": "constraints",
+      "startSec": 59.715867,
+      "endSec": 66.915867,
+      "source": "audio/clean/n08.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 345600,
+        "durationSec": 7.2,
+        "sha256": "f8e33520854274d94cb6a879a76d995c69433cca6ec0bd8c569ca57ae365fb7e"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.014680358150700951,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.11,
+      "captionedActiveSeconds": 4.11,
+      "activeCoverage": 1,
+      "firstActiveSec": 60.090867,
+      "lastActiveSec": 66.420867,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n09",
+      "station": "constraints",
+      "startSec": 67.7104,
+      "endSec": 74.0304,
+      "source": "audio/clean/n09.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 303360,
+        "durationSec": 6.32,
+        "sha256": "ce72950d415754f55b33b74387dac991b59a658dabab3909a4a714a8b06581c0"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014865055468648185,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.93,
+      "captionedActiveSeconds": 3.93,
+      "activeCoverage": 1,
+      "firstActiveSec": 68.06540000000001,
+      "lastActiveSec": 73.53540000000001,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n10",
+      "station": "fountain",
+      "startSec": 75.4556,
+      "endSec": 80.0156,
+      "source": "audio/clean/n10.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 218880,
+        "durationSec": 4.56,
+        "sha256": "2363fc7f4f212dca72c6676800309a3bd587b0d69da08668e30aeb5ba20a8613"
+      },
+      "status": "measured",
+      "captionCount": 1,
+      "activityThresholdRms": 0.01451208474171972,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.02,
+      "captionedActiveSeconds": 3.02,
+      "activeCoverage": 1,
+      "firstActiveSec": 75.8306,
+      "lastActiveSec": 79.5306,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n11",
+      "station": "fountain",
+      "startSec": 80.33184,
+      "endSec": 86.73184,
+      "source": "audio/clean/n11.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 307200,
+        "durationSec": 6.4,
+        "sha256": "803d7918e8e94d16c9c977118bf9024b1d48d7bdab2b43a226e9c82b4a452892"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.013330506829502303,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.12,
+      "captionedActiveSeconds": 4.12,
+      "activeCoverage": 1,
+      "firstActiveSec": 80.70684,
+      "lastActiveSec": 86.18684,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n12",
+      "station": "fountain",
+      "startSec": 87.04808,
+      "endSec": 93.84808,
+      "source": "audio/clean/n12.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 326400,
+        "durationSec": 6.8,
+        "sha256": "b0012a0d3baa960e78457170721807ed91117abfd2b18df342c09fc5374b1f2e"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.015457870339613104,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.21,
+      "captionedActiveSeconds": 4.21,
+      "activeCoverage": 1,
+      "firstActiveSec": 87.46308,
+      "lastActiveSec": 93.30308,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n13",
+      "station": "fountain",
+      "startSec": 94.16432,
+      "endSec": 101.76432,
+      "source": "audio/clean/n13.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 364800,
+        "durationSec": 7.6,
+        "sha256": "4c83fbbc570154e1c8ebf6e5c3ad10b799debf5e16a8d7eeebcfe8cdd2b6ea63"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.0152324106243232,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.75,
+      "captionedActiveSeconds": 4.75,
+      "activeCoverage": 1,
+      "firstActiveSec": 94.62932,
+      "lastActiveSec": 101.26932000000001,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n14",
+      "station": "fountain",
+      "startSec": 102.08056,
+      "endSec": 109.52056,
+      "source": "audio/clean/n14.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 357120,
+        "durationSec": 7.44,
+        "sha256": "769456d1cd0adb9c3d060dfd6151a67e75e3554cf4bd57b114a14ca63972c6b9"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014199522103311758,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.71,
+      "captionedActiveSeconds": 4.7,
+      "activeCoverage": 0.9978768577494692,
+      "firstActiveSec": 102.47556,
+      "lastActiveSec": 108.97556,
+      "lateActiveTailSec": 0.008893333333332976
+    },
+    {
+      "id": "n15",
+      "station": "fountain",
+      "startSec": 109.8368,
+      "endSec": 117.3568,
+      "source": "audio/clean/n15.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 360960,
+        "durationSec": 7.52,
+        "sha256": "e5d140f1d6004ac990fa6c130894af7b89bb01bfe7147ad449b3599d0e1f2cb8"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.013198349090110046,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.54,
+      "captionedActiveSeconds": 4.54,
+      "activeCoverage": 1,
+      "firstActiveSec": 110.23179999999999,
+      "lastActiveSec": 116.7818,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n16",
+      "station": "wetlab",
+      "startSec": 118.7,
+      "endSec": 125.1,
+      "source": "audio/clean/n16.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 307200,
+        "durationSec": 6.4,
+        "sha256": "a769a57696fa7a38dd7f059f83af5b56bc6570f6f1257d6ca8020044703b1ce5"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.013260301250409084,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.91,
+      "captionedActiveSeconds": 3.91,
+      "activeCoverage": 1,
+      "firstActiveSec": 119.095,
+      "lastActiveSec": 124.505,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n17",
+      "station": "wetlab",
+      "startSec": 126.125,
+      "endSec": 133.165,
+      "source": "audio/clean/n17.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 337920,
+        "durationSec": 7.04,
+        "sha256": "fa48db1fcc657d31e9be2e375e3660c21be3fb308064abfc8d7fb208b3784efe"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.013588040691734629,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.68,
+      "captionedActiveSeconds": 4.68,
+      "activeCoverage": 1,
+      "firstActiveSec": 126.5,
+      "lastActiveSec": 132.69,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n18",
+      "station": "wetlab",
+      "startSec": 134.19,
+      "endSec": 140.83,
+      "source": "audio/clean/n18.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 318720,
+        "durationSec": 6.64,
+        "sha256": "9a6b7606400f9327bb8b65760a49e5e08c59e738d716002d1fc6a975103e037c"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.013528721597498341,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.25,
+      "captionedActiveSeconds": 4.2,
+      "activeCoverage": 0.9882352941176471,
+      "firstActiveSec": 134.585,
+      "lastActiveSec": 140.445,
+      "lateActiveTailSec": 0.044999999999987494
+    },
+    {
+      "id": "n19",
+      "station": "wetlab",
+      "startSec": 141.855,
+      "endSec": 150.255,
+      "source": "audio/clean/n19.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 403200,
+        "durationSec": 8.4,
+        "sha256": "6d19c7e454b370f9b21fb6ff2928cb5a95c9b1f8b6b7bedd35dc1fccb190713e"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.013866618447643655,
+      "activityBinSec": 0.01,
+      "activeSeconds": 5.05,
+      "captionedActiveSeconds": 5.05,
+      "activeCoverage": 1,
+      "firstActiveSec": 142.23999999999998,
+      "lastActiveSec": 149.67999999999998,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n20",
+      "station": "wetlab",
+      "startSec": 151.28,
+      "endSec": 158.8,
+      "source": "audio/clean/n20.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 360960,
+        "durationSec": 7.52,
+        "sha256": "d57fbc5f069aa548588a19cd5b1b6684534ecf29cb7aa3ff29b84904961997b3"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.013911480242360047,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.3500000000000005,
+      "captionedActiveSeconds": 4.3500000000000005,
+      "activeCoverage": 1,
+      "firstActiveSec": 151.675,
+      "lastActiveSec": 158.175,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n21",
+      "station": "consensus",
+      "startSec": 160.4352,
+      "endSec": 166.5952,
+      "source": "audio/clean/n21.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 295680,
+        "durationSec": 6.16,
+        "sha256": "f4a172eea826561d48f80b579ebdd39f67f3ff5dfcaea9896399b14def323f79"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014910745635436866,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.58,
+      "captionedActiveSeconds": 3.58,
+      "activeCoverage": 1,
+      "firstActiveSec": 160.8102,
+      "lastActiveSec": 166.0402,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n22",
+      "station": "consensus",
+      "startSec": 166.810971,
+      "endSec": 173.690971,
+      "source": "audio/clean/n22.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 330240,
+        "durationSec": 6.88,
+        "sha256": "72f1758798816b5c36ef25ae43685da93b93e2ceb3fbf3c99a5dcd67c001ccab"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.014023917634923035,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.01,
+      "captionedActiveSeconds": 4.01,
+      "activeCoverage": 1,
+      "firstActiveSec": 167.195971,
+      "lastActiveSec": 173.195971,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n23",
+      "station": "consensus",
+      "startSec": 173.906743,
+      "endSec": 180.066743,
+      "source": "audio/clean/n23.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 295680,
+        "durationSec": 6.16,
+        "sha256": "8d7e5749e5e40096cc7e3593ca18067f1c00290bc28b104f004e915619f8e4e4"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.013715573217021985,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.61,
+      "captionedActiveSeconds": 3.61,
+      "activeCoverage": 1,
+      "firstActiveSec": 174.291743,
+      "lastActiveSec": 179.571743,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n24",
+      "station": "consensus",
+      "startSec": 180.282514,
+      "endSec": 186.682514,
+      "source": "audio/clean/n24.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 307200,
+        "durationSec": 6.4,
+        "sha256": "411827021029da41e17ec52e78869374a8bfc8a0f79386abebaa76aa46a5a1ac"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.015072003904859875,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.5500000000000003,
+      "captionedActiveSeconds": 3.5500000000000003,
+      "activeCoverage": 1,
+      "firstActiveSec": 180.657514,
+      "lastActiveSec": 186.04751399999998,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n25",
+      "station": "consensus",
+      "startSec": 186.898286,
+      "endSec": 194.498286,
+      "source": "audio/clean/n25.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 364800,
+        "durationSec": 7.6,
+        "sha256": "2e41cdc6d08389f0f169db842535b39dc5c1549f08da0a67ce1b00dbe6fd0b1e"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.01527094379958835,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.65,
+      "captionedActiveSeconds": 4.65,
+      "activeCoverage": 1,
+      "firstActiveSec": 187.39328600000002,
+      "lastActiveSec": 193.98328600000002,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n26",
+      "station": "consensus",
+      "startSec": 194.714057,
+      "endSec": 201.434057,
+      "source": "audio/clean/n26.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 322560,
+        "durationSec": 6.72,
+        "sha256": "6684ee787d75c3fc988cc838a1117ca6f6a3551128eeb5259d65a95bedbe8c88"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.015990798661130064,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.97,
+      "captionedActiveSeconds": 3.97,
+      "activeCoverage": 1,
+      "firstActiveSec": 195.109057,
+      "lastActiveSec": 200.979057,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n27",
+      "station": "consensus",
+      "startSec": 201.649829,
+      "endSec": 208.209829,
+      "source": "audio/clean/n27.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 314880,
+        "durationSec": 6.56,
+        "sha256": "7fe4f7a4dafa6ccd2cd3a6a825d9a1295c66d3a3359ad3f37fb9e26a4fe81547"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.014469941108834494,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.03,
+      "captionedActiveSeconds": 4.03,
+      "activeCoverage": 1,
+      "firstActiveSec": 202.024829,
+      "lastActiveSec": 207.63482900000002,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n28",
+      "station": "consensus",
+      "startSec": 208.4256,
+      "endSec": 215.3856,
+      "source": "audio/clean/n28.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 334080,
+        "durationSec": 6.96,
+        "sha256": "75dd0b633e39e9057ce4997aadd43cb5176ba919510ba520078533f39af6fb5f"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.01273894636704759,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.04,
+      "captionedActiveSeconds": 4.04,
+      "activeCoverage": 1,
+      "firstActiveSec": 208.8306,
+      "lastActiveSec": 214.8006,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n29",
+      "station": "model",
+      "startSec": 216.4624,
+      "endSec": 221.7424,
+      "source": "audio/clean/n29.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 253440,
+        "durationSec": 5.28,
+        "sha256": "9a43f4b689e8d12028f7d48e329d96b38845aaba657adfaf6162baf02ee12b59"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.01316291772686331,
+      "activityBinSec": 0.01,
+      "activeSeconds": 3.47,
+      "captionedActiveSeconds": 3.47,
+      "activeCoverage": 1,
+      "firstActiveSec": 216.8274,
+      "lastActiveSec": 221.1374,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n30",
+      "station": "model",
+      "startSec": 222.06336,
+      "endSec": 229.58336,
+      "source": "audio/clean/n30.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 360960,
+        "durationSec": 7.52,
+        "sha256": "b8b91a9346ecbed6ab79b5c77a787c451571b27167c8e5fc37a14bca631fa30a"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.015208105013452116,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.74,
+      "captionedActiveSeconds": 4.74,
+      "activeCoverage": 1,
+      "firstActiveSec": 222.42836,
+      "lastActiveSec": 228.94835999999998,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n31",
+      "station": "model",
+      "startSec": 229.90432,
+      "endSec": 239.18432,
+      "source": "audio/clean/n31.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 445440,
+        "durationSec": 9.28,
+        "sha256": "31999863ad028c69e97de6d17c9115aa1186ca3ba396dbe854d5f8dc1203b862"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.013999276360575725,
+      "activityBinSec": 0.01,
+      "activeSeconds": 5.55,
+      "captionedActiveSeconds": 5.55,
+      "activeCoverage": 1,
+      "firstActiveSec": 230.57932000000002,
+      "lastActiveSec": 238.62932,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n32",
+      "station": "model",
+      "startSec": 239.50528,
+      "endSec": 247.10528,
+      "source": "audio/clean/n32.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 364800,
+        "durationSec": 7.6,
+        "sha256": "75ddf5acc3f6a363080fd613b347852d0aaa42b99b27d035abcaa292c5a5aa12"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.01588325371303056,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.79,
+      "captionedActiveSeconds": 4.79,
+      "activeCoverage": 1,
+      "firstActiveSec": 239.63028,
+      "lastActiveSec": 246.75028,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n33",
+      "station": "model",
+      "startSec": 247.42624,
+      "endSec": 253.98624,
+      "source": "audio/clean/n33.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 314880,
+        "durationSec": 6.56,
+        "sha256": "a9e54200482b792088d2e6edbc546ca171e2dff3a7ed433a5b4df57f48d95c39"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.013142891503972257,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.42,
+      "captionedActiveSeconds": 4.42,
+      "activeCoverage": 1,
+      "firstActiveSec": 247.84124,
+      "lastActiveSec": 253.43124,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n34",
+      "station": "model",
+      "startSec": 254.3072,
+      "endSec": 261.3472,
+      "source": "audio/clean/n34.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 337920,
+        "durationSec": 7.04,
+        "sha256": "fb835787ea8fd9fe44b93626fec5c17831ecf96de932c89b7ed5246392a1cc18"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.01579410726135368,
+      "activityBinSec": 0.01,
+      "activeSeconds": 4.42,
+      "captionedActiveSeconds": 4.42,
+      "activeCoverage": 1,
+      "firstActiveSec": 254.6822,
+      "lastActiveSec": 260.8422,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n35",
+      "station": "return",
+      "startSec": 262.4216,
+      "endSec": 271.2216,
+      "source": "audio/clean/n35.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 422400,
+        "durationSec": 8.8,
+        "sha256": "f28dc77255ae80bcf70c72c75a0ac372ea979a3fe9f545c31fcebd500bd55928"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.01380713612886928,
+      "activityBinSec": 0.01,
+      "activeSeconds": 5.8,
+      "captionedActiveSeconds": 5.8,
+      "activeCoverage": 1,
+      "firstActiveSec": 262.8266,
+      "lastActiveSec": 270.64660000000003,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n36",
+      "station": "return",
+      "startSec": 271.9532,
+      "endSec": 280.1932,
+      "source": "audio/clean/n36.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 395520,
+        "durationSec": 8.24,
+        "sha256": "ee1219f05147ae0dea07c727e14b345be697439c438ef6ff9872fdf47da7d959"
+      },
+      "status": "measured",
+      "captionCount": 2,
+      "activityThresholdRms": 0.015018003263961391,
+      "activityBinSec": 0.01,
+      "activeSeconds": 5.2,
+      "captionedActiveSeconds": 5.2,
+      "activeCoverage": 1,
+      "firstActiveSec": 272.3382,
+      "lastActiveSec": 279.6282,
+      "lateActiveTailSec": 0
+    },
+    {
+      "id": "n37",
+      "station": "return",
+      "startSec": 280.9248,
+      "endSec": 289.4048,
+      "source": "audio/clean/n37.wav",
+      "timingStatus": "measured-unscaled",
+      "audio": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "bits": 24,
+        "samples": 407040,
+        "durationSec": 8.48,
+        "sha256": "884832fd6029af9a0e65beac7f7acd5e5e4f6edd32ad1de3ff735f798229503e"
+      },
+      "status": "measured",
+      "captionCount": 3,
+      "activityThresholdRms": 0.014591483846517588,
+      "activityBinSec": 0.01,
+      "activeSeconds": 5.48,
+      "captionedActiveSeconds": 5.48,
+      "activeCoverage": 1,
+      "firstActiveSec": 281.3498,
+      "lastActiveSec": 288.8698,
+      "lateActiveTailSec": 0
+    }
+  ],
+  "checks": [
+    {
+      "id": "composition-layout",
+      "pass": true,
+      "detail": {
+        "width": 1920,
+        "height": 1080,
+        "fps": 30,
+        "totalFrames": 9000
+      }
+    },
+    {
+      "id": "narration-layout",
+      "pass": true,
+      "detail": {
+        "durationSec": 300,
+        "fps": 30,
+        "cues": 37
+      }
+    },
+    {
+      "id": "station-coverage",
+      "pass": true,
+      "detail": [
+        {
+          "id": "hook",
+          "start": 0,
+          "end": 18
+        },
+        {
+          "id": "encode",
+          "start": 18,
+          "end": 44
+        },
+        {
+          "id": "constraints",
+          "start": 44,
+          "end": 75
+        },
+        {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        {
+          "id": "wetlab",
+          "start": 118,
+          "end": 160
+        },
+        {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        {
+          "id": "return",
+          "start": 262,
+          "end": 290
+        },
+        {
+          "id": "coda",
+          "start": 290,
+          "end": 300
+        }
+      ]
+    },
+    {
+      "id": "cue-n01-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "hook",
+          "start": 0,
+          "end": 18
+        },
+        "window": [
+          0.34,
+          7.38
+        ]
+      }
+    },
+    {
+      "id": "cue-n01-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 0,
+        "start": 0.34,
+        "end": 7.38
+      }
+    },
+    {
+      "id": "cue-n01-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 10,
+        "endFrame": 221
+      }
+    },
+    {
+      "id": "cue-n01-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.04,
+        "windowErrorSec": 0,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n01-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.69,
+        "captionedSeconds": 4.69,
+        "thresholdRms": 0.014976177554311314
+      }
+    },
+    {
+      "id": "cue-n01-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n01-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n02-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "hook",
+          "start": 0,
+          "end": 18
+        },
+        "window": [
+          8.56,
+          17.52
+        ]
+      }
+    },
+    {
+      "id": "cue-n02-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 7.38,
+        "start": 8.56,
+        "end": 17.52
+      }
+    },
+    {
+      "id": "cue-n02-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 257,
+        "endFrame": 526
+      }
+    },
+    {
+      "id": "cue-n02-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 8.96,
+        "windowErrorSec": 1.7763568394002505e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n02-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 5.38,
+        "captionedSeconds": 5.38,
+        "thresholdRms": 0.01414381905616058
+      }
+    },
+    {
+      "id": "cue-n02-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n02-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n03-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "encode",
+          "start": 18,
+          "end": 44
+        },
+        "window": [
+          18.4352,
+          25.7952
+        ]
+      }
+    },
+    {
+      "id": "cue-n03-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 17.52,
+        "start": 18.4352,
+        "end": 25.7952
+      }
+    },
+    {
+      "id": "cue-n03-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 553,
+        "endFrame": 774
+      }
+    },
+    {
+      "id": "cue-n03-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.36,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n03-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.43,
+        "captionedSeconds": 4.43,
+        "thresholdRms": 0.014459156709388273
+      }
+    },
+    {
+      "id": "cue-n03-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n03-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n04-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "encode",
+          "start": 18,
+          "end": 44
+        },
+        "window": [
+          26.5504,
+          33.0304
+        ]
+      }
+    },
+    {
+      "id": "cue-n04-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 25.7952,
+        "start": 26.5504,
+        "end": 33.0304
+      }
+    },
+    {
+      "id": "cue-n04-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 797,
+        "endFrame": 991
+      }
+    },
+    {
+      "id": "cue-n04-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.48,
+        "windowErrorSec": 0,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n04-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.04,
+        "captionedSeconds": 4.04,
+        "thresholdRms": 0.012335083151192604
+      }
+    },
+    {
+      "id": "cue-n04-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n04-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n05-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "encode",
+          "start": 18,
+          "end": 44
+        },
+        "window": [
+          33.7856,
+          43.3856
+        ]
+      }
+    },
+    {
+      "id": "cue-n05-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 33.0304,
+        "start": 33.7856,
+        "end": 43.3856
+      }
+    },
+    {
+      "id": "cue-n05-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 1014,
+        "endFrame": 1302
+      }
+    },
+    {
+      "id": "cue-n05-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 9.6,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n05-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 6.42,
+        "captionedSeconds": 6.42,
+        "thresholdRms": 0.013577406700137757
+      }
+    },
+    {
+      "id": "cue-n05-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n05-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n06-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "constraints",
+          "start": 44,
+          "end": 75
+        },
+        "window": [
+          44.6868,
+          51.1668
+        ]
+      }
+    },
+    {
+      "id": "cue-n06-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 43.3856,
+        "start": 44.6868,
+        "end": 51.1668
+      }
+    },
+    {
+      "id": "cue-n06-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 1341,
+        "endFrame": 1535
+      }
+    },
+    {
+      "id": "cue-n06-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.48,
+        "windowErrorSec": 3.552713678800501e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n06-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.87,
+        "captionedSeconds": 3.87,
+        "thresholdRms": 0.0145489504304016
+      }
+    },
+    {
+      "id": "cue-n06-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n06-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n07-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "constraints",
+          "start": 44,
+          "end": 75
+        },
+        "window": [
+          51.961333,
+          58.921333
+        ]
+      }
+    },
+    {
+      "id": "cue-n07-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 51.1668,
+        "start": 51.961333,
+        "end": 58.921333
+      }
+    },
+    {
+      "id": "cue-n07-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 1559,
+        "endFrame": 1768
+      }
+    },
+    {
+      "id": "cue-n07-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.96,
+        "windowErrorSec": 6.217248937900877e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n07-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.5,
+        "captionedSeconds": 4.5,
+        "thresholdRms": 0.014007384012716551
+      }
+    },
+    {
+      "id": "cue-n07-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n07-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n08-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "constraints",
+          "start": 44,
+          "end": 75
+        },
+        "window": [
+          59.715867,
+          66.915867
+        ]
+      }
+    },
+    {
+      "id": "cue-n08-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 58.921333,
+        "start": 59.715867,
+        "end": 66.915867
+      }
+    },
+    {
+      "id": "cue-n08-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 1791,
+        "endFrame": 2007
+      }
+    },
+    {
+      "id": "cue-n08-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.2,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n08-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.11,
+        "captionedSeconds": 4.11,
+        "thresholdRms": 0.014680358150700951
+      }
+    },
+    {
+      "id": "cue-n08-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n08-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n09-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "constraints",
+          "start": 44,
+          "end": 75
+        },
+        "window": [
+          67.7104,
+          74.0304
+        ]
+      }
+    },
+    {
+      "id": "cue-n09-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 66.915867,
+        "start": 67.7104,
+        "end": 74.0304
+      }
+    },
+    {
+      "id": "cue-n09-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 2031,
+        "endFrame": 2221
+      }
+    },
+    {
+      "id": "cue-n09-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.32,
+        "windowErrorSec": 7.105427357601002e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n09-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.93,
+        "captionedSeconds": 3.93,
+        "thresholdRms": 0.014865055468648185
+      }
+    },
+    {
+      "id": "cue-n09-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n09-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n10-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        "window": [
+          75.4556,
+          80.0156
+        ]
+      }
+    },
+    {
+      "id": "cue-n10-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 74.0304,
+        "start": 75.4556,
+        "end": 80.0156
+      }
+    },
+    {
+      "id": "cue-n10-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 2264,
+        "endFrame": 2400
+      }
+    },
+    {
+      "id": "cue-n10-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 4.56,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n10-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.02,
+        "captionedSeconds": 3.02,
+        "thresholdRms": 0.01451208474171972
+      }
+    },
+    {
+      "id": "cue-n10-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n10-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n11-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        "window": [
+          80.33184,
+          86.73184
+        ]
+      }
+    },
+    {
+      "id": "cue-n11-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 80.0156,
+        "start": 80.33184,
+        "end": 86.73184
+      }
+    },
+    {
+      "id": "cue-n11-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 2410,
+        "endFrame": 2602
+      }
+    },
+    {
+      "id": "cue-n11-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.4,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n11-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.12,
+        "captionedSeconds": 4.12,
+        "thresholdRms": 0.013330506829502303
+      }
+    },
+    {
+      "id": "cue-n11-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n11-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n12-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        "window": [
+          87.04808,
+          93.84808
+        ]
+      }
+    },
+    {
+      "id": "cue-n12-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 86.73184,
+        "start": 87.04808,
+        "end": 93.84808
+      }
+    },
+    {
+      "id": "cue-n12-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 2611,
+        "endFrame": 2815
+      }
+    },
+    {
+      "id": "cue-n12-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.8,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n12-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.21,
+        "captionedSeconds": 4.21,
+        "thresholdRms": 0.015457870339613104
+      }
+    },
+    {
+      "id": "cue-n12-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n12-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n13-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        "window": [
+          94.16432,
+          101.76432
+        ]
+      }
+    },
+    {
+      "id": "cue-n13-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 93.84808,
+        "start": 94.16432,
+        "end": 101.76432
+      }
+    },
+    {
+      "id": "cue-n13-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 2825,
+        "endFrame": 3053
+      }
+    },
+    {
+      "id": "cue-n13-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.6,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n13-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.75,
+        "captionedSeconds": 4.75,
+        "thresholdRms": 0.0152324106243232
+      }
+    },
+    {
+      "id": "cue-n13-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n13-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n14-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        "window": [
+          102.08056,
+          109.52056
+        ]
+      }
+    },
+    {
+      "id": "cue-n14-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 101.76432,
+        "start": 102.08056,
+        "end": 109.52056
+      }
+    },
+    {
+      "id": "cue-n14-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 3062,
+        "endFrame": 3286
+      }
+    },
+    {
+      "id": "cue-n14-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.44,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n14-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 0.9978768577494692,
+        "activeSeconds": 4.71,
+        "captionedSeconds": 4.7,
+        "thresholdRms": 0.014199522103311758
+      }
+    },
+    {
+      "id": "cue-n14-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0.008893333333332976,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n14-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n15-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "fountain",
+          "start": 75,
+          "end": 118
+        },
+        "window": [
+          109.8368,
+          117.3568
+        ]
+      }
+    },
+    {
+      "id": "cue-n15-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 109.52056,
+        "start": 109.8368,
+        "end": 117.3568
+      }
+    },
+    {
+      "id": "cue-n15-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 3295,
+        "endFrame": 3521
+      }
+    },
+    {
+      "id": "cue-n15-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.52,
+        "windowErrorSec": 1.0658141036401503e-14,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n15-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.54,
+        "captionedSeconds": 4.54,
+        "thresholdRms": 0.013198349090110046
+      }
+    },
+    {
+      "id": "cue-n15-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n15-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n16-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "wetlab",
+          "start": 118,
+          "end": 160
+        },
+        "window": [
+          118.7,
+          125.1
+        ]
+      }
+    },
+    {
+      "id": "cue-n16-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 117.3568,
+        "start": 118.7,
+        "end": 125.1
+      }
+    },
+    {
+      "id": "cue-n16-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 3561,
+        "endFrame": 3753
+      }
+    },
+    {
+      "id": "cue-n16-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.4,
+        "windowErrorSec": 8.881784197001252e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n16-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.91,
+        "captionedSeconds": 3.91,
+        "thresholdRms": 0.013260301250409084
+      }
+    },
+    {
+      "id": "cue-n16-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n16-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n17-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "wetlab",
+          "start": 118,
+          "end": 160
+        },
+        "window": [
+          126.125,
+          133.165
+        ]
+      }
+    },
+    {
+      "id": "cue-n17-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 125.1,
+        "start": 126.125,
+        "end": 133.165
+      }
+    },
+    {
+      "id": "cue-n17-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 3784,
+        "endFrame": 3995
+      }
+    },
+    {
+      "id": "cue-n17-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.04,
+        "windowErrorSec": 7.993605777301127e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n17-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.68,
+        "captionedSeconds": 4.68,
+        "thresholdRms": 0.013588040691734629
+      }
+    },
+    {
+      "id": "cue-n17-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n17-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n18-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "wetlab",
+          "start": 118,
+          "end": 160
+        },
+        "window": [
+          134.19,
+          140.83
+        ]
+      }
+    },
+    {
+      "id": "cue-n18-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 133.165,
+        "start": 134.19,
+        "end": 140.83
+      }
+    },
+    {
+      "id": "cue-n18-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 4026,
+        "endFrame": 4225
+      }
+    },
+    {
+      "id": "cue-n18-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.64,
+        "windowErrorSec": 1.509903313490213e-14,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n18-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 0.9882352941176471,
+        "activeSeconds": 4.25,
+        "captionedSeconds": 4.2,
+        "thresholdRms": 0.013528721597498341
+      }
+    },
+    {
+      "id": "cue-n18-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0.044999999999987494,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n18-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n19-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "wetlab",
+          "start": 118,
+          "end": 160
+        },
+        "window": [
+          141.855,
+          150.255
+        ]
+      }
+    },
+    {
+      "id": "cue-n19-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 140.83,
+        "start": 141.855,
+        "end": 150.255
+      }
+    },
+    {
+      "id": "cue-n19-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 4256,
+        "endFrame": 4508
+      }
+    },
+    {
+      "id": "cue-n19-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 8.4,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n19-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 5.05,
+        "captionedSeconds": 5.05,
+        "thresholdRms": 0.013866618447643655
+      }
+    },
+    {
+      "id": "cue-n19-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n19-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n20-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "wetlab",
+          "start": 118,
+          "end": 160
+        },
+        "window": [
+          151.28,
+          158.8
+        ]
+      }
+    },
+    {
+      "id": "cue-n20-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 150.255,
+        "start": 151.28,
+        "end": 158.8
+      }
+    },
+    {
+      "id": "cue-n20-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 4538,
+        "endFrame": 4764
+      }
+    },
+    {
+      "id": "cue-n20-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.52,
+        "windowErrorSec": 1.0658141036401503e-14,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n20-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.3500000000000005,
+        "captionedSeconds": 4.3500000000000005,
+        "thresholdRms": 0.013911480242360047
+      }
+    },
+    {
+      "id": "cue-n20-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n20-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n21-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          160.4352,
+          166.5952
+        ]
+      }
+    },
+    {
+      "id": "cue-n21-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 158.8,
+        "start": 160.4352,
+        "end": 166.5952
+      }
+    },
+    {
+      "id": "cue-n21-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 4813,
+        "endFrame": 4998
+      }
+    },
+    {
+      "id": "cue-n21-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.16,
+        "windowErrorSec": 3.552713678800501e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n21-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.58,
+        "captionedSeconds": 3.58,
+        "thresholdRms": 0.014910745635436866
+      }
+    },
+    {
+      "id": "cue-n21-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n21-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n22-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          166.810971,
+          173.690971
+        ]
+      }
+    },
+    {
+      "id": "cue-n22-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 166.5952,
+        "start": 166.810971,
+        "end": 173.690971
+      }
+    },
+    {
+      "id": "cue-n22-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 5004,
+        "endFrame": 5211
+      }
+    },
+    {
+      "id": "cue-n22-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.88,
+        "windowErrorSec": 4.440892098500626e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n22-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.01,
+        "captionedSeconds": 4.01,
+        "thresholdRms": 0.014023917634923035
+      }
+    },
+    {
+      "id": "cue-n22-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n22-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n23-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          173.906743,
+          180.066743
+        ]
+      }
+    },
+    {
+      "id": "cue-n23-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 173.690971,
+        "start": 173.906743,
+        "end": 180.066743
+      }
+    },
+    {
+      "id": "cue-n23-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 5217,
+        "endFrame": 5402
+      }
+    },
+    {
+      "id": "cue-n23-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.16,
+        "windowErrorSec": 3.552713678800501e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n23-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.61,
+        "captionedSeconds": 3.61,
+        "thresholdRms": 0.013715573217021985
+      }
+    },
+    {
+      "id": "cue-n23-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n23-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n24-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          180.282514,
+          186.682514
+        ]
+      }
+    },
+    {
+      "id": "cue-n24-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 180.066743,
+        "start": 180.282514,
+        "end": 186.682514
+      }
+    },
+    {
+      "id": "cue-n24-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 5408,
+        "endFrame": 5600
+      }
+    },
+    {
+      "id": "cue-n24-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.4,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n24-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.5500000000000003,
+        "captionedSeconds": 3.5500000000000003,
+        "thresholdRms": 0.015072003904859875
+      }
+    },
+    {
+      "id": "cue-n24-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n24-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n25-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          186.898286,
+          194.498286
+        ]
+      }
+    },
+    {
+      "id": "cue-n25-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 186.682514,
+        "start": 186.898286,
+        "end": 194.498286
+      }
+    },
+    {
+      "id": "cue-n25-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 5607,
+        "endFrame": 5835
+      }
+    },
+    {
+      "id": "cue-n25-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.6,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n25-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.65,
+        "captionedSeconds": 4.65,
+        "thresholdRms": 0.01527094379958835
+      }
+    },
+    {
+      "id": "cue-n25-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n25-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n26-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          194.714057,
+          201.434057
+        ]
+      }
+    },
+    {
+      "id": "cue-n26-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 194.498286,
+        "start": 194.714057,
+        "end": 201.434057
+      }
+    },
+    {
+      "id": "cue-n26-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 5841,
+        "endFrame": 6043
+      }
+    },
+    {
+      "id": "cue-n26-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.72,
+        "windowErrorSec": 8.881784197001252e-16,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n26-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.97,
+        "captionedSeconds": 3.97,
+        "thresholdRms": 0.015990798661130064
+      }
+    },
+    {
+      "id": "cue-n26-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n26-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n27-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          201.649829,
+          208.209829
+        ]
+      }
+    },
+    {
+      "id": "cue-n27-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 201.434057,
+        "start": 201.649829,
+        "end": 208.209829
+      }
+    },
+    {
+      "id": "cue-n27-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 6049,
+        "endFrame": 6246
+      }
+    },
+    {
+      "id": "cue-n27-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.56,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n27-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.03,
+        "captionedSeconds": 4.03,
+        "thresholdRms": 0.014469941108834494
+      }
+    },
+    {
+      "id": "cue-n27-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n27-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n28-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "consensus",
+          "start": 160,
+          "end": 216
+        },
+        "window": [
+          208.4256,
+          215.3856
+        ]
+      }
+    },
+    {
+      "id": "cue-n28-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 208.209829,
+        "start": 208.4256,
+        "end": 215.3856
+      }
+    },
+    {
+      "id": "cue-n28-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 6253,
+        "endFrame": 6462
+      }
+    },
+    {
+      "id": "cue-n28-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.96,
+        "windowErrorSec": 7.993605777301127e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n28-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.04,
+        "captionedSeconds": 4.04,
+        "thresholdRms": 0.01273894636704759
+      }
+    },
+    {
+      "id": "cue-n28-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n28-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n29-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        "window": [
+          216.4624,
+          221.7424
+        ]
+      }
+    },
+    {
+      "id": "cue-n29-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 215.3856,
+        "start": 216.4624,
+        "end": 221.7424
+      }
+    },
+    {
+      "id": "cue-n29-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 6494,
+        "endFrame": 6652
+      }
+    },
+    {
+      "id": "cue-n29-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 5.28,
+        "windowErrorSec": 8.881784197001252e-16,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n29-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 3.47,
+        "captionedSeconds": 3.47,
+        "thresholdRms": 0.01316291772686331
+      }
+    },
+    {
+      "id": "cue-n29-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n29-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n30-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        "window": [
+          222.06336,
+          229.58336
+        ]
+      }
+    },
+    {
+      "id": "cue-n30-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 221.7424,
+        "start": 222.06336,
+        "end": 229.58336
+      }
+    },
+    {
+      "id": "cue-n30-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 6662,
+        "endFrame": 6888
+      }
+    },
+    {
+      "id": "cue-n30-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.52,
+        "windowErrorSec": 1.0658141036401503e-14,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n30-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.74,
+        "captionedSeconds": 4.74,
+        "thresholdRms": 0.015208105013452116
+      }
+    },
+    {
+      "id": "cue-n30-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n30-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n31-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        "window": [
+          229.90432,
+          239.18432
+        ]
+      }
+    },
+    {
+      "id": "cue-n31-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 229.58336,
+        "start": 229.90432,
+        "end": 239.18432
+      }
+    },
+    {
+      "id": "cue-n31-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 6897,
+        "endFrame": 7176
+      }
+    },
+    {
+      "id": "cue-n31-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 9.28,
+        "windowErrorSec": 1.7763568394002505e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n31-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 5.55,
+        "captionedSeconds": 5.55,
+        "thresholdRms": 0.013999276360575725
+      }
+    },
+    {
+      "id": "cue-n31-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n31-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n32-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        "window": [
+          239.50528,
+          247.10528
+        ]
+      }
+    },
+    {
+      "id": "cue-n32-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 239.18432,
+        "start": 239.50528,
+        "end": 247.10528
+      }
+    },
+    {
+      "id": "cue-n32-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 7185,
+        "endFrame": 7413
+      }
+    },
+    {
+      "id": "cue-n32-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.6,
+        "windowErrorSec": 5.329070518200751e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n32-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.79,
+        "captionedSeconds": 4.79,
+        "thresholdRms": 0.01588325371303056
+      }
+    },
+    {
+      "id": "cue-n32-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n32-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n33-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        "window": [
+          247.42624,
+          253.98624
+        ]
+      }
+    },
+    {
+      "id": "cue-n33-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 247.10528,
+        "start": 247.42624,
+        "end": 253.98624
+      }
+    },
+    {
+      "id": "cue-n33-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 7423,
+        "endFrame": 7620
+      }
+    },
+    {
+      "id": "cue-n33-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 6.56,
+        "windowErrorSec": 2.6645352591003757e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n33-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.42,
+        "captionedSeconds": 4.42,
+        "thresholdRms": 0.013142891503972257
+      }
+    },
+    {
+      "id": "cue-n33-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n33-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n34-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "model",
+          "start": 216,
+          "end": 262
+        },
+        "window": [
+          254.3072,
+          261.3472
+        ]
+      }
+    },
+    {
+      "id": "cue-n34-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 253.98624,
+        "start": 254.3072,
+        "end": 261.3472
+      }
+    },
+    {
+      "id": "cue-n34-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 7629,
+        "endFrame": 7840
+      }
+    },
+    {
+      "id": "cue-n34-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 7.04,
+        "windowErrorSec": 7.993605777301127e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n34-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 4.42,
+        "captionedSeconds": 4.42,
+        "thresholdRms": 0.01579410726135368
+      }
+    },
+    {
+      "id": "cue-n34-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n34-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n35-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "return",
+          "start": 262,
+          "end": 290
+        },
+        "window": [
+          262.4216,
+          271.2216
+        ]
+      }
+    },
+    {
+      "id": "cue-n35-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 261.3472,
+        "start": 262.4216,
+        "end": 271.2216
+      }
+    },
+    {
+      "id": "cue-n35-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 7873,
+        "endFrame": 8137
+      }
+    },
+    {
+      "id": "cue-n35-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 8.8,
+        "windowErrorSec": 1.0658141036401503e-14,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n35-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 5.8,
+        "captionedSeconds": 5.8,
+        "thresholdRms": 0.01380713612886928
+      }
+    },
+    {
+      "id": "cue-n35-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n35-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n36-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "return",
+          "start": 262,
+          "end": 290
+        },
+        "window": [
+          271.9532,
+          280.1932
+        ]
+      }
+    },
+    {
+      "id": "cue-n36-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 271.2216,
+        "start": 271.9532,
+        "end": 280.1932
+      }
+    },
+    {
+      "id": "cue-n36-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 8159,
+        "endFrame": 8406
+      }
+    },
+    {
+      "id": "cue-n36-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 8.24,
+        "windowErrorSec": 8.881784197001252e-15,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n36-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 5.2,
+        "captionedSeconds": 5.2,
+        "thresholdRms": 0.015018003263961391
+      }
+    },
+    {
+      "id": "cue-n36-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n36-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "cue-n37-station",
+      "pass": true,
+      "detail": {
+        "station": {
+          "id": "return",
+          "start": 262,
+          "end": 290
+        },
+        "window": [
+          280.9248,
+          289.4048
+        ]
+      }
+    },
+    {
+      "id": "cue-n37-ordered",
+      "pass": true,
+      "detail": {
+        "previousEnd": 280.1932,
+        "start": 280.9248,
+        "end": 289.4048
+      }
+    },
+    {
+      "id": "cue-n37-frame-rounding",
+      "pass": true,
+      "detail": {
+        "startFrame": 8428,
+        "endFrame": 8682
+      }
+    },
+    {
+      "id": "cue-n37-measured-window",
+      "pass": true,
+      "detail": {
+        "measuredDurationSec": 8.48,
+        "windowErrorSec": 1.7763568394002505e-14,
+        "declaredErrorSec": 0
+      }
+    },
+    {
+      "id": "cue-n37-caption-active-coverage",
+      "pass": true,
+      "detail": {
+        "activeCoverage": 1,
+        "activeSeconds": 5.48,
+        "captionedSeconds": 5.48,
+        "thresholdRms": 0.014591483846517588
+      }
+    },
+    {
+      "id": "cue-n37-caption-tail",
+      "pass": true,
+      "detail": {
+        "lateActiveTailSec": 0,
+        "allowedBreathTailSec": 0.12,
+        "frameToleranceSec": 0.03333333333333333,
+        "note": "Measured tail only; the95% coverage check above does not silently discard this tail."
+      }
+    },
+    {
+      "id": "cue-n37-no-stretch",
+      "pass": true,
+      "detail": {
+        "timeStretch": false,
+        "preservedLengthSamples": true,
+        "hashMatches": true
+      }
+    },
+    {
+      "id": "aggregate-active-caption-coverage",
+      "pass": true,
+      "detail": {
+        "coverage": 0.9996347476715164,
+        "measuredActiveSeconds": 164.27,
+        "captionedSeconds": 164.21
+      }
+    },
+    {
+      "id": "caption-n01-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          10,
+          113
+        ],
+        "previousEnd": 0
+      }
+    },
+    {
+      "id": "caption-n01-00-short",
+      "pass": true,
+      "detail": {
+        "han": 14,
+        "total": 15,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n01-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n01",
+        "station": "hook"
+      }
+    },
+    {
+      "id": "caption-n01-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          113,
+          208
+        ],
+        "previousEnd": 113
+      }
+    },
+    {
+      "id": "caption-n01-01-short",
+      "pass": true,
+      "detail": {
+        "han": 14,
+        "total": 16,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n01-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n01",
+        "station": "hook"
+      }
+    },
+    {
+      "id": "caption-n02-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          257,
+          374
+        ],
+        "previousEnd": 208
+      }
+    },
+    {
+      "id": "caption-n02-00-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 17,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n02-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n02",
+        "station": "hook"
+      }
+    },
+    {
+      "id": "caption-n02-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          374,
+          438
+        ],
+        "previousEnd": 374
+      }
+    },
+    {
+      "id": "caption-n02-01-short",
+      "pass": true,
+      "detail": {
+        "han": 8,
+        "total": 9,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n02-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n02",
+        "station": "hook"
+      }
+    },
+    {
+      "id": "caption-n02-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          438,
+          515
+        ],
+        "previousEnd": 438
+      }
+    },
+    {
+      "id": "caption-n02-02-short",
+      "pass": true,
+      "detail": {
+        "han": 10,
+        "total": 11,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n02-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n02",
+        "station": "hook"
+      }
+    },
+    {
+      "id": "caption-n03-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          553,
+          656
+        ],
+        "previousEnd": 515
+      }
+    },
+    {
+      "id": "caption-n03-00-short",
+      "pass": true,
+      "detail": {
+        "han": 13,
+        "total": 15,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n03-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n03",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n03-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          656,
+          757
+        ],
+        "previousEnd": 656
+      }
+    },
+    {
+      "id": "caption-n03-01-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 17,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n03-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n03",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n04-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          797,
+          935
+        ],
+        "previousEnd": 757
+      }
+    },
+    {
+      "id": "caption-n04-00-short",
+      "pass": true,
+      "detail": {
+        "han": 16,
+        "total": 21,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n04-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n04",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n04-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          935,
+          979
+        ],
+        "previousEnd": 935
+      }
+    },
+    {
+      "id": "caption-n04-01-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 7,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n04-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n04",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n05-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1014,
+          1082
+        ],
+        "previousEnd": 979
+      }
+    },
+    {
+      "id": "caption-n05-00-short",
+      "pass": true,
+      "detail": {
+        "han": 10,
+        "total": 11,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n05-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n05",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n05-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1082,
+          1198
+        ],
+        "previousEnd": 1082
+      }
+    },
+    {
+      "id": "caption-n05-01-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 16,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n05-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n05",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n05-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1198,
+          1287
+        ],
+        "previousEnd": 1198
+      }
+    },
+    {
+      "id": "caption-n05-02-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n05-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n05",
+        "station": "encode"
+      }
+    },
+    {
+      "id": "caption-n06-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1341,
+          1383
+        ],
+        "previousEnd": 1287
+      }
+    },
+    {
+      "id": "caption-n06-00-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 7,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n06-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n06",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n06-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1383,
+          1525
+        ],
+        "previousEnd": 1383
+      }
+    },
+    {
+      "id": "caption-n06-01-short",
+      "pass": true,
+      "detail": {
+        "han": 19,
+        "total": 22,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n06-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n06",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n07-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1559,
+          1639
+        ],
+        "previousEnd": 1525
+      }
+    },
+    {
+      "id": "caption-n07-00-short",
+      "pass": true,
+      "detail": {
+        "han": 11,
+        "total": 12,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n07-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n07",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n07-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1639,
+          1754
+        ],
+        "previousEnd": 1639
+      }
+    },
+    {
+      "id": "caption-n07-01-short",
+      "pass": true,
+      "detail": {
+        "han": 18,
+        "total": 21,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n07-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n07",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n08-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1791,
+          1923
+        ],
+        "previousEnd": 1754
+      }
+    },
+    {
+      "id": "caption-n08-00-short",
+      "pass": true,
+      "detail": {
+        "han": 17,
+        "total": 20,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n08-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n08",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n08-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1923,
+          1953
+        ],
+        "previousEnd": 1923
+      }
+    },
+    {
+      "id": "caption-n08-01-short",
+      "pass": true,
+      "detail": {
+        "han": 4,
+        "total": 5,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n08-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n08",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n08-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          1953,
+          1996
+        ],
+        "previousEnd": 1953
+      }
+    },
+    {
+      "id": "caption-n08-02-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n08-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n08",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n09-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2031,
+          2088
+        ],
+        "previousEnd": 1996
+      }
+    },
+    {
+      "id": "caption-n09-00-short",
+      "pass": true,
+      "detail": {
+        "han": 7,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n09-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n09",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n09-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2088,
+          2208
+        ],
+        "previousEnd": 2088
+      }
+    },
+    {
+      "id": "caption-n09-01-short",
+      "pass": true,
+      "detail": {
+        "han": 19,
+        "total": 21,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n09-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n09",
+        "station": "constraints"
+      }
+    },
+    {
+      "id": "caption-n10-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2264,
+          2388
+        ],
+        "previousEnd": 2208
+      }
+    },
+    {
+      "id": "caption-n10-00-short",
+      "pass": true,
+      "detail": {
+        "han": 20,
+        "total": 22,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n10-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n10",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n11-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2410,
+          2528
+        ],
+        "previousEnd": 2388
+      }
+    },
+    {
+      "id": "caption-n11-00-short",
+      "pass": true,
+      "detail": {
+        "han": 17,
+        "total": 19,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n11-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n11",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n11-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2528,
+          2588
+        ],
+        "previousEnd": 2528
+      }
+    },
+    {
+      "id": "caption-n11-01-short",
+      "pass": true,
+      "detail": {
+        "han": 9,
+        "total": 11,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n11-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n11",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n12-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2611,
+          2694
+        ],
+        "previousEnd": 2588
+      }
+    },
+    {
+      "id": "caption-n12-00-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n12-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n12",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n12-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2694,
+          2800
+        ],
+        "previousEnd": 2694
+      }
+    },
+    {
+      "id": "caption-n12-01-short",
+      "pass": true,
+      "detail": {
+        "han": 19,
+        "total": 21,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n12-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n12",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n13-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2825,
+          2956
+        ],
+        "previousEnd": 2800
+      }
+    },
+    {
+      "id": "caption-n13-00-short",
+      "pass": true,
+      "detail": {
+        "han": 16,
+        "total": 19,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n13-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n13",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n13-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          2956,
+          3039
+        ],
+        "previousEnd": 2956
+      }
+    },
+    {
+      "id": "caption-n13-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n13-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n13",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n14-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3062,
+          3177
+        ],
+        "previousEnd": 3039
+      }
+    },
+    {
+      "id": "caption-n14-00-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 17,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n14-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n14",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n14-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3177,
+          3269
+        ],
+        "previousEnd": 3177
+      }
+    },
+    {
+      "id": "caption-n14-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n14-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n14",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n15-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3295,
+          3401
+        ],
+        "previousEnd": 3269
+      }
+    },
+    {
+      "id": "caption-n15-00-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 17,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n15-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n15",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n15-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3401,
+          3457
+        ],
+        "previousEnd": 3401
+      }
+    },
+    {
+      "id": "caption-n15-01-short",
+      "pass": true,
+      "detail": {
+        "han": 8,
+        "total": 9,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n15-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n15",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n15-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3457,
+          3507
+        ],
+        "previousEnd": 3457
+      }
+    },
+    {
+      "id": "caption-n15-02-short",
+      "pass": true,
+      "detail": {
+        "han": 9,
+        "total": 10,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n15-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n15",
+        "station": "fountain"
+      }
+    },
+    {
+      "id": "caption-n16-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3561,
+          3602
+        ],
+        "previousEnd": 3507
+      }
+    },
+    {
+      "id": "caption-n16-00-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 7,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n16-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n16",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n16-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3602,
+          3687
+        ],
+        "previousEnd": 3602
+      }
+    },
+    {
+      "id": "caption-n16-01-short",
+      "pass": true,
+      "detail": {
+        "han": 13,
+        "total": 15,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n16-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n16",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n16-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3687,
+          3739
+        ],
+        "previousEnd": 3687
+      }
+    },
+    {
+      "id": "caption-n16-02-short",
+      "pass": true,
+      "detail": {
+        "han": 8,
+        "total": 9,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n16-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n16",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n17-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3784,
+          3903
+        ],
+        "previousEnd": 3739
+      }
+    },
+    {
+      "id": "caption-n17-00-short",
+      "pass": true,
+      "detail": {
+        "han": 17,
+        "total": 19,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n17-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n17",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n17-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          3903,
+          3982
+        ],
+        "previousEnd": 3903
+      }
+    },
+    {
+      "id": "caption-n17-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n17-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n17",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n18-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4026,
+          4142
+        ],
+        "previousEnd": 3982
+      }
+    },
+    {
+      "id": "caption-n18-00-short",
+      "pass": true,
+      "detail": {
+        "han": 16,
+        "total": 19,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n18-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n18",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n18-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4142,
+          4212
+        ],
+        "previousEnd": 4142
+      }
+    },
+    {
+      "id": "caption-n18-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 13,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n18-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n18",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n19-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4256,
+          4389
+        ],
+        "previousEnd": 4212
+      }
+    },
+    {
+      "id": "caption-n19-00-short",
+      "pass": true,
+      "detail": {
+        "han": 17,
+        "total": 20,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n19-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n19",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n19-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4389,
+          4441
+        ],
+        "previousEnd": 4389
+      }
+    },
+    {
+      "id": "caption-n19-01-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n19-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n19",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n19-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4441,
+          4492
+        ],
+        "previousEnd": 4441
+      }
+    },
+    {
+      "id": "caption-n19-02-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n19-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n19",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n20-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4538,
+          4614
+        ],
+        "previousEnd": 4492
+      }
+    },
+    {
+      "id": "caption-n20-00-short",
+      "pass": true,
+      "detail": {
+        "han": 9,
+        "total": 11,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n20-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n20",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n20-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4614,
+          4692
+        ],
+        "previousEnd": 4614
+      }
+    },
+    {
+      "id": "caption-n20-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 13,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n20-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n20",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n20-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4692,
+          4749
+        ],
+        "previousEnd": 4692
+      }
+    },
+    {
+      "id": "caption-n20-02-short",
+      "pass": true,
+      "detail": {
+        "han": 10,
+        "total": 11,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n20-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n20",
+        "station": "wetlab"
+      }
+    },
+    {
+      "id": "caption-n21-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4813,
+          4916
+        ],
+        "previousEnd": 4749
+      }
+    },
+    {
+      "id": "caption-n21-00-short",
+      "pass": true,
+      "detail": {
+        "han": 13,
+        "total": 15,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n21-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n21",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n21-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          4916,
+          4985
+        ],
+        "previousEnd": 4916
+      }
+    },
+    {
+      "id": "caption-n21-01-short",
+      "pass": true,
+      "detail": {
+        "han": 10,
+        "total": 12,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n21-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n21",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n22-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5004,
+          5103
+        ],
+        "previousEnd": 4985
+      }
+    },
+    {
+      "id": "caption-n22-00-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n22-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n22",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n22-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5103,
+          5198
+        ],
+        "previousEnd": 5103
+      }
+    },
+    {
+      "id": "caption-n22-01-short",
+      "pass": true,
+      "detail": {
+        "han": 14,
+        "total": 16,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n22-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n22",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n23-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5217,
+          5274
+        ],
+        "previousEnd": 5198
+      }
+    },
+    {
+      "id": "caption-n23-00-short",
+      "pass": true,
+      "detail": {
+        "han": 7,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n23-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n23",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n23-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5274,
+          5391
+        ],
+        "previousEnd": 5274
+      }
+    },
+    {
+      "id": "caption-n23-01-short",
+      "pass": true,
+      "detail": {
+        "han": 19,
+        "total": 22,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n23-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n23",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n24-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5408,
+          5465
+        ],
+        "previousEnd": 5391
+      }
+    },
+    {
+      "id": "caption-n24-00-short",
+      "pass": true,
+      "detail": {
+        "han": 7,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n24-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n24",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n24-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5465,
+          5585
+        ],
+        "previousEnd": 5465
+      }
+    },
+    {
+      "id": "caption-n24-01-short",
+      "pass": true,
+      "detail": {
+        "han": 18,
+        "total": 21,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n24-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n24",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n25-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5607,
+          5703
+        ],
+        "previousEnd": 5585
+      }
+    },
+    {
+      "id": "caption-n25-00-short",
+      "pass": true,
+      "detail": {
+        "han": 13,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n25-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n25",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n25-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5703,
+          5823
+        ],
+        "previousEnd": 5703
+      }
+    },
+    {
+      "id": "caption-n25-01-short",
+      "pass": true,
+      "detail": {
+        "han": 17,
+        "total": 19,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n25-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n25",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n26-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5841,
+          5898
+        ],
+        "previousEnd": 5823
+      }
+    },
+    {
+      "id": "caption-n26-00-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 7,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n26-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n26",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n26-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          5898,
+          6033
+        ],
+        "previousEnd": 5898
+      }
+    },
+    {
+      "id": "caption-n26-01-short",
+      "pass": true,
+      "detail": {
+        "han": 21,
+        "total": 23,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n26-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n26",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n27-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6049,
+          6116
+        ],
+        "previousEnd": 6033
+      }
+    },
+    {
+      "id": "caption-n27-00-short",
+      "pass": true,
+      "detail": {
+        "han": 8,
+        "total": 9,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n27-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n27",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n27-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6116,
+          6174
+        ],
+        "previousEnd": 6116
+      }
+    },
+    {
+      "id": "caption-n27-01-short",
+      "pass": true,
+      "detail": {
+        "han": 9,
+        "total": 10,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n27-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n27",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n27-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6174,
+          6231
+        ],
+        "previousEnd": 6174
+      }
+    },
+    {
+      "id": "caption-n27-02-short",
+      "pass": true,
+      "detail": {
+        "han": 8,
+        "total": 10,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n27-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n27",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n28-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6253,
+          6386
+        ],
+        "previousEnd": 6231
+      }
+    },
+    {
+      "id": "caption-n28-00-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 19,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n28-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n28",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n28-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6386,
+          6447
+        ],
+        "previousEnd": 6386
+      }
+    },
+    {
+      "id": "caption-n28-01-short",
+      "pass": true,
+      "detail": {
+        "han": 9,
+        "total": 10,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n28-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n28",
+        "station": "consensus"
+      }
+    },
+    {
+      "id": "caption-n29-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6494,
+          6594
+        ],
+        "previousEnd": 6447
+      }
+    },
+    {
+      "id": "caption-n29-00-short",
+      "pass": true,
+      "detail": {
+        "han": 14,
+        "total": 16,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n29-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n29",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n29-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6594,
+          6637
+        ],
+        "previousEnd": 6594
+      }
+    },
+    {
+      "id": "caption-n29-01-short",
+      "pass": true,
+      "detail": {
+        "han": 7,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n29-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n29",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n30-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6662,
+          6723
+        ],
+        "previousEnd": 6637
+      }
+    },
+    {
+      "id": "caption-n30-00-short",
+      "pass": true,
+      "detail": {
+        "han": 7,
+        "total": 8,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n30-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n30",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n30-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6723,
+          6871
+        ],
+        "previousEnd": 6723
+      }
+    },
+    {
+      "id": "caption-n30-01-short",
+      "pass": true,
+      "detail": {
+        "han": 21,
+        "total": 23,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n30-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n30",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n31-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6897,
+          6979
+        ],
+        "previousEnd": 6871
+      }
+    },
+    {
+      "id": "caption-n31-00-short",
+      "pass": true,
+      "detail": {
+        "han": 10,
+        "total": 11,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n31-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n31",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n31-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          6979,
+          7104
+        ],
+        "previousEnd": 6979
+      }
+    },
+    {
+      "id": "caption-n31-01-short",
+      "pass": true,
+      "detail": {
+        "han": 14,
+        "total": 16,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n31-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n31",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n31-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7104,
+          7161
+        ],
+        "previousEnd": 7104
+      }
+    },
+    {
+      "id": "caption-n31-02-short",
+      "pass": true,
+      "detail": {
+        "han": 8,
+        "total": 9,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n31-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n31",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n32-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7185,
+          7244
+        ],
+        "previousEnd": 7161
+      }
+    },
+    {
+      "id": "caption-n32-00-short",
+      "pass": true,
+      "detail": {
+        "han": 9,
+        "total": 10,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n32-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n32",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n32-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7244,
+          7363
+        ],
+        "previousEnd": 7244
+      }
+    },
+    {
+      "id": "caption-n32-01-short",
+      "pass": true,
+      "detail": {
+        "han": 18,
+        "total": 20,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n32-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n32",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n32-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7363,
+          7405
+        ],
+        "previousEnd": 7363
+      }
+    },
+    {
+      "id": "caption-n32-02-short",
+      "pass": true,
+      "detail": {
+        "han": 6,
+        "total": 7,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n32-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n32",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n33-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7423,
+          7534
+        ],
+        "previousEnd": 7405
+      }
+    },
+    {
+      "id": "caption-n33-00-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 17,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n33-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n33",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n33-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7534,
+          7606
+        ],
+        "previousEnd": 7534
+      }
+    },
+    {
+      "id": "caption-n33-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 13,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n33-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n33",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n34-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7629,
+          7724
+        ],
+        "previousEnd": 7606
+      }
+    },
+    {
+      "id": "caption-n34-00-short",
+      "pass": true,
+      "detail": {
+        "han": 14,
+        "total": 16,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n34-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n34",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n34-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7724,
+          7828
+        ],
+        "previousEnd": 7724
+      }
+    },
+    {
+      "id": "caption-n34-01-short",
+      "pass": true,
+      "detail": {
+        "han": 16,
+        "total": 18,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n34-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n34",
+        "station": "model"
+      }
+    },
+    {
+      "id": "caption-n35-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          7873,
+          8006
+        ],
+        "previousEnd": 7828
+      }
+    },
+    {
+      "id": "caption-n35-00-short",
+      "pass": true,
+      "detail": {
+        "han": 16,
+        "total": 18,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n35-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n35",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-n35-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          8006,
+          8122
+        ],
+        "previousEnd": 8006
+      }
+    },
+    {
+      "id": "caption-n35-01-short",
+      "pass": true,
+      "detail": {
+        "han": 18,
+        "total": 20,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n35-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n35",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-n36-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          8159,
+          8300
+        ],
+        "previousEnd": 8122
+      }
+    },
+    {
+      "id": "caption-n36-00-short",
+      "pass": true,
+      "detail": {
+        "han": 20,
+        "total": 22,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n36-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n36",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-n36-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          8300,
+          8391
+        ],
+        "previousEnd": 8300
+      }
+    },
+    {
+      "id": "caption-n36-01-short",
+      "pass": true,
+      "detail": {
+        "han": 15,
+        "total": 17,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n36-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n36",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-n37-00-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          8428,
+          8528
+        ],
+        "previousEnd": 8391
+      }
+    },
+    {
+      "id": "caption-n37-00-short",
+      "pass": true,
+      "detail": {
+        "han": 13,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n37-00-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n37",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-n37-01-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          8528,
+          8604
+        ],
+        "previousEnd": 8528
+      }
+    },
+    {
+      "id": "caption-n37-01-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 14,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n37-01-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n37",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-n37-02-bounds",
+      "pass": true,
+      "detail": {
+        "window": [
+          8604,
+          8670
+        ],
+        "previousEnd": 8604
+      }
+    },
+    {
+      "id": "caption-n37-02-short",
+      "pass": true,
+      "detail": {
+        "han": 12,
+        "total": 13,
+        "maximum": 24
+      }
+    },
+    {
+      "id": "caption-n37-02-cue",
+      "pass": true,
+      "detail": {
+        "cue": "n37",
+        "station": "return"
+      }
+    },
+    {
+      "id": "caption-style-static-width",
+      "pass": true,
+      "detail": {
+        "fontSizePx": 48,
+        "leftPx": 90,
+        "rightPx": 90,
+        "bottomPx": 42,
+        "maxCaptionCharacters": 23,
+        "conservativeGlyphWidthPx": 1104,
+        "paddingWidthPx": 52,
+        "availableWidthPx": 1740,
+        "method": "Conservative one-em-per-character static estimate of the single-line source style; not actual font raster bounds or a rendered occlusion test.",
+        "renderedReadabilityVerified": false
+      }
+    },
+    {
+      "id": "no-wall-clock-or-unseeded-animation",
+      "pass": true,
+      "detail": {
+        "scanned": "all src/**/*.ts(x)",
+        "violations": [],
+        "scope": "Static audit of first-party scene source only; seeded random helpers are allowed, dependencies are not falsely reported as deterministic."
+      }
+    },
+    {
+      "id": "typescript-compile",
+      "pass": true,
+      "detail": {
+        "command": "npm --prefix v3 run check",
+        "executedEquivalent": "node <project>/node_modules/typescript/bin/tsc --noEmit -p v3/tsconfig.json",
+        "exitCode": 0,
+        "output": "",
+        "error": null
+      }
+    },
+    {
+      "id": "master-audio-layout",
+      "pass": true,
+      "detail": {
+        "status": "present",
+        "sampleRate": 48000,
+        "channels": 2,
+        "bits": 24,
+        "samples": 14400000,
+        "durationSec": 300,
+        "sha256": "80e592330890a490d93b900cb1e1b4a892f41067b6fb1d52c2c84ea6c5fa274f"
+      }
+    },
+    {
+      "id": "final-video-layout",
+      "pass": true,
+      "detail": {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "duration": "300.000000",
+        "nb_frames": "9000",
+        "side_data_list": [
+          {}
+        ]
+      }
+    },
+    {
+      "id": "final-video-audio-layout",
+      "pass": true,
+      "detail": {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "300.000000",
+        "nb_frames": "14064"
+      }
+    },
+    {
+      "id": "final-video-av-duration",
+      "pass": true,
+      "detail": {
+        "video": "300.000000",
+        "audio": "300.000000",
+        "maxDifferenceSec": 0.03333333333333333
+      }
+    }
+  ],
+  "failedCheckIds": [],
+  "limits": [
+    "These are measured audio/timeline, static source, compile and optional encoded-file checks. They do not certify visual beauty, organ/model visibility, text occlusion, camera intent, or subjective narration quality.",
+    "A screenshot/contact sheet is not a substitute for full-motion and final-film inspection.",
+    "No full MP4 is claimed until the default delivery file exists and is successfully probed; release approval remains a separate visual/listening decision."
+  ]
+}

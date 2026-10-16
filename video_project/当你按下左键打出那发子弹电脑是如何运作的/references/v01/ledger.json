@@ -1,0 +1,104 @@
+{
+  "logo": {
+    "source": "C:\\Users\\zju\\Desktop\\logo\\logo.png",
+    "path": "assets\\brand\\logo.png",
+    "sha256": "d06cdbd8377a82513ba4a4f5172defb6eccfb5e3f17f4ddebe2af2a9bfb9637a",
+    "treatment": "unmodified copy"
+  },
+  "sources": [
+    {
+      "id": "raw_input",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/inputdev/about-raw-input",
+      "scope": "Microsoft Windows input documentation",
+      "accessedAt": "2026-10-16T04:39:33.137465+00:00",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "sha256": "6eb4a7c67337c955c9ea827c33289f924c0391f3a94510ed421cdab9ceaab5b4",
+      "bytes": 57654,
+      "excerpts": [
+        {
+          "term": "WM_INPUT",
+          "excerpt": "n application must register the devices it wants to get data from. Also, the application gets the raw input through the WM_INPUT message. There are several advantages to the raw input model: An application does not have to detect or open the input device. An application gets the data directly from the device, and processes the data for its needs. An application can distinguish the source of the input even if it is from the same type of device. For example, two mouse devices. An application manages the data traffic by specifying data from a collection of devices or"
+        },
+        {
+          "term": "RAWINPUT",
+          "excerpt": "t from a device, an application must register the device. To register devices, an application first creates an array of RAWINPUTDEVICE structures that specify the top level collection (TLC) for the devices it wants. The TLC is defined by a Usage Page (the class of the device) and a Usage ID (the device within the class). For example, to get the keyboard TLC, set UsagePage = 0x01 and UsageID = 0x06. The application calls RegisterRawInputDevices to register the devices. Note that an application can register a device that is not currently attached to the system. When"
+        },
+        {
+          "term": "mouse",
+          "excerpt": "ack Summarize this article for me In this article There are many user-input devices beside the traditional keyboard and mouse. For example, user input can come from a joystick, a touch screen, a microphone, or other devices that allow great flexibility in user input. These devices are collectively known as Human Interface Devices (HIDs). The raw input API provides a stable and robust way for applications to accept raw input from any HID, including the keyboard and mouse. This section covers the following topics: Raw Input Model Registration for Raw Input Reading R"
+        }
+      ]
+    },
+    {
+      "id": "source_networking",
+      "url": "https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking",
+      "scope": "Valve developer wiki; must not treat challenge page as content",
+      "accessedAt": "2026-10-16T04:39:34.045490+00:00",
+      "status": "challenge_not_content",
+      "httpStatus": 200,
+      "sha256": "09d8473baf8ec359ba225455da6b3e81e8b3787314dc5e06f0ae48d8a4291371",
+      "bytes": 4159,
+      "responseTitle": "Making sure you&#39;re not a bot!"
+    },
+    {
+      "id": "lag_compensation",
+      "url": "https://developer.valvesoftware.com/wiki/Lag_Compensation",
+      "scope": "Valve developer wiki; no challenge bypass",
+      "accessedAt": "2026-10-16T04:39:35.417338+00:00",
+      "status": "challenge_not_content",
+      "httpStatus": 200,
+      "sha256": "489c90a24858721f27563b58266e69e206f4337c34eccd12a0f5cab2be3de68c",
+      "bytes": 4158,
+      "responseTitle": "Making sure you&#39;re not a bot!"
+    },
+    {
+      "id": "sdk_lag",
+      "url": "https://raw.githubusercontent.com/ValveSoftware/source-sdk-2013/master/src/game/server/player_lagcompensation.cpp",
+      "scope": "Valve Source SDK 2013 code; not CS:GO source or match evidence",
+      "accessedAt": "2026-10-16T04:39:36.522624+00:00",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "sha256": "8f7b11368325b3c1ee955a14f59159634b44bd33d886144f9ca229dbdd8734ad",
+      "bytes": 27550,
+      "excerpts": [
+        {
+          "term": "StartLagCompensation",
+          "excerpt": "hink(); // ILagCompensationManager stuff // Called during player movement to set up/restore after lag compensation void StartLagCompensation( CBasePlayer *player, CUserCmd *cmd ); void FinishLagCompensation( CBasePlayer *player ); bool IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; } private: void BacktrackPlayer( CBasePlayer *player, float flTargetTime ); void ClearHistory() { for ( int i=0; i m_PlayerTrack[ MAX_PLAYERS ]; // Scratchpad for determining what needs to be restored CBitVec m_RestorePlayer; bool m_bNeedToRest"
+        },
+        {
+          "term": "BacktrackPlayer",
+          "excerpt": "layer ); bool IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; } private: void BacktrackPlayer( CBasePlayer *player, float flTargetTime ); void ClearHistory() { for ( int i=0; i m_PlayerTrack[ MAX_PLAYERS ]; // Scratchpad for determining what needs to be restored CBitVec m_RestorePlayer; bool m_bNeedToRestore; LagRecord m_RestoreData[ MAX_PLAYERS ]; // player data before we moved him back LagRecord m_ChangeData[ MAX_PLAYERS ]; // player data where we moved him back CBasePlayer *m_pCurrentPlayer; // The player we are doing l"
+        },
+        {
+          "term": "FinishLagCompensation",
+          "excerpt": "movement to set up/restore after lag compensation void StartLagCompensation( CBasePlayer *player, CUserCmd *cmd ); void FinishLagCompensation( CBasePlayer *player ); bool IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; } private: void BacktrackPlayer( CBasePlayer *player, float flTargetTime ); void ClearHistory() { for ( int i=0; i m_PlayerTrack[ MAX_PLAYERS ]; // Scratchpad for determining what needs to be restored CBitVec m_RestorePlayer; bool m_bNeedToRestore; LagRecord m_RestoreData[ MAX_PLAYERS ]; // player data befor"
+        }
+      ]
+    },
+    {
+      "id": "sdk_fire",
+      "url": "https://raw.githubusercontent.com/ValveSoftware/source-sdk-2013/master/src/game/shared/baseentity_shared.cpp",
+      "scope": "Valve Source SDK 2013 code; generic Source illustration only",
+      "accessedAt": "2026-10-16T04:39:37.408457+00:00",
+      "status": "retrieved",
+      "httpStatus": 200,
+      "sha256": "7d0976419c887e88f719f713c542de7b80abf666cb7dc5b7c59db9727f720ae1",
+      "bytes": 70311,
+      "excerpts": [
+        {
+          "term": "FireBullets",
+          "excerpt": "-------------------- void CBaseEntity::SetAllowPrecache( bool allow ) { m_bAllowPrecache = allow; } /* ================ FireBullets Go to the trouble of combining multiple pellets into a single damage call. ================ */ #if defined( GAME_DLL ) class CBulletsTraceFilter : public CTraceFilterSimpleList { public: CBulletsTraceFilter( int collisionGroup ) : CTraceFilterSimpleList( collisionGroup ) {} bool ShouldHitEntity( IHandleEntity *pHandleEntity, int contentsMask ) { if ( m_PassEntities.Count() ) { CBaseEntity *pEntity = EntityFromEntityHandle( pHandleEnti"
+        },
+        {
+          "term": "TraceRay",
+          "excerpt": "fo.m_vecSrc, vecEnd ); pShootThroughPortal = UTIL_Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( pShootThroughPortal, rayBullet, MASK_SHOT, &traceFilter, &tr ) ) { pShootThroughPortal = NULL; } #else AI_TraceHull( info.m_vecSrc, vecEnd, Vector( -3, -3, -3 ), Vector( 3, 3, 3 ), MASK_SHOT, &traceFilter, &tr ); #endif //#ifdef PORTAL } else { #ifdef PORTAL Ray_t rayBullet; rayBullet.Init( info.m_vecSrc, vecEnd ); pShootThroughPortal = UTIL_Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( "
+        },
+        {
+          "term": "MASK_SHOT",
+          "excerpt": "Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( pShootThroughPortal, rayBullet, MASK_SHOT, &traceFilter, &tr ) ) { pShootThroughPortal = NULL; } #else AI_TraceHull( info.m_vecSrc, vecEnd, Vector( -3, -3, -3 ), Vector( 3, 3, 3 ), MASK_SHOT, &traceFilter, &tr ); #endif //#ifdef PORTAL } else { #ifdef PORTAL Ray_t rayBullet; rayBullet.Init( info.m_vecSrc, vecEnd ); pShootThroughPortal = UTIL_Portal_FirstAlongRay( rayBullet, fPortalFraction ); if ( !UTIL_Portal_TraceRay_Bullets( pShootThroughPortal, rayBullet, MASK_SHOT, &traceF"
+        }
+      ]
+    }
+  ]
+}

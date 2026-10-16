@@ -1,0 +1,59 @@
+OpenSees models for a 606m Mega-tall Building v0.1 OpenSees 
+          models for a 606 m Mega-tall Building v0.1 Yuan Tian, Linlin Xie and Xinzheng 
+    Lu Department of Civil Engineering, 
+          Tsinghua University, Beijing, China Download 
+          Model TCL File http://www.thu-civil.net/download/OpenSees-Mega-tall-Building.zip Based on the refined ETABS Benchmark model 
+    of a 606m mega-tall building (provided by Prof. Xilin Lu and Prof. Huangjun Jiang 
+    from Tongji University (Lu et al., 2015a)), the corresponding models of OpenSees 
+    are established and provided here (Figure 1). The modeling method proposed 
+    by Lu et al. (2015b) is adopted for this building. (a) Typical story layout (b) Vertical view (c) Perspective view Figure 1 OpenSees Models of a 606 m Mega-tall 
+        Building Two mesh schemes are considered, which results in two models: Model 1 and 
+    Model 2. Model 1 is relatively coarse, which has 27220 nodes. The coupling 
+    beams and shear walls of Model 1 is subdivided to generate Model 2, which 
+    has 81572 nodes. The shear walls and coupling beams are simulated using ShellMITC4 
+    in OpenSees. There are some differences in defining the 
+    elastic modulus of concrete in ETABS and OpenSees, which will affect the calculated 
+    vibration periods. When we conduct the modal analysis, the elastic modulus 
+    of concrete material in OpenSees should be adjusted following the equation E c =2 f c / e 0 , where E c is elastic 
+    modulus of concrete in ETABS. Through the adjustment, the vibration periods 
+    of OpenSees agree well with those of ETABS. Note that the commercial software package 
+    MSC.Marc has been widely used in nonlinear analyses of super-tall buildings 
+    and well validated. The corresponding models are also established in MSC.Marc 
+    (denoted as Model1M and Model2M, respectively). Through the comparison between 
+    the time history analysis results of OpenSees and MSC.Marc, the reliability 
+    of the OpenSees models is validated. The El-Centro ground motion, which is scaled 
+    to a value of PGA of 220 cm/s 2 (i.e., the MCE level ground motion 
+    of this building according to the Chinese code), is firstly used to conduct 
+    the time history analysis of Model1 and Model1M. Note that both CPU and GPU 
+    solvers (Tian et al. 2015) are used to perform the time history analysis to 
+    validate the reliability and facilitate different researchers to use these 
+    models. If you want to use the CPU version model, please use ˇ°dynamiccpu.tclˇ±, 
+    else please use ˇ°dynamicgpu.tclˇ± in the zip files. The time history curves of the roof and 
+    the envelope of inter-story drift are presented in Figure 2. Good agreements 
+    are observed. In addition, the time history results obtained from CPU and 
+    GPU are also compared in Figure 3. The results are identical, thus validating 
+    the reliability of the GPU solver. (a) Time 
+            history curves of the roof (b) Envelope 
+            of the inter-story drift Figure 2 Comparison of the time history 
+            analysis results of Model1 and Model1M (a) Time 
+            history curves of the roof (b) Envelope 
+            of the inter-story drift Figure 3 Comparison of the time history 
+            analysis results of Model1 using CPU and GPU Then, the time history analysis of Model2 
+    and Model2M are also performed. The time history curves of the roof and the 
+    envelope of inter-story drift are presented in Figure 4. Good agreements are 
+    also observed, thus validating the reliability of Model2. (a) Time 
+            history curves of the roof (b) Envelope 
+            of the inter-story drift Figure 4 Comparison of the time history 
+            analysis results of Model2 and Model2M Note that we define several recorders. Among 
+    these, dispx.txt, dispy.txt and dispz.txt record the translational displacements 
+    of all nodes for post-process, which will consume considerable hardware memories, 
+    so please use it with caution. If you have any questions, please feel free 
+        to contact with Prof. Xinzheng Lu via: luxz@tsinghua.edu.cn. Reference Lu XL, Jiang C, Jiang 
+    HJ. A benchmark model of mega-tall Buildings and analysis of its seismic responses. 
+    Structural Engineers, 2015a, 31(4): 100-107. (in Chinese) Lu 
+        XZ, Xie LL, Guan H, Huang YL, Lu X. A shear wall element for nonlinear 
+        seismic analysis of super-tall buildings using OpenSees. Finite Elements 
+        in Analysis and Design, 2015b, 98: 14-25 . Tian 
+        Y, Xie LL, Xu Z, Lu XZ. GPU-powered high-performance computing for the 
+        analysis of large-scale structures based on OpenSees. Computing in Civil 
+        Engineering, 2015: 411-418. Introduction Research Application Teaching Publications Download Issues Others Our Lab Collapse Prevention Committee

@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-10-08T18:23:50.458834+00:00",
+  "provider": "Alibaba Cloud DashScope",
+  "model": "qwen-image-2.0-pro-2026-06-22",
+  "endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+  "status": "succeeded",
+  "credential_selection": "backup; primary previously returned 401 InvalidApiKey",
+  "reference": {
+    "path": "source-previews\\Shanghai_Shanghai_Tower_5166304_jpg.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Shanghai_Shanghai_Tower_5166304.jpg",
+    "creator": "Ermell",
+    "license": "CC0",
+    "sha256": "f32b906092e8d7822e43b4cf02f7c46f4cea7a187c923abe17df8135f381ae96"
+  },
+  "prompt": "Create a premium architectural documentary opening photograph, using the supplied real Shanghai Tower photograph as the structural reference. Preserve the recognizable actual Shanghai Tower: its taper, continuous twisting curved glass facade, dense real horizontal window bands, curved seam and asymmetrically sloped crown. Keep the complete crown visibly inside the frame with generous sky above it. Keep the same dramatic ground-level low-angle upward camera direction and a convincing long-lens architectural perspective; do not invent another tower or change its roof shape. Expand the composition to a horizontal 16:9 image. The tower rises from the lower-right edge toward the upper-right third, with its crown around x=66 percent and y=22 percent, taking roughly 45 percent of image width near the lower edge. The left third is calm open sky for an editorial title that will be added separately. Refine the surroundings with beautiful pale powder-blue morning sky, delicate soft cumulus clouds with visible texture and gentle atmospheric depth, natural warm-white daylight touching the silver-blue facade, restrained greenery only along the bottom-right edge, tasteful contemporary architectural photography. Retain detailed realistic facade reflections and crisp tiny window rhythm, no smooth toy cylinder, no painted surface. Visually rich but quiet, realistic exposure, soft highlights, tangible materials, high-end architectural photography, clean composition. Do not add writing, labels, logos, watermarks, duplicate towers, fictional steel beams, flying objects, futuristic building parts, captions, diagrams, people or render UI. This is an illustrative edited setting, not an engineering drawing.",
+  "parameters": {
+    "size": "2048*1152",
+    "n": 1,
+    "watermark": false,
+    "prompt_extend": false,
+    "seed": 241009
+  },
+  "intended_use": "Reference-preserving illustrative architectural opening; not structural evidence.",
+  "visual_review": {
+    "status": "passed_for_illustrative_opening_asset_pending_integrated_transition_qa",
+    "review_method": "Side-by-side visual inspection of generated PNG and CC0 photographic reference via view_image.",
+    "positive_observations": [
+      "Recognizable taper, curved diagonal facade seam, asymmetric crown and dense horizontal window bands.",
+      "Complete crown remains in image; left third is open sky suitable for title.",
+      "Natural pale-blue sky with warm cloud edges and restrained foliage; no visible labels, watermark or duplicate tower."
+    ],
+    "limitations": [
+      "Generated image is not a pixel-exact architectural preservation; facade details and surrounding foliage were reconstructed.",
+      "Crown lies near x=66%, y=8%, rather than requested y=22%; match framing and avoid top crop.",
+      "Not yet reviewed inside final RealSceneIntro or against rendered CG transition."
+    ],
+    "allowed_use": "Illustrative reference-edited opening setting; retain CC0 source attribution in provenance and do not cite generated geometry as structural evidence."
+  },
+  "request_id": "82a16b6e-ecc1-9c60-ac0d-aeaab1cd72ad",
+  "output": {
+    "path": "assets\\qwen-shanghai-tower-opening.png",
+    "sha256": "595b710e5db509bfb94aedd3f31a742e85f2a349885d2f377aac0c3a73d76a88",
+    "bytes": 2603090,
+    "dimensions": [
+      2048,
+      1152
+    ],
+    "format": "PNG"
+  },
+  "completed_utc": "2026-10-08T18:24:16.199020+00:00"
+}

@@ -1,0 +1,951 @@
+{
+  "title": "让小偷送秘密 · V2 实际资产来源与哈希",
+  "createdAt": "2026-10-14T14:26:01.312Z",
+  "scope": "Inputs currently referenced by V2 and preserved reproducibility sources. Source hashes are a point-in-time snapshot, not a claim that the final MP4 has been frozen or reviewed.",
+  "composition": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 9129,
+    "durationSeconds": 304.3
+  },
+  "checks": {
+    "logoMatchesUserOriginal": true,
+    "displayedPaperMatchesPriorRenderedSource": true,
+    "cityGlbMatchesGenerationLedger": true,
+    "noExternalTexturesInCity": true
+  },
+  "tools": {
+    "blender": {
+      "used": true,
+      "executable": "D:/blender/blender.exe",
+      "version": "Blender 5.1.2"
+    },
+    "three": {
+      "used": true,
+      "version": "0.180.0"
+    },
+    "remotion": {
+      "used": true,
+      "version": "4.0.526"
+    },
+    "qwenTTS": {
+      "used": true,
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B"
+    },
+    "claudeOpus": {
+      "attempted": true,
+      "adoptedOutput": false,
+      "requestedModel": "claude-opus-5-5",
+      "status": "failed",
+      "completionReceived": false,
+      "errorCode": "total_timeout",
+      "notes": "Native component request timed out after 900s. Partial code was not adopted, confirmed by lead agent. Do not credit it as a successfully generated production component.",
+      "report": {
+        "path": "work/opus-runs/cipher-engine-20261014/report.json",
+        "bytes": 1266,
+        "sha256": "51e072a5346d93db269827fbe77d94b5f9abd9cbe732ff007d8503ae7be96454"
+      }
+    },
+    "qwenVideo": {
+      "used": false
+    },
+    "lux3d": {
+      "used": false
+    },
+    "waterPro": {
+      "used": false
+    },
+    "gaussianScan": {
+      "used": false
+    },
+    "visualReference": {
+      "usedAsStyleReferenceOnly": true,
+      "source": "https://www.ordinaryfolk.co/project/nightdrive#results",
+      "notes": "Static reference page images informed color/depth ideas. No footage/model/music/code copied; no claim of full reference-video viewing.",
+      "record": {
+        "path": "research/visual-reference-v2.md",
+        "bytes": 1071,
+        "sha256": "c676587e4beb7f3f650198c5d8381922c9dccfa0c3dedeef62923f9ab75a9d92"
+      }
+    }
+  },
+  "assets": [
+    {
+      "id": "blender-night-city",
+      "kind": "original-procedural-3d",
+      "used": true,
+      "tool": "Blender 5.1.2",
+      "source": "scripts/build_night_city.py",
+      "runtimeEntry": "src/Environment.ts",
+      "usedRoots": [
+        "City",
+        "PostBox",
+        "WindowFrame",
+        "DeliveryDoor"
+      ],
+      "unusedLibraryRoots": [
+        "Envelope",
+        "CipherWheel",
+        "Certificate"
+      ],
+      "unit": "metre; glTF Y-up",
+      "trianglesInGlb": 180787,
+      "licenseStatus": "Original project geometry and procedural materials; no downloaded texture or third-party mesh.",
+      "notes": "The runtime hides all three library prop roots. The animated hero envelope, exchange wheels and certificate in the film come from Three.js geometry, not these hidden Blender props. No physical rain, fluid simulation, or scan claim.",
+      "files": [
+        {
+          "path": "public/models/night_city.glb",
+          "bytes": 4272148,
+          "sha256": "a2acb960c474739090c4d06fb4e74b0172af961a787afd04edf38a54bc8e622f"
+        },
+        {
+          "path": "work/models/night_city.blend",
+          "bytes": 514329,
+          "sha256": "3b9818eb3f1e846d4d14017ac7b6602a582a9921dc92857b49894f81b4a8b8af"
+        },
+        {
+          "path": "work/models/night_city_preview.png",
+          "bytes": 2044846,
+          "sha256": "21453ba1d98aae2a35a1497d899fad6a3d111626598f3ca0e477692bcbbbdb31"
+        },
+        {
+          "path": "scripts/build_night_city.py",
+          "bytes": 14286,
+          "sha256": "cd555a4fab9bb9770620fc18388fbd60d42558149925e26bd9bab8cdf08c8606"
+        },
+        {
+          "path": "src/Environment.ts",
+          "bytes": 5270,
+          "sha256": "4afd828710d69f23ed03e66904412a732660d323bacc1678a7b261c9894d3326"
+        }
+      ]
+    },
+    {
+      "id": "three-courier-and-stages",
+      "kind": "original-procedural-3d-animation",
+      "used": true,
+      "tool": "Three.js + Remotion",
+      "source": "Local TypeScript implementation",
+      "licenseStatus": "Original project geometry/layout/animation. Library licenses remain separate.",
+      "components": {
+        "src/Courier.ts": "Same illustrated envelope, paper sheet, courier drone, keys and deterministic trail.",
+        "src/ExchangeRoom.ts": "Mechanical modular-exponent teaching apparatus and middleman split.",
+        "src/IdentityRoom.ts": "Illustrated certificate papers, public-key medallion, signature machine and reject route.",
+        "src/DeliveryFlow.ts": "Plaintext/ciphertext conveyor, authentication gate, tamper rejection and recovery.",
+        "src/World.ts": "Stage positions, floor supports, network curves, seeded particle field and moon.",
+        "src/Lighting.ts": "Procedural reflection environment, key/fill/rim lights and depth fog.",
+        "src/Camera.ts": "Frame-time-driven perspective camera route."
+      },
+      "notes": "Mechanical metaphors and scale exaggeration are illustrative. No physically simulated encryption machine, reconstructed real city, Gaussian scan, or commercial WaterPro content.",
+      "files": [
+        {
+          "path": "src/Courier.ts",
+          "bytes": 4129,
+          "sha256": "f4e975d8d615dcb48decdbdc927fe800a79e00c1dd8f9b537c40ab299f89b26e"
+        },
+        {
+          "path": "src/ExchangeRoom.ts",
+          "bytes": 8864,
+          "sha256": "1c4c0ea9d45f5c12be89f20634b5ea50f4de28d7d66b237712e904d152335e37"
+        },
+        {
+          "path": "src/IdentityRoom.ts",
+          "bytes": 10904,
+          "sha256": "2821cf003416ce43d4b4f11cad777fc97716c04c680271d7bba8693adf13b3f0"
+        },
+        {
+          "path": "src/DeliveryFlow.ts",
+          "bytes": 18459,
+          "sha256": "61ebcfb004353d777efcd25e7ad7e33dff16e57c9443de7de8182bfb79208f48"
+        },
+        {
+          "path": "src/World.ts",
+          "bytes": 4005,
+          "sha256": "73bd3948178072823831d6a250643736d37b94000d6cdff8bb8e52ce6c487cb2"
+        },
+        {
+          "path": "src/Lighting.ts",
+          "bytes": 1891,
+          "sha256": "5212294a098dee7dc5e4eb2cdd2a79e87006325c50ea8ed5a7a083ada7a464f7"
+        },
+        {
+          "path": "src/Camera.ts",
+          "bytes": 3566,
+          "sha256": "5157e2580be0dc04feb3bc8e421731997048080bd69e1d42d21cbd8315f916e1"
+        },
+        {
+          "path": "src/Primitives.ts",
+          "bytes": 5163,
+          "sha256": "e3ea4faa54cd89fcdd0c2c5b06d25a506cabdcad7fe784fba305eafd4d357bcf"
+        }
+      ]
+    },
+    {
+      "id": "rainbow-brand",
+      "kind": "user-provided-image",
+      "used": true,
+      "source": "C:/Users/zju/Desktop/logo/logo.png",
+      "runtimeEntry": "src/Film.tsx Brand",
+      "modifications": "Original PNG copied byte-for-byte. Film applies CSS invert and screen blending; rainbow鱼 lettering is typeset separately.",
+      "licenseStatus": "Existing user-provided brand asset, authorized for this project; not presented as a third-party open asset.",
+      "files": [
+        {
+          "path": "public/brand/logo.png",
+          "bytes": 13501,
+          "sha256": "d06cdbd8377a82513ba4a4f5172defb6eccfb5e3f17f4ddebe2af2a9bfb9637a"
+        },
+        {
+          "path": "C:/Users/zju/Desktop/logo/logo.png",
+          "bytes": 13501,
+          "sha256": "d06cdbd8377a82513ba4a4f5172defb6eccfb5e3f17f4ddebe2af2a9bfb9637a"
+        }
+      ]
+    },
+    {
+      "id": "paper-first-page",
+      "kind": "attributed-research-page",
+      "used": true,
+      "sourceUrl": "https://ee.stanford.edu/~hellman/publications/24.pdf",
+      "citation": "Whitfield Diffie and Martin E. Hellman. New Directions in Cryptography. IEEE Transactions on Information Theory 22(6), 644–654 (1976). DOI 10.1109/TIT.1976.1055638.",
+      "runtimeEntry": "src/Film.tsx Evidence",
+      "derivation": "Rendered first page reused byte-for-byte from v1/public/papers/diffie-hellman-1976.png and v1/research/diffie-hellman-1976-page1.png. V2 also stores a separate first-page render with a different file hash; the public PNG is the actual on-screen asset.",
+      "licenseStatus": "Original paper copyright belongs to its rights holders. Page is used as an attributed quotation/reference; no open-asset or public-domain license is asserted.",
+      "files": [
+        {
+          "path": "public/papers/diffie-hellman-1976.png",
+          "bytes": 531150,
+          "sha256": "6883dcec1b89bad97f7e51fbc136ead8f2a97edc257f1911f07128b6e1a56600"
+        },
+        {
+          "path": "research/diffie-hellman-1976.pdf",
+          "bytes": 2216632,
+          "sha256": "03fa2f493a1448a309586b9cf9e5c3a4dfd14735e0786cc94674519570b890ff"
+        },
+        {
+          "path": "research/diffie-hellman-1976-page1.png",
+          "bytes": 621146,
+          "sha256": "634a175bdcb721554dff75b6b05c8a42ebb90e444bcb6eba9f9b1fd0bfe28f72"
+        },
+        {
+          "path": "../v1/research/diffie-hellman-1976-page1.png",
+          "bytes": 531150,
+          "sha256": "6883dcec1b89bad97f7e51fbc136ead8f2a97edc257f1911f07128b6e1a56600"
+        }
+      ]
+    },
+    {
+      "id": "local-user-voice",
+      "kind": "locally-synthesized-narration",
+      "used": true,
+      "tool": "Qwen3-TTS-0.6B",
+      "source": "D:/python_project/tts (existing user TTS project)",
+      "referenceSha256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+      "modelWeightsSha256": "180b3b10eb1c9f1b4db7806d5475bae3071c0243c299d49926bab1da3b6946f6",
+      "parameters": {
+        "temperature": 0.48,
+        "top_p": 0.88,
+        "repetition_penalty": 1.1,
+        "max_new_tokens": 1000,
+        "non_streaming_mode": true
+      },
+      "generatedSentences": 32,
+      "privateReferenceCopied": false,
+      "licenseStatus": "User authorized use of existing personal voice reference. Upstream model/dependency licenses were not independently re-audited. Private reference remains outside this project.",
+      "notes": "32 newly synthesized sentences; no old narration recycled. Raw and cleaned audio are retained. Technical audio QA does not claim human subjective listening certification.",
+      "files": [
+        {
+          "path": "public/audio/master.wav",
+          "bytes": 87638502,
+          "sha256": "8459a2feb9f62c1926d98932d42e945204e12db6ce4762c61020a47432a6cb6a"
+        },
+        {
+          "path": "public/audio/narration.wav",
+          "bytes": 43819244,
+          "sha256": "4dfad512aee7d86fe1ea23e0073c58bb55ec6f38bcbc4caf28a233af8c5eb32c"
+        },
+        {
+          "path": "work/audio/voice-generation.json",
+          "bytes": 42868,
+          "sha256": "2210373beb062dd0aadbd99081260747b112b7691d9460269a32c8f4d0f56513"
+        },
+        {
+          "path": "work/audio/environment.json",
+          "bytes": 515,
+          "sha256": "c558e183eed12d69fa943e92040f6aa0626333da11920eb2a4bf583bae36ed80"
+        },
+        {
+          "path": "research/audio-final-report.json",
+          "bytes": 2537,
+          "sha256": "a3c7c7e4a21b806be4afb160538e9f469643bc82b67ae9e4f912e094403e8eab"
+        },
+        {
+          "path": "docs/audio-production.md",
+          "bytes": 7911,
+          "sha256": "a4c158c117540060ced26db54d158b19036d12472aca1e28eb01fbed67b991d6"
+        },
+        {
+          "path": "work/audio/raw/s01.wav",
+          "bytes": 599084,
+          "sha256": "ba7c36decdd73f09838fd587b630fb281551afbf875a5440374b994d54984cd3"
+        },
+        {
+          "path": "work/audio/raw/s02.wav",
+          "bytes": 673964,
+          "sha256": "0091152c7aacbc993ea2ced40ba3c7e14de551a336699a6681ef9d828f14ff73"
+        },
+        {
+          "path": "work/audio/raw/s03.wav",
+          "bytes": 627888,
+          "sha256": "9305e62744df35b1594834fffe7f68b7e2582f801bf6a7e7a2af7ad791cf6904"
+        },
+        {
+          "path": "work/audio/raw/s04.wav",
+          "bytes": 679724,
+          "sha256": "f96626f0d2dfd97b189e6115b7e4c8e9b7dcdbd6dfad8d1f24a539a0a6d4db68"
+        },
+        {
+          "path": "work/audio/raw/s05.wav",
+          "bytes": 616364,
+          "sha256": "3dbbe73046ea8bfc1eff024cabcd95dd1067a85c29c6a12269f0c4ebf124e188"
+        },
+        {
+          "path": "work/audio/raw/s06.wav",
+          "bytes": 656684,
+          "sha256": "b6513324f48a9e9f8d78bf0573f61a046bb92b2a2387f1009d78ae2c40c9c160"
+        },
+        {
+          "path": "work/audio/raw/s07.wav",
+          "bytes": 662448,
+          "sha256": "1991d1c1ca20aa5bf5e7829f51d425e2a0ec6cb38b4e1926a81490df6b1244e7"
+        },
+        {
+          "path": "work/audio/raw/s08.wav",
+          "bytes": 656684,
+          "sha256": "8c8924c147262b8b8fedd76917d58d0fcac304ddbd26f8d0589c1b79c772a512"
+        },
+        {
+          "path": "work/audio/raw/s09.wav",
+          "bytes": 691248,
+          "sha256": "0746eb121af010c397b0223cf5b2d92c96c60e64aa94922acd7657f4dcb98001"
+        },
+        {
+          "path": "work/audio/raw/s10.wav",
+          "bytes": 679724,
+          "sha256": "bf606368325cc130e99911f3b984c4a721a961effa310707d4948e09fb3e0d97"
+        },
+        {
+          "path": "work/audio/raw/s11.wav",
+          "bytes": 581804,
+          "sha256": "cea7c66f85797963580cf1d6fdb51811f5299261156dd757b472a5abb147c1d2"
+        },
+        {
+          "path": "work/audio/raw/s12.wav",
+          "bytes": 679724,
+          "sha256": "dac917359bb9760f1703ca5a7a56fc20a758591c9d63f5fb88b0257e85048841"
+        },
+        {
+          "path": "work/audio/raw/s13.wav",
+          "bytes": 679724,
+          "sha256": "38ceb203c695c15016fa8206478cb717c08c1e209ede32029c929b60e3f0027f"
+        },
+        {
+          "path": "work/audio/raw/s14.wav",
+          "bytes": 581804,
+          "sha256": "897b0d8faa7ea8a70eaad42e571ae09788a0d8a159a6df14074b69273b8bf2f9"
+        },
+        {
+          "path": "work/audio/raw/s15.wav",
+          "bytes": 599084,
+          "sha256": "402fe781082adee8c93437932876bb12da8e34731ca5d83be54e84c54f05f308"
+        },
+        {
+          "path": "work/audio/raw/s16.wav",
+          "bytes": 616364,
+          "sha256": "cc80bd9d55720505334989d557d2e3ddd68c91529987a69fdd5be70b15e7a23d"
+        },
+        {
+          "path": "work/audio/raw/s17.wav",
+          "bytes": 633648,
+          "sha256": "f507ffb43d07d022c1c1d9f423e8202eadeb90fcc9bab45ca989bc1b708db711"
+        },
+        {
+          "path": "work/audio/raw/s18.wav",
+          "bytes": 587564,
+          "sha256": "aaa3458e88b2bb7b90c82f7afdff8ce5254ed0b1bca74cd5e5311be969b5d5e0"
+        },
+        {
+          "path": "work/audio/raw/s19.wav",
+          "bytes": 622124,
+          "sha256": "b6fa4e99f2a8866920d80bf5b7e83c8c7a3bd4411c8890d7276fb417718bd440"
+        },
+        {
+          "path": "work/audio/raw/s20.wav",
+          "bytes": 668204,
+          "sha256": "1387ea8c7f7a4ba3597a330ede80fc7ef5a957fc41d528b5d3d748b4e23ec03c"
+        },
+        {
+          "path": "work/audio/raw/s21.wav",
+          "bytes": 414764,
+          "sha256": "92609a227d3262d137da08044c8a472ebeaf152c5442cdde6e6410624060330e"
+        },
+        {
+          "path": "work/audio/raw/s22.wav",
+          "bytes": 524204,
+          "sha256": "9a2f52167a73872d450ae1d6750e3a47c02ff5650fdf4e3ed8f4eb768bbcf250"
+        },
+        {
+          "path": "work/audio/raw/s23.wav",
+          "bytes": 685484,
+          "sha256": "d877bd29e1537105f2c55f83a009d6b9a0338d2d314ddfdfd57a7b2ffb20ed5b"
+        },
+        {
+          "path": "work/audio/raw/s24.wav",
+          "bytes": 599084,
+          "sha256": "0134d75c0f406c723b7e9a13bc45ed31c41c384403d7e76daaec2344601be59d"
+        },
+        {
+          "path": "work/audio/raw/s25.wav",
+          "bytes": 650924,
+          "sha256": "12d555956049ed50c76f6d97fb51f4bd2cbc142d54416eb417ee31bd3f72cfa4"
+        },
+        {
+          "path": "work/audio/raw/s26.wav",
+          "bytes": 679724,
+          "sha256": "97de88f99c0ab93519485ae0c7328e827e1fecc789371d89a4f8ee96cc03fde3"
+        },
+        {
+          "path": "work/audio/raw/s27.wav",
+          "bytes": 656684,
+          "sha256": "485f9b89b25b47cac392a0b9fa22ffb76b6d96e4f05ff569a9296ab481395759"
+        },
+        {
+          "path": "work/audio/raw/s28.wav",
+          "bytes": 616364,
+          "sha256": "422395ad478f9911b7bd62b11bda06681f91691ef654b728f78710259495fea2"
+        },
+        {
+          "path": "work/audio/raw/s29.wav",
+          "bytes": 639404,
+          "sha256": "6d7ab046e6105858647a6ddf1d2a17fa0c9214bc8fee7a4fd001ba9154ab2d5c"
+        },
+        {
+          "path": "work/audio/raw/s30.wav",
+          "bytes": 685484,
+          "sha256": "09c41933ab5a31f8407a33fe0e517b3b63c606abb665318a7cf3f91e5b72d612"
+        },
+        {
+          "path": "work/audio/raw/s31.wav",
+          "bytes": 616364,
+          "sha256": "fe13917516ac265be53542c9447f3606bc8d4bb89e50d00079089afa969ead68"
+        },
+        {
+          "path": "work/audio/raw/s32.wav",
+          "bytes": 564524,
+          "sha256": "8f687de085673c0357a24346dab2248af0e6042b9de01757396d6f7cf09705b3"
+        },
+        {
+          "path": "work/audio/clean/s01.wav",
+          "bytes": 1232684,
+          "sha256": "4060c5697f45b56b4d41b378fef7b06314bf29b47d9d38f6427a700f621f348c"
+        },
+        {
+          "path": "work/audio/clean/s02.wav",
+          "bytes": 1382444,
+          "sha256": "b0d5ded3d6bab5e6eb0fb341cb6cdc614fc64a3cf62583b07356790d84361605"
+        },
+        {
+          "path": "work/audio/clean/s03.wav",
+          "bytes": 1290290,
+          "sha256": "22bbec862fcddc2db76196a31d735a1cc0b361784470404f975462414964463c"
+        },
+        {
+          "path": "work/audio/clean/s04.wav",
+          "bytes": 1393964,
+          "sha256": "6d5414937488f029b551911aa0decc9474a3d043e34bc12be21ae6f03e39ecff"
+        },
+        {
+          "path": "work/audio/clean/s05.wav",
+          "bytes": 1267244,
+          "sha256": "aaf0bd0da35037f44e94355809b8b35edb0859e02745eb1f64962fb5a3dfac4d"
+        },
+        {
+          "path": "work/audio/clean/s06.wav",
+          "bytes": 1347884,
+          "sha256": "a706d44e8245792088d00d82af0b1961c5ed11b24aea20b6814685430fdfa035"
+        },
+        {
+          "path": "work/audio/clean/s07.wav",
+          "bytes": 1359410,
+          "sha256": "9a8cbb8fefc522fea44319d06d11a0d214ec3445c183c4b3e99dba1b2fc3210c"
+        },
+        {
+          "path": "work/audio/clean/s08.wav",
+          "bytes": 1347884,
+          "sha256": "caf854734a3fe7bf26d89115a4cecdcef13b9295425333c2e133461e043240db"
+        },
+        {
+          "path": "work/audio/clean/s09.wav",
+          "bytes": 1417010,
+          "sha256": "4c23224e34f7e13a83f82ed1f1ea36ec1c65530ef199749419a76dbaca16dd53"
+        },
+        {
+          "path": "work/audio/clean/s10.wav",
+          "bytes": 1393964,
+          "sha256": "595b388181bf44b29b43e3088aebf0de9f8d89070f5b4754907d9e8ad82a923e"
+        },
+        {
+          "path": "work/audio/clean/s11.wav",
+          "bytes": 1198124,
+          "sha256": "dd87c98bf633f80fcb604c5175aa2575b067b07c206dc324affdb764401e91d0"
+        },
+        {
+          "path": "work/audio/clean/s12.wav",
+          "bytes": 1393964,
+          "sha256": "8a344b936d9b115e58e2ad8caf25b7b7ac2429ff83012ad89d55310ccdd44bdc"
+        },
+        {
+          "path": "work/audio/clean/s13.wav",
+          "bytes": 1393964,
+          "sha256": "dd97f6060b5622bc634262a34484179dd59ffe9a4feb5ea37a5bcfc40eac86c3"
+        },
+        {
+          "path": "work/audio/clean/s14.wav",
+          "bytes": 1198124,
+          "sha256": "99b23cb18c301b515ac6185e40601632229a74f92b0a776ca30c733aa3b1e85f"
+        },
+        {
+          "path": "work/audio/clean/s15.wav",
+          "bytes": 1232684,
+          "sha256": "c10077fb883090f5a73123f3ae04d5540ae11ea44a2a607f1d18fc20820e2f2b"
+        },
+        {
+          "path": "work/audio/clean/s16.wav",
+          "bytes": 1267244,
+          "sha256": "a465ab59ae5fd5fe6bdf105ab22c92b3c104395ce44beebaab91f500627bd0cd"
+        },
+        {
+          "path": "work/audio/clean/s17.wav",
+          "bytes": 1301810,
+          "sha256": "22c1fe342f730dcd00ad04f2cdadccdbfdc649de7f12aa77824cc479ba962667"
+        },
+        {
+          "path": "work/audio/clean/s18.wav",
+          "bytes": 1209644,
+          "sha256": "c9308ea02036e15901b3e9cc0b69032771eb7335ee1641f273556540e02f7076"
+        },
+        {
+          "path": "work/audio/clean/s19.wav",
+          "bytes": 1278764,
+          "sha256": "bc8a33890935e24b10f2a794ce156d4380242b5224d1279b3e4988c89549560c"
+        },
+        {
+          "path": "work/audio/clean/s20.wav",
+          "bytes": 1370924,
+          "sha256": "a2a8f22aeed12f295dcc645552003a3f0067c1aeb31182bb8eb33bbfd40df8da"
+        },
+        {
+          "path": "work/audio/clean/s21.wav",
+          "bytes": 864044,
+          "sha256": "fcc46a9287da68565574f589c1090c426bfc8a801800c21b64e97273ee2949a1"
+        },
+        {
+          "path": "work/audio/clean/s22.wav",
+          "bytes": 1082924,
+          "sha256": "5f115a61047e1d2d78d9f74e19dff1aadf71ca884a060c9a7187248d7920eee2"
+        },
+        {
+          "path": "work/audio/clean/s23.wav",
+          "bytes": 1405484,
+          "sha256": "69541b1fa5da1e0b170c4b3a870be536ced4ab87a682f24b594a7ee5a3b1fe21"
+        },
+        {
+          "path": "work/audio/clean/s24.wav",
+          "bytes": 1232684,
+          "sha256": "c514ab015ba846ed80cabfc4c83141dc732d42920a17fe53ef271b297d520cd6"
+        },
+        {
+          "path": "work/audio/clean/s25.wav",
+          "bytes": 1336364,
+          "sha256": "bede96b27bb9e8328b219624225d06d7ff9a86cd07080b2a4d2327382744538f"
+        },
+        {
+          "path": "work/audio/clean/s26.wav",
+          "bytes": 1393964,
+          "sha256": "a3df6ca62d3db8787edbad925f5ecdd3a7fad765b972aee9c2c74f9a8c6d79ca"
+        },
+        {
+          "path": "work/audio/clean/s27.wav",
+          "bytes": 1347884,
+          "sha256": "98cc5f857872f94c1c3ade05396478ac305b0e72949df7e38c482ccc7a459cec"
+        },
+        {
+          "path": "work/audio/clean/s28.wav",
+          "bytes": 1267244,
+          "sha256": "f0e42874f4cc49f5eeefd7889a8da7bfb9b8592a1f6b03d6ea1970f26059c18f"
+        },
+        {
+          "path": "work/audio/clean/s29.wav",
+          "bytes": 1313324,
+          "sha256": "61bc5dffa221fd450050ccc7012750ea5ec69a37b0f2f8f91a00c76d1f148422"
+        },
+        {
+          "path": "work/audio/clean/s30.wav",
+          "bytes": 1405484,
+          "sha256": "4baca392396a48904d76971315f6724b2d7fe7f513aa0347d35e0f070b8de07e"
+        },
+        {
+          "path": "work/audio/clean/s31.wav",
+          "bytes": 1267244,
+          "sha256": "e6cc45b2ce87658354a3f2f952173ddaef28b29357992657b1983f1aad70c21a"
+        },
+        {
+          "path": "work/audio/clean/s32.wav",
+          "bytes": 1163564,
+          "sha256": "bdc359f6dfdf0e61e0ea51601d8f4cdbe7ae3baa299b2cc61612aff377b6fb84"
+        }
+      ]
+    },
+    {
+      "id": "user-selected-score",
+      "kind": "user-selected-commercial-recording",
+      "used": true,
+      "title": "华尔街Thirteend - Claude小曲2.0(Remix版)",
+      "source": "D:/CloudMusic/华尔街Thirteend - Claude小曲2.0(Remix版).mp3",
+      "licenseStatus": "User-selected recording. Public distribution/commercial rights were not verified; not labeled royalty-free, CC0 or original project music.",
+      "processing": "Original opening plus beat/phrase-aligned return at source 21.3159167s; loop joins at 117.8412708s and 214.366625s with 2.0201458s complementary overlap; narration ducking and final fade. No pitch or speed change.",
+      "files": [
+        {
+          "path": "D:/CloudMusic/华尔街Thirteend - Claude小曲2.0(Remix版).mp3",
+          "bytes": 2281628,
+          "sha256": "cdc5638dbee9550cc827bb43b37acb9b0aac7ac51e79131e0a691f986d8ded4b"
+        },
+        {
+          "path": "work/audio/score.wav",
+          "bytes": 116851288,
+          "sha256": "d2bb6a01bddc9a739806de347a8c7675955ed5b3229dfd2ee9b122e0cfbee1e4"
+        },
+        {
+          "path": "scripts/mix_master.py",
+          "bytes": 7834,
+          "sha256": "bd4a9dfaf828b11c5d49de750bfa63aba2fec4dc84d4c5ef67ab56d6d50ec369"
+        },
+        {
+          "path": "research/audio-music-analysis.json",
+          "bytes": 13414,
+          "sha256": "d5533ad3d9b6c08af027e15919c6b8744cedad1a9ac8b3f92f031bcd2c49805b"
+        }
+      ]
+    },
+    {
+      "id": "cryptography-evidence",
+      "kind": "computed-teaching-data-and-citations",
+      "used": true,
+      "source": "research/verify_crypto.py and fetched primary references",
+      "notes": "Finite-field small-number DH example plus actual local X25519→HKDF-SHA256→AES-256-GCM roundtrip and one-bit tamper InvalidTag result. Fixed public teaching inputs; not production secrets and not a complete TLS/certificate validation implementation.",
+      "files": [
+        {
+          "path": "src/math-evidence.json",
+          "bytes": 3398,
+          "sha256": "4da996ea8aa68837157c50b5867367d5b0f83c107ceb4ff5dcc888b5c9c914b9"
+        },
+        {
+          "path": "src/crypto-evidence.json",
+          "bytes": 1610,
+          "sha256": "f34d7e24ded6b9d76dff041d35028b32ba38c92903784e8c3375519aa8e9917a"
+        },
+        {
+          "path": "research/verify_crypto.py",
+          "bytes": 4792,
+          "sha256": "c8b5acf213f0384d884ad2ac2bc176099bcf9254455dec167bccd6949b3e0328"
+        },
+        {
+          "path": "research/toy-dh-calculation.json",
+          "bytes": 3398,
+          "sha256": "4da996ea8aa68837157c50b5867367d5b0f83c107ceb4ff5dcc888b5c9c914b9"
+        },
+        {
+          "path": "research/authenticated-encryption-demo.json",
+          "bytes": 1610,
+          "sha256": "f34d7e24ded6b9d76dff041d35028b32ba38c92903784e8c3375519aa8e9917a"
+        },
+        {
+          "path": "research/story-sources.md",
+          "bytes": 5204,
+          "sha256": "64481f9eb7045954fd21997863ab73d55758612d2d30ad48affafb6e9fc7831e"
+        },
+        {
+          "path": "research/rfc8446.txt",
+          "bytes": 337736,
+          "sha256": "47871bc8820a2c3b6ea89f061055577058862cf543686b82d10131239702b3bd"
+        },
+        {
+          "path": "research/source-sha256.json",
+          "bytes": 578,
+          "sha256": "28416b090b5dd5e50d6c630d778d0dc8d95f28994d9056291e57280de8207081"
+        },
+        {
+          "path": "research/evidence-sha256.json",
+          "bytes": 303,
+          "sha256": "9b98151bc9b9f9ca8dd1062474320a2aaf1fc43a3ace669f970838b788d75913"
+        }
+      ]
+    },
+    {
+      "id": "typography-and-overlays",
+      "kind": "typeset-in-renderer",
+      "used": true,
+      "requestedFontStack": "Microsoft YaHei, Arial, sans-serif",
+      "fontDelivery": "System font requested at render time. No font binary copied into project or delivery.",
+      "source": "src/Film.tsx, src/Primitives.ts, src/IdentityRoom.ts",
+      "licenseStatus": "Fonts remain subject to their installed system licenses; no font redistribution license claimed.",
+      "notes": "Title, labels, equations, captions and author/year are rendered locally as DOM/canvas text. No generated-video text or watermark.",
+      "files": [
+        {
+          "path": "src/Film.tsx",
+          "bytes": 6981,
+          "sha256": "73c5f282d8b78e60cc93cccb5156eaf65c0b1c722ef7323e9a17acd39931f6f5"
+        },
+        {
+          "path": "src/captions-data.json",
+          "bytes": 31403,
+          "sha256": "6a3599c95bca77e9456dd91db0f3d8582d91dc6f6934e8a64c78bbec441465f0"
+        },
+        {
+          "path": "src/timeline-data.json",
+          "bytes": 29432,
+          "sha256": "82012a1cb6f966e952e39804397bd05c0b97e3fba28f22bac83ccc3d68b470c7"
+        },
+        {
+          "path": "src/story.json",
+          "bytes": 13211,
+          "sha256": "a0af4408846db3657e83d7e3fb4d8a567e6157cbf5f334d789c65c224b8c954e"
+        },
+        {
+          "path": "src/beats.json",
+          "bytes": 13601,
+          "sha256": "d6b2b04300d32f905e9736994b489b8594888705e7a43e50a2df96ab46d9c329"
+        }
+      ]
+    }
+  ],
+  "sourceSnapshot": [
+    {
+      "path": "src/beats.json",
+      "bytes": 13601,
+      "sha256": "d6b2b04300d32f905e9736994b489b8594888705e7a43e50a2df96ab46d9c329"
+    },
+    {
+      "path": "src/Camera.ts",
+      "bytes": 3566,
+      "sha256": "5157e2580be0dc04feb3bc8e421731997048080bd69e1d42d21cbd8315f916e1"
+    },
+    {
+      "path": "src/captions-data.json",
+      "bytes": 31403,
+      "sha256": "6a3599c95bca77e9456dd91db0f3d8582d91dc6f6934e8a64c78bbec441465f0"
+    },
+    {
+      "path": "src/captions.json",
+      "bytes": 32367,
+      "sha256": "807c2cbbadc709378006abadaa7991c09528b1070395a6b5c7e57b89fe40cb59"
+    },
+    {
+      "path": "src/Courier.ts",
+      "bytes": 4129,
+      "sha256": "f4e975d8d615dcb48decdbdc927fe800a79e00c1dd8f9b537c40ab299f89b26e"
+    },
+    {
+      "path": "src/crypto-evidence.json",
+      "bytes": 1610,
+      "sha256": "f34d7e24ded6b9d76dff041d35028b32ba38c92903784e8c3375519aa8e9917a"
+    },
+    {
+      "path": "src/DeliveryFlow.ts",
+      "bytes": 18459,
+      "sha256": "61ebcfb004353d777efcd25e7ad7e33dff16e57c9443de7de8182bfb79208f48"
+    },
+    {
+      "path": "src/Environment.ts",
+      "bytes": 5270,
+      "sha256": "4afd828710d69f23ed03e66904412a732660d323bacc1678a7b261c9894d3326"
+    },
+    {
+      "path": "src/ExchangeRoom.ts",
+      "bytes": 8864,
+      "sha256": "1c4c0ea9d45f5c12be89f20634b5ea50f4de28d7d66b237712e904d152335e37"
+    },
+    {
+      "path": "src/Film.tsx",
+      "bytes": 6981,
+      "sha256": "73c5f282d8b78e60cc93cccb5156eaf65c0b1c722ef7323e9a17acd39931f6f5"
+    },
+    {
+      "path": "src/IdentityRoom.ts",
+      "bytes": 10904,
+      "sha256": "2821cf003416ce43d4b4f11cad777fc97716c04c680271d7bba8693adf13b3f0"
+    },
+    {
+      "path": "src/index.tsx",
+      "bytes": 292,
+      "sha256": "d7fbf24e4005c75153e37875174ad9a154ce433582beaeaefd0ce0ce5191df2d"
+    },
+    {
+      "path": "src/Lighting.ts",
+      "bytes": 1891,
+      "sha256": "5212294a098dee7dc5e4eb2cdd2a79e87006325c50ea8ed5a7a083ada7a464f7"
+    },
+    {
+      "path": "src/math-evidence.json",
+      "bytes": 3398,
+      "sha256": "4da996ea8aa68837157c50b5867367d5b0f83c107ceb4ff5dcc888b5c9c914b9"
+    },
+    {
+      "path": "src/narration.json",
+      "bytes": 30338,
+      "sha256": "4a4a01dde8385f698a01e1050a80159277bca188c6bf4d43d22332e6e5a08f97"
+    },
+    {
+      "path": "src/Primitives.ts",
+      "bytes": 5163,
+      "sha256": "e3ea4faa54cd89fcdd0c2c5b06d25a506cabdcad7fe784fba305eafd4d357bcf"
+    },
+    {
+      "path": "src/story.json",
+      "bytes": 13211,
+      "sha256": "a0af4408846db3657e83d7e3fb4d8a567e6157cbf5f334d789c65c224b8c954e"
+    },
+    {
+      "path": "src/timeline-data.json",
+      "bytes": 29432,
+      "sha256": "82012a1cb6f966e952e39804397bd05c0b97e3fba28f22bac83ccc3d68b470c7"
+    },
+    {
+      "path": "src/Timeline.ts",
+      "bytes": 722,
+      "sha256": "343bc33c874893c8faf6f6c970ca8c666f970c9657c554bde98c6f339c629ef6"
+    },
+    {
+      "path": "src/World.ts",
+      "bytes": 4005,
+      "sha256": "73bd3948178072823831d6a250643736d37b94000d6cdff8bb8e52ce6c487cb2"
+    },
+    {
+      "path": "scripts/asr_verify.py",
+      "bytes": 6039,
+      "sha256": "3ffa93f0f67c8e81f1f4cd8549938fd78e4acc116204b34100a9a06f096b19a0"
+    },
+    {
+      "path": "scripts/audio_common.py",
+      "bytes": 1872,
+      "sha256": "f987fe76f829e687dc22e86b0d1e3b0f34b218d0ffb03803e1c27d4d448bbdec"
+    },
+    {
+      "path": "scripts/audio_music_analyze.py",
+      "bytes": 2540,
+      "sha256": "740bc5f12c76adef90e109ca8f3028a79b933b2f72b61f2f10d41174397e6863"
+    },
+    {
+      "path": "scripts/audio_prepare.py",
+      "bytes": 5293,
+      "sha256": "16328a24f868689232a7f644ff8c25d2f7f61bb841cfb4d9f559fe4f5455f03c"
+    },
+    {
+      "path": "scripts/audio_qa.py",
+      "bytes": 3434,
+      "sha256": "237ae5edaa03dddc6add658447b7a02d2743830110a15888db6488beb84e4bc6"
+    },
+    {
+      "path": "scripts/build_asset_manifest.mjs",
+      "bytes": 14358,
+      "sha256": "efea246ac3b2bc4ce9f6b2fa397a670ff42e74b9d6bb706ad353e11cb4b4c11a"
+    },
+    {
+      "path": "scripts/build_night_city.py",
+      "bytes": 14286,
+      "sha256": "cd555a4fab9bb9770620fc18388fbd60d42558149925e26bd9bab8cdf08c8606"
+    },
+    {
+      "path": "scripts/build_timeline.mjs",
+      "bytes": 1778,
+      "sha256": "b63e95be49f6e626dabacaf0fa0cd5f28ad858251f82a4105e96c5d51d7e9c62"
+    },
+    {
+      "path": "scripts/cleanup_delivery.py",
+      "bytes": 11819,
+      "sha256": "027b95d9c6775c9c40c642e04d41c10867882ab9b11126b65fff3fcf437bdcba"
+    },
+    {
+      "path": "scripts/mix_master.py",
+      "bytes": 7834,
+      "sha256": "bd4a9dfaf828b11c5d49de750bfa63aba2fec4dc84d4c5ef67ab56d6d50ec369"
+    },
+    {
+      "path": "scripts/package_delivery.py",
+      "bytes": 13633,
+      "sha256": "c35151e3a5d88f9d8240ed52f8261ec34e85305665bc44dc49f8155917f8f29e"
+    },
+    {
+      "path": "scripts/preview_server.py",
+      "bytes": 1654,
+      "sha256": "d9e680b8116d06c1a3fe17448dfef42bc58ce9f637f89d43e4deaa6dc46c3bb0"
+    },
+    {
+      "path": "scripts/qa_av_sync.py",
+      "bytes": 7043,
+      "sha256": "4730ffd56be366b1a85b369f8fb3e4fdecca22dde27233077b19450502ba165f"
+    },
+    {
+      "path": "scripts/qa_final.py",
+      "bytes": 5757,
+      "sha256": "9ec8c42d1f9ba18f180ce42a00155c1b39de313887fd7d52f380e4f196989e5e"
+    },
+    {
+      "path": "scripts/qa_motion.mjs",
+      "bytes": 8439,
+      "sha256": "d73cffa8a4630ee21dd3c4c42f964fd97e5ad8068f87cbf4a8a047d09b801463"
+    },
+    {
+      "path": "scripts/render.mjs",
+      "bytes": 3866,
+      "sha256": "17637c42ea76df901cec40a48bb4c0c69d71fa977fbda9598bc52a1784682495"
+    },
+    {
+      "path": "scripts/review_final.py",
+      "bytes": 10066,
+      "sha256": "c7531721704d33ec0d4315b4f1a1ae9ac41f69fa62d1166d86d6a894a611455c"
+    },
+    {
+      "path": "scripts/voice_delivery.py",
+      "bytes": 6746,
+      "sha256": "47e02f7f6d449c674e3d80c3ab985deea097b6d8e63aca0a96ba64a3ef799252"
+    },
+    {
+      "path": "scripts/voice_generate.py",
+      "bytes": 4148,
+      "sha256": "031b024d5eb924a616f2426a54fc223fce65085e16f14d2e6ea2b29e2f3f50eb"
+    },
+    {
+      "path": "scripts/voice_plan.py",
+      "bytes": 1919,
+      "sha256": "4e966b36aa87cc66590e33fab765ac65149692f0b8752f9f86d7b378d39a4a10"
+    },
+    {
+      "path": "scripts/voice_previews.py",
+      "bytes": 1413,
+      "sha256": "3beb5a5d0b09c1d65bc0cb8be27a1bddd272d9ae53ec0dd6324a556126cd8821"
+    },
+    {
+      "path": "package.json",
+      "bytes": 844,
+      "sha256": "0ac43371d96ed8504c139fb3d027c95596128e85a6c36767590058e3a21e0eeb"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 156732,
+      "sha256": "ed83d8457207a0ced07c1e5ce5cfa112f57cc2a2dc7928a01d71f0ac70ff7112"
+    }
+  ],
+  "refreshCommand": "node scripts/build_asset_manifest.mjs"
+}

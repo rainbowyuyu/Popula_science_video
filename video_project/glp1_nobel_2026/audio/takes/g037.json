@@ -1,0 +1,69 @@
+{
+  "id": "g037",
+  "text": "血浆里的一部分水和小分子，先被滤入管腔。随后，身体又把需要的水和盐收回来，其余部分形成尿液。",
+  "ttsText": "血浆里的一部分水和小分子，先被滤入管腔。随后，身体又把需要的水和盐收回来，其余部分形成尿液。",
+  "signature": "af0563310cad61ee5b0e09d6f54e151f380fd97ddeddd4eb2222d9b43da4f2f4",
+  "raw": "audio/raw/g037-af0563310c.wav",
+  "processed": "public/voice/g037.wav",
+  "rawDuration": 8.88,
+  "duration": 8.88,
+  "sha256": "8de044479b1385a6cb4fcb3583de47c8103a5f77344596550ccf3ef5c40e760e",
+  "seed": 2936365873,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g037",
+    "g038",
+    "g039",
+    "g040"
+  ],
+  "rawEndpointDB": -96.3759363034803,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8c3dccec116b8630e1f0167ac120858da813e4cdb6d96c18e770844301f4c6c4",
+    "outputSha256": "8de044479b1385a6cb4fcb3583de47c8103a5f77344596550ccf3ef5c40e760e",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4893385642751653,
+    "input": {
+      "seconds": 8.88,
+      "peakDb": -5.238239927429705,
+      "activeRmsDb": -22.329879596450972,
+      "quietFrameP10Db": -60.98214094767384
+    },
+    "output": {
+      "seconds": 8.88,
+      "peakDb": -2.7572113633981328,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.42160658133505
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

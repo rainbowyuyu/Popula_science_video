@@ -1,0 +1,35 @@
+{
+  "version": "v6-idr-patches",
+  "baseVideoSHA256": "c9f90b7b6c2f79a9238d38e82c752394c4faf1419eed40b36b30e4e2b164e8a4",
+  "baseManifestSHA256": "e3da07465efd4badee8caeca62c0182f0a29c3ff9a95ff80a69ed18230173b23",
+  "timelineSHA256": "e976021ce9b1a665ca54206e73898587efb33c6f91865eb22bb8b7ad0c71dfb0",
+  "masterSHA256": "dec0de170d5796dadad56323e11041195049e3c0e4c365e4ed50f17fa15b1146",
+  "sourceLock": "research/revision-v6/continuity-repair/patch-source-lock.json",
+  "sourceLockSHA256": "4b704b5c851e8d33eba9dcc07db204abfefcab3652973259ba6edddadfc033fe",
+  "allowedChangedSources": [
+    "src/V5World.ts",
+    "src/V5HandoffContext.ts"
+  ],
+  "patches": [
+    {
+      "start": 12000,
+      "end": 12249,
+      "supportFrames": [
+        12071,
+        12194
+      ],
+      "video": "tmp/v6-continuity-patches/segment-12000-12249.mp4",
+      "marker": "tmp/v6-continuity-patches/segment-12000-12249.json"
+    },
+    {
+      "start": 20250,
+      "end": 20749,
+      "supportFrames": [
+        20431,
+        20534
+      ],
+      "video": "tmp/v6-continuity-patches/segment-20250-20749.mp4",
+      "marker": "tmp/v6-continuity-patches/segment-20250-20749.json"
+    }
+  ]
+}

@@ -1,0 +1,851 @@
+Numerical Simulation of 
+Numerical Simulation of 
+Super Tall Buildings Based 
+Super Tall Buildings Based 
+on OpenSees
+on OpenSees
+Xinzheng Lu 
+@ Tsinghua University
+Linlin Xie
+@ Tsinghua University
+Yuli Huang 
+@ Arup
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+Outline
+ Introduction
+ Multi-layer Shell Element and nDMaterial
+Concrete
+ Modeling Technology and Pre-/Post- Process
+ 64-bit Version and Selection of Analysis Domain
+ Examples
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Outline
+ Introduction
+ Multi-layer Shell Element and nDMaterial
+Concrete
+ Modeling Technology and Pre-/Post- Process
+ 64-bit Version and Selection of Analysis Domain
+ Examples
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Introduction
+Initiative:
+ Simulation Super-Tall Buildings with OpenSees
+ From National Nature Science Foundation of 
+China (NSFC)
+Challenge:
+ Element Model for Shear Walls/Core Tubes
+ Large Scale Computing
+ Modeling Complicated Structures
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Outline
+ Introduction
+ Multi-layer Shell Element and nDMaterial
+Concrete
+ Modeling Technology and Pre-/Post- Process
+ Selection of Analysis Domain and 64-bit Version
+ Examples
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+Multi-layer Shell Element
+ Features
+ Composite Material Mechanics
+ Coupled  in-plane/out-of-plane Bending and in-plane 
+Direct Shear
+ Coupled Bending-shear 
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Multi-layer Shell Element
+ Framework of the element
+Multi-layer shell 
+element
+section 
+LayeredShell
+nDMaterial   
+PlateFromPlaneStress
+Poisson ratio &
+Modulus of concrete
+nDMaterial 
+PlaneStressUserMaterial
+nDMaterial  PlateRebar
+Angle of 
+reinforcement layer
+uniaxialMaterial   
+Steel01/Steel02/…
+Absolute depth of 
+each layer
+Multi-layer shell 
+element
+section 
+LayeredShell
+nDMaterial   
+PlateFromPlaneStress
+Poisson ratio &
+Modulus of concrete
+nDMaterial 
+PlaneStressUserMaterial
+nDMaterial  PlateRebar
+Angle of 
+reinforcement layer
+uniaxialMaterial   
+Steel01/Steel02/…
+Multi-layer shell 
+element
+section 
+LayeredShell
+nDMaterial   
+PlateFromPlaneStress
+Poisson ratio &
+Modulus of concrete
+nDMaterial 
+PlaneStressUserMaterial
+nDMaterial  PlateRebar
+Angle of 
+reinforcement layer
+uniaxialMaterial   
+Steel01/Steel02/…
+Absolute depth of 
+each layer
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+nDMaterial Concrete
+ 2D plane stress constitutive model
+ A very simple concrete model
+ Damage mechanism and smeared crack
+ Compression: Løland model
+ Tension: Mazars model
+$epstu
+($epsc0, $fc)
+($epscu, $fcu)
+Stress
+Strain
+$ft
+1
+2
+1
+'
+'
+1
+c
+e c
+D
+D
+D
+σ
+ε
+−
+
+
+=
+
+−
+
+
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Multi-layer Shell Element
+ Shell MITC4
+Direction of first principal axis
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+Validation with Experiments
+-200
+-150
+-100
+-50
+0
+50
+100
+150
+200
+-25
+-15
+-5
+5
+15
+25
+Shell
+Fiber
+Test
+-600
+-500
+-400
+-300
+-200
+-100
+0
+100
+200
+300
+400
+500
+600
+-15
+-10
+-5
+0
+5
+10
+15
+Shell
+Fiber
+Test
+-400
+-300
+-200
+-100
+0
+100
+200
+300
+400
+-20
+-15
+-10
+-5
+0
+5
+10
+15
+20
+Shell
+Fiber
+Test
+-150
+-100
+-50
+0
+50
+100
+150
+-30
+-20
+-10
+0
+10
+20
+30
+Shell
+Test
+H/W=2.0
+H/W=1.0
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Outline
+ Introduction
+ Multi-layer Shell Element and nDMaterial
+Concrete
+ Modeling Technology and Pre-/Post- Process
+ 64-bit Version and Selection of Analysis Domain
+ Examples
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Modeling technology
+ Fiber beam elements for beams and columns
+ Multi-layer shell elements for shear walls and 
+coupling beams
+ Embedded beam 
+elements to connect 
+fiber beam elements 
+and multi-layer shear 
+wall elements
+Fiber frame
+Embedded frame
+Shell
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Pre-/Post- Process
+Fiber beam (THUFiber)
+Multi-layer shell (Shell 75)
+Fiber beam
+Multi-layer shell
+GUI Preprocess
+(*.dat file)
+Results
+GUI Postprocess
+(*.t19 file)
+The models in MSC.Marc can be found in Collapse simulation of reinforced concrete high-rise building induced 
+by extreme earthquakes, Earthquake Engineering & Structural Dynamics, 2013, 42(5): 705-723.
+
+Outline
+ Introduction
+ Multi-layer Shell Element and nDMaterial
+Concrete
+ Modeling Technology and Pre-/Post- Process
+ 64-bit Version and Selection of Analysis Domain
+ Examples
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+64-bit Version
+ Model size: 
+ Nodes> 53,000; Elements >88,000 
+ DOF>300,000
+ Recompile OpenSees.exe in 64-bit environment
+ Maximum thread memory size > 28 GB
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Selection of Analysis Domain
+ Matrix solver
+ BandGeneral SOE: Failed
+ BandSPD SOE: Failed
+ ProfileSPD SOE: Failed
+ SuperLU SOE: Failed
+ Mumps: Failed
+ UmfPack SOE: Works but Slow
+ SparseSYM SOE: Feasible
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Selection of Analysis Domain
+ Eigen solver
+ Symmetric Arpack: Failed
+ Band Arpack : Failed
+ Profile SPD: Feasible
+ Constraints
+ Plain: Failed
+ Lagrange: Failed
+ Penalty: Failed
+ Transformation : Feasible
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+Outline
+ Introduction
+ Multi-layer Shell Element and nDMaterial
+Concrete
+ Modeling Technology and Pre-/Post- Process
+ 64-bit Version and Selection of Analysis Domain
+ Examples
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+TBI Building 2
+ 
+A
+B
+C
+D
+E
+F
+7010
+7010
+4572
+7010
+7010
+1
+2
+3
+4
+5
+6
+4724
+5867
+5867
+5867
+5867
+4724
+7544
+1295
+914
+3048
+3048
+5334
+1600
+1600
+ 
+柱2
+柱3
+梁1
+2500
+1670
+2050
+1566
+B
+E
+F
+15240
+柱1
+2
+3
+4
+5
+5867
+5867
+5867
+5867
+1
+6
+4724
+4724
+A
+10363
+7010
+9296
+9296
+7010
+Column 1
+Column 2
+Column 3
+beam 1
+US Design
+Chinese Design
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+TBI Building 2
+ H=141.8m, 42 stories
+ 8,469 nodes
+ 9,744 fiber elements 
+ 4,707 shell elements 
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+TBI Building 2
+ Gravity and vibration period
+Marc
+OpenSees
+Relative Error
+T1（X translation）
+1.791
+1.815
+1.3%
+T2（Y translation ）
+1.580
+1.579
+0.06%
+T3（Torsion）
+0.900
+0.890
+1.1%
+Gravity（ton）
+5.4964×104
+5.4964×104
+0%
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+TBI Building 2
+ Static Pushover
+0
+20000
+40000
+60000
+80000
+100000
+120000
+0
+0.5
+1
+1.5
+2
+2.5
+Top disp/mm
+Total base shear force/kN
+Marc
+OpenSees
+Pushover
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.5
+1
+1.5
+2
+Drift angle/%
+Floor
+Marc
+OpenSees
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+TBI Building 2
+ Nonlinear time history analysis
+ Chi-Chi：110gal、300gal、510gal &1000gal
+ El-Centro：1000gal
+ Northridge：1000gal
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+TBI Building 2
+ Chi-Chi
+PGA=300gal
+-0.2
+-0.15
+-0.1
+-0.05
+0
+0.05
+0.1
+0.15
+0.2
+0
+20
+40
+60
+80
+100
+Time/s
+Top disp/m
+Marc
+OpenSees
+PGA=110gal
+-0.06
+-0.04
+-0.02
+0
+0.02
+0.04
+0.06
+0
+20
+40
+60
+80
+100
+Time/s
+Top disp/m
+Marc
+OpenSees
+PGA=300gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.05
+0.1
+0.15
+0.2
+Drift angle/%
+Floor
+Marc
+OpenSees
+PGA=110gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.02
+0.04
+0.06
+0.08
+Drift angle/%
+Floor
+Marc
+OpenSees
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+PGA=510gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.1
+0.2
+0.3
+0.4
+Drift angle/%
+Floor
+Marc
+OpenSees
+PGA=1000gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.2
+0.4
+0.6
+0.8
+Drift angle/%
+Floor
+Marc
+OpenSees
+PGA=1000gal
+-0.6
+-0.45
+-0.3
+-0.15
+0
+0.15
+0.3
+0.45
+0.6
+0
+20
+40
+60
+80
+100
+Time/s
+Top disp/m
+Marc
+OpenSees
+PGA=510gal
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+0
+20
+40
+60
+80
+100
+Time/s
+Top disp/m
+Marc
+OpenSees
+TBI Building 2
+ Chi-Chi
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+TBI Building 2
+ El-Centro & Northridge
+El-Centro PGA=1000gal
+-1.2
+-0.9
+-0.6
+-0.3
+0
+0.3
+0.6
+0.9
+1.2
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+Time/s
+Top disp/m
+Marc
+OpenSees
+Northridge PGA=1000gal
+-2.8
+-2.1
+-1.4
+-0.7
+0
+0.7
+1.4
+2.1
+2.8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+Time/s
+Top disp/m
+Marc
+OpenSees
+Northridge PGA=1000gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.75
+1.5
+2.25
+3
+Drift angle/%
+Floor
+Marc
+OpenSees
+El-Centro PGA=1000gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.5
+1
+1.5
+2
+Drift angle/%
+Floor
+Marc
+OpenSees
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Fortune Plaza
+ H=315.47m, 62 stories
+ 46,028 nodes
+ 31,556 fiber elements 
+ 37,160 shell elements 
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Fortune Plaza
+ Gravity and vibration period
+Marc
+OpenSees
+Relative Error
+T1（X translation）
+4.9925
+4.9261
+1.33%
+T2（Y translation ）
+3.2940
+3.3290
+1.06%
+T3（Torsion）
+1.051
+1.061
+0.95%
+Gravity（ton）
+4.90894×105
+4.90894×105
+0%
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Fortune Plaza
+ Nonlinear time history analysis
+El-centro PGA=1000gal
+-1.6
+-1.2
+-0.8
+-0.4
+0
+0.4
+0.8
+1.2
+1.6
+0
+5
+10
+15
+20
+25
+Time/s
+Top disp/m
+Marc
+OpenSees
+El-centro PGA=1000gal
+0
+10
+20
+30
+40
+50
+60
+70
+0
+0.2
+0.4
+0.6
+0.8
+Drift angle/%
+Story
+Marc
+OpenSees
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+
+Shanghai Tower
+ 
+ H=632m, 121 stories
+ 53,006 Nodes
+ 48,774 fiber beam elements
+ 39,315 Multi-layer shell elements
+ Gravity and vibration period
+Marc
+OpenSees
+Relative Error
+T1（X ）
+9.6525
+9.5238
+1.33%
+T2（Y ）
+9.5511
+9.4518
+1.04%
+T3（Torsion）
+4.7916
+4.6847
+2.23%
+Gravity（ton）5.10738×105
+5.10738×105
+0%
+Shanghai Tower
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Shanghai Tower
+ Time history analysis
+PGA=400gal
+-1.2
+-0.8
+-0.4
+0
+0.4
+0.8
+1.2
+0
+10
+20
+30
+40
+Time/s
+Disp/m
+OpenSees
+Marc
+PGA=400gal
+0
+20
+40
+60
+80
+100
+120
+140
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+Drift angle/%
+Story
+OpenSees
+Marc
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Thanks!
+Thanks!
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip

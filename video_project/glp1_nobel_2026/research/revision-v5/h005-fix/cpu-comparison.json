@@ -1,0 +1,126 @@
+{
+  "createdAtUTC": "2026-10-09T02:37:38.991Z",
+  "method": "CPU bundle and every-integer-frame comparison; production files unchanged; no renderer/browser/GPU.",
+  "timeline": {
+    "durationFrames": 25621,
+    "fps": 30,
+    "sha256": "0ef7997628a5c9d86e8364da053e803ec38b1a34d69b0db24d7b49f9bcd6819d"
+  },
+  "changedClips": [
+    "h005"
+  ],
+  "clip": {
+    "id": "h005",
+    "start": 1137,
+    "endExclusive": 1386,
+    "oldView": "stomach",
+    "newView": "gut"
+  },
+  "actualAffectedAnchors": {
+    "torso": [
+      0,
+      1.26,
+      0.02
+    ],
+    "stomach": [
+      0.038375901989638805,
+      1.1764962077140808,
+      0.03792495001107454
+    ],
+    "small_intestine": [
+      0.0097835473716259,
+      1.0193112194538116,
+      0.04366100067272782
+    ],
+    "liver": [
+      -0.01033710315823555,
+      1.1836562156677246,
+      0.02284649945795536
+    ]
+  },
+  "anchorScope": "Actual manifest organ centers plus current torso constant. Other anchors read from prior camera audit only to complete the unchanged route; they cannot change this isolated interval.",
+  "cameraChangeFramesInclusive": [
+    1009,
+    1504
+  ],
+  "weightDependencyFramesInclusive": [
+    1031,
+    1545
+  ],
+  "labelRoutingFramesInclusive": [
+    1137,
+    1385
+  ],
+  "allDependencyFramesInclusive": [
+    1009,
+    1545
+  ],
+  "maxPoseDifference": {
+    "delta": 0.2693841794000709,
+    "frame": 1144
+  },
+  "recommendedRenderFramesInclusive": [
+    930,
+    1620
+  ],
+  "recommendedDurationFrames": 691,
+  "recommendedStartSeconds": 31,
+  "recommendedEndExclusiveSeconds": 54.03333333333333,
+  "seamChecks": [
+    {
+      "frame": 929,
+      "cameraDelta": 0,
+      "viewWeightDelta": 0
+    },
+    {
+      "frame": 930,
+      "cameraDelta": 0,
+      "viewWeightDelta": 0
+    },
+    {
+      "frame": 1620,
+      "cameraDelta": 0,
+      "viewWeightDelta": 0
+    },
+    {
+      "frame": 1621,
+      "cameraDelta": 0,
+      "viewWeightDelta": 0
+    }
+  ],
+  "sourceChecks": [
+    {
+      "path": "src/V5CameraPath.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/V5World.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/World.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/visual.ts",
+      "unchanged": true
+    },
+    {
+      "path": "src/timeline.json",
+      "unchanged": true
+    },
+    {
+      "path": "public/models/manifest.json",
+      "unchanged": true
+    },
+    {
+      "path": "public/models/anatomical-routes.json",
+      "unchanged": true
+    }
+  ],
+  "limitations": [
+    "CPU audit does not certify rendered organ occupancy, transparency sorting, label overlap, or final edit seams.",
+    "Small-intestine camera uses real atlas organ center; it does not fabricate epithelial absorption microgeometry."
+  ],
+  "passed": true
+}

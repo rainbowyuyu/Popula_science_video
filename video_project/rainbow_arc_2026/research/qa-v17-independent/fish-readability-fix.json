@@ -1,0 +1,43 @@
+{
+  "version": "V17-fish-readability-fix",
+  "status": "pass-within-fish-scope",
+  "reviewedUTC": "2026-10-13T04:15:00+08:00",
+  "sourceHashes": [
+    {
+      "path": "src/FishObserverV16.ts",
+      "sha256": "ae3a95d51313a25de9cbe9a36a0cd72d92e9789d312cd5a2aae66f04ef7240c6"
+    },
+    {
+      "path": "public/assets_v16/characters/rig-audit-v16.ts",
+      "sha256": "01fafbdc93dc6b0fdfa5097224c92cfa014344080d6b01e5048f2cf6b258d1c1"
+    },
+    {
+      "path": "public/assets_v16/characters/rig-audit-v16.json",
+      "sha256": "2e86696df8089a9cedd3d055aff6399eb0a5c951dee6a23520d783fec3e70d2d"
+    },
+    {
+      "path": "public/assets_v16/characters/provenance-v16.json",
+      "sha256": "c10e4f7ea6ec2e5dbc1a0aa34d3b75eb7e0195bbbb829cbabfef45199a1dd650"
+    },
+    {
+      "path": "work/fish-v17-final-stills/contact.jpg",
+      "sha256": "60c35b31cd50d79c57ef82a25fcc47764e41941ef608b65cc9d82e23701cd40e"
+    }
+  ],
+  "renderedStills": "work/fish-v17-final-stills",
+  "actuallyViewed": [
+    "work/fish-v17-final-stills/contact.jpg"
+  ],
+  "changes": [
+    "role-fixed 0.58 rad three-quarter camera offset with continuous breathing term; no wrapped clamp",
+    "fin tint uses mesh names including tail/pectoral/dorsal/pelvic/anal",
+    "CheekGlaze patches hidden so body vertex blush remains primary",
+    "rig audit bound raised to 0.70 rad"
+  ],
+  "numericAudit": "pass; see public/assets_v16/characters/rig-audit-v16.json",
+  "limits": [
+    "No full V17 MP4 was rendered in this independent pass",
+    "No normal-speed playback or audio listening claimed",
+    "Pool and Gaussian source remain parent-agent scope"
+  ]
+}

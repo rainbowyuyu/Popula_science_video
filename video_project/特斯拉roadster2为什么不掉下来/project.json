@@ -1,0 +1,82 @@
+{
+  "name": "特斯拉roadster2为什么不掉下来",
+  "createdBy": "rainbow-workbench",
+  "version": 1,
+  "schemaVersion": 1,
+  "id": "特斯拉roadster2为什么不掉下来",
+  "title": "Roadster：倒挂与空中翻滚",
+  "category": "engineering",
+  "status": "source-library",
+  "currentVersion": "V06 over V05 body",
+  "workbench": {
+    "title": "特斯拉roadster2为什么不掉下来",
+    "seriesId": "rainbow-science",
+    "episode": null,
+    "useSeriesStyle": false
+  },
+  "entrypoints": [
+    "source/v05/src/index.tsx",
+    "source/v05/scripts/render.mjs",
+    "source/v06/scripts/assemble.py"
+  ],
+  "packages": [
+    {
+      "root": "source/v01",
+      "scripts": {
+        "studio": "remotion studio src/index.ts --public-dir=../../assets/v01",
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs stills",
+        "preview": "node scripts/render.mjs preview"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "source/v04",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "qa": "python scripts/qa_delivery.py"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "source/v05",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "qa": "python scripts/qa_delivery.py"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "source/v05/src",
+      "source/v05/scripts",
+      "source/v06/scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "output/v06/Roadster_倒挂与飞行翻滚_1080p.mp4"
+    ],
+    "covers": []
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable"
+  ],
+  "notes": [
+    "V06 合成实际复用 V05 master；若上传源码不上传视频，必须写明先渲染 V05；Qwen桥接在 work/v06 需作为外部素材台账保留。"
+  ],
+  "originalMetadata": {
+    "name": "特斯拉roadster2为什么不掉下来",
+    "version": 1
+  }
+}

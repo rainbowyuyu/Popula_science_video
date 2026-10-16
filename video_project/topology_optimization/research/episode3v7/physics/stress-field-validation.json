@@ -1,0 +1,85 @@
+{
+  "input_sha256": "b0ab69efea4bb1cbf123fe789385766e72b2c43fdde10a983d6d83d957d0c733",
+  "module_sha256": "a0a7c0169d9d15b59af6618c2af7c57a084c26930f3c4a0dea72f6957f51db7c",
+  "validation_script_sha256": "1592a96fd9047f0a26351a3388b50f65d5b5666189aa8ab94cdb1c74b1414d40",
+  "native_static_sha256": "27d41a9e55ba3016f06917fd6486748a3972c1338e771fee171f95d90a4fc80f",
+  "native_probe_sha256": "c0d97bcffd72dd5e7d318037b7ee591fcb746ae90b54537cce558d8bd84f5162",
+  "nativeVersion": "3.7.2",
+  "convention": "ZDyn/OpenSees: y=vecxz cross x; z=x cross y; sigma=N/A+My*z/Iy-Mz*y/Iz, positive tension.",
+  "fiberSections": 12430,
+  "fiberValues": 49720,
+  "envelopeMidpoints": 11300,
+  "maxFiberAbsoluteErrorPa": 5.3551048040390015e-9,
+  "maxFiberRelativeError": 1.1680670909940515e-13,
+  "maxCoordinateErrorM": 3.774758283725532e-15,
+  "maxEnvelopeErrorPa": 4.190951585769653e-9,
+  "signChecks": [
+    {
+      "case": "axial_tension",
+      "physical": "Axial tension must be positive.",
+      "expectedPa": 17361.111111111113,
+      "actualPa": 17361.11111111111,
+      "relativeError": 2.0954757928848263e-16,
+      "passed": true
+    },
+    {
+      "case": "horizontal_cantilever_down",
+      "physical": "Cantilever under downward local-z tip force: top root fiber is in tension.",
+      "expectedPa": 976562.4999999999,
+      "actualPa": 976562.5,
+      "relativeError": 1.1920928955078126e-16,
+      "passed": true
+    },
+    {
+      "case": "horizontal_cantilever_down",
+      "physical": "Bottom root fiber is in compression.",
+      "expectedPa": -976562.4999999999,
+      "actualPa": -976562.5,
+      "relativeError": 1.1920928955078126e-16,
+      "passed": true
+    },
+    {
+      "case": "horizontal_cantilever_side",
+      "physical": "Tip force toward local+y: local+y root fiber is in compression.",
+      "expectedPa": -1736111.111111111,
+      "actualPa": -1736111.1111111098,
+      "relativeError": 6.705522537231446e-16,
+      "passed": true
+    },
+    {
+      "case": "oblique_rolled_cantilever",
+      "physical": "Cantilever under downward local-z tip force: top root fiber is in tension.",
+      "expectedPa": 1243387.321275018,
+      "actualPa": 1243387.321275037,
+      "relativeError": 1.5354919945652583e-14,
+      "passed": true
+    },
+    {
+      "case": "oblique_rolled_cantilever",
+      "physical": "Bottom root fiber is in compression.",
+      "expectedPa": -1243387.321275018,
+      "actualPa": -1243387.3212750384,
+      "relativeError": 1.647845067338326e-14,
+      "passed": true
+    },
+    {
+      "case": "simply_supported_center_load",
+      "physical": "Sagging simply supported beam: top fiber compression.",
+      "expectedPa": -244140.62499999997,
+      "actualPa": -244140.6250000001,
+      "relativeError": 4.76837158203125e-16,
+      "passed": true
+    },
+    {
+      "case": "simply_supported_center_load",
+      "physical": "Sagging simply supported beam: bottom fiber tension.",
+      "expectedPa": 244140.62499999997,
+      "actualPa": 244140.6250000001,
+      "relativeError": 4.76837158203125e-16,
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "limitation": "Gross rectangular beam section only. No notch/tenon/contact/pin-bearing stress concentration is computed."
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "cryptography_key_exchange",
+  "title": "密码学：公开传话怎样保密",
+  "category": "computer-science",
+  "status": "source-library",
+  "currentVersion": "V4",
+  "workbench": {
+    "title": "密码学：公开传话怎样保密",
+    "seriesId": "rainbow-science",
+    "episode": 6,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "v4/src/index.tsx",
+    "v4/scripts/render.mjs"
+  ],
+  "packages": [
+    {
+      "root": "v1",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "timeline": "node scripts/build_timeline.mjs",
+        "qa": "node scripts/qa.mjs"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "v2",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "timeline": "node scripts/build_timeline.mjs",
+        "qa": "node scripts/qa_motion.mjs && python scripts/qa_final.py"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "v3",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "timeline": "node scripts/build_timeline.mjs",
+        "qa": "node scripts/qa_motion.mjs && python scripts/qa_final.py"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "v4",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "timeline": "node scripts/build_timeline.mjs",
+        "qa": "node scripts/qa_motion.mjs && python scripts/qa_final.py"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "v4/src",
+      "v4/scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "v4/delivery/密码学_纸张质感升级版_V5_1080p.mp4"
+    ],
+    "covers": [
+      "v4/delivery/covers/密码学_封面_16x9.jpg",
+      "v4/delivery/covers/密码学_封面_3x4.jpg",
+      "v4/delivery/covers/密码学_封面_4x3.jpg",
+      "v4/delivery/covers/密码学_封面_9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Blender (configure BLENDER_PATH; original D:/blender/blender.exe)"
+  ],
+  "notes": [
+    "v4 为当前纸张/故事修订；不要只上传空顶层 source。"
+  ],
+  "originalMetadata": {}
+}

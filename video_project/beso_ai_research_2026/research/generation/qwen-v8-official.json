@@ -1,0 +1,50 @@
+{
+  "version": 8,
+  "checkedAt": "2026-10-11T14:37:48.108298+00:00",
+  "sources": {
+    "video-api": {
+      "url": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "http": 200,
+      "length": 25786,
+      "snapshot": "work\\v8-qwen\\official\\video-api.txt"
+    },
+    "image-edit-api": {
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-edit-api",
+      "http": 200,
+      "length": 24716,
+      "snapshot": "work\\v8-qwen\\official\\image-edit-api.txt"
+    },
+    "image-edit-guide": {
+      "url": "https://help.aliyun.com/zh/model-studio/qwen-image-edit-guide",
+      "http": 200,
+      "length": 14347,
+      "snapshot": "work\\v8-qwen\\official\\image-edit-guide.txt"
+    },
+    "pricing": {
+      "url": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "http": 200,
+      "length": 77493,
+      "snapshot": "work\\v8-qwen\\official\\pricing.txt"
+    }
+  },
+  "imageModel": "qwen-image-2.0-pro-2026-06-22",
+  "imageEndpoint": "/api/v1/services/aigc/multimodal-generation/generation",
+  "imageEditingSupports1To3Base64References": true,
+  "imageNominalBeijingCNYPerOutput": 0.5,
+  "videoModel": "wan2.7-i2v-2026-04-25",
+  "videoEndpoint": "/api/v1/services/aigc/video-generation/video-synthesis",
+  "videoSupportsFirstAndLastFrames": true,
+  "videoDurationRangeSeconds": [
+    2,
+    15
+  ],
+  "videoNominalBeijing1080PCNYPerOutputSecond": 1,
+  "plannedImages": 3,
+  "plannedVideoSeconds": 15,
+  "plannedNominalCNY": 16.5,
+  "actualBillCNY": null,
+  "evidence": {
+    "image": "北京 qwen-image-2.0-pro-2026-06-22 0.5 元/张；支持图生图/编辑，1-3张输入，size可1920*1080。",
+    "video": "北京 wan2.7-i2v-2026-04-25 1080P 1元/秒，首帧+尾帧，异步，时长2-15秒。"
+  }
+}

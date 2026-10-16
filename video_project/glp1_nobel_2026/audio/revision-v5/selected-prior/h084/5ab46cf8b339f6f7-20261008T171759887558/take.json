@@ -1,0 +1,83 @@
+{
+  "id": "h084",
+  "text": "但体重回落时，身体也可能增加饥饿感、减少能量消耗，把人往原来的体重拉。遇到平台期，并不稀奇。",
+  "ttsText": "但体重回落时，身体也可能增加饥饿感、减少能量消耗，把人往原来的体重拉。遇到平台期，并不稀奇。",
+  "signature": "c79359810c3b1725e25e13190545e80ded7e98b4bb03b99b7dca9e670bcdd89d",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h084-c79359810c3b-d48482b816.wav",
+  "processed": "audio/revision-v5/voice/h084.wav",
+  "rawDuration": 8.960041666666667,
+  "duration": 8.960041666666667,
+  "sampleRate": 48000,
+  "sha256": "5ab46cf8b339f6f70ea08bc033bae3e3eb23c17cf006b3813784f15a6ab1be6d",
+  "rawSHA256": "5571d75032ed333aff1e9826fc5f863e35e7508489a6e424523fd6be2c75a88b",
+  "seed": 3565454008,
+  "batchIds": [
+    "h082",
+    "h083",
+    "h084"
+  ],
+  "batchKey": "d48482b81664b7f9ef1610e801cffe5af2046cba4de74a3698d0e42830ced2dd",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -38.24399264743458,
+  "rawEndpointFlag": true,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "5571d75032ed333aff1e9826fc5f863e35e7508489a6e424523fd6be2c75a88b",
+    "outputSha256": "5ab46cf8b339f6f70ea08bc033bae3e3eb23c17cf006b3813784f15a6ab1be6d",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.6088081605772935,
+    "input": {
+      "seconds": 8.960041666666667,
+      "peakDb": -5.71339791526465,
+      "activeRmsDb": -22.43093559363796,
+      "quietFrameP10Db": -63.27665600503253
+    },
+    "output": {
+      "seconds": 8.960041666666667,
+      "peakDb": -4.037471707936019,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.668744949245664
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

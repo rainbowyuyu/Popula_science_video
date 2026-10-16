@@ -1,0 +1,50 @@
+{
+  "version": "chemistry-v03",
+  "generatedAt": "2026-10-08T01:31:23+08:00",
+  "mode": "plan-only",
+  "deletionPerformed": false,
+  "enabled": false,
+  "gates": [
+    "Completed final render",
+    "Video and audio hashes match QA",
+    "Human motion/listening review recorded",
+    "No live render or generation task using target",
+    "Absolute resolved path remains inside this project"
+  ],
+  "protected": [
+    "src/",
+    "scripts/",
+    "docs/",
+    "research/",
+    "public/",
+    "audio/v02/raw/",
+    "audio/v02/clean/",
+    "audio/v02/master.wav",
+    "audio/v02/music-source.m4a",
+    "delivery/",
+    "output/",
+    "node_modules junction and its target",
+    "External TTS model/reference/processor"
+  ],
+  "candidates": [
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v03-bundle-28136",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v03-public-28136",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    }
+  ],
+  "finalVideo": {
+    "file": "delivery/chemistry2026_v03/2026诺贝尔化学奖_让化学选择同一只手_v03_1080p.mp4",
+    "bytes": 56068042,
+    "sha256": "743961dfbbd251ad523886519b6aa6e3848b22f1ec64726a8c206301ebde2af7",
+    "decodedAudioSHA256_PCM_s32le": "06329b0330524e9f9e6ec284428d57fb69de02ad83ea4c86c7a728f858593913",
+    "technicalQA": "delivery/chemistry2026_v03/qa-final-20261008-013048/qa-report.json",
+    "technicalStatus": "technical-pass"
+  },
+  "instructions": "Do not apply this plan directly. Refresh after final acceptance; inspect exact paths and preserve selected assets, licenses and rerender dependencies."
+}

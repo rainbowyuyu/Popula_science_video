@@ -1,0 +1,69 @@
+{
+  "id": "g062",
+  "text": "血脂高常常没有明显感觉。医生会结合化验、既往心脑血管病和其他风险，判断需要怎样的控制目标和治疗。",
+  "ttsText": "血脂高常常没有明显感觉。医生会结合化验、既往心脑血管病和其他风险，判断需要怎样的控制目标和治疗。",
+  "signature": "39b13331797bf0aab6379a4c0e5594a6fca4c4217f3a894a98ce9d70aa8c124c",
+  "raw": "audio/raw/g062-39b1333179.wav",
+  "processed": "public/voice/g062.wav",
+  "rawDuration": 9.36,
+  "duration": 9.36,
+  "sha256": "3cf82744fb36a6bb16edfabc40820f0376337ccb71891685863ed2f903b7617c",
+  "seed": 129732143,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g061",
+    "g062",
+    "g063",
+    "g064"
+  ],
+  "rawEndpointDB": -88.20783891107823,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "21f24d8977c82ee38eba85fb788433f2a634d60d9e037eadc55b7abc51686de5",
+    "outputSha256": "3cf82744fb36a6bb16edfabc40820f0376337ccb71891685863ed2f903b7617c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.2998086933711512,
+    "input": {
+      "seconds": 9.36,
+      "peakDb": -6.028214899273564,
+      "activeRmsDb": -23.07147300236832,
+      "quietFrameP10Db": -59.38126897596308
+    },
+    "output": {
+      "seconds": 9.36,
+      "peakDb": -3.6615952885925074,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.7621748152148
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

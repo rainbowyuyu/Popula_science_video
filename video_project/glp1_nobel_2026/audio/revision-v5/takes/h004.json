@@ -1,0 +1,83 @@
+{
+  "id": "h004",
+  "text": "右下角的尺子，表示正在看的这一层有多大。镜头往里走时，尺子也跟着变；一微米，是千分之一毫米。",
+  "ttsText": "右下角的尺子，表示正在看的这一层有多大。镜头往里走时，尺子也跟着变；一微米，是千分之一毫米。",
+  "signature": "0586614d57bdae0f87ceac0d68d8206a213fc5a4a992a4157a3415b9a3a0be65",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h004-0586614d57bd-68037936e8.wav",
+  "processed": "audio/revision-v5/voice/h004.wav",
+  "rawDuration": 9.12,
+  "duration": 9.12,
+  "sampleRate": 48000,
+  "sha256": "3bf2a81f1e72562068ced59d4b461ddf022e4842735fe2833daa44abbe6b326e",
+  "rawSHA256": "1df8fac6ccead9ab1f911943027e0fcbcae23f5f0c8a2e36abaff13f079cf0a7",
+  "seed": 1745058102,
+  "batchIds": [
+    "h002",
+    "h003",
+    "h004"
+  ],
+  "batchKey": "68037936e8a69fb5c82c3705de83365ae770db71f132ae2c3cdf37ee01ecc68e",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -93.93089779088649,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "1df8fac6ccead9ab1f911943027e0fcbcae23f5f0c8a2e36abaff13f079cf0a7",
+    "outputSha256": "3bf2a81f1e72562068ced59d4b461ddf022e4842735fe2833daa44abbe6b326e",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.525519328088528,
+    "input": {
+      "seconds": 9.12,
+      "peakDb": -7.5721630450739985,
+      "activeRmsDb": -22.008953890223665,
+      "quietFrameP10Db": -62.53053333690008
+    },
+    "output": {
+      "seconds": 9.12,
+      "peakDb": -6.215825771461806,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.62195093899386
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,57 @@
+{
+  "episode": "每天5分钟知识｜真正可装配的榫卯亭",
+  "version": "episode3v6",
+  "durationSeconds": 294.666667,
+  "renderedVideo": "output/episode3v6/joinery_v6_1080p.mp4",
+  "renderedContainerDurationSeconds": 294.72,
+  "frameRate": 30,
+  "resolution": "1920x1080",
+  "model": {
+    "source": "video_project/episode3/blender/real_assembly_pavilion.blend",
+    "glb": "public/episode3v6/models/real-assembly-pavilion.glb",
+    "audit": "research/episode3v2/real-pavilion-audit.json",
+    "objects": 206,
+    "separableParts": 171,
+    "stages": 8,
+    "note": "宋式材分制规则的教育性工程重建，非某座历史名亭测绘复原，也不是施工图。"
+  },
+  "sources": [
+    "research/episode3v2/real-pavilion-sources.json",
+    "research/episode3v2/assets/yingzao-fashi/yingzao_fashi_bracket_1.jpg",
+    "research/episode3v2/assets/yingzao-fashi/yingzao_fashi_volume5_29.jpg",
+    "research/episode3v2/assets/yingzao-fashi/cai_fen_representation.png"
+  ],
+  "zwind": {
+    "map": "public/episode3v6/physics/zwind-pavilion.json",
+    "engine": "Zwind / ZDyn native backend",
+    "modelVersion": "2.2.10_fixedbase_turbulent_wind12_aeroservo",
+    "windSpeedMps": 12,
+    "durationSeconds": 2,
+    "acceptancePassed": true,
+    "mappedComponents": 171,
+    "residualN": 0,
+    "interpretation": "Zwind turbine benchmark reaction calibrated to pavilion area/elevation weights; transparent post-processing bridge, not building-code CFD."
+  },
+  "moisture": "各向异性扩散可视化代理，片中明确标注代理，不作为含水率实测或结构求解结果。",
+  "audio": {
+    "voice": "Qwen3-TTS-0.6B reference-conditioned Rainbow voice",
+    "rawClips": 59,
+    "master": "public/episode3v6/master.wav",
+    "music": "public/episode3v6/music/bamboo-dawn.wav",
+    "durationMatched": true,
+    "noiseProcessing": "broadcast_voice conservative high-pass/low-pass/denoise/de-ess/compression"
+  },
+  "checks": {
+    "typescript": "NOT ACCEPTED: prior claim superseded by v7 re-audit",
+    "stills": "NOT ACCEPTED: prior claim superseded by v7 re-audit",
+    "transitions": "NOT ACCEPTED: prior claim superseded by v7 re-audit",
+    "captionStyle": "NOT ACCEPTED: prior claim superseded by v7 re-audit"
+  },
+  "acceptanceStatus": "REJECTED_AFTER_REAUDIT",
+  "supersededClaims": {
+    "geometry": "Counts did not verify mating cavities or collision-free assembly. Render showed exploded rest pose.",
+    "physics": "Wind turbine reactions apportioned by heuristic weights do not constitute pavilion simulation.",
+    "audio": "Raw audio was truncated to old scene lengths; duration match is insufficient.",
+    "visual": "Sample renders show cropping, title/caption overlap and visible transitions."
+  }
+}

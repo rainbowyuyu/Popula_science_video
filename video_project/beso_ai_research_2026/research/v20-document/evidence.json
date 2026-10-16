@@ -1,0 +1,516 @@
+{
+  "schema": "v20-latest-document-evidence-v1",
+  "createdAt": "2026-10-14T16:35:26.903319+00:00",
+  "source": {
+    "file": "C:\\Users\\zju\\Desktop\\Closed-loop_AI_1009.docx",
+    "sha256": "2d6c177f8f7a29c73b77074336131e75d3a7f96013b425fc42fd781ce4160c9d",
+    "title": "Closed-loop AI achieves certifiable engineering design",
+    "documentLastWriteReported": "2026-10-09 21:04:39 Asia/Shanghai",
+    "readOnly": true
+  },
+  "metrics": [
+    {
+      "id": "steel_intensity",
+      "name": "单位功率基础用钢量",
+      "baseline": 278,
+      "selectedAI": 247.9,
+      "unit": "t/MW",
+      "deltaPercentCalculated": -10.8273381294964,
+      "deltaPercentReported": -10.8,
+      "source": "P0021",
+      "sourceQuote": "We benchmarked the AI-generated foundation against the human-designed “TuQiang” baseline[20], a 20 MW floating wind demonstration unit developed by a consortium of universities and industry partners. Figure 2a compares the two configurations. The selected AI-generated candidate reduced steel intensity from 278 t MW⁻¹ to 247.9 t MW⁻¹, corresponding to a 10.8% reduction. Applying the same steel-proportional update to the previously reported cost gives an estimated unit capital cost of CNY 17,656 kW⁻¹, compared with CNY 19,800 kW⁻¹ for “TuQiang”, also corresponding to a 10.8% reduction under this proportional-cost assumption. Its steel intensity remained below the national demonstration target of 300 t MW⁻¹[21]. The reported tower natural frequencies lay outside the turbine’s 1P and 3P excitation bands[22] (Figure 2b-I). ",
+      "capacityMW": 20,
+      "display": "−10.8%"
+    },
+    {
+      "id": "dlc11_surge",
+      "name": "运行工况纵荡最大值",
+      "baseline": 6.92,
+      "selectedAI": 5.1,
+      "unit": "m",
+      "deltaPercentCalculated": -26.300578034682086,
+      "deltaPercentReported": -26.3,
+      "source": "P0023",
+      "sourceQuote": "The motion responses show a trade-off between lower surge and higher pitch and tower-top acceleration, while tower-base bending moments remain close to those of the baseline. Under power production (DLC 1.1), the time-history maximum surge was 5.10 m for the AI design and 6.92 m for TuQiang, a reduction of 26.3%. The corresponding maxima of pitch and tower-top acceleration were 3.29° versus 2.47° and 1.10 versus 0.82 m s⁻², increases of 33.2% and 34.1%, respectively (Figure 2c). Both pitch maxima were below the plotted 5° reference. The operational tilt criteria retain separate limits of 5° for the time-history mean and 10° for the maximum. Tower-top accelerations remained below 2.94 m s⁻² (0.3g), consistent with the indicative serviceability criteria in DNVGL-RP-0286, Section 5.5.1[24].",
+      "condition": "DLC 1.1"
+    },
+    {
+      "id": "dlc11_pitch",
+      "name": "运行工况纵摇最大值",
+      "baseline": 2.47,
+      "selectedAI": 3.29,
+      "unit": "deg",
+      "deltaPercentCalculated": 33.1983805668016,
+      "deltaPercentReported": 33.2,
+      "source": "P0023",
+      "sourceQuote": "The motion responses show a trade-off between lower surge and higher pitch and tower-top acceleration, while tower-base bending moments remain close to those of the baseline. Under power production (DLC 1.1), the time-history maximum surge was 5.10 m for the AI design and 6.92 m for TuQiang, a reduction of 26.3%. The corresponding maxima of pitch and tower-top acceleration were 3.29° versus 2.47° and 1.10 versus 0.82 m s⁻², increases of 33.2% and 34.1%, respectively (Figure 2c). Both pitch maxima were below the plotted 5° reference. The operational tilt criteria retain separate limits of 5° for the time-history mean and 10° for the maximum. Tower-top accelerations remained below 2.94 m s⁻² (0.3g), consistent with the indicative serviceability criteria in DNVGL-RP-0286, Section 5.5.1[24].",
+      "condition": "DLC 1.1",
+      "plottedReference": 5,
+      "meanCriterion": 5,
+      "maximumCriterion": 10
+    },
+    {
+      "id": "dlc11_acceleration",
+      "name": "运行工况塔顶加速度最大值",
+      "baseline": 0.82,
+      "selectedAI": 1.1,
+      "unit": "m/s²",
+      "deltaPercentCalculated": 34.14634146341464,
+      "deltaPercentReported": 34.1,
+      "source": "P0023",
+      "sourceQuote": "The motion responses show a trade-off between lower surge and higher pitch and tower-top acceleration, while tower-base bending moments remain close to those of the baseline. Under power production (DLC 1.1), the time-history maximum surge was 5.10 m for the AI design and 6.92 m for TuQiang, a reduction of 26.3%. The corresponding maxima of pitch and tower-top acceleration were 3.29° versus 2.47° and 1.10 versus 0.82 m s⁻², increases of 33.2% and 34.1%, respectively (Figure 2c). Both pitch maxima were below the plotted 5° reference. The operational tilt criteria retain separate limits of 5° for the time-history mean and 10° for the maximum. Tower-top accelerations remained below 2.94 m s⁻² (0.3g), consistent with the indicative serviceability criteria in DNVGL-RP-0286, Section 5.5.1[24].",
+      "condition": "DLC 1.1",
+      "limit": 2.94
+    },
+    {
+      "id": "dlc61_surge",
+      "name": "极端工况纵荡最大值",
+      "baseline": 12.38,
+      "selectedAI": 11.2,
+      "unit": "m",
+      "deltaPercentCalculated": -9.531502423263339,
+      "deltaPercentReported": -9.5,
+      "source": "P0024",
+      "sourceQuote": "Under the extreme condition (DLC 6.1), the time-history maximum surge was 11.20 versus 12.38 m, a reduction of 9.5%, whereas pitch reached 9.56° versus 8.02° and tower-top acceleration reached 3.67 versus 3.44 m s⁻², increases of 19.2% and 6.7% (Figure 2d). Both designs remained below the project’s plotted pitch threshold of 10° and the tower-top acceleration limit of 5.89 m s⁻² (0.6g), the latter corresponding to the indicative non-operational acceleration criterion in DNVGL-RP-0286[24].",
+      "condition": "DLC 6.1"
+    },
+    {
+      "id": "dlc61_pitch",
+      "name": "极端工况纵摇最大值",
+      "baseline": 8.02,
+      "selectedAI": 9.56,
+      "unit": "deg",
+      "deltaPercentCalculated": 19.201995012468842,
+      "deltaPercentReported": 19.2,
+      "source": "P0024",
+      "sourceQuote": "Under the extreme condition (DLC 6.1), the time-history maximum surge was 11.20 versus 12.38 m, a reduction of 9.5%, whereas pitch reached 9.56° versus 8.02° and tower-top acceleration reached 3.67 versus 3.44 m s⁻², increases of 19.2% and 6.7% (Figure 2d). Both designs remained below the project’s plotted pitch threshold of 10° and the tower-top acceleration limit of 5.89 m s⁻² (0.6g), the latter corresponding to the indicative non-operational acceleration criterion in DNVGL-RP-0286[24].",
+      "condition": "DLC 6.1",
+      "projectLimit": 10
+    },
+    {
+      "id": "dlc61_acceleration",
+      "name": "极端工况塔顶加速度最大值",
+      "baseline": 3.44,
+      "selectedAI": 3.67,
+      "unit": "m/s²",
+      "deltaPercentCalculated": 6.686046511627897,
+      "deltaPercentReported": 6.7,
+      "source": "P0024",
+      "sourceQuote": "Under the extreme condition (DLC 6.1), the time-history maximum surge was 11.20 versus 12.38 m, a reduction of 9.5%, whereas pitch reached 9.56° versus 8.02° and tower-top acceleration reached 3.67 versus 3.44 m s⁻², increases of 19.2% and 6.7% (Figure 2d). Both designs remained below the project’s plotted pitch threshold of 10° and the tower-top acceleration limit of 5.89 m s⁻² (0.6g), the latter corresponding to the indicative non-operational acceleration criterion in DNVGL-RP-0286[24].",
+      "condition": "DLC 6.1",
+      "limit": 5.89
+    },
+    {
+      "id": "dlc11_mooring",
+      "name": "运行工况系泊张力最大值",
+      "baseline": 2840,
+      "selectedAI": 2788,
+      "unit": "kN",
+      "deltaPercentCalculated": -1.8309859154929553,
+      "deltaPercentReported": -1.8,
+      "source": "P0025",
+      "sourceQuote": "Structural loads showed a similar balance between response measures. Under DLC 1.1, the time-history maximum mooring tension was 2,788 kN for the AI design and 2,840 kN for TuQiang, a reduction of 1.8%. The maximum tower-base bending moment My was 570.00 versus 565.60 MN m, an increase of 0.8% (Figure 2e).",
+      "condition": "DLC 1.1"
+    },
+    {
+      "id": "dlc11_tower_moment",
+      "name": "运行工况塔底弯矩My最大值",
+      "baseline": 565.6,
+      "selectedAI": 570.0,
+      "unit": "MN m",
+      "deltaPercentCalculated": 0.7779349363507659,
+      "deltaPercentReported": 0.8,
+      "source": "P0025",
+      "sourceQuote": "Structural loads showed a similar balance between response measures. Under DLC 1.1, the time-history maximum mooring tension was 2,788 kN for the AI design and 2,840 kN for TuQiang, a reduction of 1.8%. The maximum tower-base bending moment My was 570.00 versus 565.60 MN m, an increase of 0.8% (Figure 2e).",
+      "condition": "DLC 1.1"
+    },
+    {
+      "id": "dlc61_mooring",
+      "name": "极端工况含安全系数系泊张力最大值",
+      "baseline": 14185,
+      "selectedAI": 14041,
+      "unit": "kN",
+      "deltaPercentCalculated": -1.0151568558336321,
+      "deltaPercentReported": -1.0,
+      "source": "P0026",
+      "sourceQuote": "Under DLC 6.1, the time-history maximum mooring tensions, after multiplication by a safety factor, were 14,041 versus 14,185 kN, a reduction of 1.0%. Both factored values were below the plotted project limit of 20,165.9 kN. This comparison distinguishes factored loads from unfactored responses, as described in DNVGL-RP-0286, Section 5.6[24]. The maximum tower-base bending moment was 1,117 versus 1,074 MN m, an increase of 4.0% (Figure 2f). Thus, the reported material and cost savings accompany lower surge and mooring tension, higher pitch and tower-top acceleration, and tower-base bending moments close to those of TuQiang.",
+      "condition": "DLC 6.1",
+      "factored": true,
+      "projectLimit": 20165.9
+    },
+    {
+      "id": "dlc61_tower_moment",
+      "name": "极端工况塔底弯矩My最大值",
+      "baseline": 1074,
+      "selectedAI": 1117,
+      "unit": "MN m",
+      "deltaPercentCalculated": 4.003724394785846,
+      "deltaPercentReported": 4.0,
+      "source": "P0026",
+      "sourceQuote": "Under DLC 6.1, the time-history maximum mooring tensions, after multiplication by a safety factor, were 14,041 versus 14,185 kN, a reduction of 1.0%. Both factored values were below the plotted project limit of 20,165.9 kN. This comparison distinguishes factored loads from unfactored responses, as described in DNVGL-RP-0286, Section 5.6[24]. The maximum tower-base bending moment was 1,117 versus 1,074 MN m, an increase of 4.0% (Figure 2f). Thus, the reported material and cost savings accompany lower surge and mooring tension, higher pitch and tower-top acceleration, and tower-base bending moments close to those of TuQiang.",
+      "condition": "DLC 6.1"
+    },
+    {
+      "id": "cost_proxy",
+      "name": "钢量同比例估算单位投资成本",
+      "baseline": 19800,
+      "selectedAI": 17656,
+      "unit": "CNY/kW",
+      "deltaPercentCalculated": -10.82828282828283,
+      "deltaPercentReported": -10.8,
+      "source": "P0021",
+      "sourceQuote": "We benchmarked the AI-generated foundation against the human-designed “TuQiang” baseline[20], a 20 MW floating wind demonstration unit developed by a consortium of universities and industry partners. Figure 2a compares the two configurations. The selected AI-generated candidate reduced steel intensity from 278 t MW⁻¹ to 247.9 t MW⁻¹, corresponding to a 10.8% reduction. Applying the same steel-proportional update to the previously reported cost gives an estimated unit capital cost of CNY 17,656 kW⁻¹, compared with CNY 19,800 kW⁻¹ for “TuQiang”, also corresponding to a 10.8% reduction under this proportional-cost assumption. Its steel intensity remained below the national demonstration target of 300 t MW⁻¹[21]. The reported tower natural frequencies lay outside the turbine’s 1P and 3P excitation bands[22] (Figure 2b-I). ",
+      "excludedFromPromo": true,
+      "reason": "Proportional-cost assumption; not a quotation, realized saving or independent economics model."
+    }
+  ],
+  "derivedSteel": {
+    "capacityMW": 20,
+    "baselineFoundationSteelTonnes": 5560,
+    "selectedFoundationSteelTonnes": 4958.0,
+    "lessFoundationSteelTonnes": 601.9999999999999,
+    "displayLessTonnes": 602,
+    "formula": "(278 − 247.9) t/MW × 20 MW = 602 t",
+    "source": "P0021",
+    "status": "Derived arithmetic from reported rounded intensities; not a directly reported measured tonnage. Say 同为20兆瓦，按文中单位功率用钢量折算，基础约少用602吨钢。"
+  },
+  "comparisonScope": {
+    "baseline": "TuQiang / 图强号 human-designed reference; main document treats reference fleet entry as planned",
+    "capacityMW": 20,
+    "candidate": "Selected AI-generated research candidate in manuscript",
+    "notValidated": "No claim these are freshly calculated responses of the current cinematic 3D model"
+  },
+  "closedLoop": {
+    "summary": "需求→已注册工具操作→确定性计算→数值/诊断回到任务状态→有边界的修正→重执行与后验检查→内部筛选→选定方案Zwind最终验证。",
+    "recovery": "网格缺陷调整离散化；结构求解不收敛调整数值设置；记录触发诊断、修改、执行任务及post-check。只有重运行成功并复检原故障条件才记为恢复；不放松原始荷载/材料/接受限值。",
+    "guardrails": "重复规格、无效补丁、重试预算耗尽终止自动修改；未解决恢复/未完成计算/物理限值不通过禁止推进。",
+    "zwindRole": "Final coupled verification only; does not propose/rank iterative modifications.",
+    "sourceQuotes": [
+      {
+        "locator": "P0014",
+        "text": "Over the past decades, computational engineering has amassed an impressive arsenal of deterministic solvers—finite-element packages[4], boundary-element methods[5], and multi-body dynamics codes[6]—each capable of high-fidelity predictions for its assigned physics domain. Yet the engineering design cycle as a whole remains stubbornly human-intensive. The bottleneck is not the fidelity of individual solvers, but the orchestration across them. A typical floating-wind design iteration requires manual data translation between CAD modellers (geometry)[7], mesh generators (discretisation)[8], structural solvers (stress and stability)[9], and aero-hydro-servo-elastic simulators (coupled responses)[10]. When a continuum mesh degenerates, an element-set name dissociates from solver conventions, a geometric interference emerges after parametric updates, or a structural unity check[11] exceeds 1.0, the human expert must diagnose the root cause, adjust parameters or boundary conditions, restart the toolchain and re-evaluate. Reinforcement learning[12] and Bayesian optimization[13] can tune objectives within fixed computational pipelines, but practical engineering workflows additionally contain heterogeneous software interfaces, discrete numerical failures and codified physical constraints[14]. What is missing, therefore, is not another surrogate model or a faster solver, but an agentic layer capable of closing the loop across heterogeneous engineering tools: proposing an engineering action, observing its computational consequence, interpreting returned diagnostics against physical and codified constraints, and deciding what operation should follow. This is the gap we address with The AI Engineer."
+      },
+      {
+        "locator": "P0015",
+        "text": "Here we introduce The AI Engineer, an end-to-end agentic framework that closes the engineering design loop between language-model reasoning and deterministic physics-based computation (Figure 1b). Rather than using an LLM to directly generate an engineering design, the framework assigns distinct roles to the language model and engineering backends: the LLM acts as an orchestrator that interprets requirements, selects engineering actions and responds to computational feedback, whereas deterministic tools execute and evaluate those actions. In essence, the LLM decides which engineering operation to attempt next, while deterministic physics-based computation determines its outcome and provides the evidence for the next decision. Starting from natural-language requirements, The AI Engineer converts design intent into structured specifications and progressively develops a candidate through topology optimization (BESO–CalculiX)[15,16], size optimization (SQP)[17], and final time-domain verification with Zwind under coupled aero-hydro-servo-elastic load cases[18], and automated generation of engineering drawings and reports. Crucially, these stages do not form a one-way pipeline. During topology and size optimization, solver outputs, constraint violations and diagnostic messages are returned to an explicit task state. The orchestrator then determines whether the candidate should proceed, be revised, or trigger a configured recovery action. The revised candidate is subsequently re-executed by the relevant engineering backend, such that a language-model decision becomes an engineering action whose consequence is quantitatively evaluated by deterministic computation. This repeated cycle of proposal, execution, diagnosis, revision and verification constitutes the closed loop of The AI Engineer. Zwind subsequently checks the selected design under the prescribed coupled load cases and is not used to propose or rank iterative modifications."
+      },
+      {
+        "locator": "P0036",
+        "text": "The central result of this study is not a particular floating-wind geometry, but a different computational organization of engineering design. In The AI Engineer, language-model reasoning is not treated as engineering evidence: it proposes actions, whereas deterministic computation establishes their consequences. Returned numerical evidence and diagnostics are written back into persistent task state and condition subsequent actions, thereby closing the loop between language-level reasoning and physical computation. "
+      },
+      {
+        "locator": "P0039",
+        "text": "Recent agentic systems connect language models to research and manuscript preparation[41], scientific software[42], biomedical research[43], hypothesis generation and discovery[44,45], and laboratory experiments[46]. These applications build on architectures for planning, memory and tool use reviewed in the broader autonomous-agent literature[47]. Paper2Agent converts published methods and code into tested tools exposed through the Model Context Protocol, allowing language-model agents to invoke scientific workflows through natural-language interaction[48]. Engineering orchestration shares this need to ground a proposed action in external evidence, but additionally requires explicit physical inputs, admissible design changes and applicable limit states[11]. In The AI Engineer, structured tool requests connect the language model to numerical backends, task state carries feedback across operations, and revision contracts restrict which candidate variables may change. The agent uses the registered failure class, the latest tool status and the available task-state diagnostics to select the next configured operation. A mesh-quality failure calls for changes to discretization, whereas stalled structural convergence calls for changes to numerical solution settings. The corresponding backend then reruns the affected calculation, and its outputs are checked against the original engineering requirements before progression. This separation between deciding an action and establishing its physical consequence is the defining distinction between language-level agency and engineering verification in our framework. Recording the diagnostic evidence, selected modification and post-check together makes the contribution of each intervention inspectable, rather than attributing a successful design only to its final geometry."
+      },
+      {
+        "locator": "P0063",
+        "text": "The AI Engineer was designed around a strict separation between decision, execution and evidence. A language-model output can propose an engineering operation or a revision to an existing candidate, but it is not itself treated as an engineering result. Only execution by the corresponding engineering backend establishes the numerical consequence of that action. Returned outputs, diagnostics and constraint evaluations are then incorporated into the persistent task state and used to condition the next decision. This sequence—proposal, execution, evaluation and state-conditioned replanning—defines the closed loop used throughout the framework. Tool-augmented scientific systems provide relevant precedents for connecting language-model planning to external execution[46,51]."
+      },
+      {
+        "locator": "P0064",
+        "text": "The implementation couples a conversational LLM-based orchestrator to an explicit engineering workflow. The orchestrator interprets natural-language requirements, returned diagnostics and candidate-level evidence, whereas registered engineering tools perform geometry construction, meshing, optimization and numerical evaluation. The LangGraph implementation separates the conversational graph from a master engineering graph spanning four principal phases: requirements processing, design-domain construction and topology optimization, deliverable preparation and size optimization, and candidate screening. The modular separation of numerical components also has precedents in nonlinear finite-element software architectures based on object composition[52]."
+      },
+      {
+        "locator": "P0065",
+        "text": "Engineering operations are invoked through structured tool calls. The language model specifies a registered tool and its arguments in JSON format. A dispatcher invokes the corresponding handler and returns execution status, diagnostic information, computed metrics and references to generated artifacts. Separate Pydantic schemas structure requirements and BESO parameters before operation-specific consistency checks. The response is either a tool proposal or a final reply. Malformed structured responses trigger a repair request. Returned tool results are incorporated into the next model context. A tool-turn budget bounds repeated interactions."
+      },
+      {
+        "locator": "P0066",
+        "text": "This architecture establishes a deliberate asymmetry between the LLM and the engineering backends: the LLM determines which admissible engineering operation to attempt next, whereas deterministic physics-based computation determines the outcome of that operation and provides the evidence for the subsequent decision."
+      },
+      {
+        "locator": "P0067",
+        "text": "Task state and physics-grounded replanning"
+      },
+      {
+        "locator": "P0068",
+        "text": "The controller maintains computational context across engineering operations through an explicit task state："
+      },
+      {
+        "locator": "P0069",
+        "text": "where φt denotes the current workflow phase, Ct contains checklist and session information, Jt identifies active engineering jobs, At contains generated geometry and mesh files, solver inputs and outputs, logs and reports, Lt contains execution logs and diagnostics, Mt contains returned engineering metrics, and rt records whether a recovery action is pending."
+      },
+      {
+        "locator": "P0070",
+        "text": "Tool responses update both the assistant history and the execution trace, whereas the master graph tracks the state of long-running engineering jobs. For example, a running BESO calculation can suspend graph progression until completion feedback is returned. A separate interruption point permits human inspection before meshing when required. Persistent task state therefore connects language-level decisions to long-running computations and preserves the numerical context required for subsequent operations. When a task identifier is supplied, the web assistant also records a task-scoped execution trace containing model settings, prompt and response hashes, tool summaries and artifact references."
+      },
+      {
+        "locator": "P0071",
+        "text": "Solver or workflow failures do not directly trigger acceptance of an LLM-generated correction. Instead, returned diagnostics are first classified and mapped to configured recovery policies. In the reported optimization workflow, diagnostics distinguish mesh-quality defects from structural solver non-convergence. The agent combines this failure class with the active task state to select a registered recovery operation. For diagnostic class dt, the proposed configuration update can be represented as"
+      },
+      {
+        "locator": "P0072",
+        "text": "where θt denotes the current engineering configuration and R returns an admissible parameter patch, such as changes to configured mesh-size, solver-iteration or load-step parameters."
+      },
+      {
+        "locator": "P0073",
+        "text": "The superscript p emphasizes that θt+1p is only a proposed recovery. The patch, its rationale and the pending-recovery status are recorded in the task state, but the recovery is not considered successful until the modified operation is executed and new numerical evidence is returned. The replan executor dispatches the proposed intervention to the corresponding meshing or structural solver backend, and the returned artifacts, job status or checks determine whether the intervention resolved the original failure."
+      },
+      {
+        "locator": "P0074",
+        "text": "The record for each intervention links the triggering diagnostic to the proposed parameter change, the executed job and the post-check. A numerical recovery is counted only when the affected computation completes and the triggering failure criterion is re-evaluated. Engineering feasibility is assessed separately against the unchanged load cases, material assumptions and design limits. This prevents improved numerical convergence from being mistaken for an improvement obtained by relaxing the design requirements."
+      },
+      {
+        "locator": "P0075",
+        "text": "Candidate revision and acceptance"
+      },
+      {
+        "locator": "P0076",
+        "text": "A bounded candidate-level revision loop surrounds the construction-specific engineering adapters. For each candidate xi, computed metrics, rule findings, assumptions and available provenance information are supplied to the orchestrator. The language model can recommend one of three candidate-level actions:"
+      },
+      {
+        "locator": "P0077",
+        "text": "The recommendation does not itself determine engineering validity. A numerical validation callback evaluates the candidate against the applicable computational and screening criteria, and the candidate service combines this result with the structured model review before selection."
+      },
+      {
+        "locator": "P0078",
+        "text": "When revision is requested, an adapter-specific revision contract defines which design variables may be modified and their admissible bounds:"
+      },
+      {
+        "locator": "P0079",
+        "text": "where Ωrev denotes the set of modifications permitted by the active adapter. For the prism adapter, for example, geometry variables can be modified only through an explicit revision contract, while loads, material properties and acceptance requirements remain outside the geometry patch."
+      },
+      {
+        "locator": "P0080",
+        "text": "Repeated specifications, invalid patches and exhaustion of the configured retry budget terminate further autonomous revision. Each attempt is assigned an identifier and linked to its parent candidate, allowing a proposed modification to be associated with the calculation that subsequently evaluates it."
+      },
+      {
+        "locator": "P0081",
+        "text": "Candidate screening uses a default composite-score threshold of S≥85, together with a minimum supplied sub-score of 60. A separate phase-transition guard prevents progression while a recovery operation remains unresolved. When artifact enforcement is enabled, the executor additionally checks the availability and readability of required topology and review records and examines score provenance before advancing a candidate. For engineering advancement, all five scoring inputs must be identified, every required analysis must have completed, and the applicable physical checks must be satisfied. The scalar score test is evaluated together with these completion and feasibility checks. It does not replace them."
+      },
+      {
+        "locator": "P0108",
+        "text": "The optimized candidate is then verified with Zwind 2.5[18] under coupled aero-hydro-servo-elastic load cases. Zwind does not participate in the optimization loop and only returns verification metrics such as platform motions, tower-top acceleration, mooring tension, and tower-base loads, under power production load cases (i.e. DLC 1.1) and extreme load cases (i.e. DLC 6.1). The selected design is accepted only if these verification responses satisfy the applicable limits."
+      }
+    ]
+  },
+  "humanRole": {
+    "supported": "可在网格前检查中间结果、调整约束优先级或冻结子域；最终工程责任由人承担。人工决定版本/取舍不应替代系统的自动诊断修正循环。",
+    "manualVersionSelection": "User-requested framing, not an exact UI workflow specified in the document. Verify product support separately.",
+    "sourceQuotes": [
+      {
+        "locator": "P0051",
+        "text": "First, the reported campaign generated multiple candidates that satisfied the internal screening criteria, but only the highest-scoring branch was advanced to AIP submission. The remaining candidates represented different trade-offs across cost, constructability and fatigue performance. The repeated experiments across different seeds provide a basis for examining candidate quality and run-to-run variability. Future work should extend these evaluations to a broader range of design tasks and campaigns, while tightening integration between the BESO topology module[15] and downstream SQP-based sizing and Zwind-based verification modules and developing more systematic replanning policies."
+      },
+      {
+        "locator": "P0058",
+        "text": "Ethically, certification societies must confront transparent AI authorship disclosure. Our protocol—AIP with pre-registered withdrawal clauses if certificate issuance would obscure AI attribution—offers a preliminary template, though global norms remain unsettled. This echoes concerns raised by recent autonomous discovery systems regarding the integrity of peer review and scientific attribution. For engineering certification, the stakes are even higher: if a design generated by an AI system is approved and later fails in service, the chain of accountability must be clear. We advocate that the human engineer responsible for submitting the design retains ultimate accountability, with the AI system treated as a computational collaborator rather than a legal author—a position consistent with the “human-in-command” stance adopted by recent agentic systems in biomedical and scientific domains[49,50]."
+      },
+      {
+        "locator": "P0059",
+        "text": "The framework provides intervention points, including review before meshing, allowing domain experts to inspect intermediate outputs and apply high-level adjustments—such as revising constraint priorities or freezing selected design subdomains—without breaking the closed-loop validation workflow. This interface serves scenarios where engineering judgement or project-specific requirements need to complement the optimization-driven search, preserving the human role as a high-level director rather than a low-level operator."
+      },
+      {
+        "locator": "P0060",
+        "text": "If developed responsibly, such agentic systems could broaden access to high-quality design iteration. They could allow engineering teams to explore substantially larger numbers of computationally evaluated concepts before committing to physical fabrication, while ensuring that accountable human engineers remain in charge of the final mile to type approval and offshore installation. The AI Engineer does not replace human engineers. Instead, it amplifies their expertise through rigorous, physics-grounded automation. We envision that agentic frameworks of this kind will become standard collaborators in engineering practice—not as autonomous decision-makers, but as high-bandwidth explorers that dramatically expand the scope of systematic design exploration, leaving human judgment to navigate the trade-offs that no solver can encode."
+      },
+      {
+        "locator": "P0070",
+        "text": "Tool responses update both the assistant history and the execution trace, whereas the master graph tracks the state of long-running engineering jobs. For example, a running BESO calculation can suspend graph progression until completion feedback is returned. A separate interruption point permits human inspection before meshing when required. Persistent task state therefore connects language-level decisions to long-running computations and preserves the numerical context required for subsequent operations. When a task identifier is supplied, the web assistant also records a task-scoped execution trace containing model settings, prompt and response hashes, tool summaries and artifact references."
+      },
+      {
+        "locator": "P0080",
+        "text": "Repeated specifications, invalid patches and exhaustion of the configured retry budget terminate further autonomous revision. Each attempt is assigned an identifier and linked to its parent candidate, allowing a proposed modification to be associated with the calculation that subsequently evaluates it."
+      }
+    ]
+  },
+  "figures": {
+    "captions": [
+      {
+        "locator": "T01R04C01",
+        "text": "Fig. 1 | Human and closed-loop AI engineering workflows. a, Reference human workflow, in which engineers translate requirements into candidate designs, operate engineering tools, interpret returned results and iteratively revise the design before external review. b, Closed-loop workflow of The AI Engineer. The LLM orchestrator converts requirements into structured engineering actions, deterministic backends execute and evaluate those actions, and returned numerical evidence and diagnostics update the task state that conditions subsequent decisions. The workflow spans requirements processing, geometry construction, meshing and topology optimization, followed by parametric upscaling, SQP-based size optimization, drawing and report preparation, and internal candidate review. Zwind performs the final coupled-response verification of the selected design. Recovery paths return failed or non-accepted operations to earlier stages for revision and re-execution. The Automated Reviewer supports internal candidate screening, whereas CCS AIP provides separate external appraisal of the selected concept. c, Six BESO topology cases with perspective and plan views. I–V use two to six supports and central-ring loading, with local sector moments of 200, 133.33, 100, 80 and 66.67 MN m, respectively. VI uses three supports and loading at the P1 rim with a 400 MN m moment. Red arrows denote the downward force (24.5 MN), orange double arrows denote moment axes, and blue triangles mark fixed supports. V/V₀ is the retained volume fraction. The central-case values are local sector moments rather than a common global resultant. The scale bar represents 20 m."
+      },
+      {
+        "locator": "T02R07C01",
+        "text": "Fig. 2 | Foundation configurations and dynamics. a, AI-generated foundation (left) and TuQiang (right). b, Tower natural frequencies and turbine excitation bands (I), and platform free-decay periods (II). c, Time-history maxima of surge (I), pitch (II) and tower-top acceleration (III) under design load case (DLC) 1.1. Percentage differences are relative to TuQiang. Dashed lines mark the 5° pitch reference and the 2.94 m s⁻² acceleration limit. The operational tilt criteria distinguish a mean of 5° from a maximum of 10°[24]. d, Time-history maxima of surge (I), pitch (II) and tower-top acceleration (III) under DLC 6.1. Percentage differences are relative to TuQiang. Dashed lines mark the project pitch threshold of 10° and the acceleration limit of 5.89 m s⁻². The latter follows the indicative DNV criterion[24]. e, Time-history maxima of mooring tension (I) and tower-base bending moment My (II) under DLC 1.1. Percentage differences are relative to TuQiang. f, Time-history maxima of mooring tension (I) and tower-base bending moment My (II) under DLC 6.1. Reported mooring tensions include a safety factor. The dashed line marks the corresponding project limit of 20,165.9 kN. Percentage differences are relative to TuQiang."
+      },
+      {
+        "locator": "T03R03C01",
+        "text": "Fig. 3 | Automated Reviewer profiles and rule-channel comparison. a, Five-dimensional profiles and score matrix for the 11-entry reference fleet. Radar profiles compare each project with the fleet median. The matrix gives deviations from that median. The remaining planned entry, TuQiang, is marked with an asterisk. b, Per-dimension comparisons for capacity, steel intensity, unit cost, constructability and fatigue life. Blue circles and red squares denote the AI Review and regulatory scores, respectively. Green stars and diamonds identify the selected AI design in the two channels. Dashed curves show nonlinear trends. The composite-score agreement analysis uses the ten commissioned entries: Spearman ρ=0.612, mean absolute difference 4.0 points and 9/10 entries satisfying the agreement rule."
+      }
+    ],
+    "activeImageManifest": "manifest.json",
+    "visualReview": {
+      "method": "Direct visual inspection of all 11 active raster figure panels extracted from DOCX; SVG text labels also extracted. Current PNGs correlate with active SVG counterparts. No Word-page rendering or verified page numbering claimed.",
+      "filesViewed": [
+        "image1.png",
+        "image2.png",
+        "image5.png",
+        "image8.png",
+        "image12.png",
+        "image15.png",
+        "image18.png",
+        "image21.png",
+        "image24.png",
+        "image28.png",
+        "image32.png"
+      ],
+      "findings": {
+        "fig2c": "5.10/6.92;3.29/2.47;1.10/.82 and −26.3/+33.2/+34.1 match P0023.",
+        "fig2d": "11.20/12.38;9.56/8.02;3.67/3.44 and −9.5/+19.2/+6.7 match P0024.",
+        "fig2e": "2788/2840 and570.00/565.60 match P0025.",
+        "fig2f": "14041/14185 factored tension;1117/1074 moment match P0026.",
+        "fig1c": "Six candidates differ support counts/load placement; no same-global-load claim is warranted."
+      },
+      "wordPageRender": "Not performed. Runtime dependency loader on Windows supplied no bundled LibreOffice path; no installed desktop office app was invoked. Body/table locators are structural OOXML locators, not page numbers."
+    }
+  },
+  "issues": [
+    {
+      "id": "tracked_media",
+      "kind": "version-control hazard",
+      "finding": "Document preserves deleted figure binaries alongside current figures; old artwork must not be reused as latest data.",
+      "resolution": "Use active=false/deleted flags in manifest; active Fig2c–f are image15/18/21/24.png and SVG16/19/22/25."
+    },
+    {
+      "id": "aip_scope",
+      "kind": "external source conflict requiring bounded phrasing",
+      "finding": "P0010/P0017/P0033/P0129 characterize AIP as selected-design concept approval. Previously inspected certificate originals name AI Engineer端对端浮式基础智能设计软件认证项目 and scope software functions/algorithms/parameters. No new certificate is embedded in this DOCX.",
+      "resolution": "Keep video approval claim bounded to the software certificate; do not imply this depicted hull or every generated design is approved.",
+      "documentSources": [
+        "P0017",
+        "P0033",
+        "P0129"
+      ],
+      "certificateSource": "D:/python_project/beso_ai/docs/assets/浙江大学AIP证书-1.png",
+      "secondCertificateSource": "D:/python_project/beso_ai/docs/assets/浙江大学AIP证书-2.png"
+    },
+    {
+      "id": "figure1_review_arrow",
+      "kind": "diagram simplification",
+      "finding": "Active Fig1b image2.png visibly links S≥85 toward CCS AIP, which could imply automatic certification if copied without explanation. Text P0043/P0081/P0117 says score is internal selection and physical/completion checks plus external review remain separate.",
+      "resolution": "Redesign loop with internal review and external review separate; do not present score as guarantee."
+    },
+    {
+      "id": "figure3_score_channels",
+      "kind": "different retained score records",
+      "finding": "Active Fig3b selected-design steel AI score is visually about45, while P0121 retained candidate worksheet lists steel score92 and overall91.2. P0121 explicitly says worksheet is separate from fleet-calibration scores. These are not interchangeable score records.",
+      "resolution": "Omit composite score/radar superiority from short promo unless source channel is explained."
+    },
+    {
+      "id": "human_version_choice",
+      "kind": "interpretation boundary",
+      "finding": "Document supports optional human inspection before meshing, changes to priorities/frozen subdomains, candidate identifiers/lineage and human final accountability. It does not explicitly document a UI operation called manual version selection.",
+      "resolution": "User-directed narrative 人来选版本/定方向 is compatible with these roles, but should be treated as product/user framing and checked against live implementation; do not describe manual review as every automatic recovery step."
+    },
+    {
+      "id": "data_scope",
+      "kind": "evidence limit",
+      "finding": "Latest DOCX reports selected research campaign values. This review has not rerun solvers nor bound the latest selected design to current three-column cinematic geometry.",
+      "resolution": "Use 本研究案例/同为20MW and separate geometry illustration from reported results."
+    },
+    {
+      "id": "cost_scope",
+      "kind": "assumption not measured outcome",
+      "finding": "17,656 CNY/kW is explicitly proportional to steel update, not independent cost estimation.",
+      "resolution": "Focus material efficiency; omit investment saving claims."
+    },
+    {
+      "id": "multi_seeds",
+      "kind": "unsupported quantitative promise",
+      "finding": "The text mentions multiple random seeds but provides no seed count, task success rate, speedup factor or production ROI in this main document.",
+      "resolution": "Do not invent efficiency multipliers, success percentages or time-to-market savings."
+    }
+  ],
+  "checks": [
+    {
+      "id": "steel_intensity_percentage",
+      "passed": true,
+      "calculated": -10.8273381294964,
+      "reported": -10.8
+    },
+    {
+      "id": "dlc11_surge_percentage",
+      "passed": true,
+      "calculated": -26.300578034682086,
+      "reported": -26.3
+    },
+    {
+      "id": "dlc11_pitch_percentage",
+      "passed": true,
+      "calculated": 33.1983805668016,
+      "reported": 33.2
+    },
+    {
+      "id": "dlc11_acceleration_percentage",
+      "passed": true,
+      "calculated": 34.14634146341464,
+      "reported": 34.1
+    },
+    {
+      "id": "dlc61_surge_percentage",
+      "passed": true,
+      "calculated": -9.531502423263339,
+      "reported": -9.5
+    },
+    {
+      "id": "dlc61_pitch_percentage",
+      "passed": true,
+      "calculated": 19.201995012468842,
+      "reported": 19.2
+    },
+    {
+      "id": "dlc61_acceleration_percentage",
+      "passed": true,
+      "calculated": 6.686046511627897,
+      "reported": 6.7
+    },
+    {
+      "id": "dlc11_mooring_percentage",
+      "passed": true,
+      "calculated": -1.8309859154929553,
+      "reported": -1.8
+    },
+    {
+      "id": "dlc11_tower_moment_percentage",
+      "passed": true,
+      "calculated": 0.7779349363507659,
+      "reported": 0.8
+    },
+    {
+      "id": "dlc61_mooring_percentage",
+      "passed": true,
+      "calculated": -1.0151568558336321,
+      "reported": -1.0
+    },
+    {
+      "id": "dlc61_tower_moment_percentage",
+      "passed": true,
+      "calculated": 4.003724394785846,
+      "reported": 4.0
+    },
+    {
+      "id": "cost_proxy_percentage",
+      "passed": true,
+      "calculated": -10.82828282828283,
+      "reported": -10.8
+    },
+    {
+      "id": "source_unchanged",
+      "passed": true
+    },
+    {
+      "id": "derived_steel_602",
+      "passed": true
+    },
+    {
+      "id": "old_steel_not_active_text",
+      "passed": true
+    },
+    {
+      "id": "cost_proportional_rounding",
+      "passed": true
+    }
+  ],
+  "checksAllPassed": true,
+  "publicationStatus": "Author-supplied manuscript; no publication DOI for this study is established. Data availability P0137 says deposit upon publication.",
+  "narrationSuggestions": [
+    "AI Engineer，连接工程工具，也接住计算的反馈。",
+    "网格出了问题、求解没有收敛，它会读回诊断，在允许的范围内调整，再调用工具重算。",
+    "每一步都要用新的计算结果复查；不满足条件，就继续修改或停止。",
+    "工程师决定目标、版本和取舍；系统承担重复的工具执行与闭环检查。",
+    "同为二十兆瓦，本研究案例的单位功率用钢量，比图强号参考基线降低百分之十点八。",
+    "按相同容量折算，基础约少用六百零二吨钢。",
+    "节省材料，也要看响应：极端工况系泊张力略低，纵摇增加，但仍在本案例十度阈值内。"
+  ]
+}

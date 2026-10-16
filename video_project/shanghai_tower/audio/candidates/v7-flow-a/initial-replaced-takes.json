@@ -1,0 +1,562 @@
+{
+  "s002": {
+    "id": "s002",
+    "text": "先把外层玻璃分区移开，再把楼面和钢架展开。每一层都留在自己的高度，里面的连接就露出来了。",
+    "ttsText": "先把外层玻璃分区移开，再把楼面和钢架展开。每一层都留在自己的高度，里面的连接就露出来了。",
+    "signature": "7c46111fc5010dfe64d300499ec8e93e94ed8cf368ca6c330b1874751ae131e1",
+    "raw": "audio/raw/s002-7c46111fc5.wav",
+    "processed": "audio/candidates/v7-flow-a/s002.wav",
+    "rawDuration": 8.16,
+    "duration": 8.4,
+    "sha256": "ffecbaf3039411255b6de066d290eb04c9023ce224e4a0080e2f1fea426bbb53",
+    "seed": 2573539373,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s001",
+      "s002",
+      "s003"
+    ],
+    "rawEndpointDB": -97.12680151207392,
+    "rawEndpointFlag": false,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "9d4aaf41a7acba00d7a1b1c354132877e3d95aa73d31cb73778b9b7ee89cd588",
+      "outputSha256": "ffecbaf3039411255b6de066d290eb04c9023ce224e4a0080e2f1fea426bbb53",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1196,
+      "gainDb": 2.255328270567354,
+      "input": {
+        "seconds": 8.4,
+        "peakDb": -6.828389575260557,
+        "activeRmsDb": -21.99358053694695,
+        "quietFrameP10Db": -60.01678806422103
+      },
+      "output": {
+        "seconds": 8.4,
+        "peakDb": -4.309787645776569,
+        "activeRmsDb": -21.0,
+        "quietFrameP10Db": -61.27536802985641
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "2fa000c94eadd36999e95a1eca1ec098358a987a6018050afdcb22f9a9aa4ab2"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "s003": {
+    "id": "s003",
+    "text": "从外向里看，先是幕墙，再是梁柱，最里面是核心筒。镜头顺着这些构件往下，地下还有另一半答案。",
+    "ttsText": "从外向里看，先是幕墙，再是梁柱，最里面是核心筒。镜头顺着这些构件往下，地下还有另一半答案。",
+    "signature": "8ab6d8c4f6061f614f932e679bdedc27ae655ab8b7b0483300448938c82d1c00",
+    "raw": "audio/raw/s003-8ab6d8c4f6.wav",
+    "processed": "audio/candidates/v7-flow-a/s003.wav",
+    "rawDuration": 8.800041666666667,
+    "duration": 9.040041666666667,
+    "sha256": "f2462b2ee20c6cc75bb604f4fb37368fe54d4826cf993a251074077f7a03230b",
+    "seed": 2573539373,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s001",
+      "s002",
+      "s003"
+    ],
+    "rawEndpointDB": -68.89860291856083,
+    "rawEndpointFlag": false,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "20399f560f89a766f0a093bd511a5711fb63a0508162c3c29a0c38717acdd1f8",
+      "outputSha256": "f2462b2ee20c6cc75bb604f4fb37368fe54d4826cf993a251074077f7a03230b",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1196,
+      "gainDb": 2.7203624247439606,
+      "input": {
+        "seconds": 9.040041666666667,
+        "peakDb": -7.573187462350798,
+        "activeRmsDb": -22.267656994882145,
+        "quietFrameP10Db": -63.10613437557673
+      },
+      "output": {
+        "seconds": 9.040041666666667,
+        "peakDb": -5.360377664282091,
+        "activeRmsDb": -21.0,
+        "quietFrameP10Db": -63.25575389551389
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "14b0f93a1b8ff4296477e11c4a8acecf3b1b0afd9abd0dca657a7ee27627213c"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "s006": {
+    "id": "s006",
+    "text": "桩伸进更深的土层，楼的重量沿着桩身向下传。周围的土贴着桩身，提供向上的侧阻；桩底的土，再托住一部分。这两条传力路线，一起接住上面的重量。",
+    "ttsText": "桩伸进更深的土层，楼的重量沿着桩身向下传。周围的土贴着桩身，提供向上的侧阻；桩底的土，再托住一部分。这两条传力路线，一起接住上面的重量。",
+    "signature": "f61785d33db7a0947eb71baa0dfa9089d76f44c83987f6f9dbd5622d48642f23",
+    "raw": "audio/raw/s006-f61785d33d.wav",
+    "processed": "audio/candidates/v7-flow-a/s006.wav",
+    "rawDuration": 13.04,
+    "duration": 13.28,
+    "sha256": "c60e5067ae24a81fe58f83ea93a31bc9471eb387d5e4478d14f08703b02d49da",
+    "seed": 4128736723,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s006",
+      "s007",
+      "s012"
+    ],
+    "rawEndpointDB": -59.982250313421105,
+    "rawEndpointFlag": false,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "285bdb4867d14e305193ce5e09ae22130e6cbeea23d963f4393f2a1a2c42bbd9",
+      "outputSha256": "c60e5067ae24a81fe58f83ea93a31bc9471eb387d5e4478d14f08703b02d49da",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1196,
+      "gainDb": 3.1914281110958456,
+      "input": {
+        "seconds": 13.28,
+        "peakDb": -7.620871694210475,
+        "activeRmsDb": -22.820775051843217,
+        "quietFrameP10Db": -63.41457669188917
+      },
+      "output": {
+        "seconds": 13.28,
+        "peakDb": -5.076113458926178,
+        "activeRmsDb": -21.0,
+        "quietFrameP10Db": -62.6444587912781
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "12ae3426802316fb77f92f23285c97318e8033fd54757d8b366743ff76a1d333"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "s007": {
+    "id": "s007",
+    "text": "再看一根独立的桩模型，给它一段变化的侧向推力。桩头先移动，桩身跟着弯曲，周围的土沿着深度抵住它。颜色随受力改变，弯曲最明显的部位也露了出来。推力撤掉以后，桩还会轻轻摆几下，能量逐渐耗散。这是一根桩的计算例子，用来读懂桩和土怎样配合。",
+    "ttsText": "再看一根独立的桩模型，给它一段变化的侧向推力。桩头先移动，桩身跟着弯曲，周围的土沿着深度抵住它。颜色随受力改变，弯曲最明显的部位也露了出来。推力撤掉以后，桩还会轻轻摆几下，能量逐渐耗散。这是一根桩的计算例子，用来读懂桩和土怎样配合。",
+    "signature": "a8245898f2ecbc03199ab3c3498da5e7df518bd3073b904a0d78ac79a62bafc8",
+    "raw": "audio/raw/s007-a8245898f2.wav",
+    "processed": "audio/candidates/v7-flow-a/s007.wav",
+    "rawDuration": 21.6,
+    "duration": 21.84,
+    "sha256": "25306acc192d93a5a440c94bc7a879950de00ce05119d54d85231b555e47fd79",
+    "seed": 4128736723,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s006",
+      "s007",
+      "s012"
+    ],
+    "rawEndpointDB": -93.34401381719562,
+    "rawEndpointFlag": false,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "6cafcc431a71f856939ef17c97afd0cbbd337b608b31296fdf510e9351628e73",
+      "outputSha256": "25306acc192d93a5a440c94bc7a879950de00ce05119d54d85231b555e47fd79",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1196,
+      "gainDb": 2.8312224035154365,
+      "input": {
+        "seconds": 21.84,
+        "peakDb": -6.050558574885926,
+        "activeRmsDb": -22.63631722019457,
+        "quietFrameP10Db": -63.00459241420674
+      },
+      "output": {
+        "seconds": 21.84,
+        "peakDb": -2.519020253044114,
+        "activeRmsDb": -21.0,
+        "quietFrameP10Db": -62.796908876068336
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "5910af8c5d99b8070b3ab5fa4168116f3aa56ccda189aa08c7f3fef074674651"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "s012": {
+    "id": "s012",
+    "text": "钢材和混凝土一起工作，既接住楼层向下的重量，也抵抗风从侧面带来的推力。",
+    "ttsText": "钢材和混凝土一起工作，既接住楼层向下的重量，也抵抗风从侧面带来的推力。",
+    "signature": "660f7299aa40fc4a9d6f120c7af8d13079ab9f5a5c9d2aa25d8faac25e7235c4",
+    "raw": "audio/raw/s012-660f7299aa.wav",
+    "processed": "audio/candidates/v7-flow-a/s012.wav",
+    "rawDuration": 6.88,
+    "duration": 7.12,
+    "sha256": "a31573fb39969f7abe5d7be828a06387ffec6e340b55b286a25dbc7a61b24ee7",
+    "seed": 4128736723,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s006",
+      "s007",
+      "s012"
+    ],
+    "rawEndpointDB": -74.30163052933335,
+    "rawEndpointFlag": false,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "88a76671b6a714b68e36425097404dd58083f44a111dac44977371eb8a9978ef",
+      "outputSha256": "a31573fb39969f7abe5d7be828a06387ffec6e340b55b286a25dbc7a61b24ee7",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1196,
+      "gainDb": 1.884355371642723,
+      "input": {
+        "seconds": 7.12,
+        "peakDb": -4.638091831952545,
+        "activeRmsDb": -21.55126808959093,
+        "quietFrameP10Db": -69.24988863551393
+      },
+      "output": {
+        "seconds": 7.12,
+        "peakDb": -4.722241272980133,
+        "activeRmsDb": -21.0,
+        "quietFrameP10Db": -71.99479162022426
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "16a45fde28c54dcdcb0e6236b07af9f52c5cc34bbf0c33b75b05c1ca4e950d89"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "s018": {
+    "id": "s018",
+    "text": "把两边接起来的，是伸臂钢架。先拆开看：上下两条横杆，叫上弦和下弦；中间的斜杆，把它们连成一个个三角形。整体弯曲时，上下弦分担拉伸和压缩，斜杆把力传到相邻的节点。合起来以后，这座小钢桥就能把核心筒和外圈柱连在一起。上海中心在六处关键高度，布置了这样的连接。",
+    "ttsText": "把两边接起来的，是伸臂钢架。先拆开看：上下两条横杆，叫上弦和下弦；中间的斜杆，把它们连成一个个三角形。整体弯曲时，上下弦分担拉伸和压缩，斜杆把力传到相邻的节点。合起来以后，这座小钢桥就能把核心筒和外圈柱连在一起。上海中心在六处关键高度，布置了这样的连接。",
+    "signature": "267505f5372922e698af6690d9a0c924aae61ed39769f48101338d325bc62880",
+    "raw": "audio/raw/s018-267505f537.wav",
+    "processed": "audio/candidates/v7-flow-a/s018.wav",
+    "rawDuration": 24.72,
+    "duration": 24.96,
+    "sha256": "f1b678e8258aa5b57440b6a2e7b86f5fe41b00168cc06cff88c12e8d01ff71f8",
+    "seed": 3239441836,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s013",
+      "s018",
+      "s019"
+    ],
+    "rawEndpointDB": -30.202341933969787,
+    "rawEndpointFlag": true,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "88aad11c1b339e288d2822c1fcae11db23eb841e2a67e41a1b89001ea261809c",
+      "outputSha256": "f1b678e8258aa5b57440b6a2e7b86f5fe41b00168cc06cff88c12e8d01ff71f8",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1200,
+      "gainDb": 2.197355766207771,
+      "input": {
+        "seconds": 24.96,
+        "peakDb": -5.773867740175545,
+        "activeRmsDb": -21.790063205084536,
+        "quietFrameP10Db": -62.08292581887179
+      },
+      "output": {
+        "seconds": 24.96,
+        "peakDb": -4.434243954817453,
+        "activeRmsDb": -20.999999999999996,
+        "quietFrameP10Db": -62.34092998315291
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "96673b3dbe2afa44d4c6c0c745027270d21b01bfe7d971aceb0a35a506909441"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "s021": {
+    "id": "s021",
+    "text": "伸臂把力带到外圈，环带钢架再沿着周边，把这份力分给更多柱子。中间、外圈和上下楼层接成一体，大楼就能借整个宽度，抵抗侧面的推力。",
+    "ttsText": "伸臂把力带到外圈，环带钢架再沿着周边，把这份力分给更多柱子。中间、外圈和上下楼层接成一体，大楼就能借整个宽度，抵抗侧面的推力。",
+    "signature": "6e6707d53fb341b460364f683fb58a9d9c72ac3b31a9e0cf337d672c4107a7b1",
+    "raw": "audio/raw/s021-6e6707d53f.wav",
+    "processed": "audio/candidates/v7-flow-a/s021.wav",
+    "rawDuration": 12.0,
+    "duration": 12.24,
+    "sha256": "3e2abd506d7008ac7b0607f6e03bc30bce0e8b5d45e85625befc4782404f5854",
+    "seed": 1199519151,
+    "attempt": 1,
+    "settings": {
+      "temperature": 0.3,
+      "top_p": 0.82,
+      "repetition_penalty": 1.05,
+      "non_streaming_mode": true,
+      "max_new_tokens": 1536
+    },
+    "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+    "model": "Qwen3-TTS-0.6B",
+    "batchIds": [
+      "s020",
+      "s021",
+      "s034"
+    ],
+    "rawEndpointDB": -64.51162206678616,
+    "rawEndpointFlag": false,
+    "edgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "processing": {
+      "profile": {
+        "name": "rainbow-narration-v2",
+        "highpassHz": 65,
+        "lowpassHz": 10600,
+        "noiseReductionDb": 3,
+        "noiseFloorDb": -55,
+        "adaptiveNoiseTracking": false,
+        "lowMidEqDb": -1.4,
+        "presenceEqDb": 0.7,
+        "deesserIntensity": 0.12,
+        "compressionRatio": 1.65,
+        "edgeFadeMs": 8,
+        "timeStretch": false,
+        "hardGate": false,
+        "targetActiveRmsDb": -21,
+        "maximumClipGainDb": 4
+      },
+      "inputSha256": "8b5c9d2502be24947b3bb2a926a71e6d3ea5754cb37bfdb7484ccd3414176e5d",
+      "outputSha256": "3e2abd506d7008ac7b0607f6e03bc30bce0e8b5d45e85625befc4782404f5854",
+      "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+      "measuredLatencySamples": 1200,
+      "gainDb": 2.248305558006628,
+      "input": {
+        "seconds": 12.24,
+        "peakDb": -6.292300775311422,
+        "activeRmsDb": -21.938705146768775,
+        "quietFrameP10Db": -64.49596983468209
+      },
+      "output": {
+        "seconds": 12.24,
+        "peakDb": -4.286214606652484,
+        "activeRmsDb": -21.0,
+        "quietFrameP10Db": -64.83755248904549
+      },
+      "preservedLengthSamples": true,
+      "subjectiveListeningChecked": false,
+      "sourceEdgeGuards": {
+        "leadSeconds": 0.08,
+        "tailSeconds": 0.16,
+        "version": "source-edge-guard-v3"
+      },
+      "unmodifiedRawSHA256": "97ed7dcb3c135dbe33ea690f9709b0b24c8b8371fbaca5b23f46484046fe3864"
+    },
+    "subjectiveListeningChecked": false
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "id": "h007",
+  "partIndex": 0,
+  "expected": "这时，胰腺里的胰岛会增加胰岛素分泌。",
+  "heard": "这时,一线里的遗导会增加遗导速分密。",
+  "words": [
+    {
+      "text": "这",
+      "start": 0.0,
+      "end": 0.46,
+      "probability": 0.763214647769928
+    },
+    {
+      "text": "时,",
+      "start": 0.46,
+      "end": 0.74,
+      "probability": 0.9631638526916504
+    },
+    {
+      "text": "一",
+      "start": 1.06,
+      "end": 1.18,
+      "probability": 0.8578625321388245
+    },
+    {
+      "text": "线",
+      "start": 1.18,
+      "end": 1.34,
+      "probability": 0.9916424453258514
+    },
+    {
+      "text": "里",
+      "start": 1.34,
+      "end": 1.46,
+      "probability": 0.8792703151702881
+    },
+    {
+      "text": "的",
+      "start": 1.46,
+      "end": 1.58,
+      "probability": 0.9942337870597839
+    },
+    {
+      "text": "遗",
+      "start": 1.58,
+      "end": 1.7,
+      "probability": 0.8416768312454224
+    },
+    {
+      "text": "导",
+      "start": 1.7,
+      "end": 1.94,
+      "probability": 0.7491118311882019
+    },
+    {
+      "text": "会",
+      "start": 1.94,
+      "end": 2.1,
+      "probability": 0.9114623069763184
+    },
+    {
+      "text": "增",
+      "start": 2.1,
+      "end": 2.28,
+      "probability": 0.9954975843429565
+    },
+    {
+      "text": "加",
+      "start": 2.28,
+      "end": 2.48,
+      "probability": 0.997623860836029
+    },
+    {
+      "text": "遗",
+      "start": 2.48,
+      "end": 2.62,
+      "probability": 0.98897984623909
+    },
+    {
+      "text": "导",
+      "start": 2.62,
+      "end": 2.82,
+      "probability": 0.9982007145881653
+    },
+    {
+      "text": "速",
+      "start": 2.82,
+      "end": 2.9,
+      "probability": 0.7492554187774658
+    },
+    {
+      "text": "分",
+      "start": 2.9,
+      "end": 3.1,
+      "probability": 0.941947877407074
+    },
+    {
+      "text": "密。",
+      "start": 3.1,
+      "end": 3.32,
+      "probability": 0.7211447358131409
+    }
+  ],
+  "sourceSHA256": "b54eaf5b5e7e75dc7ceaab5dcf32ad37605bc8716825875a019b2b83d59ef18d",
+  "ratio": 0.5,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "胰腺",
+      "heard": "一线",
+      "end": 4
+    },
+    {
+      "op": "replace",
+      "expected": "胰岛",
+      "heard": "遗导",
+      "end": 8
+    },
+    {
+      "op": "replace",
+      "expected": "胰岛素",
+      "heard": "遗导速",
+      "end": 14
+    },
+    {
+      "op": "replace",
+      "expected": "泌",
+      "heard": "密",
+      "end": 16
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 180480,
+    "seconds": 3.76,
+    "peakDBFS": -6.279052559363225,
+    "first20msDBFS": -83.79768897537531,
+    "last20msDBFS": -96.26540944509668,
+    "firstActiveMs": 40.0,
+    "lastActiveToEndMs": 450.0,
+    "activityThresholdDBFS": -48.9895941047736,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

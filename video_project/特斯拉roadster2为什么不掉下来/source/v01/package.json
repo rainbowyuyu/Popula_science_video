@@ -1,0 +1,28 @@
+{
+  "name": "roadster-evidence-v01",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts --public-dir=../../assets/v01",
+    "check": "tsc --noEmit",
+    "stills": "node scripts/render.mjs stills",
+    "preview": "node scripts/render.mjs preview"
+  },
+  "dependencies": {
+    "remotion": "4.0.526",
+    "@remotion/cli": "4.0.526",
+    "@remotion/bundler": "4.0.526",
+    "@remotion/renderer": "4.0.526",
+    "@remotion/three": "4.0.526",
+    "@react-three/fiber": "9.4.0",
+    "three": "0.180.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/react": "19.2.7",
+    "@types/three": "0.180.0",
+    "@types/node": "22.10.2"
+  }
+}

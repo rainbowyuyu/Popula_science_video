@@ -1,0 +1,54 @@
+{
+  "bodyCoordinateSystem": "BodyParts3D adult male, original shared anatomical coordinates normalized to 6.85 world units high",
+  "aorticCutaway": {
+    "sampleMethod": "triangle intersections with horizontal planes; radial circle fit",
+    "center": [
+      0.033008,
+      4.8,
+      0.007975
+    ],
+    "outerRadius": 0.0358,
+    "innerRadius": 0.0308,
+    "wallThickness": 0.005,
+    "axis": [
+      0.0595,
+      0.9689,
+      -0.2466
+    ],
+    "length": 0.3102,
+    "detachedOffset": false
+  },
+  "camera": "One atlas space, 70 speech-timed anchors; shared-tangent shape-preserving Hermite interpolation with log-distance dolly; pull back before lateral organ travel and then approach detail.",
+  "microscopicModels": "Distinct aorta elastic-wall cutaway and independent branched arteriole anchored by renal vascular context; LDL formation and receptor uptake anchored to liver; all microscale geometry is explanatory and magnified, not patient CFD",
+  "narration": "53 clips; 9671 frames; 322.366667 s; full raw takes retained",
+  "opening": "Original cuff and monitor scene retained",
+  "music": "Original score 脉流之间, 88 BPM, seeded 20261007",
+  "codaSeconds": 12,
+  "revision": "vascular-spatial-v5",
+  "arteriole": {
+    "centerRadiusRatioAtMaxContraction": 0.7,
+    "flowCondition": "Fixed illustrative inflow; phase integrated inversely with mean cross-sectional area",
+    "pressureRatio": "Ideal equal-radius cylinder only: 0.7^-4 = 4.1649; not a pressure solve of the visibly branched geometry",
+    "bridge": "Simplified small branch takes off from nearest real FJ2046 triangle surface and follows the animated inlet ring; not source microscopic anatomy or CFD"
+  },
+  "lipoprotein": {
+    "sequence": [
+      "VLDL hepatic release",
+      "TG unloading to tissues",
+      "IDL including hepatic uptake branch",
+      "LDL",
+      "hepatic LDL receptor uptake",
+      "intimal retention",
+      "foam cells/plaque",
+      "cap disruption and thrombosis"
+    ],
+    "source": "Feingold 2024 Endotext; NHLBI sources in medical-v4-evidence.json"
+  },
+  "nephron": {
+    "rootScale": 0.012,
+    "anchor": "left renal cortex by atlas coordinates",
+    "maxExtentToKidneyHeight": 0.07744236385,
+    "containment": "Model and focus bounding boxes inside atlas left kidney bounding box; not exact kidney-surface containment proof",
+    "flow": "separate glomerular blood, filtrate and water/sodium return paths; schematic spatial organization"
+  }
+}

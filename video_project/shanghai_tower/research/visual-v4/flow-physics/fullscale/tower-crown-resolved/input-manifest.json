@@ -1,0 +1,45 @@
+{
+  "schema": "rainbow.fullscale-rans-input/1",
+  "status": "prepared-not-yet-solved",
+  "solver": "SU2 8.5.0 incompressible SA RANS, no wall function (near wall resolved)",
+  "geometryUnits": "m",
+  "density_kg_m3": 1.225,
+  "viscosity_Pa_s": 1.81e-05,
+  "referenceVelocity_m_s": 30.0,
+  "height_m": 632.0,
+  "ReynoldsNumberBasedOnHeight": 1283204419.8895028,
+  "ReynoldsNumberBasedOnBaseReferenceDiameter98m": 198977900.55248618,
+  "inlet": {
+    "type": "per-vertex velocity profile",
+    "velocityFormula": "30*(max(z,10)/500)^alpha m/s, along solver +X",
+    "alpha": 0.11648866172632258,
+    "U10_m_s": 19.02,
+    "U500_m_s": 30.0,
+    "clampBelow_m": 10,
+    "nuTilde_m2_s": 4.432653061224489e-05,
+    "temperature_K": 288.15,
+    "nodes": 679
+  },
+  "surface": "isolated reconstructed aerodynamic envelope and smooth ground, not as-built city",
+  "rawVTUUnits": {
+    "coordinates": "m (length reference 1 m)",
+    "Velocity": "dimensionless, multiply by 30 for m/s",
+    "Pressure": "dimensionless gauge, multiply by 1102.5 for Pa",
+    "Pressure_Coefficient": "dimensionless already",
+    "Skin_Friction_Coefficient": "dimensionless already; multiply by 551.25 for wall shear Pa",
+    "Y_Plus": "dimensionless already"
+  },
+  "limitations": [
+    "An illustrative U500=30 m/s operating condition; not a Shanghai design wind or measurement.",
+    "Power-law inlet is prescribed; smooth ground SA flow development is computed, not assumed to preserve an equilibrium atmospheric boundary layer.",
+    "Inlet SA eddy variable uses default freestream factor 3 (no measured turbulence spectrum).",
+    "Crown external rim matches film; its sealing membrane is a simplification and excludes crown interior flow.",
+    "No neighboring city, facade openings, gust statistics or fluid-structure feedback.",
+    "Acceptance requires finite fields, convergence/force checks and actual y+ audit; a completed executable alone is insufficient."
+  ],
+  "hashes": {
+    "tower.su2": "cf350726d9d3269cfac7392f5ffb0ca1101ff5302efead40bf9f535e597f8013",
+    "inlet.dat": "a8c10e3412b42bb562d314f60074d18070b9bfb6f56e21efe997dcef2dd6a72b",
+    "rans.cfg": "15e7d8571168fcdddc43c301ccdc72c962389a1c299c20ad5ebd0eb7bed31c6d"
+  }
+}

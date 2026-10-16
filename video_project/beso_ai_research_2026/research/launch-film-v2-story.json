@@ -1,0 +1,230 @@
+{
+  "title": "AI Engineer · Product Launch Film · Story v2",
+  "revision": "launch-105-product-film-v2-source-checked",
+  "fps": 60,
+  "durationSeconds": 105,
+  "durationFrames": 6300,
+  "sourceCompatibility": {
+    "sceneWindows": "same as launch-film-105s-plan.json",
+    "audio": "audio/launch-v2-master.wav",
+    "renderImpact": "v2 narration has been integrated; visual descriptions remain direction notes and are not a render verification record"
+  },
+  "narrativeIntent": "把一句工程需求转成任务图，协同专家工具；将失败转成可检查的反馈，将输入、日志与结果留给工程师复查。主线为需求—任务图—专家工具—失败反馈—审查留档。",
+  "audiencePromise": "看懂AI Engineer如何组织工程工作，如何使用确定性求解器，以及为什么失败记录与来源记录也是产品价值。",
+  "tone": "克制、温暖、笃定；像一位做过项目的工程师在带观众看现场，少口号，多因果；每一句旁白都指向一个正在发生的可视化动作。",
+  "principles": [
+    "先给问题，再给工具；先让观众看见风浪和结构，再出现产品名。",
+    "把 AI 讲成连接器和协作者，不说它凭空生成正确答案。",
+    "每个镜头只承载一个主张；主文字 56–94px，辅助词 26–34px，画面不堆段落。",
+    "镜头连续移动完成 2D、网页和 3D 的转换；使用遮挡、景深、跟随锚点和材质延续，避免淡入淡出和窗口硬切。",
+    "所有数值只来自已核验的回放或论文案例；概念转场必须标注为概念画面。"
+  ],
+  "pronunciation": {
+    "AI Engineer": "AI Engineer（英文读法）",
+    "BESO": "贝索",
+    "Zwind": "Z-wind",
+    "Three.js": "三点 JS",
+    "Lux3D": "Lux 三维",
+    "Qwen": "通义千问"
+  },
+  "scenes": [
+    {
+      "id": "hero",
+      "start": 0,
+      "duration": 420,
+      "storyRole": "问题发生",
+      "title": "AI ENGINEER",
+      "claim": "从需求，到工程方案",
+      "visual": "黎明海面上一台比例可信的浮式风机。镜头先贴着浪尖掠过，再下降到浮体与系泊的交界；风推叶片、浪托平台、缆绳回拉用细小但真实的运动表现。不要用过度科幻的白球或过薄的玩具浮体。",
+      "camera": "24mm 低空掠海 → 沿浮体边缘下潜 → 环绕系泊节点 → 在塔底高光上锁定，下一镜的网页光标从同一高光位置长出来。",
+      "transition": "塔底高光拉成一条细线，线条变成网页输入框的光标；海面纹理继续作为 UI 背景的细线，不切黑。",
+      "onScreen": [
+        "AI ENGINEER",
+        "让复杂设计有迹可循"
+      ],
+      "voice": "从一句需求，到一套工程方案，中间要跨过多少工具？",
+      "productMeaning": "以工程需求为起点，组织跨软件的建模、计算与复查任务。",
+      "textMotion": "字标沿塔身透视线轻微跟随，副标题贴在浪面反光上，运动方向与镜头一致。",
+      "voiceShotIds": [
+        "v2-hero-0"
+      ]
+    },
+    {
+      "id": "brief",
+      "start": 420,
+      "duration": 720,
+      "storyRole": "把问题说清",
+      "title": "从一句话，变成一张任务图",
+      "claim": "语言 → 参数 → 可运行任务",
+      "visual": "真实本地AI Engineer工作区录屏：输入工程需求但不提交。目标与约束以动效文字提炼；只将任务图作为架构示意，不伪装成录屏新执行的结果。",
+      "camera": "从海面共享反光进入网页输入框，追踪已录制光标；文字沿纸面透视排布，镜头压低后转入设计域。",
+      "transition": "输入框边缘延伸为图纸和设计域边界；不穿入Run按钮，不虚构启动求解。",
+      "onScreen": [
+        "目标",
+        "场址",
+        "海况",
+        "材料",
+        "约束"
+      ],
+      "voice": "AI Engineer，把这条路接起来。工程师说明目标和约束，系统把需求拆成任务图，再交给专家工具。",
+      "productMeaning": "让工程师保留意图，让系统负责把意图翻译成工具能执行的参数。",
+      "textMotion": "五个节点从输入词的笔画末端长出，沿同一条曲线排列；单词不同时跳出。",
+      "voiceShotIds": [
+        "v2-brief-0",
+        "v2-brief-1"
+      ]
+    },
+    {
+      "id": "topology",
+      "start": 1140,
+      "duration": 900,
+      "storyRole": "第一次求解",
+      "title": "让材料，沿着力留下",
+      "claim": "BESO 记录每一次取舍",
+      "visual": "三维设计域由网页网格接续而来。回放 44 个已保存状态中的 4 个采样网格，观察材料分布的变化；最终骨架回到同一坐标。状态间连接是展示插值，不当作完整求解轨迹。",
+      "camera": "微距穿入一个单元 → 顺着应变能流线飞行 → 螺旋拉远看见 44 个状态 → 贴近最后一层材料的边缘完成重组。",
+      "transition": "最后一个被保留的单元边缘扩展成风浪场中的浮体边缘；不做突然消失。",
+      "onScreen": [
+        "BESO",
+        "44 个状态",
+        "质量比 ≈ 25%"
+      ],
+      "voice": "几何工具建模，网格工具划分单元，贝索根据受力，一轮轮调整材料。材料往哪里留，构件多粗多厚，分别交给对应的算法求解。",
+      "productMeaning": "创新点一：把优化过程变成可追踪的状态序列，让工程师知道材料为什么留下。",
+      "textMotion": "BESO 标签固定在受力路径锚点上；数字 44 沿时间带滚动，避免悬浮在画面角落。",
+      "voiceShotIds": [
+        "v2-topology-0",
+        "v2-topology-1"
+      ]
+    },
+    {
+      "id": "physics",
+      "start": 2040,
+      "duration": 1080,
+      "storyRole": "回到真实环境",
+      "title": "把结构放回风和浪里",
+      "claim": "响应与模型，同步发生",
+      "visual": "比例可信的浮体和系泊进入分层浪场。风向箭头沿叶片扫过，水流绕开浮体，平台做轻微纵荡、纵摇和升沉；镜头下潜看系泊张力，再回到塔顶响应点。Zwind 曲线与平台运动绑定。",
+      "camera": "海面侧向轨道 → 沿风线绕塔一周 → 穿水下看系泊 → 跟随一根缆绳上升到塔顶响应点。",
+      "transition": "响应曲线上的移动点拖出一条弧线，弧线成为下一镜网页结果图的折线；纹理、方向和速度保持。",
+      "onScreen": [
+        "Z-wind",
+        "时程响应",
+        "纵荡 · 纵摇 · 系泊"
+      ],
+      "voice": "有了结构，还要看它在风浪里怎样运动。Zwind 求解风浪和缆绳共同作用下，平台的运动响应。这里回放保存的时程，让每个响应点都回到结构上。",
+      "productMeaning": "创新点二：几何、载荷与响应共享坐标，工程师看见的是结构正在怎样受力。",
+      "textMotion": "标签贴着塔底、平台质心和系泊节点的 3D 锚点；随相机视差移动，避免作为固定图层。",
+      "voiceShotIds": [
+        "v2-physics-0",
+        "v2-physics-1",
+        "v2-physics-2"
+      ]
+    },
+    {
+      "id": "interaction",
+      "start": 3120,
+      "duration": 780,
+      "storyRole": "形成反馈",
+      "title": "让失败，成为下一步的反馈",
+      "claim": "异常 → 记录 → 重规划",
+      "visual": "真实结果查看器录屏：导入parameters_summary.json、适应视图、旋转已保存的三维重建。输入、日志、失败类别以来源清楚的示意轨迹伴随；不显示虚构的质量比滑杆或Run动作。",
+      "camera": "响应点引出文件路径，镜头顺着路径进入导入操作；平移经过旋转中的模型，再绕到纸面工作流。",
+      "transition": "查看器模型的轮廓匹配下一镜工程骨架；工具栏移出画面后才移除。",
+      "onScreen": [
+        "输入文件",
+        "工具日志",
+        "结果回放"
+      ],
+      "voice": "真正关键的，是遇到问题以后怎么办。网格异常、求解中断，都会变成反馈，推动系统重新安排下一步；失败也要留下线索。",
+      "productMeaning": "将网格异常或求解中断写入结构化反馈，按允许的策略重规划；记录一次失败不等于修复已经成功。",
+      "textMotion": "三张卡片由同一条文件路径牵引，卡片在镜头移动中出现，避免窗口弹出。",
+      "voiceShotIds": [
+        "v2-interaction-0",
+        "v2-interaction-1"
+      ]
+    },
+    {
+      "id": "toolchain",
+      "start": 3900,
+      "duration": 780,
+      "storyRole": "从骨架到交付",
+      "title": "工具之间，有来有回",
+      "claim": "建议 → 计算 → 复查",
+      "visual": "纸上工程轮廓长成参数化结构，几何、网格、BESO、尺寸与Zwind节点在相同三维路径上相连；模型建议与计算反馈走不同方向。Qwen仅用于图纸到实体概念桥。",
+      "camera": "沿图纸墨线滑行 → 纸面折起成为 3D 截面 → 推入构件内部看网格与材质叠合 → 环绕三类工具节点 → 落到报告缩略图。",
+      "transition": "报告缩略图的页边滑出画面，页边变成结果对比的基线。",
+      "onScreen": [
+        "几何与网格",
+        "优化与求解",
+        "反馈与复查"
+      ],
+      "voice": "这条链路的创新，是让工具之间有来有回。模型提出调整，计算检验结果；失败原因和修改记录，都留给工程师复查。",
+      "productMeaning": "大语言模型安排专家工具，确定性求解器提供响应，失败原因与修改记录交给工程师复查。Three.js、Blender和Lux3D是本片制作工具，不冒充产品计算创新。",
+      "textMotion": "产品链路标签只使用几何与网格、优化与求解、反馈与复查，依照相应对象的透视和运动方向出现。Three.js、Blender、Lux3D 属于影片制作工具，记录于制作说明，不混入产品创新叙述。",
+      "voiceShotIds": [
+        "v2-toolchain-0",
+        "v2-toolchain-1"
+      ]
+    },
+    {
+      "id": "proof",
+      "start": 4680,
+      "duration": 960,
+      "storyRole": "结果可对照",
+      "title": "结果，放回条件里看",
+      "claim": "用钢量 · 强度 · 运动 · 系泊",
+      "visual": "两台风机剪影沿同一基线对齐；278 → 255.5 t/MW 的数字由报告页折成空间标尺，−8.1% 沿标尺移动。响应曲线小幅保留在背景，提醒观众轻量化不是单一目标。",
+      "camera": "从报告页基线横移 → 数字成为 3D 标尺 → 沿标尺滑向 255.5 → 回望两台剪影与响应线。",
+      "transition": "−8.1% 的短线拉直成为片尾工作流的第一段线，不做数字跳转。",
+      "onScreen": [
+        "278 t/MW",
+        "255.5 t/MW",
+        "−8.1%"
+      ],
+      "voice": "轻量化的价值，也要放回条件里看。论文案例的单位功率用钢量，减少约百分之八点一。强度、平台运动和系泊，还需要一起检查，交给审查器逐项复核。",
+      "productMeaning": "已有论文案例可用于对照；单一降幅不能替代候选设计的全部校核。",
+      "textMotion": "数字采用大字号与基线绑定；来源短标签位于标尺侧边，不覆盖主数字。",
+      "voiceShotIds": [
+        "v2-proof-0",
+        "v2-proof-1",
+        "v2-proof-2"
+      ]
+    },
+    {
+      "id": "close",
+      "start": 5640,
+      "duration": 660,
+      "storyRole": "回答为什么",
+      "title": "AI ENGINEER",
+      "claim": "让智能连接工具，让计算提供依据",
+      "visual": "对比标尺融入风机塔架主梁，镜头从基础抬升到海平线；需求、模型、仿真、证据四个标签沿结构节点依次闭合，浙江大学标识保持右上角。",
+      "camera": "从塔底缓慢升起 → 经过构件、响应点和报告卡 → 50mm 压缩到完整风机 → 微小侧移保持 1.2 秒。",
+      "transition": "最后一个证据节点合入 AI ENGINEER 字标，海面仍在微动，声音留出半拍。",
+      "onScreen": [
+        "需求 → 模型 → 仿真 → 证据",
+        "AI ENGINEER"
+      ],
+      "voice": "AI Engineer，让智能连接工具，让计算提供依据。从需求到模型、报告，每一步都能回看。",
+      "productMeaning": "每次建模、计算与审查保留输入和来源，便于复查与交接。",
+      "textMotion": "四个工作流词沿塔架节点依次落位，最后汇聚成字标；不使用满屏口号。",
+      "voiceShotIds": [
+        "v2-close-0",
+        "v2-close-1"
+      ]
+    }
+  ],
+  "visualQA": {
+    "cameraContinuity": "每个场景以同一锚点、方向或纹理进入下一个场景；禁止孤立窗口突然出现或消失。",
+    "modelQuality": "浮体保持真实尺度、厚度和吃水关系；避免玩具比例、白球和过薄支撑。",
+    "textSafety": "标题不遮挡桅杆、叶片、系泊和关键响应点；所有辅助文字不小于 26px。",
+    "evidenceLabels": "网页=本地界面回放；Zwind=保存响应回放；水面=受控视觉波面；Qwen/WAN=概念转场。"
+  },
+  "voicePlan": "research/launch-v2-voice-plan.json",
+  "sourceEvidence": [
+    "D:/python_project/beso_ai/README-ch.md",
+    "D:/python_project/beso_ai/docs/AI_Designer_r2_Supplementary_Information.md",
+    "D:/python_project/beso_ai/docs/closed_loop.md"
+  ],
+  "claimBoundary": "描述架构、用途与保存结果；当前证据包仍处于revise，未宣称完整闭环成功、可制造或认证完成。"
+}

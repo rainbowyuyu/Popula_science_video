@@ -1,0 +1,82 @@
+{
+  "id": "s020",
+  "text": "一侧压得多一点，另一侧少一点。这一增一减，让外圈柱帮着核心筒，一起把楼稳住。",
+  "ttsText": "一侧压得多一点，另一侧少一点。两边配合起来，外圈柱就能帮着中间的骨架，把整栋楼稳住。",
+  "signature": "bd6ee37991eefead7338021edaea002a38df684d655dc26fe6fe293032a4b6bd",
+  "raw": "audio/raw/s020-bd6ee37991.wav",
+  "processed": "public/voice/s020.wav",
+  "rawDuration": 8.08,
+  "duration": 8.32,
+  "sha256": "402da4076ae60ef35878c60d6ec36783f2067b5448a2ab14c495aab8568ee61c",
+  "seed": 689113935,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s013",
+    "s016",
+    "s020",
+    "s048"
+  ],
+  "rawEndpointDB": -65.96775287951544,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8eb5ddfa0b5609f60d0aeec24e717e9ad6385a74a390cf86cf396853466cde48",
+    "outputSha256": "402da4076ae60ef35878c60d6ec36783f2067b5448a2ab14c495aab8568ee61c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.631741013551192,
+    "input": {
+      "seconds": 8.32,
+      "peakDb": -6.821466963196113,
+      "activeRmsDb": -22.431219806838616,
+      "quietFrameP10Db": -61.636591537480435
+    },
+    "output": {
+      "seconds": 8.32,
+      "peakDb": -4.050305293200411,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.16021361588002
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "bcba326a15c3c6407c2574e8954a87d3712bd0e5db12db7a47ed4f37fda2a920"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s020.wav"
+}

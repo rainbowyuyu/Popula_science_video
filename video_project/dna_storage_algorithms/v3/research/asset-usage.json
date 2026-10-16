@@ -1,0 +1,278 @@
+{
+  "schema": "rainbow.dna.asset-usage/v3",
+  "checkedAt": "2026-10-11T06:31:59.073972Z",
+  "sourceSnapshots": [
+    {
+      "path": "src/World.ts",
+      "sha256": "4a83e970c33a5cf98a0b6770da5b191f57db27c26b09c39fdebac75b8e7b29cd"
+    },
+    {
+      "path": "src/Film.tsx",
+      "sha256": "73cc0cb6e640b7662597f41433373e3e7ae09db5e5f9584a25f260d5300391f1"
+    },
+    {
+      "path": "src/scene/Stations.ts",
+      "sha256": "99b6571d1be165ec3735c22a4a673a270040f50957e87a1501a6775ad6b0e07c"
+    }
+  ],
+  "sourceOfTruth": "Current World.ts and Film.tsx imports/load calls, plus Stations.ts install handlers. The inherited timeline-source.json asset entries were deliberately not treated as active usage.",
+  "status": "all-referenced-files-present",
+  "modelCount": 6,
+  "assets": [
+    {
+      "path": "3d/phone_landscape.glb",
+      "kind": "model",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 27
+      },
+      "load": "GLTFLoader.loadAsync then Station.installAsset",
+      "installedBy": [
+        "HeroLab"
+      ],
+      "claim": "Referenced and installed in source. This inventory does not establish visibility in every rendered frame.",
+      "status": "present",
+      "sha256": "c3cd4b018604dabe510ebe0144d81da031a849bf33e07a5c2fb3dab83b2198f7",
+      "bytes": 173844
+    },
+    {
+      "path": "3d/portable_drive.glb",
+      "kind": "model",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 27
+      },
+      "load": "GLTFLoader.loadAsync then Station.installAsset",
+      "installedBy": [
+        "HeroLab"
+      ],
+      "claim": "Referenced and installed in source. This inventory does not establish visibility in every rendered frame.",
+      "status": "present",
+      "sha256": "8424c4c052429c4b3ab36bfacd958140f832683056873c1f18c073cdafe9acfc",
+      "bytes": 483144
+    },
+    {
+      "path": "3d/glass_vial.glb",
+      "kind": "model",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 27
+      },
+      "load": "GLTFLoader.loadAsync then Station.installAsset",
+      "installedBy": [
+        "SequencingFlow"
+      ],
+      "claim": "Referenced and installed in source. This inventory does not establish visibility in every rendered frame.",
+      "status": "present",
+      "sha256": "211a69b0d180908c06baad4269c363088fbe788c753f6428089d945fec66ec39",
+      "bytes": 273752
+    },
+    {
+      "path": "3d/synthesis_nozzle.glb",
+      "kind": "model",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 27
+      },
+      "load": "GLTFLoader.loadAsync then Station.installAsset",
+      "installedBy": [
+        "SequencingFlow"
+      ],
+      "claim": "Referenced and installed in source. This inventory does not establish visibility in every rendered frame.",
+      "status": "present",
+      "sha256": "f5db8309775e0a4cd185533cd7bf0a1eadc808a162f2d57cea2f8c5296a2f41a",
+      "bytes": 291424
+    },
+    {
+      "path": "3d/sequencing_flowcell.glb",
+      "kind": "model",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 27
+      },
+      "load": "GLTFLoader.loadAsync then Station.installAsset",
+      "installedBy": [
+        "SequencingFlow"
+      ],
+      "claim": "Referenced and installed in source. This inventory does not establish visibility in every rendered frame.",
+      "status": "present",
+      "sha256": "aee40a07b912567523d5b2ac8bbe62ef733b2fbb704eeb55fe173d3da7a13ce2",
+      "bytes": 1049308
+    },
+    {
+      "path": "3d/lux_vial_holder.glb",
+      "kind": "model",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 27
+      },
+      "load": "GLTFLoader.loadAsync then Station.installAsset",
+      "installedBy": [
+        "HeroLab",
+        "SequencingFlow"
+      ],
+      "claim": "Referenced and installed in source. This inventory does not establish visibility in every rendered frame.",
+      "status": "present",
+      "sha256": "ea283ed72f3bc610dac86c9a940edd5607007cb415b7c25027d4a8845c23c5ae",
+      "bytes": 4950800
+    },
+    {
+      "path": "brand/logo.png",
+      "kind": "logo",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 18
+      },
+      "status": "present",
+      "sha256": "d06cdbd8377a82513ba4a4f5172defb6eccfb5e3f17f4ddebe2af2a9bfb9637a",
+      "bytes": 13501
+    },
+    {
+      "path": "papers/nucleotide-transformer-2024-01.png",
+      "kind": "paper",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 56
+      },
+      "status": "present",
+      "sha256": "7de7289d6acc7a459a0ee83740a9f5bcbb67f22564a290e18cea7f773dc9ded4",
+      "bytes": 456644
+    },
+    {
+      "path": "papers/dna-fountain-preprint-01.png",
+      "kind": "paper",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 57
+      },
+      "status": "present",
+      "sha256": "71a4182b9bc27daca54de718fb8302b61278f82a3831dd965940296539cf7b57",
+      "bytes": 195268
+    },
+    {
+      "path": "audio/master.wav",
+      "kind": "audio",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 70
+      },
+      "condition": "Film audio prop must be true; default composition prop is false.",
+      "status": "present",
+      "sha256": "80e592330890a490d93b900cb1e1b4a892f41067b6fb1d52c2c84ea6c5fa274f",
+      "bytes": 86400102
+    },
+    {
+      "path": "bridges/family-memory.png",
+      "kind": "image",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 30
+      },
+      "sourceAI": true,
+      "scientificEvidence": false,
+      "provenance": "research/tool-family-memory.json",
+      "status": "present",
+      "sha256": "912e18c0adda26a9f31b75248313e17392a8be7a6cf22697dbb4b78df43b9ff8",
+      "bytes": 1437656
+    },
+    {
+      "path": "bridges/wan-atlas.jpg",
+      "kind": "video-atlas",
+      "reference": {
+        "source": "src/World.ts",
+        "line": 31
+      },
+      "sourceVideo": {
+        "path": "bridges/wan-lab-macro.mp4",
+        "usage": "Source for atlas, not loaded directly by World"
+      },
+      "status": "present",
+      "sha256": "31964de7e0c986a0c4d82cd142d08bbb3a79901e57e9b8342d9b2187af3e45bd",
+      "bytes": 1813067
+    },
+    {
+      "path": "formulas/gc.svg",
+      "kind": "formula",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 61
+      },
+      "rendering": "LaTeX-derived SVG, source.tex retained",
+      "status": "present",
+      "sha256": "c1ce06cccecca21e0a42107377c0e55a36c5b531fe70b152f30669c09cb522d8",
+      "bytes": 4912
+    },
+    {
+      "path": "formulas/xor.svg",
+      "kind": "formula",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 61
+      },
+      "rendering": "LaTeX-derived SVG, source.tex retained",
+      "status": "present",
+      "sha256": "756926da3c503818749d9d7261941cbf7393bca16c0d98b1f84fa3a499207e30",
+      "bytes": 4767
+    },
+    {
+      "path": "formulas/consensus.svg",
+      "kind": "formula",
+      "reference": {
+        "source": "src/Film.tsx",
+        "line": 61
+      },
+      "rendering": "LaTeX-derived SVG, source.tex retained",
+      "status": "present",
+      "sha256": "269ebf3ed19527d59313d96441d03c8635f5179ec4080290621f889c50acb6d1",
+      "bytes": 9325
+    }
+  ],
+  "retainedButNotDirectlyReferenced": [
+    {
+      "path": "3d/asset-preview.png",
+      "usage": "Not directly referenced by current executable sources; retained source/preview/alternative asset."
+    },
+    {
+      "path": "3d/lab_table.glb",
+      "usage": "Not directly referenced by current executable sources; retained source/preview/alternative asset."
+    },
+    {
+      "path": "3d/lux-vial-holder-preview.png",
+      "usage": "Not directly referenced by current executable sources; retained source/preview/alternative asset."
+    },
+    {
+      "path": "3d/microfluidic_chip.glb",
+      "usage": "Not directly referenced by current executable sources; retained source/preview/alternative asset."
+    },
+    {
+      "path": "3d/wan-bridge-source.png",
+      "usage": "Not directly referenced by current executable sources; retained source/preview/alternative asset."
+    },
+    {
+      "path": "papers/goldman-2013-page.png",
+      "usage": "Not directly referenced by current executable sources; retained source/preview/alternative asset."
+    }
+  ],
+  "limits": [
+    "Static source references and hashes are paired with integrated render probes and representative-frame review; this is not a claim of frame-by-frame subjective human review.",
+    "Qwen family-memory image is fictional illustrative media; Wan bridge, point cloud and fluid shader are artistic transitions, not scientific measurements.",
+    "Opus 5.5 was invoked for bounded assistance but returned no usable completed code; final implementation is local and reviewable."
+  ],
+  "finalDelivery": {
+    "path": "delivery/DNA存储_连续数据之旅_V3_1080p.mp4",
+    "status": "rendered-and-probed",
+    "sha256": "133e9b61617770962eaef5647497553fc9bd88f46dcabf2caf127e6d8cb44af8",
+    "bytes": 96008716,
+    "dimensions": "1920x1080",
+    "fps": 30,
+    "frames": 9000,
+    "durationSec": 300,
+    "audio": {
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "durationSec": 300
+    },
+    "qa": "qa_timeline, qa_camera, qa_motion_state_v3, qa_teaching passed; representative still/contact sheet and bridge review passed"
+  }
+}

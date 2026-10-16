@@ -1,0 +1,22 @@
+{
+  "model": "qwen3.8-omni-flash",
+  "audio": "audio\\v02\\pronunciation\\soai-japanese-native.wav",
+  "audioSha256": "b844345b3a9b8d3ddafbbb213f9fc29793e4a3b9f220adfa82716cbbbcd90112",
+  "prompt": "请只分析音频中你实际听到的外文姓名或音节。可能只有一个姓名。请用三条以内回答：1)近似实际音节或IPA；2)是否有英语双元音/新增r或l/错误重音；3)与普通话前后句衔接是否明显断裂。不要凭想象增加第二个姓名，不要按熟悉的人名自动修正，不知道请说不知道。不要长篇推测词源。\n",
+  "response": "1) 近似实际音节或IPA：[kʰɛn.su.so.a.i] (ken-su-so-a-i)\n2) 是否有英语双元音/新增r或l/错误重音：无。发音为纯粹的日语罗马音拼读，没有加入英语的双元音或多余的 r/l 音，也没有错误的英语重音。\n3) 与普通话前后句衔接是否明显断裂：有明显断裂。该部分完全是用日语语调朗读的，与后面的标准普通话在语言和发音习惯上形成了清晰的切换和断层。",
+  "usage": {
+    "completion_tokens": 119,
+    "completion_tokens_details": {
+      "text_tokens": 119
+    },
+    "prompt_tokens": 126,
+    "prompt_tokens_details": {
+      "audio_tokens": 30,
+      "cached_tokens": 0,
+      "text_tokens": 96
+    },
+    "total_tokens": 245
+  },
+  "humanListeningChecked": false,
+  "scope": "machine audio-comprehension pronunciation screen; not authoritative phonetic evidence"
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "c_pointers",
+  "title": "C语言指针：地址里藏着什么",
+  "category": "computer-science",
+  "status": "source-library",
+  "currentVersion": "V1",
+  "workbench": {
+    "title": "C语言指针：地址里藏着什么",
+    "seriesId": "rainbow-science",
+    "episode": 7,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "v1/src/index.tsx",
+    "v1/scripts/render.mjs"
+  ],
+  "packages": [
+    {
+      "root": "v1",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "qa": "python scripts/qa_delivery.py"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "v1/src",
+      "v1/scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "v1/output/C语言指针_从地址找到原件_1080p.mp4"
+    ],
+    "covers": [
+      "v1/output/covers/C语言指针_封面_16x9.jpg",
+      "v1/output/covers/C语言指针_封面_3x4.jpg",
+      "v1/output/covers/C语言指针_封面_4x3.jpg",
+      "v1/output/covers/C语言指针_封面_9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable"
+  ],
+  "notes": [
+    "实际 npm 工程在 v1；顶层 source/output 为空的编辑器结构占位。"
+  ],
+  "originalMetadata": {}
+}

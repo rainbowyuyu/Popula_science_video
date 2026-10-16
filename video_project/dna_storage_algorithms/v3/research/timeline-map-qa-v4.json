@@ -1,0 +1,1537 @@
+{
+  "schema": "rainbow.dna.timeline-map-qa/v4",
+  "checkedAt": "2026-10-11T11:28:52.167Z",
+  "label": "activated-v4-timeline",
+  "expectedVersion": 4,
+  "inputs": {
+    "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\TimelineV4.ts",
+    "narration": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\narration-v4.json",
+    "legacy": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\narration.json"
+  },
+  "checks": [
+    {
+      "id": "expected-narration-version",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "timeline-transpiles",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "chapter-list-present",
+      "pass": true,
+      "detail": {
+        "groups": 8,
+        "oldGroups": 8
+      }
+    },
+    {
+      "id": "physical-duration-valid",
+      "pass": true,
+      "detail": 300
+    },
+    {
+      "id": "declared-frame-count",
+      "pass": true,
+      "detail": {
+        "frames": 9000,
+        "seconds": 300
+      }
+    },
+    {
+      "id": "knots-match-measured-chapters",
+      "pass": true,
+      "detail": {
+        "actual": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 18,
+            "y": 18
+          },
+          {
+            "x": 44,
+            "y": 44
+          },
+          {
+            "x": 75,
+            "y": 75
+          },
+          {
+            "x": 118,
+            "y": 118
+          },
+          {
+            "x": 160,
+            "y": 160
+          },
+          {
+            "x": 216,
+            "y": 216
+          },
+          {
+            "x": 262,
+            "y": 262
+          },
+          {
+            "x": 290,
+            "y": 290
+          },
+          {
+            "x": 300,
+            "y": 300
+          }
+        ],
+        "expected": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 18,
+            "y": 18
+          },
+          {
+            "x": 44,
+            "y": 44
+          },
+          {
+            "x": 75,
+            "y": 75
+          },
+          {
+            "x": 118,
+            "y": 118
+          },
+          {
+            "x": 160,
+            "y": 160
+          },
+          {
+            "x": 216,
+            "y": 216
+          },
+          {
+            "x": 262,
+            "y": 262
+          },
+          {
+            "x": 290,
+            "y": 290
+          },
+          {
+            "x": 300,
+            "y": 300
+          }
+        ]
+      }
+    },
+    {
+      "id": "knots-strictly-increasing",
+      "pass": true,
+      "detail": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 18,
+          "y": 18
+        },
+        {
+          "x": 44,
+          "y": 44
+        },
+        {
+          "x": 75,
+          "y": 75
+        },
+        {
+          "x": 118,
+          "y": 118
+        },
+        {
+          "x": 160,
+          "y": 160
+        },
+        {
+          "x": 216,
+          "y": 216
+        },
+        {
+          "x": 262,
+          "y": 262
+        },
+        {
+          "x": 290,
+          "y": 290
+        },
+        {
+          "x": 300,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "knots-cover-full-film",
+      "pass": true
+    },
+    {
+      "id": "group-hook-bounds",
+      "pass": true,
+      "detail": {
+        "id": "hook",
+        "startSec": 0,
+        "endSec": 18,
+        "oldStartSec": 0,
+        "oldEndSec": 18
+      }
+    },
+    {
+      "id": "group-encode-bounds",
+      "pass": true,
+      "detail": {
+        "id": "encode",
+        "startSec": 18,
+        "endSec": 44,
+        "oldStartSec": 18,
+        "oldEndSec": 44
+      }
+    },
+    {
+      "id": "group-constraints-bounds",
+      "pass": true,
+      "detail": {
+        "id": "constraints",
+        "startSec": 44,
+        "endSec": 75,
+        "oldStartSec": 44,
+        "oldEndSec": 75
+      }
+    },
+    {
+      "id": "group-fountain-bounds",
+      "pass": true,
+      "detail": {
+        "id": "fountain",
+        "startSec": 75,
+        "endSec": 118,
+        "oldStartSec": 75,
+        "oldEndSec": 118
+      }
+    },
+    {
+      "id": "group-wetlab-bounds",
+      "pass": true,
+      "detail": {
+        "id": "wetlab",
+        "startSec": 118,
+        "endSec": 160,
+        "oldStartSec": 118,
+        "oldEndSec": 160
+      }
+    },
+    {
+      "id": "group-consensus-bounds",
+      "pass": true,
+      "detail": {
+        "id": "consensus",
+        "startSec": 160,
+        "endSec": 216,
+        "oldStartSec": 160,
+        "oldEndSec": 216
+      }
+    },
+    {
+      "id": "group-model-bounds",
+      "pass": true,
+      "detail": {
+        "id": "model",
+        "startSec": 216,
+        "endSec": 262,
+        "oldStartSec": 216,
+        "oldEndSec": 262
+      }
+    },
+    {
+      "id": "group-return-bounds",
+      "pass": true,
+      "detail": {
+        "id": "return",
+        "startSec": 262,
+        "endSec": 290,
+        "oldStartSec": 262,
+        "oldEndSec": 290
+      }
+    },
+    {
+      "id": "interval-0-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 0,
+        "endSec": 18,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-0-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-1-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 18,
+        "endSec": 44,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-1-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-2-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 44,
+        "endSec": 75,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-2-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-3-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 75,
+        "endSec": 118,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-3-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-4-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 118,
+        "endSec": 160,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-4-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-5-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 160,
+        "endSec": 216,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-5-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-6-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 216,
+        "endSec": 262,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-6-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-7-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 262,
+        "endSec": 290,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-7-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-8-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 290,
+        "endSec": 300,
+        "minimumVelocity": 1,
+        "maximumVelocity": 1,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1
+          },
+          {
+            "u": 1,
+            "velocity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-8-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "actual-function-matches-independent-quintic",
+      "pass": true,
+      "detail": {
+        "samples": 18001,
+        "maximumIndependentError": 1.4210854715202004e-13
+      }
+    },
+    {
+      "id": "actual-function-sampled-monotone",
+      "pass": true,
+      "detail": {
+        "samples": 18001,
+        "minimumSceneStep": 0.016666666666424135,
+        "physicalSampleStep": 0.016666666666666666
+      }
+    },
+    {
+      "id": "join-1-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 18,
+        "sceneSec": 18,
+        "finiteDifferenceStep": 0.018000000000000002,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000014193,
+        "rightVelocity": 1.0000000000004325,
+        "leftAcceleration": 3.5088530160992593e-10,
+        "rightAcceleration": -3.289549702593056e-11
+      }
+    },
+    {
+      "id": "join-1-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 18,
+        "sceneSec": 18,
+        "finiteDifferenceStep": 0.018000000000000002,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000014193,
+        "rightVelocity": 1.0000000000004325,
+        "leftAcceleration": 3.5088530160992593e-10,
+        "rightAcceleration": -3.289549702593056e-11
+      }
+    },
+    {
+      "id": "join-2-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 44,
+        "sceneSec": 44,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000001563,
+        "rightVelocity": 0.9999999999996234,
+        "leftAcceleration": 0,
+        "rightAcceleration": 8.881784197001252e-11
+      }
+    },
+    {
+      "id": "join-2-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 44,
+        "sceneSec": 44,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000001563,
+        "rightVelocity": 0.9999999999996234,
+        "leftAcceleration": 0,
+        "rightAcceleration": 8.881784197001252e-11
+      }
+    },
+    {
+      "id": "join-3-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 75,
+        "sceneSec": 75,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.9999999999994458,
+        "rightVelocity": 1.0000000000008669,
+        "leftAcceleration": 3.197442310920451e-10,
+        "rightAcceleration": 0
+      }
+    },
+    {
+      "id": "join-3-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 75,
+        "sceneSec": 75,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.9999999999994458,
+        "rightVelocity": 1.0000000000008669,
+        "leftAcceleration": 3.197442310920451e-10,
+        "rightAcceleration": 0
+      }
+    },
+    {
+      "id": "join-4-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 118,
+        "sceneSec": 118,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.9999999999973141,
+        "rightVelocity": 0.9999999999994458,
+        "leftAcceleration": -7.105427357601002e-10,
+        "rightAcceleration": 3.552713678800501e-11
+      }
+    },
+    {
+      "id": "join-4-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 118,
+        "sceneSec": 118,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.9999999999973141,
+        "rightVelocity": 0.9999999999994458,
+        "leftAcceleration": -7.105427357601002e-10,
+        "rightAcceleration": 3.552713678800501e-11
+      }
+    },
+    {
+      "id": "join-5-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 160,
+        "sceneSec": 160,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000104592,
+        "rightVelocity": 1.0000000000005116,
+        "leftAcceleration": 1.6342482922482304e-9,
+        "rightAcceleration": 1.4210854715202004e-10
+      }
+    },
+    {
+      "id": "join-5-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 160,
+        "sceneSec": 160,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000104592,
+        "rightVelocity": 1.0000000000005116,
+        "leftAcceleration": 1.6342482922482304e-9,
+        "rightAcceleration": 1.4210854715202004e-10
+      }
+    },
+    {
+      "id": "join-6-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 216,
+        "sceneSec": 216,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000069065,
+        "rightVelocity": 1.0000000000019327,
+        "leftAcceleration": 1.2079226507921703e-9,
+        "rightAcceleration": -7.105427357601002e-10
+      }
+    },
+    {
+      "id": "join-6-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 216,
+        "sceneSec": 216,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 1.0000000000069065,
+        "rightVelocity": 1.0000000000019327,
+        "leftAcceleration": 1.2079226507921703e-9,
+        "rightAcceleration": -7.105427357601002e-10
+      }
+    },
+    {
+      "id": "join-7-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 262,
+        "sceneSec": 262,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.999999999990564,
+        "rightVelocity": 0.9999999999976694,
+        "leftAcceleration": -1.4210854715202004e-9,
+        "rightAcceleration": 4.263256414560601e-10
+      }
+    },
+    {
+      "id": "join-7-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 262,
+        "sceneSec": 262,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.999999999990564,
+        "rightVelocity": 0.9999999999976694,
+        "leftAcceleration": -1.4210854715202004e-9,
+        "rightAcceleration": 4.263256414560601e-10
+      }
+    },
+    {
+      "id": "join-8-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 290,
+        "sceneSec": 290,
+        "finiteDifferenceStep": 0.01,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.9999999999990905,
+        "rightVelocity": 0.9999999999962483,
+        "leftAcceleration": 0,
+        "rightAcceleration": 1.7053025658242404e-9
+      }
+    },
+    {
+      "id": "join-8-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 290,
+        "sceneSec": 290,
+        "finiteDifferenceStep": 0.01,
+        "expectedVelocity": 1,
+        "leftVelocity": 0.9999999999990905,
+        "rightVelocity": 0.9999999999962483,
+        "leftAcceleration": 0,
+        "rightAcceleration": 1.7053025658242404e-9
+      }
+    },
+    {
+      "id": "clamps-and-invalid-inputs",
+      "pass": true
+    },
+    {
+      "id": "deterministic-arbitrary-seeks",
+      "pass": true,
+      "detail": {
+        "seeks": 86
+      }
+    },
+    {
+      "id": "mapped-cues-complete",
+      "pass": true
+    },
+    {
+      "id": "cue-n01-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          0.7,
+          6.54
+        ],
+        "scene": [
+          0.7000000000000001,
+          6.539999999999999
+        ]
+      }
+    },
+    {
+      "id": "cue-n02-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          9.68,
+          16.8
+        ],
+        "scene": [
+          9.68,
+          16.799999999999997
+        ]
+      }
+    },
+    {
+      "id": "cue-n03-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          18.6528,
+          25.3728
+        ],
+        "scene": [
+          18.652800000000003,
+          25.372800000000005
+        ]
+      }
+    },
+    {
+      "id": "cue-n04-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          26.5056,
+          34.0256
+        ],
+        "scene": [
+          26.505599999999998,
+          34.0256
+        ]
+      }
+    },
+    {
+      "id": "cue-n05-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          35.1584,
+          43.0784
+        ],
+        "scene": [
+          35.15839999999999,
+          43.078399999999995
+        ]
+      }
+    },
+    {
+      "id": "cue-n06-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          44.7,
+          51.26
+        ],
+        "scene": [
+          44.7,
+          51.26
+        ]
+      }
+    },
+    {
+      "id": "cue-n07-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          52.346667,
+          58.666667
+        ],
+        "scene": [
+          52.346667,
+          58.666667
+        ]
+      }
+    },
+    {
+      "id": "cue-n08-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          59.753333,
+          67.033333
+        ],
+        "scene": [
+          59.753333,
+          67.03333299999997
+        ]
+      }
+    },
+    {
+      "id": "cue-n09-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          68.12,
+          73.8
+        ],
+        "scene": [
+          68.12,
+          73.79999999999998
+        ]
+      }
+    },
+    {
+      "id": "cue-n10-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          75.7,
+          80.02
+        ],
+        "scene": [
+          75.70000000000002,
+          80.01999999999998
+        ]
+      }
+    },
+    {
+      "id": "cue-n11-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          80.735975,
+          87.216017
+        ],
+        "scene": [
+          80.73597499999998,
+          87.216017
+        ]
+      }
+    },
+    {
+      "id": "cue-n12-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          87.931992,
+          94.251992
+        ],
+        "scene": [
+          87.93199199999998,
+          94.251992
+        ]
+      }
+    },
+    {
+      "id": "cue-n13-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          94.967967,
+          102.168008
+        ],
+        "scene": [
+          94.967967,
+          102.168008
+        ]
+      }
+    },
+    {
+      "id": "cue-n14-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          102.883983,
+          109.364025
+        ],
+        "scene": [
+          102.88398300000001,
+          109.364025
+        ]
+      }
+    },
+    {
+      "id": "cue-n15-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          110.08,
+          116.8
+        ],
+        "scene": [
+          110.08000000000004,
+          116.80000000000004
+        ]
+      }
+    },
+    {
+      "id": "cue-n16-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          118.7,
+          124.86
+        ],
+        "scene": [
+          118.70000000000002,
+          124.86000000000001
+        ]
+      }
+    },
+    {
+      "id": "cue-n17-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          126.28499,
+          133.64499
+        ],
+        "scene": [
+          126.28499,
+          133.64499000000004
+        ]
+      }
+    },
+    {
+      "id": "cue-n18-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          135.069979,
+          141.629979
+        ],
+        "scene": [
+          135.069979,
+          141.629979
+        ]
+      }
+    },
+    {
+      "id": "cue-n19-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          143.054969,
+          150.894969
+        ],
+        "scene": [
+          143.05496899999997,
+          150.89496899999997
+        ]
+      }
+    },
+    {
+      "id": "cue-n20-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          152.319958,
+          158.8
+        ],
+        "scene": [
+          152.319958,
+          158.79999999999995
+        ]
+      }
+    },
+    {
+      "id": "cue-n21-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          160.7,
+          166.62
+        ],
+        "scene": [
+          160.7,
+          166.62
+        ]
+      }
+    },
+    {
+      "id": "cue-n22-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          167.091411,
+          173.731411
+        ],
+        "scene": [
+          167.09141100000002,
+          173.731411
+        ]
+      }
+    },
+    {
+      "id": "cue-n23-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          174.202821,
+          180.442863
+        ],
+        "scene": [
+          174.20282099999997,
+          180.442863
+        ]
+      }
+    },
+    {
+      "id": "cue-n24-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          180.914274,
+          186.914274
+        ],
+        "scene": [
+          180.914274,
+          186.91427400000003
+        ]
+      }
+    },
+    {
+      "id": "cue-n25-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          187.385685,
+          194.585726
+        ],
+        "scene": [
+          187.385685,
+          194.585726
+        ]
+      }
+    },
+    {
+      "id": "cue-n26-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          195.057137,
+          201.297179
+        ],
+        "scene": [
+          195.057137,
+          201.29717900000003
+        ]
+      }
+    },
+    {
+      "id": "cue-n27-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          201.768589,
+          208.168589
+        ],
+        "scene": [
+          201.768589,
+          208.168589
+        ]
+      }
+    },
+    {
+      "id": "cue-n28-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          208.64,
+          214.8
+        ],
+        "scene": [
+          208.64,
+          214.8
+        ]
+      }
+    },
+    {
+      "id": "cue-n29-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          216.7,
+          221.260042
+        ],
+        "scene": [
+          216.69999999999996,
+          221.260042
+        ]
+      }
+    },
+    {
+      "id": "cue-n30-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          222.160025,
+          228.640067
+        ],
+        "scene": [
+          222.160025,
+          228.64006699999996
+        ]
+      }
+    },
+    {
+      "id": "cue-n31-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          229.54005,
+          237.14005
+        ],
+        "scene": [
+          229.54005000000004,
+          237.14005000000003
+        ]
+      }
+    },
+    {
+      "id": "cue-n32-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          238.040033,
+          244.840033
+        ],
+        "scene": [
+          238.040033,
+          244.84003299999998
+        ]
+      }
+    },
+    {
+      "id": "cue-n33-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          245.740017,
+          252.140017
+        ],
+        "scene": [
+          245.74001699999997,
+          252.14001700000003
+        ]
+      }
+    },
+    {
+      "id": "cue-n34-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          253.04,
+          260.8
+        ],
+        "scene": [
+          253.03999999999996,
+          260.8
+        ]
+      }
+    },
+    {
+      "id": "cue-n35-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          262.7,
+          270.38
+        ],
+        "scene": [
+          262.7,
+          270.38
+        ]
+      }
+    },
+    {
+      "id": "cue-n36-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          271.7324,
+          279.8924
+        ],
+        "scene": [
+          271.7324,
+          279.8924
+        ]
+      }
+    },
+    {
+      "id": "cue-n37-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          281.2448,
+          288.9248
+        ],
+        "scene": [
+          281.2448,
+          288.9248
+        ]
+      }
+    }
+  ],
+  "v4TimelineVerified": true,
+  "limits": [
+    "CPU source/timeline verification only; no encoded video or visual-quality approval.",
+    "C2 continuity applies at interior chapter joins. Clamping before zero and after the film end intentionally need not preserve the endpoint velocity."
+  ],
+  "sourceHashes": {
+    "source": "4c99016b16d421be43bfab545949fc0db0801e6a9a256751cda1d0ef1744302b",
+    "narration": "9637748c9a18b45cf46fcb00c8f2cfa6d9577d0e6252e39635fc8ee2039ae388",
+    "legacy": "a4e3099e67d477e8a12f5c872d4848423d6d096b96eaf590c33f10ccb887c625"
+  },
+  "actualNarrationVersion": 4,
+  "intervals": [
+    {
+      "start": 0,
+      "end": 18,
+      "span": 18,
+      "coefficients": [
+        0,
+        18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 18,
+      "end": 44,
+      "span": 26,
+      "coefficients": [
+        18,
+        26,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 44,
+      "end": 75,
+      "span": 31,
+      "coefficients": [
+        44,
+        31,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 75,
+      "end": 118,
+      "span": 43,
+      "coefficients": [
+        75,
+        43,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 118,
+      "end": 160,
+      "span": 42,
+      "coefficients": [
+        118,
+        42,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 160,
+      "end": 216,
+      "span": 56,
+      "coefficients": [
+        160,
+        56,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 216,
+      "end": 262,
+      "span": 46,
+      "coefficients": [
+        216,
+        46,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 262,
+      "end": 290,
+      "span": 28,
+      "coefficients": [
+        262,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    },
+    {
+      "start": 290,
+      "end": 300,
+      "span": 10,
+      "coefficients": [
+        290,
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      "minimumVelocity": 1,
+      "maximumVelocity": 1
+    }
+  ],
+  "interiorJoins": [
+    {
+      "physicalSec": 18,
+      "sceneSec": 18,
+      "finiteDifferenceStep": 0.018000000000000002,
+      "expectedVelocity": 1,
+      "leftVelocity": 1.0000000000014193,
+      "rightVelocity": 1.0000000000004325,
+      "leftAcceleration": 3.5088530160992593e-10,
+      "rightAcceleration": -3.289549702593056e-11
+    },
+    {
+      "physicalSec": 44,
+      "sceneSec": 44,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1,
+      "leftVelocity": 1.0000000000001563,
+      "rightVelocity": 0.9999999999996234,
+      "leftAcceleration": 0,
+      "rightAcceleration": 8.881784197001252e-11
+    },
+    {
+      "physicalSec": 75,
+      "sceneSec": 75,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1,
+      "leftVelocity": 0.9999999999994458,
+      "rightVelocity": 1.0000000000008669,
+      "leftAcceleration": 3.197442310920451e-10,
+      "rightAcceleration": 0
+    },
+    {
+      "physicalSec": 118,
+      "sceneSec": 118,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1,
+      "leftVelocity": 0.9999999999973141,
+      "rightVelocity": 0.9999999999994458,
+      "leftAcceleration": -7.105427357601002e-10,
+      "rightAcceleration": 3.552713678800501e-11
+    },
+    {
+      "physicalSec": 160,
+      "sceneSec": 160,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1,
+      "leftVelocity": 1.0000000000104592,
+      "rightVelocity": 1.0000000000005116,
+      "leftAcceleration": 1.6342482922482304e-9,
+      "rightAcceleration": 1.4210854715202004e-10
+    },
+    {
+      "physicalSec": 216,
+      "sceneSec": 216,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1,
+      "leftVelocity": 1.0000000000069065,
+      "rightVelocity": 1.0000000000019327,
+      "leftAcceleration": 1.2079226507921703e-9,
+      "rightAcceleration": -7.105427357601002e-10
+    },
+    {
+      "physicalSec": 262,
+      "sceneSec": 262,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1,
+      "leftVelocity": 0.999999999990564,
+      "rightVelocity": 0.9999999999976694,
+      "leftAcceleration": -1.4210854715202004e-9,
+      "rightAcceleration": 4.263256414560601e-10
+    },
+    {
+      "physicalSec": 290,
+      "sceneSec": 290,
+      "finiteDifferenceStep": 0.01,
+      "expectedVelocity": 1,
+      "leftVelocity": 0.9999999999990905,
+      "rightVelocity": 0.9999999999962483,
+      "leftAcceleration": 0,
+      "rightAcceleration": 1.7053025658242404e-9
+    }
+  ],
+  "summary": {
+    "samples": 18001,
+    "knots": 10,
+    "minimumVelocity": 1,
+    "maximumVelocity": 1,
+    "maximumIndependentError": 1.4210854715202004e-13
+  },
+  "status": "cpu-timeline-checks-pass",
+  "failedCheckIds": []
+}

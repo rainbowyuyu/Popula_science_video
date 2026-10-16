@@ -1,0 +1,65 @@
+{
+  "capturedAt": "2026-10-11T11:15:42.951Z",
+  "base": "http://127.0.0.1:8019",
+  "localOnly": true,
+  "policy": {
+    "noChatSubmit": true,
+    "noSolverStart": true,
+    "noCloudAIRequests": true,
+    "staticThreeJSDependencyOnly": true
+  },
+  "presentation": "capture-only CSS focus and readable typography; product source unchanged",
+  "segments": {
+    "brief": {
+      "file": "public/beso-research/web-live/brief-focused-v5.mp4",
+      "durationSec": 9.079999999999998,
+      "sha256": "be452a7fa31ef212ec020d78a94d493c5cf5f49fd435cc2aee1aeb7b2fbd8915",
+      "prompt": "设计 20 MW 浮式风电基础，设置海况、材料和质量约束",
+      "actions": [
+        "typed draft only",
+        "confirmed real deep-think control enabled",
+        "confirmed real CAD-tools control enabled"
+      ],
+      "sourceViewport": [
+        1200,
+        316
+      ],
+      "deliveredViewport": [
+        1200,
+        240
+      ],
+      "crop": "removed only unused blank strip between real input and real controls",
+      "fontSizePx": 42
+    },
+    "interaction": {
+      "file": "public/beso-research/web-live/interaction-focused-v5.mp4",
+      "durationSec": 10,
+      "sha256": "218994841576cfba9f1254f195149bde9bbec1367ed522b5c9abf70e603a3356",
+      "source": "D:/python_project/beso_ai/runs/beso9_centered_seed_campaign_v4/mw_20/seed_17/beso_run/parameters_summary.json",
+      "sourceSHA256": "63a2cd1551fc14908f2ade820688a3e4c16b55507f42fe5d6ae4245fca977258",
+      "actions": [
+        "imported saved parameters_summary.json",
+        "disabled dimensions to remove dense text",
+        "fit real model",
+        "enabled real viewer auto rotation"
+      ],
+      "sourceViewport": [
+        1200,
+        660
+      ],
+      "noSolver": true
+    }
+  },
+  "blocked": [
+    {
+      "segment": "brief",
+      "method": "GET",
+      "path": "/api/assistant/qwen-warmup"
+    },
+    {
+      "segment": "interaction",
+      "method": "GET",
+      "path": "/api/assistant/qwen-warmup"
+    }
+  ]
+}

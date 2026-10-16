@@ -1,0 +1,72 @@
+{
+  "id": "v4c-toolchain-1",
+  "text": "工程师可以改模型、看证据、复查方案。一次对话，连起整个工作流程。",
+  "ttsText": "工程师可以改模型、看证据、复查方案。一次对话，连起整个工作流程。",
+  "signature": "6bbfafab5a9943eb2b7ca6b62ea47949f0f5fe300919244de81f39bec4f71535",
+  "raw": "audio/raw/v4c-toolchain-1-6bbfafab5a.wav",
+  "processed": "public/voice/v4c-toolchain-1.wav",
+  "rawDuration": 6.267291666666667,
+  "duration": 6.507291666666666,
+  "sha256": "8663e81641d085ff8fac15acf7effd6e9c6451f20437dcebc5718ad84aa6b31c",
+  "rawSHA256": "8057e430d59cd138461a51ab006e93336a182dcf5d02d375c855ca63d5c709f6",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "rawEndpointDB": -46.19999533613549,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "afcfbfb4874489c90bfdf8e0b158f18c78415ac06a17285146ce2ebc4f705f82",
+    "outputSha256": "8663e81641d085ff8fac15acf7effd6e9c6451f20437dcebc5718ad84aa6b31c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 6.507291666666666,
+      "peakDb": -9.245781957513483,
+      "activeRmsDb": -27.39784011943714,
+      "quietFrameP10Db": -73.96687801153865
+    },
+    "output": {
+      "seconds": 6.507291666666666,
+      "peakDb": -5.736526126835732,
+      "activeRmsDb": -24.245731525618087,
+      "quietFrameP10Db": -79.6929405937149
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "sourceCandidateId": "v4-toolchain-1",
+  "voiceSource": "Provider public voice; not personal clone",
+  "personalReferenceUploaded": false,
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "subjectiveListeningChecked": false
+}

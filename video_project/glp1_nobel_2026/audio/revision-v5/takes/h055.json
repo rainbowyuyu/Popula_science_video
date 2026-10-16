@@ -1,0 +1,87 @@
+{
+  "id": "h055",
+  "text": "失血、缺水时，这套办法有用；可它长期偏活跃，血管一直收紧、水钠留得多，血压就更难降下来。",
+  "ttsText": "失血、缺水时，这套办法有用；可它持续偏活跃，血管一直收紧、水钠留得多，血压就更难降下来。",
+  "signature": "928497478335c49fbda259e9e44490be83ecef65341d4c74b8e325995219c4d7",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h055-928497478335-4349f3fa93.wav",
+  "processed": "audio/revision-v5/voice/h055.wav",
+  "rawDuration": 9.12,
+  "duration": 9.12,
+  "sampleRate": 48000,
+  "sha256": "01bc18b703a8e37ce5c3beabe8cd81d9fdf198bacaa86d466799e6f50a8e5a08",
+  "rawSHA256": "be47e5d9a33ccd222ac269c4630bfe3c51841704b6cdbfe706c5185e9f4a6dbc",
+  "seed": 1128920058,
+  "batchIds": [
+    "h039",
+    "h055"
+  ],
+  "batchKey": "4349f3fa93984090b21be7751d7c5a0d391296af95f8e12cd05fb87f437542b4",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -81.47699414707907,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "be47e5d9a33ccd222ac269c4630bfe3c51841704b6cdbfe706c5185e9f4a6dbc",
+    "outputSha256": "01bc18b703a8e37ce5c3beabe8cd81d9fdf198bacaa86d466799e6f50a8e5a08",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.29909189490305,
+    "input": {
+      "seconds": 9.12,
+      "peakDb": -5.421136815722915,
+      "activeRmsDb": -21.90130506307412,
+      "quietFrameP10Db": -63.60079767369566
+    },
+    "output": {
+      "seconds": 9.12,
+      "peakDb": -4.066729195042706,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.31095026590482
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "pron-v2",
+  "candidateTakeSHA256": "da3bb14df08d08308a702cae4cda5a7aca8a869578ff2cbe0a75bd1793e1662d",
+  "candidateRecord": "audio/revision-v5/candidates/pron-v2/takes/h055.json",
+  "selectionReason": "Pronunciation pass: avoid ambiguous 长 readings with natural spoken synonyms; preserve original caption wording.",
+  "previousSelectedSHA256": "8656b9f639d6967acf15ad27784c9a8c01b1e1d904833c103375279874938b5c"
+}

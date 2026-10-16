@@ -1,0 +1,102 @@
+{
+  "version": "V16",
+  "representation": "Authored artistic volumetric covariance splats sampled from a three-dimensional Blender scene and rendered with mesh ground/tree support; not a trained photographic reconstruction",
+  "notPhotogrammetry": true,
+  "physicalAuthority": false,
+  "checks": [
+    {
+      "label": "Metadata byte/count and finite values",
+      "pass": true
+    },
+    {
+      "label": "Positive anisotropic covariance and normalized rotations",
+      "pass": true,
+      "badScale": 0,
+      "badQ": 0,
+      "badColour": 0
+    },
+    {
+      "label": "Complete deterministic camera-depth permutation frame0",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic camera-depth permutation frame60",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic camera-depth permutation frame120",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic camera-depth permutation frame180",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic camera-depth permutation frame240",
+      "pass": true
+    },
+    {
+      "label": "Absolute frame60 reproduces after reverse/random seek",
+      "pass": true
+    }
+  ],
+  "snapshots": [
+    {
+      "frame": 0,
+      "sortSHA256": "757f8772f534d804b3089951551a40fb923f35989c987a3fe274434522785141",
+      "camera": [
+        3.4,
+        2.45,
+        15.2
+      ],
+      "scatter": 0,
+      "visible": true
+    },
+    {
+      "frame": 60,
+      "sortSHA256": "fb03e442284aca342cd033efa4381fca7914e4a5a23902455df5aca66955bfec",
+      "camera": [
+        2.55625,
+        2.6008469557843195,
+        14.246875
+      ],
+      "scatter": 0.05777586970745171,
+      "visible": true
+    },
+    {
+      "frame": 120,
+      "sortSHA256": "1cdde30669b08dc7e2af16e967ee9449bbfc6cbce732f8315f737ef45be1f728",
+      "camera": [
+        0.6999999999999997,
+        2.77,
+        12.149999999999999
+      ],
+      "scatter": 0.26,
+      "visible": true
+    },
+    {
+      "frame": 180,
+      "sortSHA256": "f1c2fc9be100a564e0c30ff7b999c279c2aa1c5a1ab1c99360d05076cf95fbe3",
+      "camera": [
+        -1.1562500000000004,
+        2.6008469557843195,
+        10.053125
+      ],
+      "scatter": 0.057775869707451764,
+      "visible": true
+    },
+    {
+      "frame": 240,
+      "sortSHA256": "3c920053c9cc07b549e22bfe387ad9df7ead08fd279eae2ee82794e081ba513d",
+      "camera": [
+        -2.0000000000000004,
+        2.45,
+        9.1
+      ],
+      "scatter": 3.89937543492083e-33,
+      "visible": true
+    }
+  ],
+  "binarySHA256": "c29a20c3cb370b7c406c4db5189d820348eeab9103a48667e9884a466bdd0014",
+  "sourceGLBSHA256": "7961c9bb51ca478b223d347b8f018cd3254b69edb662a69d53e17004addd64ce"
+}

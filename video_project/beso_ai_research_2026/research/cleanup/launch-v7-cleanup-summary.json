@@ -1,0 +1,29 @@
+{
+  "schema": "launch-v7-cleanup-summary-v1",
+  "createdUTC": "2026-10-11T14:21:38.561615+00:00",
+  "status": "applied-and-post-decode-passed",
+  "finalSHA256": "5a7bde2fc00f6dd1c750efc34c0861d831f5ab73881a33605c80bd7c55cd556e",
+  "totalFilesDeleted": 15243,
+  "logicalBytesDeleted": 8910816604,
+  "logicalGiBDeleted": 8.3,
+  "phases": [
+    {
+      "record": "research/cleanup/verified-public-copy-reclaim.json",
+      "logicalBytes": 2149051755,
+      "files": 922,
+      "observedFreeBefore": 487424,
+      "observedFreeAfter": 2167037952
+    },
+    {
+      "record": "research/cleanup/version-v7-cache-plan.json",
+      "logicalBytes": 6761764849,
+      "files": 14321,
+      "observedFreeBefore": 3102920704,
+      "observedFreeAfter": 20847378432
+    }
+  ],
+  "diskAccountingNote": "Logical deleted bytes are distinct from the observed drive free-space delta; the delta is not attributed entirely to this cleanup.",
+  "postCleanupQA": "research/qa/launch-v7-post-cleanup-delivery.json",
+  "originalSourceAndGeneratedRecordsPreserved": true,
+  "differentOriginalCopiesRetained": 24
+}

@@ -1,0 +1,69 @@
+{
+  "id": "g065",
+  "text": "降低胆固醇的治疗，可以减少肝脏合成，或帮助清除血里的颗粒。选哪种、需不需要联合，依据的是个人风险和检查。",
+  "ttsText": "降低胆固醇的治疗，可以减少肝脏合成，或帮助清除血里的颗粒。选哪种、需不需要联合，依据的是个人风险和检查。",
+  "signature": "3b604acde3b5d0c0310b70878c2f664077920442f154823c2c2ede39a53084ed",
+  "raw": "audio/raw/g065-3b604acde3.wav",
+  "processed": "public/voice/g065.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "d68a518a2e26b4e8c19787da98e1739a5c52164b14d6d343c2523b37c848de10",
+  "seed": 996166349,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g065",
+    "g066",
+    "g067",
+    "g068"
+  ],
+  "rawEndpointDB": -97.09128590762099,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "c3bb91c36fd0c940b60670d00224100ea9dfa06c888c686af6a18ce9bc9d5392",
+    "outputSha256": "d68a518a2e26b4e8c19787da98e1739a5c52164b14d6d343c2523b37c848de10",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.819162512688571,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.253385963950617,
+      "activeRmsDb": -23.693236462351162,
+      "quietFrameP10Db": -61.07728138732413
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.92757832062207,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.986094197076994
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

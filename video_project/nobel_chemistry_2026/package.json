@@ -1,0 +1,38 @@
+{
+  "name": "rainbow-nobel-chemistry-2026",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "audio": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v01.py",
+    "render": "node scripts/render_chemistry2026_v01.mjs",
+    "stills": "node scripts/render_chemistry2026_v01.mjs stills",
+    "audio:v02": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v02.py",
+    "audio:v03": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v03.py",
+    "render:v02": "node scripts/render_chemistry2026_v02.mjs",
+    "stills:v02": "node scripts/render_chemistry2026_v02.mjs stills",
+    "qa:v02": "python scripts/qa_chemistry2026_v02.py",
+    "render:v03": "node scripts/render_chemistry2026_v03.mjs",
+    "stills:v03": "node scripts/render_chemistry2026_v03.mjs stills",
+    "qa:v03": "python scripts/qa_chemistry2026_v03.py",
+    "audio:v04:rap": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v04_rap.py",
+    "render:v04:rap": "node scripts/render_chemistry2026_v04_rap.mjs",
+    "stills:v04:rap": "node scripts/render_chemistry2026_v04_rap.mjs stills",
+    "qa:v04:rap": "python scripts/qa_chemistry2026_v04_rap.py"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.526",
+    "@remotion/media": "4.0.526",
+    "@remotion/renderer": "4.0.526",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.526"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}

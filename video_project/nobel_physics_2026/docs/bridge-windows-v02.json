@@ -1,0 +1,13 @@
+{
+  "timeline": "src/physics2026/timeline-v02.json",
+  "fps": 30,
+  "policy": "Each 5-second plate is centred on its real scene seam (2.5 s before and after); review contact frames before final export. Plates are silent and environmental.",
+  "windows": [
+    {"id":"bridge-01-cosmic-arrival","fromClip":"000","toClip":"001","start":510,"end":660,"trim":"full"},
+    {"id":"bridge-02-ice-descent","fromClip":"004","toClip":"005","start":2599,"end":2749,"trim":"full"},
+    {"id":"bridge-03-cherenkov-volume","fromClip":"006","toClip":"007","start":3700,"end":3850,"trim":"full"},
+    {"id":"bridge-04-source-return","fromClip":"011","toClip":"012","start":6269,"end":6419,"trim":"full"},
+    {"id":"bridge-05-night-coda","fromClip":"015","toClip":"016","start":8461,"end":8611,"trim":"full"}
+  ],
+  "integration": "Render the plate muted below the deterministic Canvas/Opus layer; use no crossfade between plates. If the local narration timing changes, preserve each clip seam and slide the window as a unit."
+}

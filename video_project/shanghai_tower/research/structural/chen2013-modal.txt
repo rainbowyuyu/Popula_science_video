@@ -1,0 +1,655 @@
+--- PDF PAGE 1 ---
+The 6th International Conference on 
+Structural Health Monitoring of Intelligent Infrastructure 
+Hong Kong ︳9-11 December 2013 
+ 
+ 
+ 
+MODAL IDENTIFICATION OF SHANGHAI TOWER UNDER CONSTRUCTION 
+FROM AMBIENT VIBRATION RESPONSE 
+ 
+ 
+Xi Chen, Haibei Xiong, Weixing Shi, Jiazeng Shan 
+Research Institute of Structural Engineering and Disaster Reduction, Tongji University,  
+Shanghai, China. Email: xionghaibei@tongji.edu.cn  
+ 
+ 
+ABSTRACT  
+ 
+The Shanghai Tower is a currently in-construction super high-rise building located in Shanghai, China. It will 
+rise 632 meters and become the tallest skyscraper in China at the time of its completion. A periodic field test 
+was conducted on the building under ambient vibration from December, 2011 to present. To identify the 
+dynamic properties of the building, two output-only modal identification techniques are applied to the ambient 
+vibration measurements. The Peak-Picking method combined with the half-power bandwidth method 
+(PP-HPBW) and the Covariance driven Stochastic Subspace Identification method (SSI-COV) are implemented 
+for the evaluation of modal frequencies and damping ratios. The identified modal frequencies, damping ratios 
+from the alternative approaches in different theoretical backgrounds are compared to each other with favorable 
+correlation. The variation of the modal frequencies with the development of construction is further studied. 
+Finally, it is demonstrated that the periodic field test and modal identification carried out in this study provided 
+very useful and valuable information. 
+ 
+KEYWORDS 
+ 
+Ambient vibration, field test, modal identification, high-rise building, construction.
+ 
+INTRODUCTION 
+ 
+Performance of a super high-rise building subjected to seismic wind and other dynamic loads depends upon its 
+structural properties such as mass stiffness, damping and their distribution. In comparison to the amount of work 
+that have been done about modal identification of existing structures (e.g. Satake and Yokota 1996; Cimellaro et 
+al. 2012; Shi et al. 2012), relatively little attention has been paid to the system identification of structures under 
+construction. Due to the relatively long construction time and the complicated construction situation, field tests 
+and modal identification of a super high-rise building under construction plays an essential technical role in 
+ensuring the safety of the structure. 
+ 
+Since full-scale dynamic tests and modal identification provide the validation of other modeling and design 
+assumptions, a number of full-scale measurements of wind or seismic effects on tall buildings have been 
+performed throughout the world, such as 31 steel-structure buildings in Japan (Satake and Yokota 1996), a 
+long-term tremor monitoring of a 280 meters office tower (Brownjohn 2003), Central Plaza Tower in Hong 
+Kong and Di Wang Tower in Shenzhen (Li et al. 2005), a monitoring program on three tall buildings in the city 
+of Chicago (Kijewski-Correa et al. 2006) and Taipei 101 Tower (Li et al. 2011). As commented by Tamura 
+(Tamura et al. 2005), the chance to conduct full-scale measurements is quite rare, and measured data are very 
+important and valuable. 
+ 
+In this study, an attempt is made to apply two state-of-the-art modal identification algorithms to the response 
+records of Shanghai Tower from the ambient vibration tests. Based on these efforts, the variation of the modal 
+frequencies under construction is presented and discussed. 
+ 
+FIELD TESTS OF SHANGHAI TOWER 
+Description of Shanghai Tower 
+ 
+Shanghai Tower is a spiraling form that will rise 632 meters to become the tallest skyscraper in China, at the 
+time of its completion. It is located in Lujiazui Financial and Trade Zone, Shanghai, China. The building 
+consists of two structures: an above-grade 124-story tower and an above-grade 7-sotry podium. The 5-story 
+
+--- PDF PAGE 2 ---
+ 
+basement is common to the two structures. Organized in eight cylindrical zones and a tower crown on the top, 
+the segments are placed atop of one another. The tower has a double-skin façade that encloses the stacked 
+buildings, while a triangular exterior layer creates the second skin, which rotates as it rises (Figure 1). The 
+circular base plan of the super tower is 83.6 m in diameter and gradually reduces to 42 m in diameter on the 8th 
+zone. The aspect ratio of height to width of the tower is 7 (Lu et al. 2011). 
+ 
+The 632 meters tower is an extraordinary structure. The lateral force resistant system, as shown in Figure 2, 
+consists of a central reinforced concrete core wall linked to mega frame through six steel outrigger trusses, 
+which located in the strengthen stories of Zone 2 and Zone 4 to Zone 8. The core wall is concrete embedded 
+with steel plate bellow the 14th floor, and the maximum overall dimension of the core wall at base plan is 30 m 
+× 30 m. The exterior mega frame consists of four paired concrete super-columns and four diagonal 
+super-columns, which are both reinforced with shaped steel elements and eight two-story-height belt trusses at 
+each strengthened/refuge stories.  
+ 
+ 
+Figure 1. General view of Shanghai Tower 
+upon completion 
+Figure 2. The lateral force resistant system of Shanghai 
+Tower 
+ 
+Experimental Setup and Response Data 
+ 
+A series of field tests of Shanghai Tower started on 26 December 2011, and was conducted about every one or 
+two months. Until recently, there are totally nine in situ tests on the building with the dates of 9 April 2012, 22 
+May 2012, 4 July 2012, 27 August 2012, and 16 October 2012, 1 January 2013, 19 March 2013, 10 May 2013. 
+The acceleration responses were sampled at a rate of 20 Hz. The resulting Nyquist frequency of 10 Hz was 
+much higher than the frequencies of interest (about 2 Hz). The measurements were performed with an 
+acquisition time of no less than 30 min based on experience. The acceleration responses were measured by 
+piezoelectric accelerometers with dynamic response from 0.05 Hz to 500 Hz, measurement capacity range equal 
+to 0.1 g (1 g = 9.8 m/s2) and sensitivity equal to 10-5 g. Figure 3 illustrates the typical accelerometers and data 
+acquisition equipment used in the tests. And the typical floor plan and the sensor location are shown in Figure 4. 
+ 
+ 
+ 
+Figure 3. The accelerometers and data acquisition 
+equipment on the thirty-second floor 
+Figure 4. Floor plan and the sensor location 
+ 
+During the field test, the first step was to setup two accelerometers on the top of the core wall, and then setup 
+
+--- PDF PAGE 3 ---
+ 
+them on the tallest floor with composite steel-concrete slab at the second step (Table 1). The ambient vibration 
+responses in two translational directions (X, Y) have been recorded in these steps. The ambient vibration records 
+in two horizontal directions on the eighty-first floor (81F) on 16 October 2012 are illustrated in Figure 5. 
+ 
+Table 1. Accelerometer distribution in each step of five filed tests 
+Date 
+Step 1 
+Step 2 
+Date 
+Step 1 
+Step 2 
+26/Dec/2011 
+Floor 42 
+Floor 19 
+16/Oct/2012 
+Floor 81 
+Floor 63 
+09/Apr/2012 
+Floor 56 
+Floor 32 
+08/Jan/2013 
+Floor 94 
+Floor 71 
+22/May/2012 
+Floor 61 
+Floor 39 
+19/Mar/2013 
+Floor 102 
+Floor 80 
+04/Jul/2012 
+Floor 68 
+Floor 45 
+10/May/2013 
+Floor 111 
+Floor 88 
+27/Aug/2012 
+Floor 73 
+Floor 52 
+ 
+ 
+ 
+ 
+ 
+Figure 5. Ambient vibration records on the eighty-first floor in two horizontal directions (Date: 2012-10-16): (a) 
+X direction; (b) Ydirection 
+ 
+DATA PROCESSING AND DISCUSSION 
+ 
+For the estimation of structural dynamic properties, it is always recommended the application of at least two 
+identification method with different theoretical background (such as both frequency and time-domain 
+algorithms), to avoid inaccurate results that may for instance stem from an inadequate selection of the methods 
+parameters (e.g. Magalhães et al. 2012; Aktan et al. 1997). In light of this, the peak-picking method with the 
+half-power bandwidth method (PP-HPBW) in frequency domain and the covariance driven stochastic subspace 
+identification technique (SSI-COV) in the time domain are applied to evaluate the natural frequencies and 
+damping ratios of Shanghai Tower under various construction stages. 
+ 
+0
+0.5
+1
+1.5
+2
+0
+0.5
+1
+Frequency (Hz)
+Power Spectrum
+ 
+ 
+Floor 81
+Floor 63
+0
+0.5
+1
+1.5
+2
+0
+0.5
+1
+Frequency (Hz)
+Power Spectrum
+ 
+ 
+(a) X direction 
+(b) Y direction 
+Figure 6. Normalized Power Spectra from the field test records in two translational directions 
+ 
+The typical power spectrums are shown in Figure 6. In this plot, the blue solid lines and red dash lines present 
+the spectrum of the data collected from the locations of Step 1and Step 2 in Table 1, respectively. It implies that 
+the higher mode frequency peaks are more significant in the power spectrums from the locations of Step 1 than 
+that of Step 2 which may near the anti-node of the mode. The relatively higher and steeper modal frequency 
+peak between the two steps is preferred which indicates more prominent vibration component in the 
+measurement and less energy leak of this mode in the frequency domain. The PP-HPBW method furnished the 
+values of the first three modal parameters in both principal directions reported in Table 2 with the corresponding 
+
+--- PDF PAGE 4 ---
+ 
+test date of the used measurement data. 
+ 
+The SSI-COV technique is also applied to each selected time series of structural acceleration response in the 
+time domain. To distinguish the structural modes from the superfluous modes, stabilization diagrams are 
+employed. As the model order increases, the identified structural modes (and hence associative modal 
+properties) should remain reasonably stable. Stability tolerances are chosen based on the change in frequency 
+( f
+Δ ), change in damping ratios ( ξ
+Δ ), and modal assurance criterion (MAC) (Link 1999). The polynomial 
+order of the adopted models varies from 2 to 50 and all three of the following convergence criteria are met: 
+%
+1
+<
+Δf
+     
+%
+15
+<
+Δξ
+     
+%
+98
+<
+MAC
+ 
+ 
+Table 2. Modal frequencies and damping ratios of Shanghai Tower under different construction stages 
+Method 
+PP-HPBW 
+COV-SSI 
+Date 
+Mode 
+f (Hz) 
+ζ (%) 
+f (Hz) 
+ζ (%) 
+26/Dec/2011 
+X1 
+0.4492 
+1.27 
+0.4498 
+1.34 
+Y1 
+0.4609 
+1.02 
+0.4606 
+1.07 
+X2 
+1.2070 
+1.20 
+1.2303 
+1.83 
+Y2 
+1.3086 
+1.13 
+1.3122 
+2.84 
+X3 
+1.5156 
+0.59 
+1.5160 
+1.81 
+Y3 
+1.5156 
+0.60 
+1.4855 
+1.75 
+09/Apr/2012 
+X1 
+0.3906 
+2.91 
+0.3842 
+1.02 
+Y1 
+0.3984 
+1.57 
+0.3966 
+0.94 
+X2 
+1.0313 
+1.63 
+1.0388 
+1.83 
+Y2 
+1.1211 
+0.63 
+/ 
+/ 
+X3 
+1.8125 
+0.83 
+1.8261 
+1.60 
+Y3 
+1.6328 
+0.85 
+1.6390 
+1.28 
+22/May/2012 
+X1 
+0.3164 
+1.43 
+0.3121 
+1.78 
+Y1 
+0.3242 
+3.14 
+0.3055 
+3.06 
+X2 
+0.8789 
+0.95 
+0.8785 
+0.76 
+Y2 
+0.8789 
+0.95 
+0.8776 
+0.80 
+X3 
+1.5273 
+1.09 
+1.5695 
+2.31 
+Y3 
+1.5273 
+1.23 
+1.5696 
+2.60 
+04/Jul/2012 
+X1 
+0.2852 
+1.54 
+0.2858 
+0.98 
+Y1 
+0.2930 
+1.70 
+0.2853 
+1.53 
+X2 
+0.8594 
+1.11 
+0.8256 
+0.77 
+Y2 
+0.9102 
+2.13 
+0.8651 
+1.08 
+X3 
+1.4961 
+0.59 
+1.4378 
+2.86 
+Y3 
+1.4844 
+0.99 
+1.4848 
+2.75 
+27/Aug/2012 
+X1 
+0.2617 
+1.62 
+0.2624 
+1.14 
+Y1 
+0.2656 
+1.85 
+0.2661 
+1.16 
+X2 
+0.7656 
+1.62 
+0.7671 
+1.01 
+Y2 
+0.8125 
+0.84 
+0.8155 
+0.36 
+X3 
+1.4688 
+0.62 
+1.3622 
+3.94 
+Y3 
+1.4297 
+0.66 
+1.4510 
+3.85 
+ 
+
+--- PDF PAGE 5 ---
+ 
+Table 2. (Cont.) Modal frequencies and damping ratios of Shanghai Tower under different construction stages 
+Method 
+PP-HPBW 
+COV-SSI 
+Date 
+Mode 
+f (Hz) 
+ζ (%) 
+f (Hz) 
+ζ (%) 
+16/Oct/2012 
+X1 
+0.2266 
+1.30 
+0.2242 
+0.46 
+Y1 
+0.2305 
+1.56 
+0.2209 
+0.54 
+X2 
+0.6797 
+0.81 
+0.6774 
+0.94 
+Y2 
+0.7109 
+0.97 
+0.7124 
+0.88 
+X3 
+1.2656 
+0.49 
+1.2629 
+1.34 
+Y3 
+1.3125 
+0.94 
+/ 
+/ 
+08/Jan/2013 
+X1 
+0.1953 
+1.26 
+0.1967 
+0.58 
+Y1 
+0.1992 
+1.49 
+0.1949 
+0.41 
+X2 
+0.5508 
+0.68 
+/ 
+/ 
+Y2 
+0.5898 
+1.53 
+0.5906 
+0.88 
+X3 
+1.0278 
+0.45 
+1.0144 
+0.83 
+Y3 
+1.0625 
+0.58 
+1.0637 
+1.62 
+19/Mar/2013 
+X1 
+0.1758 
+1.62 
+0.1743 
+1.27 
+Y1 
+0.1758 
+1.90 
+0.1770 
+0.46 
+X2 
+0.5039 
+1.10 
+0.5043 
+1.21 
+Y2 
+0.5195 
+1.52 
+0.5254 
+1.25 
+X3 
+0.9219 
+1.32 
+0.9256 
+1.48 
+Y3 
+0.9492 
+1.17 
+0.9450 
+1.05 
+10/May/2013 
+X1 
+0.1602 
+2.07 
+0.1590 
+0.43 
+Y1 
+0.1602 
+1.97 
+0.1607 
+0.55 
+X2 
+0.4453 
+1.50 
+0.4485 
+1.18 
+Y2 
+0.4609 
+1.57 
+0.4621 
+0.99 
+X3 
+0.8242 
+1.33 
+0.8289 
+1.34 
+Y3 
+0.8350 
+0.79 
+0.8372 
+1.38 
+ 
+The identified modal frequencies and damping ratios of Shanghai Tower by the SSI-COV approach are also 
+quantified in Table 2 with a few modes failing to evaluate. 
+According to the results listed in Table 2, a good agreement is found between the natural frequencies obtained 
+from PP method and SSI-COV technique. For the identified damping ratios the results are not so coherent for all 
+the modes. However, the results are still applicable in practical engineering, when considering the inherent 
+uncertainty in damping prediction and estimation (Kareem and Gurley 1996). It is also observed that the modal 
+frequencies in two translational directions are consistent with each other, because of the symmetric geometry 
+plan of the supertall building. 
+ 
+The motivation for the performance of field test on this super high-rise building was in an attempt to investigate 
+the change of natural frequencies at different construction stages. Figure 7 displays the variation of first three 
+modal frequencies with respect to the story number of corewall during construction based on the identified 
+results by PP method in Table 2. It is observed that the natural frequencies monotonically decrease with the 
+development of the construction, especially for the first two modal frequencies approximate linearly decreasing. 
+The third modal frequencies identified from the first two dynamic tests are obviously different from the 
+tendency, which may be caused by the measurement errors. 
+ 
+ 
+
+--- PDF PAGE 6 ---
+ 
+40
+60
+80
+100
+120
+0.1
+0.2
+0.3
+0.4
+0.5
+Story number of corewall
+Frequency (Hz)
+ 
+ 
+X-Direction
+Y-Direction
+40
+60
+80
+100
+120
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+Frequency (Hz)
+Story number of corewall
+(a) the first modal frequencies 
+(b) the second modal frequencies 
+40
+60
+80
+100
+120
+0.5
+1
+1.5
+2
+Story number of corewall
+Frequency (Hz)
+(c) the third modal frequencies 
+Figure 7 Variation of the modal frequencies of Shanghai Tower in two translational directions at different 
+construction stages 
+ 
+CONCLUSIONS 
+ 
+This paper introduces a study established to allow the field test of the dynamic performance of Shanghai Tower 
+during construction. It has presented a data analysis with two modal identification procedures to evaluate the 
+dynamic properties of this super high-rise building. These field tests provided a unique opportunity to obtain the 
+valuable data and modal information of the in-construction supertall building. The conclusions are drawn from 
+the study as follows: (1) the identified natural frequencies and mode shapes from the alternative approaches in 
+different domains almost coincide, implying the confidence on the estimates; (2) the largest discrepancies are 
+observed in the estimated damping ratios which are not so satisfactory as the natural frequencies and mode 
+shapes, but still show promise for use from the engineering view of point; (3) the determined dynamic properties 
+in two translational directions shows a very good correspondence, for the reason of the symmetric geometry 
+plan of this supertall building; (4) the natural frequencies monotonically decrease with the development of the 
+construction. 
+ 
+AKNOWLEDGEMENTS 
+ 
+The study is sponsored by the Program for Structural Monitoring Technology of Large and Complicated 
+Structures. 
+ 
+REFERENCES 
+ 
+Aktan, A.E., Farhey, D.N., Helmicki, A.J., Brown, D.L., Hunt, V., Lee, K. and Levi, A. (1997). “Structural 
+identification for condition assessment: experimental arts”, Journal of Structural Engineering, 123(12), 
+1674-1684. 
+Brownjohn, J. (2003). “Ambient vibration studies for system identification of tall buildings”, Earthquake 
+Engineering and Structural Dynamics, 32, 71-95. 
+Cimellaro, G., Piantà, S. and De Stefano, A. (2012). “Output-only modal identification of ancient L’Aquila City 
+Hall and Civic Tower”, Journal of Structral Engineering, 138, 481-491. 
+Kareem, A. and Gurley, K. (1996). “Damping in structures: its evaluation and treatment of uncertainty”, Journal 
+of Wind Engineering and Industrial Aerodynamic, 59, 131-157. 
+Kijewski-Correa, T., Kilpatrick, J., Kareem, A., Kwon, D., Bashor, R., Kochly, M., Young, B., Abdelrazaq, A., 
+Galsworthy, J., Isyumov, N., Morrish, D., Sinn, R. and Baker, W. (2006). “Validating wind-induced 
+response of tall buildings: synopsis of the Chicago full-scale monitoring program”, Journal of Structural 
+Engineering, 132(10), 1509-1523. 
+Li, Q., Xiao, Y. and Wong, C. (2005). “Full-scale monitoring of typhoon effects on super tall buildings”, Journal 
+
+--- PDF PAGE 7 ---
+ 
+of Fluids and Structures, 20, 697-717. 
+Li, Q., Zhi, L.H., Tuan, A.Y., Kao, C.S., Su, S.C. and Wu, C.F. (2011). “Dynamic behavior of Taipei 101 Tower: 
+field measurement and numerical analysis”, Journal of Structural Engineering, 137(1), 143-155. 
+Link, M. (1999). Updating of Analytical Models-Basic Procedures and Extensions, Modal Analysis and Testing, 
+NATO Science Series, Kluwer Academic Publishers. 
+Lu, X., Mao, Y., Lu, W. and Jiang, H. (2011). “Shaking table model test of the whole structure of Shanghai 
+Tower”, IABSE-IASS Symposium, London, UK. 
+Magalhães, F., Caetano, E., Cunha, Á., Flamand, O. and Grillaud, G. (2012). “Ambient and free vibration tests 
+of the Millau Viaduct: Evaluation of alternative processing strategies”, Engineering Structures, 45, 372-384. 
+Satake, N. and Yokota, H. (1996). “Evaluation of vibration properties of high-rise steel buildings using data of 
+vibration tests and earthquake observations”, Journal of Wind Engineering and Industrial Aerodynamic, 59, 
+265-282. 
+Shi, W.,, Shan, J. and Lu, X. (2012). “Modal identification of Shanghai World Financial Center both from free 
+and ambient vibration response”, Engineering Structures, 36, 14-26. 
+Tamura, Y., Yoshida, A. and Zhang, L. (2005). “Damping in buildings and estimation techniques”, 6th 
+Asia-Pacific Conference on Wind Engineering (APCWEVI), Yueseong-gu Daejeon, Korea. 

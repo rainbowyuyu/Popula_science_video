@@ -1,0 +1,41 @@
+{
+  "reviewer": "root",
+  "reviewedUTC": "2026-10-09T08:49:38.548630+00:00",
+  "scope": "Three actually opened encoded r2 patch images; final splice review and final identity are separate.",
+  "actualFilesViewed": [
+    {
+      "path": "research/revision-v6/continuity-repair/encoded-patch-review-r2/window-01/frames/frame-012136.jpg",
+      "sha256": "0ce191fb6464607b414bdd5f2559bd8eff9f43369968aab01381e281c0bd9f82"
+    },
+    {
+      "path": "research/revision-v6/continuity-repair/encoded-patch-review-r2/window-01/frames/frame-012137.jpg",
+      "sha256": "821b748b27da1a583209334b02d98ba4543fff04430b412ee4bb48f0603e4122"
+    },
+    {
+      "path": "research/revision-v6/continuity-repair/encoded-patch-review-r2/window-02/encoded-patch-h073-sheet-04.jpg",
+      "sha256": "85ca42d88e31e31e64f5a7bf7187521013695756ef49b0bd99885b4f83c6f01b"
+    }
+  ],
+  "patches": [
+    {
+      "path": "tmp/v6-continuity-patches-r2/segment-12000-12249.mp4",
+      "sha256": "8d47e4aa222ce84f24efd2239c12ba19876ea0ac1c02955e87dba28e65759bb2"
+    },
+    {
+      "path": "tmp/v6-continuity-patches-r2/segment-20250-20749.mp4",
+      "sha256": "63b15ef3c9a06e7e3cc72b3a2a1891d55bc8da0855945cd504e9792dfe1dc5bc"
+    }
+  ],
+  "sampledVisualReviewCompleted": true,
+  "blockingIssues": [],
+  "findings": [
+    "F12136/F12137: plasma location anchor and annotation stay stable while platelets and lens move; the former leader switch is resolved.",
+    "h073 F20466-F20473: translucent parent tissue remains a continuous visible shape throughout the transition; text and scale are clear."
+  ],
+  "limitations": [
+    "h073 parent surface briefly occupies much of the lens as a soft low-detail shape.",
+    "No normal-speed full-film playback or subjective audio listening claimed."
+  ],
+  "fullDurationSubjectivePlaybackCompleted": false,
+  "fullDurationSubjectiveAudioListeningCompleted": false
+}

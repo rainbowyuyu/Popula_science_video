@@ -1,0 +1,35 @@
+{
+  "beam": {
+    "method": "constant strain triangular FEM, orthotropic plane stress",
+    "E_long_Pa": 10000000000.0,
+    "E_trans_Pa": 650000000.0,
+    "G_Pa": 550000000.0,
+    "nu_LT": 0.35,
+    "loadN": 3000,
+    "boundary": "pin bottom-left, roller bottom-right",
+    "nodes": 637,
+    "elements": 1152,
+    "forceBalanceRelativeError": 4.514125369799634e-13,
+    "strainEnergyJ": 0.0962075981838091
+  },
+  "moisture": {
+    "method": "explicit 2D anisotropic Fick diffusion",
+    "bounded": true,
+    "monotoneMean": true,
+    "calibration": "illustrative coefficients; no real-time species prediction"
+  },
+  "wind": {
+    "method": "D2Q9 BGK",
+    "grid": [
+      200,
+      110
+    ],
+    "steps": 1600,
+    "rhoRange": [
+      0.9864016282013959,
+      1.026672639915934
+    ],
+    "finite": true,
+    "notAFullScaleCFDDesign": true
+  }
+}

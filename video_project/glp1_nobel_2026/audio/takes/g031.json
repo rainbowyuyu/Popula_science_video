@@ -1,0 +1,69 @@
+{
+  "id": "g031",
+  "text": "心脏收缩，主动脉被血液撑开；心脏舒张，它弹回来，继续推动血流。血压，就是血液作用在管壁上的压力。",
+  "ttsText": "心脏收缩，主动脉被血液撑开；心脏舒张，它弹回来，继续推动血流。血压，就是血液作用在管壁上的压力。",
+  "signature": "fca28f19c4298d8b70d5a705325ce491849414b7bddbee6e7f642742ba1aeecc",
+  "raw": "audio/raw/g031-fca28f19c4.wav",
+  "processed": "public/voice/g031.wav",
+  "rawDuration": 10.0,
+  "duration": 10.0,
+  "sha256": "54531fc2d84fce0d4b9db280d5abbd02d735d866bbfa6cb7cf4180c4caff997b",
+  "seed": 3897007916,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g029",
+    "g030",
+    "g031",
+    "g032"
+  ],
+  "rawEndpointDB": -86.92023765000096,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "ac75289390352f6f3b65037e2f37a0c89e83e6480b768408b8d3681982bc6832",
+    "outputSha256": "54531fc2d84fce0d4b9db280d5abbd02d735d866bbfa6cb7cf4180c4caff997b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.0344551229797396,
+    "input": {
+      "seconds": 10.0,
+      "peakDb": -4.828555178211113,
+      "activeRmsDb": -22.774007288239844,
+      "quietFrameP10Db": -63.522067596834404
+    },
+    "output": {
+      "seconds": 10.0,
+      "peakDb": -2.12640245702473,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -63.869951024523566
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

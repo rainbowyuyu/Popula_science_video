@@ -1,0 +1,355 @@
+{
+  "schema": "rainbow.dna-storage.source-record/v2",
+  "version": "2026-10-11-render-v2",
+  "project": "dna_storage_algorithms",
+  "title": "文件能写进 DNA 吗？",
+  "series": "每天5分钟科普 · 生信算法与 DNA 存储",
+  "generatedAtUtc": "2026-10-10T21:15:06Z",
+  "scope": {
+    "workingDirectory": "D:/python_project/manim_extend_rainbow/video_project/dna_storage_algorithms/v2",
+    "legacyProjectUntouched": true,
+    "cleanupBoundary": "v2 only after QA passes"
+  },
+  "masterSpec": {
+    "timeline": {
+      "path": "src/timeline.json",
+      "exists": true,
+      "bytes": 41063,
+      "sha256": "42df7ae4d5556d23441558643a67710a32c79043b53ed5a95479beb601314db9"
+    },
+    "contracts": {
+      "path": "v2/src/contracts.ts",
+      "exists": true,
+      "sha256": "d1f3fb8e7c667017c3735573f61200f213b936e4bbd8811998a4e5210d6fd30c",
+      "bytes": 3459
+    },
+    "cameraRig": {
+      "path": "v2/src/CameraRigV2.ts",
+      "exists": true,
+      "sha256": "95d2fdbbecd84503be628231e5f5fe38c0ba1cb1f46c79843dd03cbec7b951c6",
+      "bytes": 2417
+    },
+    "world": {
+      "path": "v2/src/DNAWorldV2.ts",
+      "exists": true,
+      "sha256": "31523271c6a579d9e95450a9c21297571d6f15d26c366eac664e709f465bf649",
+      "bytes": 9418
+    },
+    "sceneModules": {
+      "path": "v2/src/scene/SceneModulesV2.ts",
+      "exists": true,
+      "sha256": "e55d120f1418a394e6a5af669629a249eafacef1735ee1e40e63798d011ea427",
+      "bytes": 25312
+    },
+    "film": {
+      "path": "v2/src/FilmV2.tsx",
+      "exists": true,
+      "sha256": "09f9df08d4aeba04e18b9ae8f01ed0c666dfc24e2489778ef752b153cc88d32c",
+      "bytes": 7200
+    },
+    "entry": {
+      "path": "v2/src/index.tsx",
+      "exists": true,
+      "sha256": "4dd821920288048f560f56899589c936990ebf218eaa0f55ebb043dc71ddafec",
+      "bytes": 381
+    }
+  },
+  "storyAndEvidence": {
+    "story": {
+      "path": "v2/research/story-v2.md",
+      "exists": true,
+      "sha256": "4117aa92dc8817e790227c318081feb9b3207b4b5efc6934d167b18539e79bdf",
+      "bytes": 7200
+    },
+    "evidenceIds": [
+      "e-goldman-2013",
+      "e-fountain-2017",
+      "e-random-access-2018",
+      "e-alignment",
+      "e-transformer",
+      "e-teaching-errors",
+      "e-model-limit"
+    ],
+    "papers": [
+      {
+        "id": "e-goldman-2013",
+        "citation": "Goldman et al., Nature",
+        "year": 2013,
+        "doi": "10.1038/nature11875",
+        "confidence": "primary",
+        "sourceVersion": "PMC author-manuscript first-page capture; publication PDF endpoint challenged by PMC/Nature, so no PDF is claimed.",
+        "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3672958/",
+        "license": "PMC author manuscript page; retain PMC/NLM and publisher copyright notices. Screenshot is source evidence, not a re-typeset paper card.",
+        "firstPageImage": "public/papers/goldman-2013-page.png",
+        "firstPageImageSha256": "4bce889977c164cd0e1f699b343644d699e6d898b2a6c17707bca7bd9cc80596"
+      },
+      {
+        "id": "e-fountain-2017",
+        "citation": "Erlich & Zielinski, Science",
+        "year": 2017,
+        "doi": "10.1126/science.aaj2038",
+        "confidence": "primary",
+        "sourceVersion": "bioRxiv preprint, posted 2016-12-04; version corresponding to the DNA Fountain work later published in Science",
+        "sourceUrl": "https://www.biorxiv.org/content/biorxiv/early/2016/12/04/074237.full.pdf",
+        "license": "CC BY-NC 4.0 as stated on the preprint first page / bioRxiv record. Non-commercial editorial reference.",
+        "firstPageImage": "public/papers/dna-fountain-preprint-01.png",
+        "firstPageImageSha256": "71a4182b9bc27daca54de718fb8302b61278f82a3831dd965940296539cf7b57",
+        "sourcePdf": "public/papers/dna-fountain-2017-preprint.pdf",
+        "sourcePdfSha256": "5e09af042a9c3450c9eac4023d543a76741c90a0dbf400634dd1c7dfc207549b",
+        "sourcePdfHeaderValid": true
+      },
+      {
+        "id": "e-random-access-2018",
+        "citation": "Organick et al., Nature Biotechnology",
+        "year": 2018,
+        "doi": "10.1038/nbt.4079",
+        "confidence": "primary"
+      },
+      {
+        "id": "e-transformer",
+        "citation": "Dalla-Torre et al., Nature Methods",
+        "year": 2024,
+        "doi": "10.1038/s41592-024-02523-z",
+        "confidence": "primary",
+        "sourceVersion": "publisher PDF (published online 2024-11-28; issue February 2025)",
+        "sourceUrl": "https://www.nature.com/articles/s41592-024-02523-z.pdf",
+        "license": "Publisher PDF; Springer Nature copyright and reuse terms apply. Included as an editorial/source reference.",
+        "firstPageImage": "public/papers/nucleotide-transformer-2024-01.png",
+        "firstPageImageSha256": "7de7289d6acc7a459a0ee83740a9f5bcbb67f22564a290e18cea7f773dc9ded4",
+        "sourcePdf": "public/papers/nucleotide-transformer-2024.pdf",
+        "sourcePdfSha256": "a5510f4b4b0aaf4817140a3b279d69c3a1b163bd986c5282294b9c65c6644b02",
+        "sourcePdfHeaderValid": true
+      }
+    ],
+    "paperSources": "v2/research/paper-sources.json"
+  },
+  "tools": {
+    "blender": {
+      "executable": "D:/blender/blender.exe",
+      "version": "5.1.2",
+      "status": "verified"
+    },
+    "remotion": {
+      "packageVersion": "4.0.526",
+      "compositionId": "DNAStorageAlgorithmsV2"
+    },
+    "threejs": {
+      "package": "three",
+      "role": "deterministic procedural fallback"
+    },
+    "claudeOpus": {
+      "model": "claude-opus-5-5",
+      "status": "connectivity verified; bounded code session timed out before writing files",
+      "fallback": "local implementation reviewed with TypeScript and Remotion checks"
+    },
+    "qwenWan": {
+      "provider": "DashScope",
+      "model": "wan2.6-i2v",
+      "probe": "GET /api/v1/uploads?action=getPolicy",
+      "status": 401,
+      "generationSubmitted": false,
+      "fallback": "Blender + deterministic Three.js bridge"
+    },
+    "waterSurface": {
+      "status": "no distributable WaterPro package found",
+      "fallback": "fixed-seed Three.js and Blender procedural surface"
+    }
+  },
+  "generationPolicy": {
+    "seeded": true,
+    "timeDrivenRandomnessForbidden": true,
+    "externalVideoTextForbidden": true,
+    "qwenVideoSubmitted": false,
+    "lux3dGenerationSubmitted": false,
+    "fallbacks": "Blender + deterministic Three.js"
+  },
+  "audio": {
+    "voiceModel": "Qwen3-TTS-0.6B",
+    "script": "v2/scripts/voice_v2.py",
+    "mixScript": "v2/scripts/mix_v2.py",
+    "rawClipCount": 36,
+    "expectedClipCount": 36,
+    "missingClipIds": [],
+    "voiceManifest": {
+      "path": "research/voice-generation-v2.json",
+      "exists": true,
+      "bytes": 23196,
+      "sha256": "948b24f9d3abdb328db7f2006cf78c25edd11b1082ee306c89bef5760354b8a4"
+    },
+    "musicSource": {
+      "path": "public/music/dna_ambient.wav",
+      "exists": true,
+      "sha256": "b66b382bcd1f065b14c803ad70b5da8d90c43c1fcde83410a53d9138f002991d",
+      "bytes": 95040044
+    },
+    "status": "ready",
+    "master": {
+      "path": "public/audio/master.wav",
+      "exists": true,
+      "bytes": 86400044,
+      "sha256": "64cfea934a6143c833fa12de16b061860d2e26f79090e184669f42448000708b"
+    },
+    "narration": {
+      "path": "public/audio/narration.wav",
+      "exists": true,
+      "bytes": 86400044,
+      "sha256": "1dc95acf12b668efea5c39f5fe6170670a97f47d7593ebbad05848dc908dd06b"
+    },
+    "mixManifest": {
+      "path": "delivery_v2/audio-mix-manifest.json",
+      "exists": true,
+      "bytes": 13480,
+      "sha256": "25b7dae631ad9d5353748c5dca566050292d4d69a6959df10c0e2aa0dfa86687"
+    },
+    "measured": {
+      "durationSec": 300.0,
+      "sampleRate": 48000,
+      "channels": 2,
+      "voiceRmsDb": -21.592579056989845,
+      "musicRmsDb": -36.5958351968282,
+      "mixRmsDb": -22.625586533558323,
+      "peakDb": -1.500000020140368,
+      "integratedLufs": -19.7,
+      "lraLu": 12.3,
+      "truePeakDb": -1.5,
+      "timeStretch": false
+    },
+    "captions": {
+      "path": "src/captions-v2.json",
+      "exists": true,
+      "bytes": 30688,
+      "sha256": "26be05eeac06f36d171bf7fc50423122837893cd35684c9db59e2a3df235a8cc"
+    },
+    "subtitleSrt": {
+      "path": "delivery_v2/subtitles.srt",
+      "exists": true,
+      "bytes": 7173,
+      "sha256": "9cce47c14e578eed3b079426cfa7bf6b7171d3a4a11257bc01310406828b78f1"
+    },
+    "qaReport": {
+      "path": "delivery_v2/audio-qa-v2.json",
+      "exists": true,
+      "bytes": 1949,
+      "sha256": "c527938dbe3d2315ca653dfed9321c3d3b5af520467fe27f8feac53e5c8e2309"
+    },
+    "asrSpotCheck": {
+      "path": "delivery_v2/asr-check-v2.json",
+      "exists": true,
+      "bytes": 4994,
+      "sha256": "8f4e93c387fbcd073dc96c05d9a9ddeb600a1a39be9fd453f135c5eae6e031a4"
+    }
+  },
+  "assetsManifest": "v2/delivery_v2/assets-manifest.json",
+  "qa": {
+    "timelineScript": "v2/scripts/qa_timeline_v2.mjs",
+    "motionScript": "v2/scripts/qa_motion_v2.mjs",
+    "lastRun": "2026-10-11",
+    "timeline": "PASS (9 shots, 36 narration windows, 9000 frames; strict delivery audio duration delta 0)",
+    "motion": "PASS (9 camera poses, 18 samples, 6 evidence markers)",
+    "typescript": "PASS (npx tsc --noEmit -p v2/tsconfig.json)",
+    "render": "PASS (300.000s video, 300.011s AAC container tail padding, 9000 frames, 1920x1080/30fps; video/audio ffmpeg decode clean; final SHA256 a6cc0cf389b99d49305a6634c733ad2af8d5330bbed69a604b9890b3ce070210)",
+    "audio": "PASS (300.000s, 48kHz stereo PCM24; timeStretch=false; max true peak -1.5dBFS; EBU integrated -19.7 LUFS; silent coda n36 intentional)",
+    "blackFrames": "PASS (blackdetect pix_th=0.1, no >=0.5s full-black interval)",
+    "silence": "PASS (silencedetect -45dB/1s, no events)",
+    "peak": "PASS (ffmpeg volumedetect max -0.8dB, mean -21.4dB)",
+    "subtitles": "PASS (104 captions, max 24 chars, source manifest hash verified, coverage ratio 1.0, all <=9000 frames)"
+  },
+  "reproducibility": {
+    "commands": [
+      "npx tsc --noEmit -p v2/tsconfig.json",
+      "node v2/scripts/qa_timeline_v2.mjs --strict-delivery",
+      "node v2/scripts/qa_motion_v2.mjs",
+      "python v2/scripts/mix_v2.py",
+      "node v2/scripts/render_v2.mjs --stills",
+      "node v2/scripts/render_v2.mjs --audio",
+      "ffprobe -hide_banner v2/delivery/DNA存储与生信算法_V2_1080p.mp4"
+    ],
+    "note": "Final 300-second MP4 was rendered clean, audio-trimmed to exact duration, decoded with ffmpeg, and copied to delivery_v2."
+  },
+  "limitations": [
+    "The paper cards use verified citation metadata; local PDF scans are optional and currently absent.",
+    "Teaching substitutions/insertions/deletions are fixed illustrative samples, not a claim about a particular experiment.",
+    "Qwen/Wan probe returned 401 without submitting a paid task; no generated video is included.",
+    "Lux3D quote was not quotable; no generation task was submitted."
+  ],
+  "delivery": {
+    "video": {
+      "path": "v2/delivery/DNA存储与生信算法_V2_1080p.mp4",
+      "sha256": "a6cc0cf389b99d49305a6634c733ad2af8d5330bbed69a604b9890b3ce070210",
+      "bytes": 116890261,
+      "durationSec": 300.0,
+      "frames": 9000
+    },
+    "videoCopy": {
+      "path": "v2/delivery_v2/DNA存储与生信算法_V2_1080p.mp4",
+      "sha256": "a6cc0cf389b99d49305a6634c733ad2af8d5330bbed69a604b9890b3ce070210",
+      "bytes": 116890261,
+      "durationSec": 300.0
+    },
+    "audioMaster": {
+      "path": "public/audio/master.wav",
+      "exists": true,
+      "bytes": 86400044,
+      "sha256": "64cfea934a6143c833fa12de16b061860d2e26f79090e184669f42448000708b"
+    },
+    "audioNarration": {
+      "path": "public/audio/narration.wav",
+      "exists": true,
+      "bytes": 86400044,
+      "sha256": "1dc95acf12b668efea5c39f5fe6170670a97f47d7593ebbad05848dc908dd06b"
+    },
+    "subtitles": {
+      "path": "delivery_v2/subtitles.srt",
+      "exists": true,
+      "bytes": 7173,
+      "sha256": "9cce47c14e578eed3b079426cfa7bf6b7171d3a4a11257bc01310406828b78f1"
+    },
+    "audioQa": {
+      "path": "delivery_v2/audio-qa-v2.json",
+      "exists": true,
+      "bytes": 1949,
+      "sha256": "c527938dbe3d2315ca653dfed9321c3d3b5af520467fe27f8feac53e5c8e2309"
+    }
+  },
+  "cleanup": {
+    "status": "completed",
+    "scope": "v2 only",
+    "removed": [
+      "v2/delivery/DNA存储与生信算法_V2_1080p_clean_trim2.mp4",
+      "v2/delivery/DNA存储与生信算法_V2_1080p_full_clean.mp4",
+      "v2/delivery/DNA存储与生信算法_V2_1080p.invalid-corrupt.mp4",
+      "v2/delivery/DNA存储与生信算法_V2_1080p.trim.mp4",
+      "v2/tmp-bundle",
+      "v2/public/papers/goldman-2013.pdf",
+      "v2/public/papers/test_1.bin",
+      "v2/public/papers/test_2.bin",
+      "v2/public/papers/test_0.bin",
+      "v2/public/papers/dna-fountain-preprint.pdf",
+      "v2/delivery/DNA存储与生信算法_V2_1080p.new.mp4"
+    ],
+    "preserved": [
+      "v2/delivery/DNA存储与生信算法_V2_1080p.mp4",
+      "v2/delivery_v2/DNA存储与生信算法_V2_1080p.mp4",
+      "v2/src",
+      "v2/scripts",
+      "v2/public/3d",
+      "v2/delivery_v2/DNA存储与生信算法_V2_rollback_previous.mp4"
+    ],
+    "rootCleanup": "not executed",
+    "paperAssets": "Verified PDFs and first-page renders retained; HTML/error placeholders removed inside v2/public/papers only."
+  },
+  "paperSources": {
+    "path": "v2/research/paper-sources.json",
+    "exists": true,
+    "bytes": 5617,
+    "sha256": "b9867665c3b6aefb1db0f48c95d9c3f98265d04f279f8fcbe95387cd71bde1cb"
+  },
+  "assetsManifestHash": "089eb1d6b5fc18a3ccee15fafa681bad0b818cd347493f597ac361795857f4ce",
+  "paperDownloadScript": {
+    "path": "research/download_paper_assets.py",
+    "bytes": 2913,
+    "sha256": "40ef9d2d32b34e6b63842adab77c0fb53ac5f8fc14d5e6e30db00e6f46314303",
+    "verifyCommand": "python v2/research/download_paper_assets.py",
+    "downloadCommand": "python v2/research/download_paper_assets.py --download"
+  }
+}

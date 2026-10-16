@@ -1,0 +1,23 @@
+{
+  "renderer": "Matplotlib mathtext (LaTeX mathematical syntax)",
+  "formulas": [
+    {
+      "id": "equilibrium",
+      "name": "静力平衡",
+      "latex": "\\mathbf{K}(\\mathbf{x})\\,\\mathbf{u}=\\mathbf{f}",
+      "note": "Finite-element equilibrium; not a standalone certificate of an entire structure."
+    },
+    {
+      "id": "compliance",
+      "name": "刚度目标",
+      "latex": "\\min_{\\mathbf{x}}\\ C=\\mathbf{f}^{\\mathsf{T}}\\mathbf{u},\\quad \\sum_e x_e V_e\\leq V^*",
+      "note": "Compliance minimization under a material-volume budget; displayed as the methodological objective."
+    },
+    {
+      "id": "gate",
+      "name": "内部审查门",
+      "latex": "S\\geq85,\\qquad \\min_i s_i\\geq60",
+      "note": "Project internal reviewer threshold, distinct from external certification."
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "version": "V16",
+  "reviewer": "/root/v14_fish",
+  "timeUTC": "2026-10-12T20:21:21.187473+00:00",
+  "status": "pass-within-standalone-static-and-numeric-rig-scope",
+  "source": "Original Blender procedural model and twenty-bone continuous weights",
+  "evidence": [
+    {
+      "path": "public/assets_v16/characters/rainbow_fish_v16.glb",
+      "sha256": "975b35b6421501ae2db2f6e31960cc9f8376c93808e6266e4d70378e2817af55"
+    },
+    {
+      "path": "public/assets_v16/characters/rainbow-fish-source-v16.blend",
+      "sha256": "0840e3833a501b2a5d816048ba7f4306b48ee37542d5bc46569928be3e4e4e5c"
+    },
+    {
+      "path": "public/assets_v16/characters/rig-build-v16.json",
+      "sha256": "24ea6a8904f183c92e12e21448e05bc72db8adde14cb72753f5cf7099a7f7b6b"
+    },
+    {
+      "path": "public/assets_v16/characters/rig-audit-v16.json",
+      "sha256": "cfd226b0cbf2b12f99e72240991ac91ff17e128e4d4b8680ca747f6c255961d8"
+    },
+    {
+      "path": "public/assets_v16/characters/review-v17/multiview-and-swim-contact.jpg",
+      "sha256": "fe29ed8545360709aef6ac9354e71e32d5a4e3636be322866753e6ce56753304"
+    }
+  ],
+  "blenderExecutable": "D:/blender/blender.exe",
+  "userReference": {
+    "path": "research/iterations/v16/user-01.png",
+    "sha256": "b5147d467dc099a23ced99be345fb1de7e9f16147958d5dc2cad2ea0bb67ff96",
+    "actuallyViewed": true
+  },
+  "sourceScript": {
+    "path": "scripts/build-fish-v16.py",
+    "sha256": "6e7967783586149072db9a69ab157900709d0de775bba3c84e1e68e778b83288"
+  },
+  "runtimeAdapter": {
+    "path": "src/FishObserverV16.ts",
+    "sha256": "e7824e27f06a570911c5aa20c0f782051e4ced5f4328fae3e3e344b286c0a9cc"
+  },
+  "actualVisualReview": {
+    "fullResolutionViews": [
+      "review-v17/front-threequarter-wide.png",
+      "review-v17/front.png",
+      "review-v17/side.png"
+    ],
+    "contactSheetActuallyViewed": "review-v17/multiview-and-swim-contact.jpg",
+    "contactCoverage": [
+      "front",
+      "front-threequarter",
+      "front-threequarter-wide",
+      "side",
+      "back-threequarter",
+      "swim-001",
+      "swim-031",
+      "swim-061",
+      "swim-091"
+    ],
+    "finding": "V17 keeps the round mint/cream silhouette with a broad heart tail, soft body-painted blush, surface-following teal gill strokes and a glTF-compatible twenty-bone rig. Runtime applies a fixed ~40-degree three-quarter camera bias for readable eyes and fins; raised cheek-glaze meshes remain hidden in the runtime to avoid a sticker look. The standalone views remain true 3-D geometry; the runtime contour hull is applied only in Three.js and does not write depth.",
+    "normalSpeedAnimationPlayback": false
+  },
+  "numericRigAudit": {
+    "path": "public/assets_v16/characters/rig-audit-v16.json",
+    "pass": true,
+    "denseFrameCount": 2024,
+    "sourceGLBUnchangedDuringAudit": true
+  },
+  "integrationContract": {
+    "load": "public/assets_v16/characters/rainbow_fish_v16.glb",
+    "class": "FishObserverV16",
+    "update": "update(frame, currentCamera) after world.update and applyCamera",
+    "optionalCamera": "When supplied, face uses a continuous fixed ~40-degree three-quarter bias (under .70 rad) from the active camera; update(frame) remains compatible and uses original locomotion heading without wrapped-clamp jumps.",
+    "EyeReference": "Real centre-pole midpoint of EyeIrisL/EyeIrisR; not maximum-z bounding poles. Precisely anchored to local(0,1.55,0) after skeletal pose.",
+    "friendTravelDistance": 4.6
+  },
+  "limits": [
+    "Standalone static preview and meaningful numeric rig checks only. Integrated world lighting, occlusion and final-film playback remain parent review duties.",
+    "Four rendered swim poses do not constitute every-frame visual or normal-speed animation review."
+  ],
+  "otherVersionsModified": false,
+  "paidGenerationUsed": false
+}

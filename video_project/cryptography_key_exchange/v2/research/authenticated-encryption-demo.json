@@ -1,0 +1,38 @@
+{
+  "kind": "computed-local-mechanism-demo",
+  "implementations": {
+    "pythonPackage": "cryptography",
+    "version": "49.0.0",
+    "keyAgreement": "X25519",
+    "derivation": "HKDF-SHA256",
+    "authenticatedEncryption": "AES-256-GCM"
+  },
+  "plaintext": "今晚八点，老地方。",
+  "plaintextUtf8Hex": "e4bb8ae6999ae585abe782b9efbc8ce88081e59cb0e696b9e38082",
+  "publicKeys": {
+    "alice": "0ab400416de33fc816aa178ec469f96468c66ad33ea2103de40736d9fb9a5e59",
+    "bob": "046586e69fb44005916ca7a572eecbc07ded7f24accc2e22a3063c96c0a78a46"
+  },
+  "ciphertextAndTagHex": "e6183b5991425c9f438fabdfae4ccf43ab89c600c27100eb297faba37aa11706e6cdc5158728900f30e57c",
+  "ciphertextOnlyHex": "e6183b5991425c9f438fabdfae4ccf43ab89c600c27100eb297fab",
+  "tagHex": "a37aa11706e6cdc5158728900f30e57c",
+  "ciphertextBytes": 43,
+  "payloadBytes": 27,
+  "tagBytes": 16,
+  "nonceHex": "7127b6035dd0b06794da2a03",
+  "aad": "letter-demo-v2",
+  "decrypted": "今晚八点，老地方。",
+  "modifiedByte": 0,
+  "bitFlipped": 0,
+  "originalByteHex": "e6",
+  "modifiedByteHex": "e7",
+  "tamperedCiphertextAndTagHex": "e7183b5991425c9f438fabdfae4ccf43ab89c600c27100eb297faba37aa11706e6cdc5158728900f30e57c",
+  "tamperResult": "InvalidTag; no plaintext returned",
+  "checks": {
+    "sameSharedSecret": true,
+    "sameDerivedKey": true,
+    "roundTrip": true,
+    "tamperRejected": true
+  },
+  "notice": "Deterministic public teaching seeds, not production keys. One fixed teaching message/nonce. Demonstrates primitives, not a full TLS implementation or certificate-chain verification."
+}

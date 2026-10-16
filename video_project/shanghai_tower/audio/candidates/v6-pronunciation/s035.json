@@ -1,0 +1,81 @@
+{
+  "id": "s035",
+  "text": "这位帮手，叫调谐质量阻尼器。上海中心楼顶悬着一块约一千吨的重物，能相对大楼来回摆动。",
+  "ttsText": "这位帮手，叫调好频率的质量阻尼器。上海中心楼顶悬着一块约一千吨的重物，能相对大楼来回摆动。",
+  "signature": "786cfed3b78fbb44a693c8aeac19e8f0541d409c17e82132517af3f7660f0a7d",
+  "raw": "audio/raw/s035-786cfed3b7.wav",
+  "processed": "audio/candidates/v6-pronunciation/s035.wav",
+  "rawDuration": 8.960041666666667,
+  "duration": 9.200041666666667,
+  "sha256": "b384a04faac8fc615892f06ef41e5265d62c9abc838820199babb7e04730f879",
+  "seed": 2020409043,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s035",
+    "s036",
+    "s038",
+    "s040"
+  ],
+  "rawEndpointDB": -97.25466868927018,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "ec58efbf70d70403ddff984b6717b379a22c9dc39fca417dea9a633ff6e58bb8",
+    "outputSha256": "b384a04faac8fc615892f06ef41e5265d62c9abc838820199babb7e04730f879",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.6621640200963483,
+    "input": {
+      "seconds": 9.200041666666667,
+      "peakDb": -6.505055360653662,
+      "activeRmsDb": -22.468427591204986,
+      "quietFrameP10Db": -62.003099835397364
+    },
+    "output": {
+      "seconds": 9.200041666666667,
+      "peakDb": -4.113831913730457,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.51808610965972
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "a56a08a7bcc1e1f256ff0c9ae7fd09671f9fcfc53e1f5817eae187b4d4f36c04"
+  },
+  "subjectiveListeningChecked": false
+}

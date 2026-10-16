@@ -1,0 +1,90 @@
+{
+  "final_file": "delivery/nobel2026_v5_1/一束蓝光能叫醒一颗神经元_v5_1_完整预览1080p.mp4",
+  "qa_file": "research/cleanup/nobel-v51-technical-gate.json",
+  "protected_paths": [
+    "src",
+    "scripts",
+    "public",
+    "research",
+    "docs",
+    "delivery",
+    "package.json",
+    "package-lock.json",
+    "node_modules"
+  ],
+  "required_files": [
+    "package.json",
+    "package-lock.json",
+    "src/index-nobel2026-v51.tsx",
+    "src/nobel2026/WorldV51.ts",
+    "src/nobel2026/BrainStudyV51.ts",
+    "src/nobel2026/FilmV51.tsx",
+    "src/nobel2026/EvidenceFigureV51.tsx",
+    "src/nobel2026/timeline-v51.json",
+    "scripts/render_nobel2026_v51.mjs",
+    "scripts/prepare_nobel_v51_fonts.py",
+    "scripts/qa_nobel2026_v51.py",
+    "public/nobel2026/audio-v51/master.wav",
+    "public/nobel2026/fonts/sans.woff2",
+    "public/nobel2026/fonts/serif.woff2",
+    "public/nobel2026/popular-medicineprize2026.pdf",
+    "delivery/nobel2026_v5_1/中文字幕.srt",
+    "delivery/nobel2026_v5/一束蓝光能叫醒一颗神经元_v5_完整预览1080p.mp4"
+  ],
+  "active_process_patterns": [
+    "node[^\\r\\n]*scripts[\\\\/]render_nobel2026_v51\\.mjs",
+    "ffmpeg[^\\r\\n]*nobel-v51"
+  ],
+  "rules": [
+    {
+      "kind": "duplicate_tree",
+      "target": "tmp/nobel2026-v51-bundle/public",
+      "source": "public",
+      "reason": "Bundled public assets, delete only byte-identical files whose originals remain protected."
+    },
+    {
+      "kind": "regenerable",
+      "target": "tmp/nobel2026-v51-bundle",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.map",
+        "index.html",
+        "favicon.ico"
+      ],
+      "reason": "Disposable V5.1 bundle code; source and lock file retained.",
+      "rebuild": "npm run render:nobel:v51 -- --concurrency=6"
+    },
+    {
+      "kind": "duplicate_tree",
+      "target": "tmp/nobel2026-v51-slim-bundle/public",
+      "source": "public",
+      "reason": "Bundled public assets, delete only byte-identical files whose originals remain protected."
+    },
+    {
+      "kind": "regenerable",
+      "target": "tmp/nobel2026-v51-slim-bundle",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.map",
+        "index.html",
+        "favicon.ico"
+      ],
+      "reason": "Disposable V5.1 bundle code; source and lock file retained.",
+      "rebuild": "npm run render:nobel:v51 -- --concurrency=6"
+    },
+    {
+      "kind": "duplicate_tree",
+      "target": "tmp/nobel2026-v51-public",
+      "source": "public",
+      "reason": "Composition staging copies, verified against protected originals."
+    },
+    {
+      "kind": "regenerable",
+      "target": "tmp/nobel-v51-preflight.mp4",
+      "reason": "Superseded V5.1 preflight full render; final corrected preview and V5 retained.",
+      "rebuild": "npm run render:nobel:v51 -- --concurrency=6 reconstructs current corrected version; preflight is obsolete."
+    }
+  ]
+}

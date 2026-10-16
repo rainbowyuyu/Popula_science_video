@@ -1,0 +1,69 @@
+{
+  "id": "g048",
+  "text": "有些斑块的表面会破裂或糜烂。血小板聚集、凝血发生，本来用来止血的过程，可能在血管里面形成血栓。",
+  "ttsText": "有些斑块的表面会破裂或糜烂。血小板聚集、凝血发生，本来用来止血的过程，可能在血管里面形成血栓。",
+  "signature": "1bccc74917a1f7ec561dfb779cf18d565c95e2672ddd51ffdaa074e9aac581c9",
+  "raw": "audio/raw/g048-1bccc74917.wav",
+  "processed": "public/voice/g048.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "0475a2309d0ffb52c35450a0f37644b6ac9aff5aead126f1b2456db3c8909d05",
+  "seed": 1099904456,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g045",
+    "g046",
+    "g047",
+    "g048"
+  ],
+  "rawEndpointDB": -97.31012312832922,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b5e4cffe685faea4eb8704bcd0c5f4205fce4823ccab31438531a0e81249de93",
+    "outputSha256": "0475a2309d0ffb52c35450a0f37644b6ac9aff5aead126f1b2456db3c8909d05",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.911533763360495,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.333100593196084,
+      "activeRmsDb": -22.655059649813893,
+      "quietFrameP10Db": -61.48916517151736
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.139851792569839,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.805366085338235
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

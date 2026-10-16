@@ -1,0 +1,3 @@
+import {build} from 'esbuild';import path from 'node:path';
+const vendor='D:/python_project/waterpro/node_modules/three';
+await build({entryPoints:['src/beso/LaunchWorldV17Runtime.ts'],outfile:'public/assets/v17/world-webgpu.js',bundle:true,format:'iife',platform:'browser',minify:true,plugins:[{name:'isolated-three',setup(b){b.onResolve({filter:/^three($|\/)/},a=>{let p=a.path;if(p==='three'||p==='three/webgpu')return{path:path.join(vendor,'build/three.webgpu.js')};if(p==='three/tsl')return{path:path.join(vendor,'build/three.tsl.js')};return{path:path.join(vendor,p.replace(/^three\/(addons|examples\/jsm)\//,'examples/jsm/'))}})}}]});

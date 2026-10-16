@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07101c" />
+    <title>Rainbow Atlas · 人体结构可视化</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <div class="brand-name">RAINBOW <strong>ATLAS</strong></div>
+            <div class="brand-sub">人体结构探索台 <i></i> THREE.JS LAB</div>
+          </div>
+        </div>
+        <div class="top-context">
+          <span class="status-dot"></span>
+          <span>实时渲染</span><b>·</b><span class="mono">60 FPS</span>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="重置视角" data-action="reset-view">↺</button>
+          <button class="icon-btn" title="帮助">?</button>
+          <div class="avatar">RF</div>
+        </div>
+      </header>
+
+      <aside class="sidebar left-rail">
+        <div class="rail-tabs" role="tablist" aria-label="结构浏览模式">
+          <button class="rail-tab active" data-tab="layers"><span class="tab-icon">◈</span><span>层级</span></button>
+          <button class="rail-tab" data-tab="systems"><span class="tab-icon">◎</span><span>系统</span></button>
+          <button class="rail-tab" data-tab="notes"><span class="tab-icon">⌁</span><span>标注</span></button>
+        </div>
+        <div class="rail-content">
+          <div class="panel-heading"><div><div class="eyebrow">ANATOMICAL VIEW</div><h1>解剖图层</h1></div><button class="tiny-btn" data-action="collapse-rail">‹</button></div>
+          <div class="gender-switch" role="group" aria-label="模型性别">
+            <button class="gender-option active" data-gender="male"><span class="gender-symbol">♂</span>男性</button>
+            <button class="gender-option" data-gender="female"><span class="gender-symbol">♀</span>女性</button>
+          </div>
+          <div class="search-box"><span>⌕</span><input aria-label="搜索结构" placeholder="搜索肌肉、器官或骨骼" /><kbd>⌘ K</kbd></div>
+          <div class="tree" id="layer-tree">
+            <div class="tree-row root-row open"><button class="tree-caret">⌄</button><span class="tree-glyph body-glyph">◉</span><span>全身模型</span><em>12</em></div>
+            <div class="tree-children">
+              <button class="tree-row" data-structure="skeleton"><span class="tree-glyph skeleton-glyph">◇</span><span>骨骼</span><em>206</em><span class="eye">◉</span></button>
+              <button class="tree-row selected" data-structure="muscles"><span class="tree-glyph muscle-glyph">✦</span><span>肌肉</span><em>640</em><span class="eye">◉</span></button>
+              <button class="tree-row" data-structure="organs"><span class="tree-glyph organ-glyph">◌</span><span>器官</span><em>18</em><span class="eye">◉</span></button>
+              <button class="tree-row" data-structure="vessels"><span class="tree-glyph vessel-glyph">⌁</span><span>血管</span><em>—</em><span class="eye">◉</span></button>
+              <button class="tree-row" data-structure="nerves"><span class="tree-glyph nerve-glyph">✺</span><span>神经</span><em>—</em><span class="eye">◉</span></button>
+            </div>
+          </div>
+          <div class="rail-footer"><button class="outline-btn" data-action="hide-all"><span>◌</span> 隐藏全部图层</button><div class="hint"><span class="key">⌥</span> 拖动旋转 <span class="key">滚轮</span> 缩放</div></div>
+        </div>
+      </aside>
+
+      <main class="viewport-wrap">
+        <div class="viewport-topline"><span class="crumb">人体 / <strong id="crumb-active">肌肉</strong></span><span class="model-id mono">MODEL&nbsp; 02—M&nbsp; · &nbsp;FULL BODY</span></div>
+        <div id="viewport" class="viewport" aria-label="Three.js 人体模型视口">
+          <div class="viewport-grid"></div>
+          <div class="axis-gizmo"><span class="axis-z">Z</span><span class="axis-y">Y</span><span class="axis-x">X</span><i></i></div>
+          <div class="view-tools"><button class="view-tool active" data-view="perspective">透视</button><button class="view-tool" data-view="front">正面</button><button class="view-tool" data-view="side">侧面</button></div>
+          <div class="scale-readout mono">SCALE <strong>1 : 1.00</strong><span class="scale-line"></span><span>10 cm</span></div>
+          <div class="model-loader" id="model-loader"><span class="loader-ring"></span><span>正在加载人体结构</span></div>
+          <div class="model-caption"><div class="caption-kicker"><span class="live-pill">LIVE</span> MUSCULOSKELETAL / 02</div><div class="caption-title" id="model-caption-title">肌肉层</div><div class="caption-meta">男性 · 全身 · 交互预览</div></div>
+        </div>
+        <div class="viewport-status"><div><span class="green-dot"></span> Scene ready</div><div class="mono">Vertices 128.4k&nbsp; / &nbsp;Draw calls 32</div></div>
+      </main>
+
+      <aside class="sidebar right-rail">
+        <div class="inspector-head"><div><div class="eyebrow">INSPECTOR</div><h2>结构属性</h2></div><button class="tiny-btn">⋯</button></div>
+        <section class="selected-card"><div class="selected-top"><div class="selection-orb muscle-orb">✦</div><div><div class="selected-type">MUSCLE GROUP</div><h3 id="selected-name">胸大肌</h3><div class="selected-sub">Pectoralis major <span class="latin-dot">·</span> GM-014</div></div><span class="visibility-toggle on" title="显示/隐藏">◉</span></div><div class="chip-row"><span class="chip accent">已选中</span><span class="chip">表层</span><span class="chip">可编辑</span></div></section>
+        <section class="inspector-section"><div class="section-title"><span>显示选项</span><span class="section-meta">DISPLAY</span></div><div class="control-row"><label for="opacity-slider">透明度</label><output id="opacity-value">100%</output></div><input id="opacity-slider" aria-label="透明度" class="range accent-range" type="range" min="0" max="100" value="100" /><div class="color-row"><span>结构颜色</span><input id="color-picker" type="color" value="#e78eb9" aria-label="结构颜色" /></div><div class="toggle-row"><span><i class="toggle-icon wire">⌁</i>线框叠加</span><button class="toggle" data-toggle="wireframe"><i></i></button></div><div class="toggle-row"><span><i class="toggle-icon xray">◫</i>X-Ray 透视</span><button class="toggle" data-toggle="xray"><i></i></button></div></section>
+        <section class="inspector-section"><div class="section-title"><span>空间信息</span><span class="section-meta">TRANSFORM</span></div><div class="transform-grid"><label>位置 X<input id="pos-x" type="number" step="0.05" value="0" /></label><label>位置 Y<input id="pos-y" type="number" step="0.05" value="0" /></label><label>位置 Z<input id="pos-z" type="number" step="0.05" value="0" /></label><div><label>体积</label><b>2.86 L</b></div></div></section>
+        <section class="inspector-section note-section"><div class="section-title"><span>结构笔记</span><span class="section-meta">ANNOTATION</span></div><p id="structure-note">胸大肌连接锁骨、胸骨与肱骨，负责肩关节的内收和旋转。拖动模型，可观察肌纤维的走向。</p><button class="ghost-action" data-action="add-note">＋ 添加标注</button></section>
+        <div class="inspector-footer"><button class="export-btn" data-action="export"><span>↥</span> 导出当前视图</button><span class="mono">PNG / GLB</span></div>
+      </aside>
+
+      <div class="bottom-dock"><button class="dock-btn active" data-dock="orbit"><span>◉</span><small>旋转</small></button><button class="dock-btn" data-dock="pan"><span>✥</span><small>平移</small></button><button class="dock-btn" data-dock="measure"><span>⌁</span><small>测量</small></button><div class="dock-divider"></div><button class="dock-btn" data-dock="screenshot"><span>▣</span><small>截图</small></button></div>
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

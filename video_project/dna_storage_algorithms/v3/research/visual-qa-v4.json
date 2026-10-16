@@ -1,0 +1,57 @@
+{
+  "version": 4,
+  "status": "representative-and-encoded-frame-review-complete",
+  "reviewedContactSheets": [
+    "work/visual-v4/contact-1.jpg",
+    "work/visual-v4/contact-2.jpg",
+    "work/visual-v4/contact-3.jpg",
+    "work/visual-v4/contact-4.jpg"
+  ],
+  "finalRepairCloseups": [
+    3160,
+    4430,
+    3540
+  ],
+  "findingsResolved": [
+    "Fountain recovered equations no longer remain in neighbouring stations",
+    "Callout moved away from liquid-drop labels",
+    "Sequencing error rows enter on individual horizontal lanes, avoiding mutual overlap",
+    "First recovery equation anticipates spoken phrase and has reading time",
+    "Bridge alpha map uses RGB mask, removing hard edge defect"
+  ],
+  "reviewScope": "Visual contact-sheet inspection plus enlarged repaired frames; not a claim of uninterrupted realtime viewing or subjective audio listening.",
+  "renderBackend": "Vulkan ANGLE on NVIDIA RTX 5060 Laptop GPU",
+  "renderConsistency": {
+    "independentStill": 870,
+    "continuousFrame": 870,
+    "SSIM": 0.995728,
+    "note": "H264 CRF18 versus JPEG95; shader/camera state remained consistent through sequential updates."
+  },
+  "sourceHashes": {
+    "src\\FilmV4.tsx": "05f098a92b6bf72803d280e98b672e9f35b3d2e35014fd55c863cf820ae03c83",
+    "src\\WorldV4.ts": "3bf5306715816af4706263161350ffe42405faeee1497eb69ab913f4d38f1d59",
+    "src\\scene\\StationsV4.ts": "c27e4e508214d4295a541981b7b049c98b0d730042e360511d24c9763957feba",
+    "src\\EventsV4.ts": "e28520a08551f97b65ef7f54bc1cf77ef6631bd3ec860f838974798fa04ce76c"
+  },
+  "encodedReview": {
+    "selection": "work/encoded-v4-review/selection.json",
+    "frameCount": 68,
+    "transitionsReviewed": 8,
+    "heroViews": 12,
+    "contactSheets": [
+      "work/encoded-v4-review/transitions-1.jpg",
+      "work/encoded-v4-review/transitions-2.jpg",
+      "work/encoded-v4-review/transitions-3.jpg",
+      "work/encoded-v4-review/transitions-4.jpg",
+      "work/encoded-v4-review/hero-contact.jpg"
+    ],
+    "fullSizeRechecks": [
+      540,
+      1320
+    ],
+    "result": "No new subject/text collisions observed in reviewed frames; transition positions follow continuous camera travel."
+  },
+  "videoStreamSha256": "0f7644cb677e8820c8ff84ee692e603113612b20274d3bb267ec310a34c4a3c2",
+  "finalMuxVideoStreamIdenticalToReviewedVersion": true,
+  "finalFileSha256": "b0c10dae43cc0c857f4cea616e6a801dde292b90cbd692eb3f7b7d799ebd71a7"
+}

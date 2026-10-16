@@ -1,0 +1,190 @@
+{
+  "id": "h042",
+  "partIndex": 1,
+  "expected": "从血液里回收得更多，血中的低密度脂蛋白就能逐渐降下来。",
+  "heard": "從血液裡回收的更多,血中的低密度止蛋白就能逐漸降下來",
+  "words": [
+    {
+      "text": "從",
+      "start": 0.0,
+      "end": 0.4,
+      "probability": 0.7435944080352783
+    },
+    {
+      "text": "血",
+      "start": 0.4,
+      "end": 0.6,
+      "probability": 0.8737145662307739
+    },
+    {
+      "text": "液",
+      "start": 0.6,
+      "end": 0.74,
+      "probability": 0.9963590204715729
+    },
+    {
+      "text": "裡",
+      "start": 0.74,
+      "end": 0.86,
+      "probability": 0.8149914145469666
+    },
+    {
+      "text": "回",
+      "start": 0.86,
+      "end": 1.04,
+      "probability": 0.9916422367095947
+    },
+    {
+      "text": "收",
+      "start": 1.04,
+      "end": 1.18,
+      "probability": 0.9967010617256165
+    },
+    {
+      "text": "的",
+      "start": 1.18,
+      "end": 1.26,
+      "probability": 0.7624959349632263
+    },
+    {
+      "text": "更",
+      "start": 1.26,
+      "end": 1.44,
+      "probability": 0.9980170726776123
+    },
+    {
+      "text": "多,",
+      "start": 1.44,
+      "end": 1.7,
+      "probability": 0.9991708993911743
+    },
+    {
+      "text": "血",
+      "start": 1.96,
+      "end": 2.26,
+      "probability": 0.9470155835151672
+    },
+    {
+      "text": "中",
+      "start": 2.26,
+      "end": 2.4,
+      "probability": 0.973242998123169
+    },
+    {
+      "text": "的",
+      "start": 2.4,
+      "end": 2.5,
+      "probability": 0.9634735584259033
+    },
+    {
+      "text": "低",
+      "start": 2.5,
+      "end": 2.66,
+      "probability": 0.9725038409233093
+    },
+    {
+      "text": "密",
+      "start": 2.66,
+      "end": 2.78,
+      "probability": 0.9655953049659729
+    },
+    {
+      "text": "度",
+      "start": 2.78,
+      "end": 2.92,
+      "probability": 0.9994320273399353
+    },
+    {
+      "text": "止",
+      "start": 2.92,
+      "end": 3.08,
+      "probability": 0.26836374402046204
+    },
+    {
+      "text": "蛋",
+      "start": 3.08,
+      "end": 3.24,
+      "probability": 0.5061419606208801
+    },
+    {
+      "text": "白",
+      "start": 3.24,
+      "end": 3.46,
+      "probability": 0.997817873954773
+    },
+    {
+      "text": "就",
+      "start": 3.46,
+      "end": 3.66,
+      "probability": 0.7331773042678833
+    },
+    {
+      "text": "能",
+      "start": 3.66,
+      "end": 3.8,
+      "probability": 0.9817471504211426
+    },
+    {
+      "text": "逐",
+      "start": 3.8,
+      "end": 3.94,
+      "probability": 0.9992461800575256
+    },
+    {
+      "text": "漸",
+      "start": 3.94,
+      "end": 4.14,
+      "probability": 0.9981040954589844
+    },
+    {
+      "text": "降",
+      "start": 4.14,
+      "end": 4.3,
+      "probability": 0.9929741621017456
+    },
+    {
+      "text": "下來",
+      "start": 4.3,
+      "end": 4.64,
+      "probability": 0.9812930226325989
+    }
+  ],
+  "sourceSHA256": "3e5ed54c4de60f362ff0f9c84b1a8e0faaedb66f569bb8009feebc6fe372fb11",
+  "ratio": 0.92,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "得",
+      "heard": "的",
+      "end": 7
+    },
+    {
+      "op": "replace",
+      "expected": "脂",
+      "heard": "止",
+      "end": 16
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 241920,
+    "seconds": 5.04,
+    "peakDBFS": -5.948511570298255,
+    "first20msDBFS": -70.67530152681158,
+    "last20msDBFS": -95.45414255230725,
+    "firstActiveMs": 220.0,
+    "lastActiveToEndMs": 430.0,
+    "activityThresholdDBFS": -47.192443680731984,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

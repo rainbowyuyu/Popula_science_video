@@ -1,0 +1,106 @@
+{
+  "id": "h054",
+  "partIndex": 0,
+  "expected": "这种信号叫血管紧张素二。",
+  "heard": "这种信号叫血管紧张速2",
+  "words": [
+    {
+      "text": "这",
+      "start": 0.0,
+      "end": 0.4,
+      "probability": 0.5978369116783142
+    },
+    {
+      "text": "种",
+      "start": 0.4,
+      "end": 0.54,
+      "probability": 0.9954458475112915
+    },
+    {
+      "text": "信",
+      "start": 0.54,
+      "end": 0.7,
+      "probability": 0.9764202237129211
+    },
+    {
+      "text": "号",
+      "start": 0.7,
+      "end": 0.88,
+      "probability": 0.9932947754859924
+    },
+    {
+      "text": "叫",
+      "start": 0.88,
+      "end": 1.06,
+      "probability": 0.9743807911872864
+    },
+    {
+      "text": "血",
+      "start": 1.06,
+      "end": 1.24,
+      "probability": 0.43563348054885864
+    },
+    {
+      "text": "管",
+      "start": 1.24,
+      "end": 1.4,
+      "probability": 0.9984410405158997
+    },
+    {
+      "text": "紧",
+      "start": 1.4,
+      "end": 1.6,
+      "probability": 0.9583313763141632
+    },
+    {
+      "text": "张",
+      "start": 1.6,
+      "end": 1.76,
+      "probability": 0.9950770735740662
+    },
+    {
+      "text": "速",
+      "start": 1.76,
+      "end": 1.94,
+      "probability": 0.6542291045188904
+    },
+    {
+      "text": "2",
+      "start": 1.94,
+      "end": 2.14,
+      "probability": 0.820820152759552
+    }
+  ],
+  "sourceSHA256": "2ff0af7d8959740feceb0e76e716d30eaab18ad28ea9cea2b3d84f6c8838e41c",
+  "ratio": 0.9090909090909091,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "素",
+      "heard": "速",
+      "end": 10
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 122880,
+    "seconds": 2.56,
+    "peakDBFS": -9.389565783716918,
+    "first20msDBFS": -85.95431806321653,
+    "last20msDBFS": -76.11948480990122,
+    "firstActiveMs": 240.0,
+    "lastActiveToEndMs": 430.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

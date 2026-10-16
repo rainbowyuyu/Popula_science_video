@@ -1,0 +1,247 @@
+{
+  "kind": "fixed-teaching-example",
+  "parameters": {
+    "g": 5,
+    "p": 23,
+    "a": 6,
+    "b": 15
+  },
+  "public": {
+    "A": 8,
+    "B": 19
+  },
+  "shared": {
+    "alice": 2,
+    "bob": 2
+  },
+  "steps": {
+    "alicePublic": [
+      {
+        "step": 1,
+        "remainder": 5
+      },
+      {
+        "step": 2,
+        "remainder": 2
+      },
+      {
+        "step": 3,
+        "remainder": 10
+      },
+      {
+        "step": 4,
+        "remainder": 4
+      },
+      {
+        "step": 5,
+        "remainder": 20
+      },
+      {
+        "step": 6,
+        "remainder": 8
+      }
+    ],
+    "bobPublic": [
+      {
+        "step": 1,
+        "remainder": 5
+      },
+      {
+        "step": 2,
+        "remainder": 2
+      },
+      {
+        "step": 3,
+        "remainder": 10
+      },
+      {
+        "step": 4,
+        "remainder": 4
+      },
+      {
+        "step": 5,
+        "remainder": 20
+      },
+      {
+        "step": 6,
+        "remainder": 8
+      },
+      {
+        "step": 7,
+        "remainder": 17
+      },
+      {
+        "step": 8,
+        "remainder": 16
+      },
+      {
+        "step": 9,
+        "remainder": 11
+      },
+      {
+        "step": 10,
+        "remainder": 9
+      },
+      {
+        "step": 11,
+        "remainder": 22
+      },
+      {
+        "step": 12,
+        "remainder": 18
+      },
+      {
+        "step": 13,
+        "remainder": 21
+      },
+      {
+        "step": 14,
+        "remainder": 13
+      },
+      {
+        "step": 15,
+        "remainder": 19
+      }
+    ],
+    "aliceShared": [
+      {
+        "step": 1,
+        "remainder": 19
+      },
+      {
+        "step": 2,
+        "remainder": 16
+      },
+      {
+        "step": 3,
+        "remainder": 5
+      },
+      {
+        "step": 4,
+        "remainder": 3
+      },
+      {
+        "step": 5,
+        "remainder": 11
+      },
+      {
+        "step": 6,
+        "remainder": 2
+      }
+    ],
+    "bobShared": [
+      {
+        "step": 1,
+        "remainder": 8
+      },
+      {
+        "step": 2,
+        "remainder": 18
+      },
+      {
+        "step": 3,
+        "remainder": 6
+      },
+      {
+        "step": 4,
+        "remainder": 2
+      },
+      {
+        "step": 5,
+        "remainder": 16
+      },
+      {
+        "step": 6,
+        "remainder": 13
+      },
+      {
+        "step": 7,
+        "remainder": 12
+      },
+      {
+        "step": 8,
+        "remainder": 4
+      },
+      {
+        "step": 9,
+        "remainder": 9
+      },
+      {
+        "step": 10,
+        "remainder": 3
+      },
+      {
+        "step": 11,
+        "remainder": 1
+      },
+      {
+        "step": 12,
+        "remainder": 8
+      },
+      {
+        "step": 13,
+        "remainder": 18
+      },
+      {
+        "step": 14,
+        "remainder": 6
+      },
+      {
+        "step": 15,
+        "remainder": 2
+      }
+    ]
+  },
+  "bruteforce": [
+    {
+      "step": 1,
+      "remainder": 5
+    },
+    {
+      "step": 2,
+      "remainder": 2
+    },
+    {
+      "step": 3,
+      "remainder": 10
+    },
+    {
+      "step": 4,
+      "remainder": 4
+    },
+    {
+      "step": 5,
+      "remainder": 20
+    },
+    {
+      "step": 6,
+      "remainder": 8
+    }
+  ],
+  "identity": {
+    "a_times_b": 90,
+    "g_ab_mod_p": 2
+  },
+  "checks": {
+    "sameSecret": true,
+    "expectedPublic": true,
+    "expectedSecret": true,
+    "smallExampleInsecure": true
+  },
+  "notice": "Teaching values only. These tiny public parameters do not provide secrecy; production DH requires standard parameters, validation, a KDF and authentication.",
+  "activeInterceptionExample": {
+    "attackerPrivateTowardAlice": 13,
+    "attackerPrivateTowardBob": 7,
+    "replaceBTowardAliceWith": 21,
+    "replaceATowardBobWith": 17,
+    "aliceAndAttacker": {
+      "alice": 18,
+      "attacker": 18
+    },
+    "bobAndAttacker": {
+      "bob": 15,
+      "attacker": 15
+    },
+    "warning": "Active replacement example in the small teaching group, not an attack against a real system."
+  }
+}

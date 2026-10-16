@@ -1,0 +1,138 @@
+{
+  "scope": "V8 spatial handoff and camera-source review. Source frozen after actual rendered correction checks; final encoded-film review remains separate.",
+  "source": {
+    "src\\V5World.ts": {
+      "sha256": "e2918d74d1398d9219c6a647cd60295556736b54ceb3988076e5f0dc0b486578"
+    },
+    "src\\V5CameraPath.ts": {
+      "sha256": "924b9a64b2d11559015d035957620ebb6aa0c4a507c798ecb65783bfcaa38954"
+    },
+    "src\\V5HandoffContext.ts": {
+      "sha256": "a2b290125a4f694f33c278da95170d0f5e829e6b92350f730627215df0891b9c"
+    },
+    "src\\V7Director.ts": {
+      "sha256": "fe7a01718cd6fd773084b9832ecc54bdd431712638ca2cdc2ae8727f07335095"
+    }
+  },
+  "changes": [
+    "Pancreas: actual mesh anterior triangle intersections and local surface-normal basis; fixed physical child offsets rotated together. Lobule samples clipped to actual front/back tissue intervals instead of a floating round planar field.",
+    "Midscale pancreatic lobules: 4579 accepted fixed physical samples, deterministic irregular 3D packing; micrometre acinar jitter registered to same basis; parent opacity overlaps child optical range.",
+    "Artery: 24-sample-smoothed tangent of atlas-derived descending-aorta centerline; local X aligns to flow tangent, local Z to anterior cross-section vector; actual source window opens in same axial region. Representative 10mm lumen dimensions remain unchanged.",
+    "Aortic section annotations sampled from actual mesh rays; 40mm straight representative segment has at most 1.09mm centerline-to-tangent deviation over chosen local range. It is not a patient-specific lumen reconstruction.",
+    "GLP h026/h027 use one 24 nm drug observation group. The plasma anchor is registered to the atlas-derived inferior vena cava centerline. h026 arrives 0.15 s before the first recorded clause ends; molecular events map to actual voiceParts clause boundaries rather than pause-inclusive progress.",
+    "h027 retains completed engineering through the narrated end and outgoing h028. Departure = voiceEndSeconds + 1 s, and h028 first 60% receives optical return. Current voiceEnd=277.8266667 s; departure=278.8266667 s.",
+    "Muscle transport group h008-h015 observation distance set to850nm; no per-sentence rezoom.",
+    "h008 arrival is fixed at frame 2073 / 69.1 s, before clause 2 begins at 69.333 s, with camera anticipation from h007.",
+    "Both local roll and local-frame up-vector tilt are gated by optical distance: macro views >=0.30 m stay upright, full local composition is allowed <=0.065 m.",
+    "Arteriole fibre context reveals only at 3–10 mm range, after its rectangular bounds are outside framing. Actual rectus femoris remains as the enclosing parent during the pullback, removing floating panel appearances at frames 14995 and 18612.",
+    "At the registered arterial site, anterior liver layers become transparent before the lens crosses them. Eight source frames13935–14000 verify that the previous13975 foreground occlusion/transparent sorting seam is no longer visible.",
+    "Final targeted repair for h068/h088 measurement exits: camera rises0.31m and retreats to3.22m with standing restoration before anatomical travel. 423 consecutive-frame body-projection measurements,73 saved/visually reviewed frames; head clearance >=142.6px while person remains >=50% visible. See measurement-rise-audit.json."
+  ],
+  "visualEvidence": [
+    {
+      "stage": "baseline",
+      "purpose": "before changes; regular flat circles and detached artery observed"
+    },
+    {
+      "stage": "registered01",
+      "purpose": "first actual geometry registration; reviewed surface direction and child anchors"
+    },
+    {
+      "stage": "registered02",
+      "purpose": "refined acinar visibility and actual source arterial optical window"
+    },
+    {
+      "stage": "pancreatic-motion",
+      "frames": [
+        5830,
+        6060
+      ],
+      "fps": 30,
+      "video": "pancreatic-motion/transition.mp4",
+      "review": "pancreatic-motion/review.jpg",
+      "reviewScope": "dense ordered frame sheet plus native intermediate stills; 231 source frames encoded, no audio"
+    },
+    {
+      "stage": "arterial-motion",
+      "frames": [
+        12980,
+        13140
+      ],
+      "fps": 30,
+      "video": "arterial-motion/transition.mp4",
+      "review": "arterial-motion/review.jpg",
+      "reviewScope": "dense ordered frame sheet; 161 source frames encoded, no audio"
+    },
+    {
+      "stage": "oblique-left and oblique-right",
+      "yawRadians": [
+        -0.28,
+        0.28
+      ],
+      "review": "oblique-review.jpg",
+      "purpose": "13 identical intermediate frames at each diagnostic viewing angle; source mesh spatial fit persists"
+    },
+    {
+      "stage": "glp-atlas-surface01",
+      "review": "glp-atlas-surface01/review.jpg",
+      "finding": "Real DPP4 surface occluded cut site; reported to root for transparency/orientation repair. Protein geometry and molecular UI are root-owned."
+    },
+    {
+      "stage": "glp-context02",
+      "review": "glp-context02/review.jpg",
+      "purpose": "same IVC plasma handoff, retentive venous wall and fixed erythrocyte scale bridge"
+    },
+    {
+      "stage": "staged-glp-sync01",
+      "review": "staged-glp-sync01/review.jpg",
+      "reviewScope": "21 staged frames through native cleavage, engineering and exit. Inspected all sheet cells plus native frame7542."
+    },
+    {
+      "stage": "staged-glp-exit-motion",
+      "frames": [
+        8320,
+        8620
+      ],
+      "frameCount": 301,
+      "video": "staged-glp-exit-motion/transition.mp4",
+      "review": "staged-glp-exit-motion/review.jpg",
+      "reviewScope": "26 ordered contact-sheet samples, every12 frames, inspected; 301 consecutive source frames encoded. This stage precedes the final +0.159958s h027 voiceEnd metadata update and is not a claim of final synchronized encoded-film review."
+    },
+    {
+      "stage": "final-optical-corrections01",
+      "frameCount": 23,
+      "review": "final-optical-corrections01/review.jpg",
+      "reviewScope": "All23 samples visually inspected: h008 arrival, muscle parent restoration and arteriole panel elimination. Macro up-vector tilt observed here and repaired in following stage."
+    },
+    {
+      "stage": "macro-up-final02",
+      "frameCount": 14,
+      "review": "macro-up-final02/review.jpg",
+      "reviewScope": "All14 samples visually inspected: upright macro artery entries/return and local close framing. Frame13975 anterior liver occlusion observed and repaired in following stage."
+    },
+    {
+      "stage": "liver-clearance-final03",
+      "frameCount": 8,
+      "review": "liver-clearance-final03/review.jpg",
+      "reviewScope": "All8 samples visually inspected, anterior liver transparency now precedes source surface crossing."
+    },
+    {
+      "stage": "measurement-rise-dense02",
+      "audit": "measurement-rise-audit.json",
+      "numericFrames": 423,
+      "savedFrames": 73,
+      "reviewScope": "Every saved dense image across7 contact sheets was inspected; projection bounds measured on all actual posed skin vertices in423 consecutive source frames."
+    }
+  ],
+  "validation": {
+    "typescript": "npm run check passed after final source changes (exit 0).",
+    "geometryBoundaries": "illustrative meso/micro tissue and 10mm arterial lumen remain teaching models; no patient histology, measured flow, or molecular dynamics claims",
+    "fullEncodedFilm": "Pending parent final render; do not represent silent source previews or sparse sheets as a complete audio/video review."
+  },
+  "pending": [
+    "Recheck GLP camera/labels on staged V8 measured narration timeline after root DPP4/albumin modifications; source checks before that use original current timings.",
+    "Final encoded-film, audio/phonetics, clothing and body-action QA remain parent and other agents scope."
+  ],
+  "timelineSHA256": "140ebffb3099313acc0556c3e37658b47a5b005fe1e3d7c50a8a5675791050be",
+  "timelineFrames": 26738
+}

@@ -1,0 +1,196 @@
+{
+  "id": "h036",
+  "partIndex": 1,
+  "expected": "化验单上的低密度脂蛋白胆固醇，测的是这类颗粒里的胆固醇。",
+  "heard": "畫驗單上的低密度紙蛋白膽固醇, 測的是這類顆粒裡的膽固醇。",
+  "words": [
+    {
+      "text": "畫",
+      "start": 0.0,
+      "end": 0.42,
+      "probability": 0.8013385534286499
+    },
+    {
+      "text": "驗",
+      "start": 0.42,
+      "end": 0.58,
+      "probability": 0.6252546608448029
+    },
+    {
+      "text": "單",
+      "start": 0.58,
+      "end": 0.72,
+      "probability": 0.9890378713607788
+    },
+    {
+      "text": "上",
+      "start": 0.72,
+      "end": 0.94,
+      "probability": 0.9963319897651672
+    },
+    {
+      "text": "的",
+      "start": 0.94,
+      "end": 1.1,
+      "probability": 0.9965564012527466
+    },
+    {
+      "text": "低",
+      "start": 1.1,
+      "end": 1.36,
+      "probability": 0.8627561926841736
+    },
+    {
+      "text": "密",
+      "start": 1.36,
+      "end": 1.52,
+      "probability": 0.9683258533477783
+    },
+    {
+      "text": "度",
+      "start": 1.52,
+      "end": 1.66,
+      "probability": 0.9993618130683899
+    },
+    {
+      "text": "紙",
+      "start": 1.66,
+      "end": 1.82,
+      "probability": 0.652500182390213
+    },
+    {
+      "text": "蛋",
+      "start": 1.82,
+      "end": 1.96,
+      "probability": 0.7737853527069092
+    },
+    {
+      "text": "白",
+      "start": 1.96,
+      "end": 2.14,
+      "probability": 0.9808815717697144
+    },
+    {
+      "text": "膽",
+      "start": 2.14,
+      "end": 2.34,
+      "probability": 0.8803523182868958
+    },
+    {
+      "text": "固",
+      "start": 2.34,
+      "end": 2.5,
+      "probability": 0.9986660182476044
+    },
+    {
+      "text": "醇,",
+      "start": 2.5,
+      "end": 2.76,
+      "probability": 0.9802774786949158
+    },
+    {
+      "text": " 測",
+      "start": 3.16,
+      "end": 3.24,
+      "probability": 0.7428995966911316
+    },
+    {
+      "text": "的是",
+      "start": 3.24,
+      "end": 3.46,
+      "probability": 0.7209637761116028
+    },
+    {
+      "text": "這",
+      "start": 3.46,
+      "end": 3.68,
+      "probability": 0.9469813704490662
+    },
+    {
+      "text": "類",
+      "start": 3.68,
+      "end": 3.8,
+      "probability": 0.9989639520645142
+    },
+    {
+      "text": "顆",
+      "start": 3.8,
+      "end": 4.0,
+      "probability": 0.7764514684677124
+    },
+    {
+      "text": "粒",
+      "start": 4.0,
+      "end": 4.18,
+      "probability": 0.9989885091781616
+    },
+    {
+      "text": "裡",
+      "start": 4.18,
+      "end": 4.28,
+      "probability": 0.6119755506515503
+    },
+    {
+      "text": "的",
+      "start": 4.28,
+      "end": 4.38,
+      "probability": 0.9948023557662964
+    },
+    {
+      "text": "膽",
+      "start": 4.38,
+      "end": 4.56,
+      "probability": 0.9992453455924988
+    },
+    {
+      "text": "固",
+      "start": 4.56,
+      "end": 4.74,
+      "probability": 0.9998039305210114
+    },
+    {
+      "text": "醇。",
+      "start": 4.74,
+      "end": 4.98,
+      "probability": 0.9995047450065613
+    }
+  ],
+  "sourceSHA256": "d467adebaf23dbd24a169de90420d65ef54172bcafce6bb87f2534dbfd43b1fb",
+  "ratio": 0.9230769230769231,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "化",
+      "heard": "画",
+      "end": 1
+    },
+    {
+      "op": "replace",
+      "expected": "脂",
+      "heard": "纸",
+      "end": 9
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 261120,
+    "seconds": 5.44,
+    "peakDBFS": -5.618209808987081,
+    "first20msDBFS": -66.323602572442,
+    "last20msDBFS": -97.3664046196482,
+    "firstActiveMs": 240.0,
+    "lastActiveToEndMs": 420.0,
+    "activityThresholdDBFS": -48.293661670301006,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

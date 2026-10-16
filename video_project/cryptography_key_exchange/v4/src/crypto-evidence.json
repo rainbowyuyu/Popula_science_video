@@ -1,0 +1,63 @@
+{
+  "kind": "computed-local-mechanism-demo",
+  "demonstrationTitle": "生日蛋糕订单：公开协商、加密读回、单比特篡改拒收",
+  "implementations": {
+    "pythonPackage": "cryptography",
+    "version": "50.0.2",
+    "keyAgreement": "X25519",
+    "derivation": "HKDF-SHA256",
+    "authenticatedEncryption": "AES-256-GCM"
+  },
+  "plaintext": "送到幸福路八号，别按门铃，我下来拿。",
+  "plaintextUtf8Hex": "e98081e588b0e5b9b8e7a68fe8b7afe585abe58fb7efbc8ce588abe68c89e997a8e99383efbc8ce68891e4b88be69da5e68bbfe38082",
+  "publicKeys": {
+    "phone": "cf2159a6a24d22989423c19149bf99d5f8975523e03f6dd65608505fbe822d7f",
+    "shop": "ba1629e690dc00c99790ddd5b720567c9a36412d30f74103c1cea7358e5a5526"
+  },
+  "sharedSecretSha256": {
+    "phone": "3f138495b3d7a823d378e9874f1e7e65e43e8bf60fd3e23ea2e28d4dbb9cc5e8",
+    "shop": "3f138495b3d7a823d378e9874f1e7e65e43e8bf60fd3e23ea2e28d4dbb9cc5e8"
+  },
+  "directionalKeySha256": {
+    "phoneToShopAtPhone": "898560effa86d547b76add9c3db9a3280592922297aca7ce838b157a01824880",
+    "phoneToShopAtShop": "898560effa86d547b76add9c3db9a3280592922297aca7ce838b157a01824880",
+    "shopToPhone": "184ee91650bbfd0d442ac57cd21c8323a1805b3e6022ba19d5ea586d1a7bb2b9"
+  },
+  "ciphertextAndTagHex": "63d8bb451e307f02e9deb2c0e9dbfb4f8067c75b14390669188dfe14ce2a1d7a9e32c3d742ee2f0f8cb449b0db037254b01c0f51746ead23ec4e9b7fc8e265fc8f3dae8dfd98",
+  "ciphertextOnlyHex": "63d8bb451e307f02e9deb2c0e9dbfb4f8067c75b14390669188dfe14ce2a1d7a9e32c3d742ee2f0f8cb449b0db037254b01c0f51746e",
+  "tagHex": "ad23ec4e9b7fc8e265fc8f3dae8dfd98",
+  "ciphertextBytes": 70,
+  "payloadBytes": 54,
+  "tagBytes": 16,
+  "nonceHex": "a0b70eb85ceec7a73ab14614",
+  "aad": "birthday-order-v3;direction=phone-to-shop;sequence=0",
+  "decrypted": "送到幸福路八号，别按门铃，我下来拿。",
+  "modifiedByte": 0,
+  "bitFlipped": 0,
+  "originalByteHex": "63",
+  "modifiedByteHex": "62",
+  "tamperedCiphertextAndTagHex": "62d8bb451e307f02e9deb2c0e9dbfb4f8067c75b14390669188dfe14ce2a1d7a9e32c3d742ee2f0f8cb449b0db037254b01c0f51746ead23ec4e9b7fc8e265fc8f3dae8dfd98",
+  "tamperResult": "InvalidTag",
+  "plaintextReturnedOnTamper": null,
+  "display": {
+    "shortCiphertext": "63 D8 BB 45 1E 30 7F 02",
+    "shortTag": "AD 23 EC 4E",
+    "success": "订单恢复成功",
+    "failure": "校验失败 · 拒收",
+    "classification": "真实程序结果 · 固定教学输入"
+  },
+  "checks": {
+    "sameSharedSecret": true,
+    "sameDerivedKey": true,
+    "differentDirectionalKeys": true,
+    "roundTrip": true,
+    "tamperRejected": true,
+    "noPlaintextOnFailure": true
+  },
+  "limitations": [
+    "Fixed public teaching seeds and a fixed one-message nonce: never use in production.",
+    "Demonstrates primitives, not complete TLS 1.3, its transcript-bound key schedule, record framing, or certificates.",
+    "Authentication tag failure is tested for this specific single-bit modification; no claim that paint mixing supplies security.",
+    "The phone-to-shop and shop-to-phone keys differ; only the outgoing order is encrypted in this experiment."
+  ]
+}

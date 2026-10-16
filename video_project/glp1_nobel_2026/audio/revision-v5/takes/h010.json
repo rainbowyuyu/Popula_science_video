@@ -1,0 +1,83 @@
+{
+  "id": "h010",
+  "text": "胰腺一开始会多分泌一些，帮忙补上缺口。等到这份补偿也不够，饭后甚至空腹的血糖，就更容易升高。",
+  "ttsText": "胰腺一开始会多分泌一些，帮忙补上缺口。等到这份补偿也不够，饭后甚至空腹的血糖，就更容易升高。",
+  "signature": "a8b445048dc88b606ffe7872bcdd3f5a6fad3aa4bc9be15eb0f9cabfcdd44c95",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h010-a8b445048dc8-5117311fb6.wav",
+  "processed": "audio/revision-v5/voice/h010.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.720041666666667,
+  "sampleRate": 48000,
+  "sha256": "c42edb640eb9c3048692fbb8314c58fea5c1925d8964e47b54aa537aea134720",
+  "rawSHA256": "ec8796f48ccd1086a8e5182a20e9e50c8475a765f29bb997cc36370477a8ad37",
+  "seed": 1360474399,
+  "batchIds": [
+    "h008",
+    "h009",
+    "h010"
+  ],
+  "batchKey": "5117311fb6d989f0682c7de68f6f0969d6c9b5a4f2581bc8de88feea820a54b1",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -92.59026823042112,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "ec8796f48ccd1086a8e5182a20e9e50c8475a765f29bb997cc36370477a8ad37",
+    "outputSha256": "c42edb640eb9c3048692fbb8314c58fea5c1925d8964e47b54aa537aea134720",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4674449614561986,
+    "input": {
+      "seconds": 8.720041666666667,
+      "peakDb": -6.36219039033838,
+      "activeRmsDb": -22.176043820084455,
+      "quietFrameP10Db": -65.25938103212299
+    },
+    "output": {
+      "seconds": 8.720041666666667,
+      "peakDb": -4.2188701860819675,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -66.2456626877531
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

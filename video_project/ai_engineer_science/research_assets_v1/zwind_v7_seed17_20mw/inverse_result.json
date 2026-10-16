@@ -1,0 +1,16 @@
+{
+  "schema": "zwind-inverse-provenance-v2",
+  "created_at": "2026-10-04T23:46:08.668187+00:00",
+  "mode": "not_run",
+  "status": "blocked",
+  "native_result_path": "D:\\python_project\\beso_ai\\runs\\zwind_campaign_full_v7\\mw_20\\seed_17\\native_result.json",
+  "native_result_status": true,
+  "provenance": {
+    "source": "ovow_neural_surrogate",
+    "native_result_retained": true,
+    "promotable_to_native_truth": false,
+    "contract": "NREL5MW-OC4 floating, observations [1,256,15], output 9 kN channels"
+  },
+  "reason": "native_output_channel_contract_missing",
+  "detail": "Native recorder outputs must be explicitly converted to the OVOW [1,256,15] packet; no reshape or channel guess is allowed."
+}

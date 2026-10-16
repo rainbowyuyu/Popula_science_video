@@ -1,0 +1,46 @@
+{
+  "version": "physics2026-v04-tts-music-visual",
+  "target": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_physics_2026\\delivery\\physics2026_v04\\2026诺贝尔物理学奖_一束蓝光穿过南极冰_v04_TTS配乐1080p.mp4",
+  "sourceAudio": "audio/v03/master.wav",
+  "audioManifest": "audio/v03/audio-manifest-v03.json",
+  "checks": {
+    "resolution": "1920x1080",
+    "fps": 30,
+    "fullFfmpegDecode": "passed",
+    "audio": "user reference voice via Qwen3-TTS-0.6B, cleaned and sidechain mixed",
+    "music": "Sappheiros Embrace, loop crossfade and speech ducking",
+    "audioVideoDeltaSeconds": 0.01
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "bit_rate": "1313489",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "bit_rate": "289522"
+      }
+    ],
+    "format": {
+      "duration": "301.800000",
+      "size": "60806467"
+    }
+  },
+  "sha256": "4e14ac6b4899cac250c028d7fa2caae2e0fb89dec412b0b6a46cfe45e23548ca"
+}

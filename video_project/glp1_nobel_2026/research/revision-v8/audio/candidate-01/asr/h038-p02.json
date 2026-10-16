@@ -1,0 +1,142 @@
+{
+  "id": "h038",
+  "partIndex": 1,
+  "expected": "问题从管壁内部开始，日积月累，才形成斑块。",
+  "heard": "問題從管弊內部開始,日積越累,才形成斑塊。",
+  "words": [
+    {
+      "text": "問題",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.872989296913147
+    },
+    {
+      "text": "從",
+      "start": 0.62,
+      "end": 0.88,
+      "probability": 0.9930192828178406
+    },
+    {
+      "text": "管",
+      "start": 0.88,
+      "end": 1.1,
+      "probability": 0.8948177099227905
+    },
+    {
+      "text": "弊",
+      "start": 1.1,
+      "end": 1.28,
+      "probability": 0.7599431872367859
+    },
+    {
+      "text": "內",
+      "start": 1.28,
+      "end": 1.42,
+      "probability": 0.9850364923477173
+    },
+    {
+      "text": "部",
+      "start": 1.42,
+      "end": 1.54,
+      "probability": 0.9925582408905029
+    },
+    {
+      "text": "開始,",
+      "start": 1.54,
+      "end": 1.86,
+      "probability": 0.9893604516983032
+    },
+    {
+      "text": "日",
+      "start": 2.38,
+      "end": 2.46,
+      "probability": 0.6656615138053894
+    },
+    {
+      "text": "積",
+      "start": 2.46,
+      "end": 2.64,
+      "probability": 0.6170691177248955
+    },
+    {
+      "text": "越",
+      "start": 2.64,
+      "end": 2.8,
+      "probability": 0.7157383561134338
+    },
+    {
+      "text": "累,",
+      "start": 2.8,
+      "end": 2.98,
+      "probability": 0.8325488567352295
+    },
+    {
+      "text": "才",
+      "start": 3.22,
+      "end": 3.38,
+      "probability": 0.9056614637374878
+    },
+    {
+      "text": "形",
+      "start": 3.38,
+      "end": 3.54,
+      "probability": 0.9812626242637634
+    },
+    {
+      "text": "成",
+      "start": 3.54,
+      "end": 3.7,
+      "probability": 0.999850869178772
+    },
+    {
+      "text": "斑",
+      "start": 3.7,
+      "end": 3.86,
+      "probability": 0.8132041096687317
+    },
+    {
+      "text": "塊。",
+      "start": 3.86,
+      "end": 4.08,
+      "probability": 0.9047143459320068
+    }
+  ],
+  "sourceSHA256": "33fcea6580fc7e67cdbb57aff7d6cfddde2ddbf3d0b94bac0783b9f3903a7fd9",
+  "ratio": 0.8888888888888888,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "壁",
+      "heard": "弊",
+      "end": 5
+    },
+    {
+      "op": "replace",
+      "expected": "月",
+      "heard": "越",
+      "end": 12
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 199680,
+    "seconds": 4.16,
+    "peakDBFS": -6.324610794026977,
+    "first20msDBFS": -89.50932298117257,
+    "last20msDBFS": -96.13736331194684,
+    "firstActiveMs": 70.0,
+    "lastActiveToEndMs": 60.0,
+    "activityThresholdDBFS": -48.55639112894434,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

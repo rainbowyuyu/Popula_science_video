@@ -1,0 +1,69 @@
+{
+  "id": "g009",
+  "text": "胰岛素帮助细胞利用和储存糖，也提醒肝脏少向血里放糖。反应变弱时，胰腺往往要分泌得更多。",
+  "ttsText": "胰岛素帮助细胞利用和储存糖，也提醒肝脏少向血里放糖。反应变弱时，胰腺往往要分泌得更多。",
+  "signature": "b3c662240d951bfdb7932d570258e3b2332f6e994b5ee0c2330da238e7e4b580",
+  "raw": "audio/raw/g009-b3c662240d.wav",
+  "processed": "public/voice/g009.wav",
+  "rawDuration": 8.56,
+  "duration": 8.56,
+  "sha256": "231880993472339772a5fd32f5bf3bd990edc7f3e7bc0c49e5f5675530b3bde5",
+  "seed": 3016122916,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g009",
+    "g010",
+    "g011",
+    "g012"
+  ],
+  "rawEndpointDB": -94.31943579928605,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "56091e415f000ffe080e6fab3f8605e4f83a6a9a0812dd112c3b683026c4fe5b",
+    "outputSha256": "231880993472339772a5fd32f5bf3bd990edc7f3e7bc0c49e5f5675530b3bde5",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.589735719663736,
+    "input": {
+      "seconds": 8.56,
+      "peakDb": -4.7869767385567465,
+      "activeRmsDb": -22.283401005523476,
+      "quietFrameP10Db": -62.58045569137623
+    },
+    "output": {
+      "seconds": 8.56,
+      "peakDb": -3.507478237537353,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.63161760310756
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

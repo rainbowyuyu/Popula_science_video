@@ -1,0 +1,70 @@
+{
+  "id": "s028",
+  "text": "这一扭当然很醒目，但真正让工程师在意的，是风经过这层外衣之后，会发生什么。",
+  "ttsText": "这一扭当然很醒目，但真正让工程师在意的，是风经过这层外衣之后，会发生什么。",
+  "signature": "08d2238c0701b759cae498b4c7bd2c98a91c4ee4350a252c6762316f22781ef1",
+  "raw": "audio/raw/s028-08d2238c07.wav",
+  "processed": "public/voice/s028.wav",
+  "rawDuration": 6.72,
+  "duration": 6.72,
+  "sha256": "6cc6344fce257f2724cdb9dd8eb34e50f55874a2394be519e4c17656985529a8",
+  "seed": 2458776162,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s025",
+    "s026",
+    "s027",
+    "s028"
+  ],
+  "rawEndpointDB": -97.63989697343311,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "251c7bf10d73c7ae4ac23f7c5a0e1fb72dd9e03639078da45ea73b02e4a8db30",
+    "outputSha256": "6cc6344fce257f2724cdb9dd8eb34e50f55874a2394be519e4c17656985529a8",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.927276536302628,
+    "input": {
+      "seconds": 6.72,
+      "peakDb": -6.609856736106745,
+      "activeRmsDb": -21.56205228811433,
+      "quietFrameP10Db": -65.7302747800593
+    },
+    "output": {
+      "seconds": 6.72,
+      "peakDb": -6.730312357017462,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -67.45334773947187
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,81 @@
+{
+  "id": "s002",
+  "text": "把玻璃外衣轻轻揭开，里面远比想象中热闹。楼板、钢梁和粗壮的柱子，一层接着一层。",
+  "ttsText": "把玻璃外衣轻轻揭开，里面远比想象中热闹。楼板、钢梁和粗壮的柱子，一层接着一层。",
+  "signature": "c577fee40198e2b6b626ec34949362b1d628cf467ccfbaf640efb01efe13df20",
+  "raw": "audio/raw/s002-c577fee401.wav",
+  "processed": "audio/candidates/v6-pronunciation/s002.wav",
+  "rawDuration": 7.84,
+  "duration": 8.08,
+  "sha256": "e766955e07f6f68e4e444acb0b050306f06c87fb36122021a20ca5abe1a002c3",
+  "seed": 3367800435,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s001",
+    "s002",
+    "s003",
+    "s004"
+  ],
+  "rawEndpointDB": -97.27621190426697,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "d0d6e861fb771ce2f1e3202fe306a406c7e6060c7698552592ab4a83f015dbc3",
+    "outputSha256": "e766955e07f6f68e4e444acb0b050306f06c87fb36122021a20ca5abe1a002c3",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.3166355383641175,
+    "input": {
+      "seconds": 8.08,
+      "peakDb": -6.236275014083232,
+      "activeRmsDb": -21.98717260334814,
+      "quietFrameP10Db": -62.97386918701363
+    },
+    "output": {
+      "seconds": 8.08,
+      "peakDb": -4.543171781169601,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.75199506594568
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "ce9157b48a4fdcf744782e2511f00c4a6f47747c5f96fa22c2bc8bd976b25076"
+  },
+  "subjectiveListeningChecked": false
+}

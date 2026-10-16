@@ -1,0 +1,142 @@
+{
+  "version": "v4-frozen-static-review-4",
+  "date": "2026-10-15",
+  "scope": [
+    "three user screenshots opened",
+    "story and visual source inspection",
+    "shadow documentation excerpts read"
+  ],
+  "fullVideoReviewed": false,
+  "fullNarrationSubjectivelyListened": false,
+  "newV4StillsReviewed": true,
+  "issues": [
+    {
+      "id": "A1",
+      "cue": "s26",
+      "status": "new-unique-event-present-frame-6662-continuous-visual-check-pending",
+      "issue": "repeated private-key phrase triggers fake-card exit too early"
+    },
+    {
+      "id": "A2",
+      "cue": "s08",
+      "status": "final-generated-source-and-display-captions-verified",
+      "issue": "key-change narration has no corresponding key-change visual"
+    },
+    {
+      "id": "A3",
+      "cue": "s05",
+      "status": "f1130-heading-fix-verified",
+      "issue": "unencrypted counterfactual needs explicit short marking"
+    },
+    {
+      "id": "A4",
+      "cue": "s12-s17",
+      "status": "final-generated-source-and-display-captions-verified",
+      "issue": "cup represents endpoint wording conflicts with cup exchange"
+    },
+    {
+      "id": "A5",
+      "cue": "all",
+      "status": "closed-story-contract-pass",
+      "issue": "story-narration-event consistency must be rerun after new audio"
+    },
+    {
+      "id": "A6",
+      "cue": "s21-s24",
+      "status": "pending-continuous-excerpt",
+      "issue": "color-to-chip handoff needs continuous visual check"
+    },
+    {
+      "id": "A7",
+      "cue": "all",
+      "status": "static-typography-and-route-pass-paper-shadow-refinement-suggested",
+      "issue": "shadow and type readability require new 1080p frames"
+    },
+    {
+      "id": "A8",
+      "cue": "s32-s33",
+      "status": "f8100-static-fix-verified-continuous-exit-pending",
+      "issue": "order card projected bounds overlap cake about 40 percent; late return camera clips card and right key"
+    }
+  ],
+  "evidenceFiles": [
+    "v4-shadow-reference.json",
+    "order-crypto-evidence.json",
+    "../work/qa/projection-v4.json"
+  ],
+  "qaCommand": "node scripts/qa_story_contract_v4.mjs",
+  "projectionScope": "Conservative 3D object AABB projections; no pixel-level occlusion assertion. Pose recipes represent the reviewed source snapshot.",
+  "stillsReviewed": {
+    "directory": "work/review-v4-paper",
+    "frames": [
+      1130,
+      1880,
+      5400,
+      5700,
+      6250,
+      6500,
+      8100
+    ],
+    "dimensions": [
+      1248,
+      702
+    ],
+    "timingCaveat": "Uses earlier audio timeline for visual preview; old captions are not evaluated as new narration."
+  },
+  "residualVisualFindings": [
+    {
+      "frames": [
+        1130,
+        1880
+      ],
+      "issue": "Broad rectangular paper shadows still draw attention despite thinner paper geometry",
+      "severity": "visual-polish",
+      "reportedTo": [
+        "root",
+        "assets-agent"
+      ]
+    }
+  ],
+  "frozenDurationFrames": 9153,
+  "storyContract": {
+    "passed": true,
+    "errors": 0,
+    "warnings": 0,
+    "report": "../work/qa/story-contract-v4.json",
+    "speechOverrides": [
+      "s08",
+      "s09",
+      "s28",
+      "s30"
+    ],
+    "displayCaptionsVerifiedAgainstStory": true,
+    "repeatedFirstAnchorsReviewed": [
+      "s13:黄色",
+      "s19:红色",
+      "s20:蓝色"
+    ]
+  },
+  "finalContactSheetsReviewed": [
+    "work/review-v4-final/sheet-1.jpg",
+    "work/review-v4-final/sheet-2.jpg",
+    "work/review-v4-final/sheet-3.jpg"
+  ],
+  "finalRepresentativeFrameCount": 33,
+  "additionalFullStillsReviewed": [
+    "work/review-v4-final/frame-06360.jpg",
+    "work/review-v4-final/frame-06630.jpg",
+    "work/review-v4-final/frame-07690.jpg",
+    "work/review-v4-final/frame-07970.jpg",
+    "work/review-v4-final/frame-09050.jpg",
+    "work/review-v4-labels/frame-00680.jpg",
+    "work/transition-end-r2.jpg"
+  ],
+  "newBlockingStaticLayoutIssues": [],
+  "narrationVisualCallbackSuggestion": {
+    "cue": "s31",
+    "frame": 7970,
+    "issue": "Narration recalls tamper trial while only successful original order remains",
+    "suggestion": "At 报错 retain short tampered-item rejection outcome alongside successful original",
+    "status": "reported-to-parent"
+  }
+}

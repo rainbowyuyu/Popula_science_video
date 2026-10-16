@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "nobel_chemistry_2026",
+  "title": "诺贝尔化学奖：让化学选择同一只手",
+  "category": "science-awards",
+  "status": "source-library",
+  "currentVersion": "V03 explanation + V04 rap",
+  "workbench": {
+    "title": "诺贝尔化学奖专题",
+    "seriesId": "rainbow-science",
+    "episode": 9,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/index-chemistry2026-v03.tsx",
+    "src/index-chemistry2026-v04.tsx",
+    "scripts/render_chemistry2026_v04_rap.mjs"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "audio": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v01.py",
+        "render": "node scripts/render_chemistry2026_v01.mjs",
+        "stills": "node scripts/render_chemistry2026_v01.mjs stills",
+        "audio:v02": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v02.py",
+        "audio:v03": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v03.py",
+        "render:v02": "node scripts/render_chemistry2026_v02.mjs",
+        "stills:v02": "node scripts/render_chemistry2026_v02.mjs stills",
+        "qa:v02": "python scripts/qa_chemistry2026_v02.py",
+        "render:v03": "node scripts/render_chemistry2026_v03.mjs",
+        "stills:v03": "node scripts/render_chemistry2026_v03.mjs stills",
+        "qa:v03": "python scripts/qa_chemistry2026_v03.py",
+        "audio:v04:rap": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v04_rap.py",
+        "render:v04:rap": "node scripts/render_chemistry2026_v04_rap.mjs",
+        "stills:v04:rap": "node scripts/render_chemistry2026_v04_rap.mjs stills",
+        "qa:v04:rap": "python scripts/qa_chemistry2026_v04_rap.py"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "delivery/chemistry2026_v04/2026诺贝尔化学奖_让化学选择同一只手_v04_rap_1080p.mp4"
+    ],
+    "covers": [
+      "delivery/chemistry2026_cover_v01/covers/chemistry2026-cover-16x9.jpg",
+      "delivery/chemistry2026_cover_v01/covers/chemistry2026-cover-3x4.jpg",
+      "delivery/chemistry2026_cover_v01/covers/chemistry2026-cover-4x3.jpg",
+      "delivery/chemistry2026_cover_v01/covers/chemistry2026-cover-9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable"
+  ],
+  "notes": [
+    "V04 是 Rap 变体；保留 V03 科学内容和依赖；外部 TTS 路径需作为可配置依赖。"
+  ],
+  "originalMetadata": {}
+}

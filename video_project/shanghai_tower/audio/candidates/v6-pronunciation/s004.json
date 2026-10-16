@@ -1,0 +1,81 @@
+{
+  "id": "s004",
+  "text": "高处的风会推着楼走，脚下的土又偏软。整座楼从头到脚，都得一起接住这些力。",
+  "ttsText": "高处的风会推着楼走，脚下的土又偏软。整座楼从头到脚，都得一起接住这些力。",
+  "signature": "a1f2aa656ebebaa19e96ab262c6e77e374f04e7262aef769ce9dab5f4429d093",
+  "raw": "audio/raw/s004-a1f2aa656e.wav",
+  "processed": "audio/candidates/v6-pronunciation/s004.wav",
+  "rawDuration": 7.12,
+  "duration": 7.36,
+  "sha256": "db3a8c18c5cf24658c3d59dc5a092739587076897b6bb2a804971820018d00f8",
+  "seed": 3367800435,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s001",
+    "s002",
+    "s003",
+    "s004"
+  ],
+  "rawEndpointDB": -93.78895121159943,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "808b46c73a49e565e63ae6812205a803a4f4ade18c45076d382160567c808057",
+    "outputSha256": "db3a8c18c5cf24658c3d59dc5a092739587076897b6bb2a804971820018d00f8",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.802900309302707,
+    "input": {
+      "seconds": 7.36,
+      "peakDb": -6.216371036026903,
+      "activeRmsDb": -22.419460280357804,
+      "quietFrameP10Db": -62.04919909379331
+    },
+    "output": {
+      "seconds": 7.36,
+      "peakDb": -3.5278081238779984,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.04273809176949
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "fbb4433ecda688952a89ee6f7dec3fcd4a91e3da796066730949c3df2ee44112"
+  },
+  "subjectiveListeningChecked": false
+}

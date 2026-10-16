@@ -1,0 +1,41 @@
+{
+  "version": "v11",
+  "source": "src/physics2026/DetectorRedrawV11.ts",
+  "sourceSHA256": "cda56170b739bfbcf5e7e47e9bdf83f54f1a71a5c1875ca8bf0db8350d7c1363",
+  "reviewScope": "Source and independent analytic/numeric audit; final render samples are tracked separately.",
+  "parameters": {
+    "vacuumSpeedWorldUnitsPerSecond": 105,
+    "n": 1.3193,
+    "betaLow": 0.68,
+    "betaHigh": 0.995,
+    "accelerationStartSeconds": 7.321,
+    "accelerationDurationSeconds": 1.1
+  },
+  "model": {
+    "chargePosition": "Analytic integral of beta(t)*105",
+    "emissionCenter": "Charge position at fixed emission time in laboratory coordinates",
+    "waveRadius": "(elapsed-emissionTime)*105/n",
+    "camera": "Shared origin translation for stationary medium, particle, wavefront and photon",
+    "cone": "Steady-speed portion only; tangent to historical spherical fronts"
+  },
+  "independentAgentResults": {
+    "agent": "v11_qa_prepare",
+    "maxVelocityDerivativeError": 1.19e-08,
+    "sameCameraTransformError": 0,
+    "photonSpeed": 79.58766012,
+    "coneTangencyError": 0,
+    "oldNewCaptionOverlapSamples": 0,
+    "typescriptCheck": "passed"
+  },
+  "rootVisualReview": {
+    "frames": [
+      2920,
+      3000,
+      3060,
+      3180,
+      6900
+    ],
+    "result": "Reviewed; plane-to-ice labels further staged to avoid transition overlap. Final MP4 audit pending."
+  },
+  "limitsDirection": "Uncertainty wedge uses projected negative track axis, not vertical screen direction"
+}

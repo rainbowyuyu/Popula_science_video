@@ -1,0 +1,69 @@
+{
+  "id": "g031",
+  "text": "还有药物会同时启动两种受体，比如替尔泊肽。它与司美格鲁肽，不能当成同一种药。",
+  "ttsText": "还有药物会同时启动两种受体，比如替尔泊肽。它与司美格鲁肽，不能当成同一种药。",
+  "signature": "51a9e4eeb701a082b4585a04c303b61953a1769e5f859d2e3cb9ba4a2d03e84c",
+  "raw": "audio/raw/g031-51a9e4eeb7.wav",
+  "processed": "audio/candidates/revision-v2-pronunciation/g031.wav",
+  "rawDuration": 7.12,
+  "duration": 7.12,
+  "sha256": "4b34e4f3fcd712bf45ec0a62ce34aa53c33f18722f3dcac6cf364a4a428619cb",
+  "seed": 2520285872,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g010",
+    "g020",
+    "g031",
+    "g041"
+  ],
+  "rawEndpointDB": -96.49542431532535,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "9df4ebecc8dbb0a516d4ae4cb9ec11312d65100d92e0d6088cc2956569b2f811",
+    "outputSha256": "4b34e4f3fcd712bf45ec0a62ce34aa53c33f18722f3dcac6cf364a4a428619cb",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.267155215297805,
+    "input": {
+      "seconds": 7.12,
+      "peakDb": -6.454741950466669,
+      "activeRmsDb": -21.866678382968686,
+      "quietFrameP10Db": -60.83005621939263
+    },
+    "output": {
+      "seconds": 7.12,
+      "peakDb": -3.599937595442821,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -61.1273340787175
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

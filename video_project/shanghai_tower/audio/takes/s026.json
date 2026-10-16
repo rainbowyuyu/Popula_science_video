@@ -1,0 +1,70 @@
+{
+  "id": "s026",
+  "text": "阳光可以照进来，外界的冷热又多经过一层缓冲。这些空间，也给高空里的日常生活留了余地。",
+  "ttsText": "阳光可以照进来，外界的冷热又多经过一层缓冲。这些空间，也给高空里的日常生活留了余地。",
+  "signature": "05b7146d0d0cf740f50da6934cd2a1d3f5719f2efe1026379c5c25b1388386c7",
+  "raw": "audio/raw/s026-05b7146d0d.wav",
+  "processed": "public/voice/s026.wav",
+  "rawDuration": 7.84,
+  "duration": 7.84,
+  "sha256": "ddc63d8c551ffb5646c8278612554ac7f8446c7c392e73e11b22be54ec781d81",
+  "seed": 2458776162,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s025",
+    "s026",
+    "s027",
+    "s028"
+  ],
+  "rawEndpointDB": -69.85355496591332,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "67106bf88ffc9c54f6e8162dbc259dbfafc3304f61653693a261f3de79685fc4",
+    "outputSha256": "ddc63d8c551ffb5646c8278612554ac7f8446c7c392e73e11b22be54ec781d81",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.1486146139472524,
+    "input": {
+      "seconds": 7.84,
+      "peakDb": -6.061993576905893,
+      "activeRmsDb": -21.907708734727187,
+      "quietFrameP10Db": -59.30841849247684
+    },
+    "output": {
+      "seconds": 7.84,
+      "peakDb": -4.654154342006585,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -59.602039446679534
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

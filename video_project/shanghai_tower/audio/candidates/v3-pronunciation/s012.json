@@ -1,0 +1,79 @@
+{
+  "id": "s012",
+  "text": "钢材和混凝土一起工作：往下，接住楼层的重量；往侧面，抵抗风的推力。",
+  "ttsText": "钢材和混凝土一起工作：往下，接住楼层的重量；往侧面，抵抗风的推力。",
+  "signature": "ae683b2c197d3afe6e7355876aceeec47c2fe7a1698b76d2358c295a94c99d02",
+  "raw": "audio/raw/s012-ae683b2c19.wav",
+  "processed": "audio/candidates/v3-pronunciation/s012.wav",
+  "rawDuration": 6.88,
+  "duration": 7.12,
+  "sha256": "2dcf8b04fbaf7bf3de137add24ab3f832ee17b36894361a6fc47dc024229d1c6",
+  "seed": 3268505378,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s009",
+    "s012"
+  ],
+  "rawEndpointDB": -96.07491370406157,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "d00c9b62edcfc734707314ee4e6a415ad5c776988be9cbe5dfa26b8a443cb350",
+    "outputSha256": "2dcf8b04fbaf7bf3de137add24ab3f832ee17b36894361a6fc47dc024229d1c6",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.3343150310676037,
+    "input": {
+      "seconds": 7.12,
+      "peakDb": -7.97697086642513,
+      "activeRmsDb": -23.097001304881704,
+      "quietFrameP10Db": -74.94021434634584
+    },
+    "output": {
+      "seconds": 7.12,
+      "peakDb": -3.672449505755218,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -74.58562983167968
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "8dc4ef8b2216018574da2962075e0a0618a10e82dce6ffa5789052b3d209beaf"
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,1391 @@
+{
+  "schema": "rainbow.educational-cfd-acceptance/1",
+  "sourceSHA256": "270b9f6e8f0d8d8e2e9d1369574ef47374c4819c30b9a3fb359d038ee5163901",
+  "nativeSIMPLEIteration": 2050,
+  "foamToVTKTimeIndex": 2205,
+  "coarseNativeSIMPLEIteration": 7083,
+  "quality": {
+    "acceptedForFilm": true,
+    "acceptedForEngineeringDesign": false,
+    "acceptedForCoupling": false,
+    "acceptedForQuantitativeLocalPressure": false,
+    "acceptedForResolvedTransientVortices": false,
+    "strictResidualTargetPassed": false,
+    "strictResidualTarget": 1e-06,
+    "gridIndependent": false,
+    "acceptanceScope": "Qualitative film visualization only: broad flow deflection, side acceleration, downstream lower-speed region and relative mean pressure sign on an idealized isolated reconstruction.",
+    "displayCaption": "理想化平均流场",
+    "notes": "Accepted for the explicitly restricted qualitative film scope after native conservation, same-location sensitivity, export/geometry and independent topology review; not claimed converged or engineering-validated.",
+    "limitations": [
+      "Normalized residuals did not all reach the original 1e-6 target. This target is explicitly not passed; finite-iteration approximate RANS fields are retained only for the independently reviewed qualitative scope.",
+      "Two-resolution sensitivity is not grid independence or a calibrated absolute error bar. Exact wake-core length/area and local pressure peaks are not accepted.",
+      "Uniform 30 m/s inlet, 5% turbulence intensity, slip ground, isolated smooth educational reconstruction and simplified closed crown; no atmospheric boundary layer, surrounding city or as-built openings.",
+      "Streamline travel-time animation explains paths through a stationary modeled mean velocity field; it is not a resolved transient-vortex simulation.",
+      "Structural demonstration uses independent prescribed educational forces; CFD-to-structure coupling and engineering design are not accepted.",
+      "2.5 m display sampling interpolates native finite-volume cells and is not 2.5 m CFD mesh resolution; invalid and solid positions are masked without filling.",
+      "Surface Cp uses native point interpolation for display; raw native cell extrema are retained separately. Values are not clipped to manufacture a result.",
+      "Fine mesh has thin-wall-cell determinant/low-interpolation-weight advisories and 15 faces above 70-degree nonorthogonality; all volumes/face tetrahedra are positive, no unclassified boundary holes."
+    ]
+  },
+  "solver": {
+    "name": "Official OpenFOAM v1912 simpleFoam, incompressible kOmegaSST RANS",
+    "binarySHA256": "4925f14e60e59c6b6e82fe4c8bfa57987f3e076809c4cff82fcd079d52b7108e",
+    "velocity_m_s": 30,
+    "rho_kg_m3": 1.225,
+    "dynamicViscosity_Pa_s": 1.81e-05,
+    "momentumConvection": "bounded Gauss linearUpwindV grad(U)",
+    "pressureGradient": "Gauss linear, explicitly un-limited",
+    "turbulenceScalarConvection": "bounded Gauss upwind",
+    "wallFunction": "Native OpenFOAM kOmegaSST wall functions; y+ statistics retained"
+  },
+  "nativeFiles": {
+    "foam-fine-final\\internal.vtu": "270b9f6e8f0d8d8e2e9d1369574ef47374c4819c30b9a3fb359d038ee5163901",
+    "foam-fine-final\\boundary\\tower.vtp": "bfe4c896bc7da9f6aa554e8551eb3a45ee2bab4ad3a24266edcd1b9177a726e6",
+    "foam-fine-final\\boundary\\inlet.vtp": "7c30ffb4b48780ae4636ed1c1ddd1f790fd67ca423f2cd84ccccab04778faf21",
+    "foam-coarse-final\\internal.vtu": "91b6bb233ff8baa5df99bf1812b10d2dccb1629a0c23e7d7990257b91ef0ee83",
+    "foam-coarse-final\\boundary\\tower.vtp": "7a07809eb542b699f0f26fbcbb4c9b288a23813e3822c5985a70fa97c9071590"
+  },
+  "configurationSHA256": {
+    "controlDict": "277368e56bf56bcd33ae389222ce8c2032484ecdf7c9cfa937b79a447adda0ea",
+    "decomposeParDict": "42ba8958f58f539863e02a002f4e3f8431c500182f197045769f86e3695d7f79",
+    "fvSchemes": "9547d2ee4726d05470910167faadc7a421ffa0d9d5f24f414b41f95d96fe71e5",
+    "fvSolution": "2ca94f3f21e8e5a9a0011c5529f2763fcf47e50ba1c523a8900a64fe80cc246b"
+  },
+  "mesh": {
+    "fineCells": 1243872,
+    "coarseCells": 589972,
+    "fineSourceMeshSHA256": "8b7f5f2c17740ec5c533913beedde110c4a56ce62f376acfe3fe2259716985be",
+    "coarseSourceMeshSHA256": "2193460e5bff8b667a7fb86e98c383b58e403d0767e99141ef3ead1b65c54e65",
+    "fineCheckMeshSHA256": "eca450b2054a8a8294218b4104d61210ae507435265ae5030995e73f2718852b",
+    "strictCheckMeshAllPassed": false,
+    "advisoriesDisclosed": true
+  },
+  "nativeFieldSummary": {
+    "case": "foam-fine-final",
+    "surfaceArea_m2": 164773.80233442812,
+    "pointFieldNames": [
+      "k",
+      "nut",
+      "omega",
+      "p",
+      "yPlus",
+      "U"
+    ],
+    "nativeCellFieldRanges": {
+      "p": {
+        "min": -1883.9730224609375,
+        "max": 576.5757446289062,
+        "finite": true,
+        "negativeCount": 972276
+      },
+      "U": {
+        "min": 0.18531812727451324,
+        "max": 56.157989501953125,
+        "finite": true,
+        "negativeCount": 0
+      },
+      "k": {
+        "min": 0.054158881306648254,
+        "max": 95.41610717773438,
+        "finite": true,
+        "negativeCount": 0
+      },
+      "omega": {
+        "min": 0.028430292382836342,
+        "max": 7880.11767578125,
+        "finite": true,
+        "negativeCount": 0
+      },
+      "nut": {
+        "min": 5.1323157094884664e-05,
+        "max": 51.7583122253418,
+        "finite": true,
+        "negativeCount": 0
+      }
+    },
+    "boundary": {
+      "yPlus": {
+        "min": 17.228811264038086,
+        "max": 245.7504119873047,
+        "areaMean": 115.10589834866907,
+        "areaWeightedP01_P05_P50_P95_P99": [
+          30.45236652653018,
+          39.82749876172754,
+          100.87130717916146,
+          204.44133330435213,
+          219.84332592875893
+        ],
+        "areaFractions": {
+          "below5": 0.0,
+          "below30": 0.008364647545783933,
+          "30to300": 0.9916353524542161,
+          "above300": 0.0,
+          "above500": 0.0
+        }
+      },
+      "k": {
+        "min": 0.054158881306648254,
+        "max": 11.721866607666016,
+        "areaMean": 3.110383770187525,
+        "areaWeightedP01_P05_P50_P95_P99": [
+          0.17140669579009196,
+          0.29413663629622333,
+          1.9075152399376705,
+          7.67474243105787,
+          9.115313740703776
+        ]
+      },
+      "omega": {
+        "min": 598.4608764648438,
+        "max": 7880.11767578125,
+        "areaMean": 3535.5691992718744,
+        "areaWeightedP01_P05_P50_P95_P99": [
+          971.4273350661883,
+          1250.1808935499942,
+          3137.6731988206006,
+          6213.329838462777,
+          6925.293603958653
+        ]
+      },
+      "nut": {
+        "min": 5.573901944444515e-06,
+        "max": 0.00017641538579482585,
+        "areaMean": 8.302027059159941e-05,
+        "areaWeightedP01_P05_P50_P95_P99": [
+          1.7597513219600326e-05,
+          2.565951494257714e-05,
+          7.38344207570631e-05,
+          0.00014812756240457336,
+          0.00015874243735066474
+        ]
+      },
+      "p": {
+        "min": -1883.9730224609375,
+        "max": 576.5757446289062,
+        "areaMean": -281.0176758183768,
+        "areaWeightedP01_P05_P50_P95_P99": [
+          -1055.2265095204864,
+          -864.0132842546042,
+          -244.59068226846782,
+          408.98650568646957,
+          444.6894104158643
+        ]
+      }
+    },
+    "quality": {
+      "acceptedForFilm": false
+    }
+  },
+  "geometryRegistration": {
+    "currentGLB_SHA256": "b9cacbeb3c044bce06b122601539c6e514888ab0751889f22d7a9c3fc7267123",
+    "currentExteriorGeometry_SHA256": "1c61ddfe0212ce0cb7cbf760b89a97971b612e60ef00a1be2a10a11e1587e1a4",
+    "objects": 60,
+    "vertexCount": 52224,
+    "units": "metres, Three.js XYZ, Y up",
+    "boundaryFile": "research\\physics-v7\\foam-fine-final\\boundary\\tower.vtp",
+    "boundarySHA256": "bfe4c896bc7da9f6aa554e8551eb3a45ee2bab4ad3a24266edcd1b9177a726e6",
+    "projectionByObject": {
+      "ENVELOPE_CROWN_S01_GLASS": {
+        "vertices": 704,
+        "max_m": 0.4993700993183829,
+        "rms_m": 0.16792037539418356,
+        "p95_m": 0.42623246785882946,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_CROWN_S02_GLASS": {
+        "vertices": 704,
+        "max_m": 0.4988465954442577,
+        "rms_m": 0.1511691732803305,
+        "p95_m": 0.33538900002050975,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_CROWN_S03_GLASS": {
+        "vertices": 704,
+        "max_m": 0.5095934079790673,
+        "rms_m": 0.1520514052948506,
+        "p95_m": 0.34671924662813963,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_CROWN_S04_GLASS": {
+        "vertices": 704,
+        "max_m": 0.4948947571741508,
+        "rms_m": 0.13084517911256652,
+        "p95_m": 0.27215353717543067,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_CROWN_S05_GLASS": {
+        "vertices": 704,
+        "max_m": 0.49739977452491085,
+        "rms_m": 0.12469302320527183,
+        "p95_m": 0.26472820633903316,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_CROWN_S06_GLASS": {
+        "vertices": 704,
+        "max_m": 0.49884426206928495,
+        "rms_m": 0.15124622947847463,
+        "p95_m": 0.36672059525199774,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z01_S01_GLASS": {
+        "vertices": 448,
+        "max_m": 0.48206747814295664,
+        "rms_m": 0.13229611794278212,
+        "p95_m": 0.3436633036383057,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z01_S02_GLASS": {
+        "vertices": 448,
+        "max_m": 0.44521392753330896,
+        "rms_m": 0.13300892638108539,
+        "p95_m": 0.3674513029874023,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z01_S03_GLASS": {
+        "vertices": 448,
+        "max_m": 0.48206981363144225,
+        "rms_m": 0.13229632903779873,
+        "p95_m": 0.3436620308634203,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z01_S04_GLASS": {
+        "vertices": 448,
+        "max_m": 0.44521289684563764,
+        "rms_m": 0.13300888668496244,
+        "p95_m": 0.3674498139050554,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z01_S05_GLASS": {
+        "vertices": 448,
+        "max_m": 0.48206782281581223,
+        "rms_m": 0.13229607490021242,
+        "p95_m": 0.3436645171281055,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z01_S06_GLASS": {
+        "vertices": 448,
+        "max_m": 0.4452135324913573,
+        "rms_m": 0.13300884629619755,
+        "p95_m": 0.3674500446129556,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z02_S01_GLASS": {
+        "vertices": 896,
+        "max_m": 0.5053852935783334,
+        "rms_m": 0.12826468048848422,
+        "p95_m": 0.34136268307726797,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z02_S02_GLASS": {
+        "vertices": 896,
+        "max_m": 0.4651606659617724,
+        "rms_m": 0.13695439011032504,
+        "p95_m": 0.3682832267157116,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z02_S03_GLASS": {
+        "vertices": 896,
+        "max_m": 0.5053893931977336,
+        "rms_m": 0.12826482332028727,
+        "p95_m": 0.341360176032528,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z02_S04_GLASS": {
+        "vertices": 896,
+        "max_m": 0.46515884119991935,
+        "rms_m": 0.13695427500796925,
+        "p95_m": 0.36828426793057456,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z02_S05_GLASS": {
+        "vertices": 896,
+        "max_m": 0.5053844893278849,
+        "rms_m": 0.1282648240611234,
+        "p95_m": 0.3413610883617838,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z02_S06_GLASS": {
+        "vertices": 896,
+        "max_m": 0.46515921985465297,
+        "rms_m": 0.1369544174179412,
+        "p95_m": 0.36828472004879353,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z03_S01_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5281150223152484,
+        "rms_m": 0.13264049159831617,
+        "p95_m": 0.33832202578343135,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z03_S02_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5075163540160537,
+        "rms_m": 0.12870085856626326,
+        "p95_m": 0.32041183500259884,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z03_S03_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5281188638528664,
+        "rms_m": 0.13264083960662912,
+        "p95_m": 0.3383240282942884,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z03_S04_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5075165982908605,
+        "rms_m": 0.12870103138182606,
+        "p95_m": 0.32041096843610145,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z03_S05_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5281152576365455,
+        "rms_m": 0.13264038959585922,
+        "p95_m": 0.3383204632689207,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z03_S06_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5075146419914477,
+        "rms_m": 0.12870085698391426,
+        "p95_m": 0.3204125693942485,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z04_S01_GLASS": {
+        "vertices": 896,
+        "max_m": 0.5312628808731951,
+        "rms_m": 0.1258940448859276,
+        "p95_m": 0.307447604346753,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z04_S02_GLASS": {
+        "vertices": 896,
+        "max_m": 0.4966396211950693,
+        "rms_m": 0.12881435080784503,
+        "p95_m": 0.3397609349257768,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z04_S03_GLASS": {
+        "vertices": 896,
+        "max_m": 0.5312628451459914,
+        "rms_m": 0.12588422419085993,
+        "p95_m": 0.307447381578854,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z04_S04_GLASS": {
+        "vertices": 896,
+        "max_m": 0.49663999107895707,
+        "rms_m": 0.12881408199642513,
+        "p95_m": 0.33975763707241724,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z04_S05_GLASS": {
+        "vertices": 896,
+        "max_m": 0.5312857783099875,
+        "rms_m": 0.12590460830827088,
+        "p95_m": 0.30744887663310744,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z04_S06_GLASS": {
+        "vertices": 896,
+        "max_m": 0.4966382413282849,
+        "rms_m": 0.12881404634687676,
+        "p95_m": 0.33976174020023747,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z05_S01_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5151672704095855,
+        "rms_m": 0.15865755041394577,
+        "p95_m": 0.4113537848031948,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z05_S02_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.4742383735490143,
+        "rms_m": 0.13708260873490807,
+        "p95_m": 0.3401480452614824,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z05_S03_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5151683246902445,
+        "rms_m": 0.15855996531711503,
+        "p95_m": 0.41139146833953244,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z05_S04_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.4543834027469591,
+        "rms_m": 0.13315253243460234,
+        "p95_m": 0.3295607845572316,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z05_S05_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.51516656509311,
+        "rms_m": 0.15865756683408716,
+        "p95_m": 0.41135378052229354,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z05_S06_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.45438366562661364,
+        "rms_m": 0.13315253503919416,
+        "p95_m": 0.32955978119850055,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z06_S01_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5314013374180993,
+        "rms_m": 0.14096843498266587,
+        "p95_m": 0.33553539153750245,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z06_S02_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.4847356275150681,
+        "rms_m": 0.15996735861541891,
+        "p95_m": 0.40954414887256935,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z06_S03_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5314034891846485,
+        "rms_m": 0.14096832415768318,
+        "p95_m": 0.3355364433941161,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z06_S04_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.48473997349773373,
+        "rms_m": 0.15989465999097646,
+        "p95_m": 0.409544761932388,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z06_S05_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5314031061248128,
+        "rms_m": 0.14096843741850357,
+        "p95_m": 0.3355357515953539,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z06_S06_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.484737786481881,
+        "rms_m": 0.15989467347047326,
+        "p95_m": 0.40954256033365527,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z07_S01_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5833501113747105,
+        "rms_m": 0.1548977979605892,
+        "p95_m": 0.35607520802501647,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z07_S02_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.524595896727161,
+        "rms_m": 0.1536773318751208,
+        "p95_m": 0.3766969124543054,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z07_S03_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5765099346162578,
+        "rms_m": 0.15441035570927114,
+        "p95_m": 0.35607686207102596,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z07_S04_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5245962252789228,
+        "rms_m": 0.15367738466783926,
+        "p95_m": 0.37669659654291465,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z07_S05_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5765111210789121,
+        "rms_m": 0.15441027052022602,
+        "p95_m": 0.35607595789829544,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z07_S06_GLASS": {
+        "vertices": 1024,
+        "max_m": 0.5245941682325773,
+        "rms_m": 0.15367721348994498,
+        "p95_m": 0.37669866073037217,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z08_S01_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5546912519400959,
+        "rms_m": 0.14897069802018126,
+        "p95_m": 0.37012255210917555,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z08_S02_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5774648887240768,
+        "rms_m": 0.1483612881347539,
+        "p95_m": 0.3592494249230402,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z08_S03_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5546913523630316,
+        "rms_m": 0.15060275235523135,
+        "p95_m": 0.3701265283933079,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z08_S04_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5774648865611475,
+        "rms_m": 0.14836126433117458,
+        "p95_m": 0.3592489390058434,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z08_S05_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.5547198182917101,
+        "rms_m": 0.15080596368243104,
+        "p95_m": 0.37012382403800453,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z08_S06_GLASS": {
+        "vertices": 1088,
+        "max_m": 0.57746299498644,
+        "rms_m": 0.1483604723992239,
+        "p95_m": 0.35924828089223454,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z09_S01_GLASS": {
+        "vertices": 512,
+        "max_m": 0.5611066208293678,
+        "rms_m": 0.14935347759129133,
+        "p95_m": 0.3382763277024772,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z09_S02_GLASS": {
+        "vertices": 512,
+        "max_m": 0.5099290719227305,
+        "rms_m": 0.170160580951081,
+        "p95_m": 0.43399675067619375,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z09_S03_GLASS": {
+        "vertices": 512,
+        "max_m": 0.5611069535749443,
+        "rms_m": 0.14935396811524343,
+        "p95_m": 0.33827562885586987,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z09_S04_GLASS": {
+        "vertices": 512,
+        "max_m": 0.5099305385356728,
+        "rms_m": 0.17006313608311385,
+        "p95_m": 0.43399837699231236,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z09_S05_GLASS": {
+        "vertices": 512,
+        "max_m": 0.5611095642178979,
+        "rms_m": 0.1492949583399393,
+        "p95_m": 0.33827492150419175,
+        "coverageWithin1_5m": 1.0
+      },
+      "ENVELOPE_Z09_S06_GLASS": {
+        "vertices": 512,
+        "max_m": 0.509928710462643,
+        "rms_m": 0.1701635049548444,
+        "p95_m": 0.4339984253699412,
+        "coverageWithin1_5m": 1.0
+      }
+    },
+    "geometryRegistrationPassed": true
+  },
+  "exportIntegrity": {
+    "paths": [
+      {
+        "index": 0,
+        "points": 419,
+        "segmentSamples": 3591,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 27.469064712524414,
+        "maxSegment_m": 4.000104119595815
+      },
+      {
+        "index": 1,
+        "points": 412,
+        "segmentSamples": 3573,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 25.94173812866211,
+        "maxSegment_m": 4.000108391514322
+      },
+      {
+        "index": 2,
+        "points": 414,
+        "segmentSamples": 3548,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 22.199010848999023,
+        "maxSegment_m": 4.000109489730088
+      },
+      {
+        "index": 3,
+        "points": 440,
+        "segmentSamples": 3399,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 12.452316284179688,
+        "maxSegment_m": 4.000053476144209
+      },
+      {
+        "index": 4,
+        "points": 425,
+        "segmentSamples": 3561,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 24.12017250061035,
+        "maxSegment_m": 4.000074076009635
+      },
+      {
+        "index": 5,
+        "points": 416,
+        "segmentSamples": 3582,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 25.532176971435547,
+        "maxSegment_m": 4.000100162841023
+      },
+      {
+        "index": 6,
+        "points": 421,
+        "segmentSamples": 3596,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 26.55526351928711,
+        "maxSegment_m": 4.000082990424169
+      },
+      {
+        "index": 7,
+        "points": 407,
+        "segmentSamples": 3575,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 28.381479263305664,
+        "maxSegment_m": 4.000092381866062
+      },
+      {
+        "index": 8,
+        "points": 416,
+        "segmentSamples": 3599,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 27.389392852783203,
+        "maxSegment_m": 4.000083785632778
+      },
+      {
+        "index": 9,
+        "points": 412,
+        "segmentSamples": 3578,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 25.00977325439453,
+        "maxSegment_m": 4.0001023611679045
+      },
+      {
+        "index": 10,
+        "points": 139,
+        "segmentSamples": 811,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 9.797043800354004,
+        "maxSegment_m": 4.000015430546675
+      },
+      {
+        "index": 11,
+        "points": 427,
+        "segmentSamples": 3578,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 25.420957565307617,
+        "maxSegment_m": 4.000103050514567
+      },
+      {
+        "index": 12,
+        "points": 420,
+        "segmentSamples": 3570,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 27.76190757751465,
+        "maxSegment_m": 4.000100003805154
+      },
+      {
+        "index": 13,
+        "points": 406,
+        "segmentSamples": 3580,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 28.574235916137695,
+        "maxSegment_m": 4.000073602448214
+      },
+      {
+        "index": 14,
+        "points": 410,
+        "segmentSamples": 3570,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 29.104915618896484,
+        "maxSegment_m": 4.000102511461843
+      },
+      {
+        "index": 15,
+        "points": 414,
+        "segmentSamples": 3583,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 27.25399398803711,
+        "maxSegment_m": 4.000093388188445
+      },
+      {
+        "index": 16,
+        "points": 425,
+        "segmentSamples": 3558,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 25.08654022216797,
+        "maxSegment_m": 4.000111060043951
+      },
+      {
+        "index": 17,
+        "points": 432,
+        "segmentSamples": 3470,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 9.899065971374512,
+        "maxSegment_m": 4.000108541031961
+      },
+      {
+        "index": 18,
+        "points": 409,
+        "segmentSamples": 3536,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 23.089391708374023,
+        "maxSegment_m": 4.000069873241576
+      },
+      {
+        "index": 19,
+        "points": 421,
+        "segmentSamples": 3593,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 26.566967010498047,
+        "maxSegment_m": 4.000088400891904
+      },
+      {
+        "index": 20,
+        "points": 426,
+        "segmentSamples": 3606,
+        "insideSolidCount": 0,
+        "outsideVolumeCount": 0,
+        "travelTimeStrictlyIncreasing": true,
+        "finite": true,
+        "minimumSpeed_m_s": 27.75461196899414,
+        "maxSegment_m": 4.000109048416802
+      }
+    ],
+    "slices": [
+      {
+        "id": "horizontal-100m",
+        "validCount": 84063,
+        "solidCount": 1050,
+        "noSolidValues": true,
+        "validValuesFinite": true,
+        "speedVectorNormError": 4.2921152640928995e-06
+      },
+      {
+        "id": "horizontal-300m",
+        "validCount": 84263,
+        "solidCount": 850,
+        "noSolidValues": true,
+        "validValuesFinite": true,
+        "speedVectorNormError": 4.389949168626117e-06
+      },
+      {
+        "id": "horizontal-500m",
+        "validCount": 84461,
+        "solidCount": 652,
+        "noSolidValues": true,
+        "validValuesFinite": true,
+        "speedVectorNormError": 4.713803420486329e-06
+      },
+      {
+        "id": "vertical-centre",
+        "validCount": 133552,
+        "solidCount": 8009,
+        "noSolidValues": true,
+        "validValuesFinite": true,
+        "speedVectorNormError": 3.972079639424919e-06
+      }
+    ],
+    "pressure": {
+      "triangles": 5856,
+      "outwardTriangleFraction": 1.0,
+      "normalLengthErrorMax": 1.8134919854695397e-07,
+      "cpPressureIdentityError": 2.8837294796524304e-07
+    },
+    "registrationAndExportOnly": true,
+    "numericalAcceptance": false,
+    "exportIntegrityPassed": true
+  },
+  "finalNativeConservation": {
+    "fine": {
+      "case": "steady-gauss-pressure-L9-final-integrals",
+      "equation": "F_body + F_outer + rho * sum(phi U) = 0 for converged steady flow; URANS additionally needs volume momentum storage",
+      "results": [
+        {
+          "timeOrIteration": 2050.0,
+          "inletVolumeFlux_m3_s": -718963200.0,
+          "netVolumeFlux_m3_s": 16.743000030517578,
+          "relativeMassImbalance": 2.328770099849002e-08,
+          "bodyForce_N": [
+            18146176.83512,
+            -604285.523661,
+            2809046.825652
+          ],
+          "outerForce_N": [
+            -18440718.53398,
+            804299.4927704,
+            -2628932.755582
+          ],
+          "advectiveMomentumFlux_N": [
+            169952.81275205614,
+            -171206.45402040254,
+            -163967.30095726752
+          ],
+          "steadyMomentumResidual_N": [
+            -124588.88610794468,
+            28807.51508899752,
+            16146.769112732378
+          ],
+          "steadyMomentumImbalanceRelativeBodyForce": 0.0070155447892847325
+        }
+      ],
+      "quality": {
+        "acceptedForFilm": false
+      }
+    },
+    "coarse": {
+      "case": "steady-gauss-pressure-L12-final-integrals",
+      "equation": "F_body + F_outer + rho * sum(phi U) = 0 for converged steady flow; URANS additionally needs volume momentum storage",
+      "results": [
+        {
+          "timeOrIteration": 7083.0,
+          "inletVolumeFlux_m3_s": -718963200.0,
+          "netVolumeFlux_m3_s": 2.5055999755859375,
+          "relativeMassImbalance": 3.4850183925768906e-09,
+          "bodyForce_N": [
+            18111286.71487,
+            303791.3224605,
+            2744848.489025
+          ],
+          "outerForce_N": [
+            -18243172.90307,
+            -315396.4869916,
+            -2327374.188906
+          ],
+          "advectiveMomentumFlux_N": [
+            166199.21675224305,
+            11005.93549452775,
+            -359029.43520136003
+          ],
+          "steadyMomentumResidual_N": [
+            34313.02855224238,
+            -599.2290365722674,
+            58444.86491763999
+          ],
+          "steadyMomentumImbalanceRelativeBodyForce": 0.0036994212401636048
+        }
+      ],
+      "quality": {
+        "acceptedForFilm": false
+      }
+    }
+  },
+  "finiteIterationSensitivity": {
+    "fine": {
+      "reference": "research\\physics-v7\\foam-fine-gauss1500",
+      "candidate": "research\\physics-v7\\foam-fine-final",
+      "referencePressure_Pa": [
+        0.7649538274208808,
+        0.7694729634680688
+      ],
+      "velocitySlices": [
+        {
+          "height_m": 100,
+          "points": 12952,
+          "vectorRMSRelativeUref": 0.017440587282180786,
+          "speedRMSRelativeUref": 0.013858163729310036,
+          "vectorP95RelativeUref": 0.02891739085316658,
+          "CpRMS": 0.007410179357975721
+        },
+        {
+          "height_m": 300,
+          "points": 12999,
+          "vectorRMSRelativeUref": 0.001935395528562367,
+          "speedRMSRelativeUref": 0.0013809043448418379,
+          "vectorP95RelativeUref": 0.004023475106805563,
+          "CpRMS": 0.0005986577016301453
+        },
+        {
+          "height_m": 500,
+          "points": 13052,
+          "vectorRMSRelativeUref": 0.01365652959793806,
+          "speedRMSRelativeUref": 0.009827234782278538,
+          "vectorP95RelativeUref": 0.030216393992304802,
+          "CpRMS": 0.004457185044884682
+        }
+      ],
+      "method": "Probe native finite volume fields at identical fixed positions; points invalid/in solid in either mesh excluded, no extrapolation.",
+      "surfaceCp": {
+        "matchedPoints": 2947,
+        "coverage": 1.0,
+        "RMSDeltaCp": 0.022218508645892143,
+        "P95AbsoluteDeltaCp": 0.03904099017381668,
+        "meanDeltaCp": -0.0011254522250965238
+      },
+      "quality": {
+        "acceptedForFilm": false
+      }
+    },
+    "coarse": {
+      "reference": "research\\physics-v7\\foam-candidate-gauss6500",
+      "candidate": "research\\physics-v7\\foam-coarse-final",
+      "referencePressure_Pa": [
+        0.7648835580148515,
+        0.7612274492309681
+      ],
+      "velocitySlices": [
+        {
+          "height_m": 100,
+          "points": 12952,
+          "vectorRMSRelativeUref": 0.011102262884378433,
+          "speedRMSRelativeUref": 0.010032711550593376,
+          "vectorP95RelativeUref": 0.025029325857758522,
+          "CpRMS": 0.003002143232151866
+        },
+        {
+          "height_m": 300,
+          "points": 13000,
+          "vectorRMSRelativeUref": 0.0011813936289399862,
+          "speedRMSRelativeUref": 0.0008219828014262021,
+          "vectorP95RelativeUref": 0.002625713124871254,
+          "CpRMS": 0.000495990680065006
+        },
+        {
+          "height_m": 500,
+          "points": 13052,
+          "vectorRMSRelativeUref": 0.0030982799362391233,
+          "speedRMSRelativeUref": 0.0026390652637928724,
+          "vectorP95RelativeUref": 0.005404948256909847,
+          "CpRMS": 0.0011123116128146648
+        }
+      ],
+      "method": "Probe native finite volume fields at identical fixed positions; points invalid/in solid in either mesh excluded, no extrapolation.",
+      "surfaceCp": {
+        "matchedPoints": 2046,
+        "coverage": 1.0,
+        "RMSDeltaCp": 0.015993675217032433,
+        "P95AbsoluteDeltaCp": 0.02462327480316162,
+        "meanDeltaCp": 0.00045527901966124773
+      },
+      "quality": {
+        "acceptedForFilm": false
+      }
+    }
+  },
+  "sameLocationMeshSensitivity": {
+    "reference": "research\\physics-v7\\foam-coarse-final",
+    "candidate": "research\\physics-v7\\foam-fine-final",
+    "referencePressure_Pa": [
+      0.7612274492309681,
+      0.7694729634680688
+    ],
+    "velocitySlices": [
+      {
+        "height_m": 100,
+        "points": 12952,
+        "vectorRMSRelativeUref": 0.05710018798708916,
+        "speedRMSRelativeUref": 0.04389375448226929,
+        "vectorP95RelativeUref": 0.11929862946271896,
+        "CpRMS": 0.024114442989230156
+      },
+      {
+        "height_m": 300,
+        "points": 12999,
+        "vectorRMSRelativeUref": 0.03445833921432495,
+        "speedRMSRelativeUref": 0.03055781126022339,
+        "vectorP95RelativeUref": 0.06894156336784363,
+        "CpRMS": 0.009601141326129436
+      },
+      {
+        "height_m": 500,
+        "points": 13052,
+        "vectorRMSRelativeUref": 0.035464223474264145,
+        "speedRMSRelativeUref": 0.025774922221899033,
+        "vectorP95RelativeUref": 0.07691369205713272,
+        "CpRMS": 0.011353138834238052
+      }
+    ],
+    "method": "Probe native finite volume fields at identical fixed positions; points invalid/in solid in either mesh excluded, no extrapolation.",
+    "surfaceCp": {
+      "matchedPoints": 2046,
+      "coverage": 1.0,
+      "RMSDeltaCp": 0.13694533705711365,
+      "P95AbsoluteDeltaCp": 0.2701244056224823,
+      "meanDeltaCp": -0.03859735652804375
+    },
+    "quality": {
+      "acceptedForFilm": false
+    }
+  },
+  "residualAndForceMonitors": {
+    "fine": {
+      "case": "foam-fine-final",
+      "quality": {
+        "acceptedForFilm": false
+      },
+      "lastTime": 2050.0,
+      "ended": true,
+      "timeMeaning": "SIMPLE iteration index",
+      "boundingKLast200": 0,
+      "boundingOmegaLast200": 0,
+      "residuals": {
+        "Ux": {
+          "last": 7.10293907124e-05,
+          "maxLast200": 7.10293907124e-05,
+          "medianLast200": 6.837966145020001e-05
+        },
+        "Uy": {
+          "last": 0.00123789906962,
+          "maxLast200": 0.00123789906962,
+          "medianLast200": 0.00120058918736
+        },
+        "Uz": {
+          "last": 0.00121578333949,
+          "maxLast200": 0.00121812376926,
+          "medianLast200": 0.001182301556485
+        },
+        "p": {
+          "last": 0.0034100057335,
+          "maxLast200": 0.00341693420097,
+          "medianLast200": 0.0033449484181049998
+        },
+        "k": {
+          "last": 0.000139238681911,
+          "maxLast200": 0.000140075969207,
+          "medianLast200": 0.0001366696719095
+        },
+        "omega": {
+          "last": 3.60870593495e-07,
+          "maxLast200": 3.61813264974e-07,
+          "medianLast200": 3.547935436155e-07
+        }
+      },
+      "CdWindows": {
+        "200": {
+          "timeRange": [
+            1851.0,
+            2050.0
+          ],
+          "mean": 0.53011651970453,
+          "std": 0.003025346789151878,
+          "range": 0.011030402738999912,
+          "halfWindowDriftFraction": 0.0048249206522474365
+        },
+        "400": {
+          "timeRange": [
+            1651.0,
+            2050.0
+          ],
+          "mean": 0.5306604626157625,
+          "std": 0.0025841369522413256,
+          "range": 0.011030402738999912,
+          "halfWindowDriftFraction": 0.002050060064966281
+        },
+        "800": {
+          "timeRange": [
+            1251.0,
+            2050.0
+          ],
+          "mean": 0.5309460274110812,
+          "std": 0.0022805853440894864,
+          "range": 0.011030402738999912,
+          "halfWindowDriftFraction": 0.0010756829529778896
+        }
+      },
+      "wallSeconds": [
+        648.53
+      ],
+      "yPlus": [
+        17.2288103564,
+        245.750412224,
+        115.247311557
+      ]
+    },
+    "coarse": {
+      "case": "foam-coarse-final",
+      "quality": {
+        "acceptedForFilm": false
+      },
+      "lastTime": 7083.0,
+      "ended": true,
+      "timeMeaning": "SIMPLE iteration index",
+      "boundingKLast200": 0,
+      "boundingOmegaLast200": 0,
+      "residuals": {
+        "Ux": {
+          "last": 4.84497325214e-06,
+          "maxLast200": 5.44732631458e-06,
+          "medianLast200": 5.1200651082349995e-06
+        },
+        "Uy": {
+          "last": 0.000102718245914,
+          "maxLast200": 0.000116692748764,
+          "medianLast200": 0.0001091778880185
+        },
+        "Uz": {
+          "last": 6.2547020132e-05,
+          "maxLast200": 6.93875799629e-05,
+          "medianLast200": 6.565220059025e-05
+        },
+        "p": {
+          "last": 0.000288577154679,
+          "maxLast200": 0.00033675674749,
+          "medianLast200": 0.0003013896905275
+        },
+        "k": {
+          "last": 1.16002527823e-05,
+          "maxLast200": 1.45055515266e-05,
+          "medianLast200": 1.305883879635e-05
+        },
+        "omega": {
+          "last": 3.04281881166e-08,
+          "maxLast200": 4.33644287518e-08,
+          "medianLast200": 3.6711419246049997e-08
+        }
+      },
+      "CdWindows": {
+        "200": {
+          "timeRange": [
+            6884.0,
+            7083.0
+          ],
+          "mean": 0.53116151435918,
+          "std": 0.0013083613975502487,
+          "range": 0.004940138022999974,
+          "halfWindowDriftFraction": 0.0027275720385500006
+        },
+        "400": {
+          "timeRange": [
+            6684.0,
+            7083.0
+          ],
+          "mean": 0.5320773289805475,
+          "std": 0.0017358838396314149,
+          "range": 0.005655855942999999,
+          "halfWindowDriftFraction": 0.003442411737866056
+        },
+        "800": {
+          "timeRange": [
+            6284.0,
+            7083.0
+          ],
+          "mean": 0.531963939945005,
+          "std": 0.0012824904414622084,
+          "range": 0.005655855942999999,
+          "halfWindowDriftFraction": 0.0004263034654348918
+        }
+      },
+      "wallSeconds": [
+        951.16
+      ],
+      "yPlus": [
+        30.8387196997,
+        367.033999328,
+        170.521316613
+      ]
+    }
+  },
+  "supportingPhysicalTimeURANS": {
+    "exportedAsFilmField": false,
+    "purpose": "Independent short-window pressure-gradient/conservation and time-step check only; no completed long-time average is claimed.",
+    "dt0_1": {
+      "case": "urans-gauss-L12-dt0.1",
+      "window_s": [
+        80.0,
+        86.0
+      ],
+      "bodyForceMean_N": [
+        18205191.787343692,
+        391349.6679859376,
+        2684046.335300153
+      ],
+      "outerForceMean_N": [
+        -18397982.755846083,
+        -567800.6664903326,
+        -2480274.77683887
+      ],
+      "advectiveMomentumFluxMean_N": [
+        81284.12260894776,
+        -3380.9584783845553,
+        -387207.0193526638
+      ],
+      "volumeMomentumStorageMean_N": [
+        111302.70885416667,
+        180437.18446377307,
+        182572.40452167543
+      ],
+      "integratedMomentumResidual_N": [
+        -204.1370392766985,
+        605.2274809935479,
+        -863.0563697050093
+      ],
+      "momentumRelativeBodyForce": 5.833394433572768e-05,
+      "boundaryVolumeFluxMean_m3_s": {
+        "inlet": -718963200.0,
+        "outlet": 718963199.9997476,
+        "ground": 0.0,
+        "sides": 0.0,
+        "ceiling": 0.0
+      },
+      "massRelativeInlet": 3.5101388496518863e-13,
+      "method": "Trapezoid integrate actual native function-object outputs at physical times; include rho*(integral U dV_end - integral U dV_start)/window. Linear interpolation only at existing time interval endpoints.",
+      "quality": {
+        "acceptedForFilm": false
+      }
+    },
+    "dt0_05": {
+      "case": "urans-gauss-L12-dt0.05",
+      "window_s": [
+        80.0,
+        86.0
+      ],
+      "bodyForceMean_N": [
+        18220812.799494747,
+        349594.2049421067,
+        2681369.172557738
+      ],
+      "outerForceMean_N": [
+        -18322960.51901516,
+        -573637.3963901536,
+        -2443299.8293547495
+      ],
+      "advectiveMomentumFluxMean_N": [
+        80755.45428934098,
+        -3099.13628783037,
+        -387382.8634320153
+      ],
+      "volumeMomentumStorageMean_N": [
+        21456.78497721354,
+        228482.2807788468,
+        149484.74721748606
+      ],
+      "integratedMomentumResidual_N": [
+        64.51974614213759,
+        1339.9530429695442,
+        171.2269884593843
+      ],
+      "momentumRelativeBodyForce": 7.341812204467044e-05,
+      "boundaryVolumeFluxMean_m3_s": {
+        "inlet": -718963200.0,
+        "outlet": 718963200.0029297,
+        "ground": 0.0,
+        "sides": 0.0,
+        "ceiling": 0.0
+      },
+      "massRelativeInlet": 4.074878241334188e-12,
+      "method": "Trapezoid integrate actual native function-object outputs at physical times; include rho*(integral U dV_end - integral U dV_start)/window. Linear interpolation only at existing time interval endpoints.",
+      "quality": {
+        "acceptedForFilm": false
+      }
+    },
+    "integrationNote": "Boundary/volume monitors sampled at 1 s; 80/86 endpoints linearly interpolated within actual logged intervals; no higher precision claim."
+  },
+  "independentQualitativeReview": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\qa\\v7-cfd-qualitative-scope-review.md",
+    "SHA256": "cec80cce987f9665c5cd139cd93a9f86ab81a808b67b65c75276101c4a66213e",
+    "rootAcceptedScope": true
+  },
+  "displayRanges": {
+    "speed_m_s": [
+      0,
+      50
+    ],
+    "Cp": [
+      -3,
+      1.25
+    ],
+    "pointCpActualRange": [
+      -2.6381750106811523,
+      0.9920678734779358
+    ],
+    "maxDisplayedSpeed_m_s": 48.4249496
+  },
+  "narrationReview": {
+    "source": "research/cfd-narration-draft.json",
+    "s029": "Mean pressure sign and broad relative pattern supported.",
+    "s030": "At100/300/500m, native field supports side deflection and lower-speed wake; no exact wake dimensions are narrated.",
+    "s031": "Vertical native slice supports crown bypass and lower-speed downstream region.",
+    "s032": "120-degree design choice is literature context, not inferred from single CFD case. Subsequent structural loading explicitly independent.",
+    "quantitativePressureWakeOrCouplingClaims": false
+  }
+}

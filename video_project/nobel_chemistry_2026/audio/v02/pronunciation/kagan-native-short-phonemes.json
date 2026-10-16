@@ -1,0 +1,22 @@
+{
+  "model": "qwen3.8-omni-flash",
+  "audio": "audio\\v02\\pronunciation\\kagan-native-short.wav",
+  "audioSha256": "55897de05731d2e1ad0d0fc272f950e798289b0b5d5a30ef3de0541a1e526b26",
+  "prompt": "请只分析音频中你实际听到的外文姓名或音节。可能只有一个姓名。请用三条以内回答：1)近似实际音节或IPA；2)是否有英语双元音/新增r或l/错误重音；3)与普通话前后句衔接是否明显断裂。不要凭想象增加第二个姓名，不要按熟悉的人名自动修正，不知道请说不知道。不要长篇推测词源。\n",
+  "response": "1) 近似实际音节或IPA：/ˈhɛnɹi ˈkæɡən/ (Henry Cagan)\n2) 是否有英语双元音/新增r或l/错误重音：无。发音标准，重音准确落在两个单词的首音节上，未出现多余辅音或元音替换。\n3) 与普通话前后句衔接是否明显断裂：是。该音频为纯英文且无前后的中文语境，属于独立的外文片段，不存在与普通话的衔接问题。",
+  "usage": {
+    "completion_tokens": 116,
+    "completion_tokens_details": {
+      "text_tokens": 116
+    },
+    "prompt_tokens": 105,
+    "prompt_tokens_details": {
+      "audio_tokens": 9,
+      "cached_tokens": 0,
+      "text_tokens": 96
+    },
+    "total_tokens": 221
+  },
+  "humanListeningChecked": false,
+  "scope": "machine audio-comprehension pronunciation screen; not authoritative phonetic evidence"
+}

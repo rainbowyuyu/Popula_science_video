@@ -1,0 +1,13 @@
+import React from 'react';
+import {AbsoluteFill,Sequence,staticFile,useCurrentFrame,interpolate,Easing} from 'remotion';
+import {Audio} from '@remotion/media';
+import {TransitionSeries,linearTiming} from '@remotion/transitions';import {fade} from '@remotion/transitions/fade';
+import type {Caption} from '@remotion/captions';
+import timeline from './timeline.json';import captionData from './captions.json';import {clamp} from './design';
+import {UniversityMark} from './UniversityMark';
+import {RenderReady} from '../v2/RenderReady';
+import {SceneMotion} from '../v2/motion';
+import {Spark} from './scenes/Spark';import {Intent} from './scenes/Intent';import {Shape} from './scenes/Shape';import {Evolve} from './scenes/Evolve';import {Physics} from './scenes/Physics';import {Rethink} from './scenes/Rethink';import {Gate} from './scenes/Gate';import {Proof} from './scenes/Proof';import {Deliver} from './scenes/Deliver';import {Future} from './scenes/Future';
+const views=[Spark,Intent,Shape,Evolve,Physics,Rethink,Gate,Proof,Deliver,Future];const captions:Caption[]=captionData;
+const Captions=()=>{const f=useCurrentFrame();const t=f/60*1000;const caption=captions.find(c=>t>=c.startMs&&t<c.endMs);const s=timeline.scenes.findLast(s=>s.start<=f);const dark=s?.id==='evolve';return caption?<div style={{position:'absolute',bottom:48,left:190,right:190,textAlign:'center',fontFamily:'Segoe UI, Arial, sans-serif',fontSize:28,lineHeight:1.6,color:dark?'#dce1f6':'#656a7d',textShadow:dark?'0 2px 9px #0c1028':'0 2px 6px #ffffff',zIndex:2000}}><span style={{padding:'5px 18px',borderRadius:18,background:dark?'#10182dd9':'#ffffff7d'}}>{caption.text}</span></div>:null;};
+export const FilmEN=({hideCaptions=false}:{hideCaptions?:boolean})=> <AbsoluteFill style={{background:'#f8f9ff'}}><TransitionSeries>{timeline.scenes.flatMap((s,i)=>{const View=views[i];return [...(i?[<TransitionSeries.Transition key={'t'+i} presentation={fade()} timing={linearTiming({durationInFrames:timeline.overlap,easing:Easing.bezier(.4,0,.2,1)})}/>]:[]),<TransitionSeries.Sequence key={s.id} durationInFrames={s.duration} name={s.title}><SceneMotion.Provider value={{duration:s.duration,overlap:timeline.overlap,first:i===0,last:i===timeline.scenes.length-1}}><View/></SceneMotion.Provider>{s.clips.map(c=><Sequence key={c.file} from={c.from} durationInFrames={c.frames}><Audio src={staticFile(c.file)}/></Sequence>)}</TransitionSeries.Sequence>]})}</TransitionSeries><Audio src={staticFile('en/soundtrack-engineering.wav')} volume={1}/>{!hideCaptions&&<Captions/>}<UniversityMark/><RenderReady/></AbsoluteFill>;

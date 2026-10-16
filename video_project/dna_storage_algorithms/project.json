@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "dna_storage_algorithms",
+  "title": "DNA存储：把文件写进分子",
+  "category": "computer-science",
+  "status": "source-library",
+  "currentVersion": "V6 source; V5 selected delivery",
+  "workbench": {
+    "title": "DNA存储：把文件写进分子",
+    "seriesId": "rainbow-science",
+    "episode": 5,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "v3/src/indexV6.tsx",
+    "v3/scripts/render_v6.mjs",
+    "v3/scripts/render_v5.mjs"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render_dna.mjs",
+        "stills": "node scripts/render_dna.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "v3",
+      "scripts": {
+        "check": "tsc --noEmit -p tsconfig.json",
+        "stills": "node scripts/render.mjs --stills",
+        "render": "node scripts/render.mjs --audio",
+        "qa:motion": "node scripts/qa_camera.mjs",
+        "stills:v4": "node scripts/render_v4.mjs --stills",
+        "render:v4": "node scripts/render_v4.mjs --audio",
+        "qa:camera:v4": "node scripts/qa_camera_v4.mjs",
+        "qa:motion:v4": "node scripts/qa_motion_state_v4.mjs",
+        "stills:v5": "node scripts/render_v5.mjs --stills",
+        "render:v5": "node scripts/render_v5.mjs --audio",
+        "qa:camera:v5": "node scripts/qa_camera_v5.mjs",
+        "qa:motion:v5": "node scripts/qa_motion_state_v5.mjs",
+        "qa:timeline:v5": "node scripts/qa_timeline_v5.mjs",
+        "stills:v6": "node scripts/render_v6.mjs --stills",
+        "render:v6": "node scripts/render_v6.mjs --audio",
+        "qa:camera:v6": "node scripts/qa_camera_v6.mjs",
+        "qa:motion:v6": "node scripts/qa_motion_state_v6.mjs",
+        "qa:timeline:v6": "node scripts/qa_timeline_v6.mjs"
+      },
+      "lockfile": false
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "v3/src",
+      "v3/scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "v3/delivery/DNA存储_连续数据之旅_V5_1080p.mp4"
+    ],
+    "covers": [
+      "v3/cover-v5/covers/DNA存储_V5封面_16x9.png",
+      "v3/cover-v5/covers/DNA存储_V5封面_3x4.png",
+      "v3/cover-v5/covers/DNA存储_V5封面_4x3.png",
+      "v3/cover-v5/covers/DNA存储_V5封面_9x16.png"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Blender (configure BLENDER_PATH; original D:/blender/blender.exe)"
+  ],
+  "notes": [
+    "v3 子工程内持续迭代到 V6；顶层 npm 仍指向旧版，v3 README 首段也只描述 V3。"
+  ],
+  "originalMetadata": {}
+}

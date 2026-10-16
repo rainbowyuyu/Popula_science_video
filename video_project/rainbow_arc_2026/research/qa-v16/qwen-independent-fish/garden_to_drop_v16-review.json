@@ -1,0 +1,221 @@
+{
+  "status": "pass",
+  "providerSHA256": "bc712a0d96deba8cd11d485b61b65956e1c154716b227a26b993777d519eece8",
+  "reviewedUTC": "2026-10-12T17:00:55.927724+00:00",
+  "reviewer": "/root/v14_fish independent visual QA",
+  "scope": "Actual contact plus native-frame dense sheets every 5 frames, and separately opened full-resolution 1920x1080 frames. All provider video frames were strictly decoded and all extracted JPEG hashes were bound to provenance.",
+  "inspectedFrames": [
+    1,
+    2,
+    6,
+    11,
+    16,
+    21,
+    26,
+    31,
+    36,
+    41,
+    46,
+    51,
+    56,
+    61,
+    66,
+    71,
+    76,
+    81,
+    86,
+    91,
+    96,
+    101,
+    106,
+    111,
+    116,
+    121,
+    126,
+    131,
+    136,
+    141,
+    146,
+    151,
+    156,
+    161,
+    166,
+    171,
+    176,
+    181,
+    186,
+    191,
+    196,
+    201,
+    206,
+    211,
+    216,
+    221,
+    226,
+    231,
+    236,
+    241,
+    246,
+    251,
+    256,
+    261,
+    266,
+    271,
+    276,
+    281,
+    286,
+    291,
+    296,
+    299,
+    300
+  ],
+  "nativeFrameNumbering": "One-based: frame_0001.jpg is decoded frame index 0.",
+  "individualFullResolutionFrames": [
+    61,
+    156,
+    226
+  ],
+  "denseSheetsActuallyViewed": [
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-01.jpg",
+      "nativeFrameNumbers": [
+        1,
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-02.jpg",
+      "nativeFrameNumbers": [
+        51,
+        56,
+        61,
+        66,
+        71,
+        76,
+        81,
+        86,
+        91,
+        96
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-03.jpg",
+      "nativeFrameNumbers": [
+        101,
+        106,
+        111,
+        116,
+        121,
+        126,
+        131,
+        136,
+        141,
+        146
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-04.jpg",
+      "nativeFrameNumbers": [
+        151,
+        156,
+        161,
+        166,
+        171,
+        176,
+        181,
+        186,
+        191,
+        196
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-05.jpg",
+      "nativeFrameNumbers": [
+        201,
+        206,
+        211,
+        216,
+        221,
+        226,
+        231,
+        236,
+        241,
+        246
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-06.jpg",
+      "nativeFrameNumbers": [
+        251,
+        256,
+        261,
+        266,
+        271,
+        276,
+        281,
+        286,
+        291,
+        296
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\garden_to_drop_v16-dense-07.jpg",
+      "nativeFrameNumbers": [
+        300
+      ]
+    }
+  ],
+  "normalSpeedPlaybackReviewed": false,
+  "everyFrameManuallyReviewed": false,
+  "audioListened": false,
+  "providerAudioUsed": false,
+  "technicalChecks": {
+    "strictFullVideoDecodeExitCode": 0,
+    "frameCount": 300,
+    "allExtractedFrameHashesMatchProvenance": true,
+    "adjacentIdenticalJPEGHashes": 0,
+    "fps": "30/1",
+    "width": 1920,
+    "height": 1080
+  },
+  "findings": [
+    {
+      "frames": [
+        11,
+        31,
+        61,
+        71,
+        96
+      ],
+      "finding": "Focus transfers from the garden/fish to a centered transparent spherical drop. The fish becomes defocused and leaves the left edge through camera movement rather than duplication."
+    },
+    {
+      "frames": [
+        101,
+        156,
+        191,
+        226,
+        300
+      ],
+      "finding": "A single drop remains round with stable surface highlights while the garden reflection retreats into the dark optical background."
+    },
+    {
+      "frames": [
+        191,
+        226,
+        271,
+        300
+      ],
+      "finding": "Only the incoming white ray stub extends leftward to the authored entry point. No extra internal bounce or fabricated optical angle is introduced in the sampled bridge."
+    }
+  ],
+  "limits": "This is a source-clip sampled visual decision. It does not certify every unsampled frame, normal-speed perceived motion, listening, final composite subtitles/logo, or the complete encoded film. Generated transitions are artistic and do not replace deterministic optics validation."
+}

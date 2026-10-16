@@ -1,0 +1,90 @@
+{
+  "version": "V16",
+  "schema": "rainbow.v16.optical-static-spot-review/1",
+  "reviewer": "/root/v14_optical",
+  "reviewedUTC": "2026-10-12T16:48:02.978030+00:00",
+  "status": "pass-within-five-inspected-clean-stills",
+  "images": [
+    {
+      "file": "output-v16/work/endpoints-review/frame-03570.png",
+      "sha256": "07d6b810e8835f8bb584c0beafb4cfdbeec19f599c20c5e4294dc5a2f2efecae",
+      "frame": 3570,
+      "actuallyViewed": true,
+      "finding": "Primary internal-reflection reveal, clear common white incoming beam and preserved glass highlights."
+    },
+    {
+      "file": "output-v16/work/endpoints-final/frame-04990.png",
+      "sha256": "11a2171001983a898846c93903a646c7c9a4c3170d0c37a2720cf55e9016ea5c",
+      "frame": 4990,
+      "actuallyViewed": true,
+      "finding": "Complete primary path with spectral outgoing beam and subtle angle/ray sampling; reflected segment inspected at enlarged resolution."
+    },
+    {
+      "file": "output-v16/work/endpoints-final/frame-08730.png",
+      "sha256": "670c8d8cbbf7d8c068152da4864afc5c75ff12e15fdfd7b424fa8c0022ff4446",
+      "frame": 8730,
+      "actuallyViewed": true,
+      "finding": "Secondary path begins its reveal after the planned incoming generated transition; glass contour and white entry are established."
+    },
+    {
+      "file": "output-v16/work/endpoints-final/frame-08900.png",
+      "sha256": "7cbb428129cacedb83212fc995958532ee8def1c2c4b71d7bf313089e29dfb42",
+      "frame": 8900,
+      "actuallyViewed": true,
+      "finding": "Two internal reflections and the upward-left outgoing secondary spectrum are visible; no independent floating transition panel."
+    },
+    {
+      "file": "output-v16/work/endpoints-review/frame-08830.png",
+      "sha256": "b2fd5a253c94966e0290764eade8886390d0adce37119fd559d7af8a10f840e3",
+      "frame": 8830,
+      "actuallyViewed": true,
+      "finding": "Secondary two-bounce triangular path and the outgoing spread are coherent; the entering white beam and exiting spectrum cross outside the sphere without a disconnected panel."
+    }
+  ],
+  "enlargedCrop": {
+    "file": "research/qa-v16/optical-spot-review-v16/frame-04990-reflected-crossing-crop.png",
+    "sha256": "8c172402e86edb222734a2394258e0d02c7f27bd1a430685920b89ac627c969e",
+    "sourceFrame": 4990,
+    "sourceRectangle": [
+      1030,
+      365,
+      1185,
+      605
+    ],
+    "scale": 4,
+    "actuallyViewed": true,
+    "finding": "Red/orange and violet reflected-ray boundary positions exchange sides along the internal segment. This resolves the crossing visually while the analytic/source-mesh audit independently checks the exact contacts."
+  },
+  "sourceContext": {
+    "files": [
+      {
+        "file": "src/optics.ts",
+        "sha256": "e5fba627c3c80a011c1e96179ef44957085ab3787328e18772be3f1ce93818ed"
+      },
+      {
+        "file": "src/SpectralRibbonV15.ts",
+        "sha256": "bd2df062d09ee644d1e268abd04f1283496b0b276db52d4b14507d09fd82c963"
+      },
+      {
+        "file": "src/MacroLookV15.ts",
+        "sha256": "308b4a1c47e3263021a918d37c355c5e2e860f09853a0d7159842b983950993f"
+      },
+      {
+        "file": "src/WorldV10.ts",
+        "sha256": "d055020750ca781a768c14ff19f93a201c697b21a67fc6cbff8b3fde20728830"
+      }
+    ],
+    "note": "Current source context is recorded for traceability; screenshot byte hashes do not themselves establish a full renderer/source-bundle binding."
+  },
+  "blockingFindingsWithinInspectedScope": [],
+  "limits": [
+    "Only the five exact clean endpoint images and the stated crop were opened; no surrounding movie playback was performed.",
+    "All seven individual interface points are not separately resolved in the full-size endpoint screenshots; per-wavelength registration is established by the independent numerical source-mesh check.",
+    "These clean images omit final subtitles and branding, so they do not certify final text/logo occlusion.",
+    "No generated Qwen interior frames, handoff continuity or full-film GPU review is claimed.",
+    "No normal-speed motion or human audio listening was performed."
+  ],
+  "humanNormalSpeedPlayback": false,
+  "humanAudioListening": false,
+  "wholeFilmApproval": false
+}

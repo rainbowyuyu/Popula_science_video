@@ -1,0 +1,88 @@
+{
+  "recordedAtUTC": "2026-10-09T10:26:12.423892+00:00",
+  "input": "C:\\Users\\zju\\Downloads\\7de1922b76fe33023854\\mod2.EDB",
+  "bytes": 89149278,
+  "sha256": "3f5dc1cdddc0da9c339bc33f0c558ded7535722d22d7dfc58b9a4f9e74c03754",
+  "readOnly": true,
+  "sourceCopiedByThisScript": false,
+  "EDBExecuted": false,
+  "downloadedBinaryExecuted": false,
+  "sourceUnchangedSHA256SizeMtime": true,
+  "header": {
+    "software": "ETABS",
+    "formatMarker": "9.20",
+    "versionMarker": "9.2.0"
+  },
+  "projectAssociation": "Shanghai Center project association confirmed by strong internal history evidence",
+  "solverReady": false,
+  "originalLuOpenSeesInput": false,
+  "asBuiltOrFinalDesignModelVerified": false,
+  "modelCompletenessVerified": false,
+  "authorAuthenticationVerified": false,
+  "historyCount": 544,
+  "historyVersionCounts": {
+    "9.5.0": 482,
+    "9.6.0": 57,
+    "9.7.1": 2,
+    "9.2.0": 3
+  },
+  "historyFirst": {
+    "offset": 89059186,
+    "lengthBytes": 195,
+    "version": "9.5.0",
+    "mode": "Nonlinear",
+    "text": "ETABS Nonlinear 9.5.0 File saved as [project path]\\28571.00-Shanghai center\\Analysis\\Etabs\\2009 Jan 27 New core layout_100%DD\\W Finwall\\REV23\\RD\\050609-DD-REV23-RD-DLB.EDB at 5/6/2009 2:24:56 PM"
+  },
+  "historyLast": {
+    "offset": 89149185,
+    "lengthBytes": 89,
+    "version": "9.2.0",
+    "mode": "Nonlinear I",
+    "text": "ETABS Nonlinear I 9.2.0 File saved as [project path]\\上海中心\\etabs9.2\\mod2.EDB at 2010/11/7 22:11:38"
+  },
+  "historyContainsShanghaiProject": 357,
+  "designStageEvidence": "2009 core layout / 100% DD / revision history; last visible save 2010-11-07 after text import into ETABS 9.2.0",
+  "levelCandidates": {
+    "officialSchemaParsed": false,
+    "classification": "visible labels with locally consistent raw scalar pairs",
+    "count": 140,
+    "first": {
+      "offset": 169664,
+      "label": "Z9_C18",
+      "rawFlag": 0,
+      "rawNumber1": 2200.0,
+      "rawNumber2": 632000.0
+    },
+    "last": {
+      "offset": 340173,
+      "label": "BASE",
+      "rawFlag": 0,
+      "rawNumber1": 0.0,
+      "rawNumber2": -14000.0
+    },
+    "uniqueLabels": 140,
+    "adjacentDifferenceEqualsFirstScalarCount": 139,
+    "adjacentPairCount": 139,
+    "maxResidualRaw": 0.0,
+    "millimetreInterpretation": "Plausible: top raw 632000 maps to 632 m, but unit and official story tables require supported ETABS export",
+    "notActualOccupiedFloorCount": true
+  },
+  "unitTokenSearchFirstOffsets": {
+    "N, mm": -1,
+    "kN, m": -1,
+    "N-mm": -1,
+    "kN-m": -1,
+    "KN-M": -1,
+    "Units": -1,
+    "UNITS": -1
+  },
+  "unitVerified": false,
+  "nodeCount": null,
+  "elementCount": null,
+  "loadCasesVerified": false,
+  "warnings": [
+    "Header is 9.2.0; history also includes 9.5.0/9.6.0/9.7.1 and an Educational 9.2.0 text import. Audit conversion warnings in a supported ETABS workflow.",
+    "Save paths establish project association, not author authentication, as-built status, completeness or solver validity.",
+    "Do not feed inferred numeric records or raw EDB into the verified solver pipeline."
+  ]
+}

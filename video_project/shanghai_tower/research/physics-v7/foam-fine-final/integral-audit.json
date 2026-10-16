@@ -1,0 +1,36 @@
+{
+  "case": "steady-gauss-pressure-L9-final-integrals",
+  "equation": "F_body + F_outer + rho * sum(phi U) = 0 for converged steady flow; URANS additionally needs volume momentum storage",
+  "results": [
+    {
+      "timeOrIteration": 2050.0,
+      "inletVolumeFlux_m3_s": -718963200.0,
+      "netVolumeFlux_m3_s": 16.743000030517578,
+      "relativeMassImbalance": 2.328770099849002e-08,
+      "bodyForce_N": [
+        18146176.83512,
+        -604285.523661,
+        2809046.825652
+      ],
+      "outerForce_N": [
+        -18440718.53398,
+        804299.4927704,
+        -2628932.755582
+      ],
+      "advectiveMomentumFlux_N": [
+        169952.81275205614,
+        -171206.45402040254,
+        -163967.30095726752
+      ],
+      "steadyMomentumResidual_N": [
+        -124588.88610794468,
+        28807.51508899752,
+        16146.769112732378
+      ],
+      "steadyMomentumImbalanceRelativeBodyForce": 0.0070155447892847325
+    }
+  ],
+  "quality": {
+    "acceptedForFilm": false
+  }
+}

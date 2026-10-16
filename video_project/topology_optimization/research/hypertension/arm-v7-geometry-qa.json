@@ -1,0 +1,298 @@
+{
+  "createdAt": "2026-10-07T11:23:22.534Z",
+  "sourceHash": "090cc9b00dfa2db4b52977b1b6af01ca8cb7eba6f6300ea39403946ffbc03ed5",
+  "priorSourceHash": "316a4f9809f5bee71a93dd65de75909933c19b5360fedd30055eb4e1235a7adc",
+  "scope": "Production measurement builders + CameraPath via cameraAt, real measurement mesh bounds and transform/radius data; all 9671 camera/frustum positions checked. No GPU pixels or subjective anatomy acceptance are claimed. Shadow influence check uses each visible caster bounding box separately as a conservative directional extrusion bound, not a shadow-map pixel comparison.",
+  "geometry": {
+    "upperLength": 1.2345849504995599,
+    "foreLength": 1.0552369402176935,
+    "forearmToUpper": 0.8547301178349086,
+    "palmLength": 0.52,
+    "elbowAngleDegrees": 105.9476328665301,
+    "cuffAxisAlignment": 1.0000000000000002,
+    "cuffCenterDistanceFromUpperAxis": 1.2328991072296329e-15,
+    "cuffElbowGap": 0.14710473267484597,
+    "cuffRadialGap": 0.0040000000000000036,
+    "taper": {
+      "elbowRadius": 0.19,
+      "wristRadius": 0.135
+    },
+    "contacts": [
+      {
+        "at": "elbow",
+        "center": [
+          11.18,
+          3.03,
+          -0.08000000000000002
+        ],
+        "ringBottom": 2.84025825233933,
+        "supportTop": 2.8400000008940696,
+        "verticalGap": 0.0002582514452602602,
+        "insidePadXZ": true
+      },
+      {
+        "at": "midpoint",
+        "center": [
+          11.7,
+          3.0025,
+          0.004999999999999977
+        ],
+        "ringBottom": 2.840220873711269,
+        "supportTop": 2.8400000008940696,
+        "verticalGap": 0.00022087281719951335,
+        "insidePadXZ": true
+      },
+      {
+        "at": "wrist",
+        "center": [
+          12.22,
+          2.975,
+          0.08999999999999997
+        ],
+        "ringBottom": 2.840183495083208,
+        "supportTop": 2.8400000008940696,
+        "verticalGap": 0.00018349418913832238,
+        "insidePadXZ": true
+      }
+    ],
+    "tubeEnds": {
+      "cuff": 2.7755575615628914e-17,
+      "monitor": 8.881784197001252e-16
+    },
+    "minArmClearance": 0.2140396904681995,
+    "minTableClearance": 0.023732351716311495,
+    "handWristConnectionError": 0,
+    "handAxisAlignment": 0.9999999999999999,
+    "padWithinTableXZ": true
+  },
+  "geometryPassed": true,
+  "sourceStable": true,
+  "projectionSamples": [
+    {
+      "frame": 8665,
+      "points": {
+        "shoulder": {
+          "x": 836.7972265882398,
+          "y": 382.1950065609044,
+          "inFrustum": true
+        },
+        "elbow": {
+          "x": 865.265971049359,
+          "y": 553.0191038530044,
+          "inFrustum": true
+        },
+        "wrist": {
+          "x": 1013.807070079084,
+          "y": 565.6561761458223,
+          "inFrustum": true
+        },
+        "palmTip": {
+          "x": 1080.222932679954,
+          "y": 573.5028490978528,
+          "inFrustum": true
+        },
+        "cuff": {
+          "x": 855.2100672188373,
+          "y": 492.67957266464884,
+          "inFrustum": true
+        }
+      }
+    },
+    {
+      "frame": 8755,
+      "points": {
+        "shoulder": {
+          "x": 831.8777370496115,
+          "y": 349.73324964865185,
+          "inFrustum": true
+        },
+        "elbow": {
+          "x": 879.0416232876032,
+          "y": 574.6919174042804,
+          "inFrustum": true
+        },
+        "wrist": {
+          "x": 1078.612055524584,
+          "y": 587.3800698693557,
+          "inFrustum": true
+        },
+        "palmTip": {
+          "x": 1166.5359887603443,
+          "y": 595.8009079258242,
+          "inFrustum": true
+        },
+        "cuff": {
+          "x": 862.4044662417899,
+          "y": 495.337288623658,
+          "inFrustum": true
+        }
+      }
+    },
+    {
+      "frame": 8840,
+      "points": {
+        "shoulder": {
+          "x": 823.4126652999184,
+          "y": 308.8834065843439,
+          "inFrustum": true
+        },
+        "elbow": {
+          "x": 897.1303885779304,
+          "y": 616.0203454461221,
+          "inFrustum": true
+        },
+        "wrist": {
+          "x": 1167.667117780359,
+          "y": 627.1877865880163,
+          "inFrustum": true
+        },
+        "palmTip": {
+          "x": 1284.5403677839531,
+          "y": 635.7590852723679,
+          "inFrustum": true
+        },
+        "cuff": {
+          "x": 871.205634305245,
+          "y": 508.0076544134974,
+          "inFrustum": true
+        }
+      }
+    },
+    {
+      "frame": 8929,
+      "points": {
+        "shoulder": {
+          "x": 791.8470045297387,
+          "y": 332.5418494250547,
+          "inFrustum": true
+        },
+        "elbow": {
+          "x": 849.9375846946517,
+          "y": 598.0554815376312,
+          "inFrustum": true
+        },
+        "wrist": {
+          "x": 1084.7426484895916,
+          "y": 611.7879132531693,
+          "inFrustum": true
+        },
+        "palmTip": {
+          "x": 1187.8447372588535,
+          "y": 621.1101282526026,
+          "inFrustum": true
+        },
+        "cuff": {
+          "x": 829.4826349639969,
+          "y": 504.56238881505567,
+          "inFrustum": true
+        }
+      }
+    },
+    {
+      "frame": 9000,
+      "points": {
+        "shoulder": {
+          "x": 770.0717361039434,
+          "y": 367.7868119970036,
+          "inFrustum": true
+        },
+        "elbow": {
+          "x": 806.0907158901877,
+          "y": 569.9493146892611,
+          "inFrustum": true
+        },
+        "wrist": {
+          "x": 980.972418990601,
+          "y": 585.1588528433529,
+          "inFrustum": true
+        },
+        "palmTip": {
+          "x": 1059.153344451657,
+          "y": 594.5101014683445,
+          "inFrustum": true
+        },
+        "cuff": {
+          "x": 793.3959446228596,
+          "y": 498.6978037986356,
+          "inFrustum": true
+        }
+      }
+    }
+  ],
+  "visibilityScope": {
+    "proposedReplacement": [
+      8000,
+      9670
+    ],
+    "sourceChangeConfinedToBuildMeasure": true,
+    "firstCurrentStageFrustumIntersection": 8267,
+    "firstPriorStageFrustumIntersection": 8267,
+    "firstCurrentShadowVolumeFrustumIntersection": 8270,
+    "firstPriorShadowVolumeFrustumIntersection": 8270,
+    "firstChangedCameraFrame": 8534,
+    "maxCameraDifferenceBefore8000": 0,
+    "pre8000PotentialInfluences": [],
+    "pre8000PotentialInfluenceCount": 0,
+    "stageBoxes": {
+      "current": {
+        "min": [
+          9.279999976158143,
+          -0.30330074489867376,
+          -1.2508388419900656
+        ],
+        "max": [
+          16.176000027656556,
+          5.846000027656555,
+          2.0800000119209288
+        ]
+      },
+      "prior": {
+        "min": [
+          9.279999976158143,
+          -0.30330074489867376,
+          -1.2508388419900656
+        ],
+        "max": [
+          16.439999885559082,
+          5.846000027656555,
+          2.0800000119209288
+        ]
+      }
+    },
+    "changedShadowCasters": {
+      "current": 19,
+      "prior": 17,
+      "matching": "Exact mesh position/index bytes + world matrix + material side; unchanged casters removed because camera/light are unchanged before8000",
+      "separation": "Each swept caster convex vertex set checked against every camera-frustum plane with 0.15 world-unit dilation for shadow bias and PCF fringe; no intersection means all expanded vertices lie outside at least one plane"
+    },
+    "shadowSweptBoxes": {
+      "current": {
+        "min": [
+          9.279999976158143,
+          -0.34,
+          -5.638400004059077
+        ],
+        "max": [
+          19.68822664416684,
+          5.839200002551079,
+          2.0800000119209288
+        ]
+      },
+      "prior": {
+        "min": [
+          9.279999976158143,
+          -0.34,
+          -5.638400004059077
+        ],
+        "max": [
+          19.68822664416684,
+          5.839200002551079,
+          2.0800000119209288
+        ]
+      }
+    },
+    "lightingAssumption": "Production single shadow-casting directional key offset(-5,8,6), fixed floor y=-.34; swept boxes conservatively include geometry and shadows on any lower surface down to floor. Fill/hemisphere and precomputed RoomEnvironment do not cast dynamic scene shadows/reflections.",
+    "safeForReplacement": true
+  },
+  "passed": true
+}

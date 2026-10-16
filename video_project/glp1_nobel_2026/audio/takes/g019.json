@@ -1,0 +1,72 @@
+{
+  "id": "g019",
+  "text": "GLP-1与受体结合，细胞里的传信过程得到加强。血糖升高时，细胞收到这条消息，就更容易释放胰岛素。",
+  "ttsText": "胰高血糖素样肽一与受体结合，细胞里的传信过程得到加强。血糖升高时，细胞收到这条消息，就更容易释放胰岛素。",
+  "signature": "8032f2d67af575ea5e22a7e27406c07479f6352a01be0c25930550ab901794a8",
+  "raw": "audio/raw/g019-8032f2d67a.wav",
+  "processed": "public/voice/g019.wav",
+  "rawDuration": 10.32,
+  "duration": 10.32,
+  "sha256": "2d6b44625b153ea999870d646864bcd8f87c00af5e7d858723437cca0dea1356",
+  "seed": 1591485453,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g005",
+    "g013",
+    "g019"
+  ],
+  "rawEndpointDB": -96.88364000929964,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "90a6341d8b140588c29a11fd4f02e478a0e96a3633b89494984a17ea73f8eecc",
+    "outputSha256": "2d6b44625b153ea999870d646864bcd8f87c00af5e7d858723437cca0dea1356",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.9467642907275966,
+    "input": {
+      "seconds": 10.32,
+      "peakDb": -7.4924112303061685,
+      "activeRmsDb": -22.620191058076074,
+      "quietFrameP10Db": -59.199252292531455
+    },
+    "output": {
+      "seconds": 10.32,
+      "peakDb": -4.613462683244606,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.313118676357035
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "clarity-v4",
+  "fullMasteredCandidate": "audio/candidates/clarity-v4/g019.wav",
+  "tailEdit": null,
+  "selectionBasis": "V4 text corrections, unprompted ASR complete wording, natural endpoint clearance; not subjective listening"
+}

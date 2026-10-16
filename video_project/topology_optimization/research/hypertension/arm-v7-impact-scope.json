@@ -1,0 +1,63 @@
+{
+  "createdAt": "2026-10-07T11:27:09.497752+00:00",
+  "passed": true,
+  "safeReplacementStart": 8267,
+  "safeReplacementStartMeaning": "Conservative earliest frame at which any V7 arm-related geometry, shadow, camera or annotation pixel may change; earlier frames are outside the evaluated influence bounds. The actual replacement starts at 8000, before this boundary.",
+  "recommendedReplacement": [
+    8000,
+    9670
+  ],
+  "framesChecked": 9671,
+  "potentialInfluenceBoundaries": {
+    "currentMeasurementStage": 8267,
+    "priorMeasurementStage": 8267,
+    "currentChangedShadowVolumes": 8270,
+    "priorChangedShadowVolumes": 8270,
+    "cameraPose": 8534,
+    "changedAnnotationCue": 8604
+  },
+  "checks": {
+    "geometryAuditPassed": true,
+    "sourceChangeConfinedToBuildMeasure": true,
+    "geometrySourceMatches": true,
+    "priorWorldSnapshotMatches": true,
+    "cameraSourceUnchanged": true,
+    "annotationsOnlyExpectedCueAndResolverChange": true,
+    "newAnnotationAnchorUsedOnlyByArmSupportAndResolver": true,
+    "allFramesChecked": true,
+    "cameraAuditPassed": true,
+    "annotationAuditPassed": true,
+    "annotationSourcesCurrent": true,
+    "cameraSourcesCurrent": true,
+    "noPre8000Influence": true,
+    "replacementCoversInfluence": true
+  },
+  "sourceHashes": {
+    "src/hypertension/World.ts": "090cc9b00dfa2db4b52977b1b6af01ca8cb7eba6f6300ea39403946ffbc03ed5",
+    "src/hypertension/CameraPath.ts": "7f102bef917cf1c43762b9626f0b481967be972bf0a506f0961a0ca438aab128",
+    "src/hypertension/VascularDetail.ts": "92d4738efb36db27be99ace290c8aba464d96cee7fc6f356a329d80e75cbbed3",
+    "src/hypertension/Annotations.ts": "886a6491d30a020ead0ffde8c61d93669a4caf6be6dc0e9bcefa430e5d7da210",
+    "src/hypertension/Film.tsx": "4a0332cff07715396ca8e5c0e2f76d3d1c417770b9a2948a775d881b41de277d",
+    "src/hypertension/timeline.json": "5487802be3ce7d7c4e672ef7d38d698a36416c54bbc1f9f1134cc4e9df191640",
+    "public/hypertension/physics.json": "b9ef46da1a7febaaff2287a283858cce5cecc715db69016673b9ffee2fb9958a",
+    "public/hypertension/models/human-atlas-hypertension.glb": "9a555d2f5bea5c30340e611cf133ccaaff330fa8a39cf2e82e0153add654c430"
+  },
+  "priorSnapshotHashes": {
+    "World": "316a4f9809f5bee71a93dd65de75909933c19b5360fedd30055eb4e1235a7adc",
+    "Annotations": "c899ef628ee501f076e02178beffbdf3ee7c89268a79e6db444c8c42149f95f7",
+    "CameraPath": "7f102bef917cf1c43762b9626f0b481967be972bf0a506f0961a0ca438aab128"
+  },
+  "evidence": {
+    "geometry": "research/hypertension/arm-v7-geometry-qa.json",
+    "camera": "research/hypertension/camera-v7-audit.json",
+    "annotations": "research/hypertension/annotations-v7-qa.json"
+  },
+  "method": [
+    "Exact before/current source comparison confines World changes to buildMeasure, leaves CameraPath unchanged, and isolates the two expected arm-support annotation edits.",
+    "Production before/current measurement builders and cameraAt evaluated at all 9671 timeline frames; stage bounds are conservatively frustum-tested for both versions.",
+    "Changed shadow casters identified by exact position/index bytes, world matrix and material side. Each caster bounding box is directionally swept to floor y=-0.34 and checked as a convex vertex set against each frustum plane, with 0.15 world-unit dilation for bias/PCF fringe.",
+    "Unchanged casters are removed only because both camera and directional-light transforms remain identical before frame 8000. Production fill/hemisphere lights and precomputed RoomEnvironment add no dynamic scene shadows or reflections.",
+    "Annotation source changes affect only arm-support, whose first integer active frame is 8604; current full-GLB production annotation audit also passes all 9671 frames."
+  ],
+  "limitations": "Conservative scene-state and frustum influence proof; no claim of encoded pixel equality, GPU execution, or complete playback inspection. Final rendered join and export inspection remain separate."
+}

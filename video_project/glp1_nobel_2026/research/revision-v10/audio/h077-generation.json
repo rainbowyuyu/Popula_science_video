@@ -1,0 +1,60 @@
+{
+  "id": "h077",
+  "version": "V18",
+  "ttsText": "如果突然嘴歪、说不清话、一侧胳膊没力，要立即拨打急救电话，幺二零。急症来时，不能等吃点药、睡一觉再看看。",
+  "model": "Qwen3-TTS-0.6B",
+  "reference": "D:\\python_project\\tts\\work\\clone-reference.wav",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "sampleRate": 48000,
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v10\\audio\\raw\\h077-v18.wav",
+  "rawSHA256": "712b0863705d10404a03d0a40dba573de7898410fb5180e82edc8e78eb186630",
+  "rawDurationSeconds": 10.08,
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v10\\audio\\voice\\h077.wav",
+  "processedSHA256": "e3f5a316a0741bbc0dbede8f04675cc4bb0471a0f9229f93017714aa8dabbc7c",
+  "processedDurationSeconds": 10.32,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "323dcf250e0feaaf7b0d720e1157e14953570dc5d9295b8c45b7db9558a69645",
+    "outputSha256": "e3f5a316a0741bbc0dbede8f04675cc4bb0471a0f9229f93017714aa8dabbc7c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.1236884527971327,
+    "input": {
+      "seconds": 10.32,
+      "peakDb": -6.566941156421028,
+      "activeRmsDb": -21.697775615233876,
+      "quietFrameP10Db": -65.51413306250757
+    },
+    "output": {
+      "seconds": 10.32,
+      "peakDb": -5.405023831156905,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -66.37037849258047
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

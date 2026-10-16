@@ -1,0 +1,82 @@
+{
+  "id": "h040",
+  "partIndex": 0,
+  "expected": "所以还要看吃了什么。",
+  "heard": "所以還要看吃了什麼",
+  "words": [
+    {
+      "text": "所以",
+      "start": 0.0,
+      "end": 0.52,
+      "probability": 0.9844481945037842
+    },
+    {
+      "text": "還",
+      "start": 0.52,
+      "end": 0.72,
+      "probability": 0.6155284643173218
+    },
+    {
+      "text": "要",
+      "start": 0.72,
+      "end": 0.84,
+      "probability": 0.9963213205337524
+    },
+    {
+      "text": "看",
+      "start": 0.84,
+      "end": 1.0,
+      "probability": 0.9981575608253479
+    },
+    {
+      "text": "吃",
+      "start": 1.0,
+      "end": 1.3,
+      "probability": 0.8600722551345825
+    },
+    {
+      "text": "了",
+      "start": 1.3,
+      "end": 1.42,
+      "probability": 0.9979467988014221
+    },
+    {
+      "text": "什麼",
+      "start": 1.42,
+      "end": 1.62,
+      "probability": 0.9548123478889465
+    }
+  ],
+  "sourceSHA256": "c3f51b403d5c39427ae9303e398ee6351b44e34a42b7d9d0b753d88f7a8b50e5",
+  "ratio": 0.8888888888888888,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "么",
+      "heard": "麽",
+      "end": 9
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 84480,
+    "seconds": 1.76,
+    "peakDBFS": -8.073878300630383,
+    "first20msDBFS": -63.08845515994552,
+    "last20msDBFS": -96.6251212032421,
+    "firstActiveMs": 210.0,
+    "lastActiveToEndMs": 80.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

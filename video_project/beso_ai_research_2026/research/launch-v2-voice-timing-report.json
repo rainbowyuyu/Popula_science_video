@@ -1,0 +1,270 @@
+{
+  "revision": "launch-v2-voice-final",
+  "source": "research/launch-v2-voice-plan.json",
+  "spokenUnits": 360,
+  "durationSeconds": 105,
+  "totalSpeechSeconds": 84.64,
+  "sampleRate": 48000,
+  "timeStretchApplied": false,
+  "oldTimelineModified": false,
+  "asr": {
+    "engine": "faster-whisper small CPU int8",
+    "completed": 17,
+    "flagged": 0,
+    "minimumRatio": 0.8571428571428571,
+    "note": "Literal ASR preserves homophone differences such as 贝索/被锁 and 缆绳/懒神; no subjective listening approval is asserted."
+  },
+  "scenes": [
+    {
+      "scene": "hero",
+      "windowSeconds": 7,
+      "clips": 1,
+      "speechSeconds": 4.56,
+      "interClipSeconds": 0.0,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 5.56,
+      "spareSeconds": 1.44,
+      "fits": true
+    },
+    {
+      "scene": "brief",
+      "windowSeconds": 12,
+      "clips": 2,
+      "speechSeconds": 9.76,
+      "interClipSeconds": 0.18,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 10.94,
+      "spareSeconds": 1.06,
+      "fits": true
+    },
+    {
+      "scene": "topology",
+      "windowSeconds": 15,
+      "clips": 2,
+      "speechSeconds": 12.16,
+      "interClipSeconds": 0.18,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 13.34,
+      "spareSeconds": 1.66,
+      "fits": true
+    },
+    {
+      "scene": "physics",
+      "windowSeconds": 18,
+      "clips": 3,
+      "speechSeconds": 13.44,
+      "interClipSeconds": 0.36,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 14.8,
+      "spareSeconds": 3.2,
+      "fits": true
+    },
+    {
+      "scene": "interaction",
+      "windowSeconds": 13,
+      "clips": 2,
+      "speechSeconds": 11.2,
+      "interClipSeconds": 0.18,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 12.38,
+      "spareSeconds": 0.62,
+      "fits": true
+    },
+    {
+      "scene": "toolchain",
+      "windowSeconds": 13,
+      "clips": 2,
+      "speechSeconds": 10.96,
+      "interClipSeconds": 0.18,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 12.14,
+      "spareSeconds": 0.86,
+      "fits": true
+    },
+    {
+      "scene": "proof",
+      "windowSeconds": 16,
+      "clips": 3,
+      "speechSeconds": 13.92,
+      "interClipSeconds": 0.36,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 15.28,
+      "spareSeconds": 0.72,
+      "fits": true
+    },
+    {
+      "scene": "close",
+      "windowSeconds": 11,
+      "clips": 2,
+      "speechSeconds": 8.64,
+      "interClipSeconds": 0.18,
+      "leadSeconds": 0.3,
+      "tailSeconds": 0.7,
+      "requiredSeconds": 9.82,
+      "spareSeconds": 1.18,
+      "fits": true
+    }
+  ],
+  "clips": [
+    {
+      "id": "v2-hero-0",
+      "scene": "hero",
+      "duration": 4.560041666666667,
+      "sha256": "39ca1d4112ea3d2a1a3b29530f8516168be7200dac479fbf023a6a8a61267282",
+      "path": "public/voice/v2-hero-0.wav",
+      "asrRatio": 0.9523809523809523,
+      "flags": []
+    },
+    {
+      "id": "v2-brief-0",
+      "scene": "brief",
+      "duration": 3.28,
+      "sha256": "b035fee033076b2d9eab58339f41af90e0f3f17325814fc169f760c5814a3124",
+      "path": "public/voice/v2-brief-0.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-brief-1",
+      "scene": "brief",
+      "duration": 6.480041666666667,
+      "sha256": "a606c8170195f864c9733f8fd85fca96425c83efa182726c2d48e9b05d8a5cfd",
+      "path": "public/voice/v2-brief-1.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-topology-0",
+      "scene": "topology",
+      "duration": 6.4,
+      "sha256": "11cf080216ff9019c5fd2d760373506ab1ef4ff68bed7745b57de6eb779b1044",
+      "path": "public/voice/v2-topology-0.wav",
+      "asrRatio": 0.9259259259259259,
+      "flags": []
+    },
+    {
+      "id": "v2-topology-1",
+      "scene": "topology",
+      "duration": 5.76,
+      "sha256": "8e5580fd2ed508cdef17f51c75a6de18789c43725e210ae6c2321f3dad8098fc",
+      "path": "public/voice/v2-topology-1.wav",
+      "asrRatio": 0.9565217391304348,
+      "flags": []
+    },
+    {
+      "id": "v2-physics-0",
+      "scene": "physics",
+      "duration": 3.68,
+      "sha256": "77ec051f6b7f9f01a0ed9af8d1d4ecea5e466d8c1dca1233eead88708cdb756e",
+      "path": "public/voice/v2-physics-0.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-physics-1",
+      "scene": "physics",
+      "duration": 5.52,
+      "sha256": "f54713a28523d2d334f7f5b7d82c406271d594b059736f3a35a0e0d6fb856707",
+      "path": "public/voice/v2-physics-1.wav",
+      "asrRatio": 0.8571428571428571,
+      "flags": []
+    },
+    {
+      "id": "v2-physics-2",
+      "scene": "physics",
+      "duration": 4.24,
+      "sha256": "88e1a7d6ec43399b96da796f501cf9536eb789913ff2c3529c6d1a0e59062c7f",
+      "path": "public/voice/v2-physics-2.wav",
+      "asrRatio": 0.9523809523809523,
+      "flags": []
+    },
+    {
+      "id": "v2-interaction-0",
+      "scene": "interaction",
+      "duration": 3.12,
+      "sha256": "37856b457fcc335d90b2dfcf0b62b70a2c82327bef46b7ea0cc8ef1d9378317c",
+      "path": "public/voice/v2-interaction-0.wav",
+      "asrRatio": 0.9333333333333333,
+      "flags": []
+    },
+    {
+      "id": "v2-interaction-1",
+      "scene": "interaction",
+      "duration": 8.08,
+      "sha256": "f97e87537efbe10bd57ca6491ab5bef8d44eddff2d8c621cc9d5fbe7903f934d",
+      "path": "public/voice/v2-interaction-1.wav",
+      "asrRatio": 0.9696969696969697,
+      "flags": []
+    },
+    {
+      "id": "v2-toolchain-0",
+      "scene": "toolchain",
+      "duration": 4.160041666666666,
+      "sha256": "d3d6e851d756c5f518b36f628a6fd30717e3538151d3df2e70dafd118366d619",
+      "path": "public/voice/v2-toolchain-0.wav",
+      "asrRatio": 0.8823529411764706,
+      "flags": []
+    },
+    {
+      "id": "v2-toolchain-1",
+      "scene": "toolchain",
+      "duration": 6.8,
+      "sha256": "fd8c04440aff94d89934380c4de9050f29ac0b1befed88e8b77b167e1c058148",
+      "path": "public/voice/v2-toolchain-1.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-proof-0",
+      "scene": "proof",
+      "duration": 3.12,
+      "sha256": "cad414530c91e12579e45a7fd34af849e520b44fc55945044e727ab41c3127e6",
+      "path": "public/voice/v2-proof-0.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-proof-1",
+      "scene": "proof",
+      "duration": 4.4,
+      "sha256": "1ab293b4453bde6820d7727e8ed77fd6eb7f6e4e293713f48a1067633497bf9c",
+      "path": "public/voice/v2-proof-1.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-proof-2",
+      "scene": "proof",
+      "duration": 6.4,
+      "sha256": "87cd9466677c83a40d23d11fc94c0aa6098db1fd4af3d04192d70769595c3b81",
+      "path": "public/voice/v2-proof-2.wav",
+      "asrRatio": 0.88,
+      "flags": []
+    },
+    {
+      "id": "v2-close-0",
+      "scene": "close",
+      "duration": 4.560041666666667,
+      "sha256": "a79006ffb845a2157f40952bbc5bbb1ea744a6683d57e52d5a96daa87f58ddfb",
+      "path": "public/voice/v2-close-0.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    },
+    {
+      "id": "v2-close-1",
+      "scene": "close",
+      "duration": 4.08,
+      "sha256": "d613cbd106d9b1a68a919c0cf4f890ab94df1c6e2b3282cd6808938d77158311",
+      "path": "public/voice/v2-close-1.wav",
+      "asrRatio": 1.0,
+      "flags": []
+    }
+  ]
+}

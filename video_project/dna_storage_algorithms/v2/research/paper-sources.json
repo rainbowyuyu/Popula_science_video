@@ -1,0 +1,114 @@
+{
+  "schema": "rainbow.dna-storage.paper-sources/v2",
+  "generatedAtUtc": "2026-10-10T20:47:07Z",
+  "project": "dna_storage_algorithms",
+  "scope": "Only v2/public/papers and source records; no film or scene source modified.",
+  "verification": {
+    "pdfHeader": "Each PDF begins with %PDF-",
+    "firstPageTitle": "First-page extracted text must contain the recorded title fragment.",
+    "render": "PyMuPDF pixmap, first page, 1500px wide PNG; images are rasterized originals, not re-typeset metadata.",
+    "minimumImageWidthPx": 1400
+  },
+  "papers": [
+    {
+      "id": "e-transformer",
+      "citation": "Dalla-Torre H, et al. Nucleotide Transformer: building and evaluating robust foundation models for human genomics. Nature Methods 22, 287–297 (2025 issue; published online 2024-11-28).",
+      "doi": "10.1038/s41592-024-02523-z",
+      "version": "publisher PDF (published online 2024-11-28; issue February 2025)",
+      "sourceUrl": "https://www.nature.com/articles/s41592-024-02523-z.pdf",
+      "retrievedAtUtc": "2026-10-10T20:41:11Z",
+      "license": "Publisher PDF; Springer Nature copyright and reuse terms apply. Included as an editorial/source reference.",
+      "pdf": {
+        "path": "public/papers/nucleotide-transformer-2024.pdf",
+        "bytes": 4690509,
+        "sha256": "a5510f4b4b0aaf4817140a3b279d69c3a1b163bd986c5282294b9c65c6644b02",
+        "pageCount": 20,
+        "headerValid": true,
+        "titleFragment": "Nucleotide Transformer",
+        "firstPageTitleVerified": true
+      },
+      "firstPageImage": {
+        "path": "public/papers/nucleotide-transformer-2024-01.png",
+        "bytes": 456644,
+        "sha256": "7de7289d6acc7a459a0ee83740a9f5bcbb67f22564a290e18cea7f773dc9ded4",
+        "width": 1500,
+        "height": 1993,
+        "renderedFrom": "public/papers/nucleotide-transformer-2024.pdf"
+      }
+    },
+    {
+      "id": "e-fountain-2017",
+      "citation": "Erlich Y, Zielinski D. DNA Fountain enables a robust and efficient storage architecture. Science 355(6328), 950–954 (2017).",
+      "doi": "10.1126/science.aaj2038",
+      "preprintDoi": "10.1101/074237",
+      "version": "bioRxiv preprint, posted 2016-12-04; version corresponding to the DNA Fountain work later published in Science",
+      "sourceUrl": "https://www.biorxiv.org/content/biorxiv/early/2016/12/04/074237.full.pdf",
+      "retrievedAtUtc": "2026-10-10T20:41:11Z",
+      "license": "CC BY-NC 4.0 as stated on the preprint first page / bioRxiv record. Non-commercial editorial reference.",
+      "pdf": {
+        "path": "public/papers/dna-fountain-2017-preprint.pdf",
+        "bytes": 4413894,
+        "sha256": "5e09af042a9c3450c9eac4023d543a76741c90a0dbf400634dd1c7dfc207549b",
+        "pageCount": 53,
+        "headerValid": true,
+        "titleFragment": "DNA Fountain enables a robust and efficient storage architecture",
+        "firstPageTitleVerified": true
+      },
+      "firstPageImage": {
+        "path": "public/papers/dna-fountain-preprint-01.png",
+        "bytes": 195268,
+        "sha256": "71a4182b9bc27daca54de718fb8302b61278f82a3831dd965940296539cf7b57",
+        "width": 1500,
+        "height": 1942,
+        "renderedFrom": "public/papers/dna-fountain-2017-preprint.pdf"
+      }
+    },
+    {
+      "id": "e-goldman-2013",
+      "citation": "Goldman N, et al. Towards practical, high-capacity, low-maintenance information storage in synthesized DNA. Nature 494, 77–80 (2013).",
+      "doi": "10.1038/nature11875",
+      "version": "PMC author-manuscript first-page capture; publication PDF endpoint challenged by PMC/Nature, so no PDF is claimed.",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3672958/",
+      "localArchive": "research/pmc-goldman.html",
+      "retrievedAtUtc": "2026-10-10T20:41:11Z",
+      "license": "PMC author manuscript page; retain PMC/NLM and publisher copyright notices. Screenshot is source evidence, not a re-typeset paper card.",
+      "firstPageImage": {
+        "path": "public/papers/goldman-2013-page.png",
+        "bytes": 1012402,
+        "sha256": "4bce889977c164cd0e1f699b343644d699e6d898b2a6c17707bca7bd9cc80596",
+        "width": 1500,
+        "height": 2000,
+        "renderedFrom": "research/pmc-goldman.html",
+        "captureMethod": "Chromium Page.captureScreenshot of the local archived PMC page",
+        "renderNote": "Chromium capture upscaled with Lanczos only; no text or metadata re-typeset."
+      }
+    }
+  ],
+  "excludedFiles": [
+    {
+      "path": "public/papers/goldman-2013.pdf",
+      "reason": "Removed: HTML/error payload, did not begin with %PDF-."
+    },
+    {
+      "path": "public/papers/test_1.bin",
+      "reason": "Removed: HTML/error payload, did not begin with %PDF-."
+    },
+    {
+      "path": "public/papers/test_2.bin",
+      "reason": "Removed: HTML/error payload, did not begin with %PDF-."
+    }
+  ],
+  "commands": [
+    "python v2/research/download_paper_assets.py",
+    "python -c \"import fitz; assert open(pdf,'rb').read(5)==b'%PDF-'; print(fitz.open(pdf)[0].get_text())\"",
+    "node v2/scripts/capture_paper.mjs (Goldman local PMC first-page capture)",
+    "PyMuPDF first-page render at 1500px width to *-01.png"
+  ],
+  "downloadScript": {
+    "path": "research/download_paper_assets.py",
+    "bytes": 2913,
+    "sha256": "40ef9d2d32b34e6b63842adab77c0fb53ac5f8fc14d5e6e30db00e6f46314303",
+    "verifyCommand": "python v2/research/download_paper_assets.py",
+    "downloadCommand": "python v2/research/download_paper_assets.py --download"
+  }
+}

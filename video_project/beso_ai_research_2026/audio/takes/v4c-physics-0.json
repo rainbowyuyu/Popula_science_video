@@ -1,0 +1,72 @@
+{
+  "id": "v4c-physics-0",
+  "text": "有了结构，还要看它在风浪里怎样运动。",
+  "ttsText": "有了结构，还要看它在风浪里怎样运动。",
+  "signature": "3bcba44bd18c5a73fc762d07a606824341a82058971af1a09c6f6e00b02e1664",
+  "raw": "audio/raw/v4c-physics-0-3bcba44bd1.wav",
+  "processed": "public/voice/v4c-physics-0.wav",
+  "rawDuration": 3.19025,
+  "duration": 3.43025,
+  "sha256": "63c5b7188e0df84415ee6cdbae37a42bc7c15cd8bd468507267e8f6356e46bc0",
+  "rawSHA256": "4575690ed0cea4223f7c1d7b69d250d6a2ae9bef248f4da2ebb53c6057ea5930",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "rawEndpointDB": -43.57115220355523,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "bacc18b8862f61166c58d9e74e751eb1d6f4154981dc51f6102ddb725329ad33",
+    "outputSha256": "63c5b7188e0df84415ee6cdbae37a42bc7c15cd8bd468507267e8f6356e46bc0",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 3.43025,
+      "peakDb": -9.208713280441788,
+      "activeRmsDb": -25.62651721800603,
+      "quietFrameP10Db": -73.76207905384881
+    },
+    "output": {
+      "seconds": 3.43025,
+      "peakDb": -5.407709524427458,
+      "activeRmsDb": -22.220716031944168,
+      "quietFrameP10Db": -80.04643314775684
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "sourceCandidateId": "v2-physics-0",
+  "voiceSource": "Provider public voice; not personal clone",
+  "personalReferenceUploaded": false,
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "subjectiveListeningChecked": false
+}

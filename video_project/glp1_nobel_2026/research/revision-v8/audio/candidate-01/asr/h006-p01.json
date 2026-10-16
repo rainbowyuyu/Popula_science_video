@@ -1,0 +1,136 @@
+{
+  "id": "h006",
+  "partIndex": 0,
+  "expected": "一部分糖马上供能，一部分存进肝脏和肌肉。",
+  "heard": "一部分糖馬上功能,一部分存進肝臟和肌肉",
+  "words": [
+    {
+      "text": "一",
+      "start": 0.0,
+      "end": 0.4,
+      "probability": 0.9762251377105713
+    },
+    {
+      "text": "部分",
+      "start": 0.4,
+      "end": 0.58,
+      "probability": 0.8968643546104431
+    },
+    {
+      "text": "糖",
+      "start": 0.58,
+      "end": 0.84,
+      "probability": 0.9872577786445618
+    },
+    {
+      "text": "馬",
+      "start": 0.84,
+      "end": 1.04,
+      "probability": 0.8596654534339905
+    },
+    {
+      "text": "上",
+      "start": 1.04,
+      "end": 1.2,
+      "probability": 0.9790827631950378
+    },
+    {
+      "text": "功",
+      "start": 1.2,
+      "end": 1.4,
+      "probability": 0.995698094367981
+    },
+    {
+      "text": "能,",
+      "start": 1.4,
+      "end": 1.62,
+      "probability": 0.9991926550865173
+    },
+    {
+      "text": "一",
+      "start": 2.0,
+      "end": 2.06,
+      "probability": 0.9570082426071167
+    },
+    {
+      "text": "部分",
+      "start": 2.06,
+      "end": 2.32,
+      "probability": 0.9871760010719299
+    },
+    {
+      "text": "存",
+      "start": 2.32,
+      "end": 2.54,
+      "probability": 0.7505797147750854
+    },
+    {
+      "text": "進",
+      "start": 2.54,
+      "end": 2.7,
+      "probability": 0.14069704711437225
+    },
+    {
+      "text": "肝",
+      "start": 2.7,
+      "end": 2.9,
+      "probability": 0.9720165431499481
+    },
+    {
+      "text": "臟",
+      "start": 2.9,
+      "end": 3.12,
+      "probability": 0.9876450896263123
+    },
+    {
+      "text": "和",
+      "start": 3.12,
+      "end": 3.24,
+      "probability": 0.9882473349571228
+    },
+    {
+      "text": "肌",
+      "start": 3.24,
+      "end": 3.42,
+      "probability": 0.9974395632743835
+    },
+    {
+      "text": "肉",
+      "start": 3.42,
+      "end": 3.58,
+      "probability": 0.9999840259552002
+    }
+  ],
+  "sourceSHA256": "ad79164d9f60c67fb01f9b05f9d911cdc929d68a81ca9e01219eca69a24c1d6c",
+  "ratio": 0.9444444444444444,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "供",
+      "heard": "功",
+      "end": 7
+    }
+  ],
+  "rawTailNeedsReview": true,
+  "rawMetrics": {
+    "samples48k": 172800,
+    "seconds": 3.6,
+    "peakDBFS": -7.84362836470865,
+    "first20msDBFS": -83.27991564303262,
+    "last20msDBFS": -49.0201915728139,
+    "firstActiveMs": 210.0,
+    "lastActiveToEndMs": 10.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

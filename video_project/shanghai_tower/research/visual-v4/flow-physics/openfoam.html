@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/bs4esi/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/bs4esi/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/bs4esi/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/themes/bs4esi/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/themes/bs4esi/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="utf-8" />
+<meta name="description" content="OpenFOAM - Official home of The Open Source Computational Fluid Dynamics (CFD) Toolbox" />
+<link rel="canonical" href="https://www.openfoam.com/download/openfoam-installation-on-windows-10" />
+<meta property="og:site_name" content="OpenFOAM" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.openfoam.com/download/openfoam-installation-on-windows-10" />
+<meta property="og:title" content="OpenFOAM® Installation on Windows 10" />
+<meta property="og:description" content="OpenFOAM - Official home of The Open Source Computational Fluid Dynamics (CFD) Toolbox" />
+<meta property="og:image" content="https://www.openfoam.com/themes/bs4esi/img/logo-1200x627.jpg" />
+<meta name="twitter:title" content="OpenFOAM® Installation on Windows 10" />
+<meta name="twitter:site" content="@openfoam" />
+<meta name="twitter:description" content="OpenFOAM - Official home of The Open Source Computational Fluid Dynamics (CFD) Toolbox" />
+<meta name="twitter:image" content="https://www.openfoam.com/themes/bs4esi/img/logo-1200x627.jpg" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/sites/default/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.openfoam.com/download/openfoam-installation-on-windows-10" />
+
+    <title>OpenFOAM® Installation on Windows 10</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_1d100ha2kHOxe5BRFMs5dWeixbok2sYHJiquFIdIPBM.css?delta=0&amp;language=en&amp;theme=bs4esi&amp;include=eJxFi1EOwyAMQy9E4Wf3mUIbAW0KEQap3H5Ma7UPy7Kf7fFiJLcKAWNZy6klc24w_geCFE-yoA1JOZi1lCMx3O07qv0ixiSV3Va7klja6TJ8tXk5nu6OJqYQZaq9Nao7KWWjVClU0ohn_G9sz9q9JETeDAYan84T-APLIEe6" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_6j34cJTNEl5G2nDgBlcnNxXOL_M2xheuBr8hog4zJoo.css?delta=1&amp;language=en&amp;theme=bs4esi&amp;include=eJxFi1EOwyAMQy9E4Wf3mUIbAW0KEQap3H5Ma7UPy7Kf7fFiJLcKAWNZy6klc24w_geCFE-yoA1JOZi1lCMx3O07qv0ixiSV3Va7klja6TJ8tXk5nu6OJqYQZaq9Nao7KWWjVClU0ohn_G9sz9q9JETeDAYan84T-APLIEe6" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/95","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"ajaxPageState":{"libraries":"eJxtjd0OgzAIhV8I7c3ex9BK2mp_SKGJvv000y1bdgHkfOcAVh4k0biEIvvgauZaqKiAfRk-VYtpEN1TLB5crWskMddcpI1uLv_wuUFyO5NX9OZsQJsep1Yzt86YxkuCr9Unmt6xHz3igts3zBCiD-konTiwyRgLZNRwJI2QdgbGhr4hB7nffcjYC3ebogSaQXZRysai0BMCW2pi","theme":"bs4esi","theme_token":null},"ajaxTrustedUrl":[],"gtm":{"tagId":null,"settings":{"data_layer":"dataLayer","include_classes":false,"allowlist_classes":"google\nnonGooglePixels\nnonGoogleScripts\nnonGoogleIframes","blocklist_classes":"customScripts\ncustomPixels","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-NCR6MRD"]},"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowDisplay":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":true,"extNofollow":false,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"(documentation\/guides\/latest\/doc)","extCssExclude":"footer, .navbar, header, .no-ext-icon","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"mailto","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":true,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fas fa-external-link-alt ml-1 mr-2 small","extFaMailtoClasses":"far fa-envelope  ml-1 mr-2 small","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","allowedDomains":[],"extExcludeNoreferrer":""}},"mathjax":{"config_type":0,"config":{"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":"true"},"showProcessingMessages":"false","messageStyle":"none"}},"cookies":{"cookiesjsr":{"config":{"cookie":{"name":"cookiesjsr","expires":31536000000,"domain":"","sameSite":"Lax","secure":false},"library":{"libBasePath":"https:\/\/cdn.jsdelivr.net\/gh\/jfeltkamp\/cookiesjsr@2\/dist","libPath":"https:\/\/cdn.jsdelivr.net\/gh\/jfeltkamp\/cookiesjsr@2\/dist\/cookiesjsr.min.js","scrollLimit":0},"callback":{"method":"post","url":"\/cookies\/consent\/callback.json","headers":[]},"interface":{"openSettingsHash":"#editCookieSettings","showDenyAll":true,"denyAllOnLayerClose":false,"settingsAsLink":true,"availableLangs":["en"],"defaultLang":"en","groupConsent":false,"cookieDocs":false}},"services":{"functional":{"id":"functional","services":[{"key":"functional","type":"functional","name":"Required functional","info":{"value":"\u003Ctable\u003E\r\n\t\u003Cthead\u003E\r\n\t\t\u003Ctr\u003E\r\n\t\t\t\u003Cth width=\u002215%\u0022\u003ECookie name\u003C\/th\u003E\r\n\t\t\t\u003Cth width=\u002215%\u0022\u003EDefault expiration time\u003C\/th\u003E\r\n\t\t\t\u003Cth\u003EDescription\u003C\/th\u003E\r\n\t\t\u003C\/tr\u003E\r\n\t\u003C\/thead\u003E\r\n\t\u003Ctbody\u003E\r\n\t\t\u003Ctr\u003E\r\n\t\t\t\u003Ctd\u003E\u003Ccode dir=\u0022ltr\u0022 translate=\u0022no\u0022\u003ESSESS\u0026lt;ID\u0026gt;\u003C\/code\u003E\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003E1 month\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003EIf you are logged in to this website, a session cookie is required to identify and connect your browser to your user account in the server backend of this website.\u003C\/td\u003E\r\n\t\t\u003C\/tr\u003E\r\n\t\t\u003Ctr\u003E\r\n\t\t\t\u003Ctd\u003E\u003Ccode dir=\u0022ltr\u0022 translate=\u0022no\u0022\u003Ecookiesjsr\u003C\/code\u003E\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003E1 year\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003EWhen you visited this website for the first time, you were asked for your permission to use several services (including those from third parties) that require data to be saved in your browser (cookies, local storage). Your decisions about each service (allow, deny) are stored in this cookie and are reused each time you visit this website.\u003C\/td\u003E\r\n\t\t\u003C\/tr\u003E\r\n\t\u003C\/tbody\u003E\r\n\u003C\/table\u003E\r\n","format":"full_html"},"uri":"","needConsent":false}],"weight":1},"performance":{"id":"performance","services":[{"key":"gtag","type":"performance","name":"Google Tag Manager","info":{"format":"full_html","value":""},"uri":"https:\/\/tagmanager.google.com\/","needConsent":true}],"weight":30}},"translation":{"_core":{"default_config_hash":"PpB_t3-mnEd5Lckhxc9rfquSMa0CndPslGvJZlcg61E"},"langcode":"en","default_langcode":"en","bannerText":"We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose \u0022ACCEPT ALL\u0022, you consent to the use of all cookies. You can accept and reject individual cookie types and revoke your consent for the future at any time at \u0022Settings\u0022.","privacyPolicy":"Privacy policy","privacyUri":"","imprint":"Imprint","imprintUri":"","cookieDocs":"Cookie documentation","officialWebsite":"Official website","cookieDocsUri":"\/cookies\/documentation","denyAll":"Deny all","settings":"Cookie settings","acceptAll":"Accept all","cookieSettings":"Cookie settings","close":"Close","requiredCookies":"Required cookies","readMore":"Read more","allowed":"Allowed","denied":"Denied","alwaysActive":"Always active","settingsAllServices":"Settings for all services","saveSettings":"Save","disclaimerText":"All cookie information is subject to change by the service providers. We update this information regularly.","disclaimerTextPosition":"above","processorDetailsLabel":"Processor Company Details","processorLabel":"Company","processorWebsiteUrlLabel":"Company Website","processorPrivacyPolicyUrlLabel":"Company Privacy Policy","processorCookiePolicyUrlLabel":"Company Cookie Policy","processorContactLabel":"Data Protection Contact Details","placeholderAcceptAllText":"Accept All Cookies","functional":{"title":"Functional","details":"Cookies are small text files that are placed by your browser on your device in order to store certain information. Using the information that is stored and returned, a website can recognize that you have previously accessed and visited it using the browser on your end device. We use this information to arrange and display the website optimally in accordance with your preferences. Within this process, only the cookie itself is identified on your device. Personal data is only stored following your express consent or where this is absolutely necessary to enable use the service provided by us and accessed by you."},"performance":{"title":"Performance Cookies","details":"Performance cookies collect aggregated information about how our website is used. The purpose of this is to improve its attractiveness, content and functionality. These cookies help us to determine whether, how often and for how long particular sub-pages of our website are accessed and which content users are particularly interested in. Search terms, country, region and (where applicable) the city from which the website is accessed are also recorded, as is the proportion of mobile devices that are used to access the website. We use this information to compile statistical reports that help us tailor the content of our website to your needs and optimize our offer."}}},"cookiesTexts":{"_core":{"default_config_hash":"PpB_t3-mnEd5Lckhxc9rfquSMa0CndPslGvJZlcg61E"},"langcode":"en","default_langcode":"en","bannerText":"We use a selection of our own and third-party cookies on the pages of this website: Essential cookies, which are required in order to use the website; functional cookies, which provide better easy of use when using the website; performance cookies, which we use to generate aggregated data on website use and statistics; and marketing cookies, which are used to display relevant content and advertising. If you choose \u0022ACCEPT ALL\u0022, you consent to the use of all cookies. You can accept and reject individual cookie types and revoke your consent for the future at any time at \u0022Settings\u0022.","privacyPolicy":"Privacy policy","privacyUri":"","imprint":"Imprint","imprintUri":"","cookieDocs":"Cookie documentation","officialWebsite":"Official website","cookieDocsUri":"\/cookies\/documentation","denyAll":"Deny all","settings":"Cookie settings","acceptAll":"Accept all","cookieSettings":"Cookie settings","close":"Close","requiredCookies":"Required cookies","readMore":"Read more","allowed":"Allowed","denied":"Denied","alwaysActive":"Always active","settingsAllServices":"Settings for all services","saveSettings":"Save","disclaimerText":"All cookie information is subject to change by the service providers. We update this information regularly.","disclaimerTextPosition":"above","processorDetailsLabel":"Processor Company Details","processorLabel":"Company","processorWebsiteUrlLabel":"Company Website","processorPrivacyPolicyUrlLabel":"Company Privacy Policy","processorCookiePolicyUrlLabel":"Company Cookie Policy","processorContactLabel":"Data Protection Contact Details","placeholderAcceptAllText":"Accept All Cookies"},"services":{"functional":{"uuid":"dd40c913-faf8-474a-bec3-1db181d8e8d0","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"N-O3629vb-jExOxfM0FYcfPzEu6QVzgWHMm06jMERLg"},"id":"functional","label":"Required functional","group":"functional","info":{"value":"\u003Ctable\u003E\r\n\t\u003Cthead\u003E\r\n\t\t\u003Ctr\u003E\r\n\t\t\t\u003Cth width=\u002215%\u0022\u003ECookie name\u003C\/th\u003E\r\n\t\t\t\u003Cth width=\u002215%\u0022\u003EDefault expiration time\u003C\/th\u003E\r\n\t\t\t\u003Cth\u003EDescription\u003C\/th\u003E\r\n\t\t\u003C\/tr\u003E\r\n\t\u003C\/thead\u003E\r\n\t\u003Ctbody\u003E\r\n\t\t\u003Ctr\u003E\r\n\t\t\t\u003Ctd\u003E\u003Ccode dir=\u0022ltr\u0022 translate=\u0022no\u0022\u003ESSESS\u0026lt;ID\u0026gt;\u003C\/code\u003E\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003E1 month\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003EIf you are logged in to this website, a session cookie is required to identify and connect your browser to your user account in the server backend of this website.\u003C\/td\u003E\r\n\t\t\u003C\/tr\u003E\r\n\t\t\u003Ctr\u003E\r\n\t\t\t\u003Ctd\u003E\u003Ccode dir=\u0022ltr\u0022 translate=\u0022no\u0022\u003Ecookiesjsr\u003C\/code\u003E\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003E1 year\u003C\/td\u003E\r\n\t\t\t\u003Ctd\u003EWhen you visited this website for the first time, you were asked for your permission to use several services (including those from third parties) that require data to be saved in your browser (cookies, local storage). Your decisions about each service (allow, deny) are stored in this cookie and are reused each time you visit this website.\u003C\/td\u003E\r\n\t\t\u003C\/tr\u003E\r\n\t\u003C\/tbody\u003E\r\n\u003C\/table\u003E\r\n","format":"full_html"},"consentRequired":false,"purpose":"Essential functional cookies to provide general functionality","processor":"","processorContact":"","processorUrl":"","processorPrivacyPolicyUrl":"","processorCookiePolicyUrl":"","placeholderMainText":"This content is blocked because required functional cookies have not been accepted.","placeholderAcceptText":"Only accept required functional cookies"},"gtag":{"uuid":"113de737-66a9-43c0-a170-21c952986791","langcode":"en","status":true,"dependencies":{"enforced":{"module":["cookies_gtag"]}},"_core":{"default_config_hash":"lHZB6nbi9jwgzbywo19UKvtGNvMKA3nMWl6fE-rkZ3k"},"id":"gtag","label":"Google Tag Manager","group":"performance","info":{"format":"full_html","value":""},"consentRequired":true,"purpose":"","processor":"","processorContact":"","processorUrl":"https:\/\/tagmanager.google.com\/","processorPrivacyPolicyUrl":"https:\/\/policies.google.com\/privacy","processorCookiePolicyUrl":"","placeholderMainText":"This content is blocked because Google Tag Manager cookies have not been accepted.","placeholderAcceptText":"Only accept Google Tag Manager cookies"}},"groups":{"functional":{"uuid":"8f2f0335-996a-4e31-8e55-5a38a0528f2f","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"aHm4Q63Ge97tcktTa_qmUqJMir45iyGY2lEvvqPW68g"},"id":"functional","label":"Functional","weight":1,"title":"Functional","details":"Cookies are small text files that are placed by your browser on your device in order to store certain information. Using the information that is stored and returned, a website can recognize that you have previously accessed and visited it using the browser on your end device. We use this information to arrange and display the website optimally in accordance with your preferences. Within this process, only the cookie itself is identified on your device. Personal data is only stored following your express consent or where this is absolutely necessary to enable use the service provided by us and accessed by you."},"marketing":{"uuid":"0043c34f-defb-407c-8dd8-888ca55e8b8d","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"JkP6try0AxX_f4RpFEletep5NHSlVB1BbGw0snW4MO8"},"id":"marketing","label":"Marketing","weight":20,"title":"Marketing","details":"Customer communication and marketing tools."},"performance":{"uuid":"f94167b4-ecd0-4f02-9c13-0e571733723c","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"Jv3uIJviBj7D282Qu1ZpEQwuOEb3lCcDvx-XVHeOJpw"},"id":"performance","label":"Performance","weight":30,"title":"Performance Cookies","details":"Performance cookies collect aggregated information about how our website is used. The purpose of this is to improve its attractiveness, content and functionality. These cookies help us to determine whether, how often and for how long particular sub-pages of our website are accessed and which content users are particularly interested in. Search terms, country, region and (where applicable) the city from which the website is accessed are also recorded, as is the proportion of mobile devices that are used to access the website. We use this information to compile statistical reports that help us tailor the content of our website to your needs and optimize our offer."},"social":{"uuid":"ef714a79-e079-4aea-9b09-8e42ff37013f","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"w9uS0Ktbh58ffWxW1ue_MKgB_he6iZPMx2Pc6tN4K4o"},"id":"social","label":"Social Plugins","weight":20,"title":"Social Plugins","details":"Social media widgets provide additional content originally published on third party platforms."},"tracking":{"uuid":"0483775d-660d-4192-8d6b-aba11dabad4f","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"_gYDe3qoEc6L5uYR6zhu5V-3ARLlyis9gl1diq7Tnf4"},"id":"tracking","label":"Tracking","weight":10,"title":"Tracking cookies","details":"Marketing cookies come from external advertising companies (\u0022third-party cookies\u0022) and are used to collect information about the websites visited by the user. The purpose of this is to create and display target group-oriented content and advertising for the user."},"video":{"uuid":"f6ddc7c4-22ff-4a20-91b9-876f41974f19","langcode":"en","status":true,"dependencies":[],"_core":{"default_config_hash":"w1WnCmP2Xfgx24xbx5u9T27XLF_ZFw5R0MlO-eDDPpQ"},"id":"video","label":"Videos","weight":40,"title":"Video","details":"Video sharing services help to add rich media on the site and increase its visibility."}}},"user":{"uid":0,"permissionsHash":"30b0e0b551da1509ea539b9a937925152d3a81cd45263963ae52be241e4ef706"}}</script>
+<script src="/sites/default/files/js/js_vaDBNcYmaBnlPrpFBuR2d0biaXOJWIzEXEnmT9fmtJo.js?scope=header&amp;delta=0&amp;language=en&amp;theme=bs4esi&amp;include=eJxdi1EOQEAMRC-0tj_uI7WaWko3Wgm3R4KEn5m8l5nWarIMLNqiVOa75JlDUh0zGdw92BJTNz-6YUeGKwJtfh5G6Ja1oMQbA6uyUPPOfhxxwO0rpzCh96cGI1_LAUfSOjc"></script>
+<script src="/modules/contrib/cookies/js/cookiesjsr.conf.js?tluv6c" defer></script>
+<script src="/modules/contrib/google_tag/js/gtag.js?tluv6c" type="text/plain" id="cookies_gtag_gtag" data-cookieconsent="gtag"></script>
+<script src="/modules/contrib/google_tag/js/gtm.js?tluv6c" type="text/plain" id="cookies_gtag_gtm" data-cookieconsent="gtag"></script>
+
+  </head>
+  <body class="path-node page-node-type-standard-paragraph-page">
+
+    
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCR6MRD"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<div class="layout-container page--front">
+
+    <header class='header pt-3' role="banner">
+        
+<div class="container">
+
+    <div class="row d-none d-lg-flex">
+
+        <div class="col-8 col-md-4">
+            <a class="navbar-brand m-md-3" href="https://www.openfoam.com/"><img class="navbar-brand" src="/themes/bs4esi/img/openfoam-logo.png?v20210416" alt="OpenFOAM logo"></a>
+        </div>
+
+        <div class="col-md-4 text-center ">
+
+
+            <div class="search-container d-lg-flex align-items-center flex-column my-3">
+                 <form action="/search" class="d-none d-lg-block">
+                    <div class="d-flex align-items-center searchbar">
+                        <input type="text" placeholder="Search.." name="search" class="w-100">
+                        <button type="submit" aria-label="Search"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="col-4 d-none d-md-block text-right">
+          <a class="navbar-brand mx-3 m-md-3 mt-md-4" href="http://www.esi-group.com/" target="_blank"><img class="navbar-brand" src="/themes/bs4esi/img/keysight.png?v20250101" alt="Keysight logo"></a>
+                  </div>
+
+    </div>
+
+</div>
+
+<nav class="navbar navbar-expand-lg w-100">
+
+    <div class="container">
+
+        <div class="d-lg-none p-0 m-0 col-6">
+            <a class="navbar-brand m-0 " href="https://www.openfoam.com/"><img class="navbar-brand img-fluid" src="/themes/bs4esi/img/openfoam-logo.png?v20201110" alt="OpenFOAM logo"></a>
+        </div>
+
+        <div class="d-flex align-items-end">
+            <!--
+            <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#searchBar">
+                <i class="fas fa-search"></i>
+            </button>
+-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div class="search-container d-lg-none align-items-center flex-column mb-1 mt-4">
+                <form action="/search" >
+                    <div class="d-flex align-items-center searchbar">
+                        <input type="text" placeholder="Search.." name="search" class="w-100">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+
+            
+
+
+
+
+
+                        <ul class="navbar-nav ml-auto">
+        
+        
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown first">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >Industries</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/industries/automotive-and-land-transportation" class="dropdown-item py-2 py-md-1"  ><span>Automotive and Land Transportation</span></a>
+                            
+                                    
+
+                                                                                                            
+                            <a href="/industries/ventilation" class="dropdown-item py-2 py-md-1"  ><span>Ventilation</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >Products &amp; Services</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/products-services/openfoam-software-support" class="dropdown-item py-2 py-md-1"  ><span>OpenFOAM®  Support</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/products-services/openfoam-code-development" class="dropdown-item py-2 py-md-1"  ><span>OpenFOAM®  Code Development</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/products-services/openfoam-engineering-services" class="dropdown-item py-2 py-md-1"  ><span>OpenFOAM®  Engineering Services</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >Trainings</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/trainings/about-trainings" class="dropdown-item py-2 py-md-1"  ><span>About trainings</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/trainings/courses" class="dropdown-item py-2 py-md-1"  ><span>Courses</span></a>
+                            
+                                    
+
+                                                                                                            
+                            <a href="/trainings/training-schedule-and-booking" class="dropdown-item py-2 py-md-1"  ><span>Schedule & Booking</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/trainings/virtual-trainings" class="dropdown-item py-2 py-md-1"  ><span>Virtual trainings</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/trainings/on-site-trainings" class="dropdown-item py-2 py-md-1"  ><span>On-site trainings</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/trainings/training-locations" class="dropdown-item py-2 py-md-1"  ><span>Training locations</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/trainings/training-enquiries" class="dropdown-item py-2 py-md-1"  ><span>Training Enquiries</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/trainings/training-terms-and-conditions" class="dropdown-item py-2 py-md-1"  ><span>Terms and Conditions</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >Documentation</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/documentation/overview" class="dropdown-item py-2 py-md-1"  ><span>Overview</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://gitlab.com/openfoam/core/openfoam/-/wikis/home" class="dropdown-item py-2 py-md-1"  target="_blank"><span>Code wiki <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                            
+                                    
+
+                                                                                                            
+                            <a href="/documentation/system-requirements" class="dropdown-item py-2 py-md-1"  ><span>System Requirements</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://doc.openfoam.com/2606/" class="dropdown-item py-2 py-md-1"  target="_blank"><span>User Guide <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://wiki.openfoam.com/" class="dropdown-item py-2 py-md-1"  target="_blank"><span>Tutorial Wiki <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/documentation/licencing" class="dropdown-item py-2 py-md-1"  ><span>Licencing</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >Governance</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/governance/overview" class="dropdown-item py-2 py-md-1"  ><span>Overview</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/structure" class="dropdown-item py-2 py-md-1"  ><span>Structure</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/steering-committee" class="dropdown-item py-2 py-md-1"  ><span>Steering Committee</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/technical-committees" class="dropdown-item py-2 py-md-1"  ><span>Technical Committees</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/how-to-get-involved" class="dropdown-item py-2 py-md-1"  ><span>How to get involved</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/governance-documents" class="dropdown-item py-2 py-md-1"  ><span>Documents</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/partners" class="dropdown-item py-2 py-md-1"  ><span>Partners</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/governance/projects" class="dropdown-item py-2 py-md-1"  ><span>Projects</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >Download</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/news/main-news/openfoam-v2606" class="dropdown-item py-2 py-md-1"  ><span>Current Release</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://gitlab.com/openfoam/core/openfoam/-/wikis/precompiled" class="dropdown-item py-2 py-md-1"  target="_blank"><span>Linux <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://gitlab.com/openfoam/core/openfoam/-/wikis/building#darwin-mac-os" class="dropdown-item py-2 py-md-1"  target="_blank"><span>macOS <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://gitlab.com/openfoam/core/openfoam/-/wikis/precompiled/windows" class="dropdown-item py-2 py-md-1"  target="_blank"><span>Windows <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="https://gitlab.com/openfoam/core/openfoam/-/blob/master/doc/Build.md" class="dropdown-item py-2 py-md-1"  target="_blank"><span>Source <i class='fas fa-external-link-alt ml-1 small'></i></span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/download/release-history" class="dropdown-item py-2 py-md-1"  ><span>Release history</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/download/openfoam-repositories" class="dropdown-item py-2 py-md-1"  ><span>Repositories</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/download/openfoam-bug-reporting" class="dropdown-item py-2 py-md-1"  ><span>Bug reporting</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                                                                                    
+                            <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle"  data-toggle=dropdown  >News</a>
+                                                                    <div class="dropdown-menu py-3" aria-labelledby="navbarDropdown">
+            <div class="arrow-up"></div>
+        
+        
+                                    
+
+                                                                                                            
+                            <a href="/news/main-news" class="dropdown-item py-2 py-md-1"  ><span>Main news</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/news/news-on-twitter" class="dropdown-item py-2 py-md-1"  ><span>News on Twitter</span></a>
+                    
+                                    
+
+                                                                                                            
+                            <a href="/news/history" class="dropdown-item py-2 py-md-1"  ><span>History</span></a>
+                                        </div>
+            
+                                    </li>
+                    
+                                    
+
+                                                                                                                                                            
+                            <li class="nav-item"><a href="/contact-us" class="nav-link"  >Contact us</a></lis>
+                    
+                                    
+
+                                                                                                                                                            
+                            <li class="nav-item last"><a href="/careers" class="nav-link"  >Careers</a></lis>
+                                        </ul>
+            
+
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+    </header>
+
+    
+
+    
+
+      <div>
+    <div id="block-bs4esi-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+      <div class="content">
+      
+<div class="container-fluid small bg-gray-200">
+    <nav aria-label="breadcrumb" class="container">
+        <ol class="breadcrumb">
+                  <li>
+                          <a href="/">Home</a>
+                      </li>
+            </ol>
+  </nav>
+</div>
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+      <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+
+    
+
+    <a href='https://www.openfoam.com/current-release' class='call2action d-none d-sm-block horizontal'>Download</a>
+
+    <main role="main">
+
+        <div class="container-fluid bg-primary p-2">
+        </div>
+
+        <a id="main-content" tabindex="-1"></a>
+                    <div class="layout-content">
+                    <div>
+        <div id="block-bs4esi-cookiesui" class="block block-cookies block-cookies-ui-block">
+  
+    
+      <div class="content">
+        
+<div id="cookiesjsr" data-nosnippet></div>
+
+    </div>
+  </div>
+<div id="block-bs4esi-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+
+
+
+
+    <div class="container-fluid">
+        <div class="container py-5">
+            <span class="font-weight-bold text-color-gray"><h1 class='maintitle'>OpenFOAM® Installation on Windows 10</h1></span>
+
+        </div>
+    </div>
+
+
+
+            <div>
+                            <div>
+
+        
+                        
+    
+
+
+
+<div class=" ">
+
+    <div class="container  margin- ">
+
+                
+        <div class=" row  ">
+
+            
+                            <div class="col-md-12  d-flex align-content-center flex-wrap px-2  ">
+                    
+            <div>
+                            <div>
+    <div class="font_size_editor py-4 px-3 w-100">
+                    
+                        <div><div class="tex2jax_process"><p>From OpenFOAM-v1706, users can now run OpenFOAM using <em>Bash on Ubuntu</em> on Windows. This utility, referred to as the <em>Windows Subsystem for Linux (WSL)</em> uses the genuine Ubuntu image provided by <a href="https://www.canonical.com/">Canonical</a>, the group behind <a href="https://www.ubuntu.com/">Ubuntu Linux</a>. <em>Bash on Ubuntu on Windows</em> does not support graphics directly. For GUI-based processing users are recommended to download and use the <a href="https://www.paraview.org/download/">ParaView Windows native build</a>.</p></div></div>
+            
+            </div>
+</div>
+                    </div>
+    
+                </div>
+            
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+</div>
+                            <div>
+
+        
+                        
+    
+
+
+
+<div class=" ">
+
+    <div class="container  margin- ">
+
+                            <div class="row">
+                <h2 class="text-left w-100 py-1 py-lg-4 px-3">Preliminaries </h2>
+            </div>
+                    
+        <div class=" row  ">
+
+            
+                            <div class="col-md-12  d-flex align-content-center flex-wrap px-2  ">
+                    
+            <div>
+                            <div>
+    <div class="font_size_editor py-4 px-3 w-100">
+                    
+                        <div><div class="tex2jax_process"><p>Activate Ubuntu Bash and create a user account. Note: <strong>this will require a computer reboot</strong>. Additional guidance can be found in <a href="https://msdn.microsoft.com/en-us/commandline/wsl/install_guide">https://msdn.microsoft.com/en-us/commandline/wsl/install_guide</a></p>
+
+<p>To run OpenFOAM under the Windows10, users should have the latest Ubuntu bash (16.04 or above). Version information can be found using the command in the bash terminal</p>
+
+<pre>
+<code class=" hljs ">lsb_release -a</code></pre></div></div>
+            
+            </div>
+</div>
+                    </div>
+    
+                </div>
+            
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+</div>
+                            <div>
+
+        
+                        
+    
+
+
+
+<div class=" ">
+
+    <div class="container  margin- ">
+
+                            <div class="row">
+                <h2 class="text-left w-100 py-1 py-lg-4 px-3">Install OpenFOAM </h2>
+            </div>
+                    
+        <div class=" row  ">
+
+            
+                            <div class="col-md-12  d-flex align-content-center flex-wrap px-2  ">
+                    
+            <div>
+                            <div>
+    <div class="font_size_editor py-4 px-3 w-100">
+                    
+                        <div><div class="tex2jax_process"><ol>
+	<li>Click on the link <a href="https://sourceforge.net/projects/openfoam/files/v2012/OpenFOAM-v2012-windows10.tgz">OpenFOAM-v2012-windows10.tgz</a> to download OpenFOAM-v2012.</li>
+	<li>Start Bash on Ubuntu by typing <span class="text-format-2">bash</span> in search toolbar, and click on the Desktop app <em>Bash on Ubuntu on Windows</em><br>
+	<img alt data-insert-attach="{&quot;id&quot;:&quot;bfb7911d-5316-402f-bb49-85489baf7639&quot;,&quot;attributes&quot;:{&quot;alt&quot;:[&quot;alt&quot;,&quot;description&quot;],&quot;title&quot;:[&quot;title&quot;]}}" data-insert-type="image" src="/sites/default/files/prg/editor/432/ubuntubash_bash-small.png"></li>
+	<li>In the bash-terminal, copy OpenFOAM-v2012-windows10.tgz from the Download folder to the local bash-environment by typing command
+	<pre>
+<code class=" hljs xml">cp -ar /mnt/c/Users/<span class="hljs-tag">&lt;<span class="hljs-name">USER</span>&gt;</span>/Downloads/OpenFOAM-v2012-windows10.tgz .</code></pre>
+	<strong>Note</strong>
+
+	<ul>
+		<li>Replace the string with your own user name when copying the file, e.g. here shown by the user <em>pgh</em></li>
+		<li>The final dot (.) is required to specify the current location</li>
+	</ul>
+	</li>
+	<li>Untar the OpenFOAM installation by running the following command
+	<pre>
+<code class=" hljs php">sudo tar -xvzf  OpenFOAM-v2012-windows10.tgz -C /opt/
+sudo chown -R $USER /opt/OpenFOAM</code></pre>
+	Enter your linux password to allow the process to start.<br>
+	<strong>Note</strong>
+
+	<ul>
+		<li>it may take some minutes to complete the process</li>
+		<li>if <span class="text-format-2">tar</span> is not installed, please install it using the command
+		<pre>
+<code class=" hljs sql">sudo apt <span class="hljs-keyword">install</span> tar</code></pre>
+		</li>
+	</ul>
+	</li>
+	<li>Install the additional dependencies
+	<pre>
+<code class=" hljs sql">sudo apt <span class="hljs-keyword">install</span> bison flex m4</code></pre>
+
+
+	</li>
+</ol></div></div>
+            
+            </div>
+</div>
+                    </div>
+    
+                </div>
+            
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+</div>
+                            <div>
+
+        
+                        
+    
+
+
+
+<div class=" ">
+
+    <div class="container  margin- ">
+
+                            <div class="row">
+                <h2 class="text-left w-100 py-1 py-lg-4 px-3">Configure the bash-shell to run OpenFOAM </h2>
+            </div>
+                    
+        <div class=" row  ">
+
+            
+                            <div class="col-md-12  d-flex align-content-center flex-wrap px-2  ">
+                    
+            <div>
+                            <div>
+    <div class="font_size_editor py-4 px-3 w-100">
+                    
+                        <div><div class="tex2jax_process"><p>Run the following command to set the OpenFOAM working environment (once only)</p>
+
+<pre>
+<code class=" hljs php"><span class="hljs-keyword">echo</span> <span class="hljs-string">"source /opt/OpenFOAM/OpenFOAM-v2012/etc/bashrc"</span> &gt;&gt; ~/.bashrc
+source $HOME/.bashrc</code></pre></div></div>
+            
+            </div>
+</div>
+                    </div>
+    
+                </div>
+            
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+</div>
+                            <div>
+
+        
+                        
+    
+
+
+
+<div class=" ">
+
+    <div class="container  margin- ">
+
+                            <div class="row">
+                <h2 class="text-left w-100 py-1 py-lg-4 px-3">Check everything is OK </h2>
+            </div>
+                    
+        <div class=" row  ">
+
+            
+                            <div class="col-md-12  d-flex align-content-center flex-wrap px-2  ">
+                    
+            <div>
+                            <div>
+    <div class="font_size_editor py-4 px-3 w-100">
+                    
+                        <div><div class="tex2jax_process"><p>The installation can be verified by running your first OpenFOAM tutorial.</p>
+
+<pre>
+<code class=" hljs xml">mkdir -p /mnt/c/Users/<span class="hljs-tag">&lt;<span class="hljs-name">USER</span>&gt;</span>/tutorial
+cd /mnt/c/Users/<span class="hljs-tag">&lt;<span class="hljs-name">USER</span>&gt;</span>/tutorial
+cp -ar $FOAM_TUTORIALS/incompressible/icoFoam/cavity/cavity .
+cd cavity
+blockMesh
+icoFoam
+touch cavity.foam</code></pre>
+
+<p>The case can then be visually checked using ParaView.</p></div></div>
+            
+            </div>
+</div>
+                    </div>
+    
+                </div>
+            
+            
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+</div>
+                    </div>
+    
+    </div>
+  </div>
+
+    </div>
+
+            </div>
+        
+        
+    </main>
+
+            <footer role="contentinfo">
+                        
+            <div class="social-media-share d-none d-md-block text-center">
+                <small>Share</small>
+                <br />
+                <a href="https://www.facebook.com/sharer.php?u=https://www.openfoam.com/download/openfoam-installation-on-windows-10&title=OpenFOAM® Installation on Windows 10" aria-label="Share on Facebook" target="_blank"><i class="fab fa-2x fa-facebook-square text-color-facebook"></i></a>
+                <br />
+                <a href="https://twitter.com/share?text=OpenFOAM® Installation on Windows 10&amp;url=https://www.openfoam.com/download/openfoam-installation-on-windows-10" aria-label="Share on Twitter" target="_blank"><i class="fab fa-2x fa-twitter-square text-color-twitter"></i></a>
+                <br />
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.openfoam.com/download/openfoam-installation-on-windows-10&title=OpenFOAM® Installation on Windows 10&source=ESI%20Group" aria-label="Share on LinkedIn" target="_blank"><i class="fab fa-2x fa-linkedin text-color-linkedin"></i></a>
+            </div>
+
+            <div class="d-block d-md-none fixed-bottom d-flex w-100">
+                <div class="bg-white btn btn-sm text-center">Share</div>
+                <div class="bg-facebook w-100"><a class="flex-fill btn btn-sm w-100" href="https://www.facebook.com/sharer.php?u=https://www.openfoam.com/download/openfoam-installation-on-windows-10&title=OpenFOAM® Installation on Windows 10" target="_top"><span class="text-color-white">facebook</span></a></div>
+                <div class="bg-twitter w-100"><a class="flex-fill btn btn-sm w-100" href="https://twitter.com/share?text=OpenFOAM® Installation on Windows 10&amp;url=https://www.openfoam.com/download/openfoam-installation-on-windows-10" target="_top"><span class="text-color-white">twitter</span></a></div>
+                <div class="bg-linkedin w-100"><a class="flex-fill btn btn-sm w-100" href="http://www.linkedin.com/shareArticle?mini=true&url=https://www.openfoam.com/download/openfoam-installation-on-windows-10&title=OpenFOAM® Installation on Windows 10&source=ESI%20Group" target="_top"><span class="text-color-white">linkedIn</span></a></div>
+            </div>
+                        
+<a href="#" id="back-to-top" title="Back to top" class="text-center show"><i class="fas fa-chevron-up fa-2x"></i></a>
+
+    <div class="bg-gray-200 bg-gray-200 m-0 mt-5">
+        <div class="container">
+            <div class="row d-flex align-content-center justify-content-center">
+                <div class="col-md-8 mt-5 mb-5">
+                    <div class="">
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                portalId: "47388179",
+                                formId: "bccc58ff-2a87-40c7-8b92-de2afcdc5328"
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="bg-primary p-5 text-center text-md-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 small">
+                <img class="img-fluid my-3" src="/themes/bs4esi/img/openfoam-logo.png?v20210416" alt="OpenFOAM logo">
+                <br/>
+                OpenCFD is an affiliate of KEYSIGHT<br/>
+            </div>
+            <div class="col-md-4 small pt-5 pt-m-0 text-center text-md-right">
+                <a href="https://twitter.com/openfoam" class="mx-1" target="_blank" aria-label="OpenFOAM Twitter page"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.linkedin.com/company/opencfd-limited" class="mx-1" target="_blank" aria-label="OpenFOAM LinkedIn page"><i class="fab fa-linkedin fa-2x"></i></a>
+                <br/>
+                <br/>
+                <img class="img-fluid my-3" src="/themes/bs4esi/img/keysight.png?v20250103" alt="Keysight logo">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-primary-dark p-3 py-5 py-lg-3">
+    <div class="container small d-md-flex text-center">
+        <span class="mr-auto p-2">© OpenCFD Ltd 2026</span>
+        <a href="/about-esi-opencfd" class="link d-block d-md-inline-block p-2">About</a>
+        <a href="/business-privacy-policy" class="link d-block d-md-inline-block p-2">Legal</a>
+        <a href="#editCookieSettings" class="link d-block d-md-inline-block p-2">Cookies</a>
+    </div>
+</div>
+
+
+        </footer>
+    
+</div>
+
+  </div>
+
+    
+
+    <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/js/js_G96yhewDXradUuQGo6-dyLrW0cfTW2hphTI2TSSbOtY.js?scope=footer&amp;delta=1&amp;language=en&amp;theme=bs4esi&amp;include=eJxdi1EOQEAMRC-0tj_uI7WaWko3Wgm3R4KEn5m8l5nWarIMLNqiVOa75JlDUh0zGdw92BJTNz-6YUeGKwJtfh5G6Ja1oMQbA6uyUPPOfhxxwO0rpzCh96cGI1_LAUfSOjc"></script>
+<script src="https://cdn.jsdelivr.net/gh/jfeltkamp/cookiesjsr@2/dist/cookiesjsr.min.js" defer></script>
+<script src="/sites/default/files/js/js_a2XuZs-QZqx0i8tJufIcg51No4_ky88TpSzx8hikB_w.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=bs4esi&amp;include=eJxdi1EOQEAMRC-0tj_uI7WaWko3Wgm3R4KEn5m8l5nWarIMLNqiVOa75JlDUh0zGdw92BJTNz-6YUeGKwJtfh5G6Ja1oMQbA6uyUPPOfhxxwO0rpzCh96cGI1_LAUfSOjc"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="/sites/default/files/js/js_DeVsKLgfAxYHKIMYmz3_RCyHYE6SuHYHP9PeVWl3NJw.js?scope=footer&amp;delta=5&amp;language=en&amp;theme=bs4esi&amp;include=eJxdi1EOQEAMRC-0tj_uI7WaWko3Wgm3R4KEn5m8l5nWarIMLNqiVOa75JlDUh0zGdw92BJTNz-6YUeGKwJtfh5G6Ja1oMQbA6uyUPPOfhxxwO0rpzCh96cGI1_LAUfSOjc"></script>
+
+
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47725b2d9de0397',t:'MTc5MTQ4MzQ5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

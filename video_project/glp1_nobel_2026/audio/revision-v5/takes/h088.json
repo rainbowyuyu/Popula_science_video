@@ -1,0 +1,82 @@
+{
+  "id": "h088",
+  "text": "三高管理，靠的是几个环节一起慢慢调顺：吃进去的、身体用掉的、血管承受的，再加上需要时有针对性的药。",
+  "ttsText": "三高管理，靠的是几个环节一起慢慢调顺：吃进去的、身体用掉的、血管承受的，再加上需要时有针对性的药。",
+  "signature": "b698f179b699303e3c6fd58356768d1981af5de52dcd0ca34cf550bfa62449ce",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h088-b698f179b699-ecc3002aa8.wav",
+  "processed": "audio/revision-v5/voice/h088.wav",
+  "rawDuration": 10.0,
+  "duration": 10.0,
+  "sampleRate": 48000,
+  "sha256": "40ff966a4694a13459fa803132d7096c1aa9a1a567c034ce607bab907b1e40ec",
+  "rawSHA256": "b4967452ecddf6a57d73a9d2210e257b49ce9eeda170913f2f4233a3a324ec03",
+  "seed": 3972202538,
+  "batchIds": [
+    "h088",
+    "h089"
+  ],
+  "batchKey": "ecc3002aa8828570f3f4a5485675248b2c24d6f1d1489e094bfc5f27d0850f8f",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -97.92438256000487,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b4967452ecddf6a57d73a9d2210e257b49ce9eeda170913f2f4233a3a324ec03",
+    "outputSha256": "40ff966a4694a13459fa803132d7096c1aa9a1a567c034ce607bab907b1e40ec",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4941192410828457,
+    "input": {
+      "seconds": 10.0,
+      "peakDb": -6.833346793483933,
+      "activeRmsDb": -22.0816192438498,
+      "quietFrameP10Db": -63.87398875562573
+    },
+    "output": {
+      "seconds": 10.0,
+      "peakDb": -4.983348240230734,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.11045317061543
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

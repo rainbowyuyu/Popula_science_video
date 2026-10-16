@@ -1,0 +1,3124 @@
+{
+  "scope": "Actual production render state (no-op GPU) followed by mesh world projection and camera-to-center ray tests against production aortic wall. Ray tests use geometric surfaces, not alpha compositing; transparent renderer sort-depth analysis is reported separately.",
+  "sourceHash": "cac128b38fd3e0f6c9f9a4e5db1e7ed85aafdfe00b4f465aad4c901113c37338",
+  "createdAt": "2026-10-07T04:13:38.853Z",
+  "out": [
+    {
+      "frame": 7550,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.3823020404887707,
+        0.8309997096540931,
+        3.903181179980397
+      ],
+      "camera": [
+        0.057202238219061605,
+        4.908835303241125,
+        0.7209177531053822
+      ],
+      "target": [
+        0.017998762713314725,
+        4.823568655916315,
+        0.013392783536655285
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            0.010387023201110401,
+            -0.025456271752609894,
+            -0.7210838658419333
+          ],
+          "projectionPixels": [
+            985.4425161458953,
+            602.3539191681829
+          ],
+          "projectedBoundingBox": {
+            "minX": 794.0661606963456,
+            "minY": 213.79642285618172,
+            "maxX": 1167.5558684172013,
+            "maxY": 1003.2812439442072
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7216078253456447,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            0.020790140028238868,
+            0.019496476789754524,
+            -0.7584181015883358
+          ],
+          "projectionPixels": [
+            1008.4176224909529,
+            494.59515655845615
+          ],
+          "projectedBoundingBox": {
+            "minX": 978.002393761676,
+            "minY": 485.0056427352604,
+            "maxX": 1038.6282942845,
+            "maxY": 504.12017632242737
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7589534632284528,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.7583649099847969,
+              "pointLocal": [
+                0.2794863980031792,
+                -0.01934006673171229,
+                -0.16983900295414145
+              ]
+            }
+          ],
+          "scale": [
+            0,
+            0.43,
+            0
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            0.022733057342176788,
+            0.020121001870566424,
+            -0.749467825573897
+          ],
+          "projectionPixels": [
+            1013.574680462781,
+            492.5811143841774
+          ],
+          "projectedBoundingBox": {
+            "minX": 979.2219862494566,
+            "minY": 481.7362439367122,
+            "maxX": 1047.6665052630915,
+            "maxY": 503.3436304471408
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7500824409242383,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            0.024954590437647473,
+            0.022709618334785908,
+            -0.7421920400144613
+          ],
+          "projectionPixels": [
+            1019.3866585207213,
+            485.95590127781776
+          ],
+          "projectedBoundingBox": {
+            "minX": 1019.3866585207213,
+            "minY": 485.95590127781776,
+            "maxX": 1019.3866585207213,
+            "maxY": 485.95590127781776
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7429586008719801,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0,
+            0,
+            0
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.171
+          ],
+          "world": [
+            0.033555768414748686,
+            4.825429748448795,
+            -0.030880710566077864
+          ],
+          "cameraSpace": [
+            0.019027002587195585,
+            0.00327299210608345,
+            -0.7565340922776784
+          ],
+          "projectionPixels": [
+            1004.421846694717,
+            532.3586306932391
+          ],
+          "projectedBoundingBox": {
+            "minX": 1002.7877589995394,
+            "minY": 530.7383900848122,
+            "maxX": 1006.0559132955242,
+            "maxY": 533.978984436345
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7567803988497525,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.7561303712795215,
+              "pointLocal": [
+                0.18950842793315203,
+                -0.03425615979491292,
+                -0.16750053027651024
+              ]
+            }
+          ],
+          "scale": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.171
+          ],
+          "world": [
+            0.02956012680651289,
+            4.857487044215897,
+            -0.0374821525478792
+          ],
+          "cameraSpace": [
+            0.02202937696500773,
+            0.03597762519232006,
+            -0.759467882111677
+          ],
+          "projectionPixels": [
+            1011.2327346480812,
+            456.3284496118929
+          ],
+          "projectedBoundingBox": {
+            "minX": 1009.6050031913035,
+            "minY": 454.7171116993353,
+            "maxX": 1012.8604451737098,
+            "maxY": 457.93989960284534
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7606386441163383,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.7606317715532511,
+              "pointLocal": [
+                0.3699932027602415,
+                -0.0009924826715850266,
+                -0.17096318873961103
+              ]
+            }
+          ],
+          "scale": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.35,
+            0,
+            -0.03
+          ],
+          "world": [
+            0.03841523392976932,
+            4.908488222941208,
+            -0.02503692669759714
+          ],
+          "cameraSpace": [
+            0.03987195472053118,
+            0.08243430590613166,
+            -0.740551327560355
+          ],
+          "projectionPixels": [
+            1055.097061648566,
+            343.38911584198064
+          ],
+          "projectedBoundingBox": {
+            "minX": 1052.2700535771223,
+            "minY": 339.18511542333533,
+            "maxX": 1057.9278251104474,
+            "maxY": 347.59084387890704
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7461913000798561,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.4,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.48297224691358087,
+            0.00890656790123462,
+            -0.012423830123456594
+          ],
+          "world": [
+            0.03906520162561502,
+            4.932541047751152,
+            -0.027586996553437076
+          ],
+          "cameraSpace": [
+            0.04550022138170362,
+            0.1059638812428716,
+            -0.7401700212837191
+          ],
+          "projectionPixels": [
+            1068.5767290527556,
+            287.1394363871802
+          ],
+          "projectedBoundingBox": {
+            "minX": 1064.3432588531496,
+            "minY": 282.94479858485965,
+            "maxX": 1072.8096112394885,
+            "maxY": 291.33533125017794
+          },
+          "opacity": 0.573146878016557,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.7490996426917973,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 7600,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.2623560400443914,
+        0.8449022041970808,
+        3.0787317171949997
+      ],
+      "camera": [
+        0.01952528611478546,
+        4.896648289309287,
+        0.5762555447811658
+      ],
+      "target": [
+        0.029639690243344726,
+        4.834468246755514,
+        0.005662905118432008
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.005138646696179582,
+            -0.03429448265907097,
+            -0.5755544594095151
+          ],
+          "projectionPixels": [
+            944.2305309384448,
+            645.24284218184
+          ],
+          "projectedBoundingBox": {
+            "minX": 688.1846923813372,
+            "minY": 160.70815779649024,
+            "maxX": 1182.3988638634428,
+            "maxY": 1154.8169755357023
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5765981728872376,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            0.004157797279798369,
+            0.01049326033205311,
+            -0.6133758000409961
+          ],
+          "projectionPixels": [
+            971.9726809309672,
+            509.78389050094836
+          ],
+          "projectedBoundingBox": {
+            "minX": 935.2417438338939,
+            "minY": 496.58809554402876,
+            "maxX": 1008.2836287891292,
+            "maxY": 522.8288019705687
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.6134796393251762,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.6128884124686957,
+              "pointLocal": [
+                0.27947731687232036,
+                -0.01916647044405151,
+                -0.1698662185376003
+              ]
+            }
+          ],
+          "scale": [
+            0,
+            0.43,
+            0
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            0.006771503769266383,
+            0.010987611260585338,
+            -0.6045896430001519
+          ],
+          "projectionPixels": [
+            979.782408099866,
+            507.900570182636
+          ],
+          "projectedBoundingBox": {
+            "minX": 938.203862323977,
+            "minY": 492.93251035230196,
+            "maxX": 1020.8229501263432,
+            "maxY": 522.6749514665069
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.6047273908858125,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            0.009612900406518186,
+            0.013445547584807645,
+            -0.5974862484471316
+          ],
+          "projectionPixels": [
+            988.4171987149618,
+            500.2529120878155
+          ],
+          "projectedBoundingBox": {
+            "minX": 988.4171987149618,
+            "minY": 500.2529120878155,
+            "maxX": 988.4171987149618,
+            "maxY": 500.2529120878155
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5977148213717882,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0,
+            0,
+            0
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.171
+          ],
+          "world": [
+            0.033555768414748686,
+            4.825429748448795,
+            -0.030880710566077864
+          ],
+          "cameraSpace": [
+            0.001940122294507462,
+            -0.005667125177144071,
+            -0.61143068877073
+          ],
+          "projectionPixels": [
+            965.6044965848228,
+            556.3708152784926
+          ],
+          "projectedBoundingBox": {
+            "minX": 963.5959811368127,
+            "minY": 554.3554659175957,
+            "maxX": 967.6126416453596,
+            "maxY": 558.3862714868077
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.6114600293992573,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.6108073430053519,
+              "pointLocal": [
+                0.18951714483639392,
+                -0.03406077230066673,
+                -0.16753116217957587
+              ]
+            }
+          ],
+          "scale": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.171
+          ],
+          "world": [
+            0.02956012680651289,
+            4.857487044215897,
+            -0.0374821525478792
+          ],
+          "cameraSpace": [
+            0.005923815081692039,
+            0.026924763003030698,
+            -0.6144495323619669
+          ],
+          "projectionPixels": [
+            977.0282497218587,
+            462.60366304572244
+          ],
+          "projectedBoundingBox": {
+            "minX": 975.0306515260108,
+            "minY": 460.60068828443724,
+            "maxX": 979.0260228658327,
+            "maxY": 464.6067434766304
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.6150676891755341,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.6150607420142962,
+              "pointLocal": [
+                0.36999285756763456,
+                -0.000990445573540999,
+                -0.1709632944298356
+              ]
+            }
+          ],
+          "scale": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.35,
+            0,
+            -0.03
+          ],
+          "world": [
+            0.03841523392976932,
+            4.908488222941208,
+            -0.02503692669759714
+          ],
+          "cameraSpace": [
+            0.02680225333489083,
+            0.07257408124470464,
+            -0.596711230296162
+          ],
+          "projectionPixels": [
+            1039.3344530275117,
+            325.1813066766428
+          ],
+          "projectedBoundingBox": {
+            "minX": 1035.6352635903847,
+            "minY": 319.83872672564274,
+            "maxX": 1043.0409782106256,
+            "maxY": 330.5129133167919
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.6017056177350351,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.4,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.2407267160493774,
+            -0.01311575308642024,
+            -0.09346597135802649
+          ],
+          "world": [
+            0.03671784812106938,
+            4.886616606066248,
+            -0.03149500664745518
+          ],
+          "cameraSpace": [
+            0.019895991063818338,
+            0.052610298318836776,
+            -0.60546945230062
+          ],
+          "projectionPixels": [
+            1018.0400898499875,
+            386.52654740015134
+          ],
+          "projectedBoundingBox": {
+            "minX": 1012.9048826169342,
+            "minY": 381.37277525784896,
+            "maxX": 1023.1722160275975,
+            "maxY": 391.68201110573705
+          },
+          "opacity": 0.95,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.6080764356713895,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 7680,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.24387864629201772,
+        0.8777620797326366,
+        2.5234721190890443
+      ],
+      "camera": [
+        -0.010607556168715504,
+        4.878084471747723,
+        0.4825389972913104
+      ],
+      "target": [
+        0.03618485839857165,
+        4.842140943927433,
+        0.001696235785265905
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.014272064849060406,
+            -0.04012529447316826,
+            -0.4810371689396985
+          ],
+          "projectionPixels": [
+            907.5961842527986,
+            687.3310667105425
+          ],
+          "projectedBoundingBox": {
+            "minX": 584.4782155740106,
+            "minY": 112.96996787975817,
+            "maxX": 1196.4642626781779,
+            "maxY": 1309.08635728023
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4829187188266098,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            -0.007039282058037832,
+            0.00395895260150958,
+            -0.5201151117330012
+          ],
+          "projectionPixels": [
+            936.0952816761369,
+            526.555781396975
+          ],
+          "projectedBoundingBox": {
+            "minX": 893.9718481171865,
+            "minY": 507.21041234720514,
+            "maxX": 977.4910731252326,
+            "maxY": 545.6169056899804
+          },
+          "opacity": 0.06912155238168605,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.520177810225144,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.5197545221329097,
+              "pointLocal": [
+                0.279573700399375,
+                -0.01926945749984066,
+                -0.17080578003018054
+              ]
+            }
+          ],
+          "scale": [
+            0.09304824359073122,
+            0.43,
+            0.023040517460562016
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            -0.003674057868938707,
+            0.004479259899104804,
+            -0.5115900342275956
+          ],
+          "projectionPixels": [
+            947.3153452209422,
+            524.5353917895054
+          ],
+          "projectedBoundingBox": {
+            "minX": 899.5655844401922,
+            "minY": 502.63070586781737,
+            "maxX": 994.1301099122816,
+            "maxY": 546.0747654788836
+          },
+          "opacity": 0.03544694993932618,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5116228352912527,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.10190998107556275,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            -0.00017299604230691656,
+            0.006937029585275312,
+            -0.5047874513169774
+          ],
+          "projectionPixels": [
+            959.394683721822,
+            515.7272081246807
+          ],
+          "projectedBoundingBox": {
+            "minX": 959.394683721822,
+            "minY": 515.7272081246807,
+            "maxX": 959.394683721822,
+            "maxY": 515.7272081246807
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.504835144690014,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0,
+            0,
+            0
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.16785185185185175
+          ],
+          "world": [
+            0.03369529099728637,
+            4.825557152787226,
+            -0.030346470269374197
+          ],
+          "cameraSpace": [
+            -0.00930636779733618,
+            -0.012078597661962398,
+            -0.5172435242089312
+          ],
+          "projectionPixels": [
+            928.2210249736314,
+            581.2454635161666
+          ],
+          "projectedBoundingBox": {
+            "minX": 922.9933697354771,
+            "minY": 576.0155261299055,
+            "maxX": 933.449090903367,
+            "maxY": 586.476243708022
+          },
+          "opacity": 0.2098765432098836,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5174682254391412,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.32839506172840105,
+            0.32839506172840105,
+            0.32839506172840105
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.171
+          ],
+          "world": [
+            0.02956012680651289,
+            4.857487044215897,
+            -0.0374821525478792
+          ],
+          "cameraSpace": [
+            -0.00493281644089838,
+            0.020321956497255655,
+            -0.521557646346676
+          ],
+          "projectionPixels": [
+            943.2949656283931,
+            471.17948217770527
+          ],
+          "projectedBoundingBox": {
+            "minX": 940.9265776937133,
+            "minY": 468.8142920300658,
+            "maxX": 945.6634378460294,
+            "maxY": 473.544844974813
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5219767169679124,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.35,
+            0,
+            -0.03
+          ],
+          "world": [
+            0.03841523392976932,
+            4.908488222941208,
+            -0.02503692669759714
+          ],
+          "cameraSpace": [
+            0.018593478449797196,
+            0.06557030143823361,
+            -0.5062763660070504
+          ],
+          "projectionPixels": [
+            1024.8675844837608,
+            311.24306892577874
+          ],
+          "projectedBoundingBox": {
+            "minX": 1020.3185511272728,
+            "minY": 304.822747219325,
+            "maxX": 1029.431318104615,
+            "maxY": 317.64845938116355
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5108433621462343,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.4,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.0003312179200002374,
+            -0.03496988927999998,
+            -0.17388919255039992
+          ],
+          "world": [
+            0.0343884213902732,
+            4.841042890027933,
+            -0.035373171210056564
+          ],
+          "cameraSpace": [
+            -0.004713311000099862,
+            0.0030605334556081942,
+            -0.5211507928507494
+          ],
+          "projectionPixels": [
+            944.0258620873982,
+            529.6273800933184
+          ],
+          "projectedBoundingBox": {
+            "minX": 938.09763347969,
+            "minY": 523.6196971381489,
+            "maxX": 949.9529944213523,
+            "maxY": 535.6378973281353
+          },
+          "opacity": 0.19938271604937274,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.5211810923801642,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.5201636958489976,
+              "pointLocal": [
+                0.2793079089296171,
+                -0.03318814709338902,
+                -0.16862367911967624
+              ]
+            }
+          ],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 7757,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.2445502452097692,
+        0.8548171667686653,
+        2.231118987171671
+      ],
+      "camera": [
+        -0.019576105448743927,
+        4.865654414051519,
+        0.43202790483448883
+      ],
+      "target": [
+        0.03919613036942614,
+        4.845830514069197,
+        0.00011524953156254328
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.018389739873854394,
+            -0.0426575277067478,
+            -0.429812295224533
+          ],
+          "projectionPixels": [
+            884.4296407443696,
+            715.2958288626555
+          ],
+          "projectedBoundingBox": {
+            "minX": 509.82161877245346,
+            "minY": 78.25583082397972,
+            "maxX": 1207.061489519873,
+            "maxY": 1423.5824600503677
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4323152279631855,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            -0.01233667184814613,
+            0.000674657915857857,
+            -0.46991842513810456
+          ],
+          "projectionPixels": [
+            913.6307283136304,
+            537.4641948346488
+          ],
+          "projectedBoundingBox": {
+            "minX": 850.8369311682709,
+            "minY": 419.05853599795705,
+            "maxX": 974.6018342881138,
+            "maxY": 658.8192446767813
+          },
+          "opacity": 0.7799927575518235,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4700808174344796,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.46974241631676406,
+              "pointLocal": [
+                0.2796223875072279,
+                -0.01937023784836267,
+                -0.17126932620475444
+              ]
+            }
+          ],
+          "scale": [
+            1.0499902505505316,
+            0.43,
+            0.25999758585060784
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            -0.008585447608653984,
+            0.0012876121877427593,
+            -0.4615622894423641
+          ],
+          "projectionPixels": [
+            927.1460676178774,
+            535.0726944384522
+          ],
+          "projectedBoundingBox": {
+            "minX": 857.5134916461573,
+            "minY": 403.1617383323086,
+            "maxX": 994.0624182694298,
+            "maxY": 670.6390639003521
+          },
+          "opacity": 0.39999628592401204,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4616439265181159,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1.1499893220315345,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            -0.0047502605427909295,
+            0.0038074370363556653,
+            -0.45496569767826833
+          ],
+          "projectionPixels": [
+            941.5586159667739,
+            525.2188300121093
+          ],
+          "projectedBoundingBox": {
+            "minX": 941.5586159667739,
+            "minY": 525.2188300121093,
+            "maxX": 941.5586159667739,
+            "maxY": 525.2188300121093
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4550064259061443,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0,
+            0,
+            0
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.03422055248448701,
+            4.826036792649556,
+            -0.028335212681784017
+          ],
+          "cameraSpace": [
+            -0.013812660914680697,
+            -0.015137963657565479,
+            -0.464734213023309
+          ],
+          "projectionPixels": [
+            907.503851660421,
+            597.5330698867796
+          ],
+          "projectedBoundingBox": {
+            "minX": 889.7474540300113,
+            "minY": 579.7924458801479,
+            "maxX": 925.2485451102702,
+            "maxY": 615.2880677120172
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.46518580836009604,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.030224910876251208,
+            4.8580940884166575,
+            -0.03493665466358535
+          ],
+          "cameraSpace": [
+            -0.008977607699031998,
+            0.017161059048074634,
+            -0.46927401397295476
+          ],
+          "projectionPixels": [
+            926.209948518545,
+            475.4089543505832
+          ],
+          "projectedBoundingBox": {
+            "minX": 908.6314935064165,
+            "minY": 457.8888416595158,
+            "maxX": 943.7769286975722,
+            "maxY": 492.94312481709215
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4696735031678262,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.35,
+            0,
+            -0.03
+          ],
+          "world": [
+            0.03841523392976932,
+            4.908488222941208,
+            -0.02503692669759714
+          ],
+          "cameraSpace": [
+            0.014704140930294152,
+            0.062140474944835766,
+            -0.45828849043315356
+          ],
+          "projectionPixels": [
+            1016.6702908515895,
+            300.50836254401236
+          ],
+          "projectedBoundingBox": {
+            "minX": 1011.7057437839995,
+            "minY": 293.3332594892919,
+            "maxX": 1021.6515262823766,
+            "maxY": 307.6910270926788
+          },
+          "opacity": 0,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4627158856689128,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.4,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.40254514118599527,
+            0.0015950128350904723,
+            -0.03933035276686706
+          ],
+          "world": [
+            0.03828586486007551,
+            4.917293831781077,
+            -0.02888448154684346
+          ],
+          "cameraSpace": [
+            0.01671577168642746,
+            0.07090481146018845,
+            -0.4616794945413141
+          ],
+          "projectionPixels": [
+            1023.9500046416865,
+            268.73743988267785
+          ],
+          "projectedBoundingBox": {
+            "minX": 1017.2486118705643,
+            "minY": 262.05585006598733,
+            "maxX": 1030.6607673060255,
+            "maxY": 275.4235056803289
+          },
+          "opacity": 0.95,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4673915542574566,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 7820,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.20524566047571824,
+        0.7420193967838995,
+        2.0957986994435505
+      ],
+      "camera": [
+        -0.005511510397234333,
+        4.864654169861996,
+        0.40275725149843017
+      ],
+      "target": [
+        0.03974533603054413,
+        4.846531111809384,
+        -0.00002500000000000072
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.01937729105767549,
+            -0.04307316282404016,
+            -0.3991067071543102
+          ],
+          "projectionPixels": [
+            874.2451341662473,
+            730.6217586357527
+          ],
+          "projectedBoundingBox": {
+            "minX": 462.2291752271293,
+            "minY": 46.69929616480802,
+            "maxX": 1224.643940418271,
+            "maxY": 1500.7680316982287
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.40189170240247096,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            -0.012306625756040464,
+            -0.00006603090208834315,
+            -0.439395811091233
+          ],
+          "projectionPixels": [
+            910.5304662586659,
+            540.2654275837734
+          ],
+          "projectedBoundingBox": {
+            "minX": 842.5241983841703,
+            "minY": 413.9923117634639,
+            "maxX": 976.5019890850808,
+            "maxY": 669.9468490565883
+          },
+          "opacity": 0.78,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.43956812464292916,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.43903386879317685,
+              "pointLocal": [
+                0.27941022717949693,
+                -0.019073833388882022,
+                -0.17024247753843813
+              ]
+            }
+          ],
+          "scale": [
+            1.05,
+            0.43,
+            0.26
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            -0.008738751206729177,
+            0.0005996162235994972,
+            -0.4309637540999382
+          ],
+          "projectionPixels": [
+            924.1851311688291,
+            537.5425348669131
+          ],
+          "projectedBoundingBox": {
+            "minX": 848.4545064084979,
+            "minY": 396.6876734669912,
+            "maxX": 996.8451253646298,
+            "maxY": 682.6347600341242
+          },
+          "opacity": 0.4000704197530865,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4310527608775759,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1.15,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            -0.005042206575954999,
+            0.0031584058713800536,
+            -0.4243033221821792
+          ],
+          "projectionPixels": [
+            939.0106525010841,
+            526.8524072985931
+          ],
+          "projectedBoundingBox": {
+            "minX": 939.0002696263693,
+            "minY": 526.8402385284056,
+            "maxX": 939.0210353511458,
+            "maxY": 526.8645760931835
+          },
+          "opacity": 0.00034505679012368805,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.42434503483561237,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.00011971358024699383,
+            0.00009858765432105374,
+            0.00008802469135808369
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.03422055248448701,
+            4.826036792649556,
+            -0.028335212681784017
+          ],
+          "cameraSpace": [
+            -0.013945659595830936,
+            -0.015834258923588248,
+            -0.4341260717111474
+          ],
+          "projectionPixels": [
+            903.2614899310503,
+            604.4223568771856
+          ],
+          "projectedBoundingBox": {
+            "minX": 884.2555964604041,
+            "minY": 585.4263876434367,
+            "maxX": 922.2627756656979,
+            "maxY": 623.4385494034592
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4346385294892461,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.030224910876251208,
+            4.8580940884166575,
+            -0.03493665466358535
+          ],
+          "cameraSpace": [
+            -0.00891146214324978,
+            0.01641487579400724,
+            -0.4388020278673579
+          ],
+          "projectionPixels": [
+            924.1296944528384,
+            473.92704802143453
+          ],
+          "projectedBoundingBox": {
+            "minX": 905.3288588807984,
+            "minY": 455.2020472577797,
+            "maxX": 942.9260205678571,
+            "maxY": 492.6717710609704
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.43919936471421356,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.3498391177111956,
+            0.0000019209825528884153,
+            -0.030034097440313767
+          ],
+          "world": [
+            0.03841166789701046,
+            4.908458868821092,
+            -0.025035505154807798
+          ],
+          "cameraSpace": [
+            0.014649722010781071,
+            0.061379965447880366,
+            -0.42763608988714374
+          ],
+          "projectionPixels": [
+            1020.5075779976938,
+            286.4830360535043
+          ],
+          "projectedBoundingBox": {
+            "minX": 1015.3468533825402,
+            "minY": 278.91470513375657,
+            "maxX": 1025.6776523471437,
+            "maxY": 294.0529715741753
+          },
+          "opacity": 0.00035209876543233477,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4322669775582464,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.40008644421488,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.0849050171417256,
+            -0.02728136207802495,
+            -0.1455954124471318
+          ],
+          "world": [
+            0.03520793951837912,
+            4.857076228172802,
+            -0.03400878995658675
+          ],
+          "cameraSpace": [
+            -0.004386100053815455,
+            0.01393569254657034,
+            -0.43848219162187874
+          ],
+          "projectionPixels": [
+            942.332247364115,
+            483.86530956849197
+          ],
+          "projectedBoundingBox": {
+            "minX": 935.2690888873384,
+            "minY": 476.761930782523,
+            "maxX": 949.3923364745763,
+            "maxY": 490.97409200047304
+          },
+          "opacity": 0.95,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4387255107353122,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 7900,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.06860433992408588,
+        0.31570260701330977,
+        2.0416848324819075
+      ],
+      "camera": [
+        0.06778619308109202,
+        4.877307772947296,
+        0.37026546203510446
+      ],
+      "target": [
+        0.03960100599487941,
+        4.846689320485431,
+        -0.000025000000000000716
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.020065815483469418,
+            -0.04326264925311296,
+            -0.36900690993835245
+          ],
+          "projectionPixels": [
+            863.9544935117102,
+            747.0777070069034
+          ],
+          "projectedBoundingBox": {
+            "minX": 401.1532900688149,
+            "minY": 4.016581281309537,
+            "maxX": 1267.2448317466972,
+            "maxY": 1583.2206360377852
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3720757897978123,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            -0.005617812224279817,
+            -0.0009215210984940825,
+            -0.4080108029288815
+          ],
+          "projectionPixels": [
+            935.6807435643905,
+            543.9892233863291
+          ],
+          "projectedBoundingBox": {
+            "minX": 859.2220907223732,
+            "minY": 408.0138379216065,
+            "maxX": 1010.5357388447119,
+            "maxY": 683.2253373655627
+          },
+          "opacity": 0.78,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.40805051687504673,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.407463009603692,
+              "pointLocal": [
+                0.2794980827714646,
+                -0.01951665856437801,
+                -0.16981131774367597
+              ]
+            }
+          ],
+          "scale": [
+            1.05,
+            0.43,
+            0.26
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            -0.003711908136483366,
+            -0.00008695766149635631,
+            -0.39906969374278217
+          ],
+          "projectionPixels": [
+            943.5712996887409,
+            540.3848698049529
+          ],
+          "projectedBoundingBox": {
+            "minX": 856.9869267291343,
+            "minY": 388.2727743068612,
+            "maxX": 1027.727012886809,
+            "maxY": 696.5792768438733
+          },
+          "opacity": 0.5991653544683229,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.39908696582024145,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1.15,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            -0.001349643609619866,
+            0.0026103360522542474,
+            -0.3918782048199737
+          ],
+          "projectionPixels": [
+            953.9169312012397,
+            528.234780144501
+          ],
+          "projectedBoundingBox": {
+            "minX": 921.4512536125607,
+            "minY": 491.13048312510097,
+            "maxX": 986.2646998881311,
+            "maxY": 565.5454478042166
+          },
+          "opacity": 0.9759102368947818,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3918892226192294,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.3385811025961488,
+            0.27883149625565196,
+            0.24895669308540352
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.03422055248448701,
+            4.826036792649556,
+            -0.028335212681784017
+          ],
+          "cameraSpace": [
+            -0.008180808848242904,
+            -0.016605314313543396,
+            -0.40285878597499564
+          ],
+          "projectionPixels": [
+            924.1327449566973,
+            612.8029531806002
+          ],
+          "projectedBoundingBox": {
+            "minX": 903.7610436248912,
+            "minY": 592.3401070037579,
+            "maxX": 944.461808785287,
+            "maxY": 633.3037609496752
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4032838498305014,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.030224910876251208,
+            4.8580940884166575,
+            -0.03493665466358535
+          ],
+          "cameraSpace": [
+            -0.002441984984381751,
+            0.015587891638308093,
+            -0.40708699968780826
+          ],
+          "projectionPixels": [
+            949.4047674999242,
+            472.36758737250244
+          ],
+          "projectedBoundingBox": {
+            "minX": 929.2711034562099,
+            "minY": 452.24575772147284,
+            "maxX": 969.4967294740076,
+            "maxY": 492.52635790638016
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.407392649628357,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.015000000000000013,
+            0.004,
+            -0.101
+          ],
+          "world": [
+            0.03098979895432807,
+            4.847365085571734,
+            -0.022076894005562595
+          ],
+          "cameraSpace": [
+            -0.0059295995231900545,
+            0.004364202224759417,
+            -0.39513144278832113
+          ],
+          "projectionPixels": [
+            933.4943470085105,
+            520.4917635159403
+          ],
+          "projectedBoundingBox": {
+            "minX": 926.8047015101221,
+            "minY": 512.5503594359706,
+            "maxX": 940.1790206161198,
+            "maxY": 528.4275291508585
+          },
+          "opacity": 0.9958267723416141,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3952000297210823,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.5800000000000001,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.5394313086419754,
+            0.014039209876543219,
+            0.006464292345679047
+          ],
+          "world": [
+            0.03961228860773069,
+            4.943244448051996,
+            -0.026676174453453553
+          ],
+          "cameraSpace": [
+            0.029445242386806125,
+            0.09392586087004418,
+            -0.39117130154953184
+          ],
+          "projectionPixels": [
+            1092.9544519290826,
+            115.89544722037768
+          ],
+          "projectedBoundingBox": {
+            "minX": 1084.9813520261891,
+            "minY": 107.93313780106831,
+            "maxX": 1100.9264444878695,
+            "maxY": 123.8237857458175
+          },
+          "opacity": 0.95,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4033659341037013,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 7939,
+      "scene": "remodel",
+      "cameraLocal": [
+        -0.008649763834718271,
+        0.12435308212490703,
+        2.0188557623894425
+      ],
+      "camera": [
+        0.10073536510906894,
+        4.882806726810077,
+        0.35599040762745227
+      ],
+      "target": [
+        0.039525338254693114,
+        4.846814643635395,
+        -0.000025000000000000716
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.01991867587008644,
+            -0.04355342816885343,
+            -0.3609224559126803
+          ],
+          "projectionPixels": [
+            862.5231926916385,
+            753.139123951991
+          ],
+          "projectedBoundingBox": {
+            "minX": 388.9112737768641,
+            "minY": -9.962548970063562,
+            "maxX": 1282.2970496970302,
+            "maxY": 1607.9660700765608
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3640860803926974,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            -0.0021871409721212483,
+            -0.0014195103224361458,
+            -0.39877936066034303
+          ],
+          "projectionPixels": [
+            950.3127872203372,
+            546.2872483811732
+          ],
+          "projectedBoundingBox": {
+            "minX": 871.3362625365096,
+            "minY": 406.83327245544666,
+            "maxX": 1027.866135954837,
+            "maxY": 688.7682119415646
+          },
+          "opacity": 0.78,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3987878848258299,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.39836559026622226,
+              "pointLocal": [
+                0.2796943356868731,
+                -0.019847137980958163,
+                -0.17067894462414124
+              ]
+            }
+          ],
+          "scale": [
+            1.05,
+            0.43,
+            0.26
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            -0.0011454030395787738,
+            -0.0004903687543329481,
+            -0.3897061099734983
+          ],
+          "projectionPixels": [
+            954.8087032892566,
+            542.2224925318482
+          ],
+          "projectedBoundingBox": {
+            "minX": 865.2674054174626,
+            "minY": 386.07073804124724,
+            "maxX": 1042.5364788354764,
+            "maxY": 702.1742007898487
+          },
+          "opacity": 0.6000000000000001,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3897081017381018,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1.15,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            0.0005011632718394664,
+            0.0022904503231835345,
+            -0.3823488642497093
+          ],
+          "projectionPixels": [
+            962.315123518749,
+            529.4192657170076
+          ],
+          "projectedBoundingBox": {
+            "minX": 928.7939046598922,
+            "minY": 491.2055005359925,
+            "maxX": 995.8082029615998,
+            "maxY": 567.8382441188648
+          },
+          "opacity": 0.98,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3823560530714149,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.34,
+            0.28,
+            0.25
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.03422055248448701,
+            4.826036792649556,
+            -0.028335212681784017
+          ],
+          "cameraSpace": [
+            -0.005096896229535685,
+            -0.017081142780877908,
+            -0.39374545630302454
+          ],
+          "projectionPixels": [
+            937.1363811307783,
+            616.6224621426767
+          ],
+          "projectedBoundingBox": {
+            "minX": 916.2519807085387,
+            "minY": 595.70091349554,
+            "maxX": 958.0233316114463,
+            "maxY": 637.5911351281536
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.394148738611647,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.030224910876251208,
+            4.8580940884166575,
+            -0.03493665466358535
+          ],
+          "cameraSpace": [
+            0.0007491634016734137,
+            0.015125725119188967,
+            -0.39771479464284376
+          ],
+          "projectionPixels": [
+            963.3270516405297,
+            472.82631204408773
+          ],
+          "projectedBoundingBox": {
+            "minX": 942.6494897000373,
+            "minY": 452.27330640437293,
+            "maxX": 984.0071131837759,
+            "maxY": 493.42514935624615
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3980030234608564,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.015000000000000013,
+            0.004,
+            -0.101
+          ],
+          "world": [
+            0.03098979895432807,
+            4.847365085571734,
+            -0.022076894005562595
+          ],
+          "cameraSpace": [
+            -0.0037638113447568946,
+            0.003974052084835477,
+            -0.3860381835131986
+          ],
+          "projectionPixels": [
+            942.779239806181,
+            521.8173145032807
+          ],
+          "projectedBoundingBox": {
+            "minX": 935.9526979770541,
+            "minY": 513.7258839550832,
+            "maxX": 949.5993323768574,
+            "maxY": 529.9186196230471
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.3860769851933444,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.5800000000000001,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.4279721103163612,
+            0.003906555483305554,
+            -0.03082387582143556
+          ],
+          "world": [
+            0.038532251593755215,
+            4.922114227669849,
+            -0.028474282639696393
+          ],
+          "cameraSpace": [
+            0.024123640785501436,
+            0.07398645693515425,
+            -0.3836293252118369
+          ],
+          "projectionPixels": [
+            1071.0671915839882,
+            199.36037349818037
+          ],
+          "projectedBoundingBox": {
+            "minX": 1062.9080557286597,
+            "minY": 191.3841626988744,
+            "maxX": 1079.232387111245,
+            "maxY": 207.32384040725586
+          },
+          "opacity": 0.95,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.391442722524068,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    },
+    {
+      "frame": 8000,
+      "scene": "remodel",
+      "cameraLocal": [
+        0.011474280756374355,
+        -0.05174877765590935,
+        2.24763125514572
+      ],
+      "camera": [
+        0.14175437699232277,
+        4.891872405117752,
+        0.3867949260143412
+      ],
+      "target": [
+        0.047189427766424895,
+        4.85125203770006,
+        0.0005775519272289923
+      ],
+      "plaqueVisible": true,
+      "vesselVisible": true,
+      "objects": [
+        {
+          "name": "aorta-wall",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            0,
+            0
+          ],
+          "world": [
+            0.033008,
+            4.8,
+            0.007975
+          ],
+          "cameraSpace": [
+            -0.0267118896836378,
+            -0.04655187150785167,
+            -0.40111126621578874
+          ],
+          "projectionPixels": [
+            842.3763945202509,
+            744.987330864037
+          ],
+          "projectedBoundingBox": {
+            "minX": 434.9052572485538,
+            "minY": 55.691761587395185,
+            "maxX": 1209.9100904609506,
+            "maxY": 1507.2517872868725
+          },
+          "opacity": 0.92,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.40468611253240167,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 0.92
+          }
+        },
+        {
+          "name": "subintimal-lipid-pool",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.17300000000000001
+          ],
+          "world": [
+            0.031817571040515615,
+            4.841335470150248,
+            -0.03460177050165253
+          ],
+          "cameraSpace": [
+            -0.007752368489036376,
+            -0.004386832749034397,
+            -0.43833311010535103
+          ],
+          "projectionPixels": [
+            928.7618816349716,
+            557.6767140075605
+          ],
+          "projectedBoundingBox": {
+            "minX": 858.1763036938636,
+            "minY": 429.7151508581071,
+            "maxX": 998.4942271290861,
+            "maxY": 688.0923056714802
+          },
+          "opacity": 0.78,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.4384236067245782,
+          "wallHitsBeforeCenter": [
+            {
+              "distance": 0.4378311313010032,
+              "pointLocal": [
+                0.27963712061392343,
+                -0.020042904556691443,
+                -0.16972881545105079
+              ]
+            }
+          ],
+          "scale": [
+            1.05,
+            0.43,
+            0.26
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "fibrous-cap-on-lumen-surface",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0,
+            -0.02,
+            -0.12200000000000001
+          ],
+          "world": [
+            0.0340778368776259,
+            4.843399420432836,
+            -0.025947077695053434
+          ],
+          "cameraSpace": [
+            -0.007360892639822092,
+            -0.0033028626201545563,
+            -0.42922574191145546
+          ],
+          "projectionPixels": [
+            929.7099870492691,
+            553.5912526420689
+          ],
+          "projectedBoundingBox": {
+            "minX": 849.8171761469282,
+            "minY": 410.58171154883144,
+            "maxX": 1008.5233967758403,
+            "maxY": 699.6718261174223
+          },
+          "opacity": 0.6000000000000001,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.42930155970061645,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1.15,
+            0.48,
+            0.08
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "thrombus-growing-from-rupture",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.012,
+            -0.02,
+            -0.07900000000000001
+          ],
+          "world": [
+            0.03611187125028996,
+            4.84722918164345,
+            -0.019181811015868383
+          ],
+          "cameraSpace": [
+            -0.006306566920384338,
+            -0.00037211895523636684,
+            -0.4218181553376878
+          ],
+          "projectionPixels": [
+            933.5927926319761,
+            541.5581571622964
+          ],
+          "projectedBoundingBox": {
+            "minX": 903.2577366605373,
+            "minY": 506.7603687327851,
+            "maxX": 963.8605905681683,
+            "maxY": 576.5293413553707
+          },
+          "opacity": 0.98,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.42186546129225583,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.34,
+            0.28,
+            0.25
+          ],
+          "materialData": {}
+        },
+        {
+          "name": "intimal-foam-cell-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            -0.09,
+            -0.035,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.03422055248448701,
+            4.826036792649556,
+            -0.028335212681784017
+          ],
+          "cameraSpace": [
+            -0.010512721191234586,
+            -0.02006418442138802,
+            -0.4332641163688363
+          ],
+          "projectionPixels": [
+            917.143454577036,
+            621.7943913272336
+          ],
+          "projectedBoundingBox": {
+            "minX": 898.0889332531672,
+            "minY": 602.833982354856,
+            "maxX": 936.1833329867678,
+            "maxY": 640.8015967069049
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.43385583243308906,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "intimal-foam-cell-7",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.09,
+            -0.0010000000000000009,
+            -0.15600000000000003
+          ],
+          "world": [
+            0.030224910876251208,
+            4.8580940884166575,
+            -0.03493665466358535
+          ],
+          "cameraSpace": [
+            -0.005408655673320828,
+            0.012256529556753826,
+            -0.437330363180319
+          ],
+          "projectionPixels": [
+            938.1558857720936,
+            490.49915397719184
+          ],
+          "projectedBoundingBox": {
+            "minX": 919.2866034752969,
+            "minY": 471.8749474668906,
+            "maxX": 957.0108022794454,
+            "maxY": 509.16889919473067
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.43753551013877473,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            1,
+            1,
+            1
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "platelet-adhesion-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.015000000000000013,
+            0.004,
+            -0.101
+          ],
+          "world": [
+            0.03098979895432807,
+            4.847365085571734,
+            -0.022076894005562595
+          ],
+          "cameraSpace": [
+            -0.010360117109448952,
+            0.001124671388826215,
+            -0.4258136464878041
+          ],
+          "projectionPixels": [
+            917.0265892472858,
+            535.3349016190392
+          ],
+          "projectedBoundingBox": {
+            "minX": 910.8449361819904,
+            "minY": 528.1768618351234,
+            "maxX": 923.2097171275318,
+            "maxY": 542.4876522879512
+          },
+          "opacity": 1,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.42594114434683933,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.8,
+            0.5800000000000001,
+            0.7
+          ],
+          "materialData": {
+            "opacity": 1
+          }
+        },
+        {
+          "name": "ldl-near-wall-0",
+          "visible": true,
+          "parentVisible": true,
+          "positionLocal": [
+            0.11543209876542826,
+            -0.024506172839506526,
+            -0.135382716049384
+          ],
+          "world": [
+            0.03550374622233486,
+            4.862863493575952,
+            -0.033516313820078705
+          ],
+          "cameraSpace": [
+            0.00026663775268920276,
+            0.015538902629151252,
+            -0.43422427756678705
+          ],
+          "projectionPixels": [
+            961.0845817053042,
+            476.79361102429255
+          ],
+          "projectedBoundingBox": {
+            "minX": 953.8591732977001,
+            "minY": 469.6486918882474,
+            "maxX": 968.307681754181,
+            "maxY": 483.94551737642104
+          },
+          "opacity": 0.95,
+          "depthWrite": false,
+          "transparent": true,
+          "renderOrder": 0,
+          "frustumCulled": true,
+          "worldDistance": 0.43450230358308517,
+          "wallHitsBeforeCenter": [],
+          "scale": [
+            0.38,
+            0.38,
+            0.38
+          ],
+          "materialData": {}
+        }
+      ]
+    }
+  ]
+}

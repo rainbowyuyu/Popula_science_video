@@ -1,0 +1,1493 @@
+{
+  "version": 2,
+  "title": "文件能写进 DNA 吗？",
+  "series": "每天5分钟科普 · 生信算法与 DNA 存储",
+  "fps": 30,
+  "durationSec": 300,
+  "durationFrames": 9000,
+  "assets": [
+    {
+      "id": "logo-rainbow",
+      "kind": "logo",
+      "path": "brand/logo.png",
+      "description": "rainbow鱼标识",
+      "license": "provided"
+    },
+    {
+      "id": "file-world",
+      "kind": "three-scene",
+      "path": "3d/lab_environment.glb",
+      "description": "家庭视频、文件块和存储介质的连续场景",
+      "optional": true,
+      "fallbackId": "three-file-world"
+    },
+    {
+      "id": "three-file-world",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/FileWorld.ts",
+      "description": "Three.js 文件块替代场景"
+    },
+    {
+      "id": "dna-helix",
+      "kind": "gltf",
+      "path": "3d/dna_double_helix.glb",
+      "description": "带材质的 DNA 双螺旋",
+      "optional": true,
+      "fallbackId": "three-dna-helix"
+    },
+    {
+      "id": "three-dna-helix",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/DNAHelix.ts",
+      "description": "Three.js DNA 双螺旋替代场景"
+    },
+    {
+      "id": "fountain-droplets",
+      "kind": "gltf",
+      "path": "3d/dna_droplet.glb",
+      "description": "DNA Fountain 液滴关系模型",
+      "optional": true,
+      "fallbackId": "three-fountain"
+    },
+    {
+      "id": "three-fountain",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/Fountain.ts",
+      "description": "Three.js Fountain 替代场景"
+    },
+    {
+      "id": "water-surface",
+      "kind": "water-surface",
+      "path": "v2/src/water/WaterProSurface.ts",
+      "description": "用于湿实验段的微观液面与光泽",
+      "optional": true
+    },
+    {
+      "id": "qwen-lab-cutaway",
+      "kind": "qwen-video",
+      "path": "media/qwen-lab-cutaway.mp4",
+      "description": "合成、测序设备的电影感过场",
+      "optional": true,
+      "fallbackId": "three-lab-cutaway"
+    },
+    {
+      "id": "three-lab-cutaway",
+      "kind": "three-scene",
+      "path": "v2/src/scenes/LabCutaway.ts",
+      "description": "Three.js 实验链路替代场景"
+    },
+    {
+      "id": "paper-goldman",
+      "kind": "paper-scan",
+      "path": "papers/goldman-2013-page.png",
+      "description": "Goldman 2013 PMC真实论文页截图",
+      "optional": false,
+      "source": "公开论文页面/预印本，见 v2/research/paper-sources.json"
+    },
+    {
+      "id": "paper-fountain",
+      "kind": "paper-scan",
+      "path": "papers/dna-fountain-preprint-01.png",
+      "description": "DNA Fountain 2017 bioRxiv预印本首页",
+      "optional": false,
+      "source": "公开论文页面/预印本，见 v2/research/paper-sources.json"
+    },
+    {
+      "id": "paper-transformer",
+      "kind": "paper-scan",
+      "path": "papers/nucleotide-transformer-2024-01.png",
+      "description": "Nucleotide Transformer 2024 论文首页",
+      "optional": false,
+      "source": "公开论文页面/预印本，见 v2/research/paper-sources.json"
+    },
+    {
+      "id": "music-dna",
+      "kind": "audio",
+      "path": "public/music/dna_ambient.wav",
+      "description": "环境音乐底床"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e-goldman-2013",
+      "label": "DNA 高密度存储",
+      "kind": "paper",
+      "claim": "合成 DNA 可作为高密度、低维护的信息存储介质。",
+      "citation": "Goldman et al., Nature",
+      "year": 2013,
+      "doi": "10.1038/nature11875",
+      "confidence": "primary",
+      "onScreen": true
+    },
+    {
+      "id": "e-fountain-2017",
+      "label": "DNA Fountain",
+      "kind": "paper",
+      "claim": "随机组合与冗余关系让丢失部分液滴后仍有机会恢复。",
+      "citation": "Erlich & Zielinski, Science",
+      "year": 2017,
+      "doi": "10.1126/science.aaj2038",
+      "confidence": "primary",
+      "onScreen": true
+    },
+    {
+      "id": "e-random-access-2018",
+      "label": "随机访问",
+      "kind": "paper",
+      "claim": "地址设计支持从大型 DNA 数据库中定位目标文件。",
+      "citation": "Organick et al., Nature Biotechnology",
+      "year": 2018,
+      "doi": "10.1038/nbt.4079",
+      "confidence": "primary",
+      "onScreen": false
+    },
+    {
+      "id": "e-alignment",
+      "label": "局部比对",
+      "kind": "algorithm",
+      "claim": "局部比对可在含替换、插入、缺失的读段中寻找共同片段。",
+      "citation": "Smith & Waterman, Journal of Molecular Biology",
+      "year": 1981,
+      "doi": "10.1016/0022-2836(81)90087-5",
+      "confidence": "primary",
+      "onScreen": true
+    },
+    {
+      "id": "e-transformer",
+      "label": "基因组大模型",
+      "kind": "paper",
+      "claim": "基因组基础模型可辅助序列表示与候选评分，但不能替代实验验证。",
+      "citation": "Dalla-Torre et al., Nature Methods",
+      "year": 2024,
+      "doi": "10.1038/s41592-024-02523-z",
+      "confidence": "primary",
+      "onScreen": true
+    },
+    {
+      "id": "e-teaching-errors",
+      "label": "固定教学样本",
+      "kind": "visualization",
+      "claim": "画面中的红色替换、插入、缺失是可复现的示意数据，不冒充真实实验测序结果。",
+      "confidence": "teaching-example",
+      "onScreen": true
+    },
+    {
+      "id": "e-model-limit",
+      "label": "模型边界",
+      "kind": "limitation",
+      "claim": "大模型只能辅助候选筛选、检索和质量预测，编码器、合成仪与测序仪仍决定可验证结果。",
+      "confidence": "secondary",
+      "onScreen": true
+    }
+  ],
+  "shots": [
+    {
+      "id": "s01-hook",
+      "kind": "hook",
+      "startSec": 0,
+      "endSec": 18,
+      "title": "一滴液体，能装下一段家庭视频吗？",
+      "visualIntent": "从手机视频缩到文件块，再沿着一束光推进到液滴，先展示一次读回失败。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          5.4,
+          2.6,
+          10.8
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 38,
+        "lensMm": 45,
+        "focusDistance": 10.8,
+        "apertureFStop": 2.4,
+        "moveDurationSec": 4,
+        "easing": "sine-in-out"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          1.6,
+          0.8,
+          5.2
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 32,
+        "lensMm": 55,
+        "focusDistance": 5.2,
+        "apertureFStop": 2.0,
+        "moveDurationSec": 10,
+        "easing": "cubic-in-out"
+      },
+      "anchors": [
+        {
+          "id": "file",
+          "label": "家庭视频",
+          "position": [
+            -3.6,
+            0.9,
+            0
+          ],
+          "scale": 1.1,
+          "emphasis": "hero",
+          "preserveWorldTransform": true
+        },
+        {
+          "id": "droplet",
+          "label": "液滴",
+          "position": [
+            2.2,
+            -0.3,
+            0
+          ],
+          "scale": 0.8,
+          "opacity": 0.18,
+          "emphasis": "support",
+          "preserveWorldTransform": true
+        }
+      ],
+      "assetIds": [
+        "logo-rainbow",
+        "file-world",
+        "three-file-world",
+        "music-dna"
+      ],
+      "narrationCueIds": [
+        "n01",
+        "n02",
+        "n03"
+      ],
+      "evidenceIds": [
+        "e-teaching-errors"
+      ],
+      "transitionOut": "camera-dolly",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 18
+      },
+      "fromAnchor": "droplet",
+      "toAnchor": "address",
+      "handoff": {
+        "fromAnchor": "droplet",
+        "toAnchor": "address",
+        "toShot": "s02-encode",
+        "type": "camera-dolly"
+      }
+    },
+    {
+      "id": "s02-encode",
+      "kind": "encode",
+      "startSec": 18,
+      "endSec": 44,
+      "title": "先把文件翻译成四个字母",
+      "visualIntent": "镜头不切黑：文件块沿轨道拆成比特，经过地址卡，拼成 A/T/C/G 双螺旋。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          1.6,
+          0.8,
+          5.2
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 32,
+        "lensMm": 55,
+        "focusDistance": 5.2,
+        "apertureFStop": 2.0,
+        "moveDurationSec": 3,
+        "easing": "cubic-in-out"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          -0.4,
+          0.2,
+          4.1
+        ],
+        "target": [
+          0.6,
+          0,
+          0
+        ],
+        "fovDeg": 29,
+        "lensMm": 65,
+        "focusDistance": 4.1,
+        "apertureFStop": 1.8,
+        "moveDurationSec": 20,
+        "easing": "smoothstep"
+      },
+      "anchors": [
+        {
+          "id": "address",
+          "label": "地址",
+          "position": [
+            -2.2,
+            0.4,
+            0
+          ],
+          "scale": 0.9,
+          "emphasis": "focus"
+        },
+        {
+          "id": "helix",
+          "label": "DNA 双螺旋",
+          "position": [
+            1.7,
+            0,
+            0
+          ],
+          "scale": 1.1,
+          "emphasis": "hero",
+          "preserveWorldTransform": true
+        },
+        {
+          "id": "bases",
+          "label": "A/T/C/G",
+          "position": [
+            1.2,
+            -1.9,
+            0
+          ],
+          "scale": 0.72,
+          "emphasis": "support"
+        }
+      ],
+      "assetIds": [
+        "three-file-world",
+        "dna-helix",
+        "three-dna-helix"
+      ],
+      "narrationCueIds": [
+        "n04",
+        "n05",
+        "n06",
+        "n07"
+      ],
+      "evidenceIds": [
+        "e-goldman-2013"
+      ],
+      "transitionIn": "camera-dolly",
+      "transitionOut": "orbit-match",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 16
+      },
+      "fromAnchor": "helix",
+      "toAnchor": "candidate-strip",
+      "handoff": {
+        "fromAnchor": "helix",
+        "toAnchor": "candidate-strip",
+        "toShot": "s03-constraint",
+        "type": "orbit-match"
+      }
+    },
+    {
+      "id": "s03-constraint",
+      "kind": "constraint",
+      "startSec": 44,
+      "endSec": 75,
+      "title": "写入前，算法先拒绝危险序列",
+      "visualIntent": "双螺旋被拉成一条可扫描的候选带，GC 比例与同聚物长度像质检门一样逐条放行。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          -0.4,
+          0.2,
+          4.1
+        ],
+        "target": [
+          0.6,
+          0,
+          0
+        ],
+        "fovDeg": 29,
+        "lensMm": 65,
+        "focusDistance": 4.1,
+        "apertureFStop": 1.8,
+        "moveDurationSec": 3,
+        "easing": "smoothstep"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          0,
+          1.1,
+          3.6
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 31,
+        "lensMm": 58,
+        "focusDistance": 3.6,
+        "apertureFStop": 2.2,
+        "moveDurationSec": 24,
+        "easing": "sine-in-out"
+      },
+      "anchors": [
+        {
+          "id": "candidate-strip",
+          "label": "候选序列",
+          "position": [
+            0,
+            0.6,
+            0
+          ],
+          "scale": [
+            1.25,
+            1,
+            1
+          ],
+          "emphasis": "hero",
+          "preserveWorldTransform": true
+        },
+        {
+          "id": "gc-meter",
+          "label": "GC 比例",
+          "position": [
+            -1.8,
+            -1.4,
+            0
+          ],
+          "scale": 0.82,
+          "emphasis": "focus"
+        },
+        {
+          "id": "homopolymer-meter",
+          "label": "同聚物长度",
+          "position": [
+            1.8,
+            -1.4,
+            0
+          ],
+          "scale": 0.82,
+          "emphasis": "focus"
+        }
+      ],
+      "assetIds": [
+        "three-dna-helix"
+      ],
+      "narrationCueIds": [
+        "n08",
+        "n09",
+        "n10",
+        "n11"
+      ],
+      "evidenceIds": [
+        "e-teaching-errors"
+      ],
+      "transitionIn": "orbit-match",
+      "transitionOut": "particle-bridge",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 15
+      },
+      "fromAnchor": "candidate-strip",
+      "toAnchor": "droplet-network",
+      "handoff": {
+        "fromAnchor": "candidate-strip",
+        "toAnchor": "droplet-network",
+        "toShot": "s04-fountain",
+        "type": "particle-bridge"
+      }
+    },
+    {
+      "id": "s04-fountain",
+      "kind": "fountain",
+      "startSec": 75,
+      "endSec": 118,
+      "title": "丢几片，也要把文件救回来",
+      "visualIntent": "候选片段从平面升起成为带地址的液滴，镜头绕过液滴关系网，逐步消掉未知量。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          0,
+          1.1,
+          3.6
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 31,
+        "lensMm": 58,
+        "focusDistance": 3.6,
+        "apertureFStop": 2.2,
+        "moveDurationSec": 4,
+        "easing": "sine-in-out"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          3.8,
+          1.8,
+          5.8
+        ],
+        "target": [
+          0.2,
+          0,
+          0
+        ],
+        "fovDeg": 36,
+        "lensMm": 48,
+        "focusDistance": 5.8,
+        "apertureFStop": 2.8,
+        "moveDurationSec": 34,
+        "easing": "cubic-in-out"
+      },
+      "anchors": [
+        {
+          "id": "droplet-network",
+          "label": "液滴关系网",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.1,
+          "emphasis": "hero",
+          "preserveWorldTransform": true
+        },
+        {
+          "id": "recovered-block",
+          "label": "已找回片段",
+          "position": [
+            2.5,
+            -1.5,
+            0
+          ],
+          "scale": 0.9,
+          "emphasis": "focus"
+        }
+      ],
+      "assetIds": [
+        "fountain-droplets",
+        "three-fountain"
+      ],
+      "narrationCueIds": [
+        "n12",
+        "n13",
+        "n14",
+        "n15",
+        "n16"
+      ],
+      "evidenceIds": [
+        "e-fountain-2017"
+      ],
+      "transitionIn": "particle-bridge",
+      "transitionOut": "camera-dolly",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 16
+      },
+      "fromAnchor": "droplet-network",
+      "toAnchor": "synthesis",
+      "handoff": {
+        "fromAnchor": "droplet-network",
+        "toAnchor": "synthesis",
+        "toShot": "s05-wet-lab",
+        "type": "camera-dolly"
+      }
+    },
+    {
+      "id": "s05-wet-lab",
+      "kind": "wet-lab",
+      "startSec": 118,
+      "endSec": 160,
+      "title": "分子读写，会带来什么噪声？",
+      "visualIntent": "液滴顺着镜头飞入实验台，透过透明液面看到合成、保存、测序，替换插入缺失在读段上亮起。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          3.8,
+          1.8,
+          5.8
+        ],
+        "target": [
+          0.2,
+          0,
+          0
+        ],
+        "fovDeg": 36,
+        "lensMm": 48,
+        "focusDistance": 5.8,
+        "apertureFStop": 2.8,
+        "moveDurationSec": 4,
+        "easing": "cubic-in-out"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          -2.8,
+          0.6,
+          4.4
+        ],
+        "target": [
+          0,
+          -0.4,
+          0
+        ],
+        "fovDeg": 34,
+        "lensMm": 52,
+        "focusDistance": 4.4,
+        "apertureFStop": 2.2,
+        "moveDurationSec": 32,
+        "easing": "smoothstep"
+      },
+      "anchors": [
+        {
+          "id": "synthesis",
+          "label": "合成",
+          "position": [
+            -2.2,
+            1.0,
+            0
+          ],
+          "scale": 0.9,
+          "emphasis": "support"
+        },
+        {
+          "id": "storage",
+          "label": "保存",
+          "position": [
+            0,
+            1.0,
+            0
+          ],
+          "scale": 0.9,
+          "emphasis": "support"
+        },
+        {
+          "id": "sequencing",
+          "label": "测序",
+          "position": [
+            2.2,
+            1.0,
+            0
+          ],
+          "scale": 0.9,
+          "emphasis": "focus"
+        },
+        {
+          "id": "error-read",
+          "label": "读回噪声",
+          "position": [
+            0,
+            -1.4,
+            0
+          ],
+          "scale": 1.0,
+          "opacity": 0.92,
+          "emphasis": "hero"
+        }
+      ],
+      "assetIds": [
+        "water-surface",
+        "qwen-lab-cutaway",
+        "three-lab-cutaway"
+      ],
+      "narrationCueIds": [
+        "n17",
+        "n18",
+        "n19",
+        "n20",
+        "n21"
+      ],
+      "evidenceIds": [
+        "e-teaching-errors"
+      ],
+      "transitionIn": "camera-dolly",
+      "transitionOut": "macro-push",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 17
+      },
+      "fromAnchor": "error-read",
+      "toAnchor": "address-buckets",
+      "handoff": {
+        "fromAnchor": "error-read",
+        "toAnchor": "address-buckets",
+        "toShot": "s06-decode",
+        "type": "macro-push"
+      }
+    },
+    {
+      "id": "s06-decode",
+      "kind": "decode",
+      "startSec": 160,
+      "endSec": 216,
+      "title": "从短读段里找回证据",
+      "visualIntent": "沿一条带地址的读段飞行，镜头穿过分桶、局部比对矩阵与质量加权共识，缺口被证据补齐。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          -2.8,
+          0.6,
+          4.4
+        ],
+        "target": [
+          0,
+          -0.4,
+          0
+        ],
+        "fovDeg": 34,
+        "lensMm": 52,
+        "focusDistance": 4.4,
+        "apertureFStop": 2.2,
+        "moveDurationSec": 4,
+        "easing": "smoothstep"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          0.5,
+          -0.1,
+          3.2
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 30,
+        "lensMm": 62,
+        "focusDistance": 3.2,
+        "apertureFStop": 1.9,
+        "moveDurationSec": 45,
+        "easing": "cubic-in-out"
+      },
+      "anchors": [
+        {
+          "id": "address-buckets",
+          "label": "地址分桶",
+          "position": [
+            -2.2,
+            0.9,
+            0
+          ],
+          "scale": 0.92,
+          "emphasis": "support"
+        },
+        {
+          "id": "alignment-grid",
+          "label": "局部比对",
+          "position": [
+            0,
+            0.1,
+            0
+          ],
+          "scale": 1.08,
+          "emphasis": "hero",
+          "preserveWorldTransform": true
+        },
+        {
+          "id": "consensus-column",
+          "label": "共识",
+          "position": [
+            2.2,
+            -1.0,
+            0
+          ],
+          "scale": 0.95,
+          "emphasis": "focus"
+        }
+      ],
+      "assetIds": [
+        "three-lab-cutaway",
+        "three-dna-helix"
+      ],
+      "narrationCueIds": [
+        "n22",
+        "n23",
+        "n24",
+        "n25",
+        "n26",
+        "n27"
+      ],
+      "evidenceIds": [
+        "e-alignment",
+        "e-teaching-errors"
+      ],
+      "transitionIn": "macro-push",
+      "transitionOut": "orbit-match",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 16
+      },
+      "fromAnchor": "alignment-grid",
+      "toAnchor": "tokens",
+      "handoff": {
+        "fromAnchor": "alignment-grid",
+        "toAnchor": "tokens",
+        "toShot": "s07-model-assist",
+        "type": "orbit-match"
+      }
+    },
+    {
+      "id": "s07-model-assist",
+      "kind": "model-assist",
+      "startSec": 216,
+      "endSec": 262,
+      "title": "大模型能帮哪一步？",
+      "visualIntent": "比对矩阵的格点变成 token，镜头绕过候选评分、约束检查、文献检索和读回反馈组成的闭环。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          0.5,
+          -0.1,
+          3.2
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 30,
+        "lensMm": 62,
+        "focusDistance": 3.2,
+        "apertureFStop": 1.9,
+        "moveDurationSec": 4,
+        "easing": "cubic-in-out"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          -1.4,
+          1.4,
+          4.8
+        ],
+        "target": [
+          0.2,
+          0,
+          0
+        ],
+        "fovDeg": 35,
+        "lensMm": 50,
+        "focusDistance": 4.8,
+        "apertureFStop": 2.4,
+        "moveDurationSec": 36,
+        "easing": "sine-in-out"
+      },
+      "anchors": [
+        {
+          "id": "tokens",
+          "label": "序列 token",
+          "position": [
+            -2.0,
+            0.8,
+            0
+          ],
+          "scale": 0.9,
+          "emphasis": "support"
+        },
+        {
+          "id": "candidate-score",
+          "label": "候选评分",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1.0,
+          "emphasis": "hero"
+        },
+        {
+          "id": "tool-loop",
+          "label": "工具闭环",
+          "position": [
+            2.1,
+            -0.5,
+            0
+          ],
+          "scale": 0.92,
+          "emphasis": "focus"
+        },
+        {
+          "id": "model-boundary",
+          "label": "证据边界",
+          "position": [
+            0,
+            -1.8,
+            0
+          ],
+          "scale": 0.8,
+          "opacity": 0.82,
+          "emphasis": "support"
+        }
+      ],
+      "assetIds": [
+        "three-dna-helix",
+        "three-file-world"
+      ],
+      "narrationCueIds": [
+        "n28",
+        "n29",
+        "n30",
+        "n31",
+        "n32"
+      ],
+      "evidenceIds": [
+        "e-transformer",
+        "e-model-limit"
+      ],
+      "transitionIn": "orbit-match",
+      "transitionOut": "data-wipe",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 16
+      },
+      "fromAnchor": "tool-loop",
+      "toAnchor": "file-recovered",
+      "handoff": {
+        "fromAnchor": "tool-loop",
+        "toAnchor": "file-recovered",
+        "toShot": "s08-return",
+        "type": "data-wipe"
+      }
+    },
+    {
+      "id": "s08-return",
+      "kind": "return",
+      "startSec": 262,
+      "endSec": 295,
+      "title": "文件回到屏幕，链路才算完成",
+      "visualIntent": "镜头沿着同一条数据轨迹反向飞行，模型评分退到背景，地址、共识和文件块重新连成一段视频。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          -1.4,
+          1.4,
+          4.8
+        ],
+        "target": [
+          0.2,
+          0,
+          0
+        ],
+        "fovDeg": 35,
+        "lensMm": 50,
+        "focusDistance": 4.8,
+        "apertureFStop": 2.4,
+        "moveDurationSec": 4,
+        "easing": "sine-in-out"
+      },
+      "cameraOut": {
+        "projection": "perspective",
+        "position": [
+          5.0,
+          2.4,
+          9.0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 40,
+        "lensMm": 43,
+        "focusDistance": 9.0,
+        "apertureFStop": 3.2,
+        "moveDurationSec": 24,
+        "easing": "smoothstep"
+      },
+      "anchors": [
+        {
+          "id": "file-recovered",
+          "label": "复原文件",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.25,
+          "emphasis": "hero",
+          "preserveWorldTransform": true
+        },
+        {
+          "id": "audit-trail",
+          "label": "可检查证据",
+          "position": [
+            0,
+            -1.7,
+            0
+          ],
+          "scale": 0.76,
+          "emphasis": "support"
+        }
+      ],
+      "assetIds": [
+        "three-file-world",
+        "three-dna-helix",
+        "three-fountain"
+      ],
+      "narrationCueIds": [
+        "n33",
+        "n34",
+        "n35"
+      ],
+      "evidenceIds": [
+        "e-fountain-2017",
+        "e-model-limit"
+      ],
+      "transitionIn": "data-wipe",
+      "transitionOut": "camera-dolly",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 17
+      },
+      "fromAnchor": "file-recovered",
+      "toAnchor": "papers",
+      "handoff": {
+        "fromAnchor": "file-recovered",
+        "toAnchor": "papers",
+        "toShot": "s09-evidence",
+        "type": "camera-dolly"
+      }
+    },
+    {
+      "id": "s09-evidence",
+      "kind": "evidence",
+      "startSec": 295,
+      "endSec": 300,
+      "title": "公式留下，证据也留下",
+      "visualIntent": "同一条镜头轨迹落到桌面，论文扫描页与三条公式以层叠方式出现，保留呼吸感。",
+      "cameraIn": {
+        "projection": "perspective",
+        "position": [
+          5.0,
+          2.4,
+          9.0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fovDeg": 40,
+        "lensMm": 43,
+        "focusDistance": 9.0,
+        "apertureFStop": 3.2,
+        "moveDurationSec": 2,
+        "easing": "smoothstep"
+      },
+      "cameraOut": {
+        "projection": "orthographic",
+        "position": [
+          0,
+          0,
+          16
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "orthoHeight": 9,
+        "moveDurationSec": 3,
+        "easing": "sine-in-out"
+      },
+      "anchors": [
+        {
+          "id": "papers",
+          "label": "论文页",
+          "position": [
+            -1.8,
+            0.1,
+            0
+          ],
+          "scale": 0.94,
+          "emphasis": "hero"
+        },
+        {
+          "id": "formulas",
+          "label": "公式",
+          "position": [
+            2.2,
+            0.2,
+            0
+          ],
+          "scale": 0.84,
+          "emphasis": "focus"
+        }
+      ],
+      "assetIds": [
+        "paper-goldman",
+        "paper-fountain",
+        "paper-transformer",
+        "logo-rainbow"
+      ],
+      "narrationCueIds": [
+        "n36"
+      ],
+      "evidenceIds": [
+        "e-goldman-2013",
+        "e-fountain-2017",
+        "e-transformer"
+      ],
+      "transitionIn": "camera-dolly",
+      "transitionOut": "hold",
+      "textBudget": {
+        "maxLines": 2,
+        "maxCharsPerLine": 18
+      }
+    }
+  ],
+  "narration": [
+    {
+      "id": "n01",
+      "startSec": 0,
+      "endSec": 6,
+      "shotId": "s01-hook",
+      "text": "一段家庭视频，手机能存，硬盘也能存。",
+      "visualIntent": "手机画面压缩为发光文件块并靠近液滴。",
+      "pronunciation": "一段家庭视频，手机能存，硬盘也能存。"
+    },
+    {
+      "id": "n02",
+      "startSec": 6,
+      "endSec": 12,
+      "shotId": "s01-hook",
+      "text": "要是换成一滴液体，画面还能留下来吗？",
+      "visualIntent": "错误读回样本出现替换、插入、缺失，红色仅作教学标记。",
+      "evidenceIds": [
+        "e-teaching-errors"
+      ],
+      "pronunciation": "要是换成一滴液体，画面还能留下来吗？"
+    },
+    {
+      "id": "n03",
+      "startSec": 12,
+      "endSec": 18,
+      "shotId": "s01-hook",
+      "text": "科学家试着把文件写进 DNA，再把它读回来。",
+      "visualIntent": "镜头从失败读段沿轨迹推进到编码入口。",
+      "pronunciation": "科学家试着把文件写进 DNA，再把它读回来。"
+    },
+    {
+      "id": "n04",
+      "startSec": 18,
+      "endSec": 24,
+      "shotId": "s02-encode",
+      "text": "DNA 的字母表只有四个符号。把二进制两位一组，就能映射成一枚碱基。",
+      "visualIntent": "比特方块成对合并，亮起 A、T、C、G。"
+    },
+    {
+      "id": "n05",
+      "startSec": 24,
+      "endSec": 31,
+      "shotId": "s02-encode",
+      "text": "文件不能只剩一串字母。算法先分片，再给每片加地址。",
+      "visualIntent": "片段分离并挂上地址卡，地址随镜头向双螺旋移动。",
+      "pronunciation": "文件不能只剩一串字母。算法先分片，再给每片加地址。"
+    },
+    {
+      "id": "n06",
+      "startSec": 31,
+      "endSec": 37,
+      "shotId": "s02-encode",
+      "text": "这样读回片段时，算法知道它来自文件哪一段。",
+      "visualIntent": "地址标签把散开的读段送入正确轨道。",
+      "pronunciation": "这样读回片段时，算法知道它来自文件哪一段。"
+    },
+    {
+      "id": "n07",
+      "startSec": 37,
+      "endSec": 44,
+      "shotId": "s02-encode",
+      "text": "看到 DNA，算法已经留下两条线索：内容和地址。",
+      "visualIntent": "镜头绕过双螺旋，地址和序列同时入焦。",
+      "evidenceIds": [
+        "e-goldman-2013"
+      ],
+      "pronunciation": "看到 DNA，算法已经留下两条线索：内容和地址。"
+    },
+    {
+      "id": "n08",
+      "startSec": 44,
+      "endSec": 51,
+      "shotId": "s03-constraint",
+      "text": "写入前，每条候选先过质检。GC 失衡，合成和读取都会变难。",
+      "visualIntent": "GC 仪表从危险区滑回可控区。",
+      "pronunciation": "写入前，每条候选先过质检。GC 失衡，合成和读取都会变难。"
+    },
+    {
+      "id": "n09",
+      "startSec": 51,
+      "endSec": 58,
+      "shotId": "s03-constraint",
+      "text": "第二关看同一字母是否连得太长。长串 A，设备容易读错。",
+      "visualIntent": "同聚物长度条超限变红，候选序列退回。",
+      "pronunciation": "第二关看同一字母是否连得太长。长串 A，设备容易读错。"
+    },
+    {
+      "id": "n10",
+      "startSec": 58,
+      "endSec": 66,
+      "shotId": "s03-constraint",
+      "text": "不合格的候选会被重新映射，直到它给分子读写设备留出足够余量。",
+      "visualIntent": "失败候选沿屏幕外退出，新候选从同一方向平滑进入。"
+    },
+    {
+      "id": "n11",
+      "startSec": 66,
+      "endSec": 75,
+      "shotId": "s03-constraint",
+      "text": "这不是把字母挑得更漂亮，而是提前承认真实世界有噪声，把风险留在写入之前处理掉。",
+      "visualIntent": "质检门闭合，镜头穿过扫描线进入液滴关系网。",
+      "evidenceIds": [
+        "e-teaching-errors"
+      ]
+    },
+    {
+      "id": "n12",
+      "startSec": 75,
+      "endSec": 83,
+      "shotId": "s04-fountain",
+      "text": "可只挑好序列还不够，因为保存和测序都可能让某些片段消失。",
+      "visualIntent": "若干片段熄灭，关系网仍保持连通。"
+    },
+    {
+      "id": "n13",
+      "startSec": 83,
+      "endSec": 92,
+      "shotId": "s04-fountain",
+      "text": "DNA Fountain 的想法，是把源片段随机组合成很多液滴，每滴都记住自己由哪些片段组合而成。",
+      "visualIntent": "源片段进入液滴，连线显示组合关系。",
+      "evidenceIds": [
+        "e-fountain-2017"
+      ]
+    },
+    {
+      "id": "n14",
+      "startSec": 92,
+      "endSec": 101,
+      "shotId": "s04-fountain",
+      "text": "液滴足够多时，解码器先找只有一个未知数的那滴。找回一片，就能继续消掉其他未知数。",
+      "visualIntent": "解码过程像数独，已知块依次点亮并向外传播。",
+      "pronunciation": "液滴足够多时，解码器先找只有一个未知数的那滴。找回一片，就能继续消掉其他未知数。"
+    },
+    {
+      "id": "n15",
+      "startSec": 101,
+      "endSec": 110,
+      "shotId": "s04-fountain",
+      "text": "所以冗余不是把文件复制很多遍，而是把恢复关系设计进组合里。",
+      "visualIntent": "复制的视觉退到背景，关系边被高亮。"
+    },
+    {
+      "id": "n16",
+      "startSec": 110,
+      "endSec": 118,
+      "shotId": "s04-fountain",
+      "text": "多一些不同的组合，换来丢掉几片以后仍能恢复的机会。这是 Fountain 真正有用的地方。",
+      "visualIntent": "缺片后剩余液滴汇成完整文件轮廓。",
+      "evidenceIds": [
+        "e-fountain-2017"
+      ]
+    },
+    {
+      "id": "n17",
+      "startSec": 118,
+      "endSec": 126,
+      "shotId": "s05-wet-lab",
+      "text": "接下来进入真正麻烦的环节：合成、保存，再把 DNA 测回来。",
+      "visualIntent": "液滴飞入透明实验台，三个步骤沿同一条轨道排开。"
+    },
+    {
+      "id": "n18",
+      "startSec": 126,
+      "endSec": 135,
+      "shotId": "s05-wet-lab",
+      "text": "读回来的不是整齐原文，可能有替换、插入、缺失，也可能整条片段根本没有被读到。",
+      "visualIntent": "读段逐类出现错误，镜头做微距推进。"
+    },
+    {
+      "id": "n19",
+      "startSec": 135,
+      "endSec": 143,
+      "shotId": "s05-wet-lab",
+      "text": "画面里的红色字母是固定生成的教学样本，只用来让错误看得见，不冒充某一次真实实验。",
+      "visualIntent": "红色错误标签短暂出现后贴回读段。",
+      "evidenceIds": [
+        "e-teaching-errors"
+      ]
+    },
+    {
+      "id": "n20",
+      "startSec": 143,
+      "endSec": 151,
+      "shotId": "s05-wet-lab",
+      "text": "这一步的关键不是把噪声藏起来，而是让后面的算法有证据可用。",
+      "visualIntent": "噪声被分层保存，清晰读段保持可追踪。"
+    },
+    {
+      "id": "n21",
+      "startSec": 151,
+      "endSec": 160,
+      "shotId": "s05-wet-lab",
+      "text": "镜头跟着一条读段离开实验台，下一站是地址分桶。",
+      "visualIntent": "镜头穿过水面高光，沿地址标签进入分桶空间。"
+    },
+    {
+      "id": "n22",
+      "startSec": 160,
+      "endSec": 169,
+      "shotId": "s06-decode",
+      "text": "读回的短片段，首先要找到自己的位置。",
+      "visualIntent": "读段沿地址轨道进入不同桶，镜头横向滑行。",
+      "pronunciation": "读回的短片段，首先要找到自己的位置。"
+    },
+    {
+      "id": "n23",
+      "startSec": 169,
+      "endSec": 179,
+      "shotId": "s06-decode",
+      "text": "同一位置的多条读段，还要做局部比对。动态规划矩阵展示的，就是这一小块相似关系。",
+      "visualIntent": "镜头从桶内压入矩阵，格点沿对角线生长。",
+      "evidenceIds": [
+        "e-alignment"
+      ]
+    },
+    {
+      "id": "n24",
+      "startSec": 179,
+      "endSec": 188,
+      "shotId": "s06-decode",
+      "text": "对齐以后，每一列都有几种候选。质量更高的读段，投下更亮的权重。",
+      "visualIntent": "列方向权重光束聚合，低质量读段半透明。"
+    },
+    {
+      "id": "n25",
+      "startSec": 188,
+      "endSec": 198,
+      "shotId": "s06-decode",
+      "text": "按列取共识，缺口就从多条证据的交集里补回来。",
+      "visualIntent": "共识列向上收束，缺失位置由多条路径共同填充。"
+    },
+    {
+      "id": "n26",
+      "startSec": 198,
+      "endSec": 207,
+      "shotId": "s06-decode",
+      "text": "外层纠错再补最后一层余量：编码负责写入前，局部比对和共识负责读回后。",
+      "visualIntent": "写入端与读回端两条轨道在镜头前后对齐。"
+    },
+    {
+      "id": "n27",
+      "startSec": 207,
+      "endSec": 216,
+      "shotId": "s06-decode",
+      "text": "生信算法的价值，就是把杂乱的短读段，变成可以核对的文件证据。",
+      "visualIntent": "矩阵退成文件块，镜头向 token 网格平滑转场。",
+      "evidenceIds": [
+        "e-alignment"
+      ]
+    },
+    {
+      "id": "n28",
+      "startSec": 216,
+      "endSec": 225,
+      "shotId": "s07-model-assist",
+      "text": "那大模型能帮哪一步？它先把 DNA 看成一串 token，而不是一句自然语言。",
+      "visualIntent": "共识列切成 token，形成可旋转的序列带。"
+    },
+    {
+      "id": "n29",
+      "startSec": 225,
+      "endSec": 235,
+      "shotId": "s07-model-assist",
+      "text": "模型可以给候选序列打分，提示哪一段更可能在这次实验里出错，也能检索论文和调用约束检查器。",
+      "visualIntent": "候选评分、检索和工具节点依次点亮。",
+      "evidenceIds": [
+        "e-transformer"
+      ]
+    },
+    {
+      "id": "n30",
+      "startSec": 235,
+      "endSec": 245,
+      "shotId": "s07-model-assist",
+      "text": "它还可以观察读回结果，提出下一轮候选，把筛选变成一个会回看的闭环。",
+      "visualIntent": "读回反馈箭头回到候选入口，镜头绕环一周。"
+    },
+    {
+      "id": "n31",
+      "startSec": 245,
+      "endSec": 254,
+      "shotId": "s07-model-assist",
+      "text": "但模型不能凭空替代纠错码，也不能保证一条序列一定合成成功。",
+      "visualIntent": "模型节点降低亮度，编码器与实验设备保留实体高光。",
+      "evidenceIds": [
+        "e-model-limit"
+      ]
+    },
+    {
+      "id": "n32",
+      "startSec": 254,
+      "endSec": 262,
+      "shotId": "s07-model-assist",
+      "text": "预测可以加快筛选，证据仍要回到编码器、合成仪和测序仪。",
+      "visualIntent": "闭环收束为三类真实设备图标。",
+      "evidenceIds": [
+        "e-model-limit"
+      ]
+    },
+    {
+      "id": "n33",
+      "startSec": 262,
+      "endSec": 273,
+      "shotId": "s08-return",
+      "text": "回到开头那段视频：切片、地址、约束和冗余，经历一次分子读写。",
+      "visualIntent": "镜头沿同一轨迹反向飞行，四层标签依次回到文件块。"
+    },
+    {
+      "id": "n34",
+      "startSec": 273,
+      "endSec": 284,
+      "shotId": "s08-return",
+      "text": "再靠分桶、比对和共识，把噪声里的证据重新拼起来。",
+      "visualIntent": "读段、矩阵和共识列连续变回原文件。"
+    },
+    {
+      "id": "n35",
+      "startSec": 284,
+      "endSec": 295,
+      "shotId": "s08-return",
+      "text": "DNA 存储的难点，从来不只是把数据塞进去，而是让多年后的每一步，都留下可检查的证据。",
+      "visualIntent": "文件重新播放，镜头拉远展示完整数据链。",
+      "evidenceIds": [
+        "e-fountain-2017",
+        "e-model-limit"
+      ]
+    },
+    {
+      "id": "n36",
+      "startSec": 295,
+      "endSec": 300,
+      "shotId": "s09-evidence",
+      "text": "",
+      "visualIntent": "论文页与公式在桌面上层叠落下，最后停在系列标识。",
+      "evidenceIds": [
+        "e-goldman-2013",
+        "e-fountain-2017",
+        "e-transformer"
+      ],
+      "pronunciation": "",
+      "audio": "silent",
+      "caption": ""
+    }
+  ]
+}

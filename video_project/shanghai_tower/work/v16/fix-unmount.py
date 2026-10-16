@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('src/FilmV16.tsx');s=p.read_text(encoding='utf-8').replace('world.ready.then(async()=>{const layers=', 'world.ready.then(async()=>{if(!alive)return;const layers=').replace('await layers.ready;if(alive){render(frameRef.current);setReady(true);continueRender(handle)}})', 'await layers.ready;if(alive){render(frameRef.current);setReady(true);continueRender(handle)}else{layers.dispose()}})');p.write_text(s,encoding='utf-8')

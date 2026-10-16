@@ -1,0 +1,52 @@
+{
+  "version": "V19-Repair",
+  "character": "Original authored rainbow fish with 20-bone skin",
+  "roleScales": {
+    "observer": 0.94,
+    "friend": 0.9,
+    "spray": 0.68
+  },
+  "gaze": "WorldV10 actual eyeRay, friendRay and sprayLight ray endpoints; never camera position",
+  "appearance": "Neutral vertex-color multiplier, distinct dark iris and white catchlight material, no full-surface DoubleSide shell",
+  "reviews": {
+    "standaloneBlenderAngles": "Inspected front, three-quarter, profile, rear and two swim phases",
+    "integratedFirstPass": "Inspected frames 760,5618,10020; large spray actor then corrected with fixed role scales",
+    "finalIntegratedPass": "Parent project visual review required after new bundle"
+  },
+  "limitations": [
+    "Stylized mascot motion, not fish biomechanics",
+    "Fixed optical eye anchors, deterministic skeletal deformation; no gaze inferred from camera"
+  ],
+  "evidence": [
+    {
+      "path": "src/FishObserverV19Repair.ts",
+      "bytes": 16450,
+      "sha256": "f85b71e75563b401c36acbcf4a5f4b7d52641323cdb615996de9aa9aba7374cd"
+    },
+    {
+      "path": "scripts/build-fish-v19-repair.py",
+      "bytes": 18698,
+      "sha256": "8c2f61f66fc8d1b7e62649a1a36d996f29c6af652e143c8b2cee9f458ce6d812"
+    },
+    {
+      "path": "public/assets_v19_repair/characters/rainbow_fish_v19_repair.glb",
+      "bytes": 2105484,
+      "sha256": "b9994ff7c461e2ebae206ebe3c2bc3c23818730abe8cd34b6cdc6c3e67618a37"
+    },
+    {
+      "path": "public/assets_v19_repair/characters/rainbow-fish-source-v19-repair.blend",
+      "bytes": 843532,
+      "sha256": "e7ddd831072d65038c0365d26d6ab0aa9c7b1f04242782d738bc73c6817766fa"
+    },
+    {
+      "path": "research/qa-v19-repair/fish/fish-audit.json",
+      "bytes": 37088,
+      "sha256": "c9166c53686329dc44a8d358fcbc4a454d037a24df02807230e583f6db04b40e"
+    },
+    {
+      "path": "output-v19-repair/work/fish-review/fish-contact.jpg",
+      "bytes": 87287,
+      "sha256": "7a312d485b65e98a32df68a9bf662d4a14d9cd098adc8255859b46b9e2ef0e1e"
+    }
+  ]
+}

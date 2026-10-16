@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "rainbow_arc_2026",
+  "title": "彩虹为什么是弧形",
+  "category": "natural-science",
+  "status": "source-library",
+  "currentVersion": "V20 + warm-creek independent demo",
+  "workbench": {
+    "title": "彩虹为什么是弧形",
+    "seriesId": "rainbow-science",
+    "episode": 2,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/index-v20.tsx",
+    "scripts/render-v20.mjs",
+    "src/index-warm-creek.tsx"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render-v20.mjs",
+        "stills": "node scripts/render-v20.mjs stills",
+        "audit": "node scripts/audit-v20.mjs",
+        "render:warm-creek": "node scripts/render-warm-creek.mjs"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "output-v20/delivery/彩虹为什么是弧形_V20_optimized_1080p.mp4"
+    ],
+    "covers": []
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Blender (configure BLENDER_PATH; original D:/blender/blender.exe)"
+  ],
+  "notes": [
+    "STORAGE_LAYOUT.md 指定 V20；旧版本命名源码仍被当前入口使用，不得按文件名 Vxx 删除。"
+  ],
+  "originalMetadata": {}
+}

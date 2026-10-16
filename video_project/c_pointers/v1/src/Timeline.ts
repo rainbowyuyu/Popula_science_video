@@ -1,0 +1,10 @@
+import raw from './narration.json';
+export type Cue={id:string;scene:string;text:string;startFrame:number;endFrame:number;startSec:number;endSec:number};
+export const timeline=raw as {fps:number;durationFrames:number;durationSec:number;cues:Cue[];coda:{startSec:number;startFrame:number;endFrame:number}};
+export const clamp=(x:number)=>Math.max(0,Math.min(1,x));
+export const ease=(x:number)=>{const q=clamp(x);return q*q*(3-2*q);};
+export const cue=(id:string):Cue=>{const c=timeline.cues.find(c=>c.id===id);if(!c)throw new Error('Missing cue '+id);return c;};
+export const phase=(id:string,t:number)=>clamp((t-cue(id).startSec)/(cue(id).endSec-cue(id).startSec));
+export const progress=(id:string,t:number,delay=0,duration=1.4)=>ease((t-cue(id).startSec-delay)/duration);
+export const currentCue=(t:number)=>timeline.cues.find(c=>t>=c.startSec&&t<c.endSec)??[...timeline.cues].reverse().find(c=>t>=c.startSec);
+export const codaStart=timeline.coda.startSec;

@@ -1,0 +1,69 @@
+{
+  "id": "g060",
+  "text": "量血压时，先安静坐五分钟，背部有支撑，双脚落地。手臂有支撑，袖带中部与心脏同高，大小也要合适。",
+  "ttsText": "测血压时，先安静坐五分钟，背部有支撑，双脚落地。手臂有支撑，袖带中部与心脏同高，大小也要合适。",
+  "signature": "b1ec9ac9448845a82d8a1e4bdbc8ae6ad60644ad462597bae410395b5fd0d1f1",
+  "raw": "audio/raw/g060-b1ec9ac944.wav",
+  "processed": "public/voice/g060.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "991c5ae2770385d23c6d0f871eb0e465b6dae4a827b19aad89a756bfd6b704ad",
+  "seed": 3304954695,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g057",
+    "g058",
+    "g059",
+    "g060"
+  ],
+  "rawEndpointDB": -97.93195668952265,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "072c6466d3c5319fc9bb956aa3a7b7c4b67e20c2625136f0526813fdea80c83c",
+    "outputSha256": "991c5ae2770385d23c6d0f871eb0e465b6dae4a827b19aad89a756bfd6b704ad",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.1292342049085917,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.253291362215966,
+      "activeRmsDb": -22.883701864186254,
+      "quietFrameP10Db": -60.03325511297237
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -5.565772313849967,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.172706330085035
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

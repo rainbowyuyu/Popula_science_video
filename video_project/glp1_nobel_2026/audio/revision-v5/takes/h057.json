@@ -1,0 +1,87 @@
+{
+  "id": "h057",
+  "text": "交感神经一兴奋，心脏会加把劲，一些血管也会收紧。长期睡不好、反复缺氧等问题，也会增加调节负担。",
+  "ttsText": "交感神经一兴奋，心脏会加把劲，一些血管也会收紧。总是睡不好、反复缺氧等问题，也会增加调节负担。",
+  "signature": "7b176c5d6b652c8634f9fb7aa72e8d46c480851e34cec77213d23ff49ed68ca3",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h057-7b176c5d6b65-1e569c431f.wav",
+  "processed": "audio/revision-v5/voice/h057.wav",
+  "rawDuration": 9.04,
+  "duration": 9.04,
+  "sampleRate": 48000,
+  "sha256": "222d744e6c12a9bb024e44b9da59d8f605e9a642d70735e94d86021305e32b6d",
+  "rawSHA256": "eba1d5eb96feca4eed311733b302d6c5cee81931962ad5ad06f000544071998d",
+  "seed": 508992579,
+  "batchIds": [
+    "h057",
+    "h069"
+  ],
+  "batchKey": "1e569c431fa164f72b8a9e3830d2ca8af489af78b6ac5addb702247ebb36a42d",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -87.20500572854,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "eba1d5eb96feca4eed311733b302d6c5cee81931962ad5ad06f000544071998d",
+    "outputSha256": "222d744e6c12a9bb024e44b9da59d8f605e9a642d70735e94d86021305e32b6d",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.961514920299649,
+    "input": {
+      "seconds": 9.04,
+      "peakDb": -5.881009720196628,
+      "activeRmsDb": -22.659436332487157,
+      "quietFrameP10Db": -63.67937320284398
+    },
+    "output": {
+      "seconds": 9.04,
+      "peakDb": -4.97511493001705,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.64571365026037
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "pron-v2",
+  "candidateTakeSHA256": "8f921f1efa3866637cdceedcc3186604f0b431ad402b19d9bd44f3da193935e4",
+  "candidateRecord": "audio/revision-v5/candidates/pron-v2/takes/h057.json",
+  "selectionReason": "Pronunciation pass: avoid ambiguous 长 readings with natural spoken synonyms; preserve original caption wording.",
+  "previousSelectedSHA256": "a1a9ce0778c92b2910a448c67dd3f9144fcf2c119ab644b7f853988b51d7306c"
+}

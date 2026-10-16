@@ -1,0 +1,160 @@
+{
+  "id": "h006",
+  "partIndex": 1,
+  "expected": "血里不能一直堆着，身体得通知各处，把新来的糖接走。",
+  "heard": "學禮不能一直堆著 身體得通知各處 把新來的糖接走",
+  "words": [
+    {
+      "text": "學",
+      "start": 0.0,
+      "end": 0.5,
+      "probability": 0.43820086121559143
+    },
+    {
+      "text": "禮",
+      "start": 0.5,
+      "end": 0.68,
+      "probability": 0.7880070209503174
+    },
+    {
+      "text": "不能",
+      "start": 0.68,
+      "end": 0.88,
+      "probability": 0.9947645664215088
+    },
+    {
+      "text": "一直",
+      "start": 0.88,
+      "end": 1.12,
+      "probability": 0.9599503874778748
+    },
+    {
+      "text": "堆",
+      "start": 1.12,
+      "end": 1.36,
+      "probability": 0.9404909610748291
+    },
+    {
+      "text": "著",
+      "start": 1.36,
+      "end": 1.56,
+      "probability": 0.9617300629615784
+    },
+    {
+      "text": " 身",
+      "start": 1.9,
+      "end": 2.06,
+      "probability": 0.9966964721679688
+    },
+    {
+      "text": "體",
+      "start": 2.06,
+      "end": 2.2,
+      "probability": 0.9994612336158752
+    },
+    {
+      "text": "得",
+      "start": 2.2,
+      "end": 2.3,
+      "probability": 0.9792547821998596
+    },
+    {
+      "text": "通",
+      "start": 2.3,
+      "end": 2.48,
+      "probability": 0.9978735446929932
+    },
+    {
+      "text": "知",
+      "start": 2.48,
+      "end": 2.64,
+      "probability": 0.9992045760154724
+    },
+    {
+      "text": "各",
+      "start": 2.64,
+      "end": 2.8,
+      "probability": 0.9959599375724792
+    },
+    {
+      "text": "處",
+      "start": 2.8,
+      "end": 3.04,
+      "probability": 0.9896238446235657
+    },
+    {
+      "text": " 把",
+      "start": 3.38,
+      "end": 3.52,
+      "probability": 0.9909446239471436
+    },
+    {
+      "text": "新",
+      "start": 3.52,
+      "end": 3.72,
+      "probability": 0.9592462182044983
+    },
+    {
+      "text": "來",
+      "start": 3.72,
+      "end": 3.86,
+      "probability": 0.9976693987846375
+    },
+    {
+      "text": "的",
+      "start": 3.86,
+      "end": 3.96,
+      "probability": 0.9967254400253296
+    },
+    {
+      "text": "糖",
+      "start": 3.96,
+      "end": 4.18,
+      "probability": 0.7959179878234863
+    },
+    {
+      "text": "接",
+      "start": 4.18,
+      "end": 4.38,
+      "probability": 0.897184431552887
+    },
+    {
+      "text": "走",
+      "start": 4.38,
+      "end": 4.56,
+      "probability": 0.9988837838172913
+    }
+  ],
+  "sourceSHA256": "61d14081e20e785868cdaf1e581c0e908cffe24bc8d4b8b2db3591a7b37750c3",
+  "ratio": 0.9090909090909091,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "血里",
+      "heard": "学礼",
+      "end": 2
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 234240,
+    "seconds": 4.88,
+    "peakDBFS": -8.602423356974763,
+    "first20msDBFS": -82.14988791207281,
+    "last20msDBFS": -95.19662383670642,
+    "firstActiveMs": 240.0,
+    "lastActiveToEndMs": 350.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

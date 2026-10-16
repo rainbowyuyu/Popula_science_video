@@ -1,0 +1,46 @@
+[
+  {
+    "id": "hover",
+    "fromFrame": 0,
+    "endFrameExclusive": 173,
+    "voiceText": "车身翻滚，不代表它就能悬停。先把轨迹和姿态分开看。",
+    "visualQuestion": "保持高度的条件",
+    "action": "静止车体；等大反向重力与推力",
+    "anchorAndTime": "质心位置固定，解释平衡条件",
+    "evidence": "original teaching model; not measured Tesla footage",
+    "captionAlignment": "draft proportional; requires ASR or listening review"
+  },
+  {
+    "id": "ballistic",
+    "fromFrame": 173,
+    "endFrameExclusive": 377,
+    "voiceText": "没有推进时，车身可以继续转，质心却仍沿抛物线运动，最终下落。",
+    "visualQuestion": "合力决定质心运动变化",
+    "action": "同一车体滚转；质心按解析抛体轨迹",
+    "anchorAndTime": "独立无推进慢放；1.2秒物理时间",
+    "evidence": "original teaching model; not measured Tesla footage",
+    "captionAlignment": "draft proportional; requires ASR or listening review"
+  },
+  {
+    "id": "couple",
+    "fromFrame": 377,
+    "endFrameExclusive": 528,
+    "voiceText": "一上一下的推力，能让车转起来，却不能抵消重力。",
+    "visualQuestion": "净推力为零仍可有力矩",
+    "action": "加速转动、关喷口继续、反向制动；质心下落",
+    "anchorAndTime": "独立回放；0.6秒物理时间；主惯性轴x",
+    "evidence": "original teaching model; not measured Tesla footage",
+    "captionAlignment": "draft proportional; requires ASR or listening review"
+  },
+  {
+    "id": "fixed",
+    "fromFrame": 528,
+    "endFrameExclusive": 725,
+    "voiceText": "固定喷口跟着车身翻转。转到九十度，推力只剩横向，已经托不住车。",
+    "visualQuestion": "固定喷口方向随车翻转",
+    "action": "转到90度停留后转向180度；显示分量",
+    "anchorAndTime": "位置锁定为受力拆解，不是悬停预测",
+    "evidence": "original teaching model; not measured Tesla footage",
+    "captionAlignment": "draft proportional; requires ASR or listening review"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "id": "v2-close-1",
+  "text": "从需求到模型、报告，每一步都能回看。",
+  "ttsText": "从需求到模型、报告，每一步都能回看。",
+  "signature": "56ec5a616b738e03b7d67d821a22e15f13f3f566fecede008d3e54d386e3cfb9",
+  "raw": "audio/raw/v2-close-1-56ec5a616b.wav",
+  "processed": "public/voice/v2-close-1.wav",
+  "rawDuration": 3.84,
+  "duration": 4.08,
+  "sha256": "d613cbd106d9b1a68a919c0cf4f890ab94df1c6e2b3282cd6808938d77158311",
+  "seed": 1458330209,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "v2-close-1"
+  ],
+  "rawEndpointDB": -66.77519923996218,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "0fd53fbdea5599de2b56b6d95f108e8bde77d560a10c38235f63f37bde69820d",
+    "outputSha256": "d613cbd106d9b1a68a919c0cf4f890ab94df1c6e2b3282cd6808938d77158311",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 4.08,
+      "peakDb": -9.356456719005967,
+      "activeRmsDb": -25.385996316325176,
+      "quietFrameP10Db": -67.73657570079719
+    },
+    "output": {
+      "seconds": 4.08,
+      "peakDb": -4.794834652302363,
+      "activeRmsDb": -22.24885568522633,
+      "quietFrameP10Db": -67.14190357385013
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.6747286821705427,
+    "unmodifiedRawSHA256": "3337db736ecdea745f76f4479606150b06f17d6162b584e79193d17237455f24"
+  },
+  "subjectiveListeningChecked": false
+}

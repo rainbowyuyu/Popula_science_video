@@ -1,0 +1,80 @@
+{
+  "id": "beso-1",
+  "text": "每一轮，有限元计算给出结构变形，再用应变能评价材料对刚度的贡献。",
+  "ttsText": "每一轮，有限元计算给出结构变形，再用应变能评价材料对刚度的贡献。",
+  "signature": "2a856ae07784b944056953f83fb29810e0ef7c5c30e003cd393ef338d10866f1",
+  "raw": "audio/raw/beso-1-2a856ae077.wav",
+  "processed": "public/voice/beso-1.wav",
+  "rawDuration": 6.2400416666666665,
+  "duration": 6.480041666666667,
+  "sha256": "05d0c715507ea69879a1f70d2286e1ef7b82c4b4d0e09f2799d17f4f821de6c6",
+  "seed": 713386720,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "beso-1",
+    "beso-2"
+  ],
+  "rawEndpointDB": -80.24236232616829,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "759d0778efa8f3ab415b16222531c5578851b0ed026e1783d723449353ee4ca5",
+    "outputSha256": "05d0c715507ea69879a1f70d2286e1ef7b82c4b4d0e09f2799d17f4f821de6c6",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 6.480041666666667,
+      "peakDb": -9.365332278207074,
+      "activeRmsDb": -23.938074809703384,
+      "quietFrameP10Db": -66.27125684228838
+    },
+    "output": {
+      "seconds": 6.480041666666667,
+      "peakDb": -5.985171755033727,
+      "activeRmsDb": -21.122115190021095,
+      "quietFrameP10Db": -66.11426008010598
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.8491707317073172,
+    "unmodifiedRawSHA256": "5fc18f677785f3446cedf19657c8e9f61fe66882754d51cbf918ebeca0d0756a"
+  },
+  "subjectiveListeningChecked": false
+}

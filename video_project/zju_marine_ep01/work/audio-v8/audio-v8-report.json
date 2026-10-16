@@ -1,0 +1,585 @@
+{
+  "schema": "marine-immersive-audio-v8",
+  "duration": 360.43333333333334,
+  "sampleRate": 48000,
+  "sourceNarration": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\v8\\narration.wav",
+    "sha256": "55f4a9451a78f5078218baedc951f625f869896c8f61f84bffcfc8e0dd94f089",
+    "originalSamples": 17300160,
+    "paddingSamples": 640,
+    "unchanged": true
+  },
+  "timeline": {
+    "path": "work\\v8-native\\waterline-measured\\immersion-timeline-native.json",
+    "sha256": "a5ea5d36fdc65ff01771c76ef6979784422b6853a21bfbdf1aa35739011f3849",
+    "sources": {
+      "camera": {
+        "path": "src/CameraRail.ts",
+        "sha256": "697a04277681cb93a5d0d1379c91cf4fa90b5508bc7bb59b33e8d0a38143a7f9"
+      },
+      "wave": {
+        "path": "src/NativeWaterV7.ts",
+        "sha256": "50cb66a17b2fdc30ebcbf71df4ead1b57be75dbea9c7df62f9b6e7334a2a2619"
+      },
+      "story": {
+        "path": "src/story.json",
+        "sha256": "d5666d968f6f5ade11ce014c67bf85f3fce1d12a52f7be8884e5c11d5eca9142"
+      },
+      "nativeLibrary": {
+        "path": "work/waterpro-v4/vendor-valid/threejs-water-pro/build/index.js",
+        "sha256": "4d8589f487dbb495a7a8af0a3f9c29156ae7445f2c1d1fbc135c6909176a97ba"
+      },
+      "sampler": {
+        "path": "scripts/waterline_export_entry_v8.ts",
+        "sha256": "b25bcda8f8584bf4b266e203b111a1556d08f4b1ce7295cc09094d23e86d481c"
+      }
+    },
+    "backend": "webgpu",
+    "samplingFPS": 60,
+    "quality": "high",
+    "gpuSampleCount": 1277,
+    "samplingNotes": [
+      "Exact production NativeWater implementation evaluated at each near-surface absolute 60 Hz tick.",
+      "Objects omitted from sampler because the production FFT field has no rigid-body fluid feedback.",
+      "Far-field surfaceY is null; immersion is explicitly clamped, not measured.",
+      "Crossings linearly interpolate real GPU brackets; null residual is not a claimed solved root."
+    ],
+    "backendWarning": "Regenerate if camera or native-water parameters change; source hashes identify the evaluated version."
+  },
+  "narrationProcessing": {
+    "purpose": "Cinematic listener perspective, with intentionally preserved Mandarin speech clarity; not simulated physiology",
+    "dryFraction": 0.12,
+    "mainPassbandHz": [
+      100,
+      2050
+    ],
+    "clarityPassbandHz": [
+      1300,
+      3600
+    ],
+    "zeroPhaseFiltering": true,
+    "timeStretch": false,
+    "pitchChange": false,
+    "trimmedSyllables": false,
+    "waterlineSmoothingSigmaMs": 65,
+    "earlyReflectionTapsMs": [
+      9,
+      17,
+      31,
+      47
+    ],
+    "rmsCompensation": 1.063548174887473,
+    "preservedSourceSamplePositions": true
+  },
+  "sfxSources": [
+    {
+      "id": "705058",
+      "title": "Sea waves underwater, back and forth, close to the rocks with water bubbles",
+      "author": "felix.blume",
+      "description": "Field recording; Ilo harbor, Peru, recorded 2012; do not claim our scene was recorded underwater.",
+      "page": "https://freesound.org/people/felix.blume/sounds/705058/",
+      "license": "CC0 1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrievedDate": "2026-10-14",
+      "asset": "work\\audio-v7\\references\\705058.mp3",
+      "sha256": "8e7ec5a27617122e0a2a262584fcc55713c59f1166bef2562a84c33730d04b73",
+      "pageSHA256": "ad6bfa1bd9ed426a1db27ec75bc50c5aba03b2e3bc2be8a443d2222a04aab3b1",
+      "downloadQuality": "Freesound HQ MP3 preview; not lossless original"
+    },
+    {
+      "id": "852167",
+      "title": "WATRUndwtr_Underwater Submerge Transition_KOLBYR_FREE SOUNDS",
+      "author": "KolbyRFX",
+      "description": "Creator describes original hydrophone recordings combined with synthesized/granular elements.",
+      "page": "https://freesound.org/people/KolbyRFX/sounds/852167/",
+      "license": "CC0 1.0",
+      "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "retrievedDate": "2026-10-14",
+      "asset": "work\\audio-v7\\references\\852167.mp3",
+      "sha256": "4a7653e0f7337b5814477ac931a3048189962f1d42b09c24f7735479ce503553",
+      "pageSHA256": "b31d78d2320e2c7f91b041c541861026bb35f2c2fcfb71a9cb2a4527e9f86e50",
+      "downloadQuality": "Freesound HQ MP3 preview; not lossless original"
+    }
+  ],
+  "sfxProcessing": "CC0 field/mixed-source textures + original damped bubble clusters and waterline displacement; same absolute crossing times as camera",
+  "music": {
+    "path": "D:\\CloudMusic\\MoFeansy,Warsic - 汐渐.mp3",
+    "sha256": "a6fffebd4252e8b119e7bd6a7964e376d0f5302be0aa5352a0388f2ee5344595",
+    "title": "汐渐",
+    "artist": "MoFeansy,Warsic",
+    "rights": "User-provided music; no new public-performance or redistribution license is asserted",
+    "edits": [
+      {
+        "timelineStart": 219.6,
+        "sourceStart": 71.89333333333333,
+        "overlapSeconds": 6.4,
+        "type": "equal-power overlap; no pitch or tempo change",
+        "selection": {
+          "method": "recorded chroma and spectral-onset match",
+          "comparisonSeconds": 6.4,
+          "searchSourceSeconds": [
+            16,
+            72
+          ],
+          "harmonyCosine": 0.7891446352005005,
+          "onsetCorrelation": 0.803160416456857,
+          "weightedScore": 0.792228107076899,
+          "manualListeningConfirmed": false
+        }
+      }
+    ],
+    "processing": "Midrange pocket, continuous speech ducking, underwater lowpass and gain, 3.2s ending"
+  },
+  "crossings": [
+    {
+      "time": 14.266091620879566,
+      "frame": 856,
+      "kind": "enter",
+      "position": [
+        59.867635437456755,
+        0.03933171691224768,
+        68.80178646560898
+      ],
+      "surfaceY": 0.039331716912247676,
+      "residualMetres": null,
+      "precisionSeconds": 0.016666666666666666,
+      "bracket": [
+        {
+          "time": 14.25,
+          "distance": 0.42767425921021807
+        },
+        {
+          "time": 14.266666666666667,
+          "distance": -0.01528325100693606
+        }
+      ],
+      "assetOnset": 13.986091620879566,
+      "duration": 2.93,
+      "rmsDbFS": -41.496896489367366,
+      "samplePeakDbFS": -15.650320770575636,
+      "finite": true,
+      "frames": 140640
+    },
+    {
+      "time": 23.68741454659845,
+      "frame": 1421,
+      "kind": "exit",
+      "position": [
+        113.06358926130501,
+        -0.5238713997389317,
+        -38.985409703647385
+      ],
+      "surfaceY": -0.5238713997389317,
+      "residualMetres": null,
+      "precisionSeconds": 0.016666666666666666,
+      "bracket": [
+        {
+          "time": 23.683333333333334,
+          "distance": -0.0556366131039554
+        },
+        {
+          "time": 23.7,
+          "distance": 0.17156956918293842
+        }
+      ],
+      "assetOnset": 23.48741454659845,
+      "duration": 2.45,
+      "rmsDbFS": -41.656111261862414,
+      "samplePeakDbFS": -17.39332428495364,
+      "finite": true,
+      "frames": 117600
+    },
+    {
+      "time": 280.8488572049438,
+      "frame": 16851,
+      "kind": "enter",
+      "position": [
+        -322.0836629137723,
+        -0.140593553599314,
+        -21.120067013349406
+      ],
+      "surfaceY": -0.14059355359931403,
+      "residualMetres": null,
+      "precisionSeconds": 0.016666666666666666,
+      "bracket": [
+        {
+          "time": 280.8333333333333,
+          "distance": 0.2904234131604122
+        },
+        {
+          "time": 280.85,
+          "distance": -0.02137961773383834
+        }
+      ],
+      "assetOnset": 280.5688572049438,
+      "duration": 2.93,
+      "rmsDbFS": -38.72771650454956,
+      "samplePeakDbFS": -15.650320770575636,
+      "finite": true,
+      "frames": 140640
+    },
+    {
+      "time": 302.38158006749757,
+      "frame": 18143,
+      "kind": "exit",
+      "position": [
+        -721.9412239990473,
+        0.15460181420105062,
+        87.3119784271743
+      ],
+      "surfaceY": 0.15460181420105065,
+      "residualMetres": null,
+      "precisionSeconds": 0.016666666666666666,
+      "bracket": [
+        {
+          "time": 302.3666666666667,
+          "distance": -0.15466623159250625
+        },
+        {
+          "time": 302.3833333333333,
+          "distance": 0.018183043751752948
+        }
+      ],
+      "assetOnset": 302.1815800674976,
+      "duration": 2.45,
+      "rmsDbFS": -40.877037556280946,
+      "samplePeakDbFS": -17.39332428495364,
+      "finite": true,
+      "frames": 117600
+    }
+  ],
+  "underwaterIntervals": [
+    {
+      "start": 14.266091620879566,
+      "end": 23.68741454659845
+    },
+    {
+      "start": 280.8488572049438,
+      "end": 302.38158006749757
+    }
+  ],
+  "bubbleEvents": [
+    {
+      "t": 14.7375,
+      "pan": -0.1119
+    },
+    {
+      "t": 14.7866,
+      "pan": -0.0037
+    },
+    {
+      "t": 14.8507,
+      "pan": 0.3065
+    },
+    {
+      "t": 14.88,
+      "pan": 0.5411
+    },
+    {
+      "t": 16.6988,
+      "pan": 0.1889
+    },
+    {
+      "t": 16.7194,
+      "pan": -0.0226
+    },
+    {
+      "t": 16.795,
+      "pan": 0.2044
+    },
+    {
+      "t": 16.8131,
+      "pan": 0.2953
+    },
+    {
+      "t": 18.5656,
+      "pan": -0.2322
+    },
+    {
+      "t": 18.6214,
+      "pan": 0.3788
+    },
+    {
+      "t": 20.1141,
+      "pan": 0.1368
+    },
+    {
+      "t": 20.1893,
+      "pan": -0.0721
+    },
+    {
+      "t": 21.5752,
+      "pan": -0.3365
+    },
+    {
+      "t": 21.6588,
+      "pan": -0.1265
+    },
+    {
+      "t": 21.6874,
+      "pan": -0.5437
+    },
+    {
+      "t": 21.7517,
+      "pan": 0.3052
+    },
+    {
+      "t": 22.8407,
+      "pan": 0.4367
+    },
+    {
+      "t": 22.9025,
+      "pan": -0.402
+    },
+    {
+      "t": 22.9426,
+      "pan": -0.0466
+    },
+    {
+      "t": 22.9738,
+      "pan": -0.5058
+    },
+    {
+      "t": 281.3014,
+      "pan": -0.4348
+    },
+    {
+      "t": 281.3472,
+      "pan": 0.1196
+    },
+    {
+      "t": 282.5135,
+      "pan": 0.2688
+    },
+    {
+      "t": 282.598,
+      "pan": -0.1435
+    },
+    {
+      "t": 282.6103,
+      "pan": -0.3068
+    },
+    {
+      "t": 283.7126,
+      "pan": -0.2535
+    },
+    {
+      "t": 283.7691,
+      "pan": 0.4314
+    },
+    {
+      "t": 285.5184,
+      "pan": 0.3478
+    },
+    {
+      "t": 285.5227,
+      "pan": 0.1962
+    },
+    {
+      "t": 285.5934,
+      "pan": 0.407
+    },
+    {
+      "t": 287.5815,
+      "pan": -0.0425
+    },
+    {
+      "t": 287.6377,
+      "pan": -0.5042
+    },
+    {
+      "t": 289.0396,
+      "pan": -0.5629
+    },
+    {
+      "t": 289.0585,
+      "pan": 0.1034
+    },
+    {
+      "t": 289.1152,
+      "pan": 0.1917
+    },
+    {
+      "t": 289.1645,
+      "pan": -0.5122
+    },
+    {
+      "t": 290.54,
+      "pan": 0.3914
+    },
+    {
+      "t": 290.5948,
+      "pan": 0.3525
+    },
+    {
+      "t": 290.6217,
+      "pan": 0.0525
+    },
+    {
+      "t": 291.821,
+      "pan": -0.3978
+    },
+    {
+      "t": 291.9062,
+      "pan": 0.1764
+    },
+    {
+      "t": 291.9421,
+      "pan": 0.1526
+    },
+    {
+      "t": 293.9185,
+      "pan": -0.2644
+    },
+    {
+      "t": 293.9733,
+      "pan": -0.301
+    },
+    {
+      "t": 295.0628,
+      "pan": 0.2068
+    },
+    {
+      "t": 295.1414,
+      "pan": -0.2246
+    },
+    {
+      "t": 295.1719,
+      "pan": -0.2688
+    },
+    {
+      "t": 295.1997,
+      "pan": -0.0826
+    },
+    {
+      "t": 296.825,
+      "pan": -0.2224
+    },
+    {
+      "t": 296.8386,
+      "pan": 0.5853
+    },
+    {
+      "t": 296.9064,
+      "pan": 0.4702
+    },
+    {
+      "t": 296.9495,
+      "pan": 0.2585
+    },
+    {
+      "t": 298.3857,
+      "pan": -0.4661
+    },
+    {
+      "t": 298.4243,
+      "pan": 0.0694
+    },
+    {
+      "t": 298.4845,
+      "pan": -0.5044
+    },
+    {
+      "t": 298.5303,
+      "pan": 0.4166
+    },
+    {
+      "t": 299.7464,
+      "pan": 0.2744
+    },
+    {
+      "t": 299.7832,
+      "pan": 0.2745
+    },
+    {
+      "t": 299.8257,
+      "pan": -0.2724
+    },
+    {
+      "t": 301.7309,
+      "pan": -0.4059
+    },
+    {
+      "t": 301.7388,
+      "pan": -0.2544
+    },
+    {
+      "t": 301.796,
+      "pan": 0.2448
+    }
+  ],
+  "numericSync": [
+    {
+      "start": 14.766083333333333,
+      "end": 17.766083333333334,
+      "lagSamples": 0
+    },
+    {
+      "start": 281.3488541666667,
+      "end": 284.3488541666667,
+      "lagSamples": 0
+    }
+  ],
+  "premaster": {
+    "input_i": "-19.93",
+    "input_tp": "-0.89",
+    "input_lra": "2.20",
+    "input_thresh": "-30.13",
+    "output_i": "-16.05",
+    "output_tp": "-1.30",
+    "output_lra": "2.20",
+    "output_thresh": "-26.24",
+    "normalization_type": "dynamic",
+    "target_offset": "0.05"
+  },
+  "masterLoudness": {
+    "input_i": "-16.01",
+    "input_tp": "-1.30",
+    "input_lra": "2.10",
+    "input_thresh": "-26.20",
+    "output_i": "-15.95",
+    "output_tp": "-1.30",
+    "output_lra": "2.10",
+    "output_thresh": "-26.13",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.05"
+  },
+  "outputs": {
+    "narration": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\narration-immersive-v8.wav",
+      "sha256": "53285519fefa590458a6be65e3fee17024cd0cd2c515cb5b09d1b78954dc83ca",
+      "audioInfo": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\narration-immersive-v8.wav\nsamplerate: 48000 Hz\nchannels: 1\nduration: 06:0.433 min\nformat: WAV (Microsoft) [WAV]\nsubtype: Signed 24 bit PCM [PCM_24]"
+    },
+    "sfx": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\water-crossings-v8.wav",
+      "sha256": "07f8f5c9dca70fd208fa16674e6d50db62c4ddec903902c9afbe743327f3b705",
+      "audioInfo": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\water-crossings-v8.wav\nsamplerate: 48000 Hz\nchannels: 2\nduration: 06:0.433 min\nformat: WAV (Microsoft) [WAV]\nsubtype: Signed 24 bit PCM [PCM_24]"
+    },
+    "music": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\episode01-xijian-v8.wav",
+      "sha256": "5deb1332f060682d7a4ab949a718599e2d9ff53691ba6c3249627ea2798e081b",
+      "audioInfo": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\episode01-xijian-v8.wav\nsamplerate: 48000 Hz\nchannels: 2\nduration: 06:0.433 min\nformat: WAV (Microsoft) [WAV]\nsubtype: Signed 24 bit PCM [PCM_24]"
+    },
+    "master": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\episode01-mix-v8.wav",
+      "sha256": "4096b2ac51f4dc83f73b8d1f01718a8324d3d52d51d81c7aad47ed333ec82938",
+      "audioInfo": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\episode01-mix-v8.wav\nsamplerate: 48000 Hz\nchannels: 2\nduration: 06:0.433 min\nformat: WAVEX (Microsoft) [WAVEX]\nsubtype: Signed 24 bit PCM [PCM_24]"
+    }
+  },
+  "masterStats": {
+    "rmsDbFS": -18.49135332087642,
+    "samplePeakDbFS": -1.2959746915695212,
+    "finite": true,
+    "frames": 17300800,
+    "duration": 360.43333333333334
+  },
+  "reviewExcerpts": [
+    "work\\audio-v8\\crossing-review-v8-01.wav",
+    "work\\audio-v8\\crossing-review-v8-02.wav",
+    "work\\audio-v8\\crossing-review-v8-03.wav",
+    "work\\audio-v8\\crossing-review-v8-04.wav"
+  ],
+  "subjectiveListeningChecked": false,
+  "fullVideoLipSyncChecked": false,
+  "integration": "Use audio/episode01-mix-v8.wav at volume=1 as the only audio node; do not also mix the three stems. Stems are already ducked for use at unity if remastering."
+}

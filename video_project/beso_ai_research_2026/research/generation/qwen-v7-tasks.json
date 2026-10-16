@@ -1,0 +1,731 @@
+{
+  "version": 7,
+  "status": "frozen_selected",
+  "tasks": {
+    "v7-ocean-drone": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T12:40:14.927151+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610171
+      },
+      "prompt": "高级工程发布片的连续五秒海面低空镜头。严格保留首尾参考中同一座三外倾圆筒半潜式风机的刚性几何和真实尺度，三外柱、三内腿、三径向梁、中央连接盘、单塔筒、三叶片以及原有系泊线的数量、比例、方向和连接关系恒定。摄影机低空沿前方浮筒作小幅柔和弧线侧移并缓慢升高，延续尾帧指定的视差与构图，末尾准确落在尾帧。首尾塔筒和叶片允许画面外裁切，不能为了补全构图重绘画外部件。水下深色轮廓只显示首尾已有相同刚性钢壳，水体透明度平滑连续，不能把透明轮廓当成新长出的结构。低幅青蓝细浪、不规则小范围接触泡沫、真实海水反射、柔和低侧光和天光、精致白色海工涂层及克制焊缝，保留有重量的明暗而非塑料白模。所有钢壳是坚硬实体，水线范围近似恒定；相机移动是主要变化，机组不摇晃、叶片不转动，不增减或重绘构件。景深只柔化远海，结构始终清楚。没有文字、数字、Logo、图表、箭头或任何物理结果。这只是镜头和外观概念桥接，无硬切、无液化、无闪白、无爆炸、无粒子、无额外构件，最后半秒平滑收束。",
+      "negativePrompt": "玩具、塑料、粗黑描边、均匀白模、结构变形、外柱脱臂、额外柱、额外梁、第四叶片、旋转叶片、剧烈摇晃、大浪、粒子、爆炸、液化、闪白、硬切、文字、数字、Logo、水印、图表、应力结果、水平背景条带",
+      "role": "low-altitude-ocean-camera-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/native-anchors-r2/frame-000000.png",
+          "sha256": "8acb65de72be47af1ccd6e97b148ba6ca2311750652daaf53d2d42d03a25631d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1732116
+        },
+        {
+          "path": "public/generated/v7/native-anchors-r2/frame-000300.png",
+          "sha256": "50777b311fe1b7738e8a3d632c4d39b2a3884879bf5be25d83f80fe0d3e46e38",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1984509
+        }
+      ],
+      "fromFrame": 0,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "rejected",
+      "http": 200,
+      "requestId": "65f78781-6a7b-914f-96de-38db81b4a6d2",
+      "taskId": "54ea8e4e-c5ad-4ea1-b049-adc2e0e257ad",
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-ocean-drone-first.png",
+          "sha256": "8acb65de72be47af1ccd6e97b148ba6ca2311750652daaf53d2d42d03a25631d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1732116
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-ocean-drone-last.png",
+          "sha256": "50777b311fe1b7738e8a3d632c4d39b2a3884879bf5be25d83f80fe0d3e46e38",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1984509
+        }
+      ],
+      "freezeNote": "Actual submitted RGB source pixels identical to final freeze; preserved byte-for-byte.",
+      "lastPolledAt": "2026-10-11T12:44:21.956080+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-ocean-drone.mp4",
+      "sha256": "b0549ca1c84e6e711244cf6b7dc822241f5ee569d1a5127ef521d4ee8ab0be0f",
+      "completedAt": "2026-10-11T12:44:24.656104+00:00",
+      "qa": "work/qwen-v7-qa/v7-ocean-drone/qa.json",
+      "editorialReviewNote": "21 samples show rotor blades repeatedly entering low platform close-up; hub is far above this view, creating an impossible scale and motion. Root visually rejected; preserve original, use distinct revision task.",
+      "editorialReviewedAt": "2026-10-11T12:50:32.643879+00:00"
+    },
+    "v7-drawing-emergence": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T12:41:06.398052+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610172
+      },
+      "prompt": "精密工程发布片连续五秒概念镜头。首帧浅象牙技术纸色背景上的同体投影轮廓，严格属于尾帧同一座三外倾圆筒半潜式风机；三外柱、三内腿、三短径向梁、中央盘、塔筒、原有缆绳，以及画面中裁切的叶片方向与比例始终恒定。摄影机沿首帧轮廓轻柔侧滑并缓慢升高后移，已存在的白色轮廓面逐步拥有海工涂层、细焊缝、自然高光和接触阴影；浅色纸背景有秩序地接入尾帧相同位置的青灰海面与天光，不残留纸板或方块。实体由同一个轮廓沿共同锚点呈现，不能从线条生长另一种机组，不能增加柱、梁或新塔筒，不允许构件伸缩、液化或脱离。海面小幅细浪、柔和低侧光、有重量的明暗，精确落在尾帧机位与模型位置，末尾半秒平滑收束。禁止文字、数字、Logo、尺寸、图表、求解数据或应力颜色；没有翻页、爆炸、粒子、硬切、闪白。仅同一几何从技术轮廓到实体外观和运镜的概念桥接。",
+      "negativePrompt": "模型变形、外柱断开、额外柱、额外梁、突然新增塔筒、伸缩、融化、墨水爆炸、粒子、卡片翻页、窗框、粗大描边、文字、数字、尺寸标记、Logo、公式、应力图、求解图、闪白、跳切",
+      "role": "drawing-to-same-rigid-hull-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/blueprint-anchors-r2/frame-000660.png",
+          "sha256": "657e3403d4915f6eed1a27d5eb526e83ab7680663f03956d21564eea2717c112",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 155162
+        },
+        {
+          "path": "public/generated/v7/native-anchors-r2/frame-000960.png",
+          "sha256": "c97cb7a97f6096b16329baad5ed76bab712a3bc15d6fa467496d524a3d1ca96d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2551145
+        }
+      ],
+      "fromFrame": 660,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "selected",
+      "http": 200,
+      "requestId": "34605cae-fa8a-927d-9e82-79354df41f33",
+      "taskId": "db415242-a718-4dd6-ae22-8b7b649b42ed",
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-drawing-emergence-first.png",
+          "sha256": "657e3403d4915f6eed1a27d5eb526e83ab7680663f03956d21564eea2717c112",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 155162
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-drawing-emergence-last.png",
+          "sha256": "c97cb7a97f6096b16329baad5ed76bab712a3bc15d6fa467496d524a3d1ca96d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2551145
+        }
+      ],
+      "freezeNote": "Actual submitted RGB source preserved byte-for-byte after submission. Later approved drawing-r3 was different; no replacement/retry of original task.",
+      "lastPolledAt": "2026-10-11T12:44:26.441064+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-drawing-emergence.mp4",
+      "sha256": "a989fdf1ea1682629499af2b70915776a82b4c461d79d568b0378974649e8675",
+      "completedAt": "2026-10-11T12:44:29.054216+00:00",
+      "qa": "work/qwen-v7-qa/v7-drawing-emergence/qa.json",
+      "editorialReviewNote": "Root reviewed 21-frame sheet and endpoint comparison. Same native three-column geometry, no generated data, orderly outlined-r2 to marine-solid transition. Selected for native-composite verification; normal-speed full-film review remains separate.",
+      "editorialReviewedAt": "2026-10-11T12:50:34.041711+00:00"
+    },
+    "v7-mesh-materialize": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T12:43:57.657633+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610175
+      },
+      "prompt": "精密工程发布片连续五秒概念运镜。首尾同一个已保存的实心BESO初始设计域state000：同样的四方钢色块体、同样顶部两条已有深色窄条和同样承托薄平面，尺寸、轮廓、孔洞、连接和材料分布完全恒定。只允许摄影机从首帧斜向近景小幅弧线侧移并柔和减速到尾帧，表现真实钢材细微反射、轻微粗糙度、柔和青灰天光与接触阴影。独立设计域始终完整，左侧远处部分原生风机仅作静止空间参考，不得和块体合并，不长出额外柱或梁；不进行拓扑优化演化，不删材料、不改变形状、不重绘网格、不制造孔洞，不把块体变成风机或抽象雕塑。背景海面低幅细浪与同色天空保持连贯，近景块体始终清楚，有重量且边缘精细。无文字、数字、Logo、图表、公式、尺寸、力箭头、应力颜色或计算结果。全片一镜到底、克制高级、正常速度，末尾半秒精准落在尾帧。没有液化、爆炸、粒子、闪白、wipe或跳切。只是同一真实几何的镜头与材质概念，不是计算迭代。",
+      "negativePrompt": "改变拓扑、改变几何、增减构件、脱臂、融化、液化、模型混合、飞散网格、复杂窗口、卡片、应力热力图、位移图、张力、数字、文字、Logo、公式、图表、数据、闪白、跳切、爆炸、粒子",
+      "role": "same-saved-domain-camera-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/beso-first.png",
+          "sha256": "ce2f7c49504b53a0e13b22355627e63cca0a0117c39a7ee3c948e58cff81ee88",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1412544
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/beso-last.png",
+          "sha256": "ea008be1b5888c230769587fdfc5208ee81ce3c806b996c40fae2f549ac076f0",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1294085
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-mesh-materialize-first.png",
+          "sha256": "ce2f7c49504b53a0e13b22355627e63cca0a0117c39a7ee3c948e58cff81ee88",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1412544
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-mesh-materialize-last.png",
+          "sha256": "ea008be1b5888c230769587fdfc5208ee81ce3c806b996c40fae2f549ac076f0",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1294085
+        }
+      ],
+      "fromFrame": 1500,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "selected",
+      "http": 200,
+      "requestId": "ea8ed7e2-7073-9470-9c6a-031808682434",
+      "taskId": "60eb803a-825a-49a8-994e-8c83b12c23be",
+      "lastPolledAt": "2026-10-11T12:51:37.207895+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-mesh-materialize.mp4",
+      "sha256": "b3660fd4ed1947655797196a924f29bb2841b4401793f98430e6884dce67ff35",
+      "completedAt": "2026-10-11T12:51:40.202170+00:00",
+      "qa": "work/qwen-v7-qa/v7-mesh-materialize/qa.json",
+      "editorialReviewNote": "Root reviewed contact sheet: saved solid state000 maintained with camera motion only, no generated numerical or optimization evidence. Selected for normal-speed composite review.",
+      "editorialReviewedAt": "2026-10-11T12:58:54.051071+00:00"
+    },
+    "v7-joint-parametric": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T12:46:54.761306+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610174
+      },
+      "prompt": "高端工程发布片连续五秒概念镜头。首帧浅象牙纸色背景的三外柱半潜式平台原生无字工程轮廓，尾帧为完全同一个浮体中央hub与塔筒根部的海面实体俯视画面。严格保持三外倾圆筒、三内腿、三短径向梁、中心盘、同一塔筒及画面裁切叶片的原始数量、比例、连接和刚性几何。摄影机沿既有轮廓小幅弧线侧移，轻柔推进到尾帧中央连接部位指定构图，既有轮廓面有序拥有白色耐海水涂层、细焊缝和自然钢壳反射；纸色环境自然接入同色天光下的青蓝细浪海面，原有系泊线逐步清晰但不增添新缆绳。不留纸板、不新增窗口卡片，不把工程线长成新杆件，不允许外柱脱臂、构件伸缩、接点液化或孔洞变形。柔和低侧光与接触阴影，有重量的明暗、精密细节、微弱景深，全程一镜到底，末尾半秒平滑减速并精准落在尾帧。无任何文字、数字、Logo、尺寸、公式、坐标轴、箭头、应力图或求解数据。没有粒子、爆炸、闪白、跳切、wipe，仅同一原生结构轮廓到实体的镜头与外观概念桥接。",
+      "negativePrompt": "额外杆件、脱臂、柱子再生、构件伸缩、连接变形、液化、粒子、爆炸、强烈描边、额外窗口、卡片、文字、尺寸、数字、Logo、坐标轴、力箭头、应力图、伪造数据、闪白、跳切、wipe",
+      "role": "parametric-outline-to-same-native-joint-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/connection-first.png",
+          "sha256": "8f903a6a4cc8fdd9452cccb92f209dedbf7133f32da51b33d6dbb1d7b276f68d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 62910
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/connection-last.png",
+          "sha256": "8105ff72727066b2a38493fe5994a046c5b10121e1d162f092919b994a726917",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1459816
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-joint-parametric-first.png",
+          "sha256": "8f903a6a4cc8fdd9452cccb92f209dedbf7133f32da51b33d6dbb1d7b276f68d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 62910
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-joint-parametric-last.png",
+          "sha256": "8105ff72727066b2a38493fe5994a046c5b10121e1d162f092919b994a726917",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1459816
+        }
+      ],
+      "fromFrame": 3900,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "rejected",
+      "http": 200,
+      "requestId": "aaa00991-549c-960e-b0d9-cd5994c79e59",
+      "taskId": "07224486-d6b3-4c60-b9c3-7a55ee4920a9",
+      "lastPolledAt": "2026-10-11T12:51:41.237575+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-joint-parametric.mp4",
+      "sha256": "f9b703c552368585e160591d6c27b5e8bc7fbdf7c8fa3c92ab815ebb7b82154d",
+      "completedAt": "2026-10-11T12:51:44.756988+00:00",
+      "qa": "work/qwen-v7-qa/v7-joint-parametric/qa.json",
+      "editorialReviewNote": "Root reviewed 21 samples and rejected large rotor-blade strip sweeping over hub/platform close-up during 2–3.3 seconds. Preserve original; next task requires rotor-free native blueprint first frame.",
+      "editorialReviewedAt": "2026-10-11T12:58:59.728259+00:00"
+    },
+    "v7-report-hero": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T12:47:26.418931+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610176
+      },
+      "prompt": "高端工程软件发布片的连续五秒终章概念镜头。首帧无字技术资料平面的模型轮廓属于尾帧同一座三外柱半潜式风机，三外倾圆筒、三内腿、三短径向梁、中央连接盘、单塔筒和三叶片的数量、连接方向、尺寸比例始终恒定。摄影机沿纸面轮廓轻柔推进，原有轮廓沿共同空间锚点有序拥有实体表面，纸面的柔和反射自然接入尾帧同色海面与天空，摄影机顺势缓慢抬升后移至完整机组或尾帧指定构图。不给模型新增部件，不从无关图形长出另一种机组，不留下浮在海上的纸板或方块，不做翻页。真实白色涂层、低幅青蓝细浪、精细自然高光与接触阴影，模型有尺度重量，远海景深克制，机组始终清楚可读。没有论文文字、作者、数字、Logo、图表、公式、坐标轴或任何结果。首尾机位精准匹配、末尾半秒轻柔收束，连续无硬切、无爆炸、无闪白、无几何融化，只是资料轮廓到实体外观的概念桥接。",
+      "negativePrompt": "多余浮筒、多余塔筒、第四叶片、脱臂、构件变形、模型再生、海上残留纸板、海上方块、翻页、粒子、爆炸、液化、融化、文字、作者、论文名、数字、Logo、图表、公式、求解结果、硬切、闪白、水平条带",
+      "role": "same-outline-report-to-complete-turbine-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/closing-first.png",
+          "sha256": "6e443ad7f4d97b860eae5b5e2b4329f36bc1e453ef8fb9db8940a8135addb8a7",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 32380
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/closing-last.png",
+          "sha256": "c4aa47a3d6a6c25a6b2a1603c2566d3ac5311413ea2fb3d6a33ace24c6a70d4f",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1126019
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-report-hero-first.png",
+          "sha256": "6e443ad7f4d97b860eae5b5e2b4329f36bc1e453ef8fb9db8940a8135addb8a7",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 32380
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-report-hero-last.png",
+          "sha256": "c4aa47a3d6a6c25a6b2a1603c2566d3ac5311413ea2fb3d6a33ace24c6a70d4f",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1126019
+        }
+      ],
+      "fromFrame": 5760,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "selected",
+      "http": 200,
+      "requestId": "b07f47a7-4460-9546-bb4d-cc076f99b87a",
+      "taskId": "eb31bdf2-4cb3-4231-948d-6b9e22411bd8",
+      "lastPolledAt": "2026-10-11T12:51:46.191797+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-report-hero.mp4",
+      "sha256": "3f99601a515d495d3d0eb23b47d0438a96e7327288a78bbe5ae989c3d4a32dd0",
+      "completedAt": "2026-10-11T12:51:47.987958+00:00",
+      "qa": "work/qwen-v7-qa/v7-report-hero/qa.json",
+      "editorialReviewNote": "Root reviewed contact sheet: complete original three-column turbine silhouette and blades maintained; no generated data; blueprint-to-same-marine model concept. Selected for composite verification.",
+      "editorialReviewedAt": "2026-10-11T12:58:57.232984+00:00"
+    },
+    "v7-ocean-drone-r2": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T12:50:41.381095+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610181
+      },
+      "prompt": "连续五秒海洋工程发布片，严格限定为首尾参考图的低空浮体近景。画面只含同一个三外倾圆筒半潜式平台、已存在的三内腿、三短径向梁、中央连接盘、塔筒的最下半段、原有系泊线和海面。高处的轮毂和所有叶片始终位于画框上方之外，绝不出现。摄影机只沿浮筒做轻柔的小幅侧移，准确落到尾帧的浮体构图；绝不飞向轮毂、不抬到叶片高度，不生成任何画外对象运动。严禁从画面顶部进入任何叶片、长杆、旋转物、阴影或巨大的斜白条。机组全体静止，三外柱与梁根的数量、比例、方向、直径和刚性连接严格恒定；不重新长出构件、不把画面边缘裁切部件补成另一结构。海面低幅细浪与自然青蓝反射，参考图已有的水下深色刚性轮廓在水体内平滑连续；精致海工涂层、细焊缝、柔和低侧光与天光，不改变水线或壳体几何。远海轻微景深，浮体始终清楚，末尾半秒平滑减速。没有文字、数字、Logo、图表、箭头、求解数据、应力颜色，禁止液化、硬切、闪白、粒子和爆炸。所有叶片和轮毂始终完全在画面上方以外，任何旋转叶片不得扫入低空浮体画面。",
+      "negativePrompt": "blade entering from upper frame, rotor blade, wind turbine rotor, rotating blade, propeller, moving long white strip, blade shadow, hub inside frame, upward flight, high tower view, giant rod entering shot, 叶片进入顶部、旋转叶片、巨型白条、低空扫过叶片、轮毂、额外柱、额外梁、脱臂、构件再生、结构变形、液化、粒子、爆炸、闪白、硬切、文字、数字、Logo、数据",
+      "role": "low-altitude-ocean-camera-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/ocean-first.png",
+          "sha256": "1746a43cf3582e40c49d1c7d9ecfcfb99e7aad4edcbb0f042b315b38e07b038f",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 857986
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/ocean-last.png",
+          "sha256": "0e6db86f30d09a3466247006bd9969f55b8acc4c5855339fd2c62cf2679e1c63",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1193384
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-ocean-drone-r2-first.png",
+          "sha256": "1746a43cf3582e40c49d1c7d9ecfcfb99e7aad4edcbb0f042b315b38e07b038f",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 857986
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-ocean-drone-r2-last.png",
+          "sha256": "0e6db86f30d09a3466247006bd9969f55b8acc4c5855339fd2c62cf2679e1c63",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1193384
+        }
+      ],
+      "fromFrame": 0,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "rejected",
+      "http": 200,
+      "requestId": "3550e332-53c3-99f4-895c-18feb2fa3e32",
+      "taskId": "1a486aee-d6e4-46ed-a2b6-f2aa319c6074",
+      "lastPolledAt": "2026-10-11T12:56:48.411610+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-ocean-drone-r2.mp4",
+      "sha256": "f0af6354001a85c4ac4f0d2007b58b66723a8a512a86d38f8aaa96771363f465",
+      "completedAt": "2026-10-11T12:56:50.703114+00:00",
+      "qa": "work/qwen-v7-qa/v7-ocean-drone-r2/qa.json",
+      "editorialReviewNote": "Second attempt still invents low sweeping rotating rotor blades from 0.5–4.75 seconds despite explicit exclusion prompt. Geometry scale and view are impossible; never composite this clip. Preserve exact inputs, original asset, and task record.",
+      "editorialReviewedAt": "2026-10-11T13:00:40.356846+00:00"
+    },
+    "v7-ocean-drone-r3": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T13:03:06.547171+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610191
+      },
+      "prompt": "A premium five-second cinematic camera glide around a stationary offshore floating industrial steel platform. The view contains exactly the existing three inclined sealed cylindrical hull bodies, the inner steel members, short radial box beams, central connection body, a cropped vertical support column extending out of the upper picture edge, and the existing slender tether lines. Preserve the exact immutable geometry, dimensions, proportions, directions, sealed cap profiles and rigid connections in the first and last reference images. Nothing attached to this steel foundation moves. The only motion is a gentle low-altitude camera side-glide with a very small increase in viewing elevation, smoothly reaching the exact last-image composition. Keep all visible parts stable and fixed, and do not complete cropped objects. Fine low-amplitude blue-grey surface ripples, restrained irregular contact foam, natural water reflection, white marine protective coating, subtle seams, soft low side-light and skylight. Underwater dark shell silhouettes stay the same fixed shapes with continuous water transparency. A sense of structural weight and precise material detail; distant water may be lightly defocused while the steel foundation stays clear. No hard cut, flash, morph or abrupt motion. Finish with a smooth half-second camera deceleration. This is camera and material concept imagery only; no text, letters, numbers, logo, charts, arrows, analysis colours or numerical results.",
+      "negativePrompt": "wind turbine rotor, rotating rotor, rotor blade, propeller, helicopter, turbine blade, blade entering from top frame, sweeping blade, giant moving white bar, moving blade shadow, added moving object, new upper-frame object, geometry changes, additional columns, disconnected members, melted shells, plastic toy, particles, explosions, hard cut, flash, text, letters, numbers, watermark, logo, chart, stress map",
+      "role": "low-altitude-ocean-camera-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/ocean-first.png",
+          "sha256": "1746a43cf3582e40c49d1c7d9ecfcfb99e7aad4edcbb0f042b315b38e07b038f",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 857986
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/ocean-last.png",
+          "sha256": "0e6db86f30d09a3466247006bd9969f55b8acc4c5855339fd2c62cf2679e1c63",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1193384
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-ocean-drone-r3-first.png",
+          "sha256": "1746a43cf3582e40c49d1c7d9ecfcfb99e7aad4edcbb0f042b315b38e07b038f",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 857986
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-ocean-drone-r3-last.png",
+          "sha256": "0e6db86f30d09a3466247006bd9969f55b8acc4c5855339fd2c62cf2679e1c63",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1193384
+        }
+      ],
+      "fromFrame": 0,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "selected",
+      "http": 200,
+      "requestId": "9f84e28f-6361-933c-af4d-7c5e3c1ffd48",
+      "taskId": "44bc29fd-8472-475a-b138-cb4e1b7d09b9",
+      "lastPolledAt": "2026-10-11T13:07:56.342685+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-ocean-drone-r3.mp4",
+      "sha256": "bd3f1be967e301c1c3a788a1f83e778f3ac6325a6721aecc8a81a91cd951942b",
+      "completedAt": "2026-10-11T13:07:58.739700+00:00",
+      "qa": "work/qwen-v7-qa/v7-ocean-drone-r3/qa.json",
+      "editorialReviewNote": "Root visually reviewed all 21 samples: fixed original platform with no intrusive rotor blades, stable joints and matched native endpoints. Pure industrial-platform positive semantics resolved prior hallucination. Selected for final normal-speed composite QA.",
+      "editorialReviewedAt": "2026-10-11T13:12:46.392895+00:00"
+    },
+    "v7-underwater-follow": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T13:04:37.521960+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610173
+      },
+      "prompt": "A premium five-second continuous camera descent around the exact stationary offshore steel platform in the first and last reference images. The first view is just above the transparent low-ripple sea and already reveals the same submerged rigid hull shapes; the last view is fully immersed in deep blue-teal water. Camera gently glides beside the same foreground inclined sealed cylinder and existing slender tether connection, then smoothly descends into the water, finishing at the exact last-image viewpoint. Maintain precisely the existing three inclined cylinder hulls, inner steel members, short radial box beams, central connector, cropped vertical support column and all original continuous tether lines, with no changes in count, dimensions, caps, positions or rigid joints. Existing upper presentation guides in the first frame leave the frame with camera descent; do not replace or generate new guides. The single existing muted gold cable colour is only a source decorative identity marker and remains on the same existing line, with no colour-map animation. Water transparency and refraction shift smoothly during immersion, then deep blue-teal absorption, restrained underwater light and gentle caustics reveal the original connections clearly. Everything structural is immovable and solid, only the camera and low sea ripples move. No new sea floor, rock, object or structural details; no floating bubbles or particle rain. Precise marine coating and subtle seams, realistic scale and restrained depth of field. Continuous smooth acceleration and a soft half-second landing in the last frame. Only visual camera and water concept imagery, no text, letters, numbers, logo, charts, arrows, stress colours or solver results.",
+      "negativePrompt": "rotor blade, propeller, rotating turbine, giant moving white strip, new upper-frame object, additional columns, extra cable, new gold lines, new arrows, thermal map, stress map, invented simulation result, new seabed, coral, rocks, fish, diver, particle rain, bubble rain, geometry mutation, disconnected hull, regenerated submerged structure, melted shell, hard horizontal colour band, hard cut, flash, text, numbers, logos, watermark",
+      "role": "subsurface-mooring-follow-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/underwater-first.png",
+          "sha256": "23f4c94abe738f23ff90c8dd95811c2bf6fe5949b800c890fc948689f7d095c2",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 705316
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/underwater-last.png",
+          "sha256": "2797c157d9986a54c97d903029e66871b9178d9e30fc27441451fe59dff314f9",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 221364
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-underwater-follow-first.png",
+          "sha256": "23f4c94abe738f23ff90c8dd95811c2bf6fe5949b800c890fc948689f7d095c2",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 705316
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-underwater-follow-last.png",
+          "sha256": "2797c157d9986a54c97d903029e66871b9178d9e30fc27441451fe59dff314f9",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 221364
+        }
+      ],
+      "fromFrame": 2640,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "selected",
+      "http": 200,
+      "requestId": "ed2216a3-f5ae-9d4c-9ef3-1bbdf1bbd513",
+      "taskId": "9cdc6a22-976f-4c6f-b975-a4032feadfdd",
+      "lastPolledAt": "2026-10-11T13:07:59.506440+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-underwater-follow.mp4",
+      "sha256": "9084ad9d0ccaf1de3141390564fcab6f40feca84653c1ab27c56adcceb20af27",
+      "completedAt": "2026-10-11T13:08:00.530446+00:00",
+      "qa": "work/qwen-v7-qa/v7-underwater-follow/qa.json",
+      "editorialReviewNote": "Root reviewed all 21 samples: continuous waterline passage near 1 second, same submerged hull/fairlead and original cable, no invented seabed or structural regeneration. Concept water/camera only; native solver evidence follows separately.",
+      "editorialReviewedAt": "2026-10-11T13:12:48.151392+00:00"
+    },
+    "v7-joint-parametric-r2": {
+      "provider": "Alibaba Cloud Model Studio / WAN",
+      "model": "wan2.7-i2v-2026-04-25",
+      "credentialSource": "QWEN_API_KEY_BACKUP",
+      "status": "SUCCEEDED",
+      "submittedAt": "2026-10-11T13:05:20.755593+00:00",
+      "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+      "parameters": {
+        "resolution": "1080P",
+        "duration": 5,
+        "prompt_extend": false,
+        "watermark": false,
+        "seed": 202610184
+      },
+      "prompt": "A premium five-second cinematic engineering camera glide around a stationary offshore industrial steel platform foundation. The first image is a clean ivory technical contour view of exactly the same rigid geometry shown as a coated marine solid in the last image. The existing three inclined sealed cylinder hulls, inner support members, short radial box beams, central circular connector, cropped vertical support shaft and slender tether lines retain the exact number, scale, axis directions, cap profiles and joint positions. Every part remains immovable; the camera alone makes a small smooth tangential side-glide, gently approaching the central steel connection and exactly matching the last-image viewpoint. The existing contour surfaces progressively acquire refined white marine coating, subtle seams, natural reflections and contact shadows. The ivory drawing backdrop calmly resolves into the last-image blue-grey low-ripple ocean and soft skylight, leaving no paper board or floating panel. Do not grow new geometry, complete off-frame objects, add holes or change rigid connections. Precise close-up material detail, structural weight, soft side illumination and restrained depth of field. The central connection stays clearly readable throughout; finish with a smooth half-second camera deceleration. No hard cut, flash, morph, particles or abrupt movement. This is the same native geometry presented as camera and appearance concept imagery only; no text, letters, numbers, logo, dimensions, charts, formulae, arrows, stress colours or solver results.",
+      "negativePrompt": "wind turbine rotor, rotating rotor, rotor blade, propeller, helicopter, turbine blade, blade entering from top frame, sweeping blade, giant moving white bar, moving blade shadow, added moving object, new upper-frame object, geometry changes, additional columns, disconnected members, melted shells, plastic toy, particles, explosions, hard cut, flash, text, letters, numbers, watermark, logo, chart, stress map",
+      "role": "parametric-outline-to-same-native-joint-concept",
+      "sourceFrames": [
+        {
+          "path": "public/generated/v7/qwen-anchors-final/connection-first-no-rotor.png",
+          "sha256": "6847725277c6122e448b0b8656836acc2bb445b664579d1f6ee7d342109ef7de",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 47081
+        },
+        {
+          "path": "public/generated/v7/qwen-anchors-final/connection-last.png",
+          "sha256": "8105ff72727066b2a38493fe5994a046c5b10121e1d162f092919b994a726917",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1459816
+        }
+      ],
+      "immutableSourceFrames": [
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-joint-parametric-r2-first.png",
+          "sha256": "6847725277c6122e448b0b8656836acc2bb445b664579d1f6ee7d342109ef7de",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 47081
+        },
+        {
+          "path": "public/generated/v7/submitted-anchors/v7-joint-parametric-r2-last.png",
+          "sha256": "8105ff72727066b2a38493fe5994a046c5b10121e1d162f092919b994a726917",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1459816
+        }
+      ],
+      "fromFrame": 3900,
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "durationInFrames": 300,
+      "estimatedMaxCostCNY": 5.0,
+      "actualCostCNY": null,
+      "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+      "pricingCheckedAt": "2026-10-11",
+      "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+      "billingNote": "Nominal Beijing price; provider bill not reconciled",
+      "editorialSelection": "selected",
+      "http": 200,
+      "requestId": "1a5a40e7-3c77-922f-9206-2b73628be2bc",
+      "taskId": "34e5107b-7225-4925-9ea6-3225bcf18f10",
+      "lastPolledAt": "2026-10-11T13:08:02.643618+00:00",
+      "usage": {
+        "duration": 5,
+        "input_video_duration": 0,
+        "output_video_duration": 5,
+        "video_count": 1,
+        "SR": 1080
+      },
+      "error": null,
+      "asset": "public/generated/v7/v7-joint-parametric-r2.mp4",
+      "sha256": "351e0273003963b4564f3d84315d5cd01bc0edc6bde5216c7a8ec7ceeef25c4e",
+      "completedAt": "2026-10-11T13:08:06.339363+00:00",
+      "qa": "work/qwen-v7-qa/v7-joint-parametric-r2/qa.json",
+      "editorialReviewNote": "Root visually reviewed 21 samples: original hub/three-column structure stays rigid, rotor-free blueprint transitions into matching native marine solid, no large sweeping blade or new members. Selected for final composite QA.",
+      "editorialReviewedAt": "2026-10-11T13:12:49.698848+00:00"
+    }
+  },
+  "frozenAt": "2026-10-11T13:14:39.951827+00:00",
+  "generationClosed": true,
+  "summary": {
+    "allSubmittedTasks": 9,
+    "selectedTasks": 6,
+    "rejectedTasks": 3,
+    "nominalCostCNY": 45.0,
+    "actualBillReconciled": false,
+    "actualCostCNY": null,
+    "allOutputsDownloaded": true,
+    "allOutputsFullVideoDecoded": true
+  }
+}

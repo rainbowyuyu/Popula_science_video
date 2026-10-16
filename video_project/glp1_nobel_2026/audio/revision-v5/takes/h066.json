@@ -1,0 +1,83 @@
+{
+  "id": "h066",
+  "text": "用药以后，要看一段时间的记录。今天偏低、明天偏高，可能和测量条件、睡眠或活动有关，别只盯一个数。",
+  "ttsText": "用药以后，要看一段时间的记录。今天偏低、明天偏高，可能和测量条件、睡眠或活动有关，别只盯一个数。",
+  "signature": "d2e320e36611bdc7a148f8baf1274c72b79bc954ad6891f60ee8855e54bd4986",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h066-d2e320e36611-9275497507.wav",
+  "processed": "audio/revision-v5/voice/h066.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "f537a993ef737406f87cb356ac6ef40a655585c0428cd112592eef68da9c8a0c",
+  "rawSHA256": "b1fed4288d0cafdc78bbdccd6eba507829423ccb3e94e55897ce2e6fc5276529",
+  "seed": 2457160053,
+  "batchIds": [
+    "h064",
+    "h065",
+    "h066"
+  ],
+  "batchKey": "92754975072288e1a11d7e594d9244d1f8026dd01ba6d40f0fe5cbb2bbaacdea",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -94.97113084757439,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b1fed4288d0cafdc78bbdccd6eba507829423ccb3e94e55897ce2e6fc5276529",
+    "outputSha256": "f537a993ef737406f87cb356ac6ef40a655585c0428cd112592eef68da9c8a0c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.042579865258979,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.612786683541794,
+      "activeRmsDb": -21.69763587020086,
+      "quietFrameP10Db": -62.97572922224396
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -6.75663940830716,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.41475418315752
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,190 @@
+{
+  "id": "h035",
+  "partIndex": 1,
+  "expected": "卸货以后，一部分被肝脏收回，另一部分逐步变成低密度脂蛋白。",
+  "heard": "卸貨以後,一部分被肝臟收回,另一部分逐步變成低密度質蛋白。",
+  "words": [
+    {
+      "text": "卸",
+      "start": 0.0,
+      "end": 0.44,
+      "probability": 0.8537163138389587
+    },
+    {
+      "text": "貨",
+      "start": 0.44,
+      "end": 0.6,
+      "probability": 0.9075359106063843
+    },
+    {
+      "text": "以",
+      "start": 0.6,
+      "end": 0.74,
+      "probability": 0.9453865885734558
+    },
+    {
+      "text": "後,",
+      "start": 0.74,
+      "end": 0.9,
+      "probability": 0.9945077300071716
+    },
+    {
+      "text": "一",
+      "start": 1.22,
+      "end": 1.34,
+      "probability": 0.9449108839035034
+    },
+    {
+      "text": "部分",
+      "start": 1.34,
+      "end": 1.54,
+      "probability": 0.9254488348960876
+    },
+    {
+      "text": "被",
+      "start": 1.54,
+      "end": 1.72,
+      "probability": 0.9953736662864685
+    },
+    {
+      "text": "肝",
+      "start": 1.72,
+      "end": 1.94,
+      "probability": 0.6683793067932129
+    },
+    {
+      "text": "臟",
+      "start": 1.94,
+      "end": 2.1,
+      "probability": 0.9881996512413025
+    },
+    {
+      "text": "收",
+      "start": 2.1,
+      "end": 2.26,
+      "probability": 0.7456795573234558
+    },
+    {
+      "text": "回,",
+      "start": 2.26,
+      "end": 2.52,
+      "probability": 0.9534470438957214
+    },
+    {
+      "text": "另",
+      "start": 2.86,
+      "end": 3.02,
+      "probability": 0.9274285435676575
+    },
+    {
+      "text": "一",
+      "start": 3.02,
+      "end": 3.16,
+      "probability": 0.9976776242256165
+    },
+    {
+      "text": "部分",
+      "start": 3.16,
+      "end": 3.42,
+      "probability": 0.9908214211463928
+    },
+    {
+      "text": "逐",
+      "start": 3.42,
+      "end": 3.64,
+      "probability": 0.9886878132820129
+    },
+    {
+      "text": "步",
+      "start": 3.64,
+      "end": 3.8,
+      "probability": 0.9963247179985046
+    },
+    {
+      "text": "變",
+      "start": 3.8,
+      "end": 3.96,
+      "probability": 0.996392548084259
+    },
+    {
+      "text": "成",
+      "start": 3.96,
+      "end": 4.18,
+      "probability": 0.9920417666435242
+    },
+    {
+      "text": "低",
+      "start": 4.18,
+      "end": 4.38,
+      "probability": 0.9831823110580444
+    },
+    {
+      "text": "密",
+      "start": 4.38,
+      "end": 4.52,
+      "probability": 0.9797494411468506
+    },
+    {
+      "text": "度",
+      "start": 4.52,
+      "end": 4.66,
+      "probability": 0.9994509816169739
+    },
+    {
+      "text": "質",
+      "start": 4.66,
+      "end": 4.8,
+      "probability": 0.269229918718338
+    },
+    {
+      "text": "蛋",
+      "start": 4.8,
+      "end": 4.94,
+      "probability": 0.7135791778564453
+    },
+    {
+      "text": "白。",
+      "start": 4.94,
+      "end": 5.14,
+      "probability": 0.9970712661743164
+    }
+  ],
+  "sourceSHA256": "db999f6bcb08bb461120376bb188e1cece46bcaa7749f455fbed2a5df5c312c8",
+  "ratio": 0.9230769230769231,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "后",
+      "heard": "後",
+      "end": 4
+    },
+    {
+      "op": "replace",
+      "expected": "脂",
+      "heard": "质",
+      "end": 24
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 264960,
+    "seconds": 5.52,
+    "peakDBFS": -8.0697222979767,
+    "first20msDBFS": -84.28880132506323,
+    "last20msDBFS": -70.21763317854047,
+    "firstActiveMs": 20.0,
+    "lastActiveToEndMs": 340.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

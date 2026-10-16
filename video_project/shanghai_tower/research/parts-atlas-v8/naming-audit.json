@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "count": 987,
+  "categories": [
+    {
+      "id": "foundation",
+      "nameChinese": "地下基础",
+      "order": 0,
+      "descriptionChinese": "桩群、筏板、地下连续墙和地下承重组",
+      "count": 7
+    },
+    {
+      "id": "core",
+      "nameChinese": "核心筒",
+      "order": 1,
+      "descriptionChinese": "各高度分区的墙片和内墙分格",
+      "count": 45
+    },
+    {
+      "id": "columns",
+      "nameChinese": "巨柱与角柱",
+      "order": 2,
+      "descriptionChinese": "四对巨柱，以及到第五区的辅助角柱",
+      "count": 84
+    },
+    {
+      "id": "outriggers",
+      "nameChinese": "伸臂桁架",
+      "order": 3,
+      "descriptionChinese": "六处关键高度的上下弦与交叉斜腹杆",
+      "count": 192
+    },
+    {
+      "id": "belts",
+      "nameChinese": "环带桁架",
+      "order": 4,
+      "descriptionChinese": "沿周边连接巨柱和转角节点的杆件",
+      "count": 392
+    },
+    {
+      "id": "floors",
+      "nameChinese": "楼面与钢梁",
+      "order": 5,
+      "descriptionChinese": "按高度和前后半幅分组的楼板与径向梁",
+      "count": 28
+    },
+    {
+      "id": "facades",
+      "nameChinese": "双层幕墙",
+      "order": 6,
+      "descriptionChinese": "内外玻璃面组、边框、旋转棱线和径向支承",
+      "count": 174
+    },
+    {
+      "id": "crown_damper",
+      "nameChinese": "塔冠与阻尼器",
+      "order": 7,
+      "descriptionChinese": "塔冠钢架、承挂架、十二根悬索组与质量箱",
+      "count": 11
+    },
+    {
+      "id": "atriums",
+      "nameChinese": "中庭与公共空间",
+      "order": 8,
+      "descriptionChinese": "空中大堂、栏杆、座椅和绿植示意",
+      "count": 48
+    },
+    {
+      "id": "context",
+      "nameChinese": "场地与土层示意",
+      "order": 9,
+      "descriptionChinese": "解释场景用的土层和广场，不是建筑结构零件",
+      "count": 6
+    }
+  ],
+  "sourceManifestSHA256": "8a8ccb5c9e31ad0602279479f1c9f9b79747721d533b47c7a51561747785d142",
+  "sourceGraphSHA256": "633d41c10a6f27c49aac14f7e2803046b36fa44f445683f54b95745316802e79",
+  "criticalFindings": [
+    "四个PILES_Q网格是交错索引桩群，237/237/237/236根；不是四象限。",
+    "第六至八区的环带转角节点没有辅助角柱，名称使用转角而不误称角柱。",
+    "核心筒墙、楼板、幕墙、园林和多数设备mesh均为构件组。",
+    "FLOOR_INSPECTION_Z04为原楼板语义分离件，并非新增楼层或实物检修平台。",
+    "TMD_CABLES为12根索的合并网格，绝非一根悬索。",
+    "五层土为环境教学示意，不是结构零件或真实场地勘探层界。"
+  ],
+  "checks": {
+    "all987IdsCovered": true,
+    "all987NamesUnique": true,
+    "all987CompactLabelsUnique": true,
+    "displayNamesContainNoLatinIds": true,
+    "pileCount947": true,
+    "mappedStructuralParts705": true,
+    "trussEndpointSlopeChecksPassed": true
+  }
+}

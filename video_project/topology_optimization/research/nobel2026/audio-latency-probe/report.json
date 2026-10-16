@@ -1,0 +1,103 @@
+{
+  "sampleRate": 48000,
+  "filters": {
+    "current": "highpass=f=70,afftdn=nf=-50:nr=1.1:tn=1,acompressor=threshold=0.18:ratio=1.6:attack=16:release=120:makeup=1.03",
+    "no_denoise": "highpass=f=70,acompressor=threshold=0.18:ratio=1.6:attack=16:release=120:makeup=1.03",
+    "highpass_only": "highpass=f=70"
+  },
+  "clips": [
+    {
+      "id": "000",
+      "sourceSeconds": 15.12,
+      "rawTailRms120ms": 9.6657653218339e-05,
+      "candidates": {
+        "current": {
+          "seconds": 15.12,
+          "lagMs": 24.9375,
+          "tailRms120ms": 9.005840587255495e-05,
+          "tailRms25ms": 6.593820215601941e-05,
+          "peak": 0.42647767066955566,
+          "speechRms": 0.06115574119996552
+        },
+        "no_denoise": {
+          "seconds": 15.12,
+          "lagMs": -0.0625,
+          "tailRms120ms": 8.454317797926161e-05,
+          "tailRms25ms": 6.577329312473215e-05,
+          "peak": 0.4264554977416992,
+          "speechRms": 0.06060821214692804
+        },
+        "highpass_only": {
+          "seconds": 15.12,
+          "lagMs": -0.0625,
+          "tailRms120ms": 8.208059030713689e-05,
+          "tailRms25ms": 6.385770807281643e-05,
+          "peak": 0.4757685661315918,
+          "speechRms": 0.06002085881965983
+        }
+      }
+    },
+    {
+      "id": "008",
+      "sourceSeconds": 9.52,
+      "rawTailRms120ms": 0.054788637735169336,
+      "candidates": {
+        "current": {
+          "seconds": 9.52,
+          "lagMs": 24.958333333333332,
+          "tailRms120ms": 0.05326031025946811,
+          "tailRms25ms": 0.06583883565424968,
+          "peak": 0.507981538772583,
+          "speechRms": 0.06448346229941594
+        },
+        "no_denoise": {
+          "seconds": 9.52,
+          "lagMs": -0.041666666666666664,
+          "tailRms120ms": 0.05533866196065731,
+          "tailRms25ms": 0.03354551562011288,
+          "peak": 0.507779598236084,
+          "speechRms": 0.0637418353427588
+        },
+        "highpass_only": {
+          "seconds": 9.52,
+          "lagMs": -0.041666666666666664,
+          "tailRms120ms": 0.053963510881237804,
+          "tailRms25ms": 0.03256912898208507,
+          "peak": 0.5168006420135498,
+          "speechRms": 0.06384604326493036
+        }
+      }
+    },
+    {
+      "id": "021",
+      "sourceSeconds": 10.72,
+      "rawTailRms120ms": 0.0002150811031065838,
+      "candidates": {
+        "current": {
+          "seconds": 10.72,
+          "lagMs": 24.9375,
+          "tailRms120ms": 0.00020022060016532765,
+          "tailRms25ms": 0.00023713961317808305,
+          "peak": 0.45073091983795166,
+          "speechRms": 0.05913918003157281
+        },
+        "no_denoise": {
+          "seconds": 10.72,
+          "lagMs": -0.0625,
+          "tailRms120ms": 0.00021039693297930553,
+          "tailRms25ms": 0.00011862147834199064,
+          "peak": 0.45110511779785156,
+          "speechRms": 0.059987141380430056
+        },
+        "highpass_only": {
+          "seconds": 10.72,
+          "lagMs": -0.0625,
+          "tailRms120ms": 0.00020426838815172012,
+          "tailRms25ms": 0.00011516699181115451,
+          "peak": 0.44838690757751465,
+          "speechRms": 0.05933842357044413
+        }
+      }
+    }
+  ]
+}

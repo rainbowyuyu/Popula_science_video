@@ -1,0 +1,5643 @@
+{
+  "errors": [],
+  "water": {
+    "backend": "webgpu",
+    "version": "3.1.1",
+    "seed": 0.164219,
+    "deterministic": true,
+    "stepSize": 0.016666666666666666,
+    "params": {
+      "caustics": {
+        "enabled": true,
+        "surface": {
+          "strength": 0.7,
+          "scale": 0.025,
+          "speed": 0.22
+        }
+      },
+      "clipmap": {
+        "baseSize": 800,
+        "levels": 5
+      },
+      "fog": {
+        "color": "#afc6cb",
+        "enabled": true,
+        "fadeEnd": 9500,
+        "fadePower": 0.7,
+        "fadeStart": 1000,
+        "skyBlendDistance": 5450
+      },
+      "color": {
+        "absorptionColor": "#100804",
+        "transmissionColor": "#429295",
+        "waterColor": "#0c3d4f"
+      },
+      "foam": {
+        "surface": {
+          "enabled": true,
+          "opacity": 0.1,
+          "color": "#ffffff",
+          "size": 6,
+          "coverage": 0.78,
+          "texture": "foam2"
+        },
+        "waves": {
+          "enabled": false,
+          "opacity": 0.4,
+          "color": "#ffffff",
+          "size": 128,
+          "windStretch": 0.42,
+          "texture": "foam2",
+          "persistence": {
+            "decayTime": 0.5,
+            "windwardStrength": 1.1,
+            "crestStrength": 0.95
+          }
+        },
+        "shoreline": {
+          "enabled": true,
+          "opacity": 0.34,
+          "size": 3.5,
+          "coverage": 0.84,
+          "range": 1.6,
+          "color": "#edf9fd",
+          "texture": "foam2"
+        }
+      },
+      "fresnel": {
+        "surface": {
+          "iorRatio": 1.33,
+          "normalStrength": 1,
+          "fadeStart": 250,
+          "fadePower": 2.5,
+          "refractionStrength": 0.1
+        },
+        "underwater": {
+          "waterAbsorption": 0.55,
+          "refractionIOR": 1.1,
+          "refractionStrength": 0.4,
+          "reflectionStrength": 0.45,
+          "normalStrength": 1.2
+        }
+      },
+      "oceanFloor": {
+        "blendSoftness": 0.3,
+        "blendThreshold": 0.5,
+        "depth": 100,
+        "displacementScale": 140,
+        "displacementStrength": 8,
+        "enabled": false,
+        "lacunarity": 1.8,
+        "meshResolution": 64,
+        "normalScale": 0.2,
+        "persistence": 0.75,
+        "textureDisplacementStrength": 0.5,
+        "tileSize": 400,
+        "caustics": {
+          "depthAttenuation": 0,
+          "enabled": true,
+          "intensity": 0.9,
+          "scale": 150,
+          "waveDistortion": 0.26
+        },
+        "sunShafts": {
+          "enabled": true,
+          "intensity": 0.2
+        }
+      },
+      "postProcessing": {
+        "enabled": true,
+        "bloom": {
+          "enabled": true,
+          "strength": 0.1,
+          "radius": 0.5,
+          "threshold": 1
+        },
+        "filmGrain": {
+          "enabled": false,
+          "intensity": 0.06
+        },
+        "vignette": {
+          "enabled": true,
+          "intensity": 0.25,
+          "smoothness": 0.85
+        },
+        "underwater": {
+          "distortionEnabled": true,
+          "distortionIntensity": 0.003,
+          "distortionScale": 4,
+          "distortionSpeed": 1.2,
+          "enabled": true,
+          "tintColor": "#ffffff"
+        },
+        "rain": {
+          "color": "#b3bfcc",
+          "enabled": false,
+          "fadeDistance": 40,
+          "intensity": 0.5,
+          "rippleDecay": 1,
+          "rippleDensity": 1,
+          "rippleFadeEnd": 500,
+          "rippleSize": 2.5,
+          "rippleStrength": 0.5,
+          "streakLength": 1,
+          "streakWidth": 0.01,
+          "speed": 5,
+          "opacity": 0.5
+        },
+        "underwaterParticles": {
+          "color": "#ffffff",
+          "count": 1000,
+          "enabled": false,
+          "farDistance": 209,
+          "maxSize": 0.5,
+          "minSize": 0.1,
+          "nearDistance": 9,
+          "opacity": 0.5
+        }
+      },
+      "spray": {
+        "bottomFadeStart": 0,
+        "bottomFadeStop": 0.1,
+        "duration": 1.75,
+        "enabled": false,
+        "fadeOutTime": 0.5,
+        "opacity": 0.4,
+        "respawnTime": 0.5,
+        "size": 30,
+        "spawnJitterTime": 0.5,
+        "stretchX": 1.5,
+        "stretchY": 1,
+        "submersionDepth": 0,
+        "velocityHeightFactor": 0.1,
+        "velocityScaleFactor": 0,
+        "velocityThreshold": 5.1
+      },
+      "ssr": {
+        "enabled": true,
+        "strength": 0.6
+      },
+      "sss": {
+        "enabled": true,
+        "intensity": 0.4,
+        "power": 2.3
+      },
+      "lighting": {
+        "ambient": {
+          "skyColor": "#f2e6d9",
+          "groundColor": "#3a4858",
+          "intensity": 0.34
+        }
+      },
+      "sky": {
+        "source": {
+          "type": "hdri",
+          "url": "hdris/qwantani_dusk_2_puresky_4k.jpg"
+        },
+        "brightness": 0.7,
+        "reflectionBlurDistance": 7500,
+        "reflectionDistanceBlur": 0.14,
+        "reflectionRoughness": 0.08,
+        "sun": {
+          "azimuth": 225,
+          "diskColor": "#fdc4c9",
+          "diskEnabled": false,
+          "diskEmissiveColor": "#fff8e0",
+          "diskEmissiveIntensity": 2,
+          "diskRadius": 0.015,
+          "elevation": 26,
+          "intensity": 1.65
+        }
+      },
+      "sparkle": {
+        "enabled": true,
+        "fadeDistance": 1650,
+        "intensity": 0.28,
+        "minDistance": 0,
+        "power": 960
+      },
+      "wake": {
+        "foamBreakThreshold": 0,
+        "foamPersistence": 0.99,
+        "foamStrength": 0.8,
+        "friction": 0.25
+      },
+      "waves": {
+        "fft": {
+          "amplitude": 0.42,
+          "frequency": 1,
+          "animationSpeed": 0.65,
+          "windSpeed": 8.2,
+          "windDirection": 1.413716694115407,
+          "choppiness": 0.62,
+          "spectralSharpness": 2.26,
+          "standingWaveRatio": 0.12,
+          "cascades": {
+            "ripples": {
+              "scale": 34,
+              "amplitudeScale": 0.055
+            },
+            "waves": {
+              "scale": 150,
+              "amplitudeScale": 0.2
+            }
+          }
+        },
+        "gerstner": {
+          "wavelength": 64,
+          "amplitude": 0.64,
+          "wavelengthSpread": 2.15,
+          "directionalSpread": 1.28
+        }
+      }
+    }
+  },
+  "hashes": [
+    {
+      "t": 7,
+      "sha256": "72fcb4f9c2a8026a3135c2774e48314c3a6a6d3e6f34ce3594f97608a7546f2a"
+    },
+    {
+      "t": 7,
+      "sha256": "4d53a00f2a470e1f7d0b7c4f37f1f93291e663ea2434d2fdd48934ac5aadbc42"
+    },
+    {
+      "t": 17,
+      "sha256": "44c8de472a9d92bef8de0a5b8bf0ecbe14551857f877c506bcd6558c3f0289f8"
+    },
+    {
+      "t": 46,
+      "sha256": "bfd65d53d87efa9c419e3dae6b985799778263e0caaf2eae9f40320ff92e698e"
+    },
+    {
+      "t": 99,
+      "sha256": "5009140932c352b838ff0e22a5db09a6ae502cc93f538175d24bd6cd7aeb9953"
+    },
+    {
+      "t": 17,
+      "sha256": "ad386d24e631e97620256d93a8f58966c404bf60e319627336791dd6a70408c9"
+    },
+    {
+      "t": 7,
+      "sha256": "83058e86bb2b8341dcfff2021ffb8881a8cb0977086f6d64e589095f0182bf20"
+    },
+    {
+      "t": 99,
+      "sha256": "b0f8af9b3c6207d7b4c94f2de521a4ee79244bc8816b8e26c4192b45ff8f8fa1"
+    },
+    {
+      "t": 46,
+      "sha256": "c217723c7f8a98e8fa55d2bdf40b256ca72ee8ed7d90a2bf50f22ffa279a7ce9"
+    }
+  ],
+  "repeatByTime": [
+    {
+      "t": 7,
+      "match": false
+    },
+    {
+      "t": 17,
+      "match": false
+    },
+    {
+      "t": 46,
+      "match": false
+    },
+    {
+      "t": 99,
+      "match": false
+    }
+  ],
+  "records": [
+    {
+      "time": 0,
+      "iteration": 0,
+      "fraction": 1,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 1055.226499623215,
+        "y": 868.2640525990422,
+        "depth": 0.9995746725246527,
+        "visible": true
+      },
+      "platform": {
+        "x": 1199.9999894220357,
+        "y": 859.6146682829792,
+        "depth": 0.9996070062196737,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1200.000012712142,
+        "y": 487.2599729662469,
+        "depth": 0.9996149913381728,
+        "visible": true
+      },
+      "beso": {
+        "x": 5077.740341109666,
+        "y": 901.6750613852579,
+        "depth": 0.9994083758316771,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -270,
+          91,
+          430
+        ],
+        "target": [
+          0,
+          129,
+          0
+        ]
+      },
+      "phase": "hero",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1195.2081636450885,
+          "y": 872.0295572088464,
+          "depth": 0.9996438474298953,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1197.2801254067222,
+          "y": 882.3152747587269,
+          "depth": 0.9996275817744456,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1072.1552914259983,
+          "y": 910.6038478198933,
+          "depth": 0.9995828467107184,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1132.3525798905848,
+          "y": 903.6414299348535,
+          "depth": 0.9995938569598554,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1332.5076477645357,
+          "y": 908.7269759687083,
+          "depth": 0.9995858147725336,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1270.346713635784,
+          "y": 902.6709065837354,
+          "depth": 0.9995953917335378,
+          "visible": true
+        },
+        "hub": {
+          "x": 1199.9999894220357,
+          "y": 859.6146682829792,
+          "depth": 0.9996070062196737,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1199.9999894220357,
+          "y": 859.6146682829792,
+          "depth": 0.9996070062196737,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1199.9999894220357,
+          "y": 859.6146682829792,
+          "depth": 0.9996070062196737,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1200.000012712142,
+          "y": 487.2599729662469,
+          "depth": 0.9996149913381728,
+          "visible": true
+        },
+        "fairlead-1": {
+          "x": 1055.226499623215,
+          "y": 868.2640525990422,
+          "depth": 0.9995746725246527,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -3649.7881542079076,
+          "y": 2092.201781927985,
+          "depth": 0.9985214673028859,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1050.783635088378,
+          "y": 867.0869768188334,
+          "depth": 0.9995769258080557,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -3075.4286037135853,
+          "y": 1876.2861005160885,
+          "depth": 0.9987426848650865,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1043.093818028658,
+          "y": 864.6691148836256,
+          "depth": 0.9995815543360853,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -2259.4748641048395,
+          "y": 1582.6891667358261,
+          "depth": 0.999043491168435,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1039.8375044645109,
+          "y": 863.4300951246536,
+          "depth": 0.9995839261992884,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -1955.4231567925144,
+          "y": 1478.619407389865,
+          "depth": 0.9991501163950551,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1179.639421135919,
+          "y": 828.5926171779956,
+          "depth": 0.9996506158091009,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1104.9711436984237,
+          "y": 822.072719961143,
+          "depth": 0.9998227848029922,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1186.914711037714,
+          "y": 828.4821290249688,
+          "depth": 0.9996508273175803,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1141.7437765469215,
+          "y": 821.579207043462,
+          "depth": 0.9998232904342823,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1201.7524779137898,
+          "y": 828.390588589937,
+          "depth": 0.9996510025546465,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1214.874354809689,
+          "y": 821.299563797794,
+          "depth": 0.9998235769442602,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1208.9138519704907,
+          "y": 828.4444635336457,
+          "depth": 0.9996508994218078,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1251.41667603708,
+          "y": 821.5199230317253,
+          "depth": 0.9998233511740324,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1364.4023436606649,
+          "y": 861.5071592800366,
+          "depth": 0.9995876073013749,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 4056.0887428528868,
+          "y": 1379.638147999391,
+          "depth": 0.9992515281719243,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1361.6716115050738,
+          "y": 862.7419437461373,
+          "depth": 0.9995852435455639,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 4305.6888855016405,
+          "y": 1461.8129807753844,
+          "depth": 0.9991673355090196,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1355.4736343094512,
+          "y": 865.2640311203663,
+          "depth": 0.9995804154975255,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 4951.295669081044,
+          "y": 1685.5807064011956,
+          "depth": 0.9989380730930689,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1351.6301901056734,
+          "y": 866.4710002441041,
+          "depth": 0.9995781049887522,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 5384.696597677053,
+          "y": 1842.695579547427,
+          "depth": 0.9987771002123794,
+          "visible": false
+        },
+        "specimen": {
+          "x": 5077.740341109666,
+          "y": 901.6750613852579,
+          "depth": 0.9994083758316771,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1199.9999443595905,
+          "y": 618.5235078750321,
+          "depth": 0.9996121763903798,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1352.5755721494104,
+          "y": 761.1192790466026,
+          "depth": 0.9996147733833773,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 7,
+      "iteration": 0,
+      "fraction": 1,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 1061.9333348111008,
+        "y": 838.9059722730873,
+        "depth": 0.9993981339252471,
+        "visible": true
+      },
+      "platform": {
+        "x": 1271.718735254518,
+        "y": 814.1891130649078,
+        "depth": 0.9994603920952736,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1271.7187684877993,
+        "y": 287.7867805958343,
+        "depth": 0.9994522749181965,
+        "visible": true
+      },
+      "beso": {
+        "x": 7914.517953343155,
+        "y": 977.5592478560936,
+        "depth": 0.9990023171897304,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -190.4266388361545,
+          97.95327278589853,
+          309.0736630406462
+        ],
+        "target": [
+          0,
+          83.70650657583407,
+          0
+        ]
+      },
+      "phase": "hero",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1266.7461374419668,
+          "y": 816.5172467924835,
+          "depth": 0.9995288031087366,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1268.8551678103827,
+          "y": 836.4219691402034,
+          "depth": 0.9995001100646849,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1089.0844864490832,
+          "y": 893.8183193892584,
+          "depth": 0.9994173721045058,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1176.010881337857,
+          "y": 879.3632445818715,
+          "depth": 0.9994382093785735,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1459.06594044274,
+          "y": 890.7448935595912,
+          "depth": 0.9994218025194607,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1370.248945424216,
+          "y": 877.8040141750487,
+          "depth": 0.9994404570457504,
+          "visible": true
+        },
+        "hub": {
+          "x": 1271.718735254518,
+          "y": 814.1891130649078,
+          "depth": 0.9994603920952736,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1271.718735254518,
+          "y": 814.1891130649078,
+          "depth": 0.9994603920952736,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1271.718735254518,
+          "y": 814.1891130649078,
+          "depth": 0.9994603920952736,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1271.7187684877993,
+          "y": 287.7867805958343,
+          "depth": 0.9994522749181965,
+          "visible": true
+        },
+        "fairlead-1": {
+          "x": 1061.9333348111008,
+          "y": 838.9059722730873,
+          "depth": 0.9993981339252471,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -60622.07891661702,
+          "y": 19728.17182339132,
+          "depth": 0.9815787638393189,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1056.1047622313101,
+          "y": 836.2902575930249,
+          "depth": 0.9994026318032786,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -18818.70125959106,
+          "y": 6518.798150340094,
+          "depth": 0.994228511822959,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1046.2630156415798,
+          "y": 830.9572809378234,
+          "depth": 0.9994118021760746,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -7468.581909244419,
+          "y": 2959.901464835455,
+          "depth": 0.9976366330015797,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1042.228585704648,
+          "y": 828.2448480691697,
+          "depth": 0.9994164663669001,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -5576.878465902751,
+          "y": 2376.7423904095936,
+          "depth": 0.9981950860750144,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1246.0692686719763,
+          "y": 757.2377531163032,
+          "depth": 0.9995385673327272,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1169.299627449457,
+          "y": 702.0392091023613,
+          "depth": 0.9997988391154902,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1255.8545554645257,
+          "y": 757.040858149494,
+          "depth": 0.9995389059058052,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1211.7973316000102,
+          "y": 701.4189395937923,
+          "depth": 0.9997994331067844,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1275.7944238112268,
+          "y": 756.8972695330989,
+          "depth": 0.9995391528158063,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1296.27479325075,
+          "y": 701.1466453900165,
+          "depth": 0.9997996938650263,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1285.4127135169697,
+          "y": 757.0169771021572,
+          "depth": 0.9995389469718311,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1338.511782509346,
+          "y": 701.5039479951847,
+          "depth": 0.999799351699832,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1505.3123259084125,
+          "y": 825.0253634932178,
+          "depth": 0.9994220024814483,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 7082.206535098912,
+          "y": 2060.385699540047,
+          "depth": 0.9984980400614402,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1501.8294580409236,
+          "y": 827.7016196817029,
+          "depth": 0.9994174004983056,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 8374.065954450198,
+          "y": 2454.305236331011,
+          "depth": 0.9981208092411473,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1493.7756265316616,
+          "y": 833.2031374032485,
+          "depth": 0.9994079403083528,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 14235.803907858728,
+          "y": 4277.922904167991,
+          "depth": 0.9963744505955658,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1488.6316067557782,
+          "y": 835.8509909627178,
+          "depth": 0.9994033871651703,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 23842.487032734964,
+          "y": 7300.356408935239,
+          "depth": 0.9934800649056056,
+          "visible": false
+        },
+        "specimen": {
+          "x": 7914.517953343155,
+          "y": 977.5592478560936,
+          "depth": 0.9990023171897304,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1271.7186701145354,
+          "y": 477.57405115395005,
+          "depth": 0.9994552014355701,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1486.1091505447414,
+          "y": 677.2811683208059,
+          "depth": 0.9994684275742001,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42.15625,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 11,
+      "iteration": 0,
+      "fraction": 1,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 976.3090664421169,
+        "y": 632.8178590400795,
+        "depth": 0.9991022268321855,
+        "visible": true
+      },
+      "platform": {
+        "x": 1284.999978995032,
+        "y": 593.1492422171461,
+        "depth": 0.9992350762986951,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1285.0000285866736,
+        "y": -213.7919323156228,
+        "depth": 0.9991429815379329,
+        "visible": false
+      },
+      "beso": {
+        "x": 16061.661396834028,
+        "y": 982.3037125712182,
+        "depth": 0.9977887771537869,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -136,
+          74,
+          212
+        ],
+        "target": [
+          0,
+          22,
+          0
+        ]
+      },
+      "phase": "brief",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1274.0658797466147,
+          "y": 594.1222157317907,
+          "depth": 0.9993670127123481,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1278.5835327361442,
+          "y": 621.7614571731875,
+          "depth": 0.9993157007001817,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1022.4537546109033,
+          "y": 709.261345869343,
+          "depth": 0.9991532579038452,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1149.6219611550187,
+          "y": 685.8937671507206,
+          "depth": 0.9991966396167132,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1557.343540863503,
+          "y": 701.3150208442729,
+          "depth": 0.9991680102099761,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1426.6155777913652,
+          "y": 681.9718113112857,
+          "depth": 0.999203920705436,
+          "visible": true
+        },
+        "hub": {
+          "x": 1284.999978995032,
+          "y": 593.1492422171461,
+          "depth": 0.9992350762986951,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1284.999978995032,
+          "y": 593.1492422171461,
+          "depth": 0.9992350762986951,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1284.999978995032,
+          "y": 593.1492422171461,
+          "depth": 0.9992350762986951,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1285.0000285866736,
+          "y": -213.7919323156228,
+          "depth": 0.9991429815379329,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 976.3090664421169,
+          "y": 632.8178590400795,
+          "depth": 0.9991022268321855,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 8917.257913898718,
+          "y": -1810.5113547840576,
+          "depth": 1.0023013764049618,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 968.3232619273188,
+          "y": 628.7587649254083,
+          "depth": 0.9991118060848148,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 12030.055080961407,
+          "y": -2548.281109206496,
+          "depth": 1.00312317188618,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 955.2293821925136,
+          "y": 620.5493630756064,
+          "depth": 0.9991311798496743,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 47293.744452345265,
+          "y": -11017.75409037346,
+          "depth": 1.0125572461112355,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 950.0716879279761,
+          "y": 616.4085244278533,
+          "depth": 0.999140952015343,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -79440.90806827316,
+          "y": 19512.88376013978,
+          "depth": 0.9785494271760421,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1245.5295827424432,
+          "y": 515.6633000982662,
+          "depth": 0.9993787055719611,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1151.0978258280604,
+          "y": 460.182256185763,
+          "depth": 0.9997720700223941,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1258.6970916401388,
+          "y": 515.3660687880001,
+          "depth": 0.9993794070232505,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1199.3033319508183,
+          "y": 459.3895265941438,
+          "depth": 0.9997729530371724,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1285.524937678215,
+          "y": 515.0914943128585,
+          "depth": 0.999380055006308,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1294.9206774381335,
+          "y": 458.84449235143063,
+          "depth": 0.9997735601461996,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1298.4793969524833,
+          "y": 515.2015154969595,
+          "depth": 0.9993797953626737,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1342.6700693296305,
+          "y": 459.0997311063648,
+          "depth": 0.9997732758379119,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1627.2590494690953,
+          "y": 608.4099410399236,
+          "depth": 0.9991598282964729,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 16730.613611584067,
+          "y": 3807.9677806482186,
+          "depth": 0.9960430000793673,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1623.658159295383,
+          "y": 612.4678450574414,
+          "depth": 0.9991502518517907,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 32738.300824279984,
+          "y": 7652.267087873479,
+          "depth": 0.9917608676387375,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1614.8698380258459,
+          "y": 620.9033100524922,
+          "depth": 0.9991303445883789,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": -26360.238753410464,
+          "y": -6600.1385369575355,
+          "depth": 1.0076365015594364,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1608.7340753259414,
+          "y": 625.0148549771897,
+          "depth": 0.9991206415537827,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": -12657.056925883353,
+          "y": -3311.2378858602056,
+          "depth": 1.0039730229781505,
+          "visible": false
+        },
+        "specimen": {
+          "x": 16061.661396834028,
+          "y": 982.3037125712182,
+          "depth": 0.9977887771537869,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1284.9998807923885,
+          "y": 95.61030914652844,
+          "depth": 0.9991782930174978,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1592.1092897493809,
+          "y": 398.82781712273913,
+          "depth": 0.9992369699580517,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 17,
+      "iteration": 0,
+      "fraction": 1,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 961.8656501766013,
+        "y": 624.0060334565018,
+        "depth": 0.9991172402998376,
+        "visible": true
+      },
+      "platform": {
+        "x": 1284.9999794593664,
+        "y": 593.3449943197734,
+        "depth": 0.999233628600063,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1285.0000299926742,
+        "y": -212.83992818397547,
+        "depth": 0.9991456251630134,
+        "visible": false
+      },
+      "beso": {
+        "x": 14014.642050600194,
+        "y": 869.8690498287647,
+        "depth": 0.9980672075866706,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -117.17897727272727,
+          71.67213983050848,
+          223.02746977898195
+        ],
+        "target": [
+          0,
+          22,
+          0
+        ]
+      },
+      "phase": "brief",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1294.3259919432508,
+          "y": 596.4241572350002,
+          "depth": 0.9993660042218473,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1290.4743710504226,
+          "y": 623.3060770072686,
+          "depth": 0.9993144066720789,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1012.5488040912134,
+          "y": 701.3350868307043,
+          "depth": 0.9991646366383364,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1143.44562523193,
+          "y": 682.203358257841,
+          "depth": 0.9992013583634302,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1549.1043707484885,
+          "y": 707.9282748648346,
+          "depth": 0.9991519816003537,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1421.233990789984,
+          "y": 685.4560284083375,
+          "depth": 0.9991951151529661,
+          "visible": true
+        },
+        "hub": {
+          "x": 1284.9999794593664,
+          "y": 593.3449943197734,
+          "depth": 0.999233628600063,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1284.9999794593664,
+          "y": 593.3449943197734,
+          "depth": 0.999233628600063,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1284.9999794593664,
+          "y": 593.3449943197734,
+          "depth": 0.999233628600063,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1285.0000299926742,
+          "y": -212.83992818397547,
+          "depth": 0.9991456251630134,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 961.8656501766013,
+          "y": 624.0060334565018,
+          "depth": 0.9991172402998376,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 16221.552953984941,
+          "y": -3451.5569229866196,
+          "depth": 1.0042299954224267,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 955.7108054524065,
+          "y": 620.010151473481,
+          "depth": 0.9991270754306883,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 33039.92602242364,
+          "y": -7401.754434181963,
+          "depth": 1.0087216701766089,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 946.210057545318,
+          "y": 612.0033829989238,
+          "depth": 0.9991467826233951,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -26248.936670789415,
+          "y": 6583.37655021037,
+          "depth": 0.9928195134873564,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 942.8093120044869,
+          "y": 607.9990403022509,
+          "depth": 0.9991566385788963,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -13148.53021920762,
+          "y": 3508.0393168507976,
+          "depth": 0.9963164056231366,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1269.055669466523,
+          "y": 517.6301886948725,
+          "depth": 0.9993790649639769,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1236.4973566844924,
+          "y": 467.8244247078363,
+          "depth": 0.9997733609879315,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1282.276782708935,
+          "y": 517.547805558065,
+          "depth": 0.9993792677357116,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1284.4045106228427,
+          "y": 467.6446574213687,
+          "depth": 0.999773565396997,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1309.1532277704896,
+          "y": 517.6974698795991,
+          "depth": 0.9993788993659197,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1380.0629446128517,
+          "y": 468.2951714939316,
+          "depth": 0.9997728257130626,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1322.0701492424648,
+          "y": 518.0031052128347,
+          "depth": 0.9993781471012838,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1428.1488191246294,
+          "y": 469.1429541066676,
+          "depth": 0.9997718617198073,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1621.7217145990564,
+          "y": 614.5901404070254,
+          "depth": 0.9991404158319832,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 265955.9284664284,
+          "y": 62423.17198398391,
+          "depth": 0.9293254226937365,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1616.403688974017,
+          "y": 618.4902274854496,
+          "depth": 0.9991308164820908,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": -31374.13618594631,
+          "y": -7614.472719098968,
+          "depth": 1.0089635470314766,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1604.0038792399475,
+          "y": 626.562783007305,
+          "depth": 0.9991109473653953,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": -8444.761544598423,
+          "y": -2236.089489326721,
+          "depth": 1.0028479165843873,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1596.0438276383936,
+          "y": 630.4522387785777,
+          "depth": 0.999101374182369,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": -5796.218365986404,
+          "y": -1623.5837834779038,
+          "depth": 1.002151451051219,
+          "visible": false
+        },
+        "specimen": {
+          "x": 14014.642050600194,
+          "y": 869.8690498287647,
+          "depth": 0.9980672075866706,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1284.9998752045037,
+          "y": 95.33136285263387,
+          "depth": 0.9991792652110227,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1600.7336774723412,
+          "y": 401.46171119821264,
+          "depth": 0.9992218405697142,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 21,
+      "iteration": 0,
+      "fraction": 1,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 1028.624025100459,
+        "y": 613.359778761855,
+        "depth": 0.9991594532628195,
+        "visible": true
+      },
+      "platform": {
+        "x": 1340.7174018891114,
+        "y": 589.6355854130002,
+        "depth": 0.9992551895182559,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1347.2304314613584,
+        "y": -187.25996594966065,
+        "depth": 0.9991712527148372,
+        "visible": false
+      },
+      "beso": {
+        "x": 11895.833069447164,
+        "y": 786.9168038744006,
+        "depth": 0.998379105614271,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -113.70927917164475,
+          73.33333333333333,
+          233.13932137142723
+        ],
+        "target": [
+          -14.536026936026934,
+          23.814814814814813,
+          5.555555555555555
+        ]
+      },
+      "phase": "brief",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1356.5660753303528,
+          "y": 592.9569931538613,
+          "depth": 0.9993803420594859,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1349.7708488324536,
+          "y": 618.8560538964629,
+          "depth": 0.9993314345547146,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1076.850215353139,
+          "y": 687.7804562765118,
+          "depth": 0.9992012784515438,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1202.2823894257888,
+          "y": 672.3869444422128,
+          "depth": 0.9992303473971765,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1592.472182054853,
+          "y": 705.5299490681339,
+          "depth": 0.9991677605246724,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1469.7157783542211,
+          "y": 681.1717188221623,
+          "depth": 0.9992137583363303,
+          "visible": true
+        },
+        "hub": {
+          "x": 1340.7174018891114,
+          "y": 589.6355854130002,
+          "depth": 0.9992551895182559,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1340.7174018891114,
+          "y": 589.6355854130002,
+          "depth": 0.9992551895182559,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1340.7174018891114,
+          "y": 589.6355854130002,
+          "depth": 0.9992551895182559,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1347.2304314613584,
+          "y": -187.25996594966065,
+          "depth": 0.9991712527148372,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1028.624025100459,
+          "y": 613.359778761855,
+          "depth": 0.9991594532628195,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 245303.23935631954,
+          "y": -59931.167968652786,
+          "depth": 1.0679627411805237,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1023.3192602267696,
+          "y": 609.4970462897769,
+          "depth": 0.9991687483458261,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -31504.11382626665,
+          "y": 8143.719787952936,
+          "depth": 0.9911075563908468,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1015.323580566148,
+          "y": 601.8016386468554,
+          "depth": 0.9991872661836191,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -8967.79666734724,
+          "y": 2623.513614353628,
+          "depth": 0.9973397585953654,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1012.5806253431755,
+          "y": 597.9731917645305,
+          "depth": 0.9991964787636639,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -6375.7991681884005,
+          "y": 1996.4441426292833,
+          "depth": 0.9980477074692242,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1333.7828349436836,
+          "y": 516.1092815448841,
+          "depth": 0.9993934719383193,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1322.9505736938872,
+          "y": 466.0603073867858,
+          "depth": 0.9997754801668044,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1346.6333284123068,
+          "y": 516.19600891922,
+          "depth": 0.9993932632426732,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1370.2033183735039,
+          "y": 466.3763685534445,
+          "depth": 0.9997751233400776,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1372.7632872016572,
+          "y": 516.682224938081,
+          "depth": 0.9993920932385639,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1465.1624603124976,
+          "y": 468.01693553148897,
+          "depth": 0.9997732711728188,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1385.3119880168333,
+          "y": 517.144607035047,
+          "depth": 0.9993909805864499,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1513.1998106755325,
+          "y": 469.36720565507545,
+          "depth": 0.9997717467448941,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1665.0659408751503,
+          "y": 615.8073439441577,
+          "depth": 0.999153563601107,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": -25983.39993305946,
+          "y": -6358.513538274592,
+          "depth": 1.007480287347602,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1659.1007615181554,
+          "y": 619.5017578346709,
+          "depth": 0.9991446735507714,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": -12633.860635577505,
+          "y": -3222.8650453804175,
+          "depth": 1.003940203003747,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1645.397670261094,
+          "y": 627.1078980791826,
+          "depth": 0.9991263705203246,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": -5542.292503949741,
+          "y": -1574.3009917496206,
+          "depth": 1.0020790072066652,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1636.8422793806358,
+          "y": 630.7283878583464,
+          "depth": 0.9991176583570753,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": -4070.687886240235,
+          "y": -1239.3533696296392,
+          "depth": 1.0017008580500344,
+          "visible": false
+        },
+        "specimen": {
+          "x": 11895.833069447164,
+          "y": 786.9168038744006,
+          "depth": 0.998379105614271,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1344.743599982036,
+          "y": 109.36161322797204,
+          "depth": 0.9992033000614761,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1652.5264013218523,
+          "y": 406.660284146105,
+          "depth": 0.9992317468983106,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42.25925925925926,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 28,
+      "iteration": 0,
+      "fraction": 1,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 1894.1114544620787,
+        "y": 495.5233762920816,
+        "depth": 0.9993401892067016,
+        "visible": false
+      },
+      "platform": {
+        "x": 2089.5353194697045,
+        "y": 488.1689665299695,
+        "depth": 0.9993894043656444,
+        "visible": false
+      },
+      "towerTop": {
+        "x": 2176.1076099794745,
+        "y": -140.3635046621125,
+        "depth": 0.9993237991202019,
+        "visible": false
+      },
+      "beso": {
+        "x": 1274.9999999999998,
+        "y": 540.0000000000001,
+        "depth": 0.9990134559371975,
+        "visible": true
+      },
+      "camera": {
+        "position": [
+          -277.82608695652175,
+          73.85526315789474,
+          247.35714285714286
+        ],
+        "target": [
+          -220,
+          28,
+          60
+        ]
+      },
+      "phase": "topology",
+      "anchors": {
+        "outer-column-101": {
+          "x": 2018.437791569057,
+          "y": 499.45658795021603,
+          "depth": 0.9994751819296027,
+          "visible": false
+        },
+        "inner-leg-104": {
+          "x": 2045.3383435683177,
+          "y": 517.2938231826654,
+          "depth": 0.9994413302372339,
+          "visible": false
+        },
+        "outer-column-102": {
+          "x": 1902.6261570720667,
+          "y": 557.1229272501857,
+          "depth": 0.9993657421364899,
+          "visible": false
+        },
+        "inner-leg-105": {
+          "x": 1986.7133020967585,
+          "y": 549.9041150691604,
+          "depth": 0.9993794420781499,
+          "visible": false
+        },
+        "outer-column-103": {
+          "x": 2355.6171950832804,
+          "y": 579.6185437343589,
+          "depth": 0.9993230497372717,
+          "visible": false
+        },
+        "inner-leg-106": {
+          "x": 2223.142287710467,
+          "y": 561.2539149274878,
+          "depth": 0.9993579023182007,
+          "visible": false
+        },
+        "hub": {
+          "x": 2089.5353194697045,
+          "y": 488.1689665299695,
+          "depth": 0.9993894043656444,
+          "visible": false
+        },
+        "platform-center": {
+          "x": 2089.5353194697045,
+          "y": 488.1689665299695,
+          "depth": 0.9993894043656444,
+          "visible": false
+        },
+        "tower-base": {
+          "x": 2089.5353194697045,
+          "y": 488.1689665299695,
+          "depth": 0.9993894043656444,
+          "visible": false
+        },
+        "tower-top": {
+          "x": 2176.1076099794745,
+          "y": -140.3635046621125,
+          "depth": 0.9993237991202019,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1894.1114544620787,
+          "y": 495.5233762920816,
+          "depth": 0.9993401892067016,
+          "visible": false
+        },
+        "anchor-1": {
+          "x": -2935.5092186610004,
+          "y": 1713.8946153487916,
+          "depth": 0.9983062320533493,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1883.6518499605504,
+          "y": 493.03061844885946,
+          "depth": 0.9993462060721228,
+          "visible": false
+        },
+        "anchor-2": {
+          "x": -2259.468478449815,
+          "y": 1438.8413784575314,
+          "depth": 0.9986191884377794,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1864.7689905028785,
+          "y": 488.0776281001608,
+          "depth": 0.9993581612954109,
+          "visible": false
+        },
+        "anchor-3": {
+          "x": -1407.7015890493865,
+          "y": 1105.2008903573524,
+          "depth": 0.9989988055694863,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1856.3161808856005,
+          "y": 485.6186401097925,
+          "depth": 0.9993640966493423,
+          "visible": false
+        },
+        "anchor-4": {
+          "x": -1116.5393603149928,
+          "y": 996.4786649654808,
+          "depth": 0.9991225100383025,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1991.8037723090529,
+          "y": 435.7283970295061,
+          "depth": 0.999484518665568,
+          "visible": false
+        },
+        "anchor-5": {
+          "x": 1683.7641310793176,
+          "y": 411.3659120132554,
+          "depth": 0.9997882530548817,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 2003.2348227980835,
+          "y": 435.9738935485838,
+          "depth": 0.9994839261017524,
+          "visible": false
+        },
+        "anchor-6": {
+          "x": 1729.1596917939405,
+          "y": 412.3094043814557,
+          "depth": 0.9997871795464816,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 2027.045200719949,
+          "y": 436.69475299582245,
+          "depth": 0.9994821861367333,
+          "visible": false
+        },
+        "anchor-7": {
+          "x": 1822.2379288225925,
+          "y": 415.10821810355395,
+          "depth": 0.9997839950479712,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 2038.8795596224859,
+          "y": 437.2045173475785,
+          "depth": 0.9994809556994536,
+          "visible": false
+        },
+        "anchor-8": {
+          "x": 1870.2523572877717,
+          "y": 416.9960921206086,
+          "depth": 0.9997818470193447,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 2430.277927488102,
+          "y": 508.24697299459154,
+          "depth": 0.9993094777986795,
+          "visible": false
+        },
+        "anchor-9": {
+          "x": -48767.73062977143,
+          "y": -9418.553512996838,
+          "depth": 1.0109727643780706,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 2430.0015758302657,
+          "y": 510.4859620367106,
+          "depth": 0.9993040734642392,
+          "visible": false
+        },
+        "anchor-10": {
+          "x": -20750.968766645612,
+          "y": -4143.5286751393805,
+          "depth": 1.0049708255545426,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 2428.2102150030923,
+          "y": 515.0321516433485,
+          "depth": 0.9992931001505012,
+          "visible": false
+        },
+        "anchor-11": {
+          "x": -8934.47476923151,
+          "y": -1936.0274095486498,
+          "depth": 1.0024591241017176,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 2425.6153315202328,
+          "y": 517.1406305752968,
+          "depth": 0.9992880108332332,
+          "visible": false
+        },
+        "anchor-12": {
+          "x": -6698.469242247281,
+          "y": -1525.5704834726762,
+          "depth": 1.0019921050002487,
+          "visible": false
+        },
+        "specimen": {
+          "x": 1274.9999999999998,
+          "y": 540.0000000000001,
+          "depth": 0.9990134559371975,
+          "visible": true
+        },
+        "response-point": {
+          "x": 2143.1535514800903,
+          "y": 98.88901127295789,
+          "depth": 0.999348771910353,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 2382.2172000881064,
+          "y": 341.90269516546454,
+          "depth": 0.9993586707435465,
+          "visible": false
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": true,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 36,
+      "iteration": 26,
+      "fraction": 0.3315818196130268,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 2193.98386775618,
+        "y": 544.1341184604694,
+        "depth": 0.9991618874433525,
+        "visible": false
+      },
+      "platform": {
+        "x": 2517.240205506636,
+        "y": 553.241913389753,
+        "depth": 0.9991837379537023,
+        "visible": false
+      },
+      "towerTop": {
+        "x": 2696.278305329113,
+        "y": -304.63936184315924,
+        "depth": 0.9990651332298198,
+        "visible": false
+      },
+      "beso": {
+        "x": 1274.9999999999998,
+        "y": 539.9999999999999,
+        "depth": 0.9989066190378705,
+        "visible": true
+      },
+      "camera": {
+        "position": [
+          -219.31055407390446,
+          68.71840614318491,
+          237.19188136042067
+        ],
+        "target": [
+          -220,
+          28,
+          60
+        ]
+      },
+      "phase": "topology",
+      "anchors": {
+        "outer-column-101": {
+          "x": 2440.8875006803632,
+          "y": 563.4761284348347,
+          "depth": 0.9993163130202493,
+          "visible": false
+        },
+        "inner-leg-104": {
+          "x": 2466.563111033843,
+          "y": 588.5607004607951,
+          "depth": 0.9992651539078163,
+          "visible": false
+        },
+        "outer-column-102": {
+          "x": 2212.1420341844423,
+          "y": 623.3851616628518,
+          "depth": 0.9991941306179577,
+          "visible": false
+        },
+        "inner-leg-105": {
+          "x": 2344.7211629493645,
+          "y": 623.5308989198853,
+          "depth": 0.9991938333974212,
+          "visible": false
+        },
+        "outer-column-103": {
+          "x": 2944.827087244972,
+          "y": 710.4772682131406,
+          "depth": 0.9990165093218036,
+          "visible": false
+        },
+        "inner-leg-106": {
+          "x": 2721.086130109516,
+          "y": 666.5817442969116,
+          "depth": 0.9991060327090733,
+          "visible": false
+        },
+        "hub": {
+          "x": 2517.240205506636,
+          "y": 553.241913389753,
+          "depth": 0.9991837379537023,
+          "visible": false
+        },
+        "platform-center": {
+          "x": 2517.240205506636,
+          "y": 553.241913389753,
+          "depth": 0.9991837379537023,
+          "visible": false
+        },
+        "tower-base": {
+          "x": 2517.240205506636,
+          "y": 553.241913389753,
+          "depth": 0.9991837379537023,
+          "visible": false
+        },
+        "tower-top": {
+          "x": 2696.278305329113,
+          "y": -304.63936184315924,
+          "depth": 0.9990651332298198,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 2193.98386775618,
+          "y": 544.1341184604694,
+          "depth": 0.9991618874433525,
+          "visible": false
+        },
+        "anchor-1": {
+          "x": -1209.3713698836816,
+          "y": 1036.6819496370647,
+          "depth": 0.9990426185463251,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 2181.6931594287953,
+          "y": 540.2397503649684,
+          "depth": 0.9991721955292298,
+          "visible": false
+        },
+        "anchor-2": {
+          "x": -920.9118367029575,
+          "y": 939.0418541730269,
+          "depth": 0.9991585842729105,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 2160.228976860931,
+          "y": 532.7312401559709,
+          "depth": 0.9991920699649836,
+          "visible": false
+        },
+        "anchor-3": {
+          "x": -491.76214088741665,
+          "y": 800.5985827361266,
+          "depth": 0.9993230113403636,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 2150.98200250633,
+          "y": 529.1104566358891,
+          "depth": 0.9992016538941381,
+          "visible": false
+        },
+        "anchor-4": {
+          "x": -324.93170792972694,
+          "y": 749.7423589609598,
+          "depth": 0.9993834125404388,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 2409.717061950432,
+          "y": 479.27219825789854,
+          "depth": 0.9993335718645421,
+          "visible": false
+        },
+        "anchor-5": {
+          "x": 2102.7991372021274,
+          "y": 439.4414624878011,
+          "depth": 0.9997519524189442,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 2427.1025145008757,
+          "y": 480.3699668838955,
+          "depth": 0.9993306661581338,
+          "visible": false
+        },
+        "anchor-6": {
+          "x": 2162.7805020701085,
+          "y": 442.9592435813234,
+          "depth": 0.9997477744013119,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 2463.4310199744527,
+          "y": 482.93670803317434,
+          "depth": 0.9993238721978345,
+          "visible": false
+        },
+        "anchor-7": {
+          "x": 2289.66943027415,
+          "y": 451.4431687129103,
+          "depth": 0.9997376981663645,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 2481.4938879414535,
+          "y": 484.41218923702553,
+          "depth": 0.9993199667159294,
+          "visible": false
+        },
+        "anchor-8": {
+          "x": 2357.291200109401,
+          "y": 456.50878948416084,
+          "depth": 0.9997316818019748,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 3091.673969339929,
+          "y": 616.0644101537863,
+          "depth": 0.9989714936582319,
+          "visible": false
+        },
+        "anchor-9": {
+          "x": -2210.8548532230648,
+          "y": -536.2286817134449,
+          "depth": 1.000910741711828,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 3088.4385723704204,
+          "y": 619.2270072268327,
+          "depth": 0.9989631225119471,
+          "visible": false
+        },
+        "anchor-10": {
+          "x": -1838.9415303319897,
+          "y": -485.79743426108973,
+          "depth": 1.0008508452499736,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 3079.417076239928,
+          "y": 625.4995455818836,
+          "depth": 0.998946519594983,
+          "visible": false
+        },
+        "anchor-11": {
+          "x": -1248.997466304143,
+          "y": -411.20529853463876,
+          "depth": 1.0007622532512057,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 3071.7297303794453,
+          "y": 628.1855267030244,
+          "depth": 0.9989394100134555,
+          "visible": false
+        },
+        "anchor-12": {
+          "x": -1008.3117007176628,
+          "y": -383.43303059811655,
+          "depth": 1.0007292685309954,
+          "visible": false
+        },
+        "specimen": {
+          "x": 1274.9999999999998,
+          "y": 539.9999999999999,
+          "depth": 0.9989066190378705,
+          "visible": true
+        },
+        "response-point": {
+          "x": 2626.701594539387,
+          "y": 28.74453320179028,
+          "depth": 0.9991112245775176,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 3037.9866257039353,
+          "y": 369.3437589846039,
+          "depth": 0.9990615260061062,
+          "visible": false
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": true,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 40,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 0.01,
+        "surge": -2.77e-06,
+        "pitch": 1.1459155902616465e-06,
+        "tension": 394.91
+      },
+      "lineTension": 393.558,
+      "fairlead": {
+        "x": 931.685227450353,
+        "y": 599.1908745995081,
+        "depth": 0.998992798923683,
+        "visible": true
+      },
+      "platform": {
+        "x": 1264.8585932300687,
+        "y": 574.9083324668595,
+        "depth": 0.9991419958449298,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1269.80851307726,
+        "y": -264.5431688412674,
+        "depth": 0.999046584822236,
+        "visible": false
+      },
+      "beso": {
+        "x": 15960.209167540814,
+        "y": 828.5587061561428,
+        "depth": 0.9973422085454904,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -113,
+          57,
+          197
+        ],
+        "target": [
+          -9,
+          19,
+          0
+        ]
+      },
+      "phase": "physics",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1265.4570492178057,
+          "y": 587.0617232558745,
+          "depth": 0.9993041132933953,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1265.0413837905298,
+          "y": 611.1710344411363,
+          "depth": 0.999241250527546,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 983.6468128876734,
+          "y": 683.6200160747914,
+          "depth": 0.9990523465919323,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1119.4549537236658,
+          "y": 665.488876390303,
+          "depth": 0.9990996218447578,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1548.3980543884543,
+          "y": 689.5815463083146,
+          "depth": 0.9990368024948391,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1409.9118187839385,
+          "y": 668.3916902555001,
+          "depth": 0.9990920530472605,
+          "visible": true
+        },
+        "hub": {
+          "x": 1264.8585932300687,
+          "y": 574.9083324668595,
+          "depth": 0.9991419958449298,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1264.8585932300687,
+          "y": 574.9083324668595,
+          "depth": 0.9991419958449298,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1264.8585932300687,
+          "y": 574.9083324668595,
+          "depth": 0.9991419958449298,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1269.80851307726,
+          "y": -264.5431688412674,
+          "depth": 0.999046584822236,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 931.685227450353,
+          "y": 599.1908745995081,
+          "depth": 0.998992798923683,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 9391.143709421309,
+          "y": -1493.7843059966015,
+          "depth": 1.0025431137742868,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 925.0332423552569,
+          "y": 595.6348024757176,
+          "depth": 0.9990056033037178,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 13439.136699250195,
+          "y": -2309.991077044892,
+          "depth": 1.0036860222844937,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 914.7465776031012,
+          "y": 588.5420044894704,
+          "depth": 0.9990311424037781,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 207291.58429211887,
+          "y": -41787.17110036117,
+          "depth": 1.058964668098314,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 911.0450396219622,
+          "y": 585.0110770030154,
+          "depth": 0.9990438562455343,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -29715.757325391387,
+          "y": 6506.149103134423,
+          "depth": 0.9913410602031779,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1238.8903288732467,
+          "y": 508.0911915569689,
+          "depth": 0.9993208223891269,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1184.2681120298546,
+          "y": 489.50304644214725,
+          "depth": 0.9997659792616966,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1252.2658370039526,
+          "y": 508.01982677905767,
+          "depth": 0.9993210793540108,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1230.0570205327417,
+          "y": 489.33524490424213,
+          "depth": 0.9997662142288795,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1279.5062659120938,
+          "y": 508.13484685183494,
+          "depth": 0.9993206652024346,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1321.542234047987,
+          "y": 489.8765842678048,
+          "depth": 0.999765456208501,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1292.6397042957537,
+          "y": 508.3818273939547,
+          "depth": 0.9993197758984684,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1367.5763809187292,
+          "y": 490.600920524512,
+          "depth": 0.9997644419433644,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1625.339207606611,
+          "y": 590.540743305492,
+          "depth": 0.9990239455851413,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": -25472.582443200063,
+          "y": -5089.276771457568,
+          "depth": 1.007577768083614,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1620.9769721603834,
+          "y": 593.9973156174501,
+          "depth": 0.9990114994740661,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": -12061.991140920352,
+          "y": -2443.9083931905084,
+          "depth": 1.0038735424640806,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1610.4342712676194,
+          "y": 601.1869968130146,
+          "depth": 0.99898561152407,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": -5235.1072642244,
+          "y": -1109.645611177797,
+          "depth": 1.002005216517144,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1603.2303716802214,
+          "y": 604.6687026326899,
+          "depth": 0.9989730749143174,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": -3844.2141988397643,
+          "y": -842.9156752961472,
+          "depth": 1.0016317230293916,
+          "visible": false
+        },
+        "specimen": {
+          "x": 15960.209167540814,
+          "y": 828.5587061561428,
+          "depth": 0.9973422085454904,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1267.9198997113424,
+          "y": 55.721418333304925,
+          "depth": 0.999082985648973,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1591.8164876827195,
+          "y": 375.51259573281965,
+          "depth": 0.9991311082394926,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 45,
+      "specimenVisible": true,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 43,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 27.692307692307693,
+        "surge": 6.426308230769231,
+        "pitch": -0.6740393619372153,
+        "tension": 2187220.748592308
+      },
+      "lineTension": 2185039.261546154,
+      "fairlead": {
+        "x": 1058.6742435087403,
+        "y": 519.9320056610301,
+        "depth": 0.9983557907603803,
+        "visible": true
+      },
+      "platform": {
+        "x": 1309.7830993574357,
+        "y": 491.73405848265793,
+        "depth": 0.9988737773368216,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1316.679683787894,
+        "y": -630.1350266449105,
+        "depth": 0.998742474058312,
+        "visible": false
+      },
+      "beso": {
+        "x": -26977.599456895518,
+        "y": 403.6767960853879,
+        "depth": 1.0041458885601149,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -149.87272727272727,
+          26.997045454545454,
+          81.34572072072072
+        ],
+        "target": [
+          -17.5,
+          7.5,
+          0
+        ]
+      },
+      "phase": "physics",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1147.2163087536605,
+          "y": 541.4109456520927,
+          "depth": 0.9991122743461283,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1212.2631617901193,
+          "y": 559.4594737743064,
+          "depth": 0.9990210529726502,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1074.2499626148003,
+          "y": 660.7804196111856,
+          "depth": 0.9985194518592081,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1198.1471983783222,
+          "y": 621.5621916637695,
+          "depth": 0.9987121358554095,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1693.0238786460536,
+          "y": 586.6694027809463,
+          "depth": 0.9988755433568848,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1516.9550601596482,
+          "y": 586.5372412614896,
+          "depth": 0.9988798748298024,
+          "visible": true
+        },
+        "hub": {
+          "x": 1309.7830993574357,
+          "y": 491.73405848265793,
+          "depth": 0.9988737773368216,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1309.7830993574357,
+          "y": 491.73405848265793,
+          "depth": 0.9988737773368216,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1309.7830993574357,
+          "y": 491.73405848265793,
+          "depth": 0.9988737773368216,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1316.679683787894,
+          "y": -630.1350266449105,
+          "depth": 0.998742474058312,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1058.6742435087403,
+          "y": 519.9320056610301,
+          "depth": 0.9983557907603803,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 2171.260710457496,
+          "y": 85.9728315126988,
+          "depth": 1.0005734743641368,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1032.2133252744206,
+          "y": 518.2515283706313,
+          "depth": 0.9983745337909755,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 2308.2042471749382,
+          "y": 74.40936902244708,
+          "depth": 1.0005960417029705,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 983.8713643016183,
+          "y": 514.5812389741443,
+          "depth": 0.9984150556376048,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 2624.5862810943904,
+          "y": 44.417165525764034,
+          "depth": 1.0006545747089144,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 962.0061716203893,
+          "y": 512.6087219576287,
+          "depth": 0.9984366527995366,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": 2812.438062257415,
+          "y": 24.8925577470576,
+          "depth": 1.0006926790777144,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1091.1725472483286,
+          "y": 446.2534602183799,
+          "depth": 0.999125267370744,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 597.7578412039493,
+          "y": 528.5636910160516,
+          "depth": 0.9997097107726125,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1106.466914779577,
+          "y": 445.59915946922155,
+          "depth": 0.9991314427899073,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 658.4629820470993,
+          "y": 525.1521303729787,
+          "depth": 0.9997163687995702,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1137.9393397295576,
+          "y": 444.4155244359927,
+          "depth": 0.9991424473554984,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 773.3336994374472,
+          "y": 519.5201516356215,
+          "depth": 0.9997273602108862,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1153.5102709525804,
+          "y": 443.9453716195598,
+          "depth": 0.9991466839023444,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 828.2005710330402,
+          "y": 517.2424485980277,
+          "depth": 0.9997318053929635,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1753.8788050856408,
+          "y": 465.23180469319186,
+          "depth": 0.9988976410367608,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 4891.157466798103,
+          "y": 852.2870596873963,
+          "depth": 0.999077929854458,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1763.1065398889937,
+          "y": 466.94994459507166,
+          "depth": 0.998879259499411,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 5469.066920779022,
+          "y": 926.2211971703487,
+          "depth": 0.9989336394454779,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1781.4487763591665,
+          "y": 470.643257616993,
+          "depth": 0.9988398120408181,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 7356.287016567823,
+          "y": 1173.1666866486712,
+          "depth": 0.9984516988036357,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1788.901703313435,
+          "y": 472.5670466345693,
+          "depth": 0.9988193566022247,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 9080.174914122648,
+          "y": 1402.2906742257182,
+          "depth": 0.9980045387365796,
+          "visible": false
+        },
+        "specimen": {
+          "x": -26977.599456895518,
+          "y": 403.6767960853879,
+          "depth": 1.0041458885601149,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1313.7837949075886,
+          "y": -200.98756870293246,
+          "depth": 0.9987923199574419,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1594.302521931526,
+          "y": 243.6366371878236,
+          "depth": 0.9989963260042356,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 45,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 46,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 55.38461538461539,
+        "surge": 3.4463967692307698,
+        "pitch": 4.597609387843013,
+        "tension": 2022343.3903076923
+      },
+      "lineTension": 2017184.8648769232,
+      "fairlead": {
+        "x": 1415.6140538704071,
+        "y": 311.64619388432965,
+        "depth": 0.9985858825425025,
+        "visible": true
+      },
+      "platform": {
+        "x": 1174.5345028583608,
+        "y": 440.42111622756534,
+        "depth": 0.9989815584907973,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1152.5584471379675,
+        "y": -395.4078992178087,
+        "depth": 0.9990572314974298,
+        "visible": false
+      },
+      "beso": {
+        "x": 163659.2335089677,
+        "y": -4433.28770140769,
+        "depth": 0.9797620424625417,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -180,
+          -10,
+          -65
+        ],
+        "target": [
+          -15,
+          -4,
+          0
+        ]
+      },
+      "phase": "physics",
+      "anchors": {
+        "outer-column-101": {
+          "x": 845.6016643419772,
+          "y": 541.9001514596144,
+          "depth": 0.9990129252714902,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 993.6660461022143,
+          "y": 535.0752744705975,
+          "depth": 0.9989955494114904,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1331.968450537694,
+          "y": 470.3817447128348,
+          "depth": 0.9986335006377632,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1249.9830702400102,
+          "y": 500.0793093438509,
+          "depth": 0.9988132810145488,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1364.5960055818632,
+          "y": 548.5188137259814,
+          "depth": 0.9991525270063693,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1287.5043485689098,
+          "y": 539.5444930631046,
+          "depth": 0.9990793271759283,
+          "visible": true
+        },
+        "hub": {
+          "x": 1174.5345028583608,
+          "y": 440.42111622756534,
+          "depth": 0.9989815584907973,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1174.5345028583608,
+          "y": 440.42111622756534,
+          "depth": 0.9989815584907973,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1174.5345028583608,
+          "y": 440.42111622756534,
+          "depth": 0.9989815584907973,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1152.5584471379675,
+          "y": -395.4078992178087,
+          "depth": 0.9990572314974298,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1415.6140538704071,
+          "y": 311.64619388432965,
+          "depth": 0.9985858825425025,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 227.5706734751302,
+          "y": 429.03511257130896,
+          "depth": 1.0005865826590454,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1391.9963447771643,
+          "y": 308.95493831107933,
+          "depth": 0.9985728315527818,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 358.3308176619555,
+          "y": 434.42826809982114,
+          "depth": 1.0005664141351904,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1341.7174211061888,
+          "y": 304.4819337791492,
+          "depth": 0.9985499308809457,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 593.1577644371982,
+          "y": 442.68267510529546,
+          "depth": 1.0005355455270593,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1315.1435948484689,
+          "y": 302.72693600838295,
+          "depth": 0.9985401947619852,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": 701.0933440119776,
+          "y": 445.76588529377256,
+          "depth": 1.0005240153944854,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 769.3818088452073,
+          "y": 436.09821593175246,
+          "depth": 0.9989987300313405,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": -2271.0837552483763,
+          "y": 821.6867627778125,
+          "depth": 0.9991182022031067,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 777.488489827431,
+          "y": 439.69505394250393,
+          "depth": 0.9990135996065976,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": -1859.287853519675,
+          "y": 794.5001347378075,
+          "depth": 0.9992198707259711,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 795.6849290371201,
+          "y": 446.56816148013235,
+          "depth": 0.9990423102604745,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": -1253.5087400672653,
+          "y": 755.6958057802875,
+          "depth": 0.9993649854051456,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 805.8014327097663,
+          "y": 449.63426966399624,
+          "depth": 0.9990553374044029,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": -1021.9500399307194,
+          "y": 741.4106284137046,
+          "depth": 0.9994184069945967,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 1361.396729193738,
+          "y": 470.4659999010195,
+          "depth": 0.9991972465648659,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 1832.474628459317,
+          "y": 661.7090008884376,
+          "depth": 0.9997164633305451,
+          "visible": true
+        },
+        "fairlead-10": {
+          "x": 1375.147392641951,
+          "y": 468.6127815258158,
+          "depth": 0.9991915515676995,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 1894.1326158811053,
+          "y": 663.6315994954292,
+          "depth": 0.9997092734811772,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1403.2967288817817,
+          "y": 464.6304447912034,
+          "depth": 0.9991791602634206,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 2025.8110173924192,
+          "y": 668.2127771175486,
+          "depth": 0.9996921414719726,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1416.779113183815,
+          "y": 462.45483410025247,
+          "depth": 0.9991721827461851,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 2096.8260798843235,
+          "y": 670.9266268114907,
+          "depth": 0.9996819926190419,
+          "visible": false
+        },
+        "specimen": {
+          "x": 163659.2335089677,
+          "y": -4433.28770140769,
+          "depth": 0.9797620424625417,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1160.3481311896128,
+          "y": -112.2437844891934,
+          "depth": 0.9990308172966791,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1208.3971807479759,
+          "y": 287.00908141461576,
+          "depth": 0.9992074948168662,
+          "visible": true
+        }
+      },
+      "underwater": 1,
+      "fov": 45,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 48,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 73.84615384615385,
+        "surge": 5.0010523846153845,
+        "pitch": 4.380518984793686,
+        "tension": 2536496.6135615385
+      },
+      "lineTension": 2531356.1464692308,
+      "fairlead": {
+        "x": 1447.4152242028158,
+        "y": 314.66684257275875,
+        "depth": 0.9986192337232151,
+        "visible": true
+      },
+      "platform": {
+        "x": 1153.0953325658859,
+        "y": 443.32506953103524,
+        "depth": 0.9989757003586095,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1125.9342250376114,
+        "y": -385.3478884234799,
+        "depth": 0.999062080317712,
+        "visible": false
+      },
+      "beso": {
+        "x": 58413.29552227578,
+        "y": -1306.305584138333,
+        "depth": 0.9930027084746186,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -168,
+          -14,
+          -86
+        ],
+        "target": [
+          -15,
+          -4,
+          0
+        ]
+      },
+      "phase": "physics",
+      "anchors": {
+        "outer-column-101": {
+          "x": 804.8776445671214,
+          "y": 542.9779229065637,
+          "depth": 0.998969739649763,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 964.8835791594373,
+          "y": 536.9998835305848,
+          "depth": 0.9989685143216502,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1359.9901512987417,
+          "y": 469.029074727144,
+          "depth": 0.9986505262738662,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1253.1235265817302,
+          "y": 500.85401679561886,
+          "depth": 0.9988160930697811,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1314.1952187100874,
+          "y": 557.0898044799982,
+          "depth": 0.999162009998247,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1249.8623046744324,
+          "y": 546.0429083086257,
+          "depth": 0.9990828849025525,
+          "visible": true
+        },
+        "hub": {
+          "x": 1153.0953325658859,
+          "y": 443.32506953103524,
+          "depth": 0.9989757003586095,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1153.0953325658859,
+          "y": 443.32506953103524,
+          "depth": 0.9989757003586095,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1153.0953325658859,
+          "y": 443.32506953103524,
+          "depth": 0.9989757003586095,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1125.9342250376114,
+          "y": -385.3478884234799,
+          "depth": 0.999062080317712,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1447.4152242028158,
+          "y": 314.66684257275875,
+          "depth": 0.9986192337232151,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -188.7200928447691,
+          "y": 456.6225028076372,
+          "depth": 1.0006592958053198,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1426.9754052997216,
+          "y": 311.0376788618852,
+          "depth": 0.9986033045669016,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -20.451174258180984,
+          "y": 464.39377292203574,
+          "depth": 1.0006271258869566,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1382.4261887645318,
+          "y": 304.5787337196554,
+          "depth": 0.9985738796692756,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 268.4870219618539,
+          "y": 476.38693550595815,
+          "depth": 1.0005774790395863,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1358.3504683002436,
+          "y": 301.7820118043651,
+          "depth": 0.9985605089648806,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": 395.8201333866843,
+          "y": 481.0071251979315,
+          "depth": 1.0005583533210065,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 725.8839321851128,
+          "y": 430.83897604766196,
+          "depth": 0.9989481068552296,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": -4412.027399614038,
+          "y": 959.9009399845602,
+          "depth": 0.9985759264204376,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 732.289014873728,
+          "y": 435.09440087255547,
+          "depth": 0.9989644740122482,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": -3453.5479120666496,
+          "y": 900.3271943437971,
+          "depth": 0.9988225376571656,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 747.4033039140966,
+          "y": 443.2706109046498,
+          "depth": 0.9989962906905988,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": -2250.6281158972756,
+          "y": 827.0943207981336,
+          "depth": 0.9991256921645746,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 756.2685718660864,
+          "y": 446.9539582212684,
+          "depth": 0.9990108945402162,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": -1844.3953758418174,
+          "y": 803.0464215004272,
+          "depth": 0.9992252407513341,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 1304.866898415891,
+          "y": 480.83818062779653,
+          "depth": 0.999206693273684,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 1670.685755328278,
+          "y": 680.8992892042879,
+          "depth": 0.9997308805266133,
+          "visible": true
+        },
+        "fairlead-10": {
+          "x": 1319.0462618622992,
+          "y": 479.1098992653716,
+          "depth": 0.9992022539807506,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 1726.7164674795997,
+          "y": 682.1366572913904,
+          "depth": 0.9997257583226797,
+          "visible": true
+        },
+        "fairlead-11": {
+          "x": 1348.052068174939,
+          "y": 475.38788432874213,
+          "depth": 0.9991924921310308,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 1844.3991515994264,
+          "y": 685.1305750510423,
+          "depth": 0.9997133647128198,
+          "visible": true
+        },
+        "fairlead-12": {
+          "x": 1362.037426635247,
+          "y": 473.3292615114634,
+          "depth": 0.999186822179677,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 1906.7632081454522,
+          "y": 686.9174819865354,
+          "depth": 0.9997059676400901,
+          "visible": false
+        },
+        "specimen": {
+          "x": 58413.29552227578,
+          "y": -1306.305584138333,
+          "depth": 0.9930027084746186,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1135.7053809703975,
+          "y": -106.76890771719422,
+          "depth": 0.9990320828311092,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1157.5920350005122,
+          "y": 294.0655154518081,
+          "depth": 0.9992026449789552,
+          "visible": true
+        }
+      },
+      "underwater": 1,
+      "fov": 45,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 50,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 92.3076923076923,
+        "surge": 4.522673692307692,
+        "pitch": 5.359135350318463,
+        "tension": 2592225.4936538464
+      },
+      "lineTension": 2590222.0582230766,
+      "fairlead": {
+        "x": 1545.1936604267094,
+        "y": 426.3555267082869,
+        "depth": 0.9988114271545425,
+        "visible": true
+      },
+      "platform": {
+        "x": 1138.850014987967,
+        "y": 493.9110164647157,
+        "depth": 0.9989892632814652,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1066.841493239789,
+        "y": -400.22295230403466,
+        "depth": 0.9990038795852687,
+        "visible": false
+      },
+      "beso": {
+        "x": 15273.382381294072,
+        "y": 319.6478617554059,
+        "depth": 0.9983582579288429,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -115,
+          12,
+          -157
+        ],
+        "target": [
+          -10,
+          5,
+          0
+        ]
+      },
+      "phase": "physics",
+      "anchors": {
+        "outer-column-101": {
+          "x": 785.6403016319133,
+          "y": 608.8861784530034,
+          "depth": 0.998853808845483,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 961.0243630015856,
+          "y": 594.755707082292,
+          "depth": 0.9989192885335885,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1467.1200855820036,
+          "y": 557.3468992614938,
+          "depth": 0.9988118385021715,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1307.3351990260098,
+          "y": 568.5488647833066,
+          "depth": 0.9988993583908091,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1179.7101139913748,
+          "y": 574.8658770673389,
+          "depth": 0.9992008370641895,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1165.9746162895499,
+          "y": 576.8795406070592,
+          "depth": 0.9991158560491519,
+          "visible": true
+        },
+        "hub": {
+          "x": 1138.850014987967,
+          "y": 493.9110164647157,
+          "depth": 0.9989892632814652,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1138.850014987967,
+          "y": 493.9110164647157,
+          "depth": 0.9989892632814652,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1138.850014987967,
+          "y": 493.9110164647157,
+          "depth": 0.9989892632814652,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1066.841493239789,
+          "y": -400.22295230403466,
+          "depth": 0.9990038795852687,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1545.1936604267094,
+          "y": 426.3555267082869,
+          "depth": 0.9988114271545425,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -6249.047690511459,
+          "y": -419.56409404563954,
+          "depth": 1.0022241555328315,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1538.414950454362,
+          "y": 425.11258726591524,
+          "depth": 0.9987925502363979,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -4451.628721061646,
+          "y": -220.38953884355217,
+          "depth": 1.001739471520394,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1521.0699603746789,
+          "y": 422.90673251656784,
+          "depth": 0.998754699100247,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -2522.7996616840023,
+          "y": -11.033024994663435,
+          "depth": 1.001230010083117,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1510.4083892395452,
+          "y": 421.9558044394765,
+          "depth": 0.9987357754308839,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -1936.8782066970339,
+          "y": 50.58769158368443,
+          "depth": 1.0010800583177917,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 704.3586271302187,
+          "y": 488.3495100437444,
+          "depth": 0.9987879933939366,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 7140.442438125526,
+          "y": -226.96158206658765,
+          "depth": 1.0017554643477713,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 700.5511251850071,
+          "y": 490.40182187340974,
+          "depth": 0.9988068847652878,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 9033.453926094626,
+          "y": -430.79823621710915,
+          "depth": 1.0022514934078852,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 696.438536264185,
+          "y": 494.2543555640462,
+          "depth": 0.9988448309588942,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 21087.089837363226,
+          "y": -1747.670522238588,
+          "depth": 1.0054560540647874,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 696.9299623860003,
+          "y": 495.9197856496407,
+          "depth": 0.9988630922962204,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 78335.64547985389,
+          "y": -8038.300132391097,
+          "depth": 1.020764071683371,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 1148.2591479189082,
+          "y": 495.9492157130516,
+          "depth": 0.9992328196489537,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 1183.4069570465792,
+          "y": 595.1350018714946,
+          "depth": 0.9997549223081014,
+          "visible": true
+        },
+        "fairlead-10": {
+          "x": 1163.1692636150124,
+          "y": 494.79287904793676,
+          "depth": 0.9992326236560342,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 1231.3315181240064,
+          "y": 595.1405826707758,
+          "depth": 0.99975490872743,
+          "visible": true
+        },
+        "fairlead-11": {
+          "x": 1193.5460626171794,
+          "y": 492.3832680195186,
+          "depth": 0.9992316477156796,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 1327.2577501934659,
+          "y": 595.7070136476252,
+          "depth": 0.9997535303383162,
+          "visible": true
+        },
+        "fairlead-12": {
+          "x": 1208.4656237726526,
+          "y": 491.1249993348897,
+          "depth": 0.9992303663939851,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 1375.6285406598906,
+          "y": 596.2665832645862,
+          "depth": 0.9997521686460714,
+          "visible": true
+        },
+        "specimen": {
+          "x": 15273.382381294072,
+          "y": 319.6478617554059,
+          "depth": 0.9983582579288429,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1093.453601442607,
+          "y": -84.65434699908401,
+          "depth": 0.998998080775954,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1014.0978299173778,
+          "y": 302.87314984323746,
+          "depth": 0.9991796312418184,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 45,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 53,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 1631.7151511090133,
+        "y": 552.7033451130043,
+        "depth": 0.9991232233316572,
+        "visible": true
+      },
+      "platform": {
+        "x": 1261.8609384118333,
+        "y": 606.2724663770558,
+        "depth": 0.9991344871182009,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1155.3466484246026,
+        "y": -292.7034187407809,
+        "depth": 0.999018570583806,
+        "visible": false
+      },
+      "beso": {
+        "x": 8291.933030095317,
+        "y": 475.26006920447225,
+        "depth": 0.9992359083941448,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -25,
+          71,
+          -220
+        ],
+        "target": [
+          0,
+          23,
+          0
+        ]
+      },
+      "phase": "interaction",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1045.5678165815414,
+          "y": 791.5310765310521,
+          "depth": 0.9989628040860391,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1158.8264707223684,
+          "y": 735.5242267508987,
+          "depth": 0.9990542375508137,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1582.3991784576772,
+          "y": 659.9954470855558,
+          "depth": 0.9991176548043018,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1437.4316232802937,
+          "y": 669.5054070045743,
+          "depth": 0.9991299318550578,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1172.580254928268,
+          "y": 620.7429485267461,
+          "depth": 0.9992899058651634,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1212.7057434863987,
+          "y": 645.3126046007715,
+          "depth": 0.9992299361530002,
+          "visible": true
+        },
+        "hub": {
+          "x": 1261.8609384118333,
+          "y": 606.2724663770558,
+          "depth": 0.9991344871182009,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1261.8609384118333,
+          "y": 606.2724663770558,
+          "depth": 0.9991344871182009,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1261.8609384118333,
+          "y": 606.2724663770558,
+          "depth": 0.9991344871182009,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1155.3466484246026,
+          "y": -292.7034187407809,
+          "depth": 0.999018570583806,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1631.7151511090133,
+          "y": 552.7033451130043,
+          "depth": 0.9991232233316572,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 4883.185583875158,
+          "y": 992.6401714140707,
+          "depth": 0.9991303422154696,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1635.3265064227223,
+          "y": 556.60250068158,
+          "depth": 0.9991115957606154,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 5385.646186910413,
+          "y": 1099.4955058874666,
+          "depth": 0.9990054600448981,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1640.2663669582437,
+          "y": 564.9083000165266,
+          "depth": 0.9990876218348256,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 6931.700900002503,
+          "y": 1437.0253609324504,
+          "depth": 0.9986109878256266,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1641.5316837706685,
+          "y": 569.3266657803343,
+          "depth": 0.9990752618964133,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": 8233.89661675851,
+          "y": 1726.9384613370537,
+          "depth": 0.998272165459536,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1006.9407687064206,
+          "y": 708.9639215017163,
+          "depth": 0.9988793494178834,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 2951.0492188156095,
+          "y": -422.90175957558455,
+          "depth": 1.000784690589823,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 990.2120252108937,
+          "y": 706.982149323856,
+          "depth": 0.998889557955462,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 3196.449110107739,
+          "y": -465.3761305176139,
+          "depth": 1.0008343305227567,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 959.4140852519054,
+          "y": 702.1060191456098,
+          "depth": 0.9989116848208873,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 3818.1781887253633,
+          "y": -582.0718215682781,
+          "depth": 1.000970713149479,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 946.7731372918454,
+          "y": 699.1460806636102,
+          "depth": 0.9989233689370762,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 4228.3725023815305,
+          "y": -664.0635500388597,
+          "depth": 1.0010665371443295,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 1120.7912110909663,
+          "y": 542.5129046910207,
+          "depth": 0.9992983594212079,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 769.7556872364596,
+          "y": 469.3132509175606,
+          "depth": 0.9997419560583554,
+          "visible": true
+        },
+        "fairlead-10": {
+          "x": 1134.3432347596704,
+          "y": 539.9472566098194,
+          "depth": 0.9993014128737334,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 824.9154358145109,
+          "y": 465.46764093379414,
+          "depth": 0.9997464504350217,
+          "visible": true
+        },
+        "fairlead-11": {
+          "x": 1161.9368145792207,
+          "y": 534.9041862349873,
+          "depth": 0.9993071389712719,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 930.9510590358702,
+          "y": 459.1966900957623,
+          "depth": 0.9997537793152884,
+          "visible": true
+        },
+        "fairlead-12": {
+          "x": 1175.8000745961147,
+          "y": 532.6175643027012,
+          "depth": 0.9993093451055323,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 982.2870676960636,
+          "y": 456.6988830182802,
+          "depth": 0.999756698510395,
+          "visible": true
+        },
+        "specimen": {
+          "x": 8291.933030095317,
+          "y": 475.26006920447225,
+          "depth": 0.9992359083941448,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1197.900373541019,
+          "y": 53.96583607964118,
+          "depth": 0.9990631303218795,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1022.0963194952826,
+          "y": 377.19607290850627,
+          "depth": 0.9992083138965483,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 61,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 1488.2028372366337,
+        "y": 471.6247977921126,
+        "depth": 0.9992416314570198,
+        "visible": true
+      },
+      "platform": {
+        "x": 1269.1805002262452,
+        "y": 607.4606471982343,
+        "depth": 0.9991055689264184,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1166.8606852920823,
+        "y": -401.23220311210173,
+        "depth": 0.9988082889989937,
+        "visible": false
+      },
+      "beso": {
+        "x": 5475.827856811163,
+        "y": 301.21111152420207,
+        "depth": 0.9995073507545601,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          140,
+          96,
+          -155
+        ],
+        "target": [
+          0,
+          22,
+          0
+        ]
+      },
+      "phase": "interaction",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1355.431827226102,
+          "y": 861.1937449537102,
+          "depth": 0.9988964960909277,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1314.5023562662677,
+          "y": 766.7811150373125,
+          "depth": 0.9990145918395553,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1481.5778166522261,
+          "y": 572.583683120932,
+          "depth": 0.9992311995733295,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1394.0758663471754,
+          "y": 617.3021154312406,
+          "depth": 0.9991864532564203,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 998.8873142809285,
+          "y": 653.2653129848703,
+          "depth": 0.9991844712660226,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1120.7013061278071,
+          "y": 664.0125116948224,
+          "depth": 0.9991587637923219,
+          "visible": true
+        },
+        "hub": {
+          "x": 1269.1805002262452,
+          "y": 607.4606471982343,
+          "depth": 0.9991055689264184,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1269.1805002262452,
+          "y": 607.4606471982343,
+          "depth": 0.9991055689264184,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1269.1805002262452,
+          "y": 607.4606471982343,
+          "depth": 0.9991055689264184,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1166.8606852920823,
+          "y": -401.23220311210173,
+          "depth": 0.9988082889989937,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1488.2028372366337,
+          "y": 471.6247977921126,
+          "depth": 0.9992416314570198,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 2134.7198407977658,
+          "y": 378.3315099538446,
+          "depth": 0.9997035448075063,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1501.1115092928403,
+          "y": 474.6567543089637,
+          "depth": 0.9992357793415463,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 2204.731187089607,
+          "y": 388.01955140986774,
+          "depth": 0.9996944816846559,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1526.1644100077956,
+          "y": 481.4967544773899,
+          "depth": 0.9992230750431568,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 2355.656392157421,
+          "y": 410.8522993239093,
+          "depth": 0.9996731217430931,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1538.3194090975323,
+          "y": 485.3241107616268,
+          "depth": 0.9992161943280569,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": 2438.0541441118903,
+          "y": 424.34983325973326,
+          "depth": 0.9996604948557296,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1415.7793385356986,
+          "y": 789.098104591132,
+          "depth": 0.9988031301959314,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 461.4667001413342,
+          "y": -675.8297099280541,
+          "depth": 1.0006897082837207,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 1392.5743746908333,
+          "y": 794.6702522505101,
+          "depth": 0.998798117919828,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 610.4516582602118,
+          "y": -657.5245460392264,
+          "depth": 1.0006725838783521,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 1343.8483715393465,
+          "y": 804.3187923286356,
+          "depth": 0.998790484518452,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 885.66407110408,
+          "y": -632.1951331246821,
+          "depth": 1.000648888316972,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 1319.626152805558,
+          "y": 807.636005305567,
+          "depth": 0.9987887742421919,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1015.7901300379676,
+          "y": -624.590267184906,
+          "depth": 1.0006417739962306,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 916.9044162885463,
+          "y": 583.100219043957,
+          "depth": 0.9991544584251918,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": -866.770409839048,
+          "y": 630.7173522210584,
+          "depth": 0.9994674388923357,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 925.4776476599392,
+          "y": 575.7197480124526,
+          "depth": 0.9991638094034286,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": -697.2781741821681,
+          "y": 592.0308097922557,
+          "depth": 0.9995036299933219,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 943.3545978695744,
+          "y": 561.2059424204083,
+          "depth": 0.9991820737186627,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": -410.95144474881477,
+          "y": 529.722791369269,
+          "depth": 0.9995619188877388,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 953.1950996464672,
+          "y": 554.3530861084877,
+          "depth": 0.9991905261353665,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": -288.00559903212417,
+          "y": 504.34350272232894,
+          "depth": 0.9995856611076609,
+          "visible": false
+        },
+        "specimen": {
+          "x": 5475.827856811163,
+          "y": 301.21111152420207,
+          "depth": 0.9995073507545601,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1211.6349426990826,
+          "y": 26.746405405069915,
+          "depth": 0.9989352319913922,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 909.8563005668333,
+          "y": 415.73776096157127,
+          "depth": 0.9989923208193806,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 66,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 1324.025198973657,
+        "y": 318.3839781073479,
+        "depth": 0.9991950466185577,
+        "visible": true
+      },
+      "platform": {
+        "x": 1284.5647794455433,
+        "y": 555.8746139870901,
+        "depth": 0.9990150435046345,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1236.4011986458997,
+        "y": -707.1023336810657,
+        "depth": 0.9982203572507146,
+        "visible": false
+      },
+      "beso": {
+        "x": 5173.671206743777,
+        "y": 29.840001877971783,
+        "depth": 0.9994855978113585,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          165.76010338345864,
+          127.78969594594595,
+          -35.48828125
+        ],
+        "target": [
+          0,
+          11.21875,
+          0
+        ]
+      },
+      "phase": "toolchain",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1575.3417558659598,
+          "y": 795.235292936211,
+          "depth": 0.9989135389021332,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1433.632579756668,
+          "y": 709.0836847279855,
+          "depth": 0.998982911363242,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1347.2306955463794,
+          "y": 424.9407478557282,
+          "depth": 0.9992023415816957,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1322.156180956929,
+          "y": 505.8979393832993,
+          "depth": 0.9991410445842829,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 945.6801099440289,
+          "y": 702.2831959718679,
+          "depth": 0.9990001159313462,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1106.2501166279424,
+          "y": 663.4897055404147,
+          "depth": 0.99902583406867,
+          "visible": true
+        },
+        "hub": {
+          "x": 1284.5647794455433,
+          "y": 555.8746139870901,
+          "depth": 0.9990150435046345,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1284.5647794455433,
+          "y": 555.8746139870901,
+          "depth": 0.9990150435046345,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1284.5647794455433,
+          "y": 555.8746139870901,
+          "depth": 0.9990150435046345,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1236.4011986458997,
+          "y": -707.1023336810657,
+          "depth": 0.9982203572507146,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 1324.025198973657,
+          "y": 318.3839781073479,
+          "depth": 0.9991950466185577,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": 1426.3644861810706,
+          "y": 4.556301657082984,
+          "depth": 0.9997328373204435,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1340.6505688501893,
+          "y": 319.29306318255857,
+          "depth": 0.99919380577317,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": 1481.433264582416,
+          "y": 6.511013830034327,
+          "depth": 0.9997315230269563,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1373.6882546908198,
+          "y": 322.2805258194908,
+          "depth": 0.9991903250945184,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": 1592.9156703496815,
+          "y": 12.475305117852596,
+          "depth": 0.9997275128052449,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1390.1397818560154,
+          "y": 324.36755252427673,
+          "depth": 0.9991880767443292,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": 1649.893474162149,
+          "y": 16.544251872948166,
+          "depth": 0.999724776959889,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1681.5343287835549,
+          "y": 723.533653084965,
+          "depth": 0.9988369824232739,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": -10512.061227608267,
+          "y": -5759.494039272986,
+          "depth": 1.0036084226511683,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 1670.7748279837238,
+          "y": 738.1629040487263,
+          "depth": 0.9988247076339644,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": -7183.514434186451,
+          "y": -4400.051350419201,
+          "depth": 1.0026943716225938,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 1645.1918489692525,
+          "y": 767.2495990625714,
+          "depth": 0.9988004180479018,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": -3962.6414271871404,
+          "y": -3112.4741708346287,
+          "depth": 1.001828640941177,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 1630.3479705377104,
+          "y": 780.3966342639837,
+          "depth": 0.9987895299664652,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": -3049.402138095086,
+          "y": -2760.3812703510694,
+          "depth": 1.0015919035777858,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 855.9670397083746,
+          "y": 668.8828008265299,
+          "depth": 0.9989067705486393,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": -14407.384483628237,
+          "y": 5782.164920033204,
+          "depth": 0.9958481357853014,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 853.2410763501774,
+          "y": 654.1217326214448,
+          "depth": 0.9989195314089235,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": -9632.674746007386,
+          "y": 3818.4720438306795,
+          "depth": 0.9971684676448304,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 849.2974297811519,
+          "y": 624.7022329255207,
+          "depth": 0.9989449232300938,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": -5535.73664100467,
+          "y": 2155.657980387538,
+          "depth": 0.9982864970531168,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 849.372813733774,
+          "y": 610.2429806690469,
+          "depth": 0.9989573472732608,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": -4460.280640082751,
+          "y": 1727.8447860336041,
+          "depth": 0.998574146612413,
+          "visible": false
+        },
+        "specimen": {
+          "x": 5173.671206743777,
+          "y": 29.840001877971783,
+          "depth": 0.9994855978113585,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1261.0276143569843,
+          "y": -76.60951382142905,
+          "depth": 0.9986191344466763,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 971.1364722921392,
+          "y": 507.3434162693022,
+          "depth": 0.9986525397824697,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 76,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 849.0609092725753,
+        "y": 493.11470592523244,
+        "depth": 0.9989676494175213,
+        "visible": true
+      },
+      "platform": {
+        "x": 1283.697317819489,
+        "y": 565.2054724338283,
+        "depth": 0.9989658140825373,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1425.7270687758778,
+        "y": -648.1953673228454,
+        "depth": 0.9986101342660204,
+        "visible": false
+      },
+      "beso": {
+        "x": 8537.883357995921,
+        "y": 508.06669079543246,
+        "depth": 0.9987880307251928,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          34,
+          80,
+          177
+        ],
+        "target": [
+          5,
+          14,
+          -4
+        ]
+      },
+      "phase": "toolchain",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1467.243757029232,
+          "y": 565.6277308760247,
+          "depth": 0.999157701114671,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1387.7402093572427,
+          "y": 599.9287186499544,
+          "depth": 0.9990886098174813,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 929.8382566968564,
+          "y": 592.171091085893,
+          "depth": 0.9990197705600101,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1084.754503290106,
+          "y": 617.6106302915922,
+          "depth": 0.9990064905683129,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1435.335584948937,
+          "y": 853.0298559857777,
+          "depth": 0.9986913689125512,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1351.542920339793,
+          "y": 746.5987935063654,
+          "depth": 0.9988470917721983,
+          "visible": true
+        },
+        "hub": {
+          "x": 1283.697317819489,
+          "y": 565.2054724338283,
+          "depth": 0.9989658140825373,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1283.697317819489,
+          "y": 565.2054724338283,
+          "depth": 0.9989658140825373,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1283.697317819489,
+          "y": 565.2054724338283,
+          "depth": 0.9989658140825373,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1425.7270687758778,
+          "y": -648.1953673228454,
+          "depth": 0.9986101342660204,
+          "visible": false
+        },
+        "fairlead-1": {
+          "x": 849.0609092725753,
+          "y": 493.11470592523244,
+          "depth": 0.9989676494175213,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -1973.6622841539267,
+          "y": 800.6279791088334,
+          "depth": 0.9992163750075205,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 857.3739579708164,
+          "y": 486.481886713512,
+          "depth": 0.9989825812341484,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -1642.3595415055433,
+          "y": 727.1482005834646,
+          "depth": 0.9992933702884088,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 875.8895889015591,
+          "y": 474.17227129766326,
+          "depth": 0.999010968581495,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -1129.0856800061545,
+          "y": 617.227696700868,
+          "depth": 0.9994085497328995,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 886.0446275042256,
+          "y": 468.46659243966,
+          "depth": 0.9990244708013372,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -923.8730115178582,
+          "y": 575.0531417741742,
+          "depth": 0.9994527420504066,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1480.6079462518942,
+          "y": 458.2304397334385,
+          "depth": 0.9991748578456041,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1952.4693101013718,
+          "y": 326.8342852983226,
+          "depth": 0.9997128364731135,
+          "visible": false
+        },
+        "fairlead-6": {
+          "x": 1495.836603794164,
+          "y": 462.58037814630745,
+          "depth": 0.9991695922856687,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 2017.4370491439163,
+          "y": 333.5344522664823,
+          "depth": 0.9997058157492074,
+          "visible": false
+        },
+        "fairlead-7": {
+          "x": 1526.2993398880517,
+          "y": 472.03853604251196,
+          "depth": 0.9991575633472841,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 2155.4336718938443,
+          "y": 349.4322030152119,
+          "depth": 0.9996891574003534,
+          "visible": false
+        },
+        "fairlead-8": {
+          "x": 1540.4040763152186,
+          "y": 477.0000380074145,
+          "depth": 0.9991508427903589,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 2229.3808133754296,
+          "y": 358.8456871595343,
+          "depth": 0.9996792935456932,
+          "visible": false
+        },
+        "fairlead-9": {
+          "x": 1551.4097349711055,
+          "y": 766.2647862674444,
+          "depth": 0.9985814199925206,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 84.60392493578183,
+          "y": -606.9845905933016,
+          "depth": 1.0006913321639177,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1526.9689553719245,
+          "y": 769.7839751658753,
+          "depth": 0.9985691129347087,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 249.93988761928566,
+          "y": -582.3741149834195,
+          "depth": 1.000665544246202,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1474.8335576603984,
+          "y": 776.1658285420674,
+          "depth": 0.9985450843917307,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 543.5395323273683,
+          "y": -545.1211060994982,
+          "depth": 1.0006265089368893,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1447.2352369649604,
+          "y": 778.0063130168667,
+          "depth": 0.9985354046792048,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 676.8991782842799,
+          "y": -531.3371077451174,
+          "depth": 1.0006120654689536,
+          "visible": false
+        },
+        "specimen": {
+          "x": 8537.883357995921,
+          "y": 508.06669079543246,
+          "depth": 0.9987880307251928,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1363.1918387431438,
+          "y": -130.7186456441935,
+          "depth": 0.9987621257096965,
+          "visible": false
+        },
+        "brief-space": {
+          "x": 1672.0151989389435,
+          "y": 365.60137793470284,
+          "depth": 0.9986789933440546,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 43,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 89,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 1111.3086949435954,
+        "y": 876.7174453301044,
+        "depth": 0.9995570519054224,
+        "visible": true
+      },
+      "platform": {
+        "x": 1266.5773765522295,
+        "y": 864.5396965885031,
+        "depth": 0.9995915304427812,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1306.7698368510132,
+        "y": 464.3269265396322,
+        "depth": 0.9995824961957159,
+        "visible": true
+      },
+      "beso": {
+        "x": 5456.017232553633,
+        "y": 1059.2145755256743,
+        "depth": 0.9993719070127387,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -234,
+          184,
+          397
+        ],
+        "target": [
+          0,
+          124,
+          0
+        ]
+      },
+      "phase": "proof",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1260.8924466547996,
+          "y": 855.6011465966183,
+          "depth": 0.9996325424504,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1261.839809125223,
+          "y": 875.3948372182191,
+          "depth": 0.9996152181657982,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1126.1746233052725,
+          "y": 916.4172524200392,
+          "depth": 0.9995681631961126,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1190.6455345123975,
+          "y": 909.375438483925,
+          "depth": 0.999579577104823,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1402.093107648707,
+          "y": 940.1289626330453,
+          "depth": 0.9995696721186336,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1336.7561005080338,
+          "y": 921.9547427602838,
+          "depth": 0.9995803559713172,
+          "visible": true
+        },
+        "hub": {
+          "x": 1266.5773765522295,
+          "y": 864.5396965885031,
+          "depth": 0.9995915304427812,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1266.5773765522295,
+          "y": 864.5396965885031,
+          "depth": 0.9995915304427812,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1266.5773765522295,
+          "y": 864.5396965885031,
+          "depth": 0.9995915304427812,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1306.7698368510132,
+          "y": 464.3269265396322,
+          "depth": 0.9995824961957159,
+          "visible": true
+        },
+        "fairlead-1": {
+          "x": 1111.3086949435954,
+          "y": 876.7174453301044,
+          "depth": 0.9995570519054224,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -3574.362137062106,
+          "y": 2709.887497313767,
+          "depth": 0.998595010903943,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1106.7781677799328,
+          "y": 873.7666064563166,
+          "depth": 0.9995595255086157,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -3016.654957378839,
+          "y": 2370.209714223175,
+          "depth": 0.9987987928097717,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1099.002523057575,
+          "y": 867.8604387830705,
+          "depth": 0.9995645927677815,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -2216.429011126668,
+          "y": 1903.4574018281523,
+          "depth": 0.9990788101688829,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1095.7464337305605,
+          "y": 864.9078265782908,
+          "depth": 0.9995671827838866,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -1915.8953409895641,
+          "y": 1736.5958682659052,
+          "depth": 0.9991789149240701,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1248.6860198386692,
+          "y": 806.3059652403387,
+          "depth": 0.9996381657780815,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1178.385376664213,
+          "y": 666.1521600080133,
+          "depth": 0.999821103108903,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1256.3917786544425,
+          "y": 806.824476356765,
+          "depth": 0.9996383528977553,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1216.472101723053,
+          "y": 665.5300109692662,
+          "depth": 0.9998214763529687,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1272.0950198319151,
+          "y": 808.1617145739618,
+          "depth": 0.9996384602483079,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1292.3132389776692,
+          "y": 665.5083010679793,
+          "depth": 0.9998214893773268,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1279.6643576138001,
+          "y": 809.012175571098,
+          "depth": 0.9996383109663138,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1330.2590872213352,
+          "y": 666.1230150382445,
+          "depth": 0.9998211205937599,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1441.4939324504446,
+          "y": 894.8382935607866,
+          "depth": 0.9995690701730753,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 4417.547168431604,
+          "y": 1731.8128580179955,
+          "depth": 0.999181784381516,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1438.4581028066461,
+          "y": 897.1732395342646,
+          "depth": 0.9995665170808781,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 4716.02565124883,
+          "y": 1897.5006404393287,
+          "depth": 0.9990823837914417,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1431.589931990174,
+          "y": 901.8798684964864,
+          "depth": 0.9995613033506018,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 5511.2133235414885,
+          "y": 2361.0415861467404,
+          "depth": 0.9988042930182202,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1427.3624245369633,
+          "y": 904.0410583200936,
+          "depth": 0.9995588126849134,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 6065.008487260641,
+          "y": 2697.6786221575676,
+          "depth": 0.9986023353389553,
+          "visible": false
+        },
+        "specimen": {
+          "x": 5456.017232553633,
+          "y": 1059.2145755256743,
+          "depth": 0.9993719070127387,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1291.6448847418872,
+          "y": 609.0635232489122,
+          "depth": 0.9995856636014433,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1421.885437519198,
+          "y": 761.4513114513725,
+          "depth": 0.9995902944910008,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 99,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 1134.314459988812,
+        "y": 855.1148945999465,
+        "depth": 0.9996146309097514,
+        "visible": true
+      },
+      "platform": {
+        "x": 1264.8247145242026,
+        "y": 845.4608962094735,
+        "depth": 0.9996425999268358,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1298.7335842241055,
+        "y": 494.718878111117,
+        "depth": 0.9996376280282657,
+        "visible": true
+      },
+      "beso": {
+        "x": 4815.363244180846,
+        "y": 999.8890124247288,
+        "depth": 0.9994732866815911,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -290.6528624200858,
+          192.14564263150666,
+          442.7390648330059
+        ],
+        "target": [
+          0,
+          131.94948769898699,
+          0
+        ]
+      },
+      "phase": "close",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1254.154594368786,
+          "y": 841.3909204062163,
+          "depth": 0.9996743687816078,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1257.5006910759028,
+          "y": 857.3437591911857,
+          "depth": 0.9996607790105632,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1145.5955552670396,
+          "y": 890.8071930141754,
+          "depth": 0.9996230392832938,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1200.2491931486675,
+          "y": 884.835202012943,
+          "depth": 0.9996324671737572,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1385.6409459113447,
+          "y": 907.4600940891191,
+          "depth": 0.9996272189070926,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1327.7868212952055,
+          "y": 893.7396508373724,
+          "depth": 0.9996346386465649,
+          "visible": true
+        },
+        "hub": {
+          "x": 1264.8247145242026,
+          "y": 845.4608962094735,
+          "depth": 0.9996425999268358,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1264.8247145242026,
+          "y": 845.4608962094735,
+          "depth": 0.9996425999268358,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1264.8247145242026,
+          "y": 845.4608962094735,
+          "depth": 0.9996425999268358,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1298.7335842241055,
+          "y": 494.718878111117,
+          "depth": 0.9996376280282657,
+          "visible": true
+        },
+        "fairlead-1": {
+          "x": 1134.314459988812,
+          "y": 855.1148945999465,
+          "depth": 0.9996146309097514,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -2322.173765961218,
+          "y": 2246.6618188814077,
+          "depth": 0.9989222333845037,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1129.907699965905,
+          "y": 852.8282758787415,
+          "depth": 0.9996164529359325,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -2042.468765829827,
+          "y": 2038.6196627455706,
+          "depth": 0.9990431021750186,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1122.177590503549,
+          "y": 848.2324482119092,
+          "depth": 0.999620212017389,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -1589.8149547233295,
+          "y": 1723.8897668712034,
+          "depth": 0.9992259546437668,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1118.8471462477148,
+          "y": 845.9254117370567,
+          "depth": 0.9996221463702625,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -1402.2082523706868,
+          "y": 1602.3283014789595,
+          "depth": 0.999296579691921,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1242.2499648576388,
+          "y": 798.0788840686729,
+          "depth": 0.9996788354647024,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1147.333312947221,
+          "y": 681.592479637843,
+          "depth": 0.9998315108195186,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1249.0751000876185,
+          "y": 798.4583383626239,
+          "depth": 0.9996790577808939,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1183.2627345444212,
+          "y": 680.652408186337,
+          "depth": 0.999832056984303,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1263.0155921246776,
+          "y": 799.4598006501121,
+          "depth": 0.9996792938823522,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1254.686035329174,
+          "y": 679.9011552913028,
+          "depth": 0.999832493448866,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1269.7591956208357,
+          "y": 800.1098615914751,
+          "depth": 0.9996792486521213,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1290.3461436378955,
+          "y": 680.0986072686323,
+          "depth": 0.999832378732781,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1419.3538340273108,
+          "y": 867.3643255131145,
+          "depth": 0.99962737931352,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 3592.777127248981,
+          "y": 1408.3437933741297,
+          "depth": 0.9994092812390917,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1416.9778597562372,
+          "y": 869.1892611453546,
+          "depth": 0.9996254177876164,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 3743.2654851804105,
+          "y": 1497.4750885211674,
+          "depth": 0.9993574975427411,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1411.5604980962369,
+          "y": 872.8647703845718,
+          "depth": 0.999621412761571,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 4096.500957093828,
+          "y": 1721.6607073130135,
+          "depth": 0.9992272496877029,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1408.1640142409976,
+          "y": 874.5552902934849,
+          "depth": 0.9996194927798007,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 4307.705104270167,
+          "y": 1864.6999239514885,
+          "depth": 0.999144146448281,
+          "visible": false
+        },
+        "specimen": {
+          "x": 4815.363244180846,
+          "y": 999.8890124247288,
+          "depth": 0.9994732866815911,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1286.032333191625,
+          "y": 620.9221544769733,
+          "depth": 0.9996393346039604,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1399.5973289304452,
+          "y": 753.0354049633876,
+          "depth": 0.9996437164106279,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    },
+    {
+      "time": 104,
+      "iteration": 43,
+      "fraction": 0.24998960095911063,
+      "native": {
+        "time": 120,
+        "surge": 4.71546,
+        "pitch": 6.006087383238368,
+        "tension": 2742489.013
+      },
+      "lineTension": 2738676.611,
+      "fairlead": {
+        "x": 1139.9101388586791,
+        "y": 845.9973992037789,
+        "depth": 0.9996269496622601,
+        "visible": true
+      },
+      "platform": {
+        "x": 1264.3925904437292,
+        "y": 835.8844755265842,
+        "depth": 0.9996538153234376,
+        "visible": true
+      },
+      "towerTop": {
+        "x": 1296.8990932676065,
+        "y": 495.9681303806705,
+        "depth": 0.9996487321080064,
+        "visible": true
+      },
+      "beso": {
+        "x": 4693.266252057126,
+        "y": 987.7020047535298,
+        "depth": 0.999493324452696,
+        "visible": false
+      },
+      "camera": {
+        "position": [
+          -307.9764705882353,
+          197.6222222222222,
+          450.496
+        ],
+        "target": [
+          0,
+          132,
+          0
+        ]
+      },
+      "phase": "close",
+      "anchors": {
+        "outer-column-101": {
+          "x": 1251.8870508917364,
+          "y": 832.0007276931279,
+          "depth": 0.9996837242479806,
+          "visible": true
+        },
+        "inner-leg-104": {
+          "x": 1256.0916810083168,
+          "y": 847.4476978277654,
+          "depth": 0.999670926317224,
+          "visible": true
+        },
+        "outer-column-102": {
+          "x": 1150.3001745304207,
+          "y": 880.470097757331,
+          "depth": 0.9996349540650912,
+          "visible": true
+        },
+        "inner-leg-105": {
+          "x": 1202.592491761808,
+          "y": 874.3701575498098,
+          "depth": 0.999644056449622,
+          "visible": true
+        },
+        "outer-column-103": {
+          "x": 1382.2430130199896,
+          "y": 894.9870008808629,
+          "depth": 0.9996400348663155,
+          "visible": true
+        },
+        "inner-leg-106": {
+          "x": 1325.923589173716,
+          "y": 882.1575712287784,
+          "depth": 0.99964670005722,
+          "visible": true
+        },
+        "hub": {
+          "x": 1264.3925904437292,
+          "y": 835.8844755265842,
+          "depth": 0.9996538153234376,
+          "visible": true
+        },
+        "platform-center": {
+          "x": 1264.3925904437292,
+          "y": 835.8844755265842,
+          "depth": 0.9996538153234376,
+          "visible": true
+        },
+        "tower-base": {
+          "x": 1264.3925904437292,
+          "y": 835.8844755265842,
+          "depth": 0.9996538153234376,
+          "visible": true
+        },
+        "tower-top": {
+          "x": 1296.8990932676065,
+          "y": 495.9681303806705,
+          "depth": 0.9996487321080064,
+          "visible": true
+        },
+        "fairlead-1": {
+          "x": 1139.9101388586791,
+          "y": 845.9973992037789,
+          "depth": 0.9996269496622601,
+          "visible": true
+        },
+        "anchor-1": {
+          "x": -2097.2502696073648,
+          "y": 2188.0844483784763,
+          "depth": 0.9989749194356203,
+          "visible": false
+        },
+        "fairlead-2": {
+          "x": 1135.4891320815395,
+          "y": 843.813804809413,
+          "depth": 0.9996286334480605,
+          "visible": true
+        },
+        "anchor-2": {
+          "x": -1861.4776879490944,
+          "y": 1996.9389572185623,
+          "depth": 0.9990834427633585,
+          "visible": false
+        },
+        "fairlead-3": {
+          "x": 1127.684030301783,
+          "y": 839.4154786983406,
+          "depth": 0.999632116343962,
+          "visible": true
+        },
+        "anchor-3": {
+          "x": -1468.794459062826,
+          "y": 1702.0813747826194,
+          "depth": 0.9992508488887167,
+          "visible": false
+        },
+        "fairlead-4": {
+          "x": 1124.2937389996837,
+          "y": 837.2028983784227,
+          "depth": 0.9996339129191073,
+          "visible": true
+        },
+        "anchor-4": {
+          "x": -1302.0918044166142,
+          "y": 1586.3448644362463,
+          "depth": 0.9993165585801533,
+          "visible": false
+        },
+        "fairlead-5": {
+          "x": 1239.9168327219754,
+          "y": 790.0056927387377,
+          "depth": 0.9996878384749422,
+          "visible": true
+        },
+        "anchor-5": {
+          "x": 1135.3251580730487,
+          "y": 675.1801237967584,
+          "depth": 0.9998338746265422,
+          "visible": true
+        },
+        "fairlead-6": {
+          "x": 1246.5396625424619,
+          "y": 790.3366601144695,
+          "depth": 0.9996880774377263,
+          "visible": true
+        },
+        "anchor-6": {
+          "x": 1170.7592334435917,
+          "y": 674.103945157644,
+          "depth": 0.9998344856296397,
+          "visible": true
+        },
+        "fairlead-7": {
+          "x": 1260.0791671642064,
+          "y": 791.233187436037,
+          "depth": 0.9996883594311475,
+          "visible": true
+        },
+        "anchor-7": {
+          "x": 1241.1574828013138,
+          "y": 673.0762960420703,
+          "depth": 0.9998350690799794,
+          "visible": true
+        },
+        "fairlead-8": {
+          "x": 1266.6381979397468,
+          "y": 791.8281493929819,
+          "depth": 0.9996883451575488,
+          "visible": true
+        },
+        "anchor-8": {
+          "x": 1276.2822829855215,
+          "y": 673.1317874364686,
+          "depth": 0.9998350375746023,
+          "visible": true
+        },
+        "fairlead-9": {
+          "x": 1414.6806964454674,
+          "y": 856.0944182941244,
+          "depth": 0.9996402771135671,
+          "visible": true
+        },
+        "anchor-9": {
+          "x": 3425.873951308674,
+          "y": 1340.8826547890476,
+          "depth": 0.9994559203598281,
+          "visible": false
+        },
+        "fairlead-10": {
+          "x": 1412.5004522684956,
+          "y": 857.8658125588098,
+          "depth": 0.9996384324490476,
+          "visible": true
+        },
+        "anchor-10": {
+          "x": 3553.8275067915524,
+          "y": 1418.4679688501499,
+          "depth": 0.9994118711049155,
+          "visible": false
+        },
+        "fairlead-11": {
+          "x": 1407.5051813371263,
+          "y": 861.4358658763573,
+          "depth": 0.9996346648160102,
+          "visible": true
+        },
+        "anchor-11": {
+          "x": 3846.7678978366316,
+          "y": 1609.819861342402,
+          "depth": 0.9993032305923077,
+          "visible": false
+        },
+        "fairlead-12": {
+          "x": 1404.3411641217826,
+          "y": 863.0827435125368,
+          "depth": 0.9996328554265873,
+          "visible": true
+        },
+        "anchor-12": {
+          "x": 4016.9263072322037,
+          "y": 1729.1699557083407,
+          "depth": 0.9992354692795619,
+          "visible": false
+        },
+        "specimen": {
+          "x": 4693.266252057126,
+          "y": 987.7020047535298,
+          "depth": 0.999493324452696,
+          "visible": false
+        },
+        "response-point": {
+          "x": 1284.7177384676877,
+          "y": 618.3370530990704,
+          "depth": 0.9996504821981436,
+          "visible": true
+        },
+        "brief-space": {
+          "x": 1394.5549462012375,
+          "y": 745.7381486456042,
+          "depth": 0.999655326572284,
+          "visible": true
+        }
+      },
+      "underwater": 0,
+      "fov": 42,
+      "specimenVisible": false,
+      "specimenScale": 0.8,
+      "evidenceNote": "BESO specimen and saved Z-wind response are independent archived evidence; visual waves and streaks are not new CFD/solver results."
+    }
+  ],
+  "randomOrderPixelQA": [
+    {
+      "time": 7,
+      "a": "det-7-0.png",
+      "b": "det-7-1.png",
+      "maxChannelDelta": 1.0,
+      "meanChannelDelta": 5.481610082304527e-05,
+      "changedPixelRatio": 0.00015866126543209876,
+      "tolerancePass": true
+    },
+    {
+      "time": 7,
+      "a": "det-7-0.png",
+      "b": "det-7-6.png",
+      "maxChannelDelta": 1.0,
+      "meanChannelDelta": 5.899562757201646e-05,
+      "changedPixelRatio": 0.00017119984567901236,
+      "tolerancePass": true
+    },
+    {
+      "time": 17,
+      "a": "det-17-2.png",
+      "b": "det-17-5.png",
+      "maxChannelDelta": 1.0,
+      "meanChannelDelta": 3.18287037037037e-05,
+      "changedPixelRatio": 9.259259259259259e-05,
+      "tolerancePass": true
+    },
+    {
+      "time": 46,
+      "a": "det-46-3.png",
+      "b": "det-46-8.png",
+      "maxChannelDelta": 1.0,
+      "meanChannelDelta": 3.2150205761316875e-07,
+      "changedPixelRatio": 9.645061728395062e-07,
+      "tolerancePass": true
+    },
+    {
+      "time": 99,
+      "a": "det-99-4.png",
+      "b": "det-99-7.png",
+      "maxChannelDelta": 1.0,
+      "meanChannelDelta": 5.497685185185185e-05,
+      "changedPixelRatio": 0.00016203703703703703,
+      "tolerancePass": true
+    }
+  ],
+  "randomOrderTolerancePass": true
+}

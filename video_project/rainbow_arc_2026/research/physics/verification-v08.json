@@ -1,0 +1,239 @@
+{
+  "version": "V08",
+  "sourceHashes": {
+    "src/optics.ts": "2fc1d8a00fe5a26e71c32bab1dbc43fd8f265c3d953593261b1cedce25062127"
+  },
+  "model": "sphere + geometric ray optics; no wave interference calculation",
+  "airRefractiveIndex": 1.0003,
+  "tolerance": 1e-7,
+  "tests": [
+    {
+      "color": "red",
+      "wavelengthNm": 650,
+      "n": 1.331,
+      "internalReflections": 1,
+      "impactParameter": 0.8620714385305106,
+      "angleDeg": 42.42828324324725,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 2.220446049250313e-16,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 0,
+        "maxReflectionResidual": 1.1102230246251565e-16
+      }
+    },
+    {
+      "color": "red",
+      "wavelengthNm": 650,
+      "n": 1.331,
+      "internalReflections": 2,
+      "impactParameter": 0.9506248964883182,
+      "angleDeg": 50.25987060266954,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 0,
+        "maxReflectionResidual": 3.510833468576701e-16
+      }
+    },
+    {
+      "color": "orange",
+      "wavelengthNm": 600,
+      "n": 1.333,
+      "internalReflections": 1,
+      "impactParameter": 0.8610413628519626,
+      "angleDeg": 42.1362789662447,
+      "residual": {
+        "maxSurfaceResidual": 4.440892098500626e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 5.551115123125783e-17
+      }
+    },
+    {
+      "color": "orange",
+      "wavelengthNm": 600,
+      "n": 1.333,
+      "internalReflections": 2,
+      "impactParameter": 0.9502747393945394,
+      "angleDeg": 50.7859106639296,
+      "residual": {
+        "maxSurfaceResidual": 0,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 1.5700924586837752e-16
+      }
+    },
+    {
+      "color": "yellow",
+      "wavelengthNm": 570,
+      "n": 1.334,
+      "internalReflections": 1,
+      "impactParameter": 0.8605252906318617,
+      "angleDeg": 41.990947278482,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 0,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 1.2412670766236366e-16
+      }
+    },
+    {
+      "color": "yellow",
+      "wavelengthNm": 570,
+      "n": 1.334,
+      "internalReflections": 2,
+      "impactParameter": 0.950099419472719,
+      "angleDeg": 51.04788569645831,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 2.220446049250313e-16,
+        "maxReflectionResidual": 1.1102230246251565e-16
+      }
+    },
+    {
+      "color": "green",
+      "wavelengthNm": 530,
+      "n": 1.335,
+      "internalReflections": 1,
+      "impactParameter": 0.8600085074399544,
+      "angleDeg": 41.84605996059199,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 0,
+        "exitSnellResidual": 3.3306690738754696e-16,
+        "maxReflectionResidual": 5.551115123125783e-16
+      }
+    },
+    {
+      "color": "green",
+      "wavelengthNm": 530,
+      "n": 1.335,
+      "internalReflections": 2,
+      "impactParameter": 0.9499239365722876,
+      "angleDeg": 51.30916825226282,
+      "residual": {
+        "maxSurfaceResidual": 4.440892098500626e-16,
+        "unitDirectionResidual": 1.1102230246251565e-16,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 2.2887833992611187e-16
+      }
+    },
+    {
+      "color": "cyan",
+      "wavelengthNm": 500,
+      "n": 1.338,
+      "internalReflections": 1,
+      "impactParameter": 0.8584539756681226,
+      "angleDeg": 41.414044990840154,
+      "residual": {
+        "maxSurfaceResidual": 1.1102230246251565e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 0,
+        "exitSnellResidual": 3.3306690738754696e-16,
+        "maxReflectionResidual": 1.5700924586837752e-16
+      }
+    },
+    {
+      "color": "cyan",
+      "wavelengthNm": 500,
+      "n": 1.338,
+      "internalReflections": 2,
+      "impactParameter": 0.9493964964477062,
+      "angleDeg": 52.088892082431926,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 1.2412670766236366e-16
+      }
+    },
+    {
+      "color": "blue",
+      "wavelengthNm": 460,
+      "n": 1.34,
+      "internalReflections": 1,
+      "impactParameter": 0.857414113081594,
+      "angleDeg": 41.128221835587965,
+      "residual": {
+        "maxSurfaceResidual": 4.440892098500626e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 0,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 1.2412670766236366e-16
+      }
+    },
+    {
+      "color": "blue",
+      "wavelengthNm": 460,
+      "n": 1.34,
+      "internalReflections": 2,
+      "impactParameter": 0.9490440554809634,
+      "angleDeg": 52.60530207635723,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 2.220446049250313e-16
+      }
+    },
+    {
+      "color": "violet",
+      "wavelengthNm": 410,
+      "n": 1.343,
+      "internalReflections": 1,
+      "impactParameter": 0.8558490345569143,
+      "angleDeg": 40.70272995379426,
+      "residual": {
+        "maxSurfaceResidual": 0,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 0,
+        "maxReflectionResidual": 1.1102230246251565e-16
+      }
+    },
+    {
+      "color": "violet",
+      "wavelengthNm": 410,
+      "n": 1.343,
+      "internalReflections": 2,
+      "impactParameter": 0.9485141432423034,
+      "angleDeg": 53.37486853420309,
+      "residual": {
+        "maxSurfaceResidual": 2.220446049250313e-16,
+        "unitDirectionResidual": 0,
+        "entrySnellResidual": 1.1102230246251565e-16,
+        "exitSnellResidual": 1.1102230246251565e-16,
+        "maxReflectionResidual": 5.661048867003676e-16
+      }
+    }
+  ],
+  "sweep": {
+    "samples": 199,
+    "colors": 7,
+    "reflectionOrders": [
+      1,
+      2
+    ],
+    "validPaths": 2786,
+    "maxResidual": 1.1102230246251565e-15
+  },
+  "passed": true,
+  "angleChecks": {
+    "primaryRedAbout42": true,
+    "primaryVioletAbout40": true,
+    "primaryRedOutsideViolet": true,
+    "secondaryLarger": true,
+    "secondaryColorOrderReversed": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://threejs.org/docs/pages/LightShadow.html",
+  "retrieved": "2026-10-15",
+  "httpStatus": 200,
+  "readScope": "LightShadow radius / blurSamples API excerpts",
+  "excerpts": [
+    {
+      "term": "radius",
+      "excerpt": " acne especially in large scenes where light shines onto geometry at a shallow angle. The cost is that shadows may appear distorted. Default is 0 . . radius : number Setting this to values greater than 1 will blur the edges of the shadow. High values will cause unwanted banding effects in the shadows - a greater map size will allow for a higher value to be used here before these effects become visible. The property has no effect when the shadow map type is BasicShadowMap . Default is 1 . Methods . clone () : LightShadow Returns a new light shadow instance with copied values from this instance. Returns: A clone of this instance. . copy ( source : Li"
+    },
+    {
+      "term": "blurSamples",
+      "excerpt": "Node : Node .<float> A node version of bias . Only supported with WebGPURenderer . If a bias node is defined, bias has no effect. Default is null . . blurSamples : number The amount of samples to use when blurring a VSM shadow map. Default is 8 . . camera : Camera The light's view of the world. . intensity : number The intensity of the shadow. The default is 1 . Valid values are in the range [0, 1] . Default is 1 . . map : RenderTarget The depth map generated using the internal camera; a location beyond a pixel's depth is in shadow. Computed internally during rendering. Default is null . . mapPass : RenderTarget The distribution map generated using the "
+    }
+  ]
+}

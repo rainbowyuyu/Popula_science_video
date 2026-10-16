@@ -1,0 +1,69 @@
+{
+  "version": "v16",
+  "nativeWater": {
+    "packageVersion": "3.1.1",
+    "backend": "webgpu",
+    "threeVersion": "0.183.0",
+    "licenseSource": "user-provided threejs-water-pro.7z",
+    "runtimeSeed": 0.164219,
+    "stepSize": 0.016666666666666666,
+    "waveClaim": "Native WaterPro FFT/Gerstner optical visual ocean, independent of the archived Z-wind response. Not a new coupled CFD/structural solve.",
+    "disabledForFrameSeeking": [
+      "wave foam accumulation",
+      "spray",
+      "rain",
+      "underwater particles",
+      "film grain"
+    ]
+  },
+  "model": "Blender boolean-welded presentation envelope with unchanged native centreline coordinates and saved motion. Fairlead endpoint cradles close the visible joining gap; these are not solver-CAD modifications.",
+  "beso": "Saved original indexed coordinates and surface faces; display normals/material optimized without changing original geometry data.",
+  "camera": "One C1 metre-scale route. 7–21s bridge anchors frozen; 40–69s route orbits to keep selected mooring on right.",
+  "files": [
+    {
+      "path": "src/beso/LaunchWorldV16.ts",
+      "sha256": "2bd2cca34a11e3ad2c0a2a9b2fbc3378c4d0e0a3b1c38919b4bd4016678951e6",
+      "bytes": 1521
+    },
+    {
+      "path": "src/beso/LaunchWorldV16Runtime.ts",
+      "sha256": "13258f10102dc09cb249b3a1333c08a40a5820d89a3ffba7bc40da8c98cda92f",
+      "bytes": 21354
+    },
+    {
+      "path": "src/beso/LaunchV16Camera.ts",
+      "sha256": "1099a1291bd8e47b300f11cd53c945c681e9be652f14e3dc1647385fc1f929c1",
+      "bytes": 3451
+    },
+    {
+      "path": "src/beso/NativePlatformV16.ts",
+      "sha256": "08539683ecd03bdc3180d8fe16628b0e9ee93fa763c6e44b044ca582ebdd8ca4",
+      "bytes": 46991
+    },
+    {
+      "path": "public/assets/v16/world-webgpu.js",
+      "sha256": "39d2df084d15e19699f97367938390f0397c0114a260bfcf6b3ef9f14cb389b5",
+      "bytes": 7092164
+    },
+    {
+      "path": "public/assets/v16/connected-native-hull.glb",
+      "sha256": "1f0c8052f56cade0fc9ca7e1c31dcfac34ee9b1c2abe8ba437ff22198c8b35d9",
+      "bytes": 1126668
+    },
+    {
+      "path": "public/assets/v16/nacelle-skin.glb",
+      "sha256": "bb2435c7fe8fa74984e14541132bd6a97979fe1562b5503c9e26504b8a28ac80",
+      "bytes": 171184
+    },
+    {
+      "path": "public/beso-research/physics/native-model.json",
+      "sha256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "bytes": 11483
+    },
+    {
+      "path": "public/beso-research/physics/zwind-response.json",
+      "sha256": "509c491df6bea647a3593fbc8e7e7d29675ec6dc3b64b0aaf9801e17982c6719",
+      "bytes": 376644
+    }
+  ]
+}

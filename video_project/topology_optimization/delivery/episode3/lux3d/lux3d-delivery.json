@@ -1,0 +1,143 @@
+{
+  "schema": "lux3d.delivery-bundle/v1",
+  "createdAt": "2026-10-03T18:03:23+00:00",
+  "title": "榫卯科普 · Lux3D 原始生成素材",
+  "status": "incomplete",
+  "assetStatus": "complete",
+  "preview": {
+    "status": "generated",
+    "path": "preview.html",
+    "locale": "zh-CN"
+  },
+  "items": [
+    {
+      "id": "pavilion",
+      "label": "古亭参考模型",
+      "attemptIds": [
+        "pavilion"
+      ],
+      "selectedAttemptId": "pavilion",
+      "artifactIds": [
+        "pavilion:glb"
+      ],
+      "status": "complete"
+    },
+    {
+      "id": "joint",
+      "label": "榫卯参考模型",
+      "attemptIds": [
+        "joint"
+      ],
+      "selectedAttemptId": "joint",
+      "artifactIds": [
+        "joint:glb"
+      ],
+      "status": "complete"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "pavilion",
+      "taskRef": "cn:3917626",
+      "status": "succeeded",
+      "localStartedAt": null,
+      "localUpdatedAt": null,
+      "localCompletedAt": null,
+      "localDurationMs": null,
+      "artifactIds": [
+        "pavilion:glb"
+      ]
+    },
+    {
+      "id": "joint",
+      "taskRef": "cn:3917629",
+      "status": "succeeded",
+      "localStartedAt": null,
+      "localUpdatedAt": null,
+      "localCompletedAt": null,
+      "localDurationMs": null,
+      "artifactIds": [
+        "joint:glb"
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "cn:3917626",
+      "taskId": "3917626",
+      "region": "cn",
+      "operation": "image-to-3d",
+      "version": "G1-Turbo",
+      "providerStatus": 3,
+      "createdAt": null,
+      "creationSources": [],
+      "durationMs": null,
+      "actualCredits": {
+        "status": "unavailable",
+        "value": null,
+        "source": null
+      }
+    },
+    {
+      "id": "cn:3917629",
+      "taskId": "3917629",
+      "region": "cn",
+      "operation": "image-to-3d",
+      "version": "G1",
+      "providerStatus": 3,
+      "createdAt": null,
+      "creationSources": [],
+      "durationMs": null,
+      "actualCredits": {
+        "status": "unavailable",
+        "value": null,
+        "source": null
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/pavilion/glb.glb",
+      "format": "glb",
+      "size": 16499140,
+      "sha256": "7fbbe9c280ad06f7f2fc96c38a82ef07350d74c301afc85126323d3c896b37c2",
+      "validation": {
+        "valid": true,
+        "glbVersion": 2,
+        "assetVersion": "2.0",
+        "scenes": 1,
+        "nodes": 2,
+        "meshes": 1,
+        "materials": 1
+      },
+      "id": "pavilion:glb",
+      "attemptId": "pavilion",
+      "taskRef": "cn:3917626"
+    },
+    {
+      "path": "assets/joint/glb.glb",
+      "format": "glb",
+      "size": 7815036,
+      "sha256": "1040c2514c5a82ff943d14291d61089694ee3d18749e7803abe61a382ef3c24e",
+      "validation": {
+        "valid": true,
+        "glbVersion": 2,
+        "assetVersion": "2.0",
+        "scenes": 1,
+        "nodes": 1,
+        "meshes": 1,
+        "materials": 1
+      },
+      "id": "joint:glb",
+      "attemptId": "joint",
+      "taskRef": "cn:3917629"
+    }
+  ],
+  "credits": {
+    "status": "incomplete",
+    "total": null
+  },
+  "scene": {
+    "status": "not-requested"
+  }
+}

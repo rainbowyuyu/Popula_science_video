@@ -1,0 +1,526 @@
+{
+  "schemaVersion": "1.0",
+  "researchDate": "2026-10-05",
+  "designId": "song-style-si-jiao-ding-ting-v1",
+  "title": "四角攒尖木构亭（材分制可装配重建）",
+  "language": "zh-CN",
+  "scopeNote": "本方案不是对某一座现存名亭的测绘复原，而是以北宋《营造法式》可核验的材分、梁柱、椽檐和四角斗尖亭举折规则为约束，构成一座能按真实受力路径拆装的四柱四角攒尖亭。视频中应明确标注“宋式规则重建”，避免把参数化重建误称为某一古迹原貌。",
+  "sources": [
+    {
+      "id": "wikisource-yingzao-index",
+      "title": "《营造法式》目录（李诫，北宋）",
+      "url": "https://zh.wikisource.org/wiki/營造法式",
+      "access": "HTTP 200; checked 2026-10-05",
+      "license": "原书公有领域；页面文本按维基文库 CC BY-SA 条款发布",
+      "evidence": [
+        {
+          "location": "总看详及目录",
+          "quote": "《图样》六卷；目录列出第四、第五卷“大木作制度”，并将材、梁、闌额、柱、椽、檐、举折列为制度章节。",
+          "use": "确定本片只讲木构主体系，排除与榫卯无关的装饰和机理。"
+        }
+      ]
+    },
+    {
+      "id": "wikisource-yingzao-volume4",
+      "title": "《营造法式》第四卷·大木作制度一",
+      "url": "https://zh.wikisource.org/wiki/營造法式/第四卷",
+      "access": "HTTP 200; checked 2026-10-05",
+      "license": "原书公有领域；页面文本按维基文库 CC BY-SA 条款发布",
+      "evidence": [
+        {
+          "location": "材",
+          "quote": "材有八等……第六等：广六寸，厚四寸……右亭榭或小厅堂皆用之。各以其材之广分为十五分，以十分为其厚。契广六分，厚四分。",
+          "use": "将四角亭归入亭榭等级，建立统一“材—分—契”模块；所有构件尺寸从该模块派生。"
+        },
+        {
+          "location": "栱/枓",
+          "quote": "櫨枓施之于柱头；交互枓、齐心枓、散枓分别给出长、广、高和开口深度；总铺作次序以“出一跳”为四铺作。",
+          "use": "每根柱顶采用可拆的枓栱组件，保证梁的支承来自真实节点。"
+        },
+        {
+          "location": "平坐",
+          "quote": "平坐先自地立柱……柱上安搭头木，木上安普拍方，方上坐枓栱。",
+          "use": "把柱脚、搭头木、普拍方和枓栱作为连续装配路径，而不是悬浮的装饰块。"
+        }
+      ]
+    },
+    {
+      "id": "wikisource-yingzao-volume5",
+      "title": "《营造法式》第五卷·大木作制度二",
+      "url": "https://zh.wikisource.org/wiki/營造法式/第五卷",
+      "access": "HTTP 200; checked 2026-10-05",
+      "license": "原书公有领域；页面文本按维基文库 CC BY-SA 条款发布",
+      "evidence": [
+        {
+          "location": "梁",
+          "quote": "梁的大小随其广分为三分，以二分为厚；四铺作至八铺作的檐栿、乳栿、劄牵均给出材契组合。",
+          "use": "主梁和牵梁按材契组合建模，端部插入柱/枓口。"
+        },
+        {
+          "location": "闌额",
+          "quote": "闌额广加材一倍，厚减广三分之一，长随间广，两头至柱心，入柱卯减厚之半。",
+          "use": "四面闌额采用贯入柱心的横向榫接；端部做可见卯口，便于视频拆解。"
+        },
+        {
+          "location": "柱",
+          "quote": "余屋柱径一材一契至两材；柱首微收向内，柱脚微出向外，谓之侧脚；正面每柱长一尺侧脚一分，侧面每尺八厘。",
+          "use": "四柱设置可见的侧脚（柱顶向内微收），避免玩具式垂直杆件。"
+        },
+        {
+          "location": "椽",
+          "quote": "余屋椽径六分至七分；每槫上为缝，斜批相搭钉之；佈椽按椽心间距分布。",
+          "use": "屋面椽条按材分直径并按实例化间距阵列，固定在檐方/槫上。"
+        },
+        {
+          "location": "檐",
+          "quote": "檐出随椽径：椽径三寸檐出三尺五寸，椽径五寸檐出四尺至四尺五寸；飞檐每檐一尺出飞子六寸。",
+          "use": "用椽径反推出檐，得到结构比例；飞檐作为可拆第二层，不当成漂浮屋檐。"
+        },
+        {
+          "location": "举折",
+          "quote": "八角或四角斗尖亭榭，自橑檐方背举至角梁底，五分中举一分；至上簇角梁，两分中举一分。",
+          "use": "屋顶采用四角攒尖的双段坡度；第一段 rise/run=1:5，顶端收束段 rise/run=1:2。"
+        }
+      ]
+    },
+    {
+      "id": "commons-yingzao-fashi-bracket-1",
+      "title": "Yingzao Fashi 1.JPG：宋式柱、梁与铺作剖面图",
+      "url": "https://commons.wikimedia.org/wiki/File:Yingzao_Fashi_1.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Yingzao_Fashi_1.JPG",
+      "access": "HTTP 200; downloaded 2026-10-05",
+      "license": "Public domain (Commons metadata)",
+      "localEvidence": "assets/yingzao-fashi/yingzao_fashi_bracket_1.jpg",
+      "sha256": "58e68f7446edb9cd5e8700969514b6643c9f8d1bb6605fd1780f22e9b92eba83",
+      "evidence": [
+        {
+          "quote": "图中显示柱脚、柱身、叠层枓栱、檐椽和屋面线的连续剖面。",
+          "use": "片头和部件拆解镜头的真实构造参考；作为剖切透明演示背景。"
+        }
+      ]
+    },
+    {
+      "id": "commons-yingzao-fashi-bracket-2",
+      "title": "Yingzao Fashi 2.JPG：梁/枋的榫卯工作图",
+      "url": "https://commons.wikimedia.org/wiki/File:Yingzao_Fashi_2.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Yingzao_Fashi_2.JPG",
+      "access": "HTTP 200; downloaded 2026-10-05",
+      "license": "Public domain (Commons metadata)",
+      "localEvidence": "assets/yingzao-fashi/yingzao_fashi_bracket_2.jpg",
+      "sha256": "ae95842dfe90a1264466d600b55105ee99924741188f185d6fa9e515bf7d988f",
+      "evidence": [
+        {
+          "quote": "Commons说明为“Tenon and mortice work; forms of jointing in tie beams or cross beams”。",
+          "use": "梁—柱贯入榫/卯的拆解镜头和装配方向依据。"
+        }
+      ]
+    },
+    {
+      "id": "commons-yingzao-fashi-bracket-3-5",
+      "title": "Yingzao Fashi 3/4/5：枓栱与悬臂工作图组",
+      "url": "https://commons.wikimedia.org/wiki/Category:Yingzao_Fashi",
+      "imageUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8c/Yingzao_Fashi_3.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/6/65/Yingzao_Fashi_4.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/1/1e/Yingzao_Fashi_5.JPG"
+      ],
+      "access": "Commons category HTTP 200; selected files checked 2026-10-05",
+      "license": "Public domain (Commons metadata)",
+      "evidence": [
+        {
+          "quote": "3：Bracket arm clusters containing cantilevers；4：Working drawings of transverse corbel brackets；5：Working drawings of bracket arm bases and cantilever arms。",
+          "use": "将枓栱拆成多级可装配件，演示悬臂传力，而不是一整块玩具造型。"
+        }
+      ]
+    },
+    {
+      "id": "commons-cai-fen-representation",
+      "title": "Cai-fèn representation：材分等级示意",
+      "url": "https://commons.wikimedia.org/wiki/File:Cai-f%C3%A8n_representation.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Cai-f%C3%A8n_representation.png",
+      "access": "HTTP 200; downloaded 2026-10-05",
+      "license": "CC BY-SA 4.0",
+      "localEvidence": "assets/yingzao-fashi/cai_fen_representation.png",
+      "sha256": "0ff7417147f3203b11121376ab45a66d9a6b9891c419ac2e5c326ca8c51e3e59",
+      "attribution": "Matheus Rudo / Wikimedia Commons",
+      "evidence": [
+        {
+          "quote": "图示1—8等材分，标出材、单材、足材的比例关系。",
+          "use": "片尾公式/技术路线页展示材分制，画面注明 CC BY-SA 4.0。"
+        }
+      ]
+    },
+    {
+      "id": "unesco-timber-craftsmanship",
+      "title": "Chinese traditional architectural craftsmanship for timber-framed structures",
+      "url": "https://ich.unesco.org/en/RL/chinese-traditional-architectural-craftsmanship-for-timber-framed-structures-00256",
+      "access": "HTTP 200; page content may require JavaScript challenge; title and URL verified 2026-10-05",
+      "license": "UNESCO public informational page; do not copy page artwork",
+      "evidence": [
+        {
+          "quote": "UNESCO非遗项目页面将中国传统木构营造技艺列为以木构件、榫卯和师徒传承为核心的传统工艺。",
+          "use": "片尾来源卡片只作文化背景，不替代尺寸证据。"
+        }
+      ]
+    }
+  ],
+  "unitSystem": {
+    "primary": "normalized_cai_fen",
+    "definition": {
+      "cai_width": "1.0 Cai = 15 Fen",
+      "cai_thickness_grade6": "10 Fen",
+      "qi_width": "6 Fen",
+      "qi_thickness": "4 Fen"
+    },
+    "metric_alias": {
+      "song_cai_assumption_m": 0.1872,
+      "fen_m": 0.01248,
+      "model_scale": "1:12",
+      "model_cai_m": 0.0156
+    },
+    "metricNote": "0.1872 m/材为工程可视化换算假设；《营造法式》原文以寸、分、材契表达，建模脚本应保留Cai/Fen参数并允许替换尺制。"
+  },
+  "parametricSpec": {
+    "grade": "材第六等（亭榭/小厅堂）",
+    "plan": {
+      "column_centers_square_cai": 16.0,
+      "column_center_spacing_m_assumption": 2.9952,
+      "eave_projection_cai": 6.5,
+      "outer_eave_square_cai": 29.0,
+      "outer_eave_square_m_assumption": 5.4288,
+      "eave_height_cai": 18.0,
+      "eave_height_m_assumption": 3.3696
+    },
+    "columns": {
+      "count": 4,
+      "diameter_cai_range": [
+        1.4,
+        2.0
+      ],
+      "chosen_diameter_cai": 1.4,
+      "top_inward_side_foot_cai": 0.08,
+      "base": "柱下櫍 + 独立础石（可拆）"
+    },
+    "horizontalFrame": {
+      "闌額": {
+        "count": 4,
+        "section_cai": "广=2材=2.0；厚=广×2/3=1.333",
+        "length": "柱心距=16.0",
+        "joint": "两端入柱卯，横向贯入"
+      },
+      "檐栿": {
+        "count": 4,
+        "section_cai": "按四铺作/五铺作的两材一契组合",
+        "joint": "梁端入枓口，枓上承栱"
+      },
+      "橑檐方": {
+        "count": 4,
+        "section_cai": "广=2材；厚=1材",
+        "joint": "与檐栿/槫相交"
+      }
+    },
+    "bracketSets": {
+      "count": 4,
+      "perSet": [
+        "櫨枓×1",
+        "泥道栱×1",
+        "華栱×1",
+        "令栱×1",
+        "交互枓/齊心枓×3",
+        "耍頭/昂×1"
+      ],
+      "assembly": "柱顶→櫨枓→栱→枓→令栱/昂→檐栿"
+    },
+    "roof": {
+      "type": "四角斗尖（四角攒尖）",
+      "slopeRule": "第一段 rise/run=1:5；上簇角梁收束段 rise/run=1:2",
+      "radial_run_cai": "outer_eave_square_cai/2×sqrt(2)=20.506（中心至角）",
+      "first_rise_cai": 4.101,
+      "hipRafters": {
+        "大角樑": 4,
+        "子角樑": 4,
+        "隱角樑": 4,
+        "joint": "斜向榫/抱槫口，端部以中央棖杆/角部枓口定位"
+      },
+      "commonRafters": {
+        "fullStructuralCountPerSide": 48,
+        "cinematicInstancedCountPerSide": 12,
+        "diameter_cai_range": [
+          0.4,
+          0.467
+        ],
+        "spacing_source": "第五卷·椽：椽心距约八至九分；视频代理可实例化显示，BOM保留全量"
+      },
+      "roofPanels": {
+        "count": 4,
+        "type": "可拆木基层/轻瓦面板",
+        "joint": "面板压在椽上，隐藏卡扣不参与主传力"
+      }
+    }
+  },
+  "partsBOM": [
+    {
+      "group": "PAV_BASE_STONE",
+      "name": "础石/柱下櫍",
+      "qty": 4,
+      "role": "固定柱脚并可拆卸"
+    },
+    {
+      "group": "PAV_COL",
+      "name": "梭柱（含侧脚）",
+      "qty": 4,
+      "role": "主竖向受力件"
+    },
+    {
+      "group": "PAV_LAN_E",
+      "name": "闌额",
+      "qty": 4,
+      "role": "柱间水平拉结，贯入柱卯"
+    },
+    {
+      "group": "PAV_EAVE_BEAM",
+      "name": "檐栿/乳栿",
+      "qty": 4,
+      "role": "承接枓栱和屋面"
+    },
+    {
+      "group": "PAV_EAVE_RAIL",
+      "name": "橑檐方/槫",
+      "qty": 4,
+      "role": "椽条支座"
+    },
+    {
+      "group": "PAV_BRACKET",
+      "name": "枓栱套件",
+      "qty": 4,
+      "role": "多级悬臂与节点传力"
+    },
+    {
+      "group": "PAV_HIP_MAIN",
+      "name": "大角樑",
+      "qty": 4,
+      "role": "四角攒尖主斜梁"
+    },
+    {
+      "group": "PAV_HIP_SUB",
+      "name": "子角樑/隱角樑",
+      "qty": 8,
+      "role": "连续屋面斜向骨架"
+    },
+    {
+      "group": "PAV_RAFTER",
+      "name": "椽条",
+      "qty": "192 full / 48 proxy",
+      "role": "面荷载分配至檐方"
+    },
+    {
+      "group": "PAV_HUB",
+      "name": "中央棖杆/宝顶芯",
+      "qty": 1,
+      "role": "四根大角樑共同节点"
+    },
+    {
+      "group": "PAV_ROOF_PANEL",
+      "name": "可拆屋面板",
+      "qty": 4,
+      "role": "可视化风压载荷面"
+    }
+  ],
+  "assemblyOrder": [
+    {
+      "step": 1,
+      "name": "础石定位",
+      "parts": [
+        "PAV_BASE_STONE"
+      ],
+      "motion": "四点落位，柱脚榫轴线竖直"
+    },
+    {
+      "step": 2,
+      "name": "立柱",
+      "parts": [
+        "PAV_COL"
+      ],
+      "motion": "柱底沿Z插入櫍卯；柱顶按侧脚向中心收"
+    },
+    {
+      "step": 3,
+      "name": "闌额闭合",
+      "parts": [
+        "PAV_LAN_E"
+      ],
+      "motion": "梁从屏幕外沿水平轴向柱卯滑入，四面闭合后锁定"
+    },
+    {
+      "step": 4,
+      "name": "檐栿和橑檐方",
+      "parts": [
+        "PAV_EAVE_BEAM",
+        "PAV_EAVE_RAIL"
+      ],
+      "motion": "先梁后檐方，端部进入枓口/柱心卯"
+    },
+    {
+      "step": 5,
+      "name": "枓栱",
+      "parts": [
+        "PAV_BRACKET"
+      ],
+      "motion": "每组从柱顶逐级向外搭接，透明剖切显示开口和契"
+    },
+    {
+      "step": 6,
+      "name": "攒尖骨架",
+      "parts": [
+        "PAV_HIP_MAIN",
+        "PAV_HIP_SUB",
+        "PAV_HUB"
+      ],
+      "motion": "四根大角樑由四角向中央棖杆同步收拢，子角樑随后落位"
+    },
+    {
+      "step": 7,
+      "name": "椽阵列",
+      "parts": [
+        "PAV_RAFTER"
+      ],
+      "motion": "沿四面檐方阵列，椽尾搭入槫并以实例化动画显示"
+    },
+    {
+      "step": 8,
+      "name": "屋面板",
+      "parts": [
+        "PAV_ROOF_PANEL"
+      ],
+      "motion": "四块面板沿坡向滑入并压在椽上；作为风压载荷面"
+    },
+    {
+      "step": 9,
+      "name": "节点验证",
+      "parts": [
+        "ALL"
+      ],
+      "motion": "反向拆解按相反路径，检查每个榫卯仅沿允许自由度脱开"
+    }
+  ],
+  "jointMap": [
+    {
+      "id": "J01",
+      "name": "柱—闌额贯入榫",
+      "a": "PAV_COL",
+      "b": "PAV_LAN_E",
+      "axis": "梁水平轴",
+      "constraint": "禁止竖向和法向拔出，拆解仅沿梁轴向"
+    },
+    {
+      "id": "J02",
+      "name": "柱—櫨枓坐榫",
+      "a": "PAV_COL",
+      "b": "PAV_BRACKET",
+      "axis": "Z",
+      "constraint": "枓底落在柱头，侧向由耳口定位"
+    },
+    {
+      "id": "J03",
+      "name": "枓—栱开口",
+      "a": "PAV_BRACKET",
+      "b": "PAV_BRACKET",
+      "axis": "水平/交错",
+      "constraint": "按枓口滑入，契填入后阻止侧滑"
+    },
+    {
+      "id": "J04",
+      "name": "檐栿—枓口",
+      "a": "PAV_EAVE_BEAM",
+      "b": "PAV_BRACKET",
+      "axis": "水平",
+      "constraint": "梁端进入交互枓，透明显示抱槫口"
+    },
+    {
+      "id": "J05",
+      "name": "大角樑—中央棖杆",
+      "a": "PAV_HIP_MAIN",
+      "b": "PAV_HUB",
+      "axis": "斜向",
+      "constraint": "四向汇交，中心键锁定，拆解先拔中心键再沿斜向退出"
+    },
+    {
+      "id": "J06",
+      "name": "椽—槫/橑檐方",
+      "a": "PAV_RAFTER",
+      "b": "PAV_EAVE_RAIL",
+      "axis": "坡向",
+      "constraint": "椽头搭接，尾部落入槫槽；屋面板不替代椽的连接"
+    }
+  ],
+  "simulationReady": {
+    "meshGroups": [
+      "PAV_BASE_STONE",
+      "PAV_COL",
+      "PAV_LAN_E",
+      "PAV_EAVE_BEAM",
+      "PAV_EAVE_RAIL",
+      "PAV_BRACKET",
+      "PAV_HIP_MAIN",
+      "PAV_HIP_SUB",
+      "PAV_RAFTER",
+      "PAV_HUB",
+      "PAV_ROOF_PANEL"
+    ],
+    "ZwindCases": [
+      {
+        "id": "W0",
+        "windDirectionDeg": 0,
+        "velocity_mps": 20,
+        "rho_kg_m3": 1.225,
+        "use": "演示工况；不作为建筑设计荷载"
+      },
+      {
+        "id": "W45",
+        "windDirectionDeg": 45,
+        "velocity_mps": 20,
+        "rho_kg_m3": 1.225,
+        "use": "斜向来流，突出四角攒尖汇流"
+      },
+      {
+        "id": "W90",
+        "windDirectionDeg": 90,
+        "velocity_mps": 20,
+        "rho_kg_m3": 1.225,
+        "use": "侧向来流，观察檐口和枓栱局部峰值"
+      }
+    ],
+    "boundaryConditions": "四个PAV_BASE_STONE底面固定；柱—闌额、梁—枓栱、角梁—棖杆按jointMap接触；屋面风压施加到PAV_ROOF_PANEL并传递到PAV_RAFTER/PAV_EAVE_RAIL。",
+    "outputs": [
+      "pressure_cp",
+      "surface_shear",
+      "displacement",
+      "von_mises_proxy",
+      "reaction_force_at_base"
+    ],
+    "inverseForceVisual": "使用Zwind压力结果反向沿jointMap回溯到各部件；画面标注“反向载荷路径”，不把热力图当作真实材料应力。",
+    "diffusionVisual": "扩散模型用于将离散压力/温湿度采样平滑映射到部件表面；若未运行结构求解，必须标注“可视化扩散代理”，不能宣称为FEA反算结果。"
+  },
+  "modelingQA": [
+    "每一根PAV_LAN_E的两端都与对应柱卯相交，且装配前不穿模；",
+    "PAV_EAVE_BEAM的端部只落在枓口/柱心，不允许悬空；",
+    "四根PAV_HIP_MAIN在中心棖杆具有同一汇交点；",
+    "椽条数量、间距和方向与四面坡一致；",
+    "侧脚导致柱顶向中心轻微收，不得显示为四根垂直圆柱；",
+    "按assemblyOrder反向拆解，所有零件沿jointMap允许轴退出；",
+    "Zwind载荷面与屋面法向一致，热力图覆盖整个亭体而非漂浮在旁侧。"
+  ],
+  "assetManifest": "assets/yingzao-fashi/download-manifest.json",
+  "implementationBridge": {
+    "existingEducationalModel": "research/real-pavilion-components.json",
+    "existingBlenderSource": "blender/real_assembly_pavilion.blend",
+    "existingGLB": "public/episode3/models/real-assembly-pavilion.glb",
+    "migrationTasks": [
+      "将现有四柱/地栿/穿枋/斗栱/檩椽对象重命名为本JSON的PAV_*组名或在导出前写映射表。",
+      "用PAV_HIP_MAIN/PAV_HIP_SUB替换当前仅由四面檩和少量椽条表达的屋顶，按四角斗尖1:5与1:2坡度生成中央棖杆汇交。",
+      "保留现有真实布尔榫眼和独立榫头，但将每个节点的退出轴写入jointMap并跑正向/反向装配审计。",
+      "28根示范椽条可用于镜头代理；如要声称完整结构，按第五卷椽心距实例化为48根/面，并在BOM注明代理与全量区别。",
+      "Zwind输出按PAV_*组名回写；未经求解的数据只能标为演示性反算/可视化扩散代理。"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "Runner and immutable baseline preparation only; no Remotion render and no delivery installation executed.",
+  "runner": "scripts/render_full_guarded_v6.mjs",
+  "runnerSHA256": "b501eb75158de323d25bbed31917dc27407b2393b537f5274dad00df1e0df874",
+  "baselineManifest": "research/revision-v6/base/baseline.json",
+  "baselineManifestSHA256": "7e5af143dd55f43d84a03cb4dc19ccec1ecbcc81584544cb9284502856466f94",
+  "frozenCurrentVideoSHA256": "dfa2d9a89817f74a5a436b5a4acae48334700ef92f5068676cb65c167f705ccb",
+  "frozenCurrentMarkerSHA256": "aa54fc81959c293a87f1a8498851fe03dbccfe57c685c066d91fcb2de7c96f34",
+  "cli": {
+    "sourceLock": "required --source-lock=<project path>",
+    "outputDir": "--output-dir=tmp/v6-full-final",
+    "concurrency": "--concurrency=3",
+    "validateOnly": "--validate-only is read-only and exits before writing running lock/bundle/media"
+  },
+  "inputLockRequirements": {
+    "frames": 25621,
+    "fps": 30,
+    "timelineSHA256": "must match current src/timeline.json",
+    "masterSHA256": "must match current public/master.wav",
+    "storySHA256": "optional top-level consistency check",
+    "files": "Every src file, package.json, package-lock.json, docs/story-v5.json and every public file, each with path, sha256 and independent in-project snapshot. Optional snapshotSHA256 must equal sha256. Duplicate entries refused.",
+    "publicTimeline": "Must byte-match src/timeline.json",
+    "master": "Exactly 25621/30 seconds, one stereo 48 kHz audio stream; no trim/pad/stretch"
+  },
+  "renderingBehavior": {
+    "remotionInputProps": {
+      "audio": false,
+      "clean": false
+    },
+    "remotionMuted": true,
+    "silentOutput": "silent.mp4",
+    "candidateOutput": "GLP1_V5_1080p.candidate.mp4",
+    "masterMux": "ffmpeg video copy plus complete master encoded once as AAC 320k / 48 kHz from zero",
+    "videoPayloadCheck": "SHA256 of copied encoded video packet payload must match silent/candidate",
+    "color": "BT.709 limited range required; any silent metadata remux preserves pre-remux artifact",
+    "sourceFreeze": "All source hashes/snapshots, src and public inventories, all bundled public hashes, runner, lock, Chromium and immutable baseline rechecked before installation",
+    "gpu": "Process-local Windows Launcher hook and actual SystemInfo GPU capture retained; no GPU hook applied during preparation",
+    "disk": "Separate Remotion temporary and project-output volume budgets, includes silent video, optional silent color archive, candidate, installation copy, public bundle, audit PCM and RAM estimate",
+    "installation": "Inherited verified atomic staging and exact baseline rollback retained; not exercised"
+  },
+  "executedChecks": {
+    "nodeSyntaxCheck": "passed",
+    "installedRemotionExports": "renderMedia/openBrowser/selectComposition and Launcher.launchChrome exist",
+    "installedMutedParameter": "confirmed in installed renderer implementation; no browser launched",
+    "immutableBaselineCopies": "Four archive copies or byte-identical existing copies verified; no differing existing file overwritten",
+    "audioComparisonFunctionOnActualExistingFinalAndMaster": {
+      "masterSHA256": "fe5548b3297fe80647a16414fddaee86d2bc2a50fe552f4dd7df76fc83f0097f",
+      "correlation": 0.9999914666365582,
+      "comparedNonSilentFiveSecondWindows": 171,
+      "minimumWindowCorrelation": 0.9999821158889399,
+      "maximumWindowNormalizedRMSE": 0.0060398361735572725,
+      "independentLagSearchWindows": 12,
+      "lagSearchRangeMilliseconds": [
+        -100,
+        100
+      ],
+      "allBestLagsSamples": 0,
+      "intentional42_625msShiftRejected": true,
+      "note": "Tests the new comparator against an existing encoded file and a shifted sample array; does not assert the future V6 candidate has already rendered or passed."
+    },
+    "oldSourceLockRejection": {
+      "command": "node scripts/render_full_guarded_v6.mjs --source-lock=research/revision-v5/render-motion-source-lock.json --output-dir=tmp/v6-full-final --concurrency=3 --validate-only",
+      "expectedExitCode": 1,
+      "reason": "Input snapshot missing: public/master.wav",
+      "interpretation": "Expected rejection of the old incomplete snapshot schema, not a positive final preflight."
+    },
+    "deliveryAndMarkerUnchanged": true
+  },
+  "pendingChecks": [
+    "Run positive --validate-only with root's final V6 source lock after hand/audio/story candidates are installed and frozen.",
+    "Actual full Remotion render, GPU capture, mux, all-frame decode, final candidate audio and visual review remain unexecuted."
+  ],
+  "sourcePublicStoryEdited": false
+}

@@ -1,0 +1,388 @@
+{
+  "frames": 9683,
+  "scope": "Every timeline frame evaluated through production cameraAt: scale-normalized movement, acceleration, orientation and particle phase. Static-frame and encoded visual inspection remain separate.",
+  "anchorSource": {
+    "anatomy": "Current asset-manifest.json bounds in production atlas normalization",
+    "nephron": "Executed current World.buildKidneyDiagram and its Object3D.localToWorld targets; not CameraPath fallback coordinates",
+    "measurement": "Executed current World.buildMeasure twice with actual monitor builder; actual final and intro cuff, forearm, monitor and body anchors"
+  },
+  "sourceHashes": {
+    "src/hypertension/CameraPath.ts": "d2506ffde8dacbeeef375aef4d33e6f189b83cd0cb1756897dec367235d2179f",
+    "src/hypertension/World.ts": "765f79fcd7d7a6324842d75fd2a77c3088603553f892046511a8e3e7c035b92b",
+    "src/hypertension/VascularDetail.ts": "c2bdb06a4447c274a3f59728cb624693236dadb7d11c103f6defd71568569575",
+    "src/hypertension/timeline.json": "7d9f4bd1dc0b74a9c8a9d0936f233bce38653dad2cae444b5dacaac2e7bdfe42",
+    "public/hypertension/physics.json": "b9ef46da1a7febaaff2287a283858cce5cecc715db69016673b9ffee2fb9958a"
+  },
+  "maxMove": {
+    "frame": 8303,
+    "value": 0.18919512086851115
+  },
+  "maxAngle": {
+    "frame": 2348,
+    "value": 0.005128083907506048
+  },
+  "maxAngularVelocityRadiansPerSecond": 0.15384251722518144,
+  "maxRelativeMove": {
+    "frame": 7475,
+    "value": 0.03934431572509688
+  },
+  "maxRelativeAcceleration": {
+    "frame": 7495,
+    "value": 0.003840567858810246
+  },
+  "pacing": [
+    {
+      "name": "arteriole-entry",
+      "start": 2829,
+      "end": 3100,
+      "maxNormalizedMove": {
+        "frame": 2881,
+        "value": 0.03256208435368223
+      },
+      "maxNormalizedAcceleration": {
+        "frame": 2897,
+        "value": 0.0015841387300847126
+      },
+      "maxAngularVelocityRadPerSecond": {
+        "frame": 2958,
+        "value": 0.11452877865718868
+      },
+      "maxAbsoluteLogDollyRatePerSecond": {
+        "frame": 2890,
+        "value": 1.148722499418444
+      }
+    },
+    {
+      "name": "nephron-entry",
+      "start": 4025,
+      "end": 4401,
+      "maxNormalizedMove": {
+        "frame": 4237,
+        "value": 0.016161917907824043
+      },
+      "maxNormalizedAcceleration": {
+        "frame": 4291,
+        "value": 0.0005382610361288591
+      },
+      "maxAngularVelocityRadPerSecond": {
+        "frame": 4162,
+        "value": 0.04312343935828365
+      },
+      "maxAbsoluteLogDollyRatePerSecond": {
+        "frame": 4237,
+        "value": 0.4756778541646546
+      }
+    },
+    {
+      "name": "liver-entry",
+      "start": 6805,
+      "end": 7110,
+      "maxNormalizedMove": {
+        "frame": 6980,
+        "value": 0.03064288438577102
+      },
+      "maxNormalizedAcceleration": {
+        "frame": 6944,
+        "value": 0.0015630489219576032
+      },
+      "maxAngularVelocityRadPerSecond": {
+        "frame": 7035,
+        "value": 0.12020070410879412
+      },
+      "maxAbsoluteLogDollyRatePerSecond": {
+        "frame": 6983,
+        "value": 1.056992733161408
+      }
+    },
+    {
+      "name": "plaque-exit",
+      "start": 8011,
+      "end": 8180,
+      "maxNormalizedMove": {
+        "frame": 8086,
+        "value": 0.018843956066485743
+      },
+      "maxNormalizedAcceleration": {
+        "frame": 8153,
+        "value": 0.0004711247678105491
+      },
+      "maxAngularVelocityRadPerSecond": {
+        "frame": 8180,
+        "value": 0.08992525482075395
+      },
+      "maxAbsoluteLogDollyRatePerSecond": {
+        "frame": 8089,
+        "value": 0.5615476623870395
+      }
+    },
+    {
+      "name": "cuff-entry-and-return",
+      "start": 8554,
+      "end": 9123,
+      "maxNormalizedMove": {
+        "frame": 8768,
+        "value": 0.005191877858521128
+      },
+      "maxNormalizedAcceleration": {
+        "frame": 8862,
+        "value": 0.0001090669921163787
+      },
+      "maxAngularVelocityRadPerSecond": {
+        "frame": 8994,
+        "value": 0.06057725296650333
+      },
+      "maxAbsoluteLogDollyRatePerSecond": {
+        "frame": 8769,
+        "value": 0.13209890238114586
+      }
+    }
+  ],
+  "measurementFraming": {
+    "frames": [
+      8554,
+      9123
+    ],
+    "scope": "Projected world bounding-box corners of the actual cuff group and forearm, plus elbow center; does not test occlusion or annotation overlap",
+    "bounds": {
+      "minX": 731.3914651289077,
+      "maxX": 1197.9410631447724,
+      "minY": 398.25144586318464,
+      "maxY": 713.6424353339659
+    },
+    "clippedFrames": []
+  },
+  "introFraming": {
+    "frames": [
+      0,
+      630
+    ],
+    "activeFrames": [
+      0,
+      499
+    ],
+    "scope": "Phase-aware projected key anchors: person/cuff/forearm/support (0–149), cuff/forearm detail while the camera approaches (150–354), monitor detail once it enters (355–499), then intentional empty bridge to atlas; inactive limbs may leave the frustum while the narrated relationship remains visible",
+    "bounds": {
+      "minX": 152.72139337623585,
+      "maxX": 1911.6862078310212,
+      "minY": 382.1240537866347,
+      "maxY": 877.6748355808345
+    },
+    "clippedFrames": [],
+    "activeClippedFrames": []
+  },
+  "boundaries": [
+    {
+      "scene": "anatomy",
+      "frame": 902,
+      "distance": 0.030182700320273332,
+      "relativeMove": 0.005487763694595151,
+      "relativeAcceleration": 0.000048051943016567196,
+      "angleRadians": 0.0005655784320362703,
+      "logDollyRatePerSecond": -0.16411557989680586,
+      "phaseAdvance": 0.003982450317935093
+    },
+    {
+      "scene": "pump",
+      "frame": 1725,
+      "distance": 0.0007634860988019946,
+      "relativeMove": 0.001305588242883577,
+      "relativeAcceleration": 0.0000165665543269246,
+      "angleRadians": 0.0011749339017230226,
+      "logDollyRatePerSecond": -0.02514596036803782,
+      "phaseAdvance": 0.0039785257856994605
+    },
+    {
+      "scene": "resistance",
+      "frame": 2820,
+      "distance": 0.014052194639667233,
+      "relativeMove": 0.012481064555355572,
+      "relativeAcceleration": 0.000040541038128563624,
+      "angleRadians": 0.0007137946608044222,
+      "logDollyRatePerSecond": -0.3422052357650589,
+      "phaseAdvance": 0.0038401990994199053
+    },
+    {
+      "scene": "kidney",
+      "frame": 4016,
+      "distance": 0.001444279830538256,
+      "relativeMove": 0.0018503938696688795,
+      "relativeAcceleration": 0.0000314349847435382,
+      "angleRadians": 0.0011988098241660966,
+      "logDollyRatePerSecond": 0.04297040078731951,
+      "phaseAdvance": 0.0037250663826498
+    },
+    {
+      "scene": "control",
+      "frame": 5281,
+      "distance": 0.003035041636280581,
+      "relativeMove": 0.0011138909005766618,
+      "relativeAcceleration": 0.000018251640676381805,
+      "angleRadians": 0.0010046486571661868,
+      "logDollyRatePerSecond": 0.014366866044373094,
+      "phaseAdvance": 0.0036652718380416616
+    },
+    {
+      "scene": "remodel",
+      "frame": 6473,
+      "distance": 0.025389987943306186,
+      "relativeMove": 0.01131751864455798,
+      "relativeAcceleration": 0.000043665206657428505,
+      "angleRadians": 0.00253777393966598,
+      "logDollyRatePerSecond": -0.32487581437497987,
+      "phaseAdvance": 0.003923958323575505
+    },
+    {
+      "scene": "measure",
+      "frame": 8181,
+      "distance": 0.11906602892581268,
+      "relativeMove": 0.01706035366064092,
+      "relativeAcceleration": 0.00030858736041849933,
+      "angleRadians": 0.0030486283975139443,
+      "logDollyRatePerSecond": 0.5094866502452409,
+      "phaseAdvance": 0.00394890899814726
+    },
+    {
+      "scene": "references",
+      "frame": 9323,
+      "distance": 0.0030529178793172007,
+      "relativeMove": 0.0002176616922481468,
+      "relativeAcceleration": 4.949058445061882e-7,
+      "angleRadians": 0.00018338072724920755,
+      "logDollyRatePerSecond": 0.0031045743987724583,
+      "phaseAdvance": 0.003923958323575505
+    }
+  ],
+  "phaseMin": 0.0035266883424895923,
+  "phaseMax": 0.003999998274760941,
+  "negativePhaseSteps": 0,
+  "boundaryDiscontinuities": [],
+  "anchors": {
+    "heart": {
+      "x": 0.0853244634164271,
+      "y": 5.278662222432105,
+      "z": 0.09317151982539745
+    },
+    "leftKidney": {
+      "x": 0.24544664225838733,
+      "y": 4.52422138038718,
+      "z": -0.0801210453539437
+    },
+    "brain": {
+      "x": -0.002085510359231358,
+      "y": 6.556002459360762,
+      "z": -0.08097496922309606
+    },
+    "liver": {
+      "x": -0.04122657593799768,
+      "y": 4.7954492730090506,
+      "z": 0.09111250162259187
+    },
+    "bodySurface": {
+      "x": -0.0025775075499957483,
+      "y": 3.505,
+      "z": 0.0030583501485805485
+    },
+    "body": {
+      "x": -0.0025775075499957483,
+      "y": 3.505,
+      "z": 0.0030583501485805485
+    },
+    "vessel": {
+      "x": 0.033008,
+      "y": 4.8,
+      "z": 0.007975
+    },
+    "arteriole": {
+      "x": 0.17792051135440762,
+      "y": 4.550297853126355,
+      "z": 0.011878954646056303
+    },
+    "lipoprotein": {
+      "x": -0.03861114657520078,
+      "y": 4.809295764072722,
+      "z": 0.26111250162259186
+    },
+    "nephronFocus": {
+      "x": 0.3337824792748563,
+      "y": 4.545861380387181,
+      "z": -0.01971881233745293
+    },
+    "nephronFilter": {
+      "x": 0.3221070497172148,
+      "y": 4.55582138038718,
+      "z": -0.02112662789517062
+    },
+    "nephronTubule": {
+      "x": 0.3339776569528372,
+      "y": 4.547061380387181,
+      "z": -0.019332670298796196
+    },
+    "nephronDrain": {
+      "x": 0.3453387717961953,
+      "y": 4.538661380387181,
+      "z": -0.018325362244609907
+    },
+    "introMonitor": {
+      "x": -9.73,
+      "y": 3.055,
+      "z": 1.02
+    },
+    "introCuff": {
+      "x": -12.9005,
+      "y": 3.4395,
+      "z": -0.192
+    },
+    "introForearm": {
+      "x": -12.3208,
+      "y": 3.0036,
+      "z": 0.0015999999999999903
+    },
+    "introElbow": {
+      "x": -12.82,
+      "y": 3.03,
+      "z": -0.08000000000000002
+    },
+    "introSupport": {
+      "x": -12.17,
+      "y": 2.8175,
+      "z": 0.020000000000000004
+    },
+    "introForearmSurface": {
+      "x": -12.0712,
+      "y": 3.1384000000000003,
+      "z": 0.04239999999999999
+    },
+    "introBody": {
+      "x": -13.57,
+      "y": 3.39,
+      "z": -0.52
+    },
+    "measureCuff": {
+      "x": 11.0995,
+      "y": 3.4395,
+      "z": -0.192
+    },
+    "measureForearm": {
+      "x": 11.6792,
+      "y": 3.0036,
+      "z": 0.0015999999999999903
+    },
+    "measureElbow": {
+      "x": 11.18,
+      "y": 3.03,
+      "z": -0.08000000000000002
+    },
+    "measureSupport": {
+      "x": 11.83,
+      "y": 2.8175,
+      "z": 0.020000000000000004
+    },
+    "measureForearmSurface": {
+      "x": 11.9288,
+      "y": 3.1384000000000003,
+      "z": 0.04239999999999999
+    }
+  },
+  "cameraKnotCount": 80,
+  "passed": true
+}

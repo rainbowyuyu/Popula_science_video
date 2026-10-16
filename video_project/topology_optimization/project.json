@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "topology_optimization",
+  "title": "拓扑优化、榫卯、高血压与专题合集",
+  "category": "multi-episode",
+  "status": "source-library",
+  "currentVersion": "multiple current compositions",
+  "workbench": {
+    "title": "拓扑优化：材料该留在哪里",
+    "seriesId": "rainbow-science",
+    "episode": 1,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/index-v3.tsx",
+    "src/index-episode3v8.tsx",
+    "src/index-hypertension.tsx",
+    "src/index-metro.tsx",
+    "src/index-nobel2026-v51.tsx"
+  ],
+  "packages": [
+    {
+      "root": "delivery/episode3v5",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render_episode3v2.mjs",
+        "stills": "node scripts/render_episode3v2.mjs stills",
+        "audit": "node scripts/audit_episode3_world.mjs"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "delivery/metro",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render_metro.mjs",
+        "stills": "node scripts/render_metro.mjs stills",
+        "qa": "python scripts/qa_metro_final.py",
+        "cleanup": "python scripts/cleanup_metro.py"
+      },
+      "lockfile": true
+    },
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render_v3.mjs",
+        "render:nobel:v5": "node scripts/render_nobel2026_v5.mjs",
+        "stills:nobel:v5": "node scripts/render_nobel2026_v5.mjs stills",
+        "render:nobel:v51": "node scripts/render_nobel2026_v51.mjs",
+        "stills:nobel:v51": "node scripts/render_nobel2026_v51.mjs stills",
+        "render:episode2": "node scripts/render_episode2.mjs",
+        "stills:episode2": "node scripts/render_episode2.mjs stills",
+        "stills": "node scripts/render_v3.mjs stills",
+        "web": "node scripts/build_web_v3.mjs",
+        "qa": "python scripts/qa_v3.py",
+        "cleanup": "python scripts/cleanup_v3.py --apply"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "output/episode3v8/joinery_v8_1080p.mp4",
+      "publish/bookshelf/video/书架为什么敢挖空_1080p_优化片尾.mp4",
+      "publish/hypertension/video/hypertension_1080p.mp4",
+      "publish/metro/video/地铁进站为什么要站在安全线后_1080p.mp4",
+      "delivery/nobel2026_v5_1/一束蓝光能叫醒一颗神经元_v5_1_完整预览1080p.mp4"
+    ],
+    "covers": [
+      "delivery/episode3/covers_v6/榫卯_爆炸亭封面_16x9.jpg",
+      "delivery/episode3/covers_v6/榫卯_爆炸亭封面_3x4.jpg",
+      "delivery/episode3/covers_v6/榫卯_爆炸亭封面_4x3.jpg",
+      "delivery/episode3/covers_v6/榫卯_爆炸亭封面_9x16.jpg",
+      "delivery/daily-life-knowledge/合集封面_1x1.png"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable"
+  ],
+  "notes": [
+    "目录实含书架拓扑、旧彩虹、榫卯、高血压、地铁、诺奖生理专题，不能用单片名称盲目裁剪。"
+  ],
+  "originalMetadata": {}
+}

@@ -1,0 +1,128 @@
+{
+  "smithWaterman": {
+    "reference": "GATTAC",
+    "query": "GATAC",
+    "scoring": {
+      "match": 2,
+      "mismatch": -1,
+      "gap": -2
+    },
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        6,
+        4,
+        2,
+        1
+      ],
+      [
+        0,
+        0,
+        2,
+        4,
+        5,
+        6,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        3,
+        4,
+        8
+      ]
+    ],
+    "path": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "bestScore": 8,
+    "reads": [
+      {
+        "sequence": "GATTAC",
+        "weight": "高"
+      },
+      {
+        "sequence": "GAT-AC",
+        "weight": "中"
+      },
+      {
+        "sequence": "GATTAC",
+        "weight": "高"
+      },
+      {
+        "sequence": "GATGAC",
+        "weight": "低"
+      }
+    ],
+    "consensus": "GATTAC",
+    "consensusRule": "逐列按质量权重投票"
+  },
+  "fountain": {
+    "source": [
+      "A",
+      "B",
+      "C"
+    ],
+    "equations": [
+      "A ⊕ B",
+      "B ⊕ C",
+      "A ⊕ C"
+    ],
+    "missing": "B",
+    "recovery": "B = A ⊕ (A ⊕ B)"
+  }
+}

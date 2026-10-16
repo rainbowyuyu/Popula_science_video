@@ -1,0 +1,96 @@
+{
+  "cantileverBackendBenchmark": {
+    "analysisCode": 0,
+    "expectedDisplacement_m": 0.00013333333333333334,
+    "measuredDisplacement_m": 0.00013333333333333334,
+    "relativeError": 0.0,
+    "baseReaction": [
+      -1000.0000000000008,
+      0.0,
+      10000.000000000004
+    ],
+    "passed": true
+  },
+  "timeStepCoarse": {
+    "headLateralRelativeL2": 0.00022022717203126104,
+    "headLateralPeakDifferenceRatio": 0.00017687597786776238,
+    "peakMomentRelativeDifference": 4.623839749329228e-05,
+    "peakShearRelativeDifference": 7.240127719732037e-05
+  },
+  "timeStepFine": {
+    "headLateralRelativeL2": 5.507586584572414e-05,
+    "headLateralPeakDifferenceRatio": 4.4173500190331014e-05,
+    "peakMomentRelativeDifference": 1.504983498423762e-05,
+    "peakShearRelativeDifference": 3.878282189839766e-06
+  },
+  "mesh1to05": {
+    "headLateralRelativeL2": 0.012108811014050105,
+    "headLateralPeakDifferenceRatio": 0.013355267960666963,
+    "peakMomentRelativeDifference": 0.008745045246434047,
+    "peakShearRelativeDifference": 0.10050170363659638
+  },
+  "mesh05to025": {
+    "headLateralRelativeL2": 0.002429656263490447,
+    "headLateralPeakDifferenceRatio": 0.0026676514271045744,
+    "peakMomentRelativeDifference": 0.002029420794043557,
+    "peakShearRelativeDifference": 0.048548215501008296
+  },
+  "meshRefinement": {
+    "headLateralRelativeL2": 0.0006110565901251595,
+    "headLateralPeakDifferenceRatio": 0.0006702870683455654,
+    "peakMomentRelativeDifference": 0.0008039836907154374,
+    "peakShearRelativeDifference": 0.023750537745891642
+  },
+  "passed": true,
+  "base": {
+    "failedSteps": 0,
+    "independentStaticRelativeError": 4.541093008495027e-13,
+    "elementForceMaximumDifference_N_Nm": 0.0004272931982995942,
+    "maxEquationResidual_N_Nm": 0.0011865577995422427,
+    "relativeEquationResidual": 2.966399768748645e-09,
+    "maxGlobalForceBalance_N": 2.185065326898439e-06,
+    "maxMomentBalance_Nm": 8.0170524285883e-06,
+    "energyRelativeResidual": 5.729292075031297e-10,
+    "dampingEnergyMonotonic": true,
+    "postLoadEnergyMonotonic": true,
+    "staticAppliedVertical_N": 9001276.2368806,
+    "staticShaftSupport_N": 8388671.103062198,
+    "staticToeSupport_N": 612605.1338183229,
+    "peakHeadLateral_mm": 14.431480301385061,
+    "headStaticSettlement_mm": 11.12041509847912,
+    "maxAbsMoment_kNm": 549.6284944044196,
+    "maxAbsShear_kN": 303.99202589890155,
+    "firstFrequencies_Hz": [
+      0.816437276504041,
+      4.781652672829376,
+      14.965721216769781,
+      15.64798017526621,
+      17.395324794728722,
+      18.665465013898427,
+      21.081195776386593,
+      22.929109095582746
+    ],
+    "firstModalDampingRatios": [
+      0.018811150166589248,
+      0.07809474647768092,
+      0.44471097329139087,
+      0.45751707914218254,
+      0.4493789222151222,
+      0.5148906323205155,
+      0.45620619713094757,
+      0.577125908794385
+    ],
+    "elapsedSeconds": 10.817460799997207
+  },
+  "dateUTC": "2026-10-09T01:44:59.380880+00:00",
+  "selectedMeshTimeStep": {
+    "mesh_m": 0.125,
+    "dtCoarse_s": 0.01,
+    "dtFine_s": 0.005,
+    "headLateralRelativeL2": 5.3206636105704973e-05,
+    "headLateralPeakDifferenceRatio": 4.2526811818696454e-05,
+    "peakMomentRelativeDifference": 1.0161343910741749e-05,
+    "peakShearRelativeDifference": 1.063103854126446e-05,
+    "passed": true
+  }
+}

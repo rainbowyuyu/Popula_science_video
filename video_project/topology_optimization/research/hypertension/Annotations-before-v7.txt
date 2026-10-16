@@ -1,0 +1,127 @@
+import * as T from 'three';
+import type {HypertensionWorld, FrameState} from './World';
+import timeline from './timeline.json';
+
+// The leader's dot is projected from the current, animated geometry. Only the
+// text moves into a reading lane; the anatomical endpoint is never clamped.
+const V=(x=0,y=0,z=0)=>new T.Vector3(x,y,z);
+const clamp=(x:number)=>Math.max(0,Math.min(1,x));
+const ease=(x:number)=>{const q=clamp(x);return q*q*q*(q*(q*6-15)+10)};
+const at=(id:string,q:number)=>{const c=timeline.clips.find(c=>c.id===id)!;return c.start+c.duration*q};
+type Target={point:T.Vector3;opacity:number};
+type Spec={id:string;text:string;from:number;to:number;target:string;side:-1|1;dy:number;gap?:number;color?:string};
+export type Annotation={id:string;text:string;alpha:number;color:string;anchor:{x:number;y:number};x:number;y:number;width:number;height:number;side:-1|1};
+const cue=(id:string,text:string,clip:string,range:[number,number],target:string,side:-1|1,dy:number,gap=145):Spec=>({id,text,from:at(clip,range[0]),to:at(clip,range[1]),target,side,dy,gap});
+export const annotationSpecs:Spec[]=[
+ cue('heart-intro','心脏','h004',[.36,.98],'heart',1,-65),
+ cue('kidney-intro','肾脏','h004',[.36,.98],'leftKidney',-1,75),
+ cue('heart','心脏','h006',[.16,.94],'heart',1,60,185),
+ cue('aorta-context','主动脉','h007',[.12,.89],'aortaContext',1,25,180),
+ cue('pressure-wall','血液推向管壁','h008',[.43,.96],'aortaWall',1,-45,185),
+ cue('elastic-wall','弹性管壁','h009',[.10,.94],'aortaWall',1,-60,175),
+ cue('recoil','主动脉','h012',[.12,.88],'aortaWall',1,-60,160),
+ cue('arteriole','小动脉','h017',[.61,.99],'arterioleWall',1,-185,80),
+ cue('muscle','平滑肌','h018',[.12,.96],'muscle',-1,-165,110),
+ cue('lumen','管腔','h019',[.14,.90],'lumen',-1,-140,130),
+ cue('relax-muscle','平滑肌','h022',[.10,.89],'muscle',-1,-155,110),
+ cue('kidney','肾脏','h024',[.05,.56],'leftKidney',1,35,170),
+ cue('glomerulus','肾小球','h025',[.29,.96],'glomerulus',-1,-90,130),
+ cue('tubule','肾小管','h026',[.08,.90],'tubule',1,-90,190),
+ cue('reabsorption','水、钠回到血液','h027',[.10,.88],'reabsorption',-1,65,205),
+ cue('kidney-signal','肾脏','h030',[.14,.88],'leftKidney',1,25,180),
+ cue('hormone-signal','肾素信号','h031',[.19,.90],'hormone',-1,-65,170),
+ cue('salt-retention','肾脏','h032',[.10,.91],'leftKidney',1,25,175),
+ cue('brain','脑','h034',[.38,.95],'brain',1,80,220),
+ cue('heart-response','心脏','h035',[.35,.92],'heart',1,70,190),
+ cue('stiff-wall','主动脉壁','h038',[.28,.95],'aortaWall',1,-45,170),
+ cue('liver','肝脏','h040a',[.02,.38],'liver',-1,80,160),
+ cue('vldl','VLDL 颗粒','h040a',[.68,.99],'lipid',-1,-95,150),
+ cue('idl','IDL 颗粒','h040b',[.42,.73],'lipid',-1,-105,180),
+ {id:'ldl',text:'LDL 颗粒',from:at('h040b',.87),to:at('h040c',.49),target:'lipid',side:-1,dy:-115,gap:175},
+ cue('receptor','LDL 受体','h040c',[.12,.63],'receptor',1,65,135),
+ cue('intima','动脉内膜','h041',[.30,.93],'intima',1,-35,190),
+ cue('foam','泡沫细胞','h042',[.17,.58],'foam',1,-110,205),
+ cue('plaque','脂质斑块','h042',[.60,.99],'plaque',1,10,190),
+ cue('thrombus','血栓','h043',[.48,.94],'thrombus',1,5,190),
+ cue('arm-support','手臂承托','h047',[.25,.88],'measureForearm',1,-100,165),
+ cue('cuff','袖带贴合上臂','h048',[.09,.89],'measureCuff',-1,-110,150),
+];
+
+function opacity(object:T.Object3D|undefined):number{
+ if(!object)return 0;let p:T.Object3D|null=object;while(p){if(!p.visible)return 0;p=p.parent;}
+ let alpha=0;object.traverse(o=>{if(o instanceof T.Mesh||o instanceof T.Line){for(const m of Array.isArray(o.material)?o.material:[o.material])alpha=Math.max(alpha,m.opacity)}});return alpha;
+}
+function onObject(object:T.Object3D|undefined,local=V()):Target|undefined{
+ if(!object)return;return {point:object.localToWorld(local),opacity:opacity(object)};
+}
+function vertex(object:T.Mesh|undefined,index:number):Target|undefined{
+ if(!object)return;const p=object.geometry.attributes.position;return onObject(object,V().fromBufferAttribute(p,index));
+}
+function resolve(w:HypertensionWorld,name:string):Target|undefined{
+ if(name==='aortaContext')return {point:w.anchors.vessel.clone().add(V(0,-.20,0)),opacity:opacity(w.atlasGroups.aorta)};
+ if(name==='aortaWall')return vertex(w.vessel?.mesh,18*41+2);
+ if(name==='intima')return vertex(w.vessel?.mesh,53*41+35*41+20);
+ if(name==='arterioleWall')return vertex(w.arteriole?.root.getObjectByName('smooth-muscle-wall') as T.Mesh|undefined,32*37+36);
+ if(name==='muscle'){
+  const bands:T.Mesh[]=[];w.arteriole?.root.traverse(o=>{if(o instanceof T.Mesh&&o.name==='embedded-circumferential-muscle-bundle')bands.push(o)});
+  return vertex(bands[7],49+48);
+ }
+ if(name==='lumen')return onObject(w.arteriole?.root,V(-.3,0,0));
+ if(name==='glomerulus')return onObject(w.renalDiagram?.getObjectByName('bowman-capsule'));
+ if(name==='tubule')return onObject(w.renalDiagram,V(.69,.19,.04));
+ if(name==='reabsorption'){
+  const route=w.signals.find(r=>r.mode==='reabsorb');return route?onObject(route.root,route.curve.getPointAt(.55)):undefined;
+ }
+ if(name==='hormone'){
+  const route=w.signals.find(r=>r.mode==='hormone');return route?onObject(route.root,route.curve.getPointAt(.025)):undefined;
+ }
+ if(name==='lipid')return onObject(w.lipoprotein?.particle);
+ if(name==='receptor')return onObject(w.lipoprotein?.root.getObjectByName('ldl-receptor'));
+ if(name==='foam')return onObject(w.foamCells[2]);
+ if(name==='plaque')return onObject(w.plaqueCore);
+ if(name==='thrombus')return onObject(w.plaqueThrombus);
+ if(name==='measureCuff'||name==='measureForearm')return w.anchors[name]?{point:w.anchors[name].clone(),opacity:1}:undefined;
+ const point=w.anchors[name];return point?{point:point.clone(),opacity:opacity(w.atlasGroups[name])}:undefined;
+}
+
+const textWidth=(text:string)=>[...text].reduce((n,c)=>n+(/[\u0000-\u007f]/.test(c)?24:42),0)+34;
+export function getAnnotations(w:HypertensionWorld,s:FrameState):Annotation[]{
+ const frame=s.time*30,rows:Annotation[]=[];
+ for(const spec of annotationSpecs){
+  if(frame<=spec.from||frame>=spec.to)continue;
+  const target=resolve(w,spec.target);if(!target)continue;
+  const cameraPoint=target.point.clone().applyMatrix4(w.camera.matrixWorldInverse);
+  const projected=target.point.clone().project(w.camera);
+  if(cameraPoint.z>=-w.camera.near||projected.z<=-1||projected.z>=1)continue;
+  const ax=(projected.x+1)*960,ay=(1-projected.y)*540;
+  const edge=ease(Math.min(ax-50,1870-ax,ay-190,825-ay)/90);
+  const alpha=ease((frame-spec.from)/13)*ease((spec.to-frame)/13)*ease(target.opacity/.16)*edge;
+  if(alpha<=.001)continue;
+  const width=textWidth(spec.text),height=64;
+  const proposedX=spec.side>0?ax+(spec.gap??145):ax-(spec.gap??145)-width;
+  let x=Math.max(70,Math.min(1850-width,proposedX));
+  let y=Math.max(310,Math.min(690,ay+spec.dy));
+  // Reserve the upper right chart area and the permanent lower caption lanes.
+  if(x+width>1215&&y<495&&['h013','h019','h020','h039','h040'].some(id=>{const c=timeline.clips.find(c=>c.id===id)!;return frame>=c.start&&frame<c.end}))y=525;
+  for(const previous of rows){if(x<previous.x+previous.width+30&&x+width>previous.x-30&&y<previous.y+height+25&&y+height>previous.y-25)y=Math.min(690,previous.y+height+30);}
+  rows.push({id:spec.id,text:spec.text,alpha,color:spec.color??'#467c7d',anchor:{x:ax,y:ay},x,y,width,height,side:spec.side});
+ }
+ return rows.slice(0,2);
+}
+
+export function drawAnnotations(canvas:HTMLCanvasElement,w:HypertensionWorld,s:FrameState){
+ const ctx=canvas.getContext('2d')!;ctx.clearRect(0,0,1920,1080);
+ for(const a of getAnnotations(w,s)){
+  const endX=a.side>0?a.x:a.x+a.width,endY=a.y+a.height/2;
+  const dx=endX-a.anchor.x,dy=endY-a.anchor.y;
+  ctx.save();ctx.globalAlpha=a.alpha;ctx.lineCap='round';ctx.lineJoin='round';
+  ctx.strokeStyle='#f2eee7';ctx.lineWidth=6;
+  const path=()=>{ctx.beginPath();ctx.moveTo(a.anchor.x,a.anchor.y);ctx.bezierCurveTo(a.anchor.x+dx*.38,a.anchor.y+dy*.04,endX-dx*.18,endY,endX,endY);ctx.stroke()};path();
+  ctx.strokeStyle=a.color;ctx.lineWidth=2.1;path();
+  ctx.beginPath();ctx.arc(a.anchor.x,a.anchor.y,5,0,Math.PI*2);ctx.fillStyle=a.color;ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='#f2eee7';ctx.stroke();
+  // A small translucent paper backing protects type over faint anatomy.
+  ctx.fillStyle='rgba(242,238,231,.92)';ctx.beginPath();ctx.roundRect(a.x,a.y,a.width,a.height,12);ctx.fill();
+  ctx.fillStyle='#29484b';ctx.font='600 42px "Microsoft YaHei",sans-serif';ctx.textBaseline='middle';ctx.textAlign='center';ctx.fillText(a.text,a.x+a.width/2,a.y+a.height/2+1);
+  ctx.restore();
+ }
+}

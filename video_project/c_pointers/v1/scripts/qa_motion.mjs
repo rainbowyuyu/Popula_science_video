@@ -1,0 +1,16 @@
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';import {createRequire} from 'node:module';import crypto from 'node:crypto';import ts from 'typescript';import * as T from 'three';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),out=path.join(root,'work/qa/camera-compiled');fs.mkdirSync(out,{recursive:true});
+const p=ts.createProgram([path.join(root,'src/Camera.ts')],{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,moduleResolution:ts.ModuleResolutionKind.Node10,outDir:out,rootDir:path.join(root,'src'),strict:true,esModuleInterop:true,resolveJsonModule:true,skipLibCheck:true});
+const errors=ts.getPreEmitDiagnostics(p).filter(d=>d.category===ts.DiagnosticCategory.Error);if(errors.length)throw new Error(ts.formatDiagnosticsWithColorAndContext(errors,{getCurrentDirectory:()=>root,getCanonicalFileName:f=>f,getNewLine:()=> '\n'}));p.emit();fs.writeFileSync(path.join(out,'package.json'),'{"type":"commonjs"}');
+const require=createRequire(import.meta.url),{sampleCamera,cameraKeys}=require(path.join(out,'Camera.js')),{timeline}=require(path.join(out,'Timeline.js'));
+const issues=[],distance=(a,b)=>Math.hypot(...a.map((v,i)=>v-b[i])),sub=(a,b)=>a.map((v,i)=>v-b[i]),scale=(a,s)=>a.map(v=>v*s),norm=a=>Math.hypot(...a),max={speed:0,targetSpeed:0,angular:0,fovSpeed:0};let prev,prevQ;const m=new T.Matrix4();
+for(let f=0;f<timeline.durationFrames;f++){
+ const s=sampleCamera(f/30);if(![...s.position,...s.target,s.fov].every(Number.isFinite))issues.push({f,type:'nonfinite'});
+ if(JSON.stringify(s)!==JSON.stringify(sampleCamera(f/30)))issues.push({f,type:'nondeterministic'});
+ m.lookAt(new T.Vector3(...s.position),new T.Vector3(...s.target),new T.Vector3(0,1,0));const q=new T.Quaternion().setFromRotationMatrix(m);
+ if(prev){const speed=distance(s.position,prev.position)*30,tspeed=distance(s.target,prev.target)*30,ang=2*Math.acos(Math.min(1,Math.abs(prevQ.dot(q))))*180/Math.PI*30;max.speed=Math.max(max.speed,speed);max.targetSpeed=Math.max(max.targetSpeed,tspeed);max.angular=Math.max(max.angular,ang);max.fovSpeed=Math.max(max.fovSpeed,Math.abs(s.fov-prev.fov)*30);if(speed>35||ang>60)issues.push({f,type:'excess-motion',speed,ang});}prev=s;prevQ=q;
+}
+const keys=cameraKeys(),continuity=[];for(let i=1;i<keys.length-1;i++){const k=keys[i],eps=.0001,a=sampleCamera(k.t-eps),b=sampleCamera(k.t),c=sampleCamera(k.t+eps);const d=norm(sub(scale(sub(b.position,a.position),1/eps),scale(sub(c.position,b.position),1/eps)));continuity.push({t:k.t,velocityMismatch:d});if(d>.03)issues.push({type:'C1-break',t:k.t,d});if(k.t<=keys[i-1].t)issues.push({type:'reversed-key'});}
+const files=['src/World.ts','src/Models.ts','src/Camera.ts','src/Timeline.ts','src/narration.json','src/Film.tsx','src/beats.json'];
+const sourceHashes=Object.fromEntries(files.map(f=>[f,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')]));
+const report={passed:issues.length===0,frames:timeline.durationFrames,max,continuity,sourceHashes,issues,limits:'Numeric camera checks only. Occlusion, typography and semantic actions require rendered review.'};fs.writeFileSync(path.join(root,'work/qa/motion.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({passed:report.passed,frames:report.frames,max,issues},null,2));if(issues.length)process.exit(1);

@@ -1,0 +1,79 @@
+{
+  "id": "s004",
+  "text": "中间的厚墙，围成核心筒。它和外圈巨柱一起，把力送往地下的筏板和桩群。现在，把这些部分放回原位，再顺着传力的路，从地下看起。",
+  "ttsText": "中间的厚墙，围成核心筒。它和外圈巨柱一起，把力送往地下的筏板和桩群。现在，把这些部分放回原位，再顺着传力的路，从地下看起。",
+  "signature": "de24233f06b890e2773df2b28acacbba5e5c81e795dc8074622db999e2e4012e",
+  "raw": "audio/raw/s004-de24233f06.wav",
+  "processed": "audio/candidates/v8-atlas-clear/s004.wav",
+  "rawDuration": 11.28,
+  "duration": 11.52,
+  "sha256": "5e8615e53eda98643b6f42ebe25131fb0c81f4c8a1dd66e66826b7f5e04f1cc6",
+  "seed": 3693533823,
+  "attempt": 3,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s003",
+    "s004"
+  ],
+  "rawEndpointDB": -67.76462024408039,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "d70932ad594a29f4e773610073c2d489fe822a86b665d5d0128c5d2628307c7b",
+    "outputSha256": "5e8615e53eda98643b6f42ebe25131fb0c81f4c8a1dd66e66826b7f5e04f1cc6",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.2547868812932776,
+    "input": {
+      "seconds": 11.52,
+      "peakDb": -6.221614602779816,
+      "activeRmsDb": -21.78098214774578,
+      "quietFrameP10Db": -60.6033712536144
+    },
+    "output": {
+      "seconds": 11.52,
+      "peakDb": -4.420858699770874,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -60.804845520359486
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "eee02ef6347adf67d5186ad7795e9265f3f21be4cf76ebafad47537fba084d42"
+  },
+  "subjectiveListeningChecked": false
+}

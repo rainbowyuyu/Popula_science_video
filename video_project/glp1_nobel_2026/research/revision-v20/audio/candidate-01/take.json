@@ -1,0 +1,67 @@
+{
+  "id": "h001",
+  "text": "一顿饭吃下去，血糖会升高。身体怎么把它稳住？这和血压、血脂，又有什么关系？",
+  "ttsText": "一顿饭吃下去，血糖会升高。身体怎么把它稳住？这和血压、血脂，又有什么关系？",
+  "caption": "一顿饭吃下去，血糖会升高。身体怎么把它稳住？这和血压、血脂，又有什么关系？",
+  "seed": 2001,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v20\\audio\\candidate-01\\raw.wav",
+  "rawSHA256": "94be79626e5a19ba7e990fa5fadd0ef06e3f7881aac47960214571a1c4a55f33",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v20\\audio\\candidate-01\\h001.wav",
+  "sha256": "f665c802be6d9cf14029071839a9a118cb220bc810eb02577f3cc12c2e143c91",
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "durationSeconds": 7.6,
+  "rawEndpointRMSDBFS": -96.18227870805487,
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "e8b002c3b96b2f84f6be6826db64a38747c91b4c0eeeedb33dd0330e5e627941",
+    "outputSha256": "f665c802be6d9cf14029071839a9a118cb220bc810eb02577f3cc12c2e143c91",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.426750382189816,
+    "input": {
+      "seconds": 7.6,
+      "peakDb": -6.574032150867055,
+      "activeRmsDb": -21.990068968551093,
+      "quietFrameP10Db": -62.716159484510214
+    },
+    "output": {
+      "seconds": 7.6,
+      "peakDb": -4.073915320731799,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.698278470590495
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "timeStretch": false,
+  "trimmed": false,
+  "subjectiveListeningChecked": false
+}

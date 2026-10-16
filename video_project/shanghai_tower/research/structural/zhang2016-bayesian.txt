@@ -1,0 +1,935 @@
+--- PDF PAGE 1 ---
+Structural health monitoring of Shanghai Tower during
+different stages using a Bayesian approach‡
+F. L. Zhang, H. B. Xiong*,†, W. X. Shi and X. Ou
+Research Institute of Structural Engineering and Disaster Reduction, Tongji University, 1239 Siping Road, Shanghai, China
+SUMMARY
+The dynamic characterization of structures is essential for assessing their response when subjected to dynamic
+loads in structural health monitoring. It mainly comprises the modal parameters, that is, the natural frequencies,
+damping ratios and mode shapes. These modal properties are attracting more attention when structures are under
+construction or operation for the researchers, structure owner and engineers. This paper presents the work on the
+operational modal analysis of a super tall building-the Shanghai Tower with a height of 632 m situated in Shang-
+hai, China. A recently developed fast Bayesian method is utilized to perform modal identiﬁcation, providing an
+effective means to identify the modal properties and assess their accuracy. In this study, ambient vibration tests
+are implemented in different construction stages. The corresponding modal properties and their associated uncer-
+tainties are identiﬁed and investigated, with interesting trends observed. Finite element models are also established
+to obtain the modal parameters in different stages and compared with the identiﬁed results. After the main structure
+is completed, a ﬁeld test covering the eight corners of the core wall in a typical ﬂoor is performed to investigate the
+mode shapes. Afterward, a 12-h measurement is performed with the information of temperature and humidity re-
+corded simultaneously. The variation of modal properties with changing environment is studied. The results ob-
+tained will be beneﬁcial for understanding the modal properties of this super tall building and provide a
+baseline for future structural health monitoring. Copyright © 2016 John Wiley & Sons, Ltd.
+Received 1 August 2015; Revised 1 December 2015; Accepted 24 December 2015
+KEY WORDS:
+super tall building; structural health monitoring; operational modal analysis; Bayesian; uncertainty
+quantiﬁcation; different stages; Shanghai Tower
+1. INTRODUCTION
+Structural health monitoring (SHM) has attracted increasing attention in the past few decades, and
+more and more SHM systems have been built around the world in super tall buildings or long span
+bridges [1–3]. One successful example is the Canton Tower with a height of 610m, in which a sophis-
+ticated long-term SHM system has been installed along with more than 700 sensors [4,5]. A large
+amount of research work has been performed based on the collected data. Another example is Burj
+Khalifa, which is the tallest building in the world. An integrated real-time SHM system named
+SmartSync was developed [6]. Several SHM systems are under construction on some super tall build-
+ings, for example, the Shanghai Tower in Shanghai, China, with a height of 632 m, Pingan Interna-
+tional Financial Center in Shenzhen, China, with a height of 660m, Wuhan Greenland Center in
+Wuhan, China, with a height of 636m and Kingdom Tower situated in Jeddah, Saudi Arabi, which
+is expected to soar to a height of more than 1000 m.
+*Correspondence to: H. B. Xiong, Research Institute of Structural Engineering and Disaster Reduction, Tongji University, 1239
+Siping Road, Shanghai, China.
+†E-mail: xionghaibei@tongji.edu.cn
+‡This paper is an extended version of the work titled “Bayesian Operational Modal Analysis and Uncertainty Quantiﬁcation of a
+Super Tall Building” published in 1st International Conference on Uncertainty Quantiﬁcation in Computational Sciences and
+Engineering (UNCECOMP 2015).
+STRUCTURAL CONTROL AND HEALTH MONITORING
+Struct. Control Health Monit. 2016; 23:1366–1384
+Published online 11 February 2016 in Wiley Online Library (wileyonlinelibrary.com). DOI: 10.1002/stc.1840
+Copyright © 2016 John Wiley & Sons, Ltd.
+
+--- PDF PAGE 2 ---
+In these systems, acceleration data play an important role, based on which modal parameters includ-
+ing natural frequency, damping ratio and mode shape of the objective structures can be obtained [7–10].
+Observing the change of modal properties may help perform condition assessment of the structure or
+even damage detection in the process of construction or during its service life [11]. During construction,
+with the increase of building height, the natural frequency may decrease gradually. It will be an
+important way to analyse any ﬂuctuation of identiﬁed modal parameters by comparing with the results
+obtained based on ﬁnite element model (FEM) in order to monitor construction quality. After the main
+structure is completed, the natural frequency will tend to be stable, but it is also affected by the environ-
+ment, for example, temperature, humidity and wind. The damping ratio is also found to be amplitude-
+dependent [12,13], especially in regard to tall buildings.
+Modal identiﬁcation is often the ﬁrst step to determine the baseline properties of the subject structure
+based on the collected acceleration response. Compared with other tests, for example, forced vibration
+and free vibration tests, the ambient vibration test provides an economic and efﬁcient way to collect the
+structural response with high-quality modern instruments. In this process, the excitation is assumed to be
+stationary and statistically random. Based on the ambient vibration data, many methods have been devel-
+oped to perform ambient modal identiﬁcation, for example, peak-picking, stochastic subspace identiﬁcation
+(SSI) method [14] and frequency domain decomposition method [15]. In addition to these non-Bayesian
+methods, based on Bayes’ Theorem, a series of Bayesian methods are also developed, including Bayesian
+spectral density approach [16,17], Bayesian time domain method [18] and Bayesian FFT approach [19]. A
+fast Bayesian method has been recently developed [20–25] on the basis of Bayesian FFT approach. This
+method views modal identiﬁcation as an inference problem where probability is used as a measure for
+the relative plausibility of outcomes given a model of the structure and measured data. In addition to the
+most probable values (MPVs) of the modal parameters, the associated posterior uncertainty can also be ob-
+tained analytically without resorting to ﬁnite difference, thus providing an efﬁcient way to assess the reli-
+ability of the modal parameters. This is especially important for the damping ratio because, as known, a
+large variation is usually observed for this quantity.
+On the basis of ambient vibration data and the modal identiﬁcation techniques, much research has been
+carried out in the past few years to investigate the modal properties of super tall buildings. Au et al. (2012)
+performed an investigation on the ambient vibration tests and modal identiﬁcation of two super tall build-
+ings in Hong Kong [26]. The modal properties under different strong wind events were studied, and the
+relationships between natural frequency and vibration amplitude, damping ratio and vibration amplitude
+were built numerically. Ni et al. (2012) presented a benchmark problem to study the ambient vibration
+response of the Canton Tower over a whole day with the temperature and wind information measured
+simultaneously [27]. Based on these data, research has been conducted all over the world, including modal
+identiﬁcation, model updating, sensor displacement, and so on [5, 28–36]. Shi et al. (2012) introduced
+their work on modal identiﬁcation of a super tall building located in Shanghai using ambient and free
+vibration data. Peak-picking, the random decrement-based method and Hilbert–Huang’s transform
+method were utilized to perform the analysis, providing a baseline for future SHM [37]. Li and Yi
+(2015) presented their ﬁndings after monitoring the dynamic behaviour of two super tall buildings during
+the passage of one typhoon in 2011. The damping ratios of these two buildings were identiﬁed by the ran-
+dom decrement technique, and their amplitude-dependent characteristics were investigated [38].
+From the previous discussion, it is seen that most of the research focuses on the SHM when under
+the service condition. Only a few studies have been conducted to monitor the structural behaviour of
+super tall buildings based on the acceleration data collected during different construction stages. In this
+process, modal parameters in different stages can be identiﬁed and compared with the corresponding
+FEM to provide useful information for monitoring the structural condition. This paper presents the
+work on the operational modal analysis of a super tall building – the Shanghai Tower. The focus will
+be on the acceleration response measured during construction and after the main structure has been
+completed. Ambient vibration tests were conducted to collect data with the structure in actual opera-
+tion. The ambient vibration tests can be divided into three parts that are complementary. The ﬁrst part
+is a series of tests in different construction stages to monitor the changes of natural frequency and
+damping ratio; the second part is an ambient vibration test measuring one typical ﬂoor of the building
+for the purpose of investigating the mode shape of this ﬂoor and the torsional behaviour of the whole
+structure, which cannot be evaluated by the ﬁrst part; while the third is a 12-h measurement with the
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1367
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 3 ---
+information of temperature and humidity recorded to learn more about the dynamic behaviour of the
+structure over a relatively long period. The fast Bayesian method is adopted to identify the modal pa-
+rameters of the structures on the basis of the collected data. The characteristics of the modal parameters
+during different construction stages under normal working conditions are investigated. The associated
+posterior uncertainties of these modal parameters are discussed, and they are also compared with the
+sample coefﬁcient of variation (c.o.v.) from a frequentist perspective. Based on a new developed prob-
+abilistic model, the distribution of the modal parameters in a future time window is predicted, provid-
+ing a reference for the future condition assessment of this structure. Finally, the relationships of the
+modal parameters with environmental factors are addressed and studied.
+2. DESCRIPTION OF THE SHANGHAI TOWER
+The Shanghai Tower, situated in Lujiazui ﬁnancial and trade zone, Shanghai, China, is a super tall mega
+frame-tube-outrigger structure with a height of 632m, as shown in Figure 1. The tower has 124 ﬂoors above
+the ground and ﬁve ﬂoors under the ground, which serves as hotels, ofﬁces, tourism, restaurant, conference
+rooms, shopping mall, and so on, and can be regarded as a vertical city. The internal ofﬁce plane of the
+structure is constituted by nine rotunda superimposed on each other with eight zones divided. The curtain
+wall outside the tower spins upwards, with the diameter decreasing from 83.6m in zone 1 to 42m in zone 8.
+As many as six 2-storey outrigger trusses and eight boxy space circular trusses are set in eight electrome-
+chanical ﬂoor zones. The mega frame is composed of the boxy space circular truss and the giant column,
+forming a mega frame-tube-outrigger lateral resistant system.
+As one of the tallest buildings in the world, its structural safety is attracting much attention. A so-
+phisticated long-term SHM system has been designed to monitor the structural behaviour in both its
+construction and service stages. Many kinds of sensors have been installed including accelerometers,
+anemometers, global positioning system, temperature sensors, strain gauges and so on. A FEM is de-
+veloped to investigate the modal properties in different construction stages by the same research group.
+3. AMBIENT VIBRATION TESTS
+3.1. Field test in different construction stages
+To assess the structural condition under construction, 15 ambient vibration tests were performed over a
+period of 2.5 years from April 2012 to December 2014. The number of ﬂoors completed and the
+Figure 1. Overview of the building.
+1368
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 4 ---
+corresponding time to carry out the ﬁeld test are shown in Table 1. To collect data with a larger signal
+to noise ratio, in each test, two locations were measured. The ﬁrst was at the top of a core tube, while
+the second was at the top of composite slabs after completion of concrete pouring. In each location, two
+uniaxial piezoelectric accelerometers with a frequency range of 0.05 to 500Hz were utilized to measure
+the structural response. The measurement capacity range was equal to 0.1 g. The sampling frequency
+was set to 20 Hz. At the time of measurement, the site was under construction. Before the main
+structure was completed, four cranes were installed on the outside of the core tube, and they were also
+working during the measurement. In each test, at least 30 min of data were collected. An overview of
+the structures in different stages can be found in Figure 2. To perform some comparison during
+different construction stages, a series of FEMs corresponding to the ﬁrst eight construction stages were
+developed in Figure 2 using commercial software ETABS (Computers and Structures Inc., Walnut
+Creek, CA, USA) based on design drawings. At the writing of this paper, the FEM of other stages
+are still not available. These eight stages are also representative ones and almost cover all the
+Table I. Measurement time and ﬂoors.
+Setup
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+Year/
+12
+12
+12
+12
+13
+13
+13
+13
+13
+13
+14
+14
+14
+14
+14
+Month
+04
+07
+08
+10
+01
+03
+05
+07
+08
+12
+02
+03
+07
+10
+12
+Floors
+55
+68
+71
+81
+94
+102
+111
+120
+125
+125
+125
+125
+125
+125
+125
+Figure 2. Overview of buildings in different stages and ﬁnite element models [39].
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1369
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 5 ---
+construction stages. In this model, some assumptions were made, for example, live loads that may exist
+in service stage were not taken into account in the construction stage; the elastic modulus of concrete
+was assumed to be the same as the design value; and the connection between outrigger trusses and su-
+per columns was assumed to be reliable during construction stages.
+3.2. Field test on a typical ﬂoor
+After the main structure was completed, it is interesting to know the modal properties of a typical ﬂoor
+and investigate the motion in different modes from a plan view. It was desired to measure different cor-
+ners of the tube. At the time of measurement, the renovation has begun in the lower ﬂoors, making it
+difﬁcult to access some corners through the tube. Meanwhile, in the measurement, higher ﬂoors were
+preferred because the vibration amplitude is larger than those on lower ﬂoors. Taking into account
+the aforementioned factors, the 101st ﬂoor was chosen, where the ﬁlled walls inside the tube have not
+been completed, and it was convenient to perform the sensor alignment and cable layout. Nine locations
+were desired to be measured biaxially, as shown in Figure 3, including eight locations in the eight cor-
+ners of the tube, and one location in the centre of the whole structure. Sensor alignment was essential
+because it may affect the identiﬁed mode shape, and the modelling error during alignment cannot be
+reﬂected in the data analysis process. To determine the direction of the sensor channels accurately, in
+the beginning, a compass was utilized. However, this equipment gives unreasonable direction inside
+the building because of some unknown factors. To solve this problem, the core walls were taken as
+the reference. Since the walls in eight corners were also different, double checking was necessary to en-
+sure that the sensors in the X and Y directions were consistent.
+If there were enough sensors for measuring all the 18 degrees of freedom (DOFs), one could have
+ﬁnished the test in one setup with synchronized data. However, at the time of testing, only four channels
+at two locations can be measured at a time. It was necessary to design multiple setups to ﬁnish the whole
+measurement. In order to provide common information for all the setups, two reference channels were
+set in location 1. Note that location 9 cannot serve as a reference because it cannot provide common
+information for the torsional mode with good quality. During the whole measurement, the reference
+location was kept unchanged. The setup plan can be found in Table 2. Note that the measurement
+was not arranged in a particular order. This is because, at the time of measurement, some persons were
+still working around. Arrangement in this manner was to minimize the inﬂuence due to the noise from
+Figure 3. Setup plan.
+1370
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 6 ---
+these construction works. Before the actual setting up, a baseline test, setup 0, was performed with all
+the four sensors placed near location 1, as shown in Figure 4(a). This setup could provide baseline in-
+formation and help predict the potential problems that may arise in some particular channels in subse-
+quent setups.
+In each setup, at least 40 min was required, including 30 min for data collection and 10 min for rov-
+ing the sensor. To ensure the data quality, once the data in a particular setup was ﬁnished, some spec-
+trum analysis was carried out. If there was some problem, the measurement was repeated. Figure 4(b)
+shows the measurement in one particular setup. The whole measurement was performed from 10 AM to
+7 PM in 1 working day. The analogue signals were transmitted through cable and acquired digitally by a
+24-bit data logger. The sampling frequency was set to 2048 Hz and then in the analysis the data were
+decimated by 32 to a sampling rate of 64 Hz.
+3.3. Field test over a relatively long period
+To investigate the effect due to environmental change, a long-term ﬁeld test covering 12h was also con-
+ducted after the main structure was completed. In this test, two uniaxial sensors were installed on the 100th
+ﬂoor, as shown in Figure 5. For the convenience of alignment, the x and y directions of the sensors were
+set to along the direction of the core wall. Similar to the measurement on a typical ﬂoor, the sampling
+frequency was set to 2048Hz and then in the analysis the data were decimated by 32 to a sampling rate
+of 64Hz. When measuring the acceleration, the temperature and humidity were also recorded, as shown
+in Figure 6. The whole measurement was begun at 10 AM and ﬁnished at 10 PM of the same day.
+4. METHODOLOGY
+To perform modal identiﬁcation based on the measured acceleration data, a recently developed
+Bayesian method incorporating multiple setups (including single setup) is employed. The theory is
+outlined brieﬂy [40]. Please refer to [24,25] for the details.
+Let Z ið Þ
+k ¼ ReF ik; ImF ik
+½
+ 2 R2ni i ¼ 1; …; ns
+ð
+Þ denote a vector composed of the real and imaginary
+part of the FFT F ik of the measured acceleration data at frequency fk in the ith setup; ns denotes the
+Table II. Setup plan.
+Setup
+Measured locations
+Setup 1
+1
+4
+Setup 2
+1
+5
+Setup 3
+1
+6
+Setup 4
+1
+3
+Setup 5
+1
+2
+Setup 6
+1
+8
+Setup 7
+1
+7
+Setup 8
+1
+9
+(a)
+(b)
+Figure 4. (a) All the sensor and data acquisition system and (b) measurement in one setup.
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1371
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 7 ---
+number of setup;Di ¼
+Z ið Þ
+k
+f
+g is the FFT data in the selected frequency band of setup i and D ¼
+Di : i ¼ 1; …; ns
+f
+g is the collection of FFT data in all setups. The data in different setups are assumed
+to be statistically independent. The modal parameters θ to be identiﬁed is set to be
+θ ¼ f i; ζ i; Si; Sei : i ¼ 1; …; ns; φ 2 Rn
+½
+ 2 R4nsþn
+(1)
+where fi,ζ i,Si, Sei(i= 1, …,ns)denote the natural frequency, damping ratio, spectral intensity of modal
+force and power spectral density (PSD) of prediction error in the ith setup, respectively; φ denotes
+the global mode shape covering all the measured DOFs; n denotes the number of measured DOFs.
+Note that φ is assumed to be the same in all the setups. For the remaining modal parameters, in order
+to consider their variation in different setups, each setup is parameterized with separate values.
+The prior distribution is assumed to be uniform, and based on Bayes’ Theorem, the posterior prob-
+ability density function (PDF) of θ given the data in all setups can be expressed as
+p θ DÞ / p
+D1; D2; …; Dns
+f
+g θÞ ¼ p D1 θÞp D2 θÞ…p Dns θÞ
+j
+ð
+j
+ð
+j
+ð
+j
+ð
+j
+ð
+(2)
+Assume the modal parameters in setup i are independent with the modal parameters in other setups.
+Thus,
+Figure 6. Temperature and humidity during the measurement.
+(a)
+(b)
+Figure 5. (a) Measured location and (b) instrumented sensors.
+1372
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 8 ---
+p θjD
+ð
+Þ / ∏
+ns
+i¼1
+p Di f i; ζ i; Si; Sei; φi
+j
+Þ
+ð
+(3)
+To perform optimization conveniently, negative log-likelihood function (NLLF) is utilized. In terms of
+the NLLF,
+L θ
+ð Þ ¼
+X
+ns
+i¼1
+Li θi
+ð Þ
+(4)
+so that
+p θ DÞ / exp L θ
+ð Þ
+½
+
+j
+ð
+(5)
+where θi= {fi, ζ i, Si, Sei,φi} denotes the modal parameters in the ith setup with φi ¼ Liφ 2 Rni; Li 2
+Rnin denotes the selection matrix; ni denotes the number of measured DOFs in setup i and
+Li θi
+ð Þ ¼ 1
+2
+X
+k
+½lndet Cik θi
+ð Þ þ Z ið Þ
+k
+TCik θi
+ð Þ1Z ið Þ
+k 
+(6)
+where det(.) is the determinant;
+Cik θi
+ð Þ ¼ SiDik
+2
+φiφT
+i
+0
+0
+φiφT
+i
+"
+#
+þ Sei
+2 I2ni
+(7)
+denotes the theoretical covariance matrix of the FFT data at fk in setup i; I2ni 2 R2ni is the identity
+matrix; and
+Dik f i; ζ i
+ð
+Þ ¼ ½ β2
+ik  1
+
+2 þ 2ζ iβik
+ð
+Þ21
+(8)
+where βik = fi/fk.
+To obtain the MPVs of the modal parameters, the posterior PDF in (3) needs to be maximized,
+which is equivalent to minimizing the NLLF in (4). However, some computational problems exist if
+performing the optimization directly. The ﬁrst is that the optimization process is ill-conditioned, and
+the second is that if the number of modal parameters is too large, it may not converge. To solve these
+problems, a well-separated mode case is focused upon. Using an eigenvalue decomposition technique,
+the NLLF is reformulated as follows:
+L θ
+ð Þ ¼  ln2
+ð
+Þ
+X
+ns
+i¼1
+niN f i þ
+X
+ns
+i¼1
+ni  1
+ð
+ÞNf ilnSei
+þ
+X
+ns
+i¼1
+X
+k
+lnðSiDik Liφ
+k
+k2 þ SeiÞ þ
+X
+ns
+i¼1
+S1
+ei di  φTA φ
+ð Þφ
+(9)
+and it allows efﬁcient computation, where Nﬁdenotes the number of FFT ordinates in the selected fre-
+quency band of setup i; and
+A φ
+ð Þ ¼
+X
+ns
+i¼1
+S1
+ei
+X
+k
+ð Liφ
+k
+k2 þ Sei=SiDikÞ1LT
+i DikLi 2 Rnn
+(10)
+Dik ¼ ReF ikReF ik
+T þ Im F ikImF ik
+T 2 Rnini
+(11)
+di ¼
+X
+k
+ReF ik
+TReF ik þ Im F ik
+TIm F ik
+
+
+(12)
+Based on the reformulated NLLF (Equation (9)), partial analytical solutions of the MPVs of the
+modal parameters are derived. A fast iterative algorithm is developed to enable the optimization to
+be practically implemented even for a large number of DOFs and setups [24].
+Besides the MPVs of the modal parameters, this method can also assess the associated posterior un-
+certainty by calculating the posterior covariance matrix, and it is proved to be equal to the inverse of
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1373
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 9 ---
+the Hessian matrix. For calculating the Hessian matrix, analytical expressions have been derived
+without resorting to ﬁnite difference [25].
+5. DATA ANALYSIS
+5.1. Data in different construction stages
+In this study, the data in the second location with a length of 20 min are analysed. Figure 7 shows the
+PSD spectrum of the measured data at the ﬁrst time of measurement. Clear peaks can be found indicat-
+ing structural modes. It is seen that the natural frequency of the ﬁrst mode is larger than 0.3 Hz. It is
+worth mentioning that the PSD spectrum is used for visualizing the modes only but not used in
+Bayesian identiﬁcation computations.
+Figure 8 shows the identiﬁed natural frequencies and damping ratios in different construction stages for
+the ﬁrst two modes, where each parameter is shown with a dot at the MPV and an error bar covering ±2
+posterior standard deviations. It is seen that the natural frequencies tend to decrease with increasing number
+of ﬂoors completed. After the main structure is completed, the rate of increase becomes slower, and the nat-
+ural frequencies tend to be stable. It is also found that the uncertainty of the natural frequency is quite small,
+which also veriﬁes that the decrease of the natural frequency is not attributed to the identiﬁcation error be-
+cause there is no overlap of the error bar among neighbouring setups. The damping ratios are all small with
+(a)
+(b)
+Figure 8. Identiﬁed modal parameters in different construction stages: (a) mode 1 and (b) mode 2.
+Figure 7. PSD spectrum in the ﬁrst measurement.
+1374
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 10 ---
+the magnitude of around or less than 1%. With the increase of the number of ﬂoors, no obvious trend can be
+found. Compared with the natural frequency, damping ratios have relatively high uncertainties, as can be
+seen in Figure 8.
+Figure 9 compares the identiﬁed results and the ones obtained from the FEM of the ﬁrst two modes.
+It is found that these two results are consistent well with each other, especially for the latter four setups.
+The consistency implies that the effect from the increase of structural height on the natural frequency is
+reasonable.
+5.2. Data for a typical ﬂoor
+Based on the ﬁeld test, data from eight setups are collected. Figure 10 shows the PSD and singular
+value decomposition (SVD) spectra of setup 1. Below 1 Hz, there are about eight obvious peaks. From
+the SVD spectra, it is also seen that there are two modes between 0.1–0.2 Hz, 0.3–0.4 Hz and
+0.6–0.7 Hz. The mode numbers are shown in the PSD spectra. Based on the Bayesian method, modal
+identiﬁcation is performed on these eight potential modes.
+Note that the ﬁrst two modes are closely spaced modes. According to the analysis before, these two modes
+are mainly along the x and y directions, respectively. The Bayesian method incorporating multiple setups in-
+troduced in the last section can only identify the well-separated modes. Therefore, the data in the x and y
+Figure 9. Comparison between the identiﬁed results and ﬁnite element model (FEM) results.
+Figure 10. PSD spectrum of the data in setup 1: (a) PSD spectra and (b) SVD spectra.
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1375
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 11 ---
+directions are analysed separately. For other modes, that is, mode 3 to mode 8, because from the SVD spectra,
+all the modes are separated, they are therefore identiﬁed using the data in both the x and y directions together.
+Figures 11 and 12 show the identiﬁed natural frequencies, damping ratios and spectral intensity of
+modal force in the different setups of modes 1 to 8, where each parameter is shown with a dot at the
+MPV and an error bar covering ±2 posterior standard deviations. It is seen that the natural frequencies
+have small variations among different setups with small posterior uncertainties, while this is not the
+fact for the damping ratio and spectral intensity of modal force, especially for the spectral intensity
+of modal force, which can reﬂect the environment changing across several hours. It is also interesting
+to ﬁnd that the posterior uncertainties of the modal parameters can reﬂect the data quality and the un-
+certainties of these three modal parameters in some setups are consistently larger than those of other
+setups, for example, setup 4 of mode 1, setup 2 of mode 2, setup 3 of mode 3, setup 4 of mode 4, setup
+5 of mode 5 and setup 7 of mode 8.
+Figures 13–16 show the mode shapes of the eight identiﬁed modes. The values above the ﬁgures are
+averaged natural frequency and damping ratio of nine setups with the values in the parenthesis being the
+Figure 11. Identiﬁed modal parameters and associated uncertainties: (a) natural frequency and (b) damping ratio.
+1376
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 12 ---
+Figure 12. Identiﬁed modal parameters and associated uncertainties: spectral intensity of modal force.
+Figure 13. Identiﬁed mode shapes: (a) mode 1 and (b) mode 2.
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1377
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 13 ---
+posterior c.o.v. Consistent with the aforementioned investigation, the posterior c.o.v. of natural frequency
+is less than 1%, which is much smaller than that of damping ratio with an order of magnitude of a few tens
+of percent. It is seen that the ﬁrst two modes are translational modes in the x and y directions, respectively.
+The third mode is the ﬁrst torsional mode of the building with the torsion centre located at the centre of the
+tube. Similar to modes 1 to 3, modes 4 to 6 are translational modes in the x and y directions, and the second
+torsional mode, respectively. Modes 7 and 8 are also translational modes in the x and y directions, respec-
+tively. From the mode shapes, it is seen that although the design of this structure is special, the mode shapes
+are still regular. Table 3 shows the comparison between averaged posterior c.o.v. and the sample c.o.v.
+(=sample standard derivation/sample mean) among different setups. It is seen that the latter tend to be
+larger than the former, but they have similar orders of magnitude. Note that these two quantities can reﬂect
+Bayesian and frequentist perspectives, respectively, and they are consistent with each other.
+5.3. 12-h Relatively long-term monitoring
+We next investigate the behaviour of the modal parameters over the period of a half day under ambient
+conditions on the basis of the 12-h data collected. Note that in operational modal analysis, the loading
+Figure 14. Identiﬁed mode shapes: (a) mode 3 and (b) mode 4.
+Figure 15. Identiﬁed mode shapes: (a) mode 5 and (b) mode 6.
+Figure 16. Identiﬁed mode shapes: (a) mode 7 and (b) mode 8.
+1378
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 14 ---
+is modelled as a stationary stochastic process. Therefore, the 12 h of data are divided into 24 non-
+overlapping time windows with 30 min for each data set. Because the natural frequency of the ﬁrst
+mode is about 0.11 Hz, if the data are too short, the identiﬁed modal parameters may have larger
+uncertainties. In contrast, if the data are too long, the stationary assumption cannot be satisﬁed well,
+and it may increase the modelling error in the analysis. In this study, only the ﬁrst three modes are
+investigated. The 24 data sets are analysed separately using the Bayesian method.
+Figures 17–19 show the modal parameters identiﬁed using the 24 sets of data and the associated
+uncertainties for modes 1 to 3, respectively. The identiﬁed result for each data set is shown with a
+dot at the posterior MPV and an error bar covering ±2 two posterior standard deviations. It is found
+from the three ﬁgures that the MPVs of natural frequencies vary with time slightly. The damping ratios
+of the ﬁrst two modes are all less than 1%, while for the third mode, they are a little higher (about 1%).
+Table III. Posterior c.o.v. and sample c.o.v.
+Mode
+1
+2
+3
+4
+5
+6
+7
+8
+f (%)
+P c.o.v.
+0.37
+0.34
+0.23
+0.18
+0.35
+0.14
+0.18
+0.21
+S c.o.v.
+0.48
+0.37
+0.27
+0.17
+0.40
+0.21
+0.12
+0.67
+z (%)
+P c.o.v.
+57
+46
+38
+48
+48
+25
+26
+32
+S c.o.v.
+88
+48
+53
+41
+62
+31
+27
+33
+c.o.v., coefﬁcient of variation.
+Figure 17. Modal parameters in different setups, mode 1.
+Figure 18. Modal parameters in different setups, mode 2.
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1379
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 15 ---
+Similar to the natural frequency, the MPVs of damping ratio among different data sets also have similar
+orders of magnitude. For both quantities, the posterior uncertainty is consistent with the ensemble
+variability of their MPVs over different data sets, and they roughly agree between Bayesian and
+frequentist perspectives. Similar to the results in the last section, the data quality can be reﬂected by
+the posterior uncertainty, for example, the data set corresponding to 4h. It is seen that the error bars
+of the modal parameters in Modes 2 and 3 are all obviously larger than those in other data sets. The
+natural frequency and damping ratio are consistent with each other.
+Note that the modal parameters in similar environments may have similar behaviour. To perform
+further investigation, a probabilistic model has been developed based on the modal parameters identi-
+ﬁed and the associated posterior uncertainties [41], shown as follows:
+pΘðθjDÞ ¼ 1
+N s
+X
+Ns
+i¼1
+1ﬃﬃﬃﬃﬃﬃﬃ
+2πcˆ
+p
+i
+exp  1
+2cˆ i
+θ  θˆ
+i
+
+2
+#
+"
+(13)
+which is a marginal PDF, where θˆ
+i is the posterior MPV of θ in i-th data set with θ being a particular
+parameter in θ; D denotes the data used; Ns is the number of data sets; and ĉ denotes the posterior var-
+iance of the identiﬁed modal parameters. Based on this model and the information obtained in the mon-
+itoring database, the distribution of modal parameters of the objective structure in a future time window
+can be predicted and assessed under a similar environment.
+Figures 20–22 show the PDF of the modal parameters calculated according to Equation (13) for the
+ﬁrst three modes, respectively. It is found that the distributions of natural frequency and damping ratio
+are all approximately Gaussian, especially for the natural frequency, while this is not true for the spec-
+tral intensity of modal force and PSD of prediction error (not shown here). Note that the former two
+quantities are the properties of the structure, and they are relatively stable under similar environments.
+The spectral intensity of modal force and PSD of prediction error are related to the excitation and en-
+vironmental noise, and they are easily affected by environmental change. The mean and c.o.v. of the
+distributions are also shown above each subﬁgure. It is found that these c.o.v. values are a little larger
+Figure 19. Modal parameters in different setups, mode 3.
+Figure 20. PDF of the modal parameters based on the probabilistic model, mode 1. c.o.v., coefﬁcient of variation.
+1380
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 16 ---
+than those obtained by a single data set. This is reasonable because in the former case, the variability
+among different data sets is considered, indicating that it is not accurate to evaluate the distribution of a
+future time window in accordance with a single data set directly.
+Recall that the temperature and humidity information is also recorded when performing the ambient
+vibration test. The inﬂuence due to these environmental changes on the modal parameters is also
+investigated. Figures 23 and 24 show the relationship between the modal parameters and temperature
+and between the modal parameters and humidity during the whole 12 h, respectively. It is found that
+the natural frequency has an ascending trend with increasing temperature, while slightly decreases with
+increase of humidity. These trends cannot be found for the damping ratio, which is consistent with the
+fact that the damping ratio has larger posterior uncertainty, and it is not sensitive to the environment
+changing. From these observations, it may be not enough to conclude that the natural frequency will
+Figure 21. PDF of the modal parameters based on the probabilistic model, mode 2. c.o.v., coefﬁcient of variation.
+Figure 22. PDF of the modal parameters based on the probabilistic model, mode 3. c.o.v., coefﬁcient of variation.
+Figure 23. Modal parameter versus temperature.
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1381
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 17 ---
+always change with temperature and humidity according to the aforementioned trends. More data and
+some efﬁcient methods [42,43] may be required to evaluate the relationship between the natural fre-
+quency and environment variation.
+Using the Bayesian method, the root mean square values of each mode can be calculated directly accord-
+ing to the spectral intensity of modal force, natural frequency and damping ratio, which can represent the
+vibration amplitude of this mode [26]. Figure 25 shows the relationship between the modal parameters
+and vibration amplitude. A descending trend for the natural frequency is also observed, although it is not
+obvious. The damping ratio has been found to be amplitude-dependent in other studies, while this is not
+found in this work. This may be attributed to the amplitude change in this period being very small. All
+in all, it shows that the environment changing should be taken into account when designing this kind of
+structure.
+Figure 24. Modal parameter versus humidity.
+Figure 25. Modal parameter versus vibration amplitude. RMS, root mean square.
+1382
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 18 ---
+6. CONCLUSIONS
+This paper presents the work on ambient vibration tests and modal identiﬁcation of a super tall building
+using a Bayesian method. To monitor the modal properties in different construction stages, 15 ﬁeld
+tests are carried out with the number of ﬂoors increasing from 55/F to 125/F. In this process, the natural
+frequencies decrease obviously at ﬁrst, and then tend to be stable after the main structure is completed.
+The posterior uncertainty of natural frequency is quite small, indicating the identiﬁcation of this
+quantity is accurate. This also reﬂects that the decrease of natural frequency cannot be attributed to
+identiﬁcation error because there is no overlap for the error bar. For the damping ratio, which has larger
+uncertainty, no obvious trend can be found in different construction stages. The FEM results in differ-
+ent stages have a similar order of magnitude with the identiﬁed values. This consistency indicates that
+the construction quality of this building is controlled well.
+After the main structure is completed, ambient vibration tests on a typical ﬂoor are also conducted to
+investigate the modal properties of this ﬂoor using nine setups due to the limitation of the number of sen-
+sors. It is found that there are more than eight modes below 1Hz, including three translational modes in
+the x direction, three translational modes in the y direction and two torsional modes. The identiﬁed results
+show that although the design of the building appearance is highly innovative and full of art, because the
+main structure is regular, the dynamic characteristics of this structure are also regular. By investigating
+the posterior uncertainty of the modal parameters in different setups, the problematic data in some setups
+can be reﬂected, where all the modal properties in this setup will consistently have larger uncertainties. By
+comparing the posterior c.o.v. and sample c.o.v. among different setups, it is found that although these
+two quantities have different concepts, they have similar order of magnitude.
+A preliminary study on the 12h of long-term measurement of this super tall building is also performed.
+Under similar environments, the variation of natural frequency and damping ratio is very small among 24
+data sets. Based on the probabilistic model, the PDF of modal parameters for each mode is determined to
+predict the distributions of these parameters in a future time window. It is found that the distributions of
+natural frequency and damping ratio are approximately Gaussian, while this is not true for the spectral
+intensity of modal force and PSD of prediction error due to the inﬂuence of environmental changes. It
+is also worth noting that the natural frequency changes with the temperature, humidity and vibration am-
+plitude, and so in the design of this kind of structure, these effects should be taken into account.
+ACKNOWLEDGEMENTS
+This paper is funded by the National Natural Science Foundation of China (grant nos. 51508407 and 51508413),
+Shanghai Pujiang Program (grant no.: 15PJ1408600) and the grant from the Fundamental Research Funds for the
+Central Universities, China (grant no. 2014KJ040). The ﬁnancial support is gratefully acknowledged. The authors
+would like to thank Prof. Xilin Lu and Prof. Qilin Zhang, Professors at Tongji University, for providing supports in
+the whole research, the building owners of the Shanghai Tower and Dr Bin Yang, Associate Professor at Tongji
+University, for providing logistic support for the ﬁeld tests, and Miss Xi Chen, Miss Chenjie Chen, graduate
+students at Tongji University, for participating in the ﬁeld tests. The authors also thank the anonymous reviewers
+for their constructive comments.
+REFERENCES
+1. Sohn HCR, Farrar FM, Hemez DD, Shunk DW. Stinemates, BRN. A review of structural health monitoring literature:
+1996–2001. Los Alamos National Laboratory Report, LA-13976-MS, 2003.
+2. Chang PC, Flatau A, Liu SC. Health monitoring of civil infrastructure. Structural Health Monitoring 2003; 2(3):257–267.
+3. Van der Auweraer H, Peeters B. International research projects on structural health monitoring: an overview. Structural
+Health Monitoring 2003; 2(4):341–358.
+4. Ni YQ, Xia Y, Liao WX, Ko JM. Technology innovation in developing the structural health monitoring system for
+Guangzhou New TV Tower. Structural Control and Health Monitoring 2009; 16:73–98.
+5. Zhang FL, Ni YQ, Ni YC, Wang YW. Operational modal analysis of Canton Tower by a fast frequency domain Bayesian
+method. Smart Structures and Systems. 2016, In press. doi:http://dx.doi.org/10.12989/sss.2016.17.2.000.
+6. Kijewski-Correa T, Kwon DK, Kareem A, Bentz A, Guo Y, Bobby A, Abdelrazaq A. Smartsync: an integrated real-time
+structural health monitoring and structural identiﬁcation system for tall buildings. Journal of Structural Engineering, ASCE
+2013; 139(10):1675–1687.
+7. Brownjohn JMW, Pan TC. Identifying loading and response mechanisms from ten years of performance monitoring of a tall
+building. Journal of Performance of Constructed Facilities 2008; 22(1):24–34.
+STRUCTURAL HEALTH MONITORING OF SHANGHAI TOWER
+1383
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc
+
+--- PDF PAGE 19 ---
+8. Au SK, Zhang FL, Ni YC. Bayesian operational modal analysis: theory, computation, practice. Computers and Structures
+2013; 126:3–15.
+9. Au SK, Zhang FL. Ambient modal identiﬁcation of a primary-secondary structure by fast Bayesian FFT method.
+Mechanical Systems and Signal Processing 2012; 28:280–296.
+10. Au SK, Ni YC, Zhang FL, Lam HF. Full-scale dynamic testing and modal identiﬁcation of a coupled ﬂoor slab system.
+Engineering Structures 2012; 37:167–178.
+11. Lam HF, Peng HY, Au SK. Development of a practical algorithm for Bayesian model updating of a coupled slab system
+utilizing ﬁeld test data. Engineering Structures 2014; 79:182–194.
+12. Jeary AP. Damping in structures. Wind Engineering and Industrial Aerodynamics 1997; 72:345–355.
+13. Tamura Y, Suganuma SY. Evaluation of amplitude-dependent damping and natural frequency of buildings during strong
+winds. Journal of Wind Engineering and Industrial Aerodynamics 1996; 59:115–130.
+14. Peeters B, De Roeck G. Stochastic system identiﬁcation for operational modal analysis: a review. Journal of Dynamic
+Systems Measurement and Control-Transactions of the ASME 2001; 123(4):659–667.
+15. Brincker R, Zhang L, Anderson P. Modal identiﬁcation of output-only systems using frequency domain decomposition.
+Smart Materials and Structures 2001; 10:441–455.
+16. Yuen KV. Bayesian Methods for Structural Dynamics and Civil Engineering. Wiley: New York, 2010.
+17. Katafygiotis LS, Yuen KV. Bayesian spectral density approach for modal updating using ambient data. Earthquake
+Engineering & Structural Dynamics 2001; 30(8):1103–1123.
+18. Yuen KV, Katafygiotis LS. Bayesian time–domain approach for modal updating using ambient data. Probabilistic
+Engineering Mechanics 2001; 16(3):219–231.
+19. Yuen KV, Katafygiotis LS. Bayesian fast Fourier transform approach for modal updating using ambient data. Advances in
+Structural Engineering 2003; 6(2):81–95.
+20. Au SK. Fast Bayesian FFT method for ambient modal identiﬁcation with separated modes. Journal of Engineering Mechan-
+ics, ASCE 2011; 137:214–226.
+21. Zhang FL, Au SK. Erratum for fast Bayesian FFT method for ambient modal identiﬁcation with separated modes by Siu-Kui
+Au, Journal of Engineering Mechanics. ASCE 2013; 139:545–545.
+22. Au SK. Fast Bayesian ambient modal identiﬁcation in the frequency domain, part I: posterior most probable value.
+Mechanical Systems and Signal Processing 2012; 26:60–75.
+23. Au SK. Fast Bayesian ambient modal identiﬁcation in the frequency domain, part II: posterior uncertainty. Mechanical
+Systems and Signal Processing 2012; 26:76–90.
+24. Au SK, Zhang FL. Fast Bayesian ambient modal identiﬁcation incorporating multiple setups. Journal of Engineering
+Mechanics, ASCE 2012; 138(7):800–815.
+25. Zhang FL, Au SK, Lam HF. Assessing uncertainty in operational modal analysis incorporating multiple setups using a
+Bayesian approach. Structural Control and Health Monitoring 2015; 22(3):395–416.
+26. Au SK, Zhang FL, To P. Field observations on modal properties of two tall buildings under strong wind. Journal of Wind
+Engineering and Industrial Aerodynamics 2012; 101:12–23.
+27. Ni YQ, Xia Y, Lin W, Chen WH, Ko JM. SHM benchmark for high-rise structures: a reduced-order ﬁnite element model and
+ﬁeld measurement data. Smart Structures and Systems 2012; 10(4):411–426.
+28. Yi TH, Li HN, Gu M. Sensor placement for structural health monitoring of Canton Tower. Smart Structures and Systems
+2012; 10(4–5):313–329.
+29. Loh CH, Liu YC, Ni YQ. SSA-based stochastic subspace identiﬁcation of structures from output-only vibration
+measurements. Smart Structures and Systems 2012; 10(4–5):331–351.
+30. Ye X, Yan Q, Wang W, et al.. Modal identiﬁcation of Canton Tower under uncertain environmental conditions. Smart
+Structures and Systems 2012; 10(4–5):353–373.
+31. Kuok SC, Yuen KV. Structural health monitoring of Canton Tower using Bayesian framework. Smart Structures and
+Systems 2012; 10(4–5):393–410.
+32. Chen HP, Huang TL. Updating ﬁnite element model using dynamic perturbation method and regularization algorithm. Smart
+Structures and Systems 2012; 10(4–5):427–442.
+33. Ye SQ, Ni YQ. Information entropy based algorithm of sensor placement optimization for structural damage detection.
+Smart Structures and Systems 2012; 10(4–5):443–458.
+34. Chung TT, Cho S, Yun CB, Sohn H. Finite element model updating of Canton Tower using regularization technique. Smart
+Structures and Systems 2012; 10(4–5):459–470.
+35. Lei Y, Wang HF, Shen WA. Update the ﬁnite element model of Canton Tower based on direct matrix updating with
+incomplete modal data. Smart Structures and Systems 2012; 10(4–5):471–483.
+36. Chen HP, Tee KF, Ni YQ. Mode shape expansion with consideration of analytical modelling errors and modal measurement
+uncertainty. Smart Structures and Systems 2012; 10(4–5):485–499.
+37. Shi WX, Shan JZ, Lu XL. Modal identiﬁcation of Shanghai World Financial Center both from free and ambient vibration
+response. Engineering Structures 2012; 36:14–26.
+38. Li QS, Yi J. Monitoring of dynamic behaviour of super-tall buildings during typhoons. Structure and Infrastructure
+Engineering: Maintenance, Management, Life-Cycle Design and Performance 2015. doi:10.1080/15732479.2015.1010223.
+39. Ou X, Chen CJ and Xiong HB. Finite element analysis on dynamic characteristics for Shanghai tower under construction.
+The 6th International Conference on Structural Health Monitoring of Intelligent Infrastructure, Hong Kong, 9-11 December
+2013.
+40. Ni YC, Lu XL, Lu WS, Field dynamic test and Bayesian modal identiﬁcation of a special structure-the Palms Together
+Dagoba, Structural Control and Health Monitoring, 2016, In press. doi:10.1002/stc.1816.
+41. Zhang FL and Au SK. A probabilistic model for modal properties based on operational modal analysis. ASCE-ASME
+Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering, 2015, http://dx.doi.org/10.1061/
+AJRUA6.0000843. B4015005.
+42. Yuen KV, Kuok SC. Ambient interference in long-term monitoring of buildings. Engineering Structures 2010; 32
+(8):2379–2386.
+43. Xia Y, Hao H, Zanardo G, Deeks A. Long term vibration monitoring of an RC slab: temperature and humidity effect.
+Engineering Structures 2006; 28(3):441–452.
+1384
+F. L. ZHANG ET AL.
+Copyright © 2016 John Wiley & Sons, Ltd.
+Struct. Control Health Monit. 2016; 23:1366–1384
+DOI: 10.1002/stc

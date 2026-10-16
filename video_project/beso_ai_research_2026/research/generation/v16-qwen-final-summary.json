@@ -1,0 +1,45 @@
+{
+  "version": 16,
+  "createdAt": "2026-10-14T07:23:34.860539+00:00",
+  "provider": "Alibaba Cloud Model Studio / WAN",
+  "model": "wan2.7-i2v-2026-04-25",
+  "selectedCount": 2,
+  "selectedSeconds": 8.0,
+  "submittedTaskCount": 2,
+  "nominalReservedCNY": 8.0,
+  "actualBillCNY": null,
+  "freeQuotaKnown": false,
+  "selected": [
+    {
+      "id": "v16-platform-drone",
+      "taskId": "6f9b4023-6c94-4557-9618-4139127a52bb",
+      "asset": "generated/v16/v16-platform-drone.mp4",
+      "fromSeconds": 7.0,
+      "toSeconds": 11.0,
+      "sourceSeconds": 4.0,
+      "sourceFps": 30.0,
+      "sha256": "a9f090fa64d1fdb0ee16630ebbfb990a43a2a9b4b1bb0c09605a4a850738c788",
+      "qa": "research/generation/v16-qwen/qa/v16-platform-drone/qa.json",
+      "sampledFrames": 21,
+      "fullDecode": true
+    },
+    {
+      "id": "v16-paper-to-platform",
+      "taskId": "8a0e08c3-e592-4972-b4fe-45aa4fdb094c",
+      "asset": "generated/v16/v16-paper-to-platform.mp4",
+      "fromSeconds": 17.0,
+      "toSeconds": 21.0,
+      "sourceSeconds": 4.0,
+      "sourceFps": 30.0,
+      "sha256": "2af68762825bd4d9feb09e7e8b4dea2d843f670f59afbf290c5f47a7a130341d",
+      "qa": "research/generation/v16-qwen/qa/v16-paper-to-platform/qa.json",
+      "sampledFrames": 21,
+      "fullDecode": true
+    }
+  ],
+  "reviewScope": "Full video-stream decode, 21 chronological sampled frames per clip, exact native endpoint comparison; not a claim of real-time playback viewing.",
+  "provenanceDisclosure": "External delivery documentation, no AI transition label in picture at user request.",
+  "scope": "Appearance/camera concepts only. UI, physics values, BESO states and saved Zwind evidence rendered separately.",
+  "priorGenerationPreserved": true,
+  "manifestSHA256": "993a33042c48a620c7507acd27b5e8786db4041ab82d93f6248264a7200bf274"
+}

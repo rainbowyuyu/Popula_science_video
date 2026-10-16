@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "blocked_on_source_footage",
+  "projectScope": "CS:GO requested; event and game version not yet verified",
+  "source": {"path": null, "sourceUrl": null, "rightsNotes": null, "gameVersion": null, "viewType": null, "fps": null, "timeBase": null, "resolution": null, "sha256": null},
+  "anchors": {"clickPhysicalTime": null, "firstVisibleFirePTS": null, "firstVisibleKillPTS": null, "freezePTS": null, "resumePTS": null},
+  "rules": [
+    "No export of supposed real-match opening/ending without source path and verified anchors.",
+    "Physical click cannot be inferred precisely from a muzzle flash in encoded video.",
+    "A spectator/demo recording cannot measure the player's local input-to-display latency.",
+    "Freeze and resume must reference the same source view and preserve aim/door/subject alignment.",
+    "Audio boundary selected from actual source samples; no duplicated gunshot or clipped commentary.",
+    "3D scene is an explicitly labelled original schematic, not reconstructed match evidence.",
+    "All timing in the current animation is editorial, not real hardware/network timing."
+  ],
+  "preview": {"fps": 24, "frames": 576, "width": 1280, "height": 720, "audio": "none: motion-only proof", "evidence": "procedural visualization with separately tested simplified ray-AABB model"},
+  "final": {"fps": "decide after source probe", "narration": "existing personal TTS only, actual generated durations", "openingAndEnding": "same verified clip, not generated"}
+}

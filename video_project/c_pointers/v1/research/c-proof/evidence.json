@@ -1,0 +1,51 @@
+{
+  "dateLocal": "2026-10-15",
+  "compiler": "D:\\visual studio\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe",
+  "languageMode": "C17",
+  "compileFlags": [
+    "/std:c17",
+    "/W4",
+    "/WX",
+    "/O2"
+  ],
+  "compileReturnCode": 0,
+  "runReturnCode": 0,
+  "sourceSha256": "1d73f92aac3194e139eeeae8465383d9b6aa3b8024403d32f82b36f9694d1cf1",
+  "executableSha256": "06de04e44ca7aeab407f6b370cefc997a24c585304a1d26c008ec0936b46f965",
+  "runSha256": "a299ded440af60cb55cc6d5b4cb2b865259382ee67e35aba6c7ff63a274c77cf",
+  "results": {
+    "wrong_call_original": 7,
+    "wrong_call_copy": 8,
+    "score_address": "000000991ECFFE50",
+    "pointer_value": "000000991ECFFE50",
+    "pointer_own_address": "000000991ECFFE58",
+    "after_dereference_write": 8,
+    "retarget_score_unchanged": 8,
+    "retarget_bonus": 21,
+    "correct_call_original": 8,
+    "copied_address_same_target": true,
+    "sizeof_int_bytes": 4,
+    "sizeof_int_pointer_bytes": 8,
+    "array_addresses": [
+      "000000991ECFFE60",
+      "000000991ECFFE64",
+      "000000991ECFFE68"
+    ],
+    "array_values": [
+      7,
+      8,
+      9
+    ],
+    "p_plus_one_element_offset": 1,
+    "p_plus_one_read": 8,
+    "one_past_offset": 3,
+    "unsafe_dereferences_executed": false,
+    "all_assertions_passed": true
+  },
+  "limits": [
+    "Memory addresses are a measured example from one process and may change on every run.",
+    "sizeof(int) is implementation-dependent; measured 4 bytes is not a C-language universal guarantee.",
+    "Film addresses such as 0x1000 are explicitly illustrative and are never dereferenced by this program.",
+    "No null, expired-lifetime, or out-of-range pointer is dereferenced; the one-past pointer is used only for a valid distance check."
+  ]
+}

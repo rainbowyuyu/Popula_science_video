@@ -1,0 +1,184 @@
+{
+  "id": "h036",
+  "partIndex": 0,
+  "expected": "低密度脂蛋白是一种运输颗粒，胆固醇是它装的货物之一。",
+  "heard": "低密度子彈白是一種運輸顆粒,膽固醇是它裝的貨物之一",
+  "words": [
+    {
+      "text": "低",
+      "start": 0.0,
+      "end": 0.44,
+      "probability": 0.8268162608146667
+    },
+    {
+      "text": "密",
+      "start": 0.44,
+      "end": 0.58,
+      "probability": 0.9831244945526123
+    },
+    {
+      "text": "度",
+      "start": 0.58,
+      "end": 0.7,
+      "probability": 0.9993098974227905
+    },
+    {
+      "text": "子",
+      "start": 0.7,
+      "end": 0.84,
+      "probability": 0.37050044536590576
+    },
+    {
+      "text": "彈",
+      "start": 0.84,
+      "end": 0.98,
+      "probability": 0.9122871160507202
+    },
+    {
+      "text": "白",
+      "start": 0.98,
+      "end": 1.2,
+      "probability": 0.8039489984512329
+    },
+    {
+      "text": "是",
+      "start": 1.2,
+      "end": 1.46,
+      "probability": 0.8087175488471985
+    },
+    {
+      "text": "一",
+      "start": 1.46,
+      "end": 1.54,
+      "probability": 0.9902023077011108
+    },
+    {
+      "text": "種",
+      "start": 1.54,
+      "end": 1.64,
+      "probability": 0.920730471611023
+    },
+    {
+      "text": "運",
+      "start": 1.64,
+      "end": 1.8,
+      "probability": 0.8886629939079285
+    },
+    {
+      "text": "輸",
+      "start": 1.8,
+      "end": 1.98,
+      "probability": 0.9985197484493256
+    },
+    {
+      "text": "顆",
+      "start": 1.98,
+      "end": 2.14,
+      "probability": 0.6664072871208191
+    },
+    {
+      "text": "粒,",
+      "start": 2.14,
+      "end": 2.54,
+      "probability": 0.9975541234016418
+    },
+    {
+      "text": "膽",
+      "start": 2.66,
+      "end": 2.86,
+      "probability": 0.9380709528923035
+    },
+    {
+      "text": "固",
+      "start": 2.86,
+      "end": 3.0,
+      "probability": 0.9980672299861908
+    },
+    {
+      "text": "醇",
+      "start": 3.0,
+      "end": 3.2,
+      "probability": 0.9610363841056824
+    },
+    {
+      "text": "是",
+      "start": 3.2,
+      "end": 3.56,
+      "probability": 0.8111046552658081
+    },
+    {
+      "text": "它",
+      "start": 3.56,
+      "end": 3.7,
+      "probability": 0.7572593092918396
+    },
+    {
+      "text": "裝",
+      "start": 3.7,
+      "end": 3.86,
+      "probability": 0.9732249975204468
+    },
+    {
+      "text": "的",
+      "start": 3.86,
+      "end": 4.0,
+      "probability": 0.9555956125259399
+    },
+    {
+      "text": "貨",
+      "start": 4.0,
+      "end": 4.18,
+      "probability": 0.9332141280174255
+    },
+    {
+      "text": "物",
+      "start": 4.18,
+      "end": 4.3,
+      "probability": 0.9945741295814514
+    },
+    {
+      "text": "之",
+      "start": 4.3,
+      "end": 4.5,
+      "probability": 0.9992735981941223
+    },
+    {
+      "text": "一",
+      "start": 4.5,
+      "end": 4.66,
+      "probability": 0.9979288578033447
+    }
+  ],
+  "sourceSHA256": "6ca38493eed51457b98efdb71d64709eb416aca9b1d74b655f54ff1697ff5056",
+  "ratio": 0.9166666666666666,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "脂蛋",
+      "heard": "子弹",
+      "end": 5
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 230400,
+    "seconds": 4.8,
+    "peakDBFS": -8.335784262433338,
+    "first20msDBFS": -79.41475656247317,
+    "last20msDBFS": -82.76005281743355,
+    "firstActiveMs": 280.0,
+    "lastActiveToEndMs": 160.0,
+    "activityThresholdDBFS": -48.57764995734812,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

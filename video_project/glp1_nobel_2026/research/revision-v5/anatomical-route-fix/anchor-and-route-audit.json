@@ -1,0 +1,884 @@
+{
+  "auditedAtUTC": "2026-10-09T01:41:45.034Z",
+  "method": "CPU only: GLTFLoader decoded local atlas GLBs, actual current anteriorInterior helper executed in memory, independent ray parity and nearest-triangle checks, current and baseline camera modules bundled in memory and sampled for every integer frame. No browser, GPU, frame renderer, or src/public writes.",
+  "sourceSHA256": {
+    "src/V5World.ts": "9786a3a41f3817f356ddee8e61f2805254c8e8ecc3756fd503abae5f4d389a67",
+    "src/V5CameraPath.ts": "d9f64865a6760916fc991edb0f8940221c803ec605b0f1c860e97cc890ad3afb",
+    "src/V5Mechanisms.ts": "370ef2f6099614cdf9b11cd6461e7e53c310bfcd4ae589327f7c1be7911923dd",
+    "src/V5CardioDetail.ts": "0dfd22d341023c7297994f3e7fa5455b2ad76d264d107682a31fd3175ccaf1ac",
+    "src/World.ts": "365949efb18d1abf1cb51ba23ec9d69d650389b1dd5763fab332fcf291e7b851",
+    "src/visual.ts": "2c367419eac59c16f719f92dfa98b656d3e99786a7e9ae7f7ced1cbbea96acd7",
+    "src/timeline.json": "0ef7997628a5c9d86e8364da053e803ec38b1a34d69b0db24d7b49f9bcd6819d",
+    "src/V5Person.ts": "793ba4f8c97f585c40924dbde7d9aa67f86a0c0e2f8112f4d654af8bb05c5c97",
+    "src/V5Measure.ts": "9dca27bbfa0b5b68b566d325fa12b8099903c4d02206ef715a13c465a5fe2003"
+  },
+  "modelSHA256": {
+    "public/models/thighMuscles.glb": "ef8a4cfd552cc7a5d3738cc43637ff75d0485207d58cdc462e306d60aaf57fe2",
+    "public/models/leftKidney.glb": "3274af17ea749ac669b2d372b34664f2a25653fe4866999726527f859116be80",
+    "public/models/small_intestine.glb": "74a917bb7cba286f0790e3a40a723d76fcd45632d79f1f83a893f6dee7866bcb",
+    "public/models/pancreas.glb": "ef4ca86f70fdd061db0a3237299324887dfd35859d9aa403bac529dcc45bc42a",
+    "public/models/heart.glb": "2ded9055effee566418918e7a9333f4b7743b34298257a97605fa661e02788eb",
+    "public/models/manifest.json": "31c661107fe6bd617c3568b082c4a13c9983c48075d4f8ad24e34b9f1a61073f",
+    "public/models/anatomical-routes.json": "e72ea3011bfa392cf79f20f244ccdf5cd8ccb2625fbb6bcf7c0f194d2e643147"
+  },
+  "baselineSnapshotChecks": [
+    {
+      "source": "src/V5World.ts",
+      "snapshot": "research/revision-v5/anatomical-route-fix/base-source/V5World.ts",
+      "expected": "df9b38eb47a58fcbb2d77a5a5ffb66883e254551bb43a996ea116a040e71ed52",
+      "actual": "df9b38eb47a58fcbb2d77a5a5ffb66883e254551bb43a996ea116a040e71ed52",
+      "matches": true
+    },
+    {
+      "source": "src/V5CameraPath.ts",
+      "snapshot": "research/revision-v5/anatomical-route-fix/base-source/V5CameraPath.ts",
+      "expected": "1c7267a24a5294f038c5dde99fbff6557e036b58e60577326e651ecb39a77792",
+      "actual": "1c7267a24a5294f038c5dde99fbff6557e036b58e60577326e651ecb39a77792",
+      "matches": true
+    }
+  ],
+  "anchors": {
+    "muscle": {
+      "sourceID": "FJ1433M",
+      "meshName": "FJ1433M_Left_rectus_femoris",
+      "insetMetres": 0.004,
+      "baseline": {
+        "point": [
+          4.991888999938965e-7,
+          0.6710171848535538,
+          0.03298460046947002
+        ],
+        "nearestSurfaceDistanceMetres": 0.09271221480010787,
+        "nearestSurfacePoint": [
+          0.09198229362899739,
+          0.6708487800769639,
+          0.044598209062505646
+        ],
+        "insideAllRays": false,
+        "rays": [
+          {
+            "direction": [
+              0.8117914766290524,
+              0.33332498362204,
+              0.4794674689338052
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              -0.3055943270430563,
+              0.763494508400176,
+              0.5689360622441465
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              0.13067461967740088,
+              -0.5288720827888508,
+              0.8385812207644228
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              -0.8311242623665301,
+              -0.2120317011091509,
+              -0.5140768602363376
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              0.02099199308166779,
+              0.14894318900802384,
+              -0.9886229122747354
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              0,
+              0,
+              -1
+            ],
+            "crossings": 0,
+            "inside": false
+          }
+        ]
+      },
+      "current": {
+        "point": [
+          0.10872725024819374,
+          0.6710171848535538,
+          0.04767178530202504
+        ],
+        "nearestSurfaceDistanceMetres": 0.003996343622442157,
+        "nearestSurfacePoint": [
+          0.10866265734053822,
+          0.670859033090584,
+          0.05166447588918356
+        ],
+        "insideAllRays": true,
+        "rays": [
+          {
+            "direction": [
+              0.8117914766290524,
+              0.33332498362204,
+              0.4794674689338052
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              -0.3055943270430563,
+              0.763494508400176,
+              0.5689360622441465
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0.13067461967740088,
+              -0.5288720827888508,
+              0.8385812207644228
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              -0.8311242623665301,
+              -0.2120317011091509,
+              -0.5140768602363376
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0.02099199308166779,
+              0.14894318900802384,
+              -0.9886229122747354
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0,
+              0,
+              -1
+            ],
+            "crossings": 1,
+            "inside": true
+          }
+        ]
+      },
+      "contextBoundingRadiusMetres": 0.0030303671394733677
+    },
+    "nephron": {
+      "sourceID": "FJ3145",
+      "insetMetres": 0.0025,
+      "baseline": {
+        "point": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.001083350020286162
+        ],
+        "nearestSurfaceDistanceMetres": 0.00939598224252807,
+        "nearestSurfacePoint": [
+          0.077364029662984,
+          1.1253203777904859,
+          -0.008536994252797185
+        ],
+        "insideAllRays": false,
+        "rays": [
+          {
+            "direction": [
+              0.8117914766290524,
+              0.33332498362204,
+              0.4794674689338052
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              -0.3055943270430563,
+              0.763494508400176,
+              0.5689360622441465
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              0.13067461967740088,
+              -0.5288720827888508,
+              0.8385812207644228
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              -0.8311242623665301,
+              -0.2120317011091509,
+              -0.5140768602363376
+            ],
+            "crossings": 4,
+            "inside": false
+          },
+          {
+            "direction": [
+              0.02099199308166779,
+              0.14894318900802384,
+              -0.9886229122747354
+            ],
+            "crossings": 2,
+            "inside": false
+          },
+          {
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "crossings": 0,
+            "inside": false
+          },
+          {
+            "direction": [
+              0,
+              0,
+              -1
+            ],
+            "crossings": 2,
+            "inside": false
+          }
+        ]
+      },
+      "current": {
+        "point": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "nearestSurfaceDistanceMetres": 0.0014696137881330977,
+        "nearestSurfacePoint": [
+          0.0837688790565178,
+          1.1280006863588858,
+          -0.015204738935758248
+        ],
+        "insideAllRays": true,
+        "rays": [
+          {
+            "direction": [
+              0.8117914766290524,
+              0.33332498362204,
+              0.4794674689338052
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              -0.3055943270430563,
+              0.763494508400176,
+              0.5689360622441465
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0.13067461967740088,
+              -0.5288720827888508,
+              0.8385812207644228
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              -0.8311242623665301,
+              -0.2120317011091509,
+              -0.5140768602363376
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0.02099199308166779,
+              0.14894318900802384,
+              -0.9886229122747354
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0,
+              0,
+              1
+            ],
+            "crossings": 1,
+            "inside": true
+          },
+          {
+            "direction": [
+              0,
+              0,
+              -1
+            ],
+            "crossings": 1,
+            "inside": true
+          }
+        ]
+      },
+      "contextBoundingRadiusConservativeMetres": 0.0013016005688958501,
+      "contextEnvelope": {
+        "method": "CPU enumerate all Mesh and InstancedMesh transformed vertices after renal update at selected frames; convex triangles lie within the same radius bound. Full changing source values remain bounded by procedural trajectories.",
+        "samples": [
+          {
+            "frame": 14019,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 14316,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 14430,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 15160,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 15405,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 15520,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 17600,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 17934,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 18070,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 18300,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          },
+          {
+            "frame": 18500,
+            "maximumVertexRadiusMetres": 0.0013016005688958501,
+            "maximizerObject": "",
+            "maximizerPointRelative": [
+              0.0010420000180602074,
+              -0.0007800000021234155,
+              2.5717584446479567e-21
+            ],
+            "verticesExamined": 39951
+          }
+        ],
+        "maximumRadiusMetres": 0.0013016005688958501,
+        "sphericalContainmentMarginMetres": 0.00016801321923724756,
+        "containedInNearestSurfaceBall": true
+      }
+    },
+    "intestinal": [
+      0.0317835473716259,
+      1.0073112194538116,
+      0.07895243988861426
+    ],
+    "islet": [
+      0.03238480024039746,
+      1.125341254234314,
+      0.02228137147958198
+    ]
+  },
+  "camera": {
+    "framesCompared": 25621,
+    "fps": 30,
+    "toleranceMetres": 1e-9,
+    "finite": true,
+    "maxCameraShiftMetres": 0.5172597548946559,
+    "maxTargetShiftMetres": 0.10971426840440655,
+    "changedRanges": [
+      {
+        "start": 1816,
+        "end": 2681
+      },
+      {
+        "start": 3480,
+        "end": 4331
+      },
+      {
+        "start": 5460,
+        "end": 5776
+      },
+      {
+        "start": 14216,
+        "end": 14683
+      },
+      {
+        "start": 15287,
+        "end": 15806
+      },
+      {
+        "start": 17816,
+        "end": 18608
+      }
+    ],
+    "nonpositiveKnotIntervals": [],
+    "bridgeSegments": [
+      {
+        "start": 5459.38,
+        "end": 5606.938739063377,
+        "seconds": 4.9186246354459096,
+        "fromDistance": 0.0003,
+        "toDistance": 0.4975397423394889,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "toFocus": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ]
+      },
+      {
+        "start": 5606.938739063377,
+        "end": 5636.567851211586,
+        "seconds": 0.9876370716069384,
+        "fromDistance": 0.4975397423394889,
+        "toDistance": 0.4975397423394889,
+        "focusShiftMetres": 0.13093151114197077,
+        "fromFocus": [
+          0.0317835473716259,
+          1.0073112194538116,
+          0.07895243988861426
+        ],
+        "toFocus": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ]
+      },
+      {
+        "start": 5636.567851211586,
+        "end": 5776.93,
+        "seconds": 4.678738292947158,
+        "fromDistance": 0.4975397423394889,
+        "toDistance": 0.00045,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "toFocus": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ]
+      },
+      {
+        "start": 5776.93,
+        "end": 5864.78,
+        "seconds": 2.928333333333315,
+        "fromDistance": 0.00045,
+        "toDistance": 0.00045,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ],
+        "toFocus": [
+          0.03238480024039746,
+          1.125341254234314,
+          0.02228137147958198
+        ]
+      },
+      {
+        "start": 15239.7,
+        "end": 15286.1,
+        "seconds": 1.5466666666666546,
+        "fromDistance": 0.0045,
+        "toDistance": 0.0045,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.028196661304004566,
+          1.2460500000000012,
+          -0.01432978935441014
+        ],
+        "toFocus": [
+          0.028196661304004566,
+          1.2460500000000012,
+          -0.01432978935441014
+        ]
+      },
+      {
+        "start": 15286.1,
+        "end": 15393.852046735134,
+        "seconds": 3.5917348911711087,
+        "fromDistance": 0.0045,
+        "toDistance": 0.49542536055820613,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.028196661304004566,
+          1.2460500000000012,
+          -0.01432978935441014
+        ],
+        "toFocus": [
+          0.028196661304004566,
+          1.2460500000000012,
+          -0.01432978935441014
+        ]
+      },
+      {
+        "start": 15393.852046735134,
+        "end": 15425.589789042786,
+        "seconds": 1.0579247435884098,
+        "fromDistance": 0.49542536055820613,
+        "toDistance": 0.49542536055820613,
+        "focusShiftMetres": 0.13037509488373847,
+        "fromFocus": [
+          0.028196661304004566,
+          1.2460500000000012,
+          -0.01432978935441014
+        ],
+        "toFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ]
+      },
+      {
+        "start": 15425.589789042786,
+        "end": 15525.4,
+        "seconds": 3.3270070319071237,
+        "fromDistance": 0.49542536055820613,
+        "toDistance": 0.0068,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "toFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ]
+      },
+      {
+        "start": 15525.4,
+        "end": 15570.199999999999,
+        "seconds": 1.493333333333309,
+        "fromDistance": 0.0068,
+        "toDistance": 0.0068,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "toFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ]
+      },
+      {
+        "start": 15570.199999999999,
+        "end": 15726.417601251798,
+        "seconds": 5.207253375059978,
+        "fromDistance": 0.0068,
+        "toDistance": 0.6086616667341923,
+        "focusShiftMetres": 0,
+        "fromFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ],
+        "toFocus": [
+          0.08261634996533394,
+          1.1275877113342285,
+          -0.016017692199639468
+        ]
+      }
+    ]
+  },
+  "visualContext": {
+    "method": "Conservative union of camera change and any moved muscle or nephron field with nonzero visibility by published distance/family gates; threshold 1e-6. Nephron macroExit deliberately omitted for conservative bound. This checks candidate visibility, not raster output or occlusion. Additionally includes changes to muscle/customMicro and renal/localMicro anchor-distance dependencies at tolerance 1e-9, conservatively before max-combination with other families. Patch ranges padded 60 frames and nearby ranges merged across gaps of up to 300 frames.",
+    "candidateRanges": [
+      {
+        "start": 1816,
+        "end": 2681
+      },
+      {
+        "start": 3480,
+        "end": 4331
+      },
+      {
+        "start": 5460,
+        "end": 5776
+      },
+      {
+        "start": 14018,
+        "end": 14054
+      },
+      {
+        "start": 14216,
+        "end": 14683
+      },
+      {
+        "start": 15120,
+        "end": 15162
+      },
+      {
+        "start": 15287,
+        "end": 15806
+      },
+      {
+        "start": 17588,
+        "end": 17629
+      },
+      {
+        "start": 17816,
+        "end": 18608
+      }
+    ],
+    "familySupportRanges": [
+      {
+        "start": 1880,
+        "end": 2664
+      },
+      {
+        "start": 3488,
+        "end": 4314
+      },
+      {
+        "start": 13974,
+        "end": 14725
+      },
+      {
+        "start": 14739,
+        "end": 15282
+      },
+      {
+        "start": 15296,
+        "end": 15852
+      },
+      {
+        "start": 17535,
+        "end": 18654
+      }
+    ],
+    "recommendedPatchRangesInclusive": [
+      {
+        "start": 1756,
+        "end": 2741
+      },
+      {
+        "start": 3420,
+        "end": 4391
+      },
+      {
+        "start": 5400,
+        "end": 5836
+      },
+      {
+        "start": 13958,
+        "end": 14743
+      },
+      {
+        "start": 15060,
+        "end": 15866
+      },
+      {
+        "start": 17528,
+        "end": 18668
+      }
+    ],
+    "patchPaddingFrames": 60,
+    "backgroundOpacityDependencyRanges": [
+      {
+        "start": 1935,
+        "end": 2000
+      },
+      {
+        "start": 2534,
+        "end": 2586
+      },
+      {
+        "start": 3556,
+        "end": 3608
+      },
+      {
+        "start": 4175,
+        "end": 4233
+      },
+      {
+        "start": 14018,
+        "end": 14054
+      },
+      {
+        "start": 14310,
+        "end": 14420
+      },
+      {
+        "start": 14441,
+        "end": 14523
+      },
+      {
+        "start": 15120,
+        "end": 15162
+      },
+      {
+        "start": 15333,
+        "end": 15358
+      },
+      {
+        "start": 15426,
+        "end": 15525
+      },
+      {
+        "start": 15571,
+        "end": 15667
+      },
+      {
+        "start": 17588,
+        "end": 17629
+      },
+      {
+        "start": 17923,
+        "end": 18048
+      },
+      {
+        "start": 18356,
+        "end": 18446
+      }
+    ],
+    "contextCrossCheckRoutesMatch": true,
+    "mergeNearbyPatchGapFrames": 300
+  },
+  "limitations": [
+    "CPU geometry and camera audit does not certify transparency sorting, rendered subject occupancy, caption overlap, or edit seam visibility.",
+    "Physiology models remain representative teaching geometry; surface containment confirms location, not biological microanatomy segmentation."
+  ],
+  "passed": true
+}

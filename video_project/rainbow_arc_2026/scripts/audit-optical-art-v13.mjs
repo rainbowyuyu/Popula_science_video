@@ -1,0 +1,22 @@
+import {build} from 'esbuild';
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {pathToFileURL} from 'node:url';
+import * as T from 'three';
+const root=process.cwd(),out=path.join(root,'research/qa-v13');fs.mkdirSync(out,{recursive:true});
+const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+const runtime=path.join(out,'optical-art-runtime-v13.mjs');
+const result=await build({stdin:{contents:`export * from './src/WorldV10';export * from './src/Timeline';export * from './src/OpticalRadianceV13';`,resolveDir:root,loader:'ts'},bundle:true,platform:'node',format:'esm',packages:'external',metafile:true,outfile:runtime});
+const {WorldV10,stateAt,createRadianceSegmentV13,updateRadianceSegmentV13}=await import(pathToFileURL(runtime).href);
+const a=new T.Vector3(-1,1,.2),b=new T.Vector3(1,.4,0),aBefore=a.toArray(),bBefore=b.toArray(),beam=createRadianceSegmentV13(a,b);
+updateRadianceSegmentV13(beam,.45,.7,new T.Color('#e27752'),300,.2);
+const inputsUnmutated=JSON.stringify([a.toArray(),b.toArray()])===JSON.stringify([aBefore,bBefore]);
+const uniformsCloned=beam.material.uniforms.uA.value!==a&&beam.material.uniforms.uB.value!==b;
+const world=new WorldV10(undefined,new T.Scene());
+const snapshot=()=>{const items=[];world.group.traverse(o=>{items.push([o.name,o.visible,...o.position.toArray(),...o.scale.toArray(),...o.quaternion.toArray()]);if(o.geometry)for(const [key,attr]of Object.entries(o.geometry.attributes))if(key==='position'||key==='previous'||key==='next')items.push([key,sha(Buffer.from(attr.array.buffer,attr.array.byteOffset,attr.array.byteLength))]);for(const mat of (o.material?Array.isArray(o.material)?o.material:[o.material]:[]))items.push([mat.opacity,Object.fromEntries(Object.entries(mat.uniforms??{}).map(([k,v])=>[k,typeof v.value==='number'?v.value:v.value?.toArray?.()??null]))]);});return sha(JSON.stringify(items));};
+const frames=[1450,2900,3580,3900,4800,9000,2800,3250,4090],seek=[];let nonFinite=0;
+for(const f of frames){world.update(stateAt(f));const expected=snapshot();world.update(stateAt(0));world.update(stateAt(9990));world.update(stateAt(f));const actual=snapshot();seek.push({frame:f,stable:actual===expected});world.group.traverse(o=>{if([...o.position.toArray(),...o.scale.toArray(),...o.quaternion.toArray()].some(x=>!Number.isFinite(x)))nonFinite++;for(const mat of(o.material?Array.isArray(o.material)?o.material:[o.material]:[]))for(const u of Object.values(mat.uniforms??{}))if(typeof u.value==='number'&&!Number.isFinite(u.value))nonFinite++;if(o.geometry?.attributes.position?.array.some(x=>!Number.isFinite(x)))nonFinite++;});}
+const sourceHashes=Object.keys(result.metafile.inputs).filter(p=>!p.startsWith('<')).map(p=>({file:p,sha256:sha(fs.readFileSync(path.resolve(root,p)))}));
+const report={version:'V13',createdUTC:new Date().toISOString(),passed:inputsUnmutated&&uniformsCloned&&nonFinite===0&&seek.every(x=>x.stable),scope:'Input immutability, exact frame seek, finite geometry and uniforms for active V13 optical layer. Does not compile shaders or constitute visual review.',inputsUnmutated,uniformsCloned,nonFinite,seek,sourceHashes};
+fs.writeFileSync(path.join(out,'optical-art-diagnostics-v13.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({...report,sourceHashes:sourceHashes.length},null,2));world.dispose();beam.geometry.dispose();beam.material.dispose();if(!report.passed)process.exitCode=1;

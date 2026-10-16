@@ -1,0 +1,511 @@
+Nonlinear Time-History Analysis of 
+Super Tall Buildings Based on OpenSees
+2013-08
+Multi-layer shell 
+element
+Z (w
+X (u
+Y (v
+]
+[
+Smeared rebar layer
+Mid-layer of shell
+Concrete layer
+Modeling 
+technology
+MSC.Marc to
+OpenSees
+TBI Building 2 & 
+Shanghai Tower
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Prof. Xinzheng Lu 
+@ Tsinghua University
+Mr. Linlin Xie 
+@ Tsinghua University
+Dr. Yuli Huang 
+@ Arup
+Supported by National Nature 
+Science Foundation of China 
+(No. 51222804, 51261120377)
+nDMaterial-concrete
+$epstu
+($epsc0, $fc)
+($epscu, $fcu)
+Stress
+Strain
+$ft
+1
+2
+1
+'
+'
+1
+c
+e c
+D
+D
+D
+V
+H
+
+ª
+º
+ «
+»
+
+¬
+¼
+Shell Element
+Fiber Element
+Marc to 
+OpenSees
+Fiber frame
+Embedded frame
+Shell
+Jin Mao 
+Building
+Shanghai Tower
+Shanghai World 
+Financial Center
+632m
+421m
+492m
+
+Nonlinear Time-History Analysis of 
+Super Tall Buildings Based on OpenSees
+¾Multi-layer shell element
+
+For RC shear wall & core-tube
+
+Composite material mechanics 
+
+New nDMaterial for concrete and steel
+
+Coupled compressive-bending-shear
+
+Adaptive/Accurate/High efficiency
+Z (w
+X (u
+Y (v
+]
+[
+Smeared rebar layer
+Mid-layer of shell
+Concrete layer
+Transverse
+distributing rebar
+Longitudinal
+distributing rebar
+Direction of first principal axis
+Transverse
+rebar layer
+Longitudinal
+rebar layer
+Concrete
+layer
+¾nDMaterial concrete
+
+2D plane stress constitutive model
+
+Damage mechanics and smeared crack
+
+Compression: Løland model
+
+Tension: Mazars model
+¾Modeling technology
+
+Fiber beam elements for beams and 
+columns
+
+Multi-layer shell elements for shear walls 
+and coupling beams
+
+Embedded beam elements to connect 
+fiber beam elements and multi-layer
+shear wall elements
+2013-08
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+$epstu
+($epsc0, $fc)
+($epscu, $fcu)
+Stress
+Strain
+$ft
+1
+2
+1
+'
+'
+1
+c
+e c
+D
+D
+D
+V
+H
+
+ª
+º
+ «
+»
+
+¬
+¼
+Fiber frame
+Embedded frame
+Shell
+
+Nonlinear Time-History Analysis of 
+Super Tall Buildings Based on OpenSees
+¾64-bit OpenSees.exe
+
+Large-scale modeling and computing: 
+huge memory consumption  
+
+Recompile OpenSees.exe in 64-bit
+environment
+
+Maximum thread memory size: >28 GB
+¾MSC.Marc to OpenSees
+
+MSC.MARC GUI: Pre- & post-processor
+
+Simplify the modeling process
+
+Convenient to compare the results 
+between commercial codes and 
+OpenSees
+¾Selection of analysis domain
+
+Large-scale model (>300,000 DOF)
+
+Matrix solver: SparseSYM
+
+Eigen solver: ProfileSPD
+
+Constraints: Transformation
+2013-08
+Download URL: http://www.luxinzheng.net/download/OpenSeesTHU.zip
+Shell Element
+Fiber Element
+Marc to 
+OpenSees
+Analysis
+Algorithm
+Constraints 
+Handler
+System of 
+Equation
+Krylov
+NewtonlineSearch
+Transformation
+SparseSYM
+ProfileSPD
+Static
+Dynmic
+Eigen
+
+Nonlinear Time-History Analysis of 
+Super Tall Buildings Based on OpenSees
+¾ Validation for multi-layer shell element and concrete constitutive law
+
+I-shaped wall, T-shaped wall & coupled wall (test vs. fiber beam element vs. multi-layer shell element)
+2013-08
+PGA=400gal
+-1.2
+-0.8
+-0.4
+0
+0.4
+0.8
+1.2
+0
+10
+20
+30
+40
+Time/s
+Disp/m
+OpenSees
+Marc
+PGA=400gal
+0
+20
+40
+60
+80
+100
+120
+140
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+Drift angle/%
+Story
+OpenSees
+Marc
+PGA=400gal
+0
+20
+40
+60
+80
+100
+120
+140
+0
+0.2
+0.4
+0.6
+0.8
+1
+Disp /m
+Story
+OpenSees
+Marc
+Stor
+¾Shanghai Tower
+
+H=632m, 124 stories
+
+53,006 nodes
+
+88,089 elements
+
+48,774 fiber beam elements
+
+39,315 multi-layer shell 
+elements
+
+Memory used: 8.9GB
+El-Centro PGA=1000gal
+-1.2
+-0.9
+-0.6
+-0.3
+0
+0.3
+0.6
+0.9
+1.2
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+Time/s
+Top disp/m
+Marc
+OpenSees
+Northridge PGA=1000gal
+-2.8
+-2.1
+-1.4
+-0.7
+0
+0.7
+1.4
+2.1
+2.8
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+Time/s
+Top disp/m
+Marc
+OpenSees
+El-Centro PGA=1000gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.5
+1
+1.5
+2
+Drift angle/%
+Floor
+Marc
+OpenSees
+Northridge PGA=1000gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.75
+1.5
+2.25
+3
+Drift angle/%
+Floor
+Marc
+OpenSees
+¾TBI Building-2
+
+H=141m, 42 stories
+
+8,469 nodes
+
+14,451 elements
+
+9,744 fiber beam 
+elements 
+
+39,315 multi-layer shell 
+elements
+
+Memory used: 1.3GB
+ChiChi PGA=1000gal
+-0.6
+-0.45
+-0.3
+-0.15
+0
+0.15
+0.3
+0.45
+0.6
+0
+10
+20
+30
+40
+50
+60
+70
+Time/s
+Top disp/m
+Marc
+OpenSees
+ChiChi PGA=1000gal
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+0
+0.2
+0.4
+0.6
+0.8
+Drift angle/%
+Floor
+Marc
+OpenSees
+-200
+-150
+-100
+-50
+0
+50
+100
+150
+200
+-25
+-15
+-5
+5
+15
+25
+Shell
+Fiber
+Test
+H/W=2.0
+-600
+-500
+-400
+-300
+-200
+-100
+0
+100
+200
+300
+400
+500
+600
+-15
+-10
+-5
+0
+5
+10
+15
+Shell
+Fiber
+Test
+H/W=1.0
+-400
+-300
+-200
+-100
+0
+100
+200
+300
+400
+-20
+-15
+-10
+-5
+0
+5
+10
+15
+20
+Shell
+Fiber
+Test
+-150
+-100
+-50
+0
+50
+100
+150
+-30
+-20
+-10
+0
+10
+20
+30
+Shell
+Test

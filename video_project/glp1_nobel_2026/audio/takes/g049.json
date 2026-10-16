@@ -1,0 +1,69 @@
+{
+  "id": "g049",
+  "text": "如果血栓堵在冠状动脉，心肌会缺血；发生在供应大脑的动脉，也可能引起缺血性脑卒中。",
+  "ttsText": "如果血栓堵在冠状动脉，心肌会缺血；发生在供应大脑的动脉，也可能引起缺血性脑卒中。",
+  "signature": "ae2c84e7495aa914e06178e9c1f57e455a28aa587a0e229c6cf705801c8c197d",
+  "raw": "audio/raw/g049-ae2c84e749.wav",
+  "processed": "public/voice/g049.wav",
+  "rawDuration": 8.08,
+  "duration": 8.08,
+  "sha256": "aa53897b2ccb33252530663c20e4796fb8390c07db70e0011ce940cddc6e9fa3",
+  "seed": 2922153191,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g049",
+    "g050",
+    "g051",
+    "g052"
+  ],
+  "rawEndpointDB": -96.20654535011603,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "3ef1a28d8b7f99acc0bb092f8b143f417675135c2c41f954849bb2dc63da2b8f",
+    "outputSha256": "aa53897b2ccb33252530663c20e4796fb8390c07db70e0011ce940cddc6e9fa3",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.5424348956297145,
+    "input": {
+      "seconds": 8.08,
+      "peakDb": -5.856368192131046,
+      "activeRmsDb": -22.09826841303217,
+      "quietFrameP10Db": -62.50296204644083
+    },
+    "output": {
+      "seconds": 8.08,
+      "peakDb": -5.177230389641415,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.71302943590146
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,69 @@
+{
+  "id": "g015",
+  "text": "眼前选取的示意胰岛，直径约零点一五毫米。真实胰岛有大有小，右边的尺子会一直告诉我们，现在看到多大的范围。",
+  "ttsText": "眼前选取的示意胰岛，直径约零点一五毫米。真实胰岛有大有小，右边的尺子会一直告诉我们，现在看到多大的范围。",
+  "signature": "c775d044e1a99c2fa942378d394dc6e006bad6b761d9128c8efeffcbdfe06384",
+  "raw": "audio/raw/g015-c775d044e1.wav",
+  "processed": "public/voice/g015.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "46871b179f0531ba456c923c57de7dc91dec2d9396a9eeb4fb32c929d8aeaa4a",
+  "seed": 1274494134,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g013",
+    "g014",
+    "g015",
+    "g016"
+  ],
+  "rawEndpointDB": -95.41822450175835,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "296ea0db93dc8702d102a00e7ac1bc05f52dab248ba73aa2b7e1295ce4db15aa",
+    "outputSha256": "46871b179f0531ba456c923c57de7dc91dec2d9396a9eeb4fb32c929d8aeaa4a",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.6237735936394415,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -5.801304712723056,
+      "activeRmsDb": -22.36089665378119,
+      "quietFrameP10Db": -60.384156906703524
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -3.4321162902220097,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.2295358085029
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

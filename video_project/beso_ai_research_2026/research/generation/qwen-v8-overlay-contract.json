@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "conceptAssets": "research/generation/launch-v8-bridges.json",
+  "overlayRule": "Generated clips provide camera, light, material and spatial transition only. Program-rendered true UI covers any generated lettering, icons, labels, lines, numbers or report text before delivery.",
+  "bridges": {
+    "v8-demand-to-platform": {
+      "trueWebFrame": "public/beso-research/web-live/v8/brief.png",
+      "uiRegion": {"x": 0, "y": 0, "width": 1920, "height": 1080},
+      "generatedTextRisk": "high",
+      "maskPolicy": "First 96 frames: composite exact true brief page over generated page plane. Last 72 frames: dissolve the page mask along the right plane edge into native camera; leave the model and ocean bridge visible."
+    },
+    "v8-geometry-to-section": {
+      "trueWebFrame": "public/beso-research/web-live/v8/viewer-model.png",
+      "uiRegion": {"x": 0, "y": 0, "width": 1050, "height": 850},
+      "generatedTextRisk": "medium",
+      "maskPolicy": "Composite exact viewer-model over left web viewport during first 72 frames; hide any generated blue linework outside the real viewer crop."
+    },
+    "v8-report-to-delivery": {
+      "trueWebFrame": "public/beso-research/web-live/v8/checklist-edited.png",
+      "uiRegion": {"x": 0, "y": 0, "width": 1920, "height": 1080},
+      "generatedTextRisk": "medium",
+      "maskPolicy": "Composite exact checklist-edited/report crop during first 90 frames; no generated paper writing or pass/fail mark survives the web-to-platform transition."
+    }
+  },
+  "spokenTerminology": {
+    "Zwind": "English continuous reading Z-wind; never Chinese Z-feng/Z风",
+    "系泊": "xì bó: xi fourth tone followed by bo",
+    "AI Engineer": "English reading",
+    "图强号": "完整中文词，不拆读"
+  },
+  "physicalBoundary": {
+    "nativePlatform": "public/beso-research/physics/native-model.json",
+    "generatedClips": "visual concept only",
+    "savedResponse": "Must be rendered only by native program layers with saved-response labels; Qwen does not generate or validate solver response."
+  }
+}

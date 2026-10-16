@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<style>
+body { margin:0; padding:0; font-size:12px}
+img { border:0}
+a { font-size:12px; color:#424242; text-decoration:none}
+a:hover { text-decoration:underline}
+.cetopl,.menul_list { margin:auto}
+.main { width:630px; border:1px solid #C3C3C3; margin:100PX auto; padding-bottom:10px}
+.doc { font-size:16px; font-weight:bold;}
+.doc .line { border-bottom:1px solid #C3C3C3}
+</style>
+<script language='javascript' type='text/javascript'>    
+var secs =5; //倒计时的秒数    
+var URL ;    
+function Load(url){    
+URL =url;    
+for(var i=secs;i>=0;i--)    
+{    
+window.setTimeout('doUpdate(' + i + ')', (secs-i) * 1000);    
+}    
+}    
+function doUpdate(num)    
+{    
+document.getElementById('ShowDiv').innerHTML = '&nbsp;将在'+num+'秒后自动跳转到 频道首页' ;    
+if(num == 0) { window.location=URL; }    
+}    
+</script>
+</head>
+
+<body>
+
+
+
+<div class="main">
+	<dIV style="padding:15PX"><a href="http://www.ce.cn" target="_blank"><img src="http://www.ce.cn/img/cellogo.gif" width="185" height="62" /></a></dIV>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="27%" align="right"><img src="http://www.ce.cn/img1/erro.gif" width="150" height="150" /></td>
+    <td width="73%"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" class="doc">
+      <tr>
+        <td height="40" class="line">&nbsp;对不起！您所访问的页面不存在或者已删除。</td>
+      </tr>
+      <tr>
+        <td height="40"><div id="ShowDiv"></div>    
+<script language="javascript">    
+Load("http://www.ce.cn"); //要跳转到的页面    
+</script></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="right" height="30"><a href="http://www.ce.cn" target="_blank"><span style="font-size:18px; color:#898989">www.ce.cn</span></a>&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+    </table>
+</div>
+<!--trs统计-->
+<script id="_trs_ta_js" src="//ta.trs.cn/c/js/ta.js?mpid=6364" async="async" defer="defer"></script>
+
+</body>
+</html>
+
+

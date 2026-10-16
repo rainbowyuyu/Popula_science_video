@@ -1,0 +1,81 @@
+{
+  "id": "s003",
+  "text": "这些斜着交叉的杆件，就像一座座小钢桥。上下两根叫弦杆，斜杆把中间连成三角形。伸臂从中间搭到外圈，环带沿着周边接力，把巨柱连成一伙。风从侧面推来，它们就一起分担。",
+  "ttsText": "这些斜着交叉的杆件，就像一座座小钢桥。上下两根叫弦杆，斜杆把中间连成三角形。伸臂从中间搭到外圈，环带沿着周边接力，把巨柱连成一伙。风从侧面推来，它们就一起分担。",
+  "signature": "238d72f3a1b57f670b6b99e93026c6002df765d1609136d0b57b21b31dd4f0d4",
+  "raw": "audio/raw/s003-238d72f3a1.wav",
+  "processed": "audio/candidates/v8-atlas-opening/s003.wav",
+  "rawDuration": 16.080041666666666,
+  "duration": 16.32004166666667,
+  "sha256": "5e4a4b94692f8923a7e52e475ece801bd456334dc21a7ad5496a55e992a35560",
+  "seed": 199750030,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s001",
+    "s002",
+    "s003",
+    "s004"
+  ],
+  "rawEndpointDB": -58.15580243512017,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "2756935a478066b89be2b13bebd0a5610c2643b473a128fc7cd4820c83761691",
+    "outputSha256": "5e4a4b94692f8923a7e52e475ece801bd456334dc21a7ad5496a55e992a35560",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.7306478227139053,
+    "input": {
+      "seconds": 16.32004166666667,
+      "peakDb": -7.94524209193956,
+      "activeRmsDb": -22.575551395670075,
+      "quietFrameP10Db": -63.489559150595774
+    },
+    "output": {
+      "seconds": 16.32004166666667,
+      "peakDb": -4.761561977987952,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.65329387042596
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "585ee359c784ee49b0957a8f42e6ecdc60ad4a31f5739baab85c72ab530fd466"
+  },
+  "subjectiveListeningChecked": false
+}

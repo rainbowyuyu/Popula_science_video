@@ -1,0 +1,172 @@
+{
+  "schema": "rainbow.motion-difference-ranking/1",
+  "purpose": "Manual-review prioritization only. Large differences can be valid motion; small differences do not prove continuity or aesthetics.",
+  "qualityVerdict": null,
+  "analyzedUTC": "2026-10-08T18:53:11.400999+00:00",
+  "input": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\tmp\\segment-0-600-opening-v4.mp4",
+  "inputBytes": 14045935,
+  "inputMtimeNs": 1791485488222895600,
+  "sourceStream": {
+    "width": 1920,
+    "height": 1080,
+    "r_frame_rate": "30/1",
+    "avg_frame_rate": "30/1",
+    "duration": "20.033333",
+    "nb_frames": "601"
+  },
+  "sourceDurationSeconds": "20.096000",
+  "decodedFrames": 601,
+  "comparisonCount": 600,
+  "requestedMaxSeconds": null,
+  "frameIndexConvention": "Zero based; each row compares previousFrame with frame. No frame-rate conversion.",
+  "timestampConvention": "Frame index / reported average FPS; exact for this series CFR renders, approximate for VFR inputs.",
+  "downscaledDimensions": [
+    320,
+    180
+  ],
+  "roiPixelsExclusiveEnd": [
+    112,
+    30,
+    320,
+    153
+  ],
+  "maskedRegions": "Outside ROI: left title column, top logo/header band, bottom subtitle band. Geometric mask, not object tracking.",
+  "rankingMetric": "Mean absolute difference of adjacent grayscale pixels in ROI, range 0..255.",
+  "secondaryMetrics": "P95 and fraction over24 are diagnostic magnitudes, not pass/fail thresholds.",
+  "minGapFrames": 20,
+  "requestedLocations": 8,
+  "rankedLocations": [
+    {
+      "rank": 1,
+      "frame": 131,
+      "previousFrame": 130,
+      "secondsApprox": 4.366667,
+      "meanAbsoluteDifference": 7.174249530956848,
+      "reviewWindowFrames": [
+        116,
+        146
+      ]
+    },
+    {
+      "rank": 2,
+      "frame": 600,
+      "previousFrame": 599,
+      "secondsApprox": 20.0,
+      "meanAbsoluteDifference": 5.162093495934959,
+      "reviewWindowFrames": [
+        585,
+        600
+      ]
+    },
+    {
+      "rank": 3,
+      "frame": 580,
+      "previousFrame": 579,
+      "secondsApprox": 19.333333,
+      "meanAbsoluteDifference": 1.3786350844277673,
+      "reviewWindowFrames": [
+        565,
+        595
+      ]
+    },
+    {
+      "rank": 4,
+      "frame": 251,
+      "previousFrame": 250,
+      "secondsApprox": 8.366667,
+      "meanAbsoluteDifference": 1.3290728580362727,
+      "reviewWindowFrames": [
+        236,
+        266
+      ]
+    },
+    {
+      "rank": 5,
+      "frame": 197,
+      "previousFrame": 196,
+      "secondsApprox": 6.566667,
+      "meanAbsoluteDifference": 1.322232645403377,
+      "reviewWindowFrames": [
+        182,
+        212
+      ]
+    },
+    {
+      "rank": 6,
+      "frame": 222,
+      "previousFrame": 221,
+      "secondsApprox": 7.4,
+      "meanAbsoluteDifference": 1.299953095684803,
+      "reviewWindowFrames": [
+        207,
+        237
+      ]
+    },
+    {
+      "rank": 7,
+      "frame": 338,
+      "previousFrame": 337,
+      "secondsApprox": 11.266667,
+      "meanAbsoluteDifference": 1.1898452157598498,
+      "reviewWindowFrames": [
+        323,
+        353
+      ]
+    },
+    {
+      "rank": 8,
+      "frame": 271,
+      "previousFrame": 270,
+      "secondsApprox": 9.033333,
+      "meanAbsoluteDifference": 1.1732723577235773,
+      "reviewWindowFrames": [
+        256,
+        286
+      ]
+    }
+  ],
+  "chronologicalReviewFrames": [
+    131,
+    197,
+    222,
+    251,
+    271,
+    338,
+    580,
+    600
+  ],
+  "timeSeries": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\visual-v4\\opening-motion-review\\frame-differences.csv",
+  "ffmpegCommand": [
+    "C:\\ffmpeg\\bin\\ffmpeg.EXE",
+    "-nostdin",
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-hwaccel",
+    "none",
+    "-threads",
+    "1",
+    "-i",
+    "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\tmp\\segment-0-600-opening-v4.mp4",
+    "-map",
+    "0:v:0",
+    "-an",
+    "-sn",
+    "-dn",
+    "-vf",
+    "scale=320:180:flags=area,format=gray",
+    "-filter_threads",
+    "1",
+    "-threads",
+    "1",
+    "-fps_mode",
+    "passthrough",
+    "-pix_fmt",
+    "gray",
+    "-f",
+    "rawvideo",
+    "pipe:1"
+  ],
+  "elapsedSeconds": 3.086,
+  "memoryPolicy": "Two grayscale ROI buffers plus at most 312 scalar heap entries; time series streamed to CSV."
+}

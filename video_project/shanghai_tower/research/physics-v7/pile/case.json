@@ -1,0 +1,7731 @@
+{
+  "kind": "independent-single-pile-linear-dynamic-example",
+  "parameters": {
+    "length_m": 52.0,
+    "diameter_m": 1.0,
+    "head_depth_below_grade_m": 31.4,
+    "E_Pa": 32000000000.0,
+    "density_kg_m3": 2500.0,
+    "toe_k_N_m": 220000000.0,
+    "head_vertical_N": 8000000.0,
+    "head_lateral_peak_N": 300000.0,
+    "vertical_modulation_N": 400000.0,
+    "soil_damping_time_s": 0.01,
+    "duration_s": 40.0,
+    "head_mass_kg": 815772.9703823427
+  },
+  "soilLayers": [
+    {
+      "id": "71",
+      "name": "砂质粉土与粉砂",
+      "top_m": 29.0,
+      "bottom_m": 37.0,
+      "shaft_N_m3": 4000000.0,
+      "lateral_N_m2": 8000000.0
+    },
+    {
+      "id": "72",
+      "name": "粉砂",
+      "top_m": 37.0,
+      "bottom_m": 64.4,
+      "shaft_N_m3": 9000000.0,
+      "lateral_N_m2": 18000000.0
+    },
+    {
+      "id": "73",
+      "name": "粉砂",
+      "top_m": 64.4,
+      "bottom_m": 69.2,
+      "shaft_N_m3": 13000000.0,
+      "lateral_N_m2": 28000000.0
+    },
+    {
+      "id": "91",
+      "name": "砂质粉土",
+      "top_m": 69.2,
+      "bottom_m": 78.2,
+      "shaft_N_m3": 12000000.0,
+      "lateral_N_m2": 24000000.0
+    },
+    {
+      "id": "921",
+      "name": "粉砂",
+      "top_m": 78.2,
+      "bottom_m": 89.4,
+      "shaft_N_m3": 18000000.0,
+      "lateral_N_m2": 40000000.0
+    }
+  ],
+  "units": {
+    "length": "m",
+    "time": "s",
+    "force": "N",
+    "moment": "N m",
+    "stress": "Pa",
+    "stiffness": "N/m",
+    "dashpot": "N s/m",
+    "mass": "kg",
+    "rotation": "rad"
+  },
+  "coordinates": "Global X horizontal, Y upward, Z out of plane; pile head local=(0,0,0); local beam X down, local Y global+X. All arrays retain physical magnitude.",
+  "scope": "One 52m x 1m pile with assumed linear springs, damping and nodal cap load. Not the 947-pile foundation, no coupled tower load, no as-built settlement/capacity prediction.",
+  "source": {
+    "pdf": "research/structural/zhu2012-http.pdf",
+    "sha256": "816ded5b30123c3701b339e8a8278b21b2cc1d076a0ed2dbd4adb6b146dd05b9",
+    "title": "Structural Design Challenges of Shanghai Tower",
+    "authors": "Yi Zhu; Dennis Poon; Emmanuel E. Velivasakis; Steve Zuo; Paul Fu",
+    "year": null,
+    "evidence": "PDF p8: 947 piles, 1m diameter, 52–56m effective length, 6m mat, toe layer9-2-1; Table1 soil depths. p10 mat top -25.4m; 31.4m pile head derived from top+6m thickness, not measured as-built."
+  },
+  "assumptions": [
+    "E=32GPa, rho=2500kg/m3, all stiffnesses/dashpots and 8MN head load are assumptions, not site calibrated.",
+    "Head is free to rotate; zero imposed head moment. P/G cap tributary lumped mass participates, no rigid raft stiffness or group interaction.",
+    "Elastic beam, small displacement, linear t-z/p-y/toe analogues; no gapping/yielding, groundwater coupling, consolidation, radiation-domain or continuum soil-stress solve.",
+    "Dynamic load is prescribed 40s synthetic 0.3MN lateral envelope plus +/-0.4MN vertical modulation, not CFD or tower-reaction transfer.",
+    "Depth corrected to source-derived31.4m; previous display model33m differs. Do not move source layers to match the old model."
+  ],
+  "formulation": {
+    "shaft": "ky = shaftTangent[N/m^3] * circumference[m] * tributaryLength[m]",
+    "lateral": "kx = lateralTangent[N/m^2] * tributaryLength[m]",
+    "dashpot": "c = 0.01s * k",
+    "mass": "rho*A*tributaryLength for translations; rho*I*tributaryLength for rotation; head cap mass P/g added to X,Y",
+    "governing": "M u_ddot + C u_dot + K u = F; solve actual OpenSees Newmark(gamma=.5,beta=.25)",
+    "energy": "Incremental about gravity equilibrium: W=sum(F_mid dot du); D=sum(v_mid^T C v_mid dt); W=U+T+D",
+    "soilStress": "side shear tau_z = soil vertical reaction / (pi*D*tributaryLength); this is interface traction, not continuum soil von Mises"
+  },
+  "solver": {
+    "name": "local Zwind/OpenSees",
+    "version": "3.8.0",
+    "binary": "D:\\python_project\\os2zwind\\bin\\opensees.pyd",
+    "binarySHA256": "691b78a308e0b3a66c94096d32c4986b0db797d18f7e8119cb157254f3cd84a4",
+    "scriptSHA256": "8b3b4249c0d323ce16278197bd3b9ce20535788ae723d66a0f68158e81cb89ac"
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "xyz_m": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "absoluteDepth_m": 31.4
+    },
+    {
+      "id": 2,
+      "xyz_m": [
+        0.0,
+        -0.125,
+        0.0
+      ],
+      "absoluteDepth_m": 31.525
+    },
+    {
+      "id": 3,
+      "xyz_m": [
+        0.0,
+        -0.25,
+        0.0
+      ],
+      "absoluteDepth_m": 31.65
+    },
+    {
+      "id": 4,
+      "xyz_m": [
+        0.0,
+        -0.375,
+        0.0
+      ],
+      "absoluteDepth_m": 31.775
+    },
+    {
+      "id": 5,
+      "xyz_m": [
+        0.0,
+        -0.5,
+        0.0
+      ],
+      "absoluteDepth_m": 31.9
+    },
+    {
+      "id": 6,
+      "xyz_m": [
+        0.0,
+        -0.625,
+        0.0
+      ],
+      "absoluteDepth_m": 32.025
+    },
+    {
+      "id": 7,
+      "xyz_m": [
+        0.0,
+        -0.75,
+        0.0
+      ],
+      "absoluteDepth_m": 32.15
+    },
+    {
+      "id": 8,
+      "xyz_m": [
+        0.0,
+        -0.875,
+        0.0
+      ],
+      "absoluteDepth_m": 32.275
+    },
+    {
+      "id": 9,
+      "xyz_m": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "absoluteDepth_m": 32.4
+    },
+    {
+      "id": 10,
+      "xyz_m": [
+        0.0,
+        -1.125,
+        0.0
+      ],
+      "absoluteDepth_m": 32.525
+    },
+    {
+      "id": 11,
+      "xyz_m": [
+        0.0,
+        -1.25,
+        0.0
+      ],
+      "absoluteDepth_m": 32.65
+    },
+    {
+      "id": 12,
+      "xyz_m": [
+        0.0,
+        -1.375,
+        0.0
+      ],
+      "absoluteDepth_m": 32.775
+    },
+    {
+      "id": 13,
+      "xyz_m": [
+        0.0,
+        -1.5,
+        0.0
+      ],
+      "absoluteDepth_m": 32.9
+    },
+    {
+      "id": 14,
+      "xyz_m": [
+        0.0,
+        -1.625,
+        0.0
+      ],
+      "absoluteDepth_m": 33.025
+    },
+    {
+      "id": 15,
+      "xyz_m": [
+        0.0,
+        -1.75,
+        0.0
+      ],
+      "absoluteDepth_m": 33.15
+    },
+    {
+      "id": 16,
+      "xyz_m": [
+        0.0,
+        -1.875,
+        0.0
+      ],
+      "absoluteDepth_m": 33.275
+    },
+    {
+      "id": 17,
+      "xyz_m": [
+        0.0,
+        -2.0,
+        0.0
+      ],
+      "absoluteDepth_m": 33.4
+    },
+    {
+      "id": 18,
+      "xyz_m": [
+        0.0,
+        -2.125,
+        0.0
+      ],
+      "absoluteDepth_m": 33.525
+    },
+    {
+      "id": 19,
+      "xyz_m": [
+        0.0,
+        -2.25,
+        0.0
+      ],
+      "absoluteDepth_m": 33.65
+    },
+    {
+      "id": 20,
+      "xyz_m": [
+        0.0,
+        -2.375,
+        0.0
+      ],
+      "absoluteDepth_m": 33.775
+    },
+    {
+      "id": 21,
+      "xyz_m": [
+        0.0,
+        -2.5,
+        0.0
+      ],
+      "absoluteDepth_m": 33.9
+    },
+    {
+      "id": 22,
+      "xyz_m": [
+        0.0,
+        -2.625,
+        0.0
+      ],
+      "absoluteDepth_m": 34.025
+    },
+    {
+      "id": 23,
+      "xyz_m": [
+        0.0,
+        -2.75,
+        0.0
+      ],
+      "absoluteDepth_m": 34.15
+    },
+    {
+      "id": 24,
+      "xyz_m": [
+        0.0,
+        -2.875,
+        0.0
+      ],
+      "absoluteDepth_m": 34.275
+    },
+    {
+      "id": 25,
+      "xyz_m": [
+        0.0,
+        -3.0,
+        0.0
+      ],
+      "absoluteDepth_m": 34.4
+    },
+    {
+      "id": 26,
+      "xyz_m": [
+        0.0,
+        -3.125,
+        0.0
+      ],
+      "absoluteDepth_m": 34.525
+    },
+    {
+      "id": 27,
+      "xyz_m": [
+        0.0,
+        -3.25,
+        0.0
+      ],
+      "absoluteDepth_m": 34.65
+    },
+    {
+      "id": 28,
+      "xyz_m": [
+        0.0,
+        -3.375,
+        0.0
+      ],
+      "absoluteDepth_m": 34.775
+    },
+    {
+      "id": 29,
+      "xyz_m": [
+        0.0,
+        -3.5,
+        0.0
+      ],
+      "absoluteDepth_m": 34.9
+    },
+    {
+      "id": 30,
+      "xyz_m": [
+        0.0,
+        -3.625,
+        0.0
+      ],
+      "absoluteDepth_m": 35.025
+    },
+    {
+      "id": 31,
+      "xyz_m": [
+        0.0,
+        -3.75,
+        0.0
+      ],
+      "absoluteDepth_m": 35.15
+    },
+    {
+      "id": 32,
+      "xyz_m": [
+        0.0,
+        -3.875,
+        0.0
+      ],
+      "absoluteDepth_m": 35.275
+    },
+    {
+      "id": 33,
+      "xyz_m": [
+        0.0,
+        -4.0,
+        0.0
+      ],
+      "absoluteDepth_m": 35.4
+    },
+    {
+      "id": 34,
+      "xyz_m": [
+        0.0,
+        -4.125,
+        0.0
+      ],
+      "absoluteDepth_m": 35.525
+    },
+    {
+      "id": 35,
+      "xyz_m": [
+        0.0,
+        -4.25,
+        0.0
+      ],
+      "absoluteDepth_m": 35.65
+    },
+    {
+      "id": 36,
+      "xyz_m": [
+        0.0,
+        -4.375,
+        0.0
+      ],
+      "absoluteDepth_m": 35.775
+    },
+    {
+      "id": 37,
+      "xyz_m": [
+        0.0,
+        -4.5,
+        0.0
+      ],
+      "absoluteDepth_m": 35.9
+    },
+    {
+      "id": 38,
+      "xyz_m": [
+        0.0,
+        -4.625,
+        0.0
+      ],
+      "absoluteDepth_m": 36.025
+    },
+    {
+      "id": 39,
+      "xyz_m": [
+        0.0,
+        -4.75,
+        0.0
+      ],
+      "absoluteDepth_m": 36.15
+    },
+    {
+      "id": 40,
+      "xyz_m": [
+        0.0,
+        -4.875,
+        0.0
+      ],
+      "absoluteDepth_m": 36.275
+    },
+    {
+      "id": 41,
+      "xyz_m": [
+        0.0,
+        -5.0,
+        0.0
+      ],
+      "absoluteDepth_m": 36.4
+    },
+    {
+      "id": 42,
+      "xyz_m": [
+        0.0,
+        -5.125,
+        0.0
+      ],
+      "absoluteDepth_m": 36.525
+    },
+    {
+      "id": 43,
+      "xyz_m": [
+        0.0,
+        -5.25,
+        0.0
+      ],
+      "absoluteDepth_m": 36.65
+    },
+    {
+      "id": 44,
+      "xyz_m": [
+        0.0,
+        -5.375,
+        0.0
+      ],
+      "absoluteDepth_m": 36.775
+    },
+    {
+      "id": 45,
+      "xyz_m": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "absoluteDepth_m": 36.9
+    },
+    {
+      "id": 46,
+      "xyz_m": [
+        0.0,
+        -5.6,
+        0.0
+      ],
+      "absoluteDepth_m": 37.0
+    },
+    {
+      "id": 47,
+      "xyz_m": [
+        0.0,
+        -5.625,
+        0.0
+      ],
+      "absoluteDepth_m": 37.025
+    },
+    {
+      "id": 48,
+      "xyz_m": [
+        0.0,
+        -5.75,
+        0.0
+      ],
+      "absoluteDepth_m": 37.15
+    },
+    {
+      "id": 49,
+      "xyz_m": [
+        0.0,
+        -5.875,
+        0.0
+      ],
+      "absoluteDepth_m": 37.275
+    },
+    {
+      "id": 50,
+      "xyz_m": [
+        0.0,
+        -6.0,
+        0.0
+      ],
+      "absoluteDepth_m": 37.4
+    },
+    {
+      "id": 51,
+      "xyz_m": [
+        0.0,
+        -6.125,
+        0.0
+      ],
+      "absoluteDepth_m": 37.525
+    },
+    {
+      "id": 52,
+      "xyz_m": [
+        0.0,
+        -6.25,
+        0.0
+      ],
+      "absoluteDepth_m": 37.65
+    },
+    {
+      "id": 53,
+      "xyz_m": [
+        0.0,
+        -6.375,
+        0.0
+      ],
+      "absoluteDepth_m": 37.775
+    },
+    {
+      "id": 54,
+      "xyz_m": [
+        0.0,
+        -6.5,
+        0.0
+      ],
+      "absoluteDepth_m": 37.9
+    },
+    {
+      "id": 55,
+      "xyz_m": [
+        0.0,
+        -6.625,
+        0.0
+      ],
+      "absoluteDepth_m": 38.025
+    },
+    {
+      "id": 56,
+      "xyz_m": [
+        0.0,
+        -6.75,
+        0.0
+      ],
+      "absoluteDepth_m": 38.15
+    },
+    {
+      "id": 57,
+      "xyz_m": [
+        0.0,
+        -6.875,
+        0.0
+      ],
+      "absoluteDepth_m": 38.275
+    },
+    {
+      "id": 58,
+      "xyz_m": [
+        0.0,
+        -7.0,
+        0.0
+      ],
+      "absoluteDepth_m": 38.4
+    },
+    {
+      "id": 59,
+      "xyz_m": [
+        0.0,
+        -7.125,
+        0.0
+      ],
+      "absoluteDepth_m": 38.525
+    },
+    {
+      "id": 60,
+      "xyz_m": [
+        0.0,
+        -7.25,
+        0.0
+      ],
+      "absoluteDepth_m": 38.65
+    },
+    {
+      "id": 61,
+      "xyz_m": [
+        0.0,
+        -7.375,
+        0.0
+      ],
+      "absoluteDepth_m": 38.775
+    },
+    {
+      "id": 62,
+      "xyz_m": [
+        0.0,
+        -7.5,
+        0.0
+      ],
+      "absoluteDepth_m": 38.9
+    },
+    {
+      "id": 63,
+      "xyz_m": [
+        0.0,
+        -7.625,
+        0.0
+      ],
+      "absoluteDepth_m": 39.025
+    },
+    {
+      "id": 64,
+      "xyz_m": [
+        0.0,
+        -7.75,
+        0.0
+      ],
+      "absoluteDepth_m": 39.15
+    },
+    {
+      "id": 65,
+      "xyz_m": [
+        0.0,
+        -7.875,
+        0.0
+      ],
+      "absoluteDepth_m": 39.275
+    },
+    {
+      "id": 66,
+      "xyz_m": [
+        0.0,
+        -8.0,
+        0.0
+      ],
+      "absoluteDepth_m": 39.4
+    },
+    {
+      "id": 67,
+      "xyz_m": [
+        0.0,
+        -8.125,
+        0.0
+      ],
+      "absoluteDepth_m": 39.525
+    },
+    {
+      "id": 68,
+      "xyz_m": [
+        0.0,
+        -8.25,
+        0.0
+      ],
+      "absoluteDepth_m": 39.65
+    },
+    {
+      "id": 69,
+      "xyz_m": [
+        0.0,
+        -8.375,
+        0.0
+      ],
+      "absoluteDepth_m": 39.775
+    },
+    {
+      "id": 70,
+      "xyz_m": [
+        0.0,
+        -8.5,
+        0.0
+      ],
+      "absoluteDepth_m": 39.9
+    },
+    {
+      "id": 71,
+      "xyz_m": [
+        0.0,
+        -8.625,
+        0.0
+      ],
+      "absoluteDepth_m": 40.025
+    },
+    {
+      "id": 72,
+      "xyz_m": [
+        0.0,
+        -8.75,
+        0.0
+      ],
+      "absoluteDepth_m": 40.15
+    },
+    {
+      "id": 73,
+      "xyz_m": [
+        0.0,
+        -8.875,
+        0.0
+      ],
+      "absoluteDepth_m": 40.275
+    },
+    {
+      "id": 74,
+      "xyz_m": [
+        0.0,
+        -9.0,
+        0.0
+      ],
+      "absoluteDepth_m": 40.4
+    },
+    {
+      "id": 75,
+      "xyz_m": [
+        0.0,
+        -9.125,
+        0.0
+      ],
+      "absoluteDepth_m": 40.525
+    },
+    {
+      "id": 76,
+      "xyz_m": [
+        0.0,
+        -9.25,
+        0.0
+      ],
+      "absoluteDepth_m": 40.65
+    },
+    {
+      "id": 77,
+      "xyz_m": [
+        0.0,
+        -9.375,
+        0.0
+      ],
+      "absoluteDepth_m": 40.775
+    },
+    {
+      "id": 78,
+      "xyz_m": [
+        0.0,
+        -9.5,
+        0.0
+      ],
+      "absoluteDepth_m": 40.9
+    },
+    {
+      "id": 79,
+      "xyz_m": [
+        0.0,
+        -9.625,
+        0.0
+      ],
+      "absoluteDepth_m": 41.025
+    },
+    {
+      "id": 80,
+      "xyz_m": [
+        0.0,
+        -9.75,
+        0.0
+      ],
+      "absoluteDepth_m": 41.15
+    },
+    {
+      "id": 81,
+      "xyz_m": [
+        0.0,
+        -9.875,
+        0.0
+      ],
+      "absoluteDepth_m": 41.275
+    },
+    {
+      "id": 82,
+      "xyz_m": [
+        0.0,
+        -10.0,
+        0.0
+      ],
+      "absoluteDepth_m": 41.4
+    },
+    {
+      "id": 83,
+      "xyz_m": [
+        0.0,
+        -10.125,
+        0.0
+      ],
+      "absoluteDepth_m": 41.525
+    },
+    {
+      "id": 84,
+      "xyz_m": [
+        0.0,
+        -10.25,
+        0.0
+      ],
+      "absoluteDepth_m": 41.65
+    },
+    {
+      "id": 85,
+      "xyz_m": [
+        0.0,
+        -10.375,
+        0.0
+      ],
+      "absoluteDepth_m": 41.775
+    },
+    {
+      "id": 86,
+      "xyz_m": [
+        0.0,
+        -10.5,
+        0.0
+      ],
+      "absoluteDepth_m": 41.9
+    },
+    {
+      "id": 87,
+      "xyz_m": [
+        0.0,
+        -10.625,
+        0.0
+      ],
+      "absoluteDepth_m": 42.025
+    },
+    {
+      "id": 88,
+      "xyz_m": [
+        0.0,
+        -10.75,
+        0.0
+      ],
+      "absoluteDepth_m": 42.15
+    },
+    {
+      "id": 89,
+      "xyz_m": [
+        0.0,
+        -10.875,
+        0.0
+      ],
+      "absoluteDepth_m": 42.275
+    },
+    {
+      "id": 90,
+      "xyz_m": [
+        0.0,
+        -11.0,
+        0.0
+      ],
+      "absoluteDepth_m": 42.4
+    },
+    {
+      "id": 91,
+      "xyz_m": [
+        0.0,
+        -11.125,
+        0.0
+      ],
+      "absoluteDepth_m": 42.525
+    },
+    {
+      "id": 92,
+      "xyz_m": [
+        0.0,
+        -11.25,
+        0.0
+      ],
+      "absoluteDepth_m": 42.65
+    },
+    {
+      "id": 93,
+      "xyz_m": [
+        0.0,
+        -11.375,
+        0.0
+      ],
+      "absoluteDepth_m": 42.775
+    },
+    {
+      "id": 94,
+      "xyz_m": [
+        0.0,
+        -11.5,
+        0.0
+      ],
+      "absoluteDepth_m": 42.9
+    },
+    {
+      "id": 95,
+      "xyz_m": [
+        0.0,
+        -11.625,
+        0.0
+      ],
+      "absoluteDepth_m": 43.025
+    },
+    {
+      "id": 96,
+      "xyz_m": [
+        0.0,
+        -11.75,
+        0.0
+      ],
+      "absoluteDepth_m": 43.15
+    },
+    {
+      "id": 97,
+      "xyz_m": [
+        0.0,
+        -11.875,
+        0.0
+      ],
+      "absoluteDepth_m": 43.275
+    },
+    {
+      "id": 98,
+      "xyz_m": [
+        0.0,
+        -12.0,
+        0.0
+      ],
+      "absoluteDepth_m": 43.4
+    },
+    {
+      "id": 99,
+      "xyz_m": [
+        0.0,
+        -12.125,
+        0.0
+      ],
+      "absoluteDepth_m": 43.525
+    },
+    {
+      "id": 100,
+      "xyz_m": [
+        0.0,
+        -12.25,
+        0.0
+      ],
+      "absoluteDepth_m": 43.65
+    },
+    {
+      "id": 101,
+      "xyz_m": [
+        0.0,
+        -12.375,
+        0.0
+      ],
+      "absoluteDepth_m": 43.775
+    },
+    {
+      "id": 102,
+      "xyz_m": [
+        0.0,
+        -12.5,
+        0.0
+      ],
+      "absoluteDepth_m": 43.9
+    },
+    {
+      "id": 103,
+      "xyz_m": [
+        0.0,
+        -12.625,
+        0.0
+      ],
+      "absoluteDepth_m": 44.025
+    },
+    {
+      "id": 104,
+      "xyz_m": [
+        0.0,
+        -12.75,
+        0.0
+      ],
+      "absoluteDepth_m": 44.15
+    },
+    {
+      "id": 105,
+      "xyz_m": [
+        0.0,
+        -12.875,
+        0.0
+      ],
+      "absoluteDepth_m": 44.275
+    },
+    {
+      "id": 106,
+      "xyz_m": [
+        0.0,
+        -13.0,
+        0.0
+      ],
+      "absoluteDepth_m": 44.4
+    },
+    {
+      "id": 107,
+      "xyz_m": [
+        0.0,
+        -13.125,
+        0.0
+      ],
+      "absoluteDepth_m": 44.525
+    },
+    {
+      "id": 108,
+      "xyz_m": [
+        0.0,
+        -13.25,
+        0.0
+      ],
+      "absoluteDepth_m": 44.65
+    },
+    {
+      "id": 109,
+      "xyz_m": [
+        0.0,
+        -13.375,
+        0.0
+      ],
+      "absoluteDepth_m": 44.775
+    },
+    {
+      "id": 110,
+      "xyz_m": [
+        0.0,
+        -13.5,
+        0.0
+      ],
+      "absoluteDepth_m": 44.9
+    },
+    {
+      "id": 111,
+      "xyz_m": [
+        0.0,
+        -13.625,
+        0.0
+      ],
+      "absoluteDepth_m": 45.025
+    },
+    {
+      "id": 112,
+      "xyz_m": [
+        0.0,
+        -13.75,
+        0.0
+      ],
+      "absoluteDepth_m": 45.15
+    },
+    {
+      "id": 113,
+      "xyz_m": [
+        0.0,
+        -13.875,
+        0.0
+      ],
+      "absoluteDepth_m": 45.275
+    },
+    {
+      "id": 114,
+      "xyz_m": [
+        0.0,
+        -14.0,
+        0.0
+      ],
+      "absoluteDepth_m": 45.4
+    },
+    {
+      "id": 115,
+      "xyz_m": [
+        0.0,
+        -14.125,
+        0.0
+      ],
+      "absoluteDepth_m": 45.525
+    },
+    {
+      "id": 116,
+      "xyz_m": [
+        0.0,
+        -14.25,
+        0.0
+      ],
+      "absoluteDepth_m": 45.65
+    },
+    {
+      "id": 117,
+      "xyz_m": [
+        0.0,
+        -14.375,
+        0.0
+      ],
+      "absoluteDepth_m": 45.775
+    },
+    {
+      "id": 118,
+      "xyz_m": [
+        0.0,
+        -14.5,
+        0.0
+      ],
+      "absoluteDepth_m": 45.9
+    },
+    {
+      "id": 119,
+      "xyz_m": [
+        0.0,
+        -14.625,
+        0.0
+      ],
+      "absoluteDepth_m": 46.025
+    },
+    {
+      "id": 120,
+      "xyz_m": [
+        0.0,
+        -14.75,
+        0.0
+      ],
+      "absoluteDepth_m": 46.15
+    },
+    {
+      "id": 121,
+      "xyz_m": [
+        0.0,
+        -14.875,
+        0.0
+      ],
+      "absoluteDepth_m": 46.275
+    },
+    {
+      "id": 122,
+      "xyz_m": [
+        0.0,
+        -15.0,
+        0.0
+      ],
+      "absoluteDepth_m": 46.4
+    },
+    {
+      "id": 123,
+      "xyz_m": [
+        0.0,
+        -15.125,
+        0.0
+      ],
+      "absoluteDepth_m": 46.525
+    },
+    {
+      "id": 124,
+      "xyz_m": [
+        0.0,
+        -15.25,
+        0.0
+      ],
+      "absoluteDepth_m": 46.65
+    },
+    {
+      "id": 125,
+      "xyz_m": [
+        0.0,
+        -15.375,
+        0.0
+      ],
+      "absoluteDepth_m": 46.775
+    },
+    {
+      "id": 126,
+      "xyz_m": [
+        0.0,
+        -15.5,
+        0.0
+      ],
+      "absoluteDepth_m": 46.9
+    },
+    {
+      "id": 127,
+      "xyz_m": [
+        0.0,
+        -15.625,
+        0.0
+      ],
+      "absoluteDepth_m": 47.025
+    },
+    {
+      "id": 128,
+      "xyz_m": [
+        0.0,
+        -15.75,
+        0.0
+      ],
+      "absoluteDepth_m": 47.15
+    },
+    {
+      "id": 129,
+      "xyz_m": [
+        0.0,
+        -15.875,
+        0.0
+      ],
+      "absoluteDepth_m": 47.275
+    },
+    {
+      "id": 130,
+      "xyz_m": [
+        0.0,
+        -16.0,
+        0.0
+      ],
+      "absoluteDepth_m": 47.4
+    },
+    {
+      "id": 131,
+      "xyz_m": [
+        0.0,
+        -16.125,
+        0.0
+      ],
+      "absoluteDepth_m": 47.525
+    },
+    {
+      "id": 132,
+      "xyz_m": [
+        0.0,
+        -16.25,
+        0.0
+      ],
+      "absoluteDepth_m": 47.65
+    },
+    {
+      "id": 133,
+      "xyz_m": [
+        0.0,
+        -16.375,
+        0.0
+      ],
+      "absoluteDepth_m": 47.775
+    },
+    {
+      "id": 134,
+      "xyz_m": [
+        0.0,
+        -16.5,
+        0.0
+      ],
+      "absoluteDepth_m": 47.9
+    },
+    {
+      "id": 135,
+      "xyz_m": [
+        0.0,
+        -16.625,
+        0.0
+      ],
+      "absoluteDepth_m": 48.025
+    },
+    {
+      "id": 136,
+      "xyz_m": [
+        0.0,
+        -16.75,
+        0.0
+      ],
+      "absoluteDepth_m": 48.15
+    },
+    {
+      "id": 137,
+      "xyz_m": [
+        0.0,
+        -16.875,
+        0.0
+      ],
+      "absoluteDepth_m": 48.275
+    },
+    {
+      "id": 138,
+      "xyz_m": [
+        0.0,
+        -17.0,
+        0.0
+      ],
+      "absoluteDepth_m": 48.4
+    },
+    {
+      "id": 139,
+      "xyz_m": [
+        0.0,
+        -17.125,
+        0.0
+      ],
+      "absoluteDepth_m": 48.525
+    },
+    {
+      "id": 140,
+      "xyz_m": [
+        0.0,
+        -17.25,
+        0.0
+      ],
+      "absoluteDepth_m": 48.65
+    },
+    {
+      "id": 141,
+      "xyz_m": [
+        0.0,
+        -17.375,
+        0.0
+      ],
+      "absoluteDepth_m": 48.775
+    },
+    {
+      "id": 142,
+      "xyz_m": [
+        0.0,
+        -17.5,
+        0.0
+      ],
+      "absoluteDepth_m": 48.9
+    },
+    {
+      "id": 143,
+      "xyz_m": [
+        0.0,
+        -17.625,
+        0.0
+      ],
+      "absoluteDepth_m": 49.025
+    },
+    {
+      "id": 144,
+      "xyz_m": [
+        0.0,
+        -17.75,
+        0.0
+      ],
+      "absoluteDepth_m": 49.15
+    },
+    {
+      "id": 145,
+      "xyz_m": [
+        0.0,
+        -17.875,
+        0.0
+      ],
+      "absoluteDepth_m": 49.275
+    },
+    {
+      "id": 146,
+      "xyz_m": [
+        0.0,
+        -18.0,
+        0.0
+      ],
+      "absoluteDepth_m": 49.4
+    },
+    {
+      "id": 147,
+      "xyz_m": [
+        0.0,
+        -18.125,
+        0.0
+      ],
+      "absoluteDepth_m": 49.525
+    },
+    {
+      "id": 148,
+      "xyz_m": [
+        0.0,
+        -18.25,
+        0.0
+      ],
+      "absoluteDepth_m": 49.65
+    },
+    {
+      "id": 149,
+      "xyz_m": [
+        0.0,
+        -18.375,
+        0.0
+      ],
+      "absoluteDepth_m": 49.775
+    },
+    {
+      "id": 150,
+      "xyz_m": [
+        0.0,
+        -18.5,
+        0.0
+      ],
+      "absoluteDepth_m": 49.9
+    },
+    {
+      "id": 151,
+      "xyz_m": [
+        0.0,
+        -18.625,
+        0.0
+      ],
+      "absoluteDepth_m": 50.025
+    },
+    {
+      "id": 152,
+      "xyz_m": [
+        0.0,
+        -18.75,
+        0.0
+      ],
+      "absoluteDepth_m": 50.15
+    },
+    {
+      "id": 153,
+      "xyz_m": [
+        0.0,
+        -18.875,
+        0.0
+      ],
+      "absoluteDepth_m": 50.275
+    },
+    {
+      "id": 154,
+      "xyz_m": [
+        0.0,
+        -19.0,
+        0.0
+      ],
+      "absoluteDepth_m": 50.4
+    },
+    {
+      "id": 155,
+      "xyz_m": [
+        0.0,
+        -19.125,
+        0.0
+      ],
+      "absoluteDepth_m": 50.525
+    },
+    {
+      "id": 156,
+      "xyz_m": [
+        0.0,
+        -19.25,
+        0.0
+      ],
+      "absoluteDepth_m": 50.65
+    },
+    {
+      "id": 157,
+      "xyz_m": [
+        0.0,
+        -19.375,
+        0.0
+      ],
+      "absoluteDepth_m": 50.775
+    },
+    {
+      "id": 158,
+      "xyz_m": [
+        0.0,
+        -19.5,
+        0.0
+      ],
+      "absoluteDepth_m": 50.9
+    },
+    {
+      "id": 159,
+      "xyz_m": [
+        0.0,
+        -19.625,
+        0.0
+      ],
+      "absoluteDepth_m": 51.025
+    },
+    {
+      "id": 160,
+      "xyz_m": [
+        0.0,
+        -19.75,
+        0.0
+      ],
+      "absoluteDepth_m": 51.15
+    },
+    {
+      "id": 161,
+      "xyz_m": [
+        0.0,
+        -19.875,
+        0.0
+      ],
+      "absoluteDepth_m": 51.275
+    },
+    {
+      "id": 162,
+      "xyz_m": [
+        0.0,
+        -20.0,
+        0.0
+      ],
+      "absoluteDepth_m": 51.4
+    },
+    {
+      "id": 163,
+      "xyz_m": [
+        0.0,
+        -20.125,
+        0.0
+      ],
+      "absoluteDepth_m": 51.525
+    },
+    {
+      "id": 164,
+      "xyz_m": [
+        0.0,
+        -20.25,
+        0.0
+      ],
+      "absoluteDepth_m": 51.65
+    },
+    {
+      "id": 165,
+      "xyz_m": [
+        0.0,
+        -20.375,
+        0.0
+      ],
+      "absoluteDepth_m": 51.775
+    },
+    {
+      "id": 166,
+      "xyz_m": [
+        0.0,
+        -20.5,
+        0.0
+      ],
+      "absoluteDepth_m": 51.9
+    },
+    {
+      "id": 167,
+      "xyz_m": [
+        0.0,
+        -20.625,
+        0.0
+      ],
+      "absoluteDepth_m": 52.025
+    },
+    {
+      "id": 168,
+      "xyz_m": [
+        0.0,
+        -20.75,
+        0.0
+      ],
+      "absoluteDepth_m": 52.15
+    },
+    {
+      "id": 169,
+      "xyz_m": [
+        0.0,
+        -20.875,
+        0.0
+      ],
+      "absoluteDepth_m": 52.275
+    },
+    {
+      "id": 170,
+      "xyz_m": [
+        0.0,
+        -21.0,
+        0.0
+      ],
+      "absoluteDepth_m": 52.4
+    },
+    {
+      "id": 171,
+      "xyz_m": [
+        0.0,
+        -21.125,
+        0.0
+      ],
+      "absoluteDepth_m": 52.525
+    },
+    {
+      "id": 172,
+      "xyz_m": [
+        0.0,
+        -21.25,
+        0.0
+      ],
+      "absoluteDepth_m": 52.65
+    },
+    {
+      "id": 173,
+      "xyz_m": [
+        0.0,
+        -21.375,
+        0.0
+      ],
+      "absoluteDepth_m": 52.775
+    },
+    {
+      "id": 174,
+      "xyz_m": [
+        0.0,
+        -21.5,
+        0.0
+      ],
+      "absoluteDepth_m": 52.9
+    },
+    {
+      "id": 175,
+      "xyz_m": [
+        0.0,
+        -21.625,
+        0.0
+      ],
+      "absoluteDepth_m": 53.025
+    },
+    {
+      "id": 176,
+      "xyz_m": [
+        0.0,
+        -21.75,
+        0.0
+      ],
+      "absoluteDepth_m": 53.15
+    },
+    {
+      "id": 177,
+      "xyz_m": [
+        0.0,
+        -21.875,
+        0.0
+      ],
+      "absoluteDepth_m": 53.275
+    },
+    {
+      "id": 178,
+      "xyz_m": [
+        0.0,
+        -22.0,
+        0.0
+      ],
+      "absoluteDepth_m": 53.4
+    },
+    {
+      "id": 179,
+      "xyz_m": [
+        0.0,
+        -22.125,
+        0.0
+      ],
+      "absoluteDepth_m": 53.525
+    },
+    {
+      "id": 180,
+      "xyz_m": [
+        0.0,
+        -22.25,
+        0.0
+      ],
+      "absoluteDepth_m": 53.65
+    },
+    {
+      "id": 181,
+      "xyz_m": [
+        0.0,
+        -22.375,
+        0.0
+      ],
+      "absoluteDepth_m": 53.775
+    },
+    {
+      "id": 182,
+      "xyz_m": [
+        0.0,
+        -22.5,
+        0.0
+      ],
+      "absoluteDepth_m": 53.9
+    },
+    {
+      "id": 183,
+      "xyz_m": [
+        0.0,
+        -22.625,
+        0.0
+      ],
+      "absoluteDepth_m": 54.025
+    },
+    {
+      "id": 184,
+      "xyz_m": [
+        0.0,
+        -22.75,
+        0.0
+      ],
+      "absoluteDepth_m": 54.15
+    },
+    {
+      "id": 185,
+      "xyz_m": [
+        0.0,
+        -22.875,
+        0.0
+      ],
+      "absoluteDepth_m": 54.275
+    },
+    {
+      "id": 186,
+      "xyz_m": [
+        0.0,
+        -23.0,
+        0.0
+      ],
+      "absoluteDepth_m": 54.4
+    },
+    {
+      "id": 187,
+      "xyz_m": [
+        0.0,
+        -23.125,
+        0.0
+      ],
+      "absoluteDepth_m": 54.525
+    },
+    {
+      "id": 188,
+      "xyz_m": [
+        0.0,
+        -23.25,
+        0.0
+      ],
+      "absoluteDepth_m": 54.65
+    },
+    {
+      "id": 189,
+      "xyz_m": [
+        0.0,
+        -23.375,
+        0.0
+      ],
+      "absoluteDepth_m": 54.775
+    },
+    {
+      "id": 190,
+      "xyz_m": [
+        0.0,
+        -23.5,
+        0.0
+      ],
+      "absoluteDepth_m": 54.9
+    },
+    {
+      "id": 191,
+      "xyz_m": [
+        0.0,
+        -23.625,
+        0.0
+      ],
+      "absoluteDepth_m": 55.025
+    },
+    {
+      "id": 192,
+      "xyz_m": [
+        0.0,
+        -23.75,
+        0.0
+      ],
+      "absoluteDepth_m": 55.15
+    },
+    {
+      "id": 193,
+      "xyz_m": [
+        0.0,
+        -23.875,
+        0.0
+      ],
+      "absoluteDepth_m": 55.275
+    },
+    {
+      "id": 194,
+      "xyz_m": [
+        0.0,
+        -24.0,
+        0.0
+      ],
+      "absoluteDepth_m": 55.4
+    },
+    {
+      "id": 195,
+      "xyz_m": [
+        0.0,
+        -24.125,
+        0.0
+      ],
+      "absoluteDepth_m": 55.525
+    },
+    {
+      "id": 196,
+      "xyz_m": [
+        0.0,
+        -24.25,
+        0.0
+      ],
+      "absoluteDepth_m": 55.65
+    },
+    {
+      "id": 197,
+      "xyz_m": [
+        0.0,
+        -24.375,
+        0.0
+      ],
+      "absoluteDepth_m": 55.775
+    },
+    {
+      "id": 198,
+      "xyz_m": [
+        0.0,
+        -24.5,
+        0.0
+      ],
+      "absoluteDepth_m": 55.9
+    },
+    {
+      "id": 199,
+      "xyz_m": [
+        0.0,
+        -24.625,
+        0.0
+      ],
+      "absoluteDepth_m": 56.025
+    },
+    {
+      "id": 200,
+      "xyz_m": [
+        0.0,
+        -24.75,
+        0.0
+      ],
+      "absoluteDepth_m": 56.15
+    },
+    {
+      "id": 201,
+      "xyz_m": [
+        0.0,
+        -24.875,
+        0.0
+      ],
+      "absoluteDepth_m": 56.275
+    },
+    {
+      "id": 202,
+      "xyz_m": [
+        0.0,
+        -25.0,
+        0.0
+      ],
+      "absoluteDepth_m": 56.4
+    },
+    {
+      "id": 203,
+      "xyz_m": [
+        0.0,
+        -25.125,
+        0.0
+      ],
+      "absoluteDepth_m": 56.525
+    },
+    {
+      "id": 204,
+      "xyz_m": [
+        0.0,
+        -25.25,
+        0.0
+      ],
+      "absoluteDepth_m": 56.65
+    },
+    {
+      "id": 205,
+      "xyz_m": [
+        0.0,
+        -25.375,
+        0.0
+      ],
+      "absoluteDepth_m": 56.775
+    },
+    {
+      "id": 206,
+      "xyz_m": [
+        0.0,
+        -25.5,
+        0.0
+      ],
+      "absoluteDepth_m": 56.9
+    },
+    {
+      "id": 207,
+      "xyz_m": [
+        0.0,
+        -25.625,
+        0.0
+      ],
+      "absoluteDepth_m": 57.025
+    },
+    {
+      "id": 208,
+      "xyz_m": [
+        0.0,
+        -25.75,
+        0.0
+      ],
+      "absoluteDepth_m": 57.15
+    },
+    {
+      "id": 209,
+      "xyz_m": [
+        0.0,
+        -25.875,
+        0.0
+      ],
+      "absoluteDepth_m": 57.275
+    },
+    {
+      "id": 210,
+      "xyz_m": [
+        0.0,
+        -26.0,
+        0.0
+      ],
+      "absoluteDepth_m": 57.4
+    },
+    {
+      "id": 211,
+      "xyz_m": [
+        0.0,
+        -26.125,
+        0.0
+      ],
+      "absoluteDepth_m": 57.525
+    },
+    {
+      "id": 212,
+      "xyz_m": [
+        0.0,
+        -26.25,
+        0.0
+      ],
+      "absoluteDepth_m": 57.65
+    },
+    {
+      "id": 213,
+      "xyz_m": [
+        0.0,
+        -26.375,
+        0.0
+      ],
+      "absoluteDepth_m": 57.775
+    },
+    {
+      "id": 214,
+      "xyz_m": [
+        0.0,
+        -26.5,
+        0.0
+      ],
+      "absoluteDepth_m": 57.9
+    },
+    {
+      "id": 215,
+      "xyz_m": [
+        0.0,
+        -26.625,
+        0.0
+      ],
+      "absoluteDepth_m": 58.025
+    },
+    {
+      "id": 216,
+      "xyz_m": [
+        0.0,
+        -26.75,
+        0.0
+      ],
+      "absoluteDepth_m": 58.15
+    },
+    {
+      "id": 217,
+      "xyz_m": [
+        0.0,
+        -26.875,
+        0.0
+      ],
+      "absoluteDepth_m": 58.275
+    },
+    {
+      "id": 218,
+      "xyz_m": [
+        0.0,
+        -27.0,
+        0.0
+      ],
+      "absoluteDepth_m": 58.4
+    },
+    {
+      "id": 219,
+      "xyz_m": [
+        0.0,
+        -27.125,
+        0.0
+      ],
+      "absoluteDepth_m": 58.525
+    },
+    {
+      "id": 220,
+      "xyz_m": [
+        0.0,
+        -27.25,
+        0.0
+      ],
+      "absoluteDepth_m": 58.65
+    },
+    {
+      "id": 221,
+      "xyz_m": [
+        0.0,
+        -27.375,
+        0.0
+      ],
+      "absoluteDepth_m": 58.775
+    },
+    {
+      "id": 222,
+      "xyz_m": [
+        0.0,
+        -27.5,
+        0.0
+      ],
+      "absoluteDepth_m": 58.9
+    },
+    {
+      "id": 223,
+      "xyz_m": [
+        0.0,
+        -27.625,
+        0.0
+      ],
+      "absoluteDepth_m": 59.025
+    },
+    {
+      "id": 224,
+      "xyz_m": [
+        0.0,
+        -27.75,
+        0.0
+      ],
+      "absoluteDepth_m": 59.15
+    },
+    {
+      "id": 225,
+      "xyz_m": [
+        0.0,
+        -27.875,
+        0.0
+      ],
+      "absoluteDepth_m": 59.275
+    },
+    {
+      "id": 226,
+      "xyz_m": [
+        0.0,
+        -28.0,
+        0.0
+      ],
+      "absoluteDepth_m": 59.4
+    },
+    {
+      "id": 227,
+      "xyz_m": [
+        0.0,
+        -28.125,
+        0.0
+      ],
+      "absoluteDepth_m": 59.525
+    },
+    {
+      "id": 228,
+      "xyz_m": [
+        0.0,
+        -28.25,
+        0.0
+      ],
+      "absoluteDepth_m": 59.65
+    },
+    {
+      "id": 229,
+      "xyz_m": [
+        0.0,
+        -28.375,
+        0.0
+      ],
+      "absoluteDepth_m": 59.775
+    },
+    {
+      "id": 230,
+      "xyz_m": [
+        0.0,
+        -28.5,
+        0.0
+      ],
+      "absoluteDepth_m": 59.9
+    },
+    {
+      "id": 231,
+      "xyz_m": [
+        0.0,
+        -28.625,
+        0.0
+      ],
+      "absoluteDepth_m": 60.025
+    },
+    {
+      "id": 232,
+      "xyz_m": [
+        0.0,
+        -28.75,
+        0.0
+      ],
+      "absoluteDepth_m": 60.15
+    },
+    {
+      "id": 233,
+      "xyz_m": [
+        0.0,
+        -28.875,
+        0.0
+      ],
+      "absoluteDepth_m": 60.275
+    },
+    {
+      "id": 234,
+      "xyz_m": [
+        0.0,
+        -29.0,
+        0.0
+      ],
+      "absoluteDepth_m": 60.4
+    },
+    {
+      "id": 235,
+      "xyz_m": [
+        0.0,
+        -29.125,
+        0.0
+      ],
+      "absoluteDepth_m": 60.525
+    },
+    {
+      "id": 236,
+      "xyz_m": [
+        0.0,
+        -29.25,
+        0.0
+      ],
+      "absoluteDepth_m": 60.65
+    },
+    {
+      "id": 237,
+      "xyz_m": [
+        0.0,
+        -29.375,
+        0.0
+      ],
+      "absoluteDepth_m": 60.775
+    },
+    {
+      "id": 238,
+      "xyz_m": [
+        0.0,
+        -29.5,
+        0.0
+      ],
+      "absoluteDepth_m": 60.9
+    },
+    {
+      "id": 239,
+      "xyz_m": [
+        0.0,
+        -29.625,
+        0.0
+      ],
+      "absoluteDepth_m": 61.025
+    },
+    {
+      "id": 240,
+      "xyz_m": [
+        0.0,
+        -29.75,
+        0.0
+      ],
+      "absoluteDepth_m": 61.15
+    },
+    {
+      "id": 241,
+      "xyz_m": [
+        0.0,
+        -29.875,
+        0.0
+      ],
+      "absoluteDepth_m": 61.275
+    },
+    {
+      "id": 242,
+      "xyz_m": [
+        0.0,
+        -30.0,
+        0.0
+      ],
+      "absoluteDepth_m": 61.4
+    },
+    {
+      "id": 243,
+      "xyz_m": [
+        0.0,
+        -30.125,
+        0.0
+      ],
+      "absoluteDepth_m": 61.525
+    },
+    {
+      "id": 244,
+      "xyz_m": [
+        0.0,
+        -30.25,
+        0.0
+      ],
+      "absoluteDepth_m": 61.65
+    },
+    {
+      "id": 245,
+      "xyz_m": [
+        0.0,
+        -30.375,
+        0.0
+      ],
+      "absoluteDepth_m": 61.775
+    },
+    {
+      "id": 246,
+      "xyz_m": [
+        0.0,
+        -30.5,
+        0.0
+      ],
+      "absoluteDepth_m": 61.9
+    },
+    {
+      "id": 247,
+      "xyz_m": [
+        0.0,
+        -30.625,
+        0.0
+      ],
+      "absoluteDepth_m": 62.025
+    },
+    {
+      "id": 248,
+      "xyz_m": [
+        0.0,
+        -30.75,
+        0.0
+      ],
+      "absoluteDepth_m": 62.15
+    },
+    {
+      "id": 249,
+      "xyz_m": [
+        0.0,
+        -30.875,
+        0.0
+      ],
+      "absoluteDepth_m": 62.275
+    },
+    {
+      "id": 250,
+      "xyz_m": [
+        0.0,
+        -31.0,
+        0.0
+      ],
+      "absoluteDepth_m": 62.4
+    },
+    {
+      "id": 251,
+      "xyz_m": [
+        0.0,
+        -31.125,
+        0.0
+      ],
+      "absoluteDepth_m": 62.525
+    },
+    {
+      "id": 252,
+      "xyz_m": [
+        0.0,
+        -31.25,
+        0.0
+      ],
+      "absoluteDepth_m": 62.65
+    },
+    {
+      "id": 253,
+      "xyz_m": [
+        0.0,
+        -31.375,
+        0.0
+      ],
+      "absoluteDepth_m": 62.775
+    },
+    {
+      "id": 254,
+      "xyz_m": [
+        0.0,
+        -31.5,
+        0.0
+      ],
+      "absoluteDepth_m": 62.9
+    },
+    {
+      "id": 255,
+      "xyz_m": [
+        0.0,
+        -31.625,
+        0.0
+      ],
+      "absoluteDepth_m": 63.025
+    },
+    {
+      "id": 256,
+      "xyz_m": [
+        0.0,
+        -31.75,
+        0.0
+      ],
+      "absoluteDepth_m": 63.15
+    },
+    {
+      "id": 257,
+      "xyz_m": [
+        0.0,
+        -31.875,
+        0.0
+      ],
+      "absoluteDepth_m": 63.275
+    },
+    {
+      "id": 258,
+      "xyz_m": [
+        0.0,
+        -32.0,
+        0.0
+      ],
+      "absoluteDepth_m": 63.4
+    },
+    {
+      "id": 259,
+      "xyz_m": [
+        0.0,
+        -32.125,
+        0.0
+      ],
+      "absoluteDepth_m": 63.525
+    },
+    {
+      "id": 260,
+      "xyz_m": [
+        0.0,
+        -32.25,
+        0.0
+      ],
+      "absoluteDepth_m": 63.65
+    },
+    {
+      "id": 261,
+      "xyz_m": [
+        0.0,
+        -32.375,
+        0.0
+      ],
+      "absoluteDepth_m": 63.775
+    },
+    {
+      "id": 262,
+      "xyz_m": [
+        0.0,
+        -32.5,
+        0.0
+      ],
+      "absoluteDepth_m": 63.9
+    },
+    {
+      "id": 263,
+      "xyz_m": [
+        0.0,
+        -32.625,
+        0.0
+      ],
+      "absoluteDepth_m": 64.025
+    },
+    {
+      "id": 264,
+      "xyz_m": [
+        0.0,
+        -32.75,
+        0.0
+      ],
+      "absoluteDepth_m": 64.15
+    },
+    {
+      "id": 265,
+      "xyz_m": [
+        0.0,
+        -32.875,
+        0.0
+      ],
+      "absoluteDepth_m": 64.275
+    },
+    {
+      "id": 266,
+      "xyz_m": [
+        0.0,
+        -33.0,
+        0.0
+      ],
+      "absoluteDepth_m": 64.4
+    },
+    {
+      "id": 267,
+      "xyz_m": [
+        0.0,
+        -33.125,
+        0.0
+      ],
+      "absoluteDepth_m": 64.525
+    },
+    {
+      "id": 268,
+      "xyz_m": [
+        0.0,
+        -33.25,
+        0.0
+      ],
+      "absoluteDepth_m": 64.65
+    },
+    {
+      "id": 269,
+      "xyz_m": [
+        0.0,
+        -33.375,
+        0.0
+      ],
+      "absoluteDepth_m": 64.775
+    },
+    {
+      "id": 270,
+      "xyz_m": [
+        0.0,
+        -33.5,
+        0.0
+      ],
+      "absoluteDepth_m": 64.9
+    },
+    {
+      "id": 271,
+      "xyz_m": [
+        0.0,
+        -33.625,
+        0.0
+      ],
+      "absoluteDepth_m": 65.025
+    },
+    {
+      "id": 272,
+      "xyz_m": [
+        0.0,
+        -33.75,
+        0.0
+      ],
+      "absoluteDepth_m": 65.15
+    },
+    {
+      "id": 273,
+      "xyz_m": [
+        0.0,
+        -33.875,
+        0.0
+      ],
+      "absoluteDepth_m": 65.275
+    },
+    {
+      "id": 274,
+      "xyz_m": [
+        0.0,
+        -34.0,
+        0.0
+      ],
+      "absoluteDepth_m": 65.4
+    },
+    {
+      "id": 275,
+      "xyz_m": [
+        0.0,
+        -34.125,
+        0.0
+      ],
+      "absoluteDepth_m": 65.525
+    },
+    {
+      "id": 276,
+      "xyz_m": [
+        0.0,
+        -34.25,
+        0.0
+      ],
+      "absoluteDepth_m": 65.65
+    },
+    {
+      "id": 277,
+      "xyz_m": [
+        0.0,
+        -34.375,
+        0.0
+      ],
+      "absoluteDepth_m": 65.775
+    },
+    {
+      "id": 278,
+      "xyz_m": [
+        0.0,
+        -34.5,
+        0.0
+      ],
+      "absoluteDepth_m": 65.9
+    },
+    {
+      "id": 279,
+      "xyz_m": [
+        0.0,
+        -34.625,
+        0.0
+      ],
+      "absoluteDepth_m": 66.025
+    },
+    {
+      "id": 280,
+      "xyz_m": [
+        0.0,
+        -34.75,
+        0.0
+      ],
+      "absoluteDepth_m": 66.15
+    },
+    {
+      "id": 281,
+      "xyz_m": [
+        0.0,
+        -34.875,
+        0.0
+      ],
+      "absoluteDepth_m": 66.275
+    },
+    {
+      "id": 282,
+      "xyz_m": [
+        0.0,
+        -35.0,
+        0.0
+      ],
+      "absoluteDepth_m": 66.4
+    },
+    {
+      "id": 283,
+      "xyz_m": [
+        0.0,
+        -35.125,
+        0.0
+      ],
+      "absoluteDepth_m": 66.525
+    },
+    {
+      "id": 284,
+      "xyz_m": [
+        0.0,
+        -35.25,
+        0.0
+      ],
+      "absoluteDepth_m": 66.65
+    },
+    {
+      "id": 285,
+      "xyz_m": [
+        0.0,
+        -35.375,
+        0.0
+      ],
+      "absoluteDepth_m": 66.775
+    },
+    {
+      "id": 286,
+      "xyz_m": [
+        0.0,
+        -35.5,
+        0.0
+      ],
+      "absoluteDepth_m": 66.9
+    },
+    {
+      "id": 287,
+      "xyz_m": [
+        0.0,
+        -35.625,
+        0.0
+      ],
+      "absoluteDepth_m": 67.025
+    },
+    {
+      "id": 288,
+      "xyz_m": [
+        0.0,
+        -35.75,
+        0.0
+      ],
+      "absoluteDepth_m": 67.15
+    },
+    {
+      "id": 289,
+      "xyz_m": [
+        0.0,
+        -35.875,
+        0.0
+      ],
+      "absoluteDepth_m": 67.275
+    },
+    {
+      "id": 290,
+      "xyz_m": [
+        0.0,
+        -36.0,
+        0.0
+      ],
+      "absoluteDepth_m": 67.4
+    },
+    {
+      "id": 291,
+      "xyz_m": [
+        0.0,
+        -36.125,
+        0.0
+      ],
+      "absoluteDepth_m": 67.525
+    },
+    {
+      "id": 292,
+      "xyz_m": [
+        0.0,
+        -36.25,
+        0.0
+      ],
+      "absoluteDepth_m": 67.65
+    },
+    {
+      "id": 293,
+      "xyz_m": [
+        0.0,
+        -36.375,
+        0.0
+      ],
+      "absoluteDepth_m": 67.775
+    },
+    {
+      "id": 294,
+      "xyz_m": [
+        0.0,
+        -36.5,
+        0.0
+      ],
+      "absoluteDepth_m": 67.9
+    },
+    {
+      "id": 295,
+      "xyz_m": [
+        0.0,
+        -36.625,
+        0.0
+      ],
+      "absoluteDepth_m": 68.025
+    },
+    {
+      "id": 296,
+      "xyz_m": [
+        0.0,
+        -36.75,
+        0.0
+      ],
+      "absoluteDepth_m": 68.15
+    },
+    {
+      "id": 297,
+      "xyz_m": [
+        0.0,
+        -36.875,
+        0.0
+      ],
+      "absoluteDepth_m": 68.275
+    },
+    {
+      "id": 298,
+      "xyz_m": [
+        0.0,
+        -37.0,
+        0.0
+      ],
+      "absoluteDepth_m": 68.4
+    },
+    {
+      "id": 299,
+      "xyz_m": [
+        0.0,
+        -37.125,
+        0.0
+      ],
+      "absoluteDepth_m": 68.525
+    },
+    {
+      "id": 300,
+      "xyz_m": [
+        0.0,
+        -37.25,
+        0.0
+      ],
+      "absoluteDepth_m": 68.65
+    },
+    {
+      "id": 301,
+      "xyz_m": [
+        0.0,
+        -37.375,
+        0.0
+      ],
+      "absoluteDepth_m": 68.775
+    },
+    {
+      "id": 302,
+      "xyz_m": [
+        0.0,
+        -37.5,
+        0.0
+      ],
+      "absoluteDepth_m": 68.9
+    },
+    {
+      "id": 303,
+      "xyz_m": [
+        0.0,
+        -37.625,
+        0.0
+      ],
+      "absoluteDepth_m": 69.025
+    },
+    {
+      "id": 304,
+      "xyz_m": [
+        0.0,
+        -37.75,
+        0.0
+      ],
+      "absoluteDepth_m": 69.15
+    },
+    {
+      "id": 305,
+      "xyz_m": [
+        0.0,
+        -37.8,
+        0.0
+      ],
+      "absoluteDepth_m": 69.19999999999999
+    },
+    {
+      "id": 306,
+      "xyz_m": [
+        0.0,
+        -37.875,
+        0.0
+      ],
+      "absoluteDepth_m": 69.275
+    },
+    {
+      "id": 307,
+      "xyz_m": [
+        0.0,
+        -38.0,
+        0.0
+      ],
+      "absoluteDepth_m": 69.4
+    },
+    {
+      "id": 308,
+      "xyz_m": [
+        0.0,
+        -38.125,
+        0.0
+      ],
+      "absoluteDepth_m": 69.525
+    },
+    {
+      "id": 309,
+      "xyz_m": [
+        0.0,
+        -38.25,
+        0.0
+      ],
+      "absoluteDepth_m": 69.65
+    },
+    {
+      "id": 310,
+      "xyz_m": [
+        0.0,
+        -38.375,
+        0.0
+      ],
+      "absoluteDepth_m": 69.775
+    },
+    {
+      "id": 311,
+      "xyz_m": [
+        0.0,
+        -38.5,
+        0.0
+      ],
+      "absoluteDepth_m": 69.9
+    },
+    {
+      "id": 312,
+      "xyz_m": [
+        0.0,
+        -38.625,
+        0.0
+      ],
+      "absoluteDepth_m": 70.025
+    },
+    {
+      "id": 313,
+      "xyz_m": [
+        0.0,
+        -38.75,
+        0.0
+      ],
+      "absoluteDepth_m": 70.15
+    },
+    {
+      "id": 314,
+      "xyz_m": [
+        0.0,
+        -38.875,
+        0.0
+      ],
+      "absoluteDepth_m": 70.275
+    },
+    {
+      "id": 315,
+      "xyz_m": [
+        0.0,
+        -39.0,
+        0.0
+      ],
+      "absoluteDepth_m": 70.4
+    },
+    {
+      "id": 316,
+      "xyz_m": [
+        0.0,
+        -39.125,
+        0.0
+      ],
+      "absoluteDepth_m": 70.525
+    },
+    {
+      "id": 317,
+      "xyz_m": [
+        0.0,
+        -39.25,
+        0.0
+      ],
+      "absoluteDepth_m": 70.65
+    },
+    {
+      "id": 318,
+      "xyz_m": [
+        0.0,
+        -39.375,
+        0.0
+      ],
+      "absoluteDepth_m": 70.775
+    },
+    {
+      "id": 319,
+      "xyz_m": [
+        0.0,
+        -39.5,
+        0.0
+      ],
+      "absoluteDepth_m": 70.9
+    },
+    {
+      "id": 320,
+      "xyz_m": [
+        0.0,
+        -39.625,
+        0.0
+      ],
+      "absoluteDepth_m": 71.025
+    },
+    {
+      "id": 321,
+      "xyz_m": [
+        0.0,
+        -39.75,
+        0.0
+      ],
+      "absoluteDepth_m": 71.15
+    },
+    {
+      "id": 322,
+      "xyz_m": [
+        0.0,
+        -39.875,
+        0.0
+      ],
+      "absoluteDepth_m": 71.275
+    },
+    {
+      "id": 323,
+      "xyz_m": [
+        0.0,
+        -40.0,
+        0.0
+      ],
+      "absoluteDepth_m": 71.4
+    },
+    {
+      "id": 324,
+      "xyz_m": [
+        0.0,
+        -40.125,
+        0.0
+      ],
+      "absoluteDepth_m": 71.525
+    },
+    {
+      "id": 325,
+      "xyz_m": [
+        0.0,
+        -40.25,
+        0.0
+      ],
+      "absoluteDepth_m": 71.65
+    },
+    {
+      "id": 326,
+      "xyz_m": [
+        0.0,
+        -40.375,
+        0.0
+      ],
+      "absoluteDepth_m": 71.775
+    },
+    {
+      "id": 327,
+      "xyz_m": [
+        0.0,
+        -40.5,
+        0.0
+      ],
+      "absoluteDepth_m": 71.9
+    },
+    {
+      "id": 328,
+      "xyz_m": [
+        0.0,
+        -40.625,
+        0.0
+      ],
+      "absoluteDepth_m": 72.025
+    },
+    {
+      "id": 329,
+      "xyz_m": [
+        0.0,
+        -40.75,
+        0.0
+      ],
+      "absoluteDepth_m": 72.15
+    },
+    {
+      "id": 330,
+      "xyz_m": [
+        0.0,
+        -40.875,
+        0.0
+      ],
+      "absoluteDepth_m": 72.275
+    },
+    {
+      "id": 331,
+      "xyz_m": [
+        0.0,
+        -41.0,
+        0.0
+      ],
+      "absoluteDepth_m": 72.4
+    },
+    {
+      "id": 332,
+      "xyz_m": [
+        0.0,
+        -41.125,
+        0.0
+      ],
+      "absoluteDepth_m": 72.525
+    },
+    {
+      "id": 333,
+      "xyz_m": [
+        0.0,
+        -41.25,
+        0.0
+      ],
+      "absoluteDepth_m": 72.65
+    },
+    {
+      "id": 334,
+      "xyz_m": [
+        0.0,
+        -41.375,
+        0.0
+      ],
+      "absoluteDepth_m": 72.775
+    },
+    {
+      "id": 335,
+      "xyz_m": [
+        0.0,
+        -41.5,
+        0.0
+      ],
+      "absoluteDepth_m": 72.9
+    },
+    {
+      "id": 336,
+      "xyz_m": [
+        0.0,
+        -41.625,
+        0.0
+      ],
+      "absoluteDepth_m": 73.025
+    },
+    {
+      "id": 337,
+      "xyz_m": [
+        0.0,
+        -41.75,
+        0.0
+      ],
+      "absoluteDepth_m": 73.15
+    },
+    {
+      "id": 338,
+      "xyz_m": [
+        0.0,
+        -41.875,
+        0.0
+      ],
+      "absoluteDepth_m": 73.275
+    },
+    {
+      "id": 339,
+      "xyz_m": [
+        0.0,
+        -42.0,
+        0.0
+      ],
+      "absoluteDepth_m": 73.4
+    },
+    {
+      "id": 340,
+      "xyz_m": [
+        0.0,
+        -42.125,
+        0.0
+      ],
+      "absoluteDepth_m": 73.525
+    },
+    {
+      "id": 341,
+      "xyz_m": [
+        0.0,
+        -42.25,
+        0.0
+      ],
+      "absoluteDepth_m": 73.65
+    },
+    {
+      "id": 342,
+      "xyz_m": [
+        0.0,
+        -42.375,
+        0.0
+      ],
+      "absoluteDepth_m": 73.775
+    },
+    {
+      "id": 343,
+      "xyz_m": [
+        0.0,
+        -42.5,
+        0.0
+      ],
+      "absoluteDepth_m": 73.9
+    },
+    {
+      "id": 344,
+      "xyz_m": [
+        0.0,
+        -42.625,
+        0.0
+      ],
+      "absoluteDepth_m": 74.025
+    },
+    {
+      "id": 345,
+      "xyz_m": [
+        0.0,
+        -42.75,
+        0.0
+      ],
+      "absoluteDepth_m": 74.15
+    },
+    {
+      "id": 346,
+      "xyz_m": [
+        0.0,
+        -42.875,
+        0.0
+      ],
+      "absoluteDepth_m": 74.275
+    },
+    {
+      "id": 347,
+      "xyz_m": [
+        0.0,
+        -43.0,
+        0.0
+      ],
+      "absoluteDepth_m": 74.4
+    },
+    {
+      "id": 348,
+      "xyz_m": [
+        0.0,
+        -43.125,
+        0.0
+      ],
+      "absoluteDepth_m": 74.525
+    },
+    {
+      "id": 349,
+      "xyz_m": [
+        0.0,
+        -43.25,
+        0.0
+      ],
+      "absoluteDepth_m": 74.65
+    },
+    {
+      "id": 350,
+      "xyz_m": [
+        0.0,
+        -43.375,
+        0.0
+      ],
+      "absoluteDepth_m": 74.775
+    },
+    {
+      "id": 351,
+      "xyz_m": [
+        0.0,
+        -43.5,
+        0.0
+      ],
+      "absoluteDepth_m": 74.9
+    },
+    {
+      "id": 352,
+      "xyz_m": [
+        0.0,
+        -43.625,
+        0.0
+      ],
+      "absoluteDepth_m": 75.025
+    },
+    {
+      "id": 353,
+      "xyz_m": [
+        0.0,
+        -43.75,
+        0.0
+      ],
+      "absoluteDepth_m": 75.15
+    },
+    {
+      "id": 354,
+      "xyz_m": [
+        0.0,
+        -43.875,
+        0.0
+      ],
+      "absoluteDepth_m": 75.275
+    },
+    {
+      "id": 355,
+      "xyz_m": [
+        0.0,
+        -44.0,
+        0.0
+      ],
+      "absoluteDepth_m": 75.4
+    },
+    {
+      "id": 356,
+      "xyz_m": [
+        0.0,
+        -44.125,
+        0.0
+      ],
+      "absoluteDepth_m": 75.525
+    },
+    {
+      "id": 357,
+      "xyz_m": [
+        0.0,
+        -44.25,
+        0.0
+      ],
+      "absoluteDepth_m": 75.65
+    },
+    {
+      "id": 358,
+      "xyz_m": [
+        0.0,
+        -44.375,
+        0.0
+      ],
+      "absoluteDepth_m": 75.775
+    },
+    {
+      "id": 359,
+      "xyz_m": [
+        0.0,
+        -44.5,
+        0.0
+      ],
+      "absoluteDepth_m": 75.9
+    },
+    {
+      "id": 360,
+      "xyz_m": [
+        0.0,
+        -44.625,
+        0.0
+      ],
+      "absoluteDepth_m": 76.025
+    },
+    {
+      "id": 361,
+      "xyz_m": [
+        0.0,
+        -44.75,
+        0.0
+      ],
+      "absoluteDepth_m": 76.15
+    },
+    {
+      "id": 362,
+      "xyz_m": [
+        0.0,
+        -44.875,
+        0.0
+      ],
+      "absoluteDepth_m": 76.275
+    },
+    {
+      "id": 363,
+      "xyz_m": [
+        0.0,
+        -45.0,
+        0.0
+      ],
+      "absoluteDepth_m": 76.4
+    },
+    {
+      "id": 364,
+      "xyz_m": [
+        0.0,
+        -45.125,
+        0.0
+      ],
+      "absoluteDepth_m": 76.525
+    },
+    {
+      "id": 365,
+      "xyz_m": [
+        0.0,
+        -45.25,
+        0.0
+      ],
+      "absoluteDepth_m": 76.65
+    },
+    {
+      "id": 366,
+      "xyz_m": [
+        0.0,
+        -45.375,
+        0.0
+      ],
+      "absoluteDepth_m": 76.775
+    },
+    {
+      "id": 367,
+      "xyz_m": [
+        0.0,
+        -45.5,
+        0.0
+      ],
+      "absoluteDepth_m": 76.9
+    },
+    {
+      "id": 368,
+      "xyz_m": [
+        0.0,
+        -45.625,
+        0.0
+      ],
+      "absoluteDepth_m": 77.025
+    },
+    {
+      "id": 369,
+      "xyz_m": [
+        0.0,
+        -45.75,
+        0.0
+      ],
+      "absoluteDepth_m": 77.15
+    },
+    {
+      "id": 370,
+      "xyz_m": [
+        0.0,
+        -45.875,
+        0.0
+      ],
+      "absoluteDepth_m": 77.275
+    },
+    {
+      "id": 371,
+      "xyz_m": [
+        0.0,
+        -46.0,
+        0.0
+      ],
+      "absoluteDepth_m": 77.4
+    },
+    {
+      "id": 372,
+      "xyz_m": [
+        0.0,
+        -46.125,
+        0.0
+      ],
+      "absoluteDepth_m": 77.525
+    },
+    {
+      "id": 373,
+      "xyz_m": [
+        0.0,
+        -46.25,
+        0.0
+      ],
+      "absoluteDepth_m": 77.65
+    },
+    {
+      "id": 374,
+      "xyz_m": [
+        0.0,
+        -46.375,
+        0.0
+      ],
+      "absoluteDepth_m": 77.775
+    },
+    {
+      "id": 375,
+      "xyz_m": [
+        0.0,
+        -46.5,
+        0.0
+      ],
+      "absoluteDepth_m": 77.9
+    },
+    {
+      "id": 376,
+      "xyz_m": [
+        0.0,
+        -46.625,
+        0.0
+      ],
+      "absoluteDepth_m": 78.025
+    },
+    {
+      "id": 377,
+      "xyz_m": [
+        0.0,
+        -46.75,
+        0.0
+      ],
+      "absoluteDepth_m": 78.15
+    },
+    {
+      "id": 378,
+      "xyz_m": [
+        0.0,
+        -46.8,
+        0.0
+      ],
+      "absoluteDepth_m": 78.19999999999999
+    },
+    {
+      "id": 379,
+      "xyz_m": [
+        0.0,
+        -46.875,
+        0.0
+      ],
+      "absoluteDepth_m": 78.275
+    },
+    {
+      "id": 380,
+      "xyz_m": [
+        0.0,
+        -47.0,
+        0.0
+      ],
+      "absoluteDepth_m": 78.4
+    },
+    {
+      "id": 381,
+      "xyz_m": [
+        0.0,
+        -47.125,
+        0.0
+      ],
+      "absoluteDepth_m": 78.525
+    },
+    {
+      "id": 382,
+      "xyz_m": [
+        0.0,
+        -47.25,
+        0.0
+      ],
+      "absoluteDepth_m": 78.65
+    },
+    {
+      "id": 383,
+      "xyz_m": [
+        0.0,
+        -47.375,
+        0.0
+      ],
+      "absoluteDepth_m": 78.775
+    },
+    {
+      "id": 384,
+      "xyz_m": [
+        0.0,
+        -47.5,
+        0.0
+      ],
+      "absoluteDepth_m": 78.9
+    },
+    {
+      "id": 385,
+      "xyz_m": [
+        0.0,
+        -47.625,
+        0.0
+      ],
+      "absoluteDepth_m": 79.025
+    },
+    {
+      "id": 386,
+      "xyz_m": [
+        0.0,
+        -47.75,
+        0.0
+      ],
+      "absoluteDepth_m": 79.15
+    },
+    {
+      "id": 387,
+      "xyz_m": [
+        0.0,
+        -47.875,
+        0.0
+      ],
+      "absoluteDepth_m": 79.275
+    },
+    {
+      "id": 388,
+      "xyz_m": [
+        0.0,
+        -48.0,
+        0.0
+      ],
+      "absoluteDepth_m": 79.4
+    },
+    {
+      "id": 389,
+      "xyz_m": [
+        0.0,
+        -48.125,
+        0.0
+      ],
+      "absoluteDepth_m": 79.525
+    },
+    {
+      "id": 390,
+      "xyz_m": [
+        0.0,
+        -48.25,
+        0.0
+      ],
+      "absoluteDepth_m": 79.65
+    },
+    {
+      "id": 391,
+      "xyz_m": [
+        0.0,
+        -48.375,
+        0.0
+      ],
+      "absoluteDepth_m": 79.775
+    },
+    {
+      "id": 392,
+      "xyz_m": [
+        0.0,
+        -48.5,
+        0.0
+      ],
+      "absoluteDepth_m": 79.9
+    },
+    {
+      "id": 393,
+      "xyz_m": [
+        0.0,
+        -48.625,
+        0.0
+      ],
+      "absoluteDepth_m": 80.025
+    },
+    {
+      "id": 394,
+      "xyz_m": [
+        0.0,
+        -48.75,
+        0.0
+      ],
+      "absoluteDepth_m": 80.15
+    },
+    {
+      "id": 395,
+      "xyz_m": [
+        0.0,
+        -48.875,
+        0.0
+      ],
+      "absoluteDepth_m": 80.275
+    },
+    {
+      "id": 396,
+      "xyz_m": [
+        0.0,
+        -49.0,
+        0.0
+      ],
+      "absoluteDepth_m": 80.4
+    },
+    {
+      "id": 397,
+      "xyz_m": [
+        0.0,
+        -49.125,
+        0.0
+      ],
+      "absoluteDepth_m": 80.525
+    },
+    {
+      "id": 398,
+      "xyz_m": [
+        0.0,
+        -49.25,
+        0.0
+      ],
+      "absoluteDepth_m": 80.65
+    },
+    {
+      "id": 399,
+      "xyz_m": [
+        0.0,
+        -49.375,
+        0.0
+      ],
+      "absoluteDepth_m": 80.775
+    },
+    {
+      "id": 400,
+      "xyz_m": [
+        0.0,
+        -49.5,
+        0.0
+      ],
+      "absoluteDepth_m": 80.9
+    },
+    {
+      "id": 401,
+      "xyz_m": [
+        0.0,
+        -49.625,
+        0.0
+      ],
+      "absoluteDepth_m": 81.025
+    },
+    {
+      "id": 402,
+      "xyz_m": [
+        0.0,
+        -49.75,
+        0.0
+      ],
+      "absoluteDepth_m": 81.15
+    },
+    {
+      "id": 403,
+      "xyz_m": [
+        0.0,
+        -49.875,
+        0.0
+      ],
+      "absoluteDepth_m": 81.275
+    },
+    {
+      "id": 404,
+      "xyz_m": [
+        0.0,
+        -50.0,
+        0.0
+      ],
+      "absoluteDepth_m": 81.4
+    },
+    {
+      "id": 405,
+      "xyz_m": [
+        0.0,
+        -50.125,
+        0.0
+      ],
+      "absoluteDepth_m": 81.525
+    },
+    {
+      "id": 406,
+      "xyz_m": [
+        0.0,
+        -50.25,
+        0.0
+      ],
+      "absoluteDepth_m": 81.65
+    },
+    {
+      "id": 407,
+      "xyz_m": [
+        0.0,
+        -50.375,
+        0.0
+      ],
+      "absoluteDepth_m": 81.775
+    },
+    {
+      "id": 408,
+      "xyz_m": [
+        0.0,
+        -50.5,
+        0.0
+      ],
+      "absoluteDepth_m": 81.9
+    },
+    {
+      "id": 409,
+      "xyz_m": [
+        0.0,
+        -50.625,
+        0.0
+      ],
+      "absoluteDepth_m": 82.025
+    },
+    {
+      "id": 410,
+      "xyz_m": [
+        0.0,
+        -50.75,
+        0.0
+      ],
+      "absoluteDepth_m": 82.15
+    },
+    {
+      "id": 411,
+      "xyz_m": [
+        0.0,
+        -50.875,
+        0.0
+      ],
+      "absoluteDepth_m": 82.275
+    },
+    {
+      "id": 412,
+      "xyz_m": [
+        0.0,
+        -51.0,
+        0.0
+      ],
+      "absoluteDepth_m": 82.4
+    },
+    {
+      "id": 413,
+      "xyz_m": [
+        0.0,
+        -51.125,
+        0.0
+      ],
+      "absoluteDepth_m": 82.525
+    },
+    {
+      "id": 414,
+      "xyz_m": [
+        0.0,
+        -51.25,
+        0.0
+      ],
+      "absoluteDepth_m": 82.65
+    },
+    {
+      "id": 415,
+      "xyz_m": [
+        0.0,
+        -51.375,
+        0.0
+      ],
+      "absoluteDepth_m": 82.775
+    },
+    {
+      "id": 416,
+      "xyz_m": [
+        0.0,
+        -51.5,
+        0.0
+      ],
+      "absoluteDepth_m": 82.9
+    },
+    {
+      "id": 417,
+      "xyz_m": [
+        0.0,
+        -51.625,
+        0.0
+      ],
+      "absoluteDepth_m": 83.025
+    },
+    {
+      "id": 418,
+      "xyz_m": [
+        0.0,
+        -51.75,
+        0.0
+      ],
+      "absoluteDepth_m": 83.15
+    },
+    {
+      "id": 419,
+      "xyz_m": [
+        0.0,
+        -51.875,
+        0.0
+      ],
+      "absoluteDepth_m": 83.275
+    },
+    {
+      "id": 420,
+      "xyz_m": [
+        0.0,
+        -52.0,
+        0.0
+      ],
+      "absoluteDepth_m": 83.4
+    }
+  ],
+  "springs": [
+    {
+      "nodeId": 1,
+      "depth_m": 0.0,
+      "absolute_depth_m": 31.4,
+      "layerId": "71",
+      "tributary_m": 0.0625,
+      "kx_N_m": 500000.0,
+      "ky_N_m": 785398.1633974483
+    },
+    {
+      "nodeId": 2,
+      "depth_m": 0.125,
+      "absolute_depth_m": 31.525,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 3,
+      "depth_m": 0.25,
+      "absolute_depth_m": 31.65,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 4,
+      "depth_m": 0.375,
+      "absolute_depth_m": 31.775,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 5,
+      "depth_m": 0.5,
+      "absolute_depth_m": 31.9,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 6,
+      "depth_m": 0.625,
+      "absolute_depth_m": 32.025,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 7,
+      "depth_m": 0.75,
+      "absolute_depth_m": 32.15,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 8,
+      "depth_m": 0.875,
+      "absolute_depth_m": 32.275,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 9,
+      "depth_m": 1.0,
+      "absolute_depth_m": 32.4,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 10,
+      "depth_m": 1.125,
+      "absolute_depth_m": 32.525,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 11,
+      "depth_m": 1.25,
+      "absolute_depth_m": 32.65,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 12,
+      "depth_m": 1.375,
+      "absolute_depth_m": 32.775,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 13,
+      "depth_m": 1.5,
+      "absolute_depth_m": 32.9,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 14,
+      "depth_m": 1.625,
+      "absolute_depth_m": 33.025,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 15,
+      "depth_m": 1.75,
+      "absolute_depth_m": 33.15,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 16,
+      "depth_m": 1.875,
+      "absolute_depth_m": 33.275,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 17,
+      "depth_m": 2.0,
+      "absolute_depth_m": 33.4,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 18,
+      "depth_m": 2.125,
+      "absolute_depth_m": 33.525,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 19,
+      "depth_m": 2.25,
+      "absolute_depth_m": 33.65,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 20,
+      "depth_m": 2.375,
+      "absolute_depth_m": 33.775,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 21,
+      "depth_m": 2.5,
+      "absolute_depth_m": 33.9,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 22,
+      "depth_m": 2.625,
+      "absolute_depth_m": 34.025,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 23,
+      "depth_m": 2.75,
+      "absolute_depth_m": 34.15,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 24,
+      "depth_m": 2.875,
+      "absolute_depth_m": 34.275,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 25,
+      "depth_m": 3.0,
+      "absolute_depth_m": 34.4,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 26,
+      "depth_m": 3.125,
+      "absolute_depth_m": 34.525,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 27,
+      "depth_m": 3.25,
+      "absolute_depth_m": 34.65,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 28,
+      "depth_m": 3.375,
+      "absolute_depth_m": 34.775,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 29,
+      "depth_m": 3.5,
+      "absolute_depth_m": 34.9,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 30,
+      "depth_m": 3.625,
+      "absolute_depth_m": 35.025,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 31,
+      "depth_m": 3.75,
+      "absolute_depth_m": 35.15,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 32,
+      "depth_m": 3.875,
+      "absolute_depth_m": 35.275,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 33,
+      "depth_m": 4.0,
+      "absolute_depth_m": 35.4,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 34,
+      "depth_m": 4.125,
+      "absolute_depth_m": 35.525,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 35,
+      "depth_m": 4.25,
+      "absolute_depth_m": 35.65,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 36,
+      "depth_m": 4.375,
+      "absolute_depth_m": 35.775,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 37,
+      "depth_m": 4.5,
+      "absolute_depth_m": 35.9,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 38,
+      "depth_m": 4.625,
+      "absolute_depth_m": 36.025,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 39,
+      "depth_m": 4.75,
+      "absolute_depth_m": 36.15,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 40,
+      "depth_m": 4.875,
+      "absolute_depth_m": 36.275,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 41,
+      "depth_m": 5.0,
+      "absolute_depth_m": 36.4,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 42,
+      "depth_m": 5.125,
+      "absolute_depth_m": 36.525,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 43,
+      "depth_m": 5.25,
+      "absolute_depth_m": 36.65,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 44,
+      "depth_m": 5.375,
+      "absolute_depth_m": 36.775,
+      "layerId": "71",
+      "tributary_m": 0.125,
+      "kx_N_m": 1000000.0,
+      "ky_N_m": 1570796.3267948965
+    },
+    {
+      "nodeId": 45,
+      "depth_m": 5.5,
+      "absolute_depth_m": 36.9,
+      "layerId": "71",
+      "tributary_m": 0.11249999999999982,
+      "kx_N_m": 899999.9999999986,
+      "ky_N_m": 1413716.6941154047
+    },
+    {
+      "nodeId": 46,
+      "depth_m": 5.6,
+      "absolute_depth_m": 37.0,
+      "layerId": "72",
+      "tributary_m": 0.0625,
+      "kx_N_m": 1125000.0,
+      "ky_N_m": 1767145.8676442585
+    },
+    {
+      "nodeId": 47,
+      "depth_m": 5.625,
+      "absolute_depth_m": 37.025,
+      "layerId": "72",
+      "tributary_m": 0.07500000000000018,
+      "kx_N_m": 1350000.0000000033,
+      "ky_N_m": 2120575.0411731154
+    },
+    {
+      "nodeId": 48,
+      "depth_m": 5.75,
+      "absolute_depth_m": 37.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 49,
+      "depth_m": 5.875,
+      "absolute_depth_m": 37.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 50,
+      "depth_m": 6.0,
+      "absolute_depth_m": 37.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 51,
+      "depth_m": 6.125,
+      "absolute_depth_m": 37.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 52,
+      "depth_m": 6.25,
+      "absolute_depth_m": 37.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 53,
+      "depth_m": 6.375,
+      "absolute_depth_m": 37.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 54,
+      "depth_m": 6.5,
+      "absolute_depth_m": 37.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 55,
+      "depth_m": 6.625,
+      "absolute_depth_m": 38.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 56,
+      "depth_m": 6.75,
+      "absolute_depth_m": 38.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 57,
+      "depth_m": 6.875,
+      "absolute_depth_m": 38.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 58,
+      "depth_m": 7.0,
+      "absolute_depth_m": 38.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 59,
+      "depth_m": 7.125,
+      "absolute_depth_m": 38.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 60,
+      "depth_m": 7.25,
+      "absolute_depth_m": 38.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 61,
+      "depth_m": 7.375,
+      "absolute_depth_m": 38.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 62,
+      "depth_m": 7.5,
+      "absolute_depth_m": 38.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 63,
+      "depth_m": 7.625,
+      "absolute_depth_m": 39.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 64,
+      "depth_m": 7.75,
+      "absolute_depth_m": 39.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 65,
+      "depth_m": 7.875,
+      "absolute_depth_m": 39.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 66,
+      "depth_m": 8.0,
+      "absolute_depth_m": 39.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 67,
+      "depth_m": 8.125,
+      "absolute_depth_m": 39.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 68,
+      "depth_m": 8.25,
+      "absolute_depth_m": 39.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 69,
+      "depth_m": 8.375,
+      "absolute_depth_m": 39.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 70,
+      "depth_m": 8.5,
+      "absolute_depth_m": 39.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 71,
+      "depth_m": 8.625,
+      "absolute_depth_m": 40.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 72,
+      "depth_m": 8.75,
+      "absolute_depth_m": 40.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 73,
+      "depth_m": 8.875,
+      "absolute_depth_m": 40.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 74,
+      "depth_m": 9.0,
+      "absolute_depth_m": 40.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 75,
+      "depth_m": 9.125,
+      "absolute_depth_m": 40.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 76,
+      "depth_m": 9.25,
+      "absolute_depth_m": 40.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 77,
+      "depth_m": 9.375,
+      "absolute_depth_m": 40.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 78,
+      "depth_m": 9.5,
+      "absolute_depth_m": 40.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 79,
+      "depth_m": 9.625,
+      "absolute_depth_m": 41.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 80,
+      "depth_m": 9.75,
+      "absolute_depth_m": 41.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 81,
+      "depth_m": 9.875,
+      "absolute_depth_m": 41.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 82,
+      "depth_m": 10.0,
+      "absolute_depth_m": 41.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 83,
+      "depth_m": 10.125,
+      "absolute_depth_m": 41.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 84,
+      "depth_m": 10.25,
+      "absolute_depth_m": 41.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 85,
+      "depth_m": 10.375,
+      "absolute_depth_m": 41.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 86,
+      "depth_m": 10.5,
+      "absolute_depth_m": 41.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 87,
+      "depth_m": 10.625,
+      "absolute_depth_m": 42.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 88,
+      "depth_m": 10.75,
+      "absolute_depth_m": 42.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 89,
+      "depth_m": 10.875,
+      "absolute_depth_m": 42.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 90,
+      "depth_m": 11.0,
+      "absolute_depth_m": 42.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 91,
+      "depth_m": 11.125,
+      "absolute_depth_m": 42.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 92,
+      "depth_m": 11.25,
+      "absolute_depth_m": 42.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 93,
+      "depth_m": 11.375,
+      "absolute_depth_m": 42.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 94,
+      "depth_m": 11.5,
+      "absolute_depth_m": 42.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 95,
+      "depth_m": 11.625,
+      "absolute_depth_m": 43.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 96,
+      "depth_m": 11.75,
+      "absolute_depth_m": 43.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 97,
+      "depth_m": 11.875,
+      "absolute_depth_m": 43.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 98,
+      "depth_m": 12.0,
+      "absolute_depth_m": 43.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 99,
+      "depth_m": 12.125,
+      "absolute_depth_m": 43.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 100,
+      "depth_m": 12.25,
+      "absolute_depth_m": 43.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 101,
+      "depth_m": 12.375,
+      "absolute_depth_m": 43.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 102,
+      "depth_m": 12.5,
+      "absolute_depth_m": 43.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 103,
+      "depth_m": 12.625,
+      "absolute_depth_m": 44.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 104,
+      "depth_m": 12.75,
+      "absolute_depth_m": 44.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 105,
+      "depth_m": 12.875,
+      "absolute_depth_m": 44.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 106,
+      "depth_m": 13.0,
+      "absolute_depth_m": 44.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 107,
+      "depth_m": 13.125,
+      "absolute_depth_m": 44.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 108,
+      "depth_m": 13.25,
+      "absolute_depth_m": 44.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 109,
+      "depth_m": 13.375,
+      "absolute_depth_m": 44.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 110,
+      "depth_m": 13.5,
+      "absolute_depth_m": 44.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 111,
+      "depth_m": 13.625,
+      "absolute_depth_m": 45.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 112,
+      "depth_m": 13.75,
+      "absolute_depth_m": 45.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 113,
+      "depth_m": 13.875,
+      "absolute_depth_m": 45.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 114,
+      "depth_m": 14.0,
+      "absolute_depth_m": 45.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 115,
+      "depth_m": 14.125,
+      "absolute_depth_m": 45.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 116,
+      "depth_m": 14.25,
+      "absolute_depth_m": 45.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 117,
+      "depth_m": 14.375,
+      "absolute_depth_m": 45.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 118,
+      "depth_m": 14.5,
+      "absolute_depth_m": 45.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 119,
+      "depth_m": 14.625,
+      "absolute_depth_m": 46.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 120,
+      "depth_m": 14.75,
+      "absolute_depth_m": 46.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 121,
+      "depth_m": 14.875,
+      "absolute_depth_m": 46.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 122,
+      "depth_m": 15.0,
+      "absolute_depth_m": 46.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 123,
+      "depth_m": 15.125,
+      "absolute_depth_m": 46.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 124,
+      "depth_m": 15.25,
+      "absolute_depth_m": 46.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 125,
+      "depth_m": 15.375,
+      "absolute_depth_m": 46.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 126,
+      "depth_m": 15.5,
+      "absolute_depth_m": 46.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 127,
+      "depth_m": 15.625,
+      "absolute_depth_m": 47.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 128,
+      "depth_m": 15.75,
+      "absolute_depth_m": 47.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 129,
+      "depth_m": 15.875,
+      "absolute_depth_m": 47.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 130,
+      "depth_m": 16.0,
+      "absolute_depth_m": 47.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 131,
+      "depth_m": 16.125,
+      "absolute_depth_m": 47.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 132,
+      "depth_m": 16.25,
+      "absolute_depth_m": 47.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 133,
+      "depth_m": 16.375,
+      "absolute_depth_m": 47.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 134,
+      "depth_m": 16.5,
+      "absolute_depth_m": 47.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 135,
+      "depth_m": 16.625,
+      "absolute_depth_m": 48.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 136,
+      "depth_m": 16.75,
+      "absolute_depth_m": 48.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 137,
+      "depth_m": 16.875,
+      "absolute_depth_m": 48.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 138,
+      "depth_m": 17.0,
+      "absolute_depth_m": 48.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 139,
+      "depth_m": 17.125,
+      "absolute_depth_m": 48.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 140,
+      "depth_m": 17.25,
+      "absolute_depth_m": 48.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 141,
+      "depth_m": 17.375,
+      "absolute_depth_m": 48.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 142,
+      "depth_m": 17.5,
+      "absolute_depth_m": 48.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 143,
+      "depth_m": 17.625,
+      "absolute_depth_m": 49.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 144,
+      "depth_m": 17.75,
+      "absolute_depth_m": 49.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 145,
+      "depth_m": 17.875,
+      "absolute_depth_m": 49.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 146,
+      "depth_m": 18.0,
+      "absolute_depth_m": 49.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 147,
+      "depth_m": 18.125,
+      "absolute_depth_m": 49.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 148,
+      "depth_m": 18.25,
+      "absolute_depth_m": 49.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 149,
+      "depth_m": 18.375,
+      "absolute_depth_m": 49.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 150,
+      "depth_m": 18.5,
+      "absolute_depth_m": 49.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 151,
+      "depth_m": 18.625,
+      "absolute_depth_m": 50.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 152,
+      "depth_m": 18.75,
+      "absolute_depth_m": 50.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 153,
+      "depth_m": 18.875,
+      "absolute_depth_m": 50.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 154,
+      "depth_m": 19.0,
+      "absolute_depth_m": 50.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 155,
+      "depth_m": 19.125,
+      "absolute_depth_m": 50.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 156,
+      "depth_m": 19.25,
+      "absolute_depth_m": 50.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 157,
+      "depth_m": 19.375,
+      "absolute_depth_m": 50.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 158,
+      "depth_m": 19.5,
+      "absolute_depth_m": 50.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 159,
+      "depth_m": 19.625,
+      "absolute_depth_m": 51.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 160,
+      "depth_m": 19.75,
+      "absolute_depth_m": 51.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 161,
+      "depth_m": 19.875,
+      "absolute_depth_m": 51.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 162,
+      "depth_m": 20.0,
+      "absolute_depth_m": 51.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 163,
+      "depth_m": 20.125,
+      "absolute_depth_m": 51.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 164,
+      "depth_m": 20.25,
+      "absolute_depth_m": 51.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 165,
+      "depth_m": 20.375,
+      "absolute_depth_m": 51.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 166,
+      "depth_m": 20.5,
+      "absolute_depth_m": 51.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 167,
+      "depth_m": 20.625,
+      "absolute_depth_m": 52.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 168,
+      "depth_m": 20.75,
+      "absolute_depth_m": 52.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 169,
+      "depth_m": 20.875,
+      "absolute_depth_m": 52.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 170,
+      "depth_m": 21.0,
+      "absolute_depth_m": 52.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 171,
+      "depth_m": 21.125,
+      "absolute_depth_m": 52.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 172,
+      "depth_m": 21.25,
+      "absolute_depth_m": 52.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 173,
+      "depth_m": 21.375,
+      "absolute_depth_m": 52.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 174,
+      "depth_m": 21.5,
+      "absolute_depth_m": 52.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 175,
+      "depth_m": 21.625,
+      "absolute_depth_m": 53.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 176,
+      "depth_m": 21.75,
+      "absolute_depth_m": 53.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 177,
+      "depth_m": 21.875,
+      "absolute_depth_m": 53.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 178,
+      "depth_m": 22.0,
+      "absolute_depth_m": 53.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 179,
+      "depth_m": 22.125,
+      "absolute_depth_m": 53.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 180,
+      "depth_m": 22.25,
+      "absolute_depth_m": 53.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 181,
+      "depth_m": 22.375,
+      "absolute_depth_m": 53.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 182,
+      "depth_m": 22.5,
+      "absolute_depth_m": 53.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 183,
+      "depth_m": 22.625,
+      "absolute_depth_m": 54.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 184,
+      "depth_m": 22.75,
+      "absolute_depth_m": 54.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 185,
+      "depth_m": 22.875,
+      "absolute_depth_m": 54.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 186,
+      "depth_m": 23.0,
+      "absolute_depth_m": 54.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 187,
+      "depth_m": 23.125,
+      "absolute_depth_m": 54.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 188,
+      "depth_m": 23.25,
+      "absolute_depth_m": 54.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 189,
+      "depth_m": 23.375,
+      "absolute_depth_m": 54.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 190,
+      "depth_m": 23.5,
+      "absolute_depth_m": 54.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 191,
+      "depth_m": 23.625,
+      "absolute_depth_m": 55.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 192,
+      "depth_m": 23.75,
+      "absolute_depth_m": 55.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 193,
+      "depth_m": 23.875,
+      "absolute_depth_m": 55.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 194,
+      "depth_m": 24.0,
+      "absolute_depth_m": 55.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 195,
+      "depth_m": 24.125,
+      "absolute_depth_m": 55.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 196,
+      "depth_m": 24.25,
+      "absolute_depth_m": 55.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 197,
+      "depth_m": 24.375,
+      "absolute_depth_m": 55.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 198,
+      "depth_m": 24.5,
+      "absolute_depth_m": 55.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 199,
+      "depth_m": 24.625,
+      "absolute_depth_m": 56.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 200,
+      "depth_m": 24.75,
+      "absolute_depth_m": 56.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 201,
+      "depth_m": 24.875,
+      "absolute_depth_m": 56.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 202,
+      "depth_m": 25.0,
+      "absolute_depth_m": 56.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 203,
+      "depth_m": 25.125,
+      "absolute_depth_m": 56.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 204,
+      "depth_m": 25.25,
+      "absolute_depth_m": 56.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 205,
+      "depth_m": 25.375,
+      "absolute_depth_m": 56.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 206,
+      "depth_m": 25.5,
+      "absolute_depth_m": 56.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 207,
+      "depth_m": 25.625,
+      "absolute_depth_m": 57.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 208,
+      "depth_m": 25.75,
+      "absolute_depth_m": 57.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 209,
+      "depth_m": 25.875,
+      "absolute_depth_m": 57.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 210,
+      "depth_m": 26.0,
+      "absolute_depth_m": 57.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 211,
+      "depth_m": 26.125,
+      "absolute_depth_m": 57.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 212,
+      "depth_m": 26.25,
+      "absolute_depth_m": 57.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 213,
+      "depth_m": 26.375,
+      "absolute_depth_m": 57.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 214,
+      "depth_m": 26.5,
+      "absolute_depth_m": 57.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 215,
+      "depth_m": 26.625,
+      "absolute_depth_m": 58.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 216,
+      "depth_m": 26.75,
+      "absolute_depth_m": 58.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 217,
+      "depth_m": 26.875,
+      "absolute_depth_m": 58.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 218,
+      "depth_m": 27.0,
+      "absolute_depth_m": 58.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 219,
+      "depth_m": 27.125,
+      "absolute_depth_m": 58.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 220,
+      "depth_m": 27.25,
+      "absolute_depth_m": 58.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 221,
+      "depth_m": 27.375,
+      "absolute_depth_m": 58.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 222,
+      "depth_m": 27.5,
+      "absolute_depth_m": 58.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 223,
+      "depth_m": 27.625,
+      "absolute_depth_m": 59.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 224,
+      "depth_m": 27.75,
+      "absolute_depth_m": 59.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 225,
+      "depth_m": 27.875,
+      "absolute_depth_m": 59.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 226,
+      "depth_m": 28.0,
+      "absolute_depth_m": 59.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 227,
+      "depth_m": 28.125,
+      "absolute_depth_m": 59.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 228,
+      "depth_m": 28.25,
+      "absolute_depth_m": 59.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 229,
+      "depth_m": 28.375,
+      "absolute_depth_m": 59.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 230,
+      "depth_m": 28.5,
+      "absolute_depth_m": 59.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 231,
+      "depth_m": 28.625,
+      "absolute_depth_m": 60.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 232,
+      "depth_m": 28.75,
+      "absolute_depth_m": 60.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 233,
+      "depth_m": 28.875,
+      "absolute_depth_m": 60.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 234,
+      "depth_m": 29.0,
+      "absolute_depth_m": 60.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 235,
+      "depth_m": 29.125,
+      "absolute_depth_m": 60.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 236,
+      "depth_m": 29.25,
+      "absolute_depth_m": 60.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 237,
+      "depth_m": 29.375,
+      "absolute_depth_m": 60.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 238,
+      "depth_m": 29.5,
+      "absolute_depth_m": 60.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 239,
+      "depth_m": 29.625,
+      "absolute_depth_m": 61.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 240,
+      "depth_m": 29.75,
+      "absolute_depth_m": 61.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 241,
+      "depth_m": 29.875,
+      "absolute_depth_m": 61.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 242,
+      "depth_m": 30.0,
+      "absolute_depth_m": 61.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 243,
+      "depth_m": 30.125,
+      "absolute_depth_m": 61.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 244,
+      "depth_m": 30.25,
+      "absolute_depth_m": 61.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 245,
+      "depth_m": 30.375,
+      "absolute_depth_m": 61.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 246,
+      "depth_m": 30.5,
+      "absolute_depth_m": 61.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 247,
+      "depth_m": 30.625,
+      "absolute_depth_m": 62.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 248,
+      "depth_m": 30.75,
+      "absolute_depth_m": 62.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 249,
+      "depth_m": 30.875,
+      "absolute_depth_m": 62.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 250,
+      "depth_m": 31.0,
+      "absolute_depth_m": 62.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 251,
+      "depth_m": 31.125,
+      "absolute_depth_m": 62.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 252,
+      "depth_m": 31.25,
+      "absolute_depth_m": 62.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 253,
+      "depth_m": 31.375,
+      "absolute_depth_m": 62.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 254,
+      "depth_m": 31.5,
+      "absolute_depth_m": 62.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 255,
+      "depth_m": 31.625,
+      "absolute_depth_m": 63.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 256,
+      "depth_m": 31.75,
+      "absolute_depth_m": 63.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 257,
+      "depth_m": 31.875,
+      "absolute_depth_m": 63.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 258,
+      "depth_m": 32.0,
+      "absolute_depth_m": 63.4,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 259,
+      "depth_m": 32.125,
+      "absolute_depth_m": 63.525,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 260,
+      "depth_m": 32.25,
+      "absolute_depth_m": 63.65,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 261,
+      "depth_m": 32.375,
+      "absolute_depth_m": 63.775,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 262,
+      "depth_m": 32.5,
+      "absolute_depth_m": 63.9,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 263,
+      "depth_m": 32.625,
+      "absolute_depth_m": 64.025,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 264,
+      "depth_m": 32.75,
+      "absolute_depth_m": 64.15,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 265,
+      "depth_m": 32.875,
+      "absolute_depth_m": 64.275,
+      "layerId": "72",
+      "tributary_m": 0.125,
+      "kx_N_m": 2250000.0,
+      "ky_N_m": 3534291.735288517
+    },
+    {
+      "nodeId": 266,
+      "depth_m": 33.0,
+      "absolute_depth_m": 64.4,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 267,
+      "depth_m": 33.125,
+      "absolute_depth_m": 64.525,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 268,
+      "depth_m": 33.25,
+      "absolute_depth_m": 64.65,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 269,
+      "depth_m": 33.375,
+      "absolute_depth_m": 64.775,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 270,
+      "depth_m": 33.5,
+      "absolute_depth_m": 64.9,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 271,
+      "depth_m": 33.625,
+      "absolute_depth_m": 65.025,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 272,
+      "depth_m": 33.75,
+      "absolute_depth_m": 65.15,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 273,
+      "depth_m": 33.875,
+      "absolute_depth_m": 65.275,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 274,
+      "depth_m": 34.0,
+      "absolute_depth_m": 65.4,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 275,
+      "depth_m": 34.125,
+      "absolute_depth_m": 65.525,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 276,
+      "depth_m": 34.25,
+      "absolute_depth_m": 65.65,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 277,
+      "depth_m": 34.375,
+      "absolute_depth_m": 65.775,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 278,
+      "depth_m": 34.5,
+      "absolute_depth_m": 65.9,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 279,
+      "depth_m": 34.625,
+      "absolute_depth_m": 66.025,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 280,
+      "depth_m": 34.75,
+      "absolute_depth_m": 66.15,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 281,
+      "depth_m": 34.875,
+      "absolute_depth_m": 66.275,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 282,
+      "depth_m": 35.0,
+      "absolute_depth_m": 66.4,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 283,
+      "depth_m": 35.125,
+      "absolute_depth_m": 66.525,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 284,
+      "depth_m": 35.25,
+      "absolute_depth_m": 66.65,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 285,
+      "depth_m": 35.375,
+      "absolute_depth_m": 66.775,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 286,
+      "depth_m": 35.5,
+      "absolute_depth_m": 66.9,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 287,
+      "depth_m": 35.625,
+      "absolute_depth_m": 67.025,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 288,
+      "depth_m": 35.75,
+      "absolute_depth_m": 67.15,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 289,
+      "depth_m": 35.875,
+      "absolute_depth_m": 67.275,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 290,
+      "depth_m": 36.0,
+      "absolute_depth_m": 67.4,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 291,
+      "depth_m": 36.125,
+      "absolute_depth_m": 67.525,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 292,
+      "depth_m": 36.25,
+      "absolute_depth_m": 67.65,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 293,
+      "depth_m": 36.375,
+      "absolute_depth_m": 67.775,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 294,
+      "depth_m": 36.5,
+      "absolute_depth_m": 67.9,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 295,
+      "depth_m": 36.625,
+      "absolute_depth_m": 68.025,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 296,
+      "depth_m": 36.75,
+      "absolute_depth_m": 68.15,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 297,
+      "depth_m": 36.875,
+      "absolute_depth_m": 68.275,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 298,
+      "depth_m": 37.0,
+      "absolute_depth_m": 68.4,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 299,
+      "depth_m": 37.125,
+      "absolute_depth_m": 68.525,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 300,
+      "depth_m": 37.25,
+      "absolute_depth_m": 68.65,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 301,
+      "depth_m": 37.375,
+      "absolute_depth_m": 68.775,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 302,
+      "depth_m": 37.5,
+      "absolute_depth_m": 68.9,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 303,
+      "depth_m": 37.625,
+      "absolute_depth_m": 69.025,
+      "layerId": "73",
+      "tributary_m": 0.125,
+      "kx_N_m": 3500000.0,
+      "ky_N_m": 5105088.062083414
+    },
+    {
+      "nodeId": 304,
+      "depth_m": 37.75,
+      "absolute_depth_m": 69.15,
+      "layerId": "73",
+      "tributary_m": 0.08749999999999858,
+      "kx_N_m": 2449999.9999999604,
+      "ky_N_m": 3573561.6434583315
+    },
+    {
+      "nodeId": 305,
+      "depth_m": 37.8,
+      "absolute_depth_m": 69.19999999999999,
+      "layerId": "73",
+      "tributary_m": 0.0625,
+      "kx_N_m": 1750000.0,
+      "ky_N_m": 2552544.031041707
+    },
+    {
+      "nodeId": 306,
+      "depth_m": 37.875,
+      "absolute_depth_m": 69.275,
+      "layerId": "91",
+      "tributary_m": 0.10000000000000142,
+      "kx_N_m": 2400000.000000034,
+      "ky_N_m": 3769911.1843078053
+    },
+    {
+      "nodeId": 307,
+      "depth_m": 38.0,
+      "absolute_depth_m": 69.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 308,
+      "depth_m": 38.125,
+      "absolute_depth_m": 69.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 309,
+      "depth_m": 38.25,
+      "absolute_depth_m": 69.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 310,
+      "depth_m": 38.375,
+      "absolute_depth_m": 69.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 311,
+      "depth_m": 38.5,
+      "absolute_depth_m": 69.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 312,
+      "depth_m": 38.625,
+      "absolute_depth_m": 70.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 313,
+      "depth_m": 38.75,
+      "absolute_depth_m": 70.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 314,
+      "depth_m": 38.875,
+      "absolute_depth_m": 70.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 315,
+      "depth_m": 39.0,
+      "absolute_depth_m": 70.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 316,
+      "depth_m": 39.125,
+      "absolute_depth_m": 70.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 317,
+      "depth_m": 39.25,
+      "absolute_depth_m": 70.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 318,
+      "depth_m": 39.375,
+      "absolute_depth_m": 70.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 319,
+      "depth_m": 39.5,
+      "absolute_depth_m": 70.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 320,
+      "depth_m": 39.625,
+      "absolute_depth_m": 71.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 321,
+      "depth_m": 39.75,
+      "absolute_depth_m": 71.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 322,
+      "depth_m": 39.875,
+      "absolute_depth_m": 71.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 323,
+      "depth_m": 40.0,
+      "absolute_depth_m": 71.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 324,
+      "depth_m": 40.125,
+      "absolute_depth_m": 71.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 325,
+      "depth_m": 40.25,
+      "absolute_depth_m": 71.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 326,
+      "depth_m": 40.375,
+      "absolute_depth_m": 71.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 327,
+      "depth_m": 40.5,
+      "absolute_depth_m": 71.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 328,
+      "depth_m": 40.625,
+      "absolute_depth_m": 72.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 329,
+      "depth_m": 40.75,
+      "absolute_depth_m": 72.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 330,
+      "depth_m": 40.875,
+      "absolute_depth_m": 72.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 331,
+      "depth_m": 41.0,
+      "absolute_depth_m": 72.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 332,
+      "depth_m": 41.125,
+      "absolute_depth_m": 72.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 333,
+      "depth_m": 41.25,
+      "absolute_depth_m": 72.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 334,
+      "depth_m": 41.375,
+      "absolute_depth_m": 72.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 335,
+      "depth_m": 41.5,
+      "absolute_depth_m": 72.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 336,
+      "depth_m": 41.625,
+      "absolute_depth_m": 73.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 337,
+      "depth_m": 41.75,
+      "absolute_depth_m": 73.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 338,
+      "depth_m": 41.875,
+      "absolute_depth_m": 73.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 339,
+      "depth_m": 42.0,
+      "absolute_depth_m": 73.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 340,
+      "depth_m": 42.125,
+      "absolute_depth_m": 73.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 341,
+      "depth_m": 42.25,
+      "absolute_depth_m": 73.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 342,
+      "depth_m": 42.375,
+      "absolute_depth_m": 73.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 343,
+      "depth_m": 42.5,
+      "absolute_depth_m": 73.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 344,
+      "depth_m": 42.625,
+      "absolute_depth_m": 74.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 345,
+      "depth_m": 42.75,
+      "absolute_depth_m": 74.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 346,
+      "depth_m": 42.875,
+      "absolute_depth_m": 74.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 347,
+      "depth_m": 43.0,
+      "absolute_depth_m": 74.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 348,
+      "depth_m": 43.125,
+      "absolute_depth_m": 74.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 349,
+      "depth_m": 43.25,
+      "absolute_depth_m": 74.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 350,
+      "depth_m": 43.375,
+      "absolute_depth_m": 74.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 351,
+      "depth_m": 43.5,
+      "absolute_depth_m": 74.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 352,
+      "depth_m": 43.625,
+      "absolute_depth_m": 75.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 353,
+      "depth_m": 43.75,
+      "absolute_depth_m": 75.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 354,
+      "depth_m": 43.875,
+      "absolute_depth_m": 75.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 355,
+      "depth_m": 44.0,
+      "absolute_depth_m": 75.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 356,
+      "depth_m": 44.125,
+      "absolute_depth_m": 75.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 357,
+      "depth_m": 44.25,
+      "absolute_depth_m": 75.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 358,
+      "depth_m": 44.375,
+      "absolute_depth_m": 75.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 359,
+      "depth_m": 44.5,
+      "absolute_depth_m": 75.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 360,
+      "depth_m": 44.625,
+      "absolute_depth_m": 76.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 361,
+      "depth_m": 44.75,
+      "absolute_depth_m": 76.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 362,
+      "depth_m": 44.875,
+      "absolute_depth_m": 76.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 363,
+      "depth_m": 45.0,
+      "absolute_depth_m": 76.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 364,
+      "depth_m": 45.125,
+      "absolute_depth_m": 76.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 365,
+      "depth_m": 45.25,
+      "absolute_depth_m": 76.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 366,
+      "depth_m": 45.375,
+      "absolute_depth_m": 76.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 367,
+      "depth_m": 45.5,
+      "absolute_depth_m": 76.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 368,
+      "depth_m": 45.625,
+      "absolute_depth_m": 77.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 369,
+      "depth_m": 45.75,
+      "absolute_depth_m": 77.15,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 370,
+      "depth_m": 45.875,
+      "absolute_depth_m": 77.275,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 371,
+      "depth_m": 46.0,
+      "absolute_depth_m": 77.4,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 372,
+      "depth_m": 46.125,
+      "absolute_depth_m": 77.525,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 373,
+      "depth_m": 46.25,
+      "absolute_depth_m": 77.65,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 374,
+      "depth_m": 46.375,
+      "absolute_depth_m": 77.775,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 375,
+      "depth_m": 46.5,
+      "absolute_depth_m": 77.9,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 376,
+      "depth_m": 46.625,
+      "absolute_depth_m": 78.025,
+      "layerId": "91",
+      "tributary_m": 0.125,
+      "kx_N_m": 3000000.0,
+      "ky_N_m": 4712388.98038469
+    },
+    {
+      "nodeId": 377,
+      "depth_m": 46.75,
+      "absolute_depth_m": 78.15,
+      "layerId": "91",
+      "tributary_m": 0.08749999999999858,
+      "kx_N_m": 2099999.999999966,
+      "ky_N_m": 3298672.2862692294
+    },
+    {
+      "nodeId": 378,
+      "depth_m": 46.8,
+      "absolute_depth_m": 78.19999999999999,
+      "layerId": "91",
+      "tributary_m": 0.0625,
+      "kx_N_m": 1500000.0,
+      "ky_N_m": 2356194.490192345
+    },
+    {
+      "nodeId": 379,
+      "depth_m": 46.875,
+      "absolute_depth_m": 78.275,
+      "layerId": "921",
+      "tributary_m": 0.10000000000000142,
+      "kx_N_m": 4000000.000000057,
+      "ky_N_m": 5654866.776461707
+    },
+    {
+      "nodeId": 380,
+      "depth_m": 47.0,
+      "absolute_depth_m": 78.4,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 381,
+      "depth_m": 47.125,
+      "absolute_depth_m": 78.525,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 382,
+      "depth_m": 47.25,
+      "absolute_depth_m": 78.65,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 383,
+      "depth_m": 47.375,
+      "absolute_depth_m": 78.775,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 384,
+      "depth_m": 47.5,
+      "absolute_depth_m": 78.9,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 385,
+      "depth_m": 47.625,
+      "absolute_depth_m": 79.025,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 386,
+      "depth_m": 47.75,
+      "absolute_depth_m": 79.15,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 387,
+      "depth_m": 47.875,
+      "absolute_depth_m": 79.275,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 388,
+      "depth_m": 48.0,
+      "absolute_depth_m": 79.4,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 389,
+      "depth_m": 48.125,
+      "absolute_depth_m": 79.525,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 390,
+      "depth_m": 48.25,
+      "absolute_depth_m": 79.65,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 391,
+      "depth_m": 48.375,
+      "absolute_depth_m": 79.775,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 392,
+      "depth_m": 48.5,
+      "absolute_depth_m": 79.9,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 393,
+      "depth_m": 48.625,
+      "absolute_depth_m": 80.025,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 394,
+      "depth_m": 48.75,
+      "absolute_depth_m": 80.15,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 395,
+      "depth_m": 48.875,
+      "absolute_depth_m": 80.275,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 396,
+      "depth_m": 49.0,
+      "absolute_depth_m": 80.4,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 397,
+      "depth_m": 49.125,
+      "absolute_depth_m": 80.525,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 398,
+      "depth_m": 49.25,
+      "absolute_depth_m": 80.65,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 399,
+      "depth_m": 49.375,
+      "absolute_depth_m": 80.775,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 400,
+      "depth_m": 49.5,
+      "absolute_depth_m": 80.9,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 401,
+      "depth_m": 49.625,
+      "absolute_depth_m": 81.025,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 402,
+      "depth_m": 49.75,
+      "absolute_depth_m": 81.15,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 403,
+      "depth_m": 49.875,
+      "absolute_depth_m": 81.275,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 404,
+      "depth_m": 50.0,
+      "absolute_depth_m": 81.4,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 405,
+      "depth_m": 50.125,
+      "absolute_depth_m": 81.525,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 406,
+      "depth_m": 50.25,
+      "absolute_depth_m": 81.65,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 407,
+      "depth_m": 50.375,
+      "absolute_depth_m": 81.775,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 408,
+      "depth_m": 50.5,
+      "absolute_depth_m": 81.9,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 409,
+      "depth_m": 50.625,
+      "absolute_depth_m": 82.025,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 410,
+      "depth_m": 50.75,
+      "absolute_depth_m": 82.15,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 411,
+      "depth_m": 50.875,
+      "absolute_depth_m": 82.275,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 412,
+      "depth_m": 51.0,
+      "absolute_depth_m": 82.4,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 413,
+      "depth_m": 51.125,
+      "absolute_depth_m": 82.525,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 414,
+      "depth_m": 51.25,
+      "absolute_depth_m": 82.65,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 415,
+      "depth_m": 51.375,
+      "absolute_depth_m": 82.775,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 416,
+      "depth_m": 51.5,
+      "absolute_depth_m": 82.9,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 417,
+      "depth_m": 51.625,
+      "absolute_depth_m": 83.025,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 418,
+      "depth_m": 51.75,
+      "absolute_depth_m": 83.15,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 419,
+      "depth_m": 51.875,
+      "absolute_depth_m": 83.275,
+      "layerId": "921",
+      "tributary_m": 0.125,
+      "kx_N_m": 5000000.0,
+      "ky_N_m": 7068583.470577034
+    },
+    {
+      "nodeId": 420,
+      "depth_m": 52.0,
+      "absolute_depth_m": 83.4,
+      "layerId": "921",
+      "tributary_m": 0.0625,
+      "kx_N_m": 2500000.0,
+      "ky_N_m": 3534291.735288517
+    }
+  ],
+  "visualization": {
+    "noPerFrameNormalization": true,
+    "magnificationMustBeLabeled": true,
+    "finiteElementBeamFieldsOnly": true,
+    "doNotPaintContinuumStressOnSoil": true,
+    "sign": "axialTensionPositive_N: negative compression; sideReactionOnPile_N uses global signs; moment/shear each array stores [head-end,toe-end] internal section values"
+  },
+  "validation": {
+    "cantileverBackendBenchmark": {
+      "analysisCode": 0,
+      "expectedDisplacement_m": 0.00013333333333333334,
+      "measuredDisplacement_m": 0.00013333333333333334,
+      "relativeError": 0.0,
+      "baseReaction": [
+        -1000.0000000000008,
+        0.0,
+        10000.000000000004
+      ],
+      "passed": true
+    },
+    "timeStepCoarse": {
+      "headLateralRelativeL2": 0.00022022717203126104,
+      "headLateralPeakDifferenceRatio": 0.00017687597786776238,
+      "peakMomentRelativeDifference": 4.623839749329228e-05,
+      "peakShearRelativeDifference": 7.240127719732037e-05
+    },
+    "timeStepFine": {
+      "headLateralRelativeL2": 5.507586584572414e-05,
+      "headLateralPeakDifferenceRatio": 4.4173500190331014e-05,
+      "peakMomentRelativeDifference": 1.504983498423762e-05,
+      "peakShearRelativeDifference": 3.878282189839766e-06
+    },
+    "mesh1to05": {
+      "headLateralRelativeL2": 0.012108811014050105,
+      "headLateralPeakDifferenceRatio": 0.013355267960666963,
+      "peakMomentRelativeDifference": 0.008745045246434047,
+      "peakShearRelativeDifference": 0.10050170363659638
+    },
+    "mesh05to025": {
+      "headLateralRelativeL2": 0.002429656263490447,
+      "headLateralPeakDifferenceRatio": 0.0026676514271045744,
+      "peakMomentRelativeDifference": 0.002029420794043557,
+      "peakShearRelativeDifference": 0.048548215501008296
+    },
+    "meshRefinement": {
+      "headLateralRelativeL2": 0.0006110565901251595,
+      "headLateralPeakDifferenceRatio": 0.0006702870683455654,
+      "peakMomentRelativeDifference": 0.0008039836907154374,
+      "peakShearRelativeDifference": 0.023750537745891642
+    },
+    "passed": true,
+    "selectedMeshTimeStep": {
+      "mesh_m": 0.125,
+      "dtCoarse_s": 0.01,
+      "dtFine_s": 0.005,
+      "headLateralRelativeL2": 5.3206636105704973e-05,
+      "headLateralPeakDifferenceRatio": 4.2526811818696454e-05,
+      "peakMomentRelativeDifference": 1.0161343910741749e-05,
+      "peakShearRelativeDifference": 1.063103854126446e-05,
+      "passed": true
+    }
+  },
+  "selectedCase": "dt0.01_mesh0.125",
+  "outputTimeStep_s": 0.05
+}

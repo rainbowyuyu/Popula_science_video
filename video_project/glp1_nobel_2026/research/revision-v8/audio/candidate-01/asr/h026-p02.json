@@ -1,0 +1,166 @@
+{
+  "id": "h026",
+  "partIndex": 1,
+  "expected": "研究者发现，一种分解酶，会从它的开头切掉两个氨基酸。",
+  "heard": "研究者發現,一種分解眉會從它的開頭切掉兩個胺基酸。",
+  "words": [
+    {
+      "text": "研",
+      "start": 0.0,
+      "end": 0.46,
+      "probability": 0.9829999208450317
+    },
+    {
+      "text": "究",
+      "start": 0.46,
+      "end": 0.6,
+      "probability": 0.9995589852333069
+    },
+    {
+      "text": "者",
+      "start": 0.6,
+      "end": 0.72,
+      "probability": 0.9954946041107178
+    },
+    {
+      "text": "發現,",
+      "start": 0.72,
+      "end": 1.04,
+      "probability": 0.717676043510437
+    },
+    {
+      "text": "一",
+      "start": 1.46,
+      "end": 1.58,
+      "probability": 0.9112420082092285
+    },
+    {
+      "text": "種",
+      "start": 1.58,
+      "end": 1.72,
+      "probability": 0.994300127029419
+    },
+    {
+      "text": "分",
+      "start": 1.72,
+      "end": 1.88,
+      "probability": 0.9332714676856995
+    },
+    {
+      "text": "解",
+      "start": 1.88,
+      "end": 2.06,
+      "probability": 0.9336932301521301
+    },
+    {
+      "text": "眉",
+      "start": 2.06,
+      "end": 2.3,
+      "probability": 0.6084037721157074
+    },
+    {
+      "text": "會",
+      "start": 2.3,
+      "end": 2.68,
+      "probability": 0.7636968493461609
+    },
+    {
+      "text": "從",
+      "start": 2.68,
+      "end": 2.84,
+      "probability": 0.997943103313446
+    },
+    {
+      "text": "它的",
+      "start": 2.84,
+      "end": 2.98,
+      "probability": 0.9024714827537537
+    },
+    {
+      "text": "開",
+      "start": 2.98,
+      "end": 3.2,
+      "probability": 0.9857984781265259
+    },
+    {
+      "text": "頭",
+      "start": 3.2,
+      "end": 3.44,
+      "probability": 0.9980708956718445
+    },
+    {
+      "text": "切",
+      "start": 3.44,
+      "end": 3.7,
+      "probability": 0.982880175113678
+    },
+    {
+      "text": "掉",
+      "start": 3.7,
+      "end": 3.9,
+      "probability": 0.9967898726463318
+    },
+    {
+      "text": "兩個",
+      "start": 3.9,
+      "end": 4.1,
+      "probability": 0.9365711212158203
+    },
+    {
+      "text": "胺",
+      "start": 4.1,
+      "end": 4.32,
+      "probability": 0.9081743955612183
+    },
+    {
+      "text": "基",
+      "start": 4.32,
+      "end": 4.46,
+      "probability": 0.8063082098960876
+    },
+    {
+      "text": "酸。",
+      "start": 4.46,
+      "end": 4.64,
+      "probability": 0.9963989555835724
+    }
+  ],
+  "sourceSHA256": "eee3235904e33edb65245d2fc227280862a3c59feab5d98254535419a1b6acc4",
+  "ratio": 0.9130434782608695,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "酶",
+      "heard": "眉",
+      "end": 10
+    },
+    {
+      "op": "replace",
+      "expected": "氨",
+      "heard": "胺",
+      "end": 21
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 241920,
+    "seconds": 5.04,
+    "peakDBFS": -5.672794895239458,
+    "first20msDBFS": -65.47137986781598,
+    "last20msDBFS": -71.66222807751797,
+    "firstActiveMs": 270.0,
+    "lastActiveToEndMs": 370.0,
+    "activityThresholdDBFS": -48.09768839373347,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

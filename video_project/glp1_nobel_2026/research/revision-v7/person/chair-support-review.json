@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-09",
+  "scope": "h016 sitStand only; support chair + same-body reachable arm rig",
+  "source": "src/V5Person.ts",
+  "sha256": "d40548631d1f96bbec7d19fcc46a562de631f4c0b6c0d51adc16e7a9457b1513",
+  "status": "source frozen; local preview checked; parent dense Film range pending",
+  "fix": [
+    "armrests only visible for sitStand",
+    "fixed arm bone lengths, two-bone IK to armrest contact points",
+    "progressive rotation through upper arm and forearm preserves forearm volume",
+    "hands lift and clear outward before returning to resting side pose",
+    "chair remains fixed during sitStand",
+    "reversible phase supports sit-down and stand-up"
+  ],
+  "localViews": {
+    "times": [
+      0,
+      0.8,
+      1.2,
+      1.6,
+      2,
+      2.5,
+      3,
+      4,
+      5
+    ],
+    "angles": [
+      "front",
+      "side"
+    ],
+    "resolution": [
+      1600,
+      900
+    ],
+    "actualViewed": [
+      "chair-sheet.jpg (18 views)",
+      "sit.jpg",
+      "half-sit.jpg",
+      "chair-side-2.jpg",
+      "chair-front-2.jpg"
+    ],
+    "gpu": {
+      "renderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    }
+  },
+  "constraints": {
+    "upperArmMetersRange": [
+      0.29940273879842827,
+      0.2994027387984285
+    ],
+    "forearmMetersRange": [
+      0.2033961651555899,
+      0.20339616515559014
+    ],
+    "fullSeatWristTargetsMeters": {
+      "weight": 1,
+      "armrestTop": 0.621,
+      "wrists": [
+        [
+          0.245,
+          0.641,
+          0.087
+        ],
+        [
+          -0.245,
+          0.641,
+          0.087
+        ]
+      ],
+      "targets": [
+        [
+          0.245,
+          0.641,
+          0.087
+        ],
+        [
+          -0.245,
+          0.641,
+          0.087
+        ]
+      ],
+      "upperLengths": [
+        0.2994027387984284,
+        0.2994027387984284
+      ],
+      "forearmLengths": [
+        0.20339616515558998,
+        0.20339616515558998
+      ]
+    },
+    "typecheck": "npm run check passed"
+  },
+  "nonSitRegression": {
+    "baseline": "V5Person-chair-before-fix.ts",
+    "method": "SHA256 of Float32 body vertex positions and garment vertex positions after identical update state; measurement applied identically",
+    "rows": [
+      {
+        "id": "meal-rest-front",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "meal-lift-front",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "meal-rest-side",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "meal-lift-side",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "stand",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "walk-a",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "walk-b",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "measure-front",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "measure-side",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "eat-neutral-025",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "eat-neutral-050",
+        "bodySame": true,
+        "garmentSame": true
+      },
+      {
+        "id": "eat-neutral-075",
+        "bodySame": true,
+        "garmentSame": true
+      }
+    ],
+    "allMatch": true
+  },
+  "limitations": [
+    "This is deterministic illustrative kinematics, not motion capture or biomechanical chair contact simulation.",
+    "Visual contact and clearance inspected in sampled front and side views; no exhaustive triangle collision proof.",
+    "Parent must inspect actual Film h016 F4147–4437 and neighboring actionWeight transitions before final export."
+  ]
+}

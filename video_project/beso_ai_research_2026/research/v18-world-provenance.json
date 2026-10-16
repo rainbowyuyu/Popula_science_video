@@ -1,0 +1,82 @@
+{
+  "version": "v18",
+  "model": "Blender-authored reference visual layout. Exactly three level circular ballast bases and three outward-inclined columns; no CentralKeel/CentralFoot. Continuous radial box braces support the upper hub. Twelve complete alternating-link anchor chains attach to outboard base eyes and reach the seabed anchor coordinates. The archived solver model is unchanged; no archived displacement is applied to the revised visual layout.",
+  "water": {
+    "package": "WaterPro 3.1.1",
+    "three": "0.183.0",
+    "backend": "webgpu",
+    "seed": 0.1741,
+    "stepSize": 0.016666666666666666,
+    "claim": "Optical FFT/Gerstner wave visualization, not a new coupled calculation.",
+    "clipPlaneDistanceM": 0.4
+  },
+  "evidence": "Saved original BESO and Zwind arrays. Scalars and curves remain independent archived evidence.",
+  "camera": "Single C1 route. Opaque near-camera drafting sheet crosses lens at 25.5, 40.5, 55.5, 97 seconds and covers stage visibility switches.",
+  "files": [
+    {
+      "path": "src/beso/LaunchWorldV18.ts",
+      "sha256": "01ac976cdc5f46391157bc2ffc6b2be7bb6a27adf3671e03c4b1384346a95f53",
+      "bytes": 1338
+    },
+    {
+      "path": "src/beso/LaunchWorldV18Runtime.ts",
+      "sha256": "75c0247befcb562393b68d3e1b11ab6d95bd1aa7a2f1da0bbca9feb53d7f7838",
+      "bytes": 16803
+    },
+    {
+      "path": "src/beso/LaunchV18Camera.ts",
+      "sha256": "cf927e6b1fbf4d196e54acb1d29a23d8360bb4ebf4054a520d41983dbdcff250",
+      "bytes": 2305
+    },
+    {
+      "path": "src/beso/NativePlatformV18.ts",
+      "sha256": "1e4fea4533ba48d7a4b7fcf43e0fea0be1ae857fbbfbe410572d0c34194e197f",
+      "bytes": 6869
+    },
+    {
+      "path": "scripts/blender_v18_native.py",
+      "sha256": "100b9b16987517974687bbc8fe9f4a6ee489db3b73d9b40d5061fdf866a891a9",
+      "bytes": 9279
+    },
+    {
+      "path": "public/assets/v18/world-webgpu.js",
+      "sha256": "b7689f769a193de68897c96b06dac46b58973389792791a9cc4317e92d08fe32",
+      "bytes": 7062338
+    },
+    {
+      "path": "public/assets/v18/reference-platform.glb",
+      "sha256": "ec59043ad9a43ee2bfb9c5df355135d09a2b29c1fd80dda69475e2484d751ffb",
+      "bytes": 1910724
+    },
+    {
+      "path": "public/assets/v18/reference-platform-source.blend",
+      "sha256": "74949aeed4f6f0b148151b6828cf5b38f30dd38466d732ac514ef46283f2b52f",
+      "bytes": 399763
+    },
+    {
+      "path": "public/assets/v18/turbine-upper.glb",
+      "sha256": "d94e4792923b09cee89dd3e216385301b32fbe23ccfb185037939d288a242adb",
+      "bytes": 368536
+    },
+    {
+      "path": "public/assets/v18/visual-layout.json",
+      "sha256": "7d97b94465c17d2657696a410f661fd38abcd1647eabe7dec5dba729acd4bb5d",
+      "bytes": 75265
+    },
+    {
+      "path": "public/assets/v18/clear-blue-sky.hdr",
+      "sha256": "206c67e3a1b992282821cf06662bdd69bbb4915c1c4444a66338a40d6a7d4e34",
+      "bytes": 1173154
+    },
+    {
+      "path": "public/beso-research/physics/native-model.json",
+      "sha256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "bytes": 11483
+    },
+    {
+      "path": "public/beso-research/physics/zwind-response.json",
+      "sha256": "509c491df6bea647a3593fbc8e7e7d29675ec6dc3b64b0aaf9801e17982c6719",
+      "bytes": 376644
+    }
+  ]
+}

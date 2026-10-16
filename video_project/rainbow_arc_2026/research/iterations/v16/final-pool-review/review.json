@@ -1,0 +1,125 @@
+{
+  "version": "V16",
+  "reviewedUTC": "2026-10-12T16:56:33.357916+00:00",
+  "scope": "Independent read-only final pool composite and three frozen clean endpoints",
+  "sourceModified": false,
+  "files": [
+    {
+      "path": "output-v16/work/preview-pool-v16.mp4",
+      "bytes": 18638730,
+      "sha256": "9b51301e9af356dfa721c9844c2fe74d60f76fd1fcc16888741bbacc8abbf684"
+    },
+    {
+      "path": "output-v16/work/endpoints-frozen/frame-00610.png",
+      "bytes": 2693105,
+      "sha256": "62ff8b8b9eb524bc72e6d272b26e760f8d3f5471b0993c9975eedc4e39b2613c"
+    },
+    {
+      "path": "output-v16/work/endpoints-frozen/frame-08005.png",
+      "bytes": 3169071,
+      "sha256": "b06793b34dad150e7bbe0e3d3508ab0b7a9a6fe8e83de4808f4fcc9ea6aaf3ee"
+    },
+    {
+      "path": "output-v16/work/endpoints-frozen/frame-10150.png",
+      "bytes": 3216801,
+      "sha256": "4795aec8426e871e4ece3d7c63dbbb7fed6b7a3a713100f1d8bc9c59ed3442f4"
+    }
+  ],
+  "reviewMethod": {
+    "realtimePlaybackPerformed": false,
+    "subjectiveAudioListeningPerformed": false,
+    "denseFramesVisuallyInspected": 50,
+    "sampleFPS": 10,
+    "localPreviewSeconds": [
+      0.0,
+      4.9
+    ],
+    "denseFrames": "pool-dense-001.jpg through pool-dense-050.jpg",
+    "fullResolutionCompositeFrames": [
+      {
+        "frame": 0,
+        "second": 0.0
+      },
+      {
+        "frame": 75,
+        "second": 2.5
+      },
+      {
+        "frame": 147,
+        "second": 4.9
+      }
+    ],
+    "frozenCleanEndpointsVisuallyInspected": [
+      610,
+      8005,
+      10150
+    ],
+    "endpointLimitation": "Clean endpoints contain no subtitle/brand overlay; composite text was checked on preview frames"
+  },
+  "encodedVideo": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "videoFrames": 150,
+    "videoDurationSeconds": 5.0,
+    "containerDurationSeconds": 5.056,
+    "audioCodec": "AAC",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "automatedChecks": {
+    "fullDecodeExitCode": 0,
+    "decodedFrames": 150,
+    "decodeErrorsObserved": false,
+    "blackdetect": {
+      "parameters": "d=0.1:pix_th=0.06",
+      "reportedEvents": 0
+    },
+    "freezedetect": {
+      "parameters": "n=-55dB:d=0.5",
+      "reportedEvents": 0
+    },
+    "pts": {
+      "frames": 150,
+      "first": 0.0,
+      "last": 4.966667,
+      "strictlyIncreasing": true,
+      "maxGapSeconds": 0.033334000000000086
+    }
+  },
+  "observations": [
+    {
+      "item": "Pool and fish coexistence",
+      "result": "pass",
+      "evidence": "Water plane, readable bed/shore and complete fish visible together; no basin rim/ground hole; no major subject occlusion in inspected composites"
+    },
+    {
+      "item": "Composed text",
+      "result": "pass",
+      "evidence": "Logo top left, large two-line anchored label left and consistent bottom subtitles remain separate from fish face and major pool surface"
+    },
+    {
+      "item": "Dense visual sequence",
+      "result": "pass_with_scope_limits",
+      "evidence": "0.0–4.9s at10fps shows continuous mild camera/idle movement, stable fish anatomy and water, no visible abrupt appearance/disappearance or reflection pop"
+    },
+    {
+      "item": "Frozen endpoints",
+      "result": "pass",
+      "evidence": "F610 complete support ground/crowns; F8005 both fish complete and separated; F10150 complete fish/natural blue-green pool"
+    },
+    {
+      "item": "Optical line visual endpoint",
+      "result": "nonblocking",
+      "evidence": "Screen-space line lies near fish upper-left face; no geometry fault inferred. Owner separately audits bone eye midpoint numerically; source unchanged."
+    }
+  ],
+  "mustFix": [],
+  "limitations": [
+    "No real-time player viewing or subjective audio listening was performed.",
+    "Three-frame sampling interval can miss a subtle isolated visual error between inspected frames.",
+    "This report does not certify whole-film transitions, all text layouts, pronunciation, sound quality or narration synchrony.",
+    "Black/freeze detection and uniform PTS are encoding/time checks, not a universal aesthetics guarantee."
+  ],
+  "decision": "Pass within the explicitly reviewed scope; no mandatory visual repair found"
+}

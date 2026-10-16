@@ -1,0 +1,69 @@
+{
+  "id": "g063",
+  "text": "血糖管理也需要个体化。老年人尤其要留意低血糖，别为了追一个漂亮数字，让自己头晕、跌倒或吃不下饭。",
+  "ttsText": "血糖管理也需要个体化。老年人尤其要留意低血糖，别为了追一个漂亮数字，让自己头晕、跌倒或吃不下饭。",
+  "signature": "e503a3c11a3fb6f7c69e621c59cd5dba03100d9f8e775d11407ac34c3d4be704",
+  "raw": "audio/raw/g063-e503a3c11a.wav",
+  "processed": "public/voice/g063.wav",
+  "rawDuration": 9.12,
+  "duration": 9.12,
+  "sha256": "d91a572769fa16d2a97a8dd64cd315c34c735f35386f012d6cafdc74aef80ec4",
+  "seed": 129732143,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g061",
+    "g062",
+    "g063",
+    "g064"
+  ],
+  "rawEndpointDB": -83.66498611346498,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "81d03dc97baef65df3cb64809266b2022ffaab4686637858a7915e1598252fba",
+    "outputSha256": "d91a572769fa16d2a97a8dd64cd315c34c735f35386f012d6cafdc74aef80ec4",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.339213319421269,
+    "input": {
+      "seconds": 9.12,
+      "peakDb": -6.8673497403602815,
+      "activeRmsDb": -22.102831721598854,
+      "quietFrameP10Db": -64.92864911280729
+    },
+    "output": {
+      "seconds": 9.12,
+      "peakDb": -4.376312355127912,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -65.34998121456422
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

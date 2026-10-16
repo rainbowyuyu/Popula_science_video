@@ -1,0 +1,45 @@
+{
+  "version": "nobel-physics-2026-v06-audio-audit",
+  "checkedAt": "2026-10-07",
+  "durationSeconds": 289.280042,
+  "referenceVoice": {
+    "model": "Qwen3-TTS-0.6B",
+    "referenceFile": "D:/python_project/tts/work/clone-reference.wav",
+    "referenceSha256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+    "coverage": "17/17 clips: 9 regenerated in v06, 8 inherited from v03; v03 ledger uses the same model/reference"
+  },
+  "stems": {
+    "narration": {
+      "path": "audio/v06/narration.wav",
+      "durationSeconds": 289.280042,
+      "integratedLufs": -22.8,
+      "truePeakDbfs": -3.6,
+      "quietFloorApproxDbfs": -58,
+      "noiseReduction": "rainbow-narration-v2: highpass 65Hz, afftdn nr=3, lowpass 10.6kHz, deesser and compression"
+    },
+    "music": {
+      "path": "audio/v06/music.wav",
+      "durationSeconds": 289.3,
+      "integratedLufs": -17.9,
+      "truePeakDbfs": -2.2,
+      "source": "../ai_evolution_ch04_space_time/research/music/v09/sources/Scott-Buckley-Growing-Up.m4a",
+      "sourceSha256": "3c5ca8b1b4a66ff4ce2bc29f127193b616b2c4d57295dd8acad43de648a4c2ee"
+    },
+    "master": {
+      "path": "audio/v06/master.wav",
+      "durationSeconds": 289.280042,
+      "integratedLufs": -14.8,
+      "loudnessRangeLu": 2.3,
+      "truePeakDbfs": -1.8,
+      "sha256": "0878f99becad1fda5646286e32762e14d4e74af9113d95c9466a981be20f1b92"
+    }
+  },
+  "mixCheck": {
+    "sidechainDucking": "pass",
+    "musicMedianDbfsDuringSpeech": -24.1,
+    "musicMedianDbfsDuringPauses": -22.7,
+    "oldVoiceLayerDetected": false,
+    "audibleNoiseConcern": false,
+    "result": "pass"
+  }
+}

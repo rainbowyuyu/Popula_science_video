@@ -1,0 +1,36 @@
+{
+  "name": "topology-optimization-film",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "tsc --noEmit",
+    "render": "node scripts/render_v3.mjs",
+    "render:nobel:v5": "node scripts/render_nobel2026_v5.mjs",
+    "stills:nobel:v5": "node scripts/render_nobel2026_v5.mjs stills",
+    "render:nobel:v51": "node scripts/render_nobel2026_v51.mjs",
+    "stills:nobel:v51": "node scripts/render_nobel2026_v51.mjs stills",
+    "render:episode2": "node scripts/render_episode2.mjs",
+    "stills:episode2": "node scripts/render_episode2.mjs stills",
+    "stills": "node scripts/render_v3.mjs stills",
+    "web": "node scripts/build_web_v3.mjs",
+    "qa": "python scripts/qa_v3.py",
+    "cleanup": "python scripts/cleanup_v3.py --apply"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.3.0",
+    "@remotion/cli": "4.0.526",
+    "@remotion/media": "4.0.526",
+    "@remotion/three": "^4.0.526",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.526",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "^0.180.0",
+    "typescript": "5.9.3"
+  }
+}

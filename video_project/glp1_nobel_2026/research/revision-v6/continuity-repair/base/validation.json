@@ -1,0 +1,1339 @@
+{
+  "finishedUTC": "2026-10-09T07:56:34.533Z",
+  "automaticChecksPass": true,
+  "fullDecodeSuccess": true,
+  "decodedFrames": 25621,
+  "colorRemuxed": true,
+  "video": {
+    "index": 0,
+    "codec_name": "h264",
+    "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+    "profile": "High",
+    "codec_type": "video",
+    "codec_tag_string": "avc1",
+    "codec_tag": "0x31637661",
+    "mime_codec_string": "avc1.640028",
+    "width": 1920,
+    "height": 1080,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "has_b_frames": 2,
+    "sample_aspect_ratio": "1:1",
+    "display_aspect_ratio": "16:9",
+    "pix_fmt": "yuv420p",
+    "level": 40,
+    "color_range": "tv",
+    "color_space": "bt709",
+    "color_transfer": "bt709",
+    "color_primaries": "bt709",
+    "chroma_location": "center",
+    "field_order": "progressive",
+    "refs": 1,
+    "is_avc": "true",
+    "nal_length_size": "4",
+    "id": "0x1",
+    "r_frame_rate": "30/1",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/90000",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 76863000,
+    "duration": "854.033333",
+    "bit_rate": "1867351",
+    "bits_per_raw_sample": "8",
+    "nb_frames": "25621",
+    "extradata_size": 51,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "VideoHandler"
+    }
+  },
+  "audio": {
+    "index": 1,
+    "codec_name": "aac",
+    "codec_long_name": "AAC (Advanced Audio Coding)",
+    "profile": "LC",
+    "codec_type": "audio",
+    "codec_tag_string": "mp4a",
+    "codec_tag": "0x6134706d",
+    "mime_codec_string": "mp4a.40.2",
+    "sample_fmt": "fltp",
+    "sample_rate": "48000",
+    "channels": 2,
+    "channel_layout": "stereo",
+    "bits_per_sample": 0,
+    "initial_padding": 0,
+    "id": "0x2",
+    "r_frame_rate": "0/0",
+    "avg_frame_rate": "0/0",
+    "time_base": "1/48000",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 40993584,
+    "duration": "854.033000",
+    "bit_rate": "282337",
+    "nb_frames": "40034",
+    "extradata_size": 5,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "SoundHandler"
+    }
+  },
+  "audioMux": {
+    "method": "Silent full Remotion video plus complete locked WAV encoded once from zero",
+    "remotionInputProps": {
+      "audio": false,
+      "clean": false
+    },
+    "remotionMuted": true,
+    "silent": "tmp/v6-full-final/silent.mp4",
+    "silentSHA256": "390436865507d1208d1c9d15e4f594c25d70c2f4db9ea438f579057db9519db8",
+    "command": [
+      "ffmpeg",
+      "-hide_banner",
+      "-nostdin",
+      "-v",
+      "error",
+      "-xerror",
+      "-n",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-full-final\\silent.mp4",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\public\\master.wav",
+      "-map",
+      "0:v:0",
+      "-map",
+      "1:a:0",
+      "-map_metadata",
+      "-1",
+      "-c:v",
+      "copy",
+      "-c:a",
+      "aac",
+      "-b:a",
+      "320k",
+      "-ar",
+      "48000",
+      "-af",
+      "asetpts=PTS-STARTPTS",
+      "-color_range",
+      "tv",
+      "-color_primaries",
+      "bt709",
+      "-color_trc",
+      "bt709",
+      "-colorspace",
+      "bt709",
+      "-movflags",
+      "+faststart+write_colr",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-full-final\\GLP1_V5_1080p.candidate.mp4"
+    ],
+    "ffmpeg": "ffmpeg version 2026-02-09-git-9bfa1635ae-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+    "masterSHA256": "dec0de170d5796dadad56323e11041195049e3c0e4c365e4ed50f17fa15b1146",
+    "masterProbe": {
+      "index": 0,
+      "codec_name": "pcm_s24le",
+      "codec_long_name": "PCM signed 24-bit little-endian",
+      "codec_type": "audio",
+      "codec_tag_string": "[1][0][0][0]",
+      "codec_tag": "0x0001",
+      "sample_fmt": "s32",
+      "sample_rate": "48000",
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bits_per_sample": 24,
+      "initial_padding": 0,
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/48000",
+      "duration_ts": 40993600,
+      "duration": "854.033333",
+      "bit_rate": "2304000",
+      "bits_per_raw_sample": "24",
+      "disposition": {
+        "default": 0,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      }
+    },
+    "trimmed": false,
+    "padded": false,
+    "timeStretched": false,
+    "videoCodec": "copy",
+    "audioCodec": "aac",
+    "audioBitrate": "320k",
+    "sampleRate": 48000,
+    "videoPayloadSHA256": "fd686a13a22f13cd90086807fd6429c63171c6b9bf5122cfe82f48e990794558",
+    "videoPayloadUnchanged": true
+  },
+  "audioComparison": {
+    "method": "Full-length mono 8 kHz PCM at zero offset, every non-silent 5-second window; independent +/-100 ms lag search over up to 12 distributed windows. No shift, trim or time stretch is applied.",
+    "masterSHA256": "dec0de170d5796dadad56323e11041195049e3c0e4c365e4ed50f17fa15b1146",
+    "samplesAAC": 6832299,
+    "samplesMaster": 6832267,
+    "correlation": 0.9999923098942705,
+    "normalizedRMSE": 0.003966690896513333,
+    "gainDB": -0.005239832014612947,
+    "comparedWindows": 171,
+    "minimumWindowCorrelation": 0.9999784335269143,
+    "maximumWindowNormalizedRMSE": 0.006636875106337104,
+    "windows": [
+      {
+        "startSeconds": 0,
+        "correlation": 0.9999911329546265,
+        "normalizedRMSE": 0.0042430114743677635
+      },
+      {
+        "startSeconds": 5,
+        "correlation": 0.9999875056608558,
+        "normalizedRMSE": 0.005031714755194365
+      },
+      {
+        "startSeconds": 10,
+        "correlation": 0.999991017818768,
+        "normalizedRMSE": 0.0042854995794240815
+      },
+      {
+        "startSeconds": 15,
+        "correlation": 0.9999940918849182,
+        "normalizedRMSE": 0.0035004013943517884
+      },
+      {
+        "startSeconds": 20,
+        "correlation": 0.9999963912965599,
+        "normalizedRMSE": 0.0027145779515700846
+      },
+      {
+        "startSeconds": 25,
+        "correlation": 0.9999942191830133,
+        "normalizedRMSE": 0.003457046906063194
+      },
+      {
+        "startSeconds": 30,
+        "correlation": 0.9999963340357901,
+        "normalizedRMSE": 0.0027480395686692487
+      },
+      {
+        "startSeconds": 35,
+        "correlation": 0.999996564759475,
+        "normalizedRMSE": 0.0026446505776614522
+      },
+      {
+        "startSeconds": 40,
+        "correlation": 0.999995550673652,
+        "normalizedRMSE": 0.0030272478589112007
+      },
+      {
+        "startSeconds": 45,
+        "correlation": 0.9999967961419876,
+        "normalizedRMSE": 0.0025525060127673613
+      },
+      {
+        "startSeconds": 50,
+        "correlation": 0.9999967386313201,
+        "normalizedRMSE": 0.0025924390333162016
+      },
+      {
+        "startSeconds": 55,
+        "correlation": 0.9999837920211537,
+        "normalizedRMSE": 0.0058011141775020595
+      },
+      {
+        "startSeconds": 60,
+        "correlation": 0.9999934542303432,
+        "normalizedRMSE": 0.003648374602029091
+      },
+      {
+        "startSeconds": 65,
+        "correlation": 0.9999947072807835,
+        "normalizedRMSE": 0.003280848302774446
+      },
+      {
+        "startSeconds": 70,
+        "correlation": 0.9999959587173873,
+        "normalizedRMSE": 0.002889273813415928
+      },
+      {
+        "startSeconds": 75,
+        "correlation": 0.9999897714222057,
+        "normalizedRMSE": 0.004568837246973078
+      },
+      {
+        "startSeconds": 80,
+        "correlation": 0.9999955047842707,
+        "normalizedRMSE": 0.0030425701910870963
+      },
+      {
+        "startSeconds": 85,
+        "correlation": 0.9999941317885934,
+        "normalizedRMSE": 0.0034649256199100215
+      },
+      {
+        "startSeconds": 90,
+        "correlation": 0.9999937681591247,
+        "normalizedRMSE": 0.003564437126772728
+      },
+      {
+        "startSeconds": 95,
+        "correlation": 0.9999942860587706,
+        "normalizedRMSE": 0.003416735445165779
+      },
+      {
+        "startSeconds": 100,
+        "correlation": 0.9999929599375329,
+        "normalizedRMSE": 0.0037761536992234964
+      },
+      {
+        "startSeconds": 105,
+        "correlation": 0.9999930381226139,
+        "normalizedRMSE": 0.0037762954847633074
+      },
+      {
+        "startSeconds": 110,
+        "correlation": 0.9999963694444647,
+        "normalizedRMSE": 0.0027357574399136035
+      },
+      {
+        "startSeconds": 115,
+        "correlation": 0.9999907366154548,
+        "normalizedRMSE": 0.004382799493341738
+      },
+      {
+        "startSeconds": 120,
+        "correlation": 0.9999933742939447,
+        "normalizedRMSE": 0.003692102143989028
+      },
+      {
+        "startSeconds": 125,
+        "correlation": 0.9999896251169961,
+        "normalizedRMSE": 0.004580906872777403
+      },
+      {
+        "startSeconds": 130,
+        "correlation": 0.9999930263664579,
+        "normalizedRMSE": 0.0037848211005461208
+      },
+      {
+        "startSeconds": 135,
+        "correlation": 0.9999943136026833,
+        "normalizedRMSE": 0.0034083236306242915
+      },
+      {
+        "startSeconds": 140,
+        "correlation": 0.9999938069681971,
+        "normalizedRMSE": 0.003544269595937669
+      },
+      {
+        "startSeconds": 145,
+        "correlation": 0.9999940673865004,
+        "normalizedRMSE": 0.0035057326262086237
+      },
+      {
+        "startSeconds": 150,
+        "correlation": 0.9999873597277174,
+        "normalizedRMSE": 0.00507761294357733
+      },
+      {
+        "startSeconds": 155,
+        "correlation": 0.9999935806247593,
+        "normalizedRMSE": 0.0036245867009560614
+      },
+      {
+        "startSeconds": 160,
+        "correlation": 0.9999916698737348,
+        "normalizedRMSE": 0.004149851375750729
+      },
+      {
+        "startSeconds": 165,
+        "correlation": 0.9999887917330379,
+        "normalizedRMSE": 0.004781644926980807
+      },
+      {
+        "startSeconds": 170,
+        "correlation": 0.999990164592937,
+        "normalizedRMSE": 0.004464569511896692
+      },
+      {
+        "startSeconds": 175,
+        "correlation": 0.9999913935339648,
+        "normalizedRMSE": 0.004211954340567693
+      },
+      {
+        "startSeconds": 180,
+        "correlation": 0.9999936514421415,
+        "normalizedRMSE": 0.003639961081708261
+      },
+      {
+        "startSeconds": 185,
+        "correlation": 0.9999797225221579,
+        "normalizedRMSE": 0.006441941069268533
+      },
+      {
+        "startSeconds": 190,
+        "correlation": 0.999992175222716,
+        "normalizedRMSE": 0.004001899335223608
+      },
+      {
+        "startSeconds": 195,
+        "correlation": 0.9999939214265523,
+        "normalizedRMSE": 0.003527198657579893
+      },
+      {
+        "startSeconds": 200,
+        "correlation": 0.9999941988988181,
+        "normalizedRMSE": 0.003467683369066124
+      },
+      {
+        "startSeconds": 205,
+        "correlation": 0.9999913139154829,
+        "normalizedRMSE": 0.00422105149011122
+      },
+      {
+        "startSeconds": 210,
+        "correlation": 0.9999860632776335,
+        "normalizedRMSE": 0.005318615446913632
+      },
+      {
+        "startSeconds": 215,
+        "correlation": 0.9999914620656482,
+        "normalizedRMSE": 0.0041812494530494215
+      },
+      {
+        "startSeconds": 220,
+        "correlation": 0.999993396548041,
+        "normalizedRMSE": 0.0036771230220217378
+      },
+      {
+        "startSeconds": 225,
+        "correlation": 0.9999937215535177,
+        "normalizedRMSE": 0.0036149530048517394
+      },
+      {
+        "startSeconds": 230,
+        "correlation": 0.9999921011255469,
+        "normalizedRMSE": 0.004025050753027183
+      },
+      {
+        "startSeconds": 235,
+        "correlation": 0.9999941805059949,
+        "normalizedRMSE": 0.0034727983419917284
+      },
+      {
+        "startSeconds": 240,
+        "correlation": 0.9999885477035032,
+        "normalizedRMSE": 0.004837477190994387
+      },
+      {
+        "startSeconds": 245,
+        "correlation": 0.9999941807131456,
+        "normalizedRMSE": 0.0034654775569755067
+      },
+      {
+        "startSeconds": 250,
+        "correlation": 0.9999936473124033,
+        "normalizedRMSE": 0.003596721110478191
+      },
+      {
+        "startSeconds": 255,
+        "correlation": 0.9999945546031072,
+        "normalizedRMSE": 0.003319144640502728
+      },
+      {
+        "startSeconds": 260,
+        "correlation": 0.9999945965030691,
+        "normalizedRMSE": 0.003342002313851569
+      },
+      {
+        "startSeconds": 265,
+        "correlation": 0.999989495288637,
+        "normalizedRMSE": 0.0046263022235385805
+      },
+      {
+        "startSeconds": 270,
+        "correlation": 0.9999877929595824,
+        "normalizedRMSE": 0.004993544790016208
+      },
+      {
+        "startSeconds": 275,
+        "correlation": 0.9999927109429381,
+        "normalizedRMSE": 0.0038582492004174047
+      },
+      {
+        "startSeconds": 280,
+        "correlation": 0.999993579864662,
+        "normalizedRMSE": 0.003636443791098863
+      },
+      {
+        "startSeconds": 285,
+        "correlation": 0.9999920155242127,
+        "normalizedRMSE": 0.0040663589044405085
+      },
+      {
+        "startSeconds": 290,
+        "correlation": 0.999994610038309,
+        "normalizedRMSE": 0.0033316072146334893
+      },
+      {
+        "startSeconds": 295,
+        "correlation": 0.9999933832000601,
+        "normalizedRMSE": 0.003671112994073974
+      },
+      {
+        "startSeconds": 300,
+        "correlation": 0.9999942375530423,
+        "normalizedRMSE": 0.003423692359050089
+      },
+      {
+        "startSeconds": 305,
+        "correlation": 0.9999929617076091,
+        "normalizedRMSE": 0.003823568278591721
+      },
+      {
+        "startSeconds": 310,
+        "correlation": 0.9999949568166678,
+        "normalizedRMSE": 0.0032106916428835622
+      },
+      {
+        "startSeconds": 315,
+        "correlation": 0.9999919199588415,
+        "normalizedRMSE": 0.004074589628734193
+      },
+      {
+        "startSeconds": 320,
+        "correlation": 0.9999883165242497,
+        "normalizedRMSE": 0.004874736122517521
+      },
+      {
+        "startSeconds": 325,
+        "correlation": 0.999992770126364,
+        "normalizedRMSE": 0.0038345806043582793
+      },
+      {
+        "startSeconds": 330,
+        "correlation": 0.9999898844340066,
+        "normalizedRMSE": 0.004547701439102927
+      },
+      {
+        "startSeconds": 335,
+        "correlation": 0.9999914973827722,
+        "normalizedRMSE": 0.004178043408805388
+      },
+      {
+        "startSeconds": 340,
+        "correlation": 0.9999895982344661,
+        "normalizedRMSE": 0.004617138787993068
+      },
+      {
+        "startSeconds": 345,
+        "correlation": 0.9999929116626306,
+        "normalizedRMSE": 0.003802336350556441
+      },
+      {
+        "startSeconds": 350,
+        "correlation": 0.9999894704250469,
+        "normalizedRMSE": 0.004626055016040971
+      },
+      {
+        "startSeconds": 355,
+        "correlation": 0.9999879865477344,
+        "normalizedRMSE": 0.004991602416455562
+      },
+      {
+        "startSeconds": 360,
+        "correlation": 0.999995557804918,
+        "normalizedRMSE": 0.003010754872749842
+      },
+      {
+        "startSeconds": 365,
+        "correlation": 0.999994065780701,
+        "normalizedRMSE": 0.0034682188598275676
+      },
+      {
+        "startSeconds": 370,
+        "correlation": 0.999991045883521,
+        "normalizedRMSE": 0.004313027134276459
+      },
+      {
+        "startSeconds": 375,
+        "correlation": 0.9999868473590435,
+        "normalizedRMSE": 0.005203991838941795
+      },
+      {
+        "startSeconds": 380,
+        "correlation": 0.9999822444350543,
+        "normalizedRMSE": 0.006010911421173918
+      },
+      {
+        "startSeconds": 385,
+        "correlation": 0.999993706906704,
+        "normalizedRMSE": 0.0035993266420112067
+      },
+      {
+        "startSeconds": 390,
+        "correlation": 0.999983015795274,
+        "normalizedRMSE": 0.005895387995097587
+      },
+      {
+        "startSeconds": 395,
+        "correlation": 0.999990561587632,
+        "normalizedRMSE": 0.004401691060501132
+      },
+      {
+        "startSeconds": 400,
+        "correlation": 0.9999920710901954,
+        "normalizedRMSE": 0.004045262872385359
+      },
+      {
+        "startSeconds": 405,
+        "correlation": 0.9999926735319051,
+        "normalizedRMSE": 0.0038691332433166232
+      },
+      {
+        "startSeconds": 410,
+        "correlation": 0.9999941541460474,
+        "normalizedRMSE": 0.0034666162829818533
+      },
+      {
+        "startSeconds": 415,
+        "correlation": 0.9999909886250747,
+        "normalizedRMSE": 0.004282995818464881
+      },
+      {
+        "startSeconds": 420,
+        "correlation": 0.9999950902819087,
+        "normalizedRMSE": 0.0031723527891056908
+      },
+      {
+        "startSeconds": 425,
+        "correlation": 0.9999929915086526,
+        "normalizedRMSE": 0.0037959268154963764
+      },
+      {
+        "startSeconds": 430,
+        "correlation": 0.9999883286080674,
+        "normalizedRMSE": 0.004897115045400811
+      },
+      {
+        "startSeconds": 435,
+        "correlation": 0.9999898642327022,
+        "normalizedRMSE": 0.004530195692444571
+      },
+      {
+        "startSeconds": 440,
+        "correlation": 0.9999940581645488,
+        "normalizedRMSE": 0.0034987441636136754
+      },
+      {
+        "startSeconds": 445,
+        "correlation": 0.9999892833208337,
+        "normalizedRMSE": 0.0046992344533210145
+      },
+      {
+        "startSeconds": 450,
+        "correlation": 0.9999850167227885,
+        "normalizedRMSE": 0.00556728889582213
+      },
+      {
+        "startSeconds": 455,
+        "correlation": 0.9999932218580806,
+        "normalizedRMSE": 0.003721663828817436
+      },
+      {
+        "startSeconds": 460,
+        "correlation": 0.9999967064870773,
+        "normalizedRMSE": 0.002600769764590751
+      },
+      {
+        "startSeconds": 465,
+        "correlation": 0.999993270819589,
+        "normalizedRMSE": 0.0037165345757429772
+      },
+      {
+        "startSeconds": 470,
+        "correlation": 0.9999905791942988,
+        "normalizedRMSE": 0.004389098057089861
+      },
+      {
+        "startSeconds": 475,
+        "correlation": 0.9999899432549624,
+        "normalizedRMSE": 0.004553334521630822
+      },
+      {
+        "startSeconds": 480,
+        "correlation": 0.9999930334583833,
+        "normalizedRMSE": 0.003786727499182136
+      },
+      {
+        "startSeconds": 485,
+        "correlation": 0.9999929713381476,
+        "normalizedRMSE": 0.0037891762378949273
+      },
+      {
+        "startSeconds": 490,
+        "correlation": 0.999996503284649,
+        "normalizedRMSE": 0.0026810408949208093
+      },
+      {
+        "startSeconds": 495,
+        "correlation": 0.9999908555830127,
+        "normalizedRMSE": 0.004320513780344689
+      },
+      {
+        "startSeconds": 500,
+        "correlation": 0.9999948542744611,
+        "normalizedRMSE": 0.0032359785304316943
+      },
+      {
+        "startSeconds": 505,
+        "correlation": 0.9999911679753872,
+        "normalizedRMSE": 0.00425980563999055
+      },
+      {
+        "startSeconds": 510,
+        "correlation": 0.9999970696797774,
+        "normalizedRMSE": 0.0024457884129075987
+      },
+      {
+        "startSeconds": 515,
+        "correlation": 0.9999957268223751,
+        "normalizedRMSE": 0.0029582007632513504
+      },
+      {
+        "startSeconds": 520,
+        "correlation": 0.9999930556986265,
+        "normalizedRMSE": 0.0037828603983377147
+      },
+      {
+        "startSeconds": 525,
+        "correlation": 0.9999951823332249,
+        "normalizedRMSE": 0.0031399234413395627
+      },
+      {
+        "startSeconds": 530,
+        "correlation": 0.9999921953700422,
+        "normalizedRMSE": 0.003990107804593434
+      },
+      {
+        "startSeconds": 535,
+        "correlation": 0.9999947233591996,
+        "normalizedRMSE": 0.003287443875155114
+      },
+      {
+        "startSeconds": 540,
+        "correlation": 0.9999935924878117,
+        "normalizedRMSE": 0.003650029654919199
+      },
+      {
+        "startSeconds": 545,
+        "correlation": 0.999992359955867,
+        "normalizedRMSE": 0.003967331503499104
+      },
+      {
+        "startSeconds": 550,
+        "correlation": 0.9999952406142066,
+        "normalizedRMSE": 0.003130044125263704
+      },
+      {
+        "startSeconds": 555,
+        "correlation": 0.9999943590161674,
+        "normalizedRMSE": 0.003392334854971233
+      },
+      {
+        "startSeconds": 560,
+        "correlation": 0.999990599736472,
+        "normalizedRMSE": 0.004381774305148038
+      },
+      {
+        "startSeconds": 565,
+        "correlation": 0.9999860209016623,
+        "normalizedRMSE": 0.00536059430788655
+      },
+      {
+        "startSeconds": 570,
+        "correlation": 0.9999949637876061,
+        "normalizedRMSE": 0.003200529339431925
+      },
+      {
+        "startSeconds": 575,
+        "correlation": 0.9999917054684835,
+        "normalizedRMSE": 0.0041108918161699955
+      },
+      {
+        "startSeconds": 580,
+        "correlation": 0.9999916836577224,
+        "normalizedRMSE": 0.004120598998987429
+      },
+      {
+        "startSeconds": 585,
+        "correlation": 0.9999925643423514,
+        "normalizedRMSE": 0.003901288113302649
+      },
+      {
+        "startSeconds": 590,
+        "correlation": 0.9999909890198224,
+        "normalizedRMSE": 0.004289897868631983
+      },
+      {
+        "startSeconds": 595,
+        "correlation": 0.9999913192402752,
+        "normalizedRMSE": 0.00422806485969676
+      },
+      {
+        "startSeconds": 600,
+        "correlation": 0.9999942377404392,
+        "normalizedRMSE": 0.0034325022410052132
+      },
+      {
+        "startSeconds": 605,
+        "correlation": 0.9999942566976697,
+        "normalizedRMSE": 0.0034355713743524532
+      },
+      {
+        "startSeconds": 610,
+        "correlation": 0.9999958409111429,
+        "normalizedRMSE": 0.0029256057909576062
+      },
+      {
+        "startSeconds": 615,
+        "correlation": 0.9999961108889501,
+        "normalizedRMSE": 0.0028123479474088525
+      },
+      {
+        "startSeconds": 620,
+        "correlation": 0.9999945506601581,
+        "normalizedRMSE": 0.003338191356933866
+      },
+      {
+        "startSeconds": 625,
+        "correlation": 0.9999934174916949,
+        "normalizedRMSE": 0.0036777135168030647
+      },
+      {
+        "startSeconds": 630,
+        "correlation": 0.9999937225478472,
+        "normalizedRMSE": 0.003584287387778811
+      },
+      {
+        "startSeconds": 635,
+        "correlation": 0.9999939752766157,
+        "normalizedRMSE": 0.003494106687535014
+      },
+      {
+        "startSeconds": 640,
+        "correlation": 0.9999877181743589,
+        "normalizedRMSE": 0.0050103933539591685
+      },
+      {
+        "startSeconds": 645,
+        "correlation": 0.9999930873451269,
+        "normalizedRMSE": 0.003751724115756441
+      },
+      {
+        "startSeconds": 650,
+        "correlation": 0.9999966124957242,
+        "normalizedRMSE": 0.002647228625354018
+      },
+      {
+        "startSeconds": 655,
+        "correlation": 0.9999890631323234,
+        "normalizedRMSE": 0.004717494026576993
+      },
+      {
+        "startSeconds": 660,
+        "correlation": 0.9999948176926484,
+        "normalizedRMSE": 0.003261521918368531
+      },
+      {
+        "startSeconds": 665,
+        "correlation": 0.9999888779461154,
+        "normalizedRMSE": 0.004761606038599419
+      },
+      {
+        "startSeconds": 670,
+        "correlation": 0.9999931760589369,
+        "normalizedRMSE": 0.0037567436792468357
+      },
+      {
+        "startSeconds": 675,
+        "correlation": 0.9999907083054145,
+        "normalizedRMSE": 0.004367219278938318
+      },
+      {
+        "startSeconds": 680,
+        "correlation": 0.9999962290598204,
+        "normalizedRMSE": 0.0027912583357661636
+      },
+      {
+        "startSeconds": 685,
+        "correlation": 0.9999929575385473,
+        "normalizedRMSE": 0.0038027180835172925
+      },
+      {
+        "startSeconds": 690,
+        "correlation": 0.9999893538050433,
+        "normalizedRMSE": 0.004668701538875092
+      },
+      {
+        "startSeconds": 695,
+        "correlation": 0.9999914269603013,
+        "normalizedRMSE": 0.0041899021479644945
+      },
+      {
+        "startSeconds": 700,
+        "correlation": 0.9999901964963326,
+        "normalizedRMSE": 0.004483882213001976
+      },
+      {
+        "startSeconds": 705,
+        "correlation": 0.9999920346884076,
+        "normalizedRMSE": 0.004023321915855696
+      },
+      {
+        "startSeconds": 710,
+        "correlation": 0.9999914327307731,
+        "normalizedRMSE": 0.004178741864819352
+      },
+      {
+        "startSeconds": 715,
+        "correlation": 0.9999954273211662,
+        "normalizedRMSE": 0.0030648716988246993
+      },
+      {
+        "startSeconds": 720,
+        "correlation": 0.9999954889988869,
+        "normalizedRMSE": 0.003047018726447577
+      },
+      {
+        "startSeconds": 725,
+        "correlation": 0.9999917517414184,
+        "normalizedRMSE": 0.004143684045739456
+      },
+      {
+        "startSeconds": 730,
+        "correlation": 0.9999946541425666,
+        "normalizedRMSE": 0.00333058255601817
+      },
+      {
+        "startSeconds": 735,
+        "correlation": 0.9999931809777955,
+        "normalizedRMSE": 0.0037343169623614758
+      },
+      {
+        "startSeconds": 740,
+        "correlation": 0.9999883223993233,
+        "normalizedRMSE": 0.0048830758874438196
+      },
+      {
+        "startSeconds": 745,
+        "correlation": 0.9999947579800857,
+        "normalizedRMSE": 0.0032731118748933917
+      },
+      {
+        "startSeconds": 750,
+        "correlation": 0.9999940294382827,
+        "normalizedRMSE": 0.0035161888839521493
+      },
+      {
+        "startSeconds": 755,
+        "correlation": 0.9999928779317792,
+        "normalizedRMSE": 0.003826730391389445
+      },
+      {
+        "startSeconds": 760,
+        "correlation": 0.9999899584721199,
+        "normalizedRMSE": 0.004516932093741664
+      },
+      {
+        "startSeconds": 765,
+        "correlation": 0.99999631404141,
+        "normalizedRMSE": 0.0027523603562920706
+      },
+      {
+        "startSeconds": 770,
+        "correlation": 0.9999928771430063,
+        "normalizedRMSE": 0.003845016598587993
+      },
+      {
+        "startSeconds": 775,
+        "correlation": 0.9999975017123787,
+        "normalizedRMSE": 0.002261609138798572
+      },
+      {
+        "startSeconds": 780,
+        "correlation": 0.9999915886819891,
+        "normalizedRMSE": 0.004148335239124526
+      },
+      {
+        "startSeconds": 785,
+        "correlation": 0.9999864834298812,
+        "normalizedRMSE": 0.005245053165146485
+      },
+      {
+        "startSeconds": 790,
+        "correlation": 0.9999851955214218,
+        "normalizedRMSE": 0.0055363745399852286
+      },
+      {
+        "startSeconds": 795,
+        "correlation": 0.9999911188924437,
+        "normalizedRMSE": 0.004255137423567838
+      },
+      {
+        "startSeconds": 800,
+        "correlation": 0.9999893505641385,
+        "normalizedRMSE": 0.004680747349408599
+      },
+      {
+        "startSeconds": 805,
+        "correlation": 0.9999925659435875,
+        "normalizedRMSE": 0.0038925871328666386
+      },
+      {
+        "startSeconds": 810,
+        "correlation": 0.999994937573874,
+        "normalizedRMSE": 0.003207109716637632
+      },
+      {
+        "startSeconds": 815,
+        "correlation": 0.9999867908531374,
+        "normalizedRMSE": 0.005187891733944161
+      },
+      {
+        "startSeconds": 820,
+        "correlation": 0.9999898510729468,
+        "normalizedRMSE": 0.004578510881543747
+      },
+      {
+        "startSeconds": 825,
+        "correlation": 0.9999945074878026,
+        "normalizedRMSE": 0.0033579122751233575
+      },
+      {
+        "startSeconds": 830,
+        "correlation": 0.9999903046682749,
+        "normalizedRMSE": 0.00445560046961379
+      },
+      {
+        "startSeconds": 835,
+        "correlation": 0.9999959991059467,
+        "normalizedRMSE": 0.0028704071030873457
+      },
+      {
+        "startSeconds": 840,
+        "correlation": 0.9999930104078385,
+        "normalizedRMSE": 0.0037697479418900386
+      },
+      {
+        "startSeconds": 845,
+        "correlation": 0.9999920165705792,
+        "normalizedRMSE": 0.004067418564497673
+      },
+      {
+        "startSeconds": 850,
+        "correlation": 0.9999784335269143,
+        "normalizedRMSE": 0.006636875106337104
+      }
+    ],
+    "lagSearchRangeMilliseconds": [
+      -100,
+      100
+    ],
+    "lagWindows": [
+      {
+        "startSeconds": 0.1,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999912730171894
+      },
+      {
+        "startSeconds": 75,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999895840398138
+      },
+      {
+        "startSeconds": 150,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999839927726737
+      },
+      {
+        "startSeconds": 230,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999922439954485
+      },
+      {
+        "startSeconds": 305,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.999992459856208
+      },
+      {
+        "startSeconds": 385,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999934680375495
+      },
+      {
+        "startSeconds": 460,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999966508776246
+      },
+      {
+        "startSeconds": 540,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999941387724514
+      },
+      {
+        "startSeconds": 615,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999947762383146
+      },
+      {
+        "startSeconds": 695,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999913978461494
+      },
+      {
+        "startSeconds": 770,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999924219849335
+      },
+      {
+        "startSeconds": 850,
+        "bestLagSamples": 0,
+        "bestLagMilliseconds": 0,
+        "correlation": 0.9999784335269143
+      }
+    ],
+    "zeroLagVerified": true
+  },
+  "diskBudget": {
+    "actualTempDirectory": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-render-temp",
+    "outputDirectory": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-full-final",
+    "sameVolume": true,
+    "volumes": [
+      {
+        "device": 2724373454,
+        "volumeRoot": "D:\\",
+        "freeBytes": 123452133376,
+        "estimatedPeakAdditionalBytes": 20796066223,
+        "allocations": [
+          {
+            "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-render-temp",
+            "existingPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-render-temp",
+            "volumeRoot": "D:\\",
+            "device": 2724373454,
+            "freeBytes": 123452133376,
+            "role": "remotion-working-directory",
+            "components": {
+              "renderedJPEGFrames": 13432782848,
+              "temporaryDecodedAudioAndEncodingHeadroom": 1073741824
+            },
+            "estimatedPeakAdditionalBytes": 14506524672
+          },
+          {
+            "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v6-full-final",
+            "existingPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp",
+            "volumeRoot": "D:\\",
+            "device": 2724373454,
+            "freeBytes": 123452133376,
+            "role": "project-output-and-installation",
+            "components": {
+              "publicAssetCopy": 866170135,
+              "silentEncodedVideo": 1073741824,
+              "optionalSilentColorArchive": 1073741824,
+              "candidateEncodedVideo": 1073741824,
+              "installationOrColorRemuxCopy": 1073741824,
+              "decodedAuditAudio": 54662296,
+              "outputHeadroom": 1073741824
+            },
+            "estimatedPeakAdditionalBytes": 6289541551
+          }
+        ]
+      }
+    ]
+  },
+  "gpuSelection": {
+    "requestedFlags": [
+      "--use-angle=d3d11",
+      "--force_high_performance_gpu",
+      "--enable-gpu"
+    ],
+    "processLocalHook": true,
+    "hookApplied": true,
+    "adapterCaptureStatus": "captured",
+    "actualGPU": {
+      "devices": [
+        {
+          "vendorId": 4318,
+          "deviceId": 11609,
+          "subSysId": 2150569898,
+          "revision": 161,
+          "vendorString": "",
+          "deviceString": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driverVendor": "",
+          "driverVersion": "32.0.16.1074"
+        },
+        {
+          "vendorId": 32902,
+          "deviceId": 42891,
+          "subSysId": 2150569898,
+          "revision": 4,
+          "vendorString": "",
+          "deviceString": "Intel(R) UHD Graphics",
+          "driverVendor": "NVIDIA",
+          "driverVersion": "32.0.101.7076"
+        },
+        {
+          "vendorId": 5140,
+          "deviceId": 140,
+          "subSysId": 0,
+          "revision": 0,
+          "vendorString": "",
+          "deviceString": "Microsoft Basic Render Driver",
+          "driverVendor": "",
+          "driverVersion": "10.0.26100.9278"
+        }
+      ],
+      "auxAttributes": {
+        "amdSwitchable": false,
+        "bgra8OverlaySupport": "SOFTWARE",
+        "canSupportThreadedTextureMailbox": false,
+        "directComposition": true,
+        "directMLFeatureLevel": "Not supported",
+        "directRenderingVersion": "",
+        "displayType": "ANGLE_D3D11",
+        "dx12FeatureLevel": "Not supported",
+        "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_lossy_etc_decode GL_ANGLE_memory_size GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_clip_cull_distance GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_border_clamp GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_compressed_EAC_R11_signed_texture GL_OES_compressed_EAC_R11_unsigned_texture GL_OES_compressed_EAC_RG11_signed_texture GL_OES_compressed_EAC_RG11_unsigned_texture GL_OES_compressed_ETC2_RGB8_texture GL_OES_compressed_ETC2_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_RGBA8_texture GL_OES_compressed_ETC2_punchthroughA_sRGB8_alpha_texture GL_OES_compressed_ETC2_sRGB8_alpha8_texture GL_OES_compressed_ETC2_sRGB8_texture GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 GL_WEBGL_video_texture ",
+        "glImplementationParts": "(gl=egl-angle,angle=d3d11)",
+        "glRenderer": "ANGLE (NVIDIA, NVIDIA GeForce RTX 5060 Laptop GPU (0x00002D59) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.16.1074)",
+        "glResetNotificationStrategy": 33362,
+        "glVendor": "Google Inc. (NVIDIA)",
+        "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.27518 git hash: 52de74cd085c)",
+        "glWsExtensions": "EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync EGL_ANGLE_memory_usage_report ",
+        "glWsVendor": "Google Inc. (NVIDIA)",
+        "glWsVersion": "1.5 (ANGLE 2.1.27518 git hash: 52de74cd085c)",
+        "inProcessGpu": false,
+        "initializationTime": 0.324387,
+        "isAsan": false,
+        "isClangCoverage": false,
+        "jpegDecodeAcceleratorSupported": false,
+        "maxMsaaSamples": "8",
+        "nv12OverlaySupport": "SOFTWARE",
+        "optimus": false,
+        "p010OverlaySupport": "SOFTWARE",
+        "passthroughCmdDecoder": true,
+        "pixelShaderVersion": "5.0",
+        "processCrashCount": 0,
+        "rgb10a2OverlaySupport": "SOFTWARE",
+        "sandboxed": false,
+        "skiaBackendType": "GaneshGL",
+        "subpixelFontRendering": true,
+        "supportsD3dSharedImages": false,
+        "supportsDirectML": false,
+        "supportsDx12": false,
+        "supportsOverlays": true,
+        "supportsVulkan": false,
+        "targetCpuBits": 64,
+        "vertexShaderVersion": "5.0",
+        "visibilityCallbackCallCount": 0,
+        "vulkanVersion": "Not supported",
+        "yuy2OverlaySupport": "SOFTWARE"
+      },
+      "featureStatus": {
+        "2d_canvas": "enabled",
+        "direct_rendering_display_compositor": "disabled_off_ok",
+        "gpu_compositing": "enabled",
+        "multiple_raster_threads": "enabled_on",
+        "opengl": "enabled_on",
+        "rasterization": "enabled",
+        "raw_draw": "disabled_off_ok",
+        "skia_graphite": "disabled_off",
+        "trees_in_viz": "disabled_off",
+        "video_decode": "enabled",
+        "video_encode": "enabled",
+        "webgl": "enabled",
+        "webgpu": "enabled",
+        "webnn": "disabled_off"
+      },
+      "driverBugWorkarounds": [
+        "disable_d3d11_vp9_ksvc_decoding",
+        "enable_webgl_timer_query_extensions",
+        "exit_on_context_lost",
+        "force_high_performance_gpu",
+        "unpack_overlapping_rows_separately_unpack_buffer",
+        "disabled_extension_GL_KHR_blend_equation_advanced",
+        "disabled_extension_GL_KHR_blend_equation_advanced_coherent"
+      ],
+      "videoDecoding": [],
+      "videoEncoding": []
+    }
+  },
+  "subjectiveVisualReviewCompleted": false,
+  "subjectiveAudioReviewCompleted": false
+}

@@ -1,0 +1,81 @@
+{
+  "nodes": 118536,
+  "seconds": 8.481993675231934,
+  "elementQuality": {
+    "Tetrahedron 4": {
+      "count": 205782,
+      "minSICN": 0.018048829475845362,
+      "negative": 0
+    },
+    "Prism 6": {
+      "count": 162480,
+      "minSICN": 6.7649935514496555e-06,
+      "negative": 0
+    }
+  },
+  "bodyHeight": 632.0,
+  "crown": "film rim 615.5+16.5*cos(t-0.7); closed smooth top membrane approximation",
+  "firstLayer": 0.002,
+  "layers": 24,
+  "layerThicknessesCumulative": [
+    0.002,
+    0.0046,
+    0.007980000000000001,
+    0.012374000000000001,
+    0.018086200000000004,
+    0.025512060000000003,
+    0.035165678000000006,
+    0.047715381400000006,
+    0.06402999582000002,
+    0.08523899456600002,
+    0.11281069293580004,
+    0.14865390081654006,
+    0.19525007106150208,
+    0.2558250923799527,
+    0.3345726200939385,
+    0.43694440612212004,
+    0.5700277279587561,
+    0.743036046346383,
+    0.9679468602502979,
+    1.2603309183253872,
+    1.6404301938230035,
+    2.134559251969905,
+    2.7769270275608764,
+    3.6120051358291394
+  ],
+  "surfaceTargetSize": 15.0,
+  "domain": [
+    -3160.0,
+    9480.0,
+    -3160.0,
+    3160.0,
+    0,
+    3792.0
+  ],
+  "externalSurfaceGroups": {
+    "inlet": [
+      3745,
+      3774
+    ],
+    "outlet": [
+      3737,
+      3772
+    ],
+    "sides": [
+      3733,
+      3741,
+      3771,
+      3773
+    ],
+    "ceiling": [
+      3775
+    ]
+  },
+  "allExternalSurfacesClassified": true,
+  "geometry": "Film support-function rounded triangle, taper area ratio 0.45, 120 degree twist, ground attached; no surrounding city.",
+  "limitations": [
+    "Smooth reconstructed envelope, not as-built facade, openings or neighboring city.",
+    "A RANS setup/mesh is not yet a converged or validated flow solution.",
+    "Prescribed isolated-building inflow is not a measured Shanghai atmospheric boundary layer."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "h033",
+  "text": "糖接走了，食物里的脂肪也在运输。长期吃进来的能量多于用掉的，脂肪会逐渐存起来，有些还会积到肝脏里。",
+  "ttsText": "糖接走了，食物里的脂肪也在运输。如果一段时间里，吃进来的能量多于用掉的，脂肪会逐渐存起来，有些还会积到肝脏里。",
+  "signature": "faf917149ea49525c63d7dcdf9968c5eb871bb382eded7e359a515692f015b29",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h033-faf917149ea4-73d1b4f4ba.wav",
+  "processed": "audio/revision-v5/candidates/pron-v2/voice/h033.wav",
+  "rawDuration": 9.52,
+  "duration": 9.52,
+  "sampleRate": 48000,
+  "sha256": "7e09ac8446d4f7204321a1246c5229abfc03bc2780f279ae1477c2ba7daa21bb",
+  "rawSHA256": "b04ae1f38a95a4f94d6c2460d0c30b768593cd308bc425947215aec3059eb8bf",
+  "seed": 1943123188,
+  "batchIds": [
+    "h033",
+    "h038"
+  ],
+  "batchKey": "73d1b4f4ba54ac9fd6d5fe3e55794176d31c3a25dd1155a203b4bfc2df89ce07",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -51.341183138792765,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b04ae1f38a95a4f94d6c2460d0c30b768593cd308bc425947215aec3059eb8bf",
+    "outputSha256": "7e09ac8446d4f7204321a1246c5229abfc03bc2780f279ae1477c2ba7daa21bb",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.0250844675649375,
+    "input": {
+      "seconds": 9.52,
+      "peakDb": -6.035309214312051,
+      "activeRmsDb": -21.712883035843063,
+      "quietFrameP10Db": -59.87967596949301
+    },
+    "output": {
+      "seconds": 9.52,
+      "peakDb": -5.0899643848190586,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -60.598744855162245
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

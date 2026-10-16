@@ -1,0 +1,12 @@
+import {BundlerInternals} from '@remotion/bundler';import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const root=process.cwd(),out=path.resolve(root,process.argv[2]||'work/v8-native/waterline-frozen');
+if(fs.existsSync(path.join(out,'ready.json')))throw Error('Frozen sampler exists; choose a new directory');fs.mkdirSync(out,{recursive:true});
+const files={camera:'src/CameraRail.ts',wave:'src/NativeWaterV7.ts',story:'src/story.json',nativeLibrary:'work/waterpro-v4/vendor-valid/threejs-water-pro/build/index.js',sampler:'scripts/waterline_export_entry_v8.ts'};
+const sha=p=>crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
+const sources=Object.fromEntries(Object.entries(files).map(([k,p])=>[k,{path:p,sha256:sha(p)}]));
+const world=fs.readFileSync(path.join(root,'src/MarineWorld.ts'),'utf8');if(!/quality:\s*'high'/.test(world))throw Error('Production water quality differs; update sampler to match.');
+await BundlerInternals.esbuild.build({entryPoints:[path.join(root,'scripts/waterline_export_entry_v8.ts')],outfile:path.join(out,'entry.js'),bundle:true,format:'esm',platform:'browser',target:'es2022',sourcemap:true});
+for(const {path:p,sha256} of Object.values(sources))if(sha(p)!==sha256)throw Error('Source changed during waterline build: '+p);
+fs.writeFileSync(path.join(out,'index.html'),'<!doctype html><html><body style="margin:0"><script>window.__retainedGPU = navigator.gpu;</script><script type="module" src="/entry.js"></script></body></html>');
+fs.writeFileSync(path.join(out,'ready.json'),JSON.stringify({created:new Date().toISOString(),sources,entrySHA256:crypto.createHash('sha256').update(fs.readFileSync(path.join(out,'entry.js'))).digest('hex'),quality:'high'},null,2));
+console.log(out);

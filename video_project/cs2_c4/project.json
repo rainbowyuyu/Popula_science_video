@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "cs2_c4",
+  "title": "CS2 C4：冲击波与寻路",
+  "category": "computer-science",
+  "status": "source-library",
+  "currentVersion": "Manim notebook/edit pipeline",
+  "workbench": {
+    "title": "CS2 · C4爆炸与冲击波",
+    "seriesId": "independent",
+    "episode": null,
+    "useSeriesStyle": false
+  },
+  "entrypoints": [
+    "manim/shockwave.py",
+    "cs2_c4_shockwave.ipynb",
+    "cs2_c4_edit/build_video.ps1"
+  ],
+  "packages": [],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "manim",
+      ".",
+      "cs2_c4_edit"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [],
+    "covers": []
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Manim + LaTeX/dvisvgm",
+    "root yty_manim where referenced"
+  ],
+  "notes": [
+    "依赖根 yty_manim 以及 custom_maps；多个 Manim 场景与数据脚本共同构成工程。"
+  ],
+  "originalMetadata": {}
+}

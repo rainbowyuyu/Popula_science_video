@@ -1,0 +1,83 @@
+{
+  "id": "h036",
+  "text": "LDL是一种运输颗粒，胆固醇是它装的货物之一。化验单上的低密度脂蛋白胆固醇，测的是这类颗粒里的胆固醇。",
+  "ttsText": "L D L是一种运输颗粒，胆固醇是它装的货物之一。化验单上的低密度脂蛋白胆固醇，测的是这类颗粒里的胆固醇。",
+  "signature": "7e285eb92b75d5481e2cf10330d4949589cccbe895026fb5df52e028515dcb0d",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h036-7e285eb92b75-b76400a143.wav",
+  "processed": "audio/revision-v5/voice/h036.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "133297c18202d266f67edecddc5a0aaa9cf5952f3f3e80314683b1aaec99b2fe",
+  "rawSHA256": "7755f262e74762ca9948ea41a1bd827be8e180a1b959d5b1ca6df5c09388b20d",
+  "seed": 3076784289,
+  "batchIds": [
+    "h036",
+    "h037",
+    "h038"
+  ],
+  "batchKey": "b76400a143a02d00f926450dbc1fab09f4c110d6f01ca4367d9822b9587d4ac2",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -96.66534973771299,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "7755f262e74762ca9948ea41a1bd827be8e180a1b959d5b1ca6df5c09388b20d",
+    "outputSha256": "133297c18202d266f67edecddc5a0aaa9cf5952f3f3e80314683b1aaec99b2fe",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.0150350214307693,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -4.122964859613511,
+      "activeRmsDb": -22.751204930878362,
+      "quietFrameP10Db": -56.41788756388961
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -0.7047904434776451,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -55.47047968633293
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

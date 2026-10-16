@@ -1,0 +1,41 @@
+[
+  {
+    "id": "000",
+    "expected": "下雨时，我们总往亭子里躲。这么大一片屋顶，怎么靠几根木头托住？",
+    "recognized": "下雨时 我们总往亭子里躲这么大一片屋顶 怎么靠几个木头拖住",
+    "characterCoverage": 0.9259259259259259,
+    "similarity": 0.9259259259259259,
+    "expectedTail": "几根木头托住",
+    "recognizedTail": "片屋顶怎么靠几个木头拖住",
+    "tailCharacterCoverage": 0.6666666666666666,
+    "unmatchedReferenceRanges": [
+      {
+        "start": 22,
+        "end": 23,
+        "text": "根"
+      },
+      {
+        "start": 25,
+        "end": 26,
+        "text": "托"
+      }
+    ]
+  },
+  {
+    "id": "001",
+    "expected": "把屋面拿开，再把梁柱拆开。藏在里面的接头，比外面的花纹更有意思。",
+    "recognized": "把屋面拿開,再把梁柱拆開藏在裡面的街頭,比外面的花紋更有意思",
+    "characterCoverage": 0.9642857142857143,
+    "similarity": 0.9642857142857143,
+    "expectedTail": "花纹更有意思",
+    "recognizedTail": "街头比外面的花纹更有意思",
+    "tailCharacterCoverage": 1.0,
+    "unmatchedReferenceRanges": [
+      {
+        "start": 16,
+        "end": 17,
+        "text": "接"
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "transport": "claude-code-native",
+  "status": "failed",
+  "started": "2026-10-06T00:28:09.909Z",
+  "requestedModel": "claude-opus-5-5",
+  "returnedModel": null,
+  "providerOrigin": "https://api.ebondai.com",
+  "processExitCode": null,
+  "processSignal": null,
+  "completionReceived": false,
+  "stopReason": "max_tokens",
+  "request": {
+    "maxTokens": 12000,
+    "effort": "high",
+    "totalTimeoutMs": 900000
+  },
+  "usage": {},
+  "modelUsage": {},
+  "wrapperRetryCount": 0,
+  "retryNote": "The wrapper never retries. Claude Code may apply its own internal retry policy.",
+  "provenance": "Model and usage are reported by Claude Code and its provider; weights are not independently verified.",
+  "promptSha256": "c4dfc3ac8170e4e2e616f56e319b580c957165acb6e089a471d951362d49e6db",
+  "promptCharacters": 155124,
+  "killRequested": true,
+  "error": {
+    "code": "total_timeout",
+    "message": "Claude Code exceeded the total timeout"
+  },
+  "finished": "2026-10-06T00:43:10.558Z",
+  "elapsedMs": 900649,
+  "streamEvents": 6883,
+  "textCharacters": 8401,
+  "responseSha256": "3934e1fbb952069e6f008e001393c110a1b839225e36746d746c9d2b94306320",
+  "billingNote": "SDK cost is an estimate, not the provider bill. Failed or timed-out calls may be billable."
+}

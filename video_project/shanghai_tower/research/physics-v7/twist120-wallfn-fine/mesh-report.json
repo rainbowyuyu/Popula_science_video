@@ -1,0 +1,74 @@
+{
+  "nodes": 103745,
+  "seconds": 13.9486722946167,
+  "elementQuality": {
+    "Tetrahedron 4": {
+      "count": 244456,
+      "minSICN": 0.08764060752623086,
+      "negative": 0,
+      "zero": 0
+    },
+    "Prism 6": {
+      "count": 120344,
+      "minSICN": 6.775966255637513e-05,
+      "negative": 0,
+      "zero": 0
+    }
+  },
+  "bodyHeight": 632.0,
+  "crown": "film rim 615.5+16.5*cos(t-0.7); closed smooth top membrane approximation",
+  "twistDegrees": 120.0,
+  "firstLayer": 0.02,
+  "layers": 14,
+  "layerThicknessesCumulative": [
+    0.02,
+    0.046,
+    0.07980000000000001,
+    0.12374000000000002,
+    0.18086200000000002,
+    0.25512060000000003,
+    0.35165678000000006,
+    0.4771538140000001,
+    0.6402999582000002,
+    0.8523899456600003,
+    1.1281069293580004,
+    1.4865390081654004,
+    1.9525007106150207,
+    2.558250923799527
+  ],
+  "surfaceTargetSize": 12.0,
+  "domain": [
+    -3160.0,
+    9480.0,
+    -3160.0,
+    3160.0,
+    0,
+    3792.0
+  ],
+  "externalSurfaceGroups": {
+    "inlet": [
+      3745,
+      3774
+    ],
+    "outlet": [
+      3737,
+      3772
+    ],
+    "sides": [
+      3733,
+      3741,
+      3771,
+      3773
+    ],
+    "ceiling": [
+      3775
+    ]
+  },
+  "allExternalSurfacesClassified": true,
+  "geometry": "Film support-function rounded triangle, taper area ratio 0.45, 120 degree twist, ground attached; no surrounding city.",
+  "limitations": [
+    "Smooth reconstructed envelope, not as-built facade, openings or neighboring city.",
+    "A RANS setup/mesh is not yet a converged or validated flow solution.",
+    "Prescribed isolated-building inflow is not a measured Shanghai atmospheric boundary layer."
+  ]
+}

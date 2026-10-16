@@ -1,0 +1,79 @@
+{
+  "id": "s018",
+  "text": "把它们接起来的，叫伸臂桁架。你看，六处关键高度上的小钢桥，从核心筒一直伸到外圈。",
+  "ttsText": "把它们接起来的，叫伸臂横架。你看，六处关键高度上的小钢桥，从核心筒一直伸到外圈。",
+  "signature": "684a149efe2982981ccb6d314566e8538a26ab404db0e5c553208a841191a900",
+  "raw": "audio/raw/s018-684a149efe.wav",
+  "processed": "audio/candidates/v3-pronunciation/s018.wav",
+  "rawDuration": 8.0,
+  "duration": 8.24,
+  "sha256": "b74ef380ecdad76c6fc5707ba1e033543fa297e083b2d3259f38eb04352521cd",
+  "seed": 2684678268,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s016",
+    "s018"
+  ],
+  "rawEndpointDB": -96.44758864252188,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "cc8dc99bf084328d1a7b2ff15acc394865bb52df1477706e89a0527f5eb492ad",
+    "outputSha256": "b74ef380ecdad76c6fc5707ba1e033543fa297e083b2d3259f38eb04352521cd",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.7709895221310212,
+    "input": {
+      "seconds": 8.24,
+      "peakDb": -6.221698124500476,
+      "activeRmsDb": -21.225482182748458,
+      "quietFrameP10Db": -62.66731936788613
+    },
+    "output": {
+      "seconds": 8.24,
+      "peakDb": -5.30203888020882,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.73616497316143
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "2ee75f99dfade200456766689a3572ab6e484c50b77d9463118a63e41317e2b6"
+  },
+  "subjectiveListeningChecked": false
+}

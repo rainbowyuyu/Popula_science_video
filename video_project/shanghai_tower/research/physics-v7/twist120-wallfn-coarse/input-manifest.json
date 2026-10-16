@@ -1,0 +1,22 @@
+{
+  "schema": "rainbow.cfd.v7-input/1",
+  "solver": "SU2 8.5.0 INC_RANS SA NEGATIVE",
+  "U_m_s": 30,
+  "rho_kg_m3": 1.225,
+  "mu_Pa_s": 1.81e-05,
+  "inlet": "uniform +X",
+  "ground": "symmetry slip plane; explicitly isolated exterior geometry case, no atmospheric boundary layer",
+  "wall": "standard wall function on tower only",
+  "steady": true,
+  "phase": "first-order initialization only, not final accepted",
+  "acceptedForFilm": false,
+  "limits": [
+    "No neighboring city or measured atmospheric gust spectrum.",
+    "Reconstructed external smooth facade, not as-built fabrication.",
+    "First-order stage cannot be accepted as final field."
+  ],
+  "hashes": {
+    "tower.su2": "33cf635840442370b9717ec9a18adab1994229ef449a555c2177bd81b7746b3b",
+    "first-order.cfg": "d3f9f6a3e1199bbac174637490732234b74249deec24b4115884e78ca560bd79"
+  }
+}

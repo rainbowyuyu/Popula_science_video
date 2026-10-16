@@ -1,0 +1,45 @@
+{
+  "case": "urans-tower-L12-v2",
+  "window_s": [
+    70.0,
+    76.0
+  ],
+  "bodyForceMean_N": [
+    19989159.09157094,
+    1814702.3123719217,
+    2837578.4532441287
+  ],
+  "outerForceMean_N": [
+    -19826898.61989146,
+    -2306620.38516744,
+    -2503216.8958438183
+  ],
+  "advectiveMomentumFluxMean_N": [
+    80671.48891897203,
+    38459.453139756544,
+    -356494.85566380876
+  ],
+  "volumeMomentumStorageMean_N": [
+    258429.87916666668,
+    440378.0501723753,
+    7968.185020827005
+  ],
+  "integratedMomentumResidual_N": [
+    501361.8397651176,
+    -13080.569483386353,
+    -14165.113242671345
+  ],
+  "momentumRelativeBodyForce": 0.024751302041905687,
+  "boundaryVolumeFluxMean_m3_s": {
+    "inlet": -718963200.0,
+    "outlet": 718963199.9982166,
+    "ground": 0.0,
+    "sides": 0.0,
+    "ceiling": 0.0
+  },
+  "massRelativeInlet": 2.4804760127913187e-12,
+  "method": "Trapezoid integrate actual native function-object outputs at physical times; include rho*(integral U dV_end - integral U dV_start)/window. Linear interpolation only at existing time interval endpoints.",
+  "quality": {
+    "acceptedForFilm": false
+  }
+}

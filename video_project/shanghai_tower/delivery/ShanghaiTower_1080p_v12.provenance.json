@@ -1,0 +1,75 @@
+{
+  "tag": "v12-one-floor-final",
+  "success": true,
+  "finishedAtUTC": "2026-10-09T16:42:40.485350+00:00",
+  "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\delivery\\ShanghaiTower_1080p_v12.mp4",
+  "videoSHA256": "7f7d0524113d48e84e8b674cc66e4e08155ab7eadff49280bd25f8b7d8bb9466",
+  "frames": [
+    0,
+    15711
+  ],
+  "fps": 30,
+  "durationSeconds": 523.7333333333333,
+  "productionLock": "research/visual/v12-one-floor-final-lock.json",
+  "productionLockSHA256": "031219517460845de8e95b825e73858a6fce33e3dfa0e50e6f04e8d36a4319ba",
+  "mixedSourceManifest": {
+    "file": "tmp/v12-one-floor-final-segments/segments.json",
+    "sha256": "764ec008ce3930a87764b0b55b652f8460e513be356dcaa70e18c1e37f7e3afe",
+    "bytes": 16715
+  },
+  "timelineSHA256": "b641306d6ca1a5c9cfb520dee66a54a1d76d6cbd510b7381cfd64902c6bfcd5e",
+  "masterSHA256": "097863c2db47b381768f9e6c93b2e0379895d548d353627b9de1d32c6530e48e",
+  "sourceV11VideoSHA256": "f7d1dc67519fb5bf6233e063acf5d9e353e63c71511dd9546c27fc8e74cf1486",
+  "rerenderedSegmentNumbers": [
+    1,
+    6,
+    7
+  ],
+  "allFramesCompared": 15712,
+  "newReviewedFramesCompared": 5400,
+  "acceptedV11FramesCompared": 10312,
+  "audioReencoded": false,
+  "completeAACPayloadIdentical": true,
+  "aacTimingAndSkipMetadataIdentical": true,
+  "audioStreamSHA256": "42821030d0ea397a1c7e88bab8a21b507bc2a43cc264ca5eeb0fc6a1f6d53b5b",
+  "identityProof": {
+    "file": "tmp/v12-one-floor-final-segments/run-f06dcb21257d/identity-proof/all-frame-audio-identity.json",
+    "sha256": "cbf7c5b8e7956bf0868c3498374540f9c3c91a935d2ffa1444a5aaaa5a31ee46",
+    "bytes": 10752
+  },
+  "stagedManifest": {
+    "file": "tmp/v12-one-floor-final-segments/run-f06dcb21257d/source-manifest.json",
+    "sha256": "e4d33256373cd535fa911a30e2602ed4ad06c7c9d3aec7138bb226dddd1a1b68",
+    "bytes": 16082
+  },
+  "seamsToReview": [
+    1800,
+    9000,
+    10800,
+    12600
+  ],
+  "finalVisualSeamAndAACAcceptancePending": true,
+  "scripts": [
+    {
+      "file": "scripts/freeze_v12.mjs",
+      "sha256": "399cb53d8c39582b13af55a9a045eab49c0c89853a91c4ec5832ebcb977c0af3",
+      "bytes": 7419
+    },
+    {
+      "file": "scripts/mux_v12.py",
+      "sha256": "6c15066fc81292d6e40a56897cf0ad6545746f3af5a952cff3db733473a31f18",
+      "bytes": 13022
+    },
+    {
+      "file": "scripts/verify_v12_mix.py",
+      "sha256": "df3000e2792ea402098254a47e1f848d6f3720701693003d8586044dd092aacf",
+      "bytes": 13564
+    },
+    {
+      "file": "scripts/v12_common.py",
+      "sha256": "b0204b49e780bb1c954598cdd8f45442a42d8c771c31c4953db96576edb2b676",
+      "bytes": 10410
+    }
+  ],
+  "scope": "Intentional mixed-source film. Only rerenderedSegmentNumbers originate from the V12 bundle. Reused ranges retain their actual V11/V10 production lock, bundle and original source manifest. Every assembled pixel and all AAC packets require identity verification."
+}

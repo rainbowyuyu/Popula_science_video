@@ -1,0 +1,62 @@
+{
+  "preparedUTC": "2026-10-09T03:52:28.372830+00:00",
+  "renderPlan": "research/revision-v5/dining-return-patches/render-plan.json",
+  "renderPlanSHA256": "33fb3027826e2d22c927aa966338fbdc7cfdc7d0996f6c3c843c96b01d8b65f7",
+  "mixedPlanCandidate": "research/revision-v5/dining-return-patches/mixed-plan.candidate.json",
+  "mixedPlanCandidateSHA256": "64154749b7be1238b0da1557290bbc6c8dcc5539d4bf359d37580546a7a334c8",
+  "sourceLock": "research/revision-v5/dining-return-patches/source-lock.json",
+  "sourceLockSHA256": "b1fa02487ddb1748aa0e69088b163efbb80e38934b1987abf3ee4654da46daf8",
+  "previousPlanUnchanged": true,
+  "previousSourceLockPreserved": true,
+  "baseMarkerUnchanged": true,
+  "frozenSourceRecords": 40,
+  "allFrozenFiles": 42,
+  "sourceDifferencesFromPriorBatch": [
+    "src/V5World.ts"
+  ],
+  "supplementRangesInclusive": [
+    [
+      2542,
+      3097
+    ],
+    [
+      7908,
+      8469
+    ],
+    [
+      11311,
+      11865
+    ],
+    [
+      14474,
+      14647
+    ]
+  ],
+  "supplementFrames": 1847,
+  "mixedPatchCount": 27,
+  "mixedFrames": 12785,
+  "incrementalSupportInclusive": [
+    [
+      2945,
+      3001
+    ],
+    [
+      8310,
+      8379
+    ],
+    [
+      11371,
+      11406
+    ],
+    [
+      14534,
+      14587
+    ]
+  ],
+  "otherPatchOverlaps": [],
+  "sourceSnapshotValidation": "passed",
+  "renderStarted": false,
+  "compositionStarted": false,
+  "renderCommand": "node scripts/render_patch_supplement_v5.mjs --plan=research/revision-v5/dining-return-patches/render-plan.json --output-dir=tmp/dining-return-patches --silent --concurrency=2",
+  "composeReadOnlyPreflightCommand": "python -X utf8 scripts/compose_v5_patches.py --plan research/revision-v5/dining-return-patches/mixed-plan.candidate.json"
+}

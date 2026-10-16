@@ -1,0 +1,79 @@
+{
+  "schema": "rainbow.atlas-single-adrenal-landmark.v1",
+  "createdUTC": "2026-10-09T11:20:10.690184+00:00",
+  "mode": "read-only extraction; no source/public edits",
+  "asset": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\public\\models\\adrenals.glb",
+  "assetSHA256": "32148ad80f084961992ec6d6ab1d4f4d56efdf7636eb1e9c895a8ed8c763ecbe",
+  "activeScene": {
+    "nodes": [
+      5
+    ]
+  },
+  "meshNodeName": "adrenalsMesh",
+  "meshIndex": 2,
+  "positionAccessor": 6,
+  "sourcePart": {
+    "id": "FJ3129",
+    "name": "Left adrenal gland",
+    "firstVertex": 0,
+    "vertexCount": 791,
+    "firstIndex": 0,
+    "indexCount": 4734
+  },
+  "units": "metres",
+  "atlasTransforms": "No node matrix/translation/rotation/scale; World loads original shared coordinates without per-organ rescaling/repositioning.",
+  "leftBounds": [
+    [
+      0.02731500007212162,
+      1.1414512395858765,
+      -0.03685940057039261
+    ],
+    [
+      0.07547789812088013,
+      1.1863212585449219,
+      -0.016747500747442245
+    ]
+  ],
+  "leftBoxCenter": [
+    0.051396449096500874,
+    1.1638862490653992,
+    -0.026803450658917427
+  ],
+  "leftVertexMean": [
+    0.048718483713555576,
+    1.1664872938100668,
+    -0.02773014085388515
+  ],
+  "recommendedLabelPoint": [
+    0.05065130069851875,
+    1.1620512008666992,
+    -0.026262199506163597
+  ],
+  "recommendedGlobalVertexIndex": 567,
+  "distanceToBoxCenterMetres": 0.0020531928396827722,
+  "positiveXPartitionMatchesSourcePart": true,
+  "leftVertexCount": 791,
+  "positiveXVertexCount": 791,
+  "method": [
+    "Read GLB JSON and BIN chunks directly.",
+    "Use node extras.sourceParts FJ3129 Left adrenal gland to select POSITION vertices0 through790.",
+    "Compute per-side bounds and centre.",
+    "Choose the actual source surface vertex nearest to that centre (global vertex567).",
+    "Independently verify x>0 vertex partition exactly equals FJ3129 sourcePart; all scene nodes have identity transforms."
+  ],
+  "recommendedMinimalEdit": {
+    "file": "src/V5Regulation.ts",
+    "scope": "h054 branch of labels() only",
+    "pointExpression": "V(0.0506513007, 1.1620512009, -0.0262621995)",
+    "comment": "BodyParts3D FJ3129 Left adrenal gland, adrenalsMesh vertex567, original SI coordinates.",
+    "doNotChange": "nodes.adrenals or functional path endpoints, because that would affect other clips.",
+    "patchFrameRangeInclusive": [
+      15115,
+      15404
+    ]
+  },
+  "limits": [
+    "Surface vertex identifies the segmented gland; dataset does not separately segment adrenal cortex/medulla, so do not call it independently verified cortex segmentation.",
+    "New label must still be checked in the actual rendered h054 camera view."
+  ]
+}

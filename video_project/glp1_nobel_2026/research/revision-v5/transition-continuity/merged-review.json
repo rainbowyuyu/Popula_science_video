@@ -1,0 +1,140 @@
+{
+  "createdUTC": "2026-10-09T05:58:46.420915+00:00",
+  "status": "merged-isolated-candidate-ready-for-root-installation",
+  "productionFilesUntouched": true,
+  "protectedDeliveryAudioTimelineAndLocksUntouched": true,
+  "baselineVideoSHA256": "6d77b4522f419fa56ba01cfc3abe89ccf2a31b6905c0e3e9857293dc537e8e7c",
+  "candidates": {
+    "V5World.ts": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v5\\transition-continuity\\V5World.ts",
+      "sha256": "94b295269323cfe0fa74181fe0745ba5dc1ff8e9385c9407b0356f5c38647efe"
+    },
+    "V5CardioDetail.ts": {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v5\\transition-continuity\\V5CardioDetail.ts",
+      "sha256": "e50860c64eb42b26223005a22d75b9ac2e9e95dca008bd9ffe0a0f931fe40f70"
+    }
+  },
+  "productionBaseHashes": {
+    "V5World.ts": "86cf21813e4989719e10ed579fa5ab1e28c4c1f6e14683300bca8d1e25daa014",
+    "V5CardioDetail.ts": "0dfd22d341023c7297994f3e7fa5455b2ad76d264d107682a31fd3175ccaf1ac"
+  },
+  "repairs": [
+    {
+      "issue": "Pressure-to-thrombus clip boundary instantly removed wall and introduced plaque/clot at F21337.",
+      "solution": "Continuous C2 optical role blend across F21277–21397. The already formed lesion retains dimensions/anchor; pressure arrows, flow, shell and lesion opacity blend. All other frames use original state.",
+      "potentialChangedInclusive": [
+        21278,
+        21396
+      ],
+      "exactPixelMatchesToBaseline": [
+        21276,
+        21277,
+        21397,
+        21398
+      ],
+      "adjacentDifference": {
+        "baseline": {
+          "meanAbsoluteRGB": 19.213763020833333,
+          "maximumChannel": 127,
+          "changedPixels": 764115
+        },
+        "candidate-preview": {
+          "meanAbsoluteRGB": 4.757189308449074,
+          "maximumChannel": 96,
+          "changedPixels": 764179
+        }
+      },
+      "visualEvidence": "candidate-preview/contact-1.jpg through contact-3.jpg plus native F21336 and F21337 were opened."
+    },
+    {
+      "issue": "Near-camera atlas ventricular walls became large translucent facets at F20551 and F21685/86.",
+      "solution": "Merge camera_transition_fix local heart-surface distance gates, restoring atlas myocardium over 0.13–0.28 m during h073/h077 returns. No camera/geometry edits.",
+      "potentialChangedInclusive": [
+        [
+          20374,
+          20657
+        ],
+        [
+          21519,
+          21802
+        ]
+      ],
+      "fullSupportEndpointsZero": [
+        [
+          20373,
+          20658
+        ],
+        [
+          21518,
+          21803
+        ]
+      ],
+      "separateEvidence": "../final-discontinuity/surface-review.json",
+      "visualEvidence": "Both 15-frame contact sheets opened by original reviewer and by transition_audit_now."
+    }
+  ],
+  "notPerformed": [
+    "Complete 30fps continuous playback of merged candidate",
+    "Final encoded movie review after root installation"
+  ],
+  "partialBaselineReview": {
+    "path": "research/qa/final-v5/crossscale-audit/6d77b4522f419fa5/partial-visual-review.json",
+    "contactSheetsActuallyOpened": 41,
+    "planned": 75,
+    "globalVisualPass": false
+  },
+  "next": "Root install only the two candidate source files, type-check, freeze source provenance, render supported ranges and verify decoded patch seams.",
+  "combinedPreview": {
+    "framesActuallyViewed": [
+      20550,
+      20551,
+      20579,
+      21336,
+      21337,
+      21398,
+      21685,
+      21686,
+      21725
+    ],
+    "contactSheet": "merged-preview/contact-merged.jpg",
+    "reportSHA256": "4cea0223ab2e48ae6814c40f0d5f43541f9f11eb800a20b6ccd6e28e405b7e84",
+    "compiledAndRenderedWithMergedCandidates": true,
+    "continuousPlaybackPerformed": false,
+    "observation": "No near-camera myocardial facets in inspected F20550/51 and F21685/86. Heart returns at F20579/21725. Plaque/clot is continuous through F21336/37.",
+    "mergedMatchesSoloFrames": {
+      "21336": false,
+      "21337": false,
+      "21398": true
+    },
+    "mergedToSoloDifference": {
+      "21336": {
+        "changedPixels": 1,
+        "maxChannelDelta": 1,
+        "meanAbsoluteChannel": 5.425347222222222e-07,
+        "bbox": [
+          735,
+          399,
+          735,
+          399
+        ]
+      },
+      "21337": {
+        "changedPixels": 5,
+        "maxChannelDelta": 1,
+        "meanAbsoluteChannel": 2.44140625e-06,
+        "bbox": [
+          739,
+          322,
+          746,
+          404
+        ]
+      },
+      "21398": {
+        "changedPixels": 0,
+        "maxChannelDelta": 0,
+        "meanAbsoluteChannel": 0.0,
+        "bbox": null
+      }
+    }
+  }
+}

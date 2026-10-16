@@ -1,0 +1,70 @@
+{
+  "id": "s046",
+  "text": "我们在城市里看到的是一条轻巧的曲线，支撑它的，却是一条从天空到泥土、始终接得上的传力路。",
+  "ttsText": "我们在城市里看到的是一条轻巧的曲线，支撑它的，却是一条从天空到泥土、始终接得上的传力路。",
+  "signature": "6eec0247760d65e44a447e5fa46e2d1f391d74cfa05f4ec006a46329705f47d6",
+  "raw": "audio/raw/s046-6eec024776.wav",
+  "processed": "public/voice/s046.wav",
+  "rawDuration": 7.44,
+  "duration": 7.44,
+  "sha256": "7b50e7b2577967a6a494bbf508ac871ebe6462969f516345450f28adf73d2f65",
+  "seed": 3117466693,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s045",
+    "s046",
+    "s047",
+    "s048"
+  ],
+  "rawEndpointDB": -96.45785267449583,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "03a86fc696e0e8b31ae257ff6a57a7176b97860573aeec22cc361dd3eba6cab8",
+    "outputSha256": "7b50e7b2577967a6a494bbf508ac871ebe6462969f516345450f28adf73d2f65",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.1056980517687407,
+    "input": {
+      "seconds": 7.44,
+      "peakDb": -7.698355112997376,
+      "activeRmsDb": -22.885853028765926,
+      "quietFrameP10Db": -58.61238117789982
+    },
+    "output": {
+      "seconds": 7.44,
+      "peakDb": -6.917948740389025,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -57.421698582370325
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

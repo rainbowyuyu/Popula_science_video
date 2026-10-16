@@ -1,0 +1,34 @@
+{
+  "kind": "single-label-side-only",
+  "oldProductionLock": "research/visual/v8-production-lock3.json",
+  "oldProductionLockSHA256": "b0fac47c1620586af933ec8449029a51d5a260d01d0e971aacec4cec930cfce1",
+  "newProductionLock": "research/visual/v8-production-lock4.json",
+  "newProductionLockSHA256": "27c1dc4c85d22860bb8c1dcc305f199004633155e05899c72537b8de70608dd5",
+  "oldSource": "research/visual/v8-label-repair/World.before.ts",
+  "newSource": "src/World.ts",
+  "oldWorldSHA256": "93c65b2259d38c7eca042f0fa90f48e33276e75584278319efa16d086e251b98",
+  "newWorldSHA256": "37e13915806279a75e7b65ebfd605f0a78df5b9a9800dc83d648cc295ab94beb",
+  "beforeLine": "  if(u>=37.1&&u<37.8){const p=this.parts.find(p=>p.id==='TMD_DAMPER_PLATE');if(p)list.push({text:'固定铜板',point:p.center.clone(),side:'left'});}",
+  "afterLine": "  if(u>=37.1&&u<37.8){const p=this.parts.find(p=>p.id==='TMD_DAMPER_PLATE');if(p)list.push({text:'固定铜板',point:p.center.clone(),side:'right'});}",
+  "onlyChangedInput": "src/World.ts",
+  "unchangedInputCount": 126,
+  "affectedFrameRange": [
+    12452,
+    12609
+  ],
+  "affectedCondition": "37.1 <= s.n + s.u < 37.8",
+  "rerenderedSegmentNumbers": [
+    7,
+    8
+  ],
+  "reusedSegmentNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    9
+  ],
+  "scope": "Only label side changes. All model, shader, camera, audio, physics and timeline inputs remain byte-identical; inactive label branch cannot affect other frame ranges."
+}

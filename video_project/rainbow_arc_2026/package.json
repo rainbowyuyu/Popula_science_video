@@ -1,0 +1,32 @@
+{
+  "name": "rainbow-arc-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "render": "node scripts/render-v20.mjs",
+    "stills": "node scripts/render-v20.mjs stills",
+    "audit": "node scripts/audit-v20.mjs",
+    "render:warm-creek": "node scripts/render-warm-creek.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.3.0",
+    "@remotion/bundler": "4.0.526",
+    "@remotion/media": "4.0.526",
+    "@remotion/renderer": "4.0.526",
+    "@remotion/three": "4.0.526",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.526",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.180.0",
+    "esbuild": "0.28.1",
+    "typescript": "5.9.3"
+  }
+}

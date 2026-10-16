@@ -1,0 +1,58 @@
+{
+  "createdUTC": "2026-10-09T08:24:03.433891+00:00",
+  "runner": "scripts/render_continuity_patch_v6.mjs",
+  "runnerSHA256": "b3fe0727ba52bfe927c26c3be7b43f0065699e4cb2e5763c7f4ce06c3ffd90d3",
+  "status": "prepared-not-executed",
+  "validationPerformed": [
+    "node --check (exit 0)",
+    "read-only current c9 ffprobe confirms H264 High level40, has_b_frames=2, 1920x1080, 30fps, yuv420p, BT709 limited, PTS0",
+    "read-only original marker sourceHashes exactly equals all268 original lock entries"
+  ],
+  "pending": "Parent installs accepted two-file candidate and creates new complete source snapshot lock before --validate-only/--render",
+  "baseVideoSHA256": "c9f90b7b6c2f79a9238d38e82c752394c4faf1419eed40b36b30e4e2b164e8a4",
+  "baseMarkerSHA256": "306581ac194f30a340c454e07e03068c19bef14f8d887171c4c459f925d04d17",
+  "baseSourceLockSHA256": "a3b8069c8328526ef57580fe373f6c591fa118b9a160a73f6e2765d4fdd550c6",
+  "sourceLockFormat": "files[] {path,sha256,snapshot,snapshotSHA256}; frames25621,fps30; complete268 original inventory",
+  "requiredChangedSources": [
+    "src/V5World.ts",
+    "src/V5HandoffContext.ts"
+  ],
+  "unchangedSourceCount": 266,
+  "outputs": [
+    {
+      "frames": [
+        12000,
+        12249
+      ],
+      "video": "tmp/v6-continuity-patches/segment-12000-12249.mp4",
+      "marker": "tmp/v6-continuity-patches/segment-12000-12249.json"
+    },
+    {
+      "frames": [
+        20250,
+        20749
+      ],
+      "video": "tmp/v6-continuity-patches/segment-20250-20749.mp4",
+      "marker": "tmp/v6-continuity-patches/segment-20250-20749.json"
+    }
+  ],
+  "commands": [
+    "node scripts/render_continuity_patch_v6.mjs --validate-only --source-lock=<new-patch-source-lock.json>",
+    "node scripts/render_continuity_patch_v6.mjs --render --source-lock=<new-patch-source-lock.json>"
+  ],
+  "renderMode": "remotion-v6-continuity-silent-patch",
+  "silent": {
+    "inputProps": {
+      "audio": false,
+      "clean": false
+    },
+    "muted": true
+  },
+  "runtimeRequirements": [
+    "Actual CDP glRenderer must match NVIDIA RTX5060",
+    "Process-local TEMP and TMP in D-drive output remotion-temp",
+    "Source, snapshots, base delivery/marker/base-lock, runner, Chromium hashes rechecked around rendering",
+    "Each patch exactly one video stream, PTS0, exact requested framecount, base codec properties, full error-strict decode",
+    "No delivery or current full marker mutation; independent source/output marker provenance only"
+  ]
+}

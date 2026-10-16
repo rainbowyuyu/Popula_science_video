@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "id": "glp1_nobel_2026",
+  "title": "科学减重：从身体调节说起",
+  "category": "life-science",
+  "status": "source-library",
+  "currentVersion": "publish current + V8 source",
+  "workbench": {
+    "title": "科学减重：从身体调节说起",
+    "seriesId": "rainbow-science",
+    "episode": 4,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/index.tsx",
+    "scripts/render.mjs"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v5/dining-return-patches/source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v5/final-boundary-repair/frozen-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v5/final-motion-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v5/full-transparent-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v5/h005-fix/current-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v5/h070-bridge-repair/frozen-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v6/continuity-repair/frozen-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v6/continuity-repair/label-stability/frozen-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "research/revision-v6/frozen-source",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "publish/video/一顿饭后_身体在忙什么_V20_1080p.mp4"
+    ],
+    "covers": [
+      "delivery/封面-V18/如何科学减肥_身体调节_16x9.jpg",
+      "delivery/封面-V18/如何科学减肥_身体调节_3x4.jpg",
+      "delivery/封面-V18/如何科学减肥_身体调节_4x3.jpg",
+      "delivery/封面-V18/如何科学减肥_身体调节_9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable"
+  ],
+  "notes": [
+    "当前发布资料已移动 publish；仍需保留 V5/V6/V7/V8 命名的跨版依赖。"
+  ],
+  "originalMetadata": {}
+}

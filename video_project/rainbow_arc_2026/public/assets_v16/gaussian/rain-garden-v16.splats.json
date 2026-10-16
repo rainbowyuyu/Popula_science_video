@@ -1,0 +1,60 @@
+{
+  "version": "V16",
+  "count": 419604,
+  "stride": 16,
+  "encoding": "float32-le",
+  "record": "x,y,z,linear-r,g,b,alpha,sigma-x,y,z,quaternion-x,y,z,w,seed,category",
+  "representation": "Authored artistic volumetric covariance splats sampled from a three-dimensional Blender scene and rendered with mesh ground/tree support; not a trained photographic reconstruction",
+  "coordinates": "glTF Y-up metres; identity transform (scale=1). Optical hero [0,4,0], water [-3,.025,3]",
+  "sourceGLB": "public/assets_v16/environment/rain_garden_v16.glb",
+  "sourceGLBSHA256": "7961c9bb51ca478b223d347b8f018cd3254b69edb662a69d53e17004addd64ce",
+  "binarySHA256": "c29a20c3cb370b7c406c4db5189d820348eeab9103a48667e9884a466bdd0014",
+  "bounds": {
+    "min": [
+      -46.44137191772461,
+      -0.42738085985183716,
+      -65.5672607421875
+    ],
+    "max": [
+      45.95477294921875,
+      12.533730506896973,
+      36.98048782348633
+    ]
+  },
+  "groups": [
+    {
+      "category": "terrain",
+      "requested": 67200,
+      "accepted": 66804
+    },
+    {
+      "category": "stone_path",
+      "requested": 33600,
+      "accepted": 33600
+    },
+    {
+      "category": "water",
+      "requested": 8400,
+      "accepted": 8400
+    },
+    {
+      "category": "trees",
+      "requested": 176400,
+      "accepted": 176400
+    },
+    {
+      "category": "rocks",
+      "requested": 25200,
+      "accepted": 25200
+    },
+    {
+      "category": "foliage",
+      "requested": 109200,
+      "accepted": 109200
+    }
+  ],
+  "createdUTC": "2026-10-12T16:26:30.728133+00:00",
+  "licenses": "../environment/provenance-v16.json; original CC0 source-licenses-v15.json retained",
+  "physicalAuthority": false,
+  "normalMaximumResidual": 1.7881393432617188e-07
+}

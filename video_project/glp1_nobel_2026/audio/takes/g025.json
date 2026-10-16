@@ -1,0 +1,69 @@
+{
+  "id": "g025",
+  "text": "这类从肝脏出发的颗粒，叫极低密度脂蛋白。它携带的甘油三酯，给肌肉供能，也能送到脂肪组织储存。",
+  "ttsText": "这类从肝脏出发的颗粒，叫极低密度脂蛋白。它携带的甘油三酯，给肌肉供能，也能送到脂肪组织储存。",
+  "signature": "80b196aad1eb24f578c02b4c76d2e8d2dd4d166d0e4024c53a59ba2382cf9392",
+  "raw": "audio/raw/g025-80b196aad1.wav",
+  "processed": "public/voice/g025.wav",
+  "rawDuration": 8.88,
+  "duration": 8.88,
+  "sha256": "e5610f729071b0b155a97fbb7269b7e88f25907e5d490445365dd94e5b77c618",
+  "seed": 2159122090,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g025",
+    "g026",
+    "g027",
+    "g028"
+  ],
+  "rawEndpointDB": -96.54827014108503,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "ae351a89047231b00094d47402e41ae779f69c8d124109eb7b4efa09c00b55bf",
+    "outputSha256": "e5610f729071b0b155a97fbb7269b7e88f25907e5d490445365dd94e5b77c618",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.8247926419278784,
+    "input": {
+      "seconds": 8.88,
+      "peakDb": -6.685567459144054,
+      "activeRmsDb": -22.453402505069675,
+      "quietFrameP10Db": -62.67998060468493
+    },
+    "output": {
+      "seconds": 8.88,
+      "peakDb": -4.27004984420971,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.72209422842321
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

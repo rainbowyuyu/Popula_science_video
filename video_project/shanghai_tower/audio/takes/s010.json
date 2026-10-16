@@ -1,0 +1,86 @@
+{
+  "id": "s010",
+  "text": "它叫核心筒。电梯、楼梯和不少设备管线，都集中在这片靠近楼中心的区域。",
+  "ttsText": "它叫核心筒。电梯、楼梯和不少设备管线，都集中在这片靠近楼中心的区域。",
+  "signature": "0f7e1caa4505decc2838d97227c397a9c5ed77f93d538c41a395d9b383a5a9b6",
+  "raw": "audio/raw/s010-b44eb904e5.wav",
+  "processed": "public/voice/s010.wav",
+  "rawDuration": 6.4,
+  "duration": 6.64,
+  "sha256": "cdfbf48dc9170699b6bb26a6a151e950ffa2176ed233b47752102a5a581ec995",
+  "seed": 3455961777,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s009",
+    "s010",
+    "s011",
+    "s012"
+  ],
+  "rawEndpointDB": -87.50762126393869,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "654e806230b5ca644015489bd05e4c574754550b8b288c15083504011fbc0f1d",
+    "outputSha256": "cdfbf48dc9170699b6bb26a6a151e950ffa2176ed233b47752102a5a581ec995",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.931204737904352,
+    "input": {
+      "seconds": 6.64,
+      "peakDb": -6.796006375717386,
+      "activeRmsDb": -22.566768506558944,
+      "quietFrameP10Db": -65.19068004361516
+    },
+    "output": {
+      "seconds": 6.64,
+      "peakDb": -4.381047162854671,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -65.30426670703793
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "2e865781d66978745ec717c2f646655c0b81b9361d13d3f881792bef3f8db6ce"
+  },
+  "subjectiveListeningChecked": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "previousSignature": "b44eb904e5b9fd4a87f265224e8c37e451d4dc2aadf84245fee9abb0c5ce4b05",
+  "synthesisRetained": true,
+  "revisionReason": "Reprocess untouched raw once with silence outside the cleaner edge tapers; no resynthesis, trimming or stretching",
+  "candidateSource": "audio/candidates/v3-pronunciation/s010.wav",
+  "revision": "pronunciation-and-boundaries-v3"
+}

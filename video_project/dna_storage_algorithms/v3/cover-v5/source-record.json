@@ -1,0 +1,252 @@
+{
+  "createdAt": "2026-10-11T13:38:52.935736+00:00",
+  "project": "DNA storage algorithms V5 cover set",
+  "tools": [
+    "Blender 5.1.2 Cycles, 160 samples, denoising, fixed seed 20261011",
+    "Pillow, 2x supersampling, exact typography and original transparent logo"
+  ],
+  "paidGenerationCallsThisCoverTask": 0,
+  "design": {
+    "title": [
+      "弄丢几块",
+      "还能找回？"
+    ],
+    "series": "每天5分钟科普 · DNA存储",
+    "scene": "Mostly intact fictional family image; ten outer-edge image tiles detach toward a conceptual DNA helix. Independently staged horizontal and portrait compositions.",
+    "brand": "Original transparent PNG in upper left with rainbow鱼 to its right; no backing rectangle."
+  },
+  "evidenceBoundary": "Conceptual DNA storage cover, not a real molecular scan, wet-lab photograph, historical recovered file, or real family video. Family artwork was generated for the existing V5 film and is reused here.",
+  "sourceFilm": {
+    "path": "delivery/DNA存储_连续数据之旅_V5_1080p.mp4",
+    "sha256FromVerifiedV5Delivery": "694fb6203db3e297a7445b0c20053a637292fc827b7a95a886f0acfb146cade7"
+  },
+  "inputs": [
+    {
+      "path": "public\\bridges\\family-memory.png",
+      "bytes": 1437656,
+      "sha256": "912e18c0adda26a9f31b75248313e17392a8be7a6cf22697dbb4b78df43b9ff8",
+      "origin": "Existing generated V5 illustration",
+      "model": "qwen-image-2.0-pro-2026-06-22",
+      "provenance": "research/tool-family-memory.json",
+      "rights": "Existing project generation; provider terms apply; no additional license claimed"
+    },
+    {
+      "path": "C:\\Users\\zju\\Desktop\\logo\\logo.png",
+      "bytes": 13501,
+      "sha256": "d06cdbd8377a82513ba4a4f5172defb6eccfb5e3f17f4ddebe2af2a9bfb9637a",
+      "origin": "User supplied rainbow鱼 logo",
+      "rights": "Used under user instruction; original unchanged"
+    },
+    {
+      "path": "C:\\Windows\\Fonts\\NotoSansSC-VF.ttf",
+      "bytes": 17773244,
+      "sha256": "763146584cf0710223441356b4395e279021b0806c196614377a7a0174ae074a",
+      "origin": "Installed Noto Sans SC variable font",
+      "rights": "Noto font family SIL Open Font License; font not bundled"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "scripts\\build_cover_v5_blender.py",
+      "bytes": 11772,
+      "sha256": "0324076d65652a6168bc2523cea4357cf6fe2721de8addcd77efda8ea3b76814"
+    },
+    {
+      "path": "scripts\\compose_cover_v5.py",
+      "bytes": 5943,
+      "sha256": "453532f7f279b490c1dda77dbea160d0122c54c873c2c7197bff1487831a2279"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_16x9.jpg",
+      "bytes": 306339,
+      "sha256": "3cca2ac5d4a1811a4d11efcbf8806f7e7d2b1c5a9b449cd07fe9368ccd85a691",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "JPEG"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_16x9.png",
+      "bytes": 1509727,
+      "sha256": "ee9a68e244e98dddbb43450ddba7e0957336d7b0153ef85337ff08670f1e0248",
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "PNG"
+    },
+    {
+      "path": "cover-v5\\artwork\\beauty-16x9.png",
+      "bytes": 1856440,
+      "sha256": "6c6adaefa7db1edbfc89ecb0ff13dd817b4f4db1d1a5686d2ead1ab49062eb0c"
+    },
+    {
+      "path": "cover-v5\\artwork\\DNA-cover-16x9.blend",
+      "bytes": 1725917,
+      "sha256": "040fbe1e8972a012c055bdc2585aa699fe5afa87685aa0c2c2f3771659ff09f3"
+    },
+    {
+      "path": "cover-v5\\artwork\\projection-16x9.json",
+      "bytes": 619,
+      "sha256": "56a11fa267be6c4f9c8ad7cbf3f736e31695fa793f3dafc3e426c2bfcf861f9e"
+    },
+    {
+      "path": "cover-v5\\covers\\layout-16x9.json",
+      "bytes": 2278,
+      "sha256": "0ee12e2f736b6da448cc153d0c41e3f627f832604f89599b8b2fc2e678f2d7e5"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_4x3.jpg",
+      "bytes": 353962,
+      "sha256": "46463a7d39fbbb8e151feff087f4a4094599f3389f1b856326cccac5497069bc",
+      "size": [
+        1920,
+        1440
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "JPEG"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_4x3.png",
+      "bytes": 1969368,
+      "sha256": "0b6391504b572dc9de3ac92e9d517031000c7953f99432a8c01173c86ff47116",
+      "size": [
+        1920,
+        1440
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "PNG"
+    },
+    {
+      "path": "cover-v5\\artwork\\beauty-4x3.png",
+      "bytes": 2428753,
+      "sha256": "288f981fff418c002ee054311746166c128626d8605a14a1a3c9e2b6a0e20c0a"
+    },
+    {
+      "path": "cover-v5\\artwork\\DNA-cover-4x3.blend",
+      "bytes": 1732364,
+      "sha256": "104eccb3280385565d8953764cfb35d6d4593ec6fc76c46634cc95243f78945f"
+    },
+    {
+      "path": "cover-v5\\artwork\\projection-4x3.json",
+      "bytes": 621,
+      "sha256": "61af2805e5d576f0737f81c127e16a5d42255ce55b0593a2edf5673ed7cafdff"
+    },
+    {
+      "path": "cover-v5\\covers\\layout-4x3.json",
+      "bytes": 2421,
+      "sha256": "bc85b8a485a14d20c06f808336466155f6d83bf82d60bd77f31c0705a943d33f"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_3x4.jpg",
+      "bytes": 377281,
+      "sha256": "562540af479144dc78b4b87c499c7182ac633082d9cec5d0c4fef106c951308d",
+      "size": [
+        1440,
+        1920
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "JPEG"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_3x4.png",
+      "bytes": 1984377,
+      "sha256": "404c5f1fb5af394abc51279a82ae7560b121709cbc66a03b83c99db9a047bfd9",
+      "size": [
+        1440,
+        1920
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "PNG"
+    },
+    {
+      "path": "cover-v5\\artwork\\beauty-3x4.png",
+      "bytes": 2455663,
+      "sha256": "dc1fcf18dca35258be6ea4f74a4034e44a146eb0aa5e1e9287ff03f3f2370794"
+    },
+    {
+      "path": "cover-v5\\artwork\\DNA-cover-3x4.blend",
+      "bytes": 1741653,
+      "sha256": "1507eacabf3ded94d812b97e446d1bcea1f8add88c434e997c66a5088be2d7c8"
+    },
+    {
+      "path": "cover-v5\\artwork\\projection-3x4.json",
+      "bytes": 617,
+      "sha256": "7389339714b8c4afdd8072dafdbfb4591c056fc000c22e582c8802c1bf3c48cb"
+    },
+    {
+      "path": "cover-v5\\covers\\layout-3x4.json",
+      "bytes": 2418,
+      "sha256": "80e6b6c6d1834fc0a8f62168a888e1f26bce64fbd596435ebc7c17097ce94c1a"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_9x16.jpg",
+      "bytes": 332267,
+      "sha256": "800359b20192042f6468454190cba422add05c8a4ba948815a9cdbfe34363d97",
+      "size": [
+        1080,
+        1920
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "JPEG"
+    },
+    {
+      "path": "cover-v5\\covers\\DNA存储_V5封面_9x16.png",
+      "bytes": 1589458,
+      "sha256": "29394a268ec61f336028560269b3342f91e19cd3e726eee13236acb28fba6e19",
+      "size": [
+        1080,
+        1920
+      ],
+      "mode": "RGB",
+      "iccBytes": 588,
+      "format": "PNG"
+    },
+    {
+      "path": "cover-v5\\artwork\\beauty-9x16.png",
+      "bytes": 1923844,
+      "sha256": "2ba1ff80537d2f0b5fa03536d4e3759b3c65410f7ce55a3fac4ce02ddef4064f"
+    },
+    {
+      "path": "cover-v5\\artwork\\DNA-cover-9x16.blend",
+      "bytes": 1749631,
+      "sha256": "0b6ed7d0a69b341eb19aeed9398f4c2499c085f4e74965bde61c3871121f63f2"
+    },
+    {
+      "path": "cover-v5\\artwork\\projection-9x16.json",
+      "bytes": 616,
+      "sha256": "71baaab410cbb3b5b2f3a0db35416a815d8b65e046514ab5a7762bd0fd2531e3"
+    },
+    {
+      "path": "cover-v5\\covers\\layout-9x16.json",
+      "bytes": 2275,
+      "sha256": "339cff86b45f91187fb80ee3b77e9aac25a275f98bb62c6a28fd1822b41477fa"
+    }
+  ],
+  "qa": {
+    "status": "pass",
+    "exactDimensions": true,
+    "rgbAndEmbeddedSRGB": true,
+    "jpegSubsampling": "4:4:4",
+    "projectedModelAndTextOverlapChecks": "passed for all four ratios; protection checks left enabled",
+    "visualInspection": [
+      "Final four-format contact sheet",
+      "Final exact 320px and160px thumbnails",
+      "Final individual 16:9 and9:16 images",
+      "Independent read-only reviewer inspected all four previews and thumbnails; no required changes"
+    ],
+    "observations": "Title, logo, and capsule remain unobstructed; image subjects preserved; DNA and missing-image edge remain recognizable at thumbnail size. Deliberately pale teal/champagne material style."
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "h058",
+  "partIndex": 1,
+  "ttsText": "它和肥胖常常相伴，也会牵动血压。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 3,
+  "seed": 3464724583,
+  "signature": "ce838067dc9162cf4534ec8da7a955d607d638b69acdbc49c0be3c997fd94bb8",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h054-p02",
+    "h058-p01",
+    "h058-p02"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-03\\raw\\h058-p02.wav",
+  "rawSHA256": "27249dd71368abc610cb644a0bf4d8e0d4935e5b286572b83b825875c25c716b",
+  "rawMetrics": {
+    "samples48k": 142080,
+    "seconds": 2.96,
+    "peakDBFS": -7.695256583609006,
+    "first20msDBFS": -94.1797412567307,
+    "last20msDBFS": -97.14252746372608,
+    "firstActiveMs": 50.0,
+    "lastActiveToEndMs": 90.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-03\\guarded\\h058-p02.wav",
+  "guardedSHA256": "e55c496186dbed10b89c06118c85cc986e7b13dbf1c16da4746438f79d28f30f",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-03\\processed\\h058-p02.wav",
+  "sha256": "cabde0de2e96912e417f6c6431ef184d32a82757fad0ae14e7d2c3f39d0e9341",
+  "durationSeconds": 3.2,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "e55c496186dbed10b89c06118c85cc986e7b13dbf1c16da4746438f79d28f30f",
+    "outputSha256": "cabde0de2e96912e417f6c6431ef184d32a82757fad0ae14e7d2c3f39d0e9341",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.2130644682678664,
+    "input": {
+      "seconds": 3.2,
+      "peakDb": -7.694763839417455,
+      "activeRmsDb": -22.003824637830895,
+      "quietFrameP10Db": -62.16959756498589
+    },
+    "output": {
+      "seconds": 3.2,
+      "peakDb": -5.480403442531926,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.27774478139978
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

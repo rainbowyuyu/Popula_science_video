@@ -1,0 +1,59 @@
+{
+  "address_indirection": {
+    "cues": [
+      "s09",
+      "s10",
+      "s11",
+      "s12",
+      "s13",
+      "s14",
+      "s15",
+      "s16",
+      "s17"
+    ],
+    "source": "N1570 §6.5.3.2 pp3–4",
+    "evidence": "research/c-proof/run.json"
+  },
+  "call_by_value": {
+    "cues": [
+      "s01",
+      "s02",
+      "s03",
+      "s18",
+      "s19",
+      "s20",
+      "s21",
+      "s22",
+      "s23"
+    ],
+    "source": "N1570 §6.5.2.2 p4, footnote93",
+    "evidence": "research/c-proof/run.json"
+  },
+  "array_stride": {
+    "cues": [
+      "s24",
+      "s25",
+      "s26",
+      "s27",
+      "s28"
+    ],
+    "source": "N1570 §6.5.2.1 p2; §6.5.6 pp8–9",
+    "measuredIntBytes": 4,
+    "scope": "MSVC x64 single-run observation"
+  },
+  "lifetime_null_bounds": {
+    "cues": [
+      "s29",
+      "s30",
+      "s31",
+      "s32"
+    ],
+    "source": "N1570 §6.2.4 p2; §6.3.2.3 p3; §6.5.6 p8",
+    "unsafeExamplesExecuted": false
+  },
+  "illustration_limits": {
+    "address": "0x1000 is an illustrative address only",
+    "game": "Original teaching scenario, no external incident claim",
+    "object_geometry": "Physical memory is not literally ceramic drawers"
+  }
+}

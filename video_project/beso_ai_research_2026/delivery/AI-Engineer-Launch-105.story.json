@@ -1,0 +1,253 @@
+{
+  "fps": 60,
+  "duration": 6300,
+  "revision": "launch-105-product-film-v1",
+  "source": "research/launch-film-105s-plan.json",
+  "scenes": [
+    {
+      "id": "hero",
+      "title": "AI ENGINEER",
+      "claim": "从一句需求，到可交付方案",
+      "start": 0,
+      "duration": 420,
+      "visual": "WaterPro-style dawn ocean; drone skims wave crest, dives toward a floating wind turbine; Gaussian mist reveals a clean native model",
+      "camera": "24mm aerial push-in → low orbit around platform → match-cut on tower highlight",
+      "onScreen": [
+        "AI ENGINEER",
+        "Design with evidence"
+      ],
+      "voice": "把一座二十兆瓦的风机放到深海里，最难的，往往是水面下面的基础。",
+      "voicePlan": "复杂工程，往往不是缺少算法，而是需求、模型和证据彼此断开。",
+      "clips": [
+        {
+          "id": "hook-0",
+          "from": 15,
+          "frames": 384,
+          "file": "voice/hook-0.wav",
+          "audioSHA256": "3f29f82b08f3e0b42917b9376e044c5574272718430f1a8a55c7e81b115ac111",
+          "text": "把一座二十兆瓦的风机放到深海里，最难的，往往是水面下面的基础。",
+          "ttsText": "把一座二十兆瓦的风机放到深海里，最难的，往往是水面下面的基础。"
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "title": "一句话，变成任务图",
+      "claim": "语言 → 结构化工程输入",
+      "start": 420,
+      "duration": 720,
+      "visual": "Local AI Engineer workspace replay; type ‘20 MW 浮式风机 / 深海 / 质量约束’ without submitting, then hold on the response surface and tool toggles",
+      "camera": "tower highlight becomes UI cursor trail; 3D plane rotates into full browser frame and tracks across the saved workspace surface",
+      "onScreen": [
+        "需求",
+        "几何",
+        "网格",
+        "载荷",
+        "约束"
+      ],
+      "voice": "工程师接着补上场址、海况、材料和规范，系统把这些话整理成结构化参数。",
+      "voicePlan": "AI Engineer，把它们接成一条可以检查的链路。你输入目标、海况和约束，系统把语言拆成几何、网格、材料和载荷；这一镜是本地界面录屏回放，未提交求解。",
+      "clips": [
+        {
+          "id": "brief-1",
+          "from": 15,
+          "frames": 437,
+          "file": "voice/brief-1.wav",
+          "audioSHA256": "36b68a0f0ae35c780dae643e99bc7f39defdb48f9655c642706a6e2125a60e02",
+          "text": "工程师接着补上场址、海况、材料和规范，系统把这些话整理成结构化参数。",
+          "ttsText": "工程师接着补上场址、海况、材料和规范，系统把这些话整理成结构化参数。"
+        }
+      ]
+    },
+    {
+      "id": "topology",
+      "title": "让材料沿着力留下",
+      "claim": "BESO 迭代，保留有效路径",
+      "start": 1140,
+      "duration": 900,
+      "visual": "Native VTK mesh explodes into voxels; 44 state thumbnails flow along a ribbon; low-contribution cells dissolve, load paths glow teal; final skeleton reassembles",
+      "camera": "macro fly-through one cell → spiral pull-back to full mesh → snap to final skeleton",
+      "onScreen": [
+        "BESO",
+        "44 states",
+        "25% material"
+      ],
+      "voice": "接下来，BESO 开始调整材料分布。我们把同一张网格上的迭代记录逐步展开。这组研究算例留下四十四个状态，最终保留的质量，大约是初始的百分之二十五。",
+      "voicePlan": "设计域生成后，BESO 沿着受力路径增减材料，四十四个状态实时留下轨迹。",
+      "clips": [
+        {
+          "id": "beso-0",
+          "from": 15,
+          "frames": 370,
+          "file": "voice/beso-0.wav",
+          "audioSHA256": "072076ebb1288cf9c4f3c04fd6cee273ed7f91da92e08e945164b65d4131c963",
+          "text": "接下来，BESO 开始调整材料分布。我们把同一张网格上的迭代记录逐步展开。",
+          "ttsText": "接下来，贝索 开始调整材料分布。我们把同一张网格上的迭代记录逐步展开。"
+        },
+        {
+          "id": "beso-4",
+          "from": 395,
+          "frames": 408,
+          "file": "voice/beso-4.wav",
+          "audioSHA256": "4146c98bc9a4b279421c09201848327f0f949a96915a937204f32776481ccd0a",
+          "text": "这组研究算例留下四十四个状态，最终保留的质量，大约是初始的百分之二十五。",
+          "ttsText": "这组研究算例留下四十四个状态，最终保留的质量，大约是初始的百分之二十五。"
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "title": "把结构放进真实环境",
+      "claim": "风、浪与系泊，绑定到同一个模型",
+      "start": 2040,
+      "duration": 1080,
+      "visual": "WaterPro-style layered waves; platform heave/pitch follows controlled response; camera dives below surface to show moorings and flow vectors; Zwind chart is pinned to tower base",
+      "camera": "surface orbit → underwater dive → cable-following dolly → rise to tower-top response dot",
+      "onScreen": [
+        "Z，风",
+        "120 s response",
+        "纵荡 · 纵摇 · 系泊"
+      ],
+      "voice": "静力算得过，还要把候选结构放进随时间变化的风和浪里。这里用到 Zwind。镜头里平台的平移和转动，跟随保存的时程输出。曲线上的这一点，就是此刻的响应。",
+      "voicePlan": "结构成形，不等于设计完成。把它放进风浪场，Z，风回放一百二十秒响应，纵荡、纵摇和系泊张力都绑定到模型。",
+      "clips": [
+        {
+          "id": "zwind-0",
+          "from": 15,
+          "frames": 370,
+          "file": "voice/zwind-0.wav",
+          "audioSHA256": "559f9ee8badd48dea3e87494e187ca80afe06ca1e99cd8bdf61314a81b1b4e7b",
+          "text": "静力算得过，还要把候选结构放进随时间变化的风和浪里。这里用到 Zwind。",
+          "ttsText": "静力算得过，还要把候选结构放进随时间变化的风和浪里。这里用到 Z，风。"
+        },
+        {
+          "id": "zwind-2",
+          "from": 395,
+          "frames": 466,
+          "file": "voice/zwind-2.wav",
+          "audioSHA256": "d558a5192af3a8b591ec25ec58403d33aa84a714e13e606f45fbbb3c77e5c756",
+          "text": "镜头里平台的平移和转动，跟随保存的时程输出。曲线上的这一点，就是此刻的响应。",
+          "ttsText": "镜头里平台的平移和转动，跟随保存的时程输出。曲线上的这一点，就是此刻的响应。"
+        }
+      ]
+    },
+    {
+      "id": "interaction",
+      "title": "改一个参数，整条链路响应",
+      "claim": "交互、计算、记录同步发生",
+      "start": 3120,
+      "duration": 780,
+      "visual": "Real local browser capture on a tracked glass plane; open the results viewer, import saved parameters_summary.json, fit the 3D reconstruction and enable auto-rotation; label as saved result playback",
+      "camera": "push through the browser frame into the results viewer; parallax across the imported model and dimensions; exit along the viewer toolbar",
+      "onScreen": [
+        "导入参数",
+        "三维重建",
+        "结果回放"
+      ],
+      "voice": "网页里的一次操作，会留下输入文件、工具日志和输出结果。下一轮修改就有了依据。",
+      "voicePlan": "网页里导入一份保存的参数，三维重建、尺寸和旋转视图一起回放；参数、日志和结果各自留档，下一轮修改才有依据。",
+      "clips": [
+        {
+          "id": "brief-3",
+          "from": 15,
+          "frames": 456,
+          "file": "voice/brief-3.wav",
+          "audioSHA256": "abcbbb94f076d3e484941f794fbef98a2f53a82cb52e301c89076a0d6294b707",
+          "text": "网页里的一次操作，会留下输入文件、工具日志和输出结果。下一轮修改就有了依据。",
+          "ttsText": "网页里的一次操作，会留下输入文件、工具日志和输出结果。下一轮修改就有了依据。"
+        }
+      ]
+    },
+    {
+      "id": "toolchain",
+      "title": "模型、仿真、报告",
+      "claim": "同一份证据，贯穿每个工具",
+      "start": 3900,
+      "duration": 780,
+      "visual": "Hero model becomes a clean Blender/Lux3D turntable; wireframe overlays Three.js scene; three tool nodes orbit and connect to a single evidence spine; optional Qwen concept bridge as a 1.4s Gaussian splash",
+      "camera": "dolly through model surface → wireframe tunnel → orbit around three nodes → land on report thumbnail",
+      "onScreen": [
+        "Three.js",
+        "Blender / Lux3D",
+        "Evidence spine"
+      ],
+      "voice": "拓扑优化决定材料放在哪里，尺寸优化继续回答，每一根构件需要多粗、多厚。",
+      "voicePlan": "拓扑骨架重建成构件，再交给 Three.js、Blender 和报告模板；模型、仿真、报告，共用一条证据链。",
+      "clips": [
+        {
+          "id": "rebuild-3",
+          "from": 15,
+          "frames": 446,
+          "file": "voice/rebuild-3.wav",
+          "audioSHA256": "bda860ac886e937e6d42950b5779f8b069a554882f00190b0e71fca44893201c",
+          "text": "拓扑优化决定材料放在哪里，尺寸优化继续回答，每一根构件需要多粗、多厚。",
+          "ttsText": "拓扑优化决定材料放在哪里，尺寸优化继续回答，每一根构件需要多粗、多厚。"
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "title": "结果，必须能对照",
+      "claim": "轻量化不是一句口号",
+      "start": 4680,
+      "duration": 960,
+      "visual": "Two turbine silhouettes share one baseline; metric ribbon animates 278 → 255.5 t/MW; 8.1% reduction appears as a single large kinetic number; small source tag stays in margin",
+      "camera": "report page folds into 3D metric ribbon; lateral track across bars; end on highlighted 255.5",
+      "onScreen": [
+        "255.5 t/MW",
+        "278 t/MW",
+        "−8.1%"
+      ],
+      "voice": "单位功率用钢量，从每兆瓦二百七十八吨，降到二百五十五点五吨，减少约百分之八点一。这些变化提醒我们，轻量化会改变系统的动力特性。设计需要在多种响应之间寻找平衡。",
+      "voicePlan": "论文案例里，单位功率用钢量由二百七十八降到二百五十五点五吨，约降百分之八点一。数字之外，每一步都能回看、复算、追责。",
+      "clips": [
+        {
+          "id": "compare-1",
+          "from": 3,
+          "frames": 494,
+          "file": "voice/compare-1.wav",
+          "audioSHA256": "6cc4f50e6d429c867dfb49b80872b1a9a82c40bb979324fca812372953fb0c0a",
+          "text": "单位功率用钢量，从每兆瓦二百七十八吨，降到二百五十五点五吨，减少约百分之八点一。",
+          "ttsText": "单位功率用钢量，从每兆瓦二百七十八吨，降到二百五十五点五吨，减少约百分之八点一。"
+        },
+        {
+          "id": "compare-3",
+          "from": 497,
+          "frames": 456,
+          "file": "voice/compare-3.wav",
+          "audioSHA256": "edcbe086c0a2517f590b31ff97f12b26309351d8146415bc07da0ef04acd274d",
+          "text": "这些变化提醒我们，轻量化会改变系统的动力特性。设计需要在多种响应之间寻找平衡。",
+          "ttsText": "这些变化提醒我们，轻量化会改变系统的动力特性。设计需要在多种响应之间寻找平衡。"
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "title": "AI ENGINEER",
+      "claim": "让设计，带着证据交付",
+      "start": 5640,
+      "duration": 660,
+      "visual": "Metric ribbon becomes the tower's structural spine; completed turbine rises above horizon; tiny workflow chips collapse into the wordmark; ZJU logo remains right-top",
+      "camera": "slow crane-up from tower base to horizon; 50mm compression; final 1.2s hold with subtle parallax, no fade",
+      "onScreen": [
+        "需求 → 模型 → 仿真 → 证据",
+        "AI ENGINEER"
+      ],
+      "voice": "从一句需求，到模型、图纸和报告，每一步都带着证据，下一步才有可靠的起点。",
+      "voicePlan": "这就是 AI Engineer：让智能负责衔接，让工程计算负责验证，让设计带着证据交付。",
+      "clips": [
+        {
+          "id": "close-2",
+          "from": 15,
+          "frames": 456,
+          "file": "voice/close-2.wav",
+          "audioSHA256": "e45efc72ab4010c24abbbf0d600e232c66d1a3be316eba7b407bd016449b4883",
+          "text": "从一句需求，到模型、图纸和报告，每一步都带着证据，下一步才有可靠的起点。",
+          "ttsText": "从一句需求，到模型、图纸和报告，每一步都带着证据，下一步才有可靠的起点。"
+        }
+      ]
+    }
+  ],
+  "audio": "audio/launch-105-master.wav",
+  "narrationNote": "Existing ASR-checked takes matched to launch scene windows; voicePlan retains the previous editorial draft only."
+}

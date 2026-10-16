@@ -1,0 +1,9 @@
+{
+  "tag": "v8-final2",
+  "sceneInputLock": "research/visual/v8-production-lock2.json",
+  "runner": "scripts\\render_segmented_final.mjs",
+  "runnerSHA256": "5e6a846c487f0f302ae2b2ce8d9880c57f8757f230d12a2b1a41e61dc6c1b40e",
+  "previousAttempt": "v8-final1",
+  "previousFailure": "After frame rendering, system TEMP remotion-audio-mixing directory was missing; FFmpeg could not open 0.wav (ENOENT). Remotion deleted its intermediate frame/video work during failure cleanup. No new delivery accepted.",
+  "recovery": "Reuse exact frozen bundle; project-local scratch; persistent 1800-frame silent H264 segments; copy-video concat and one AAC encode of the locked complete master; final QA still required."
+}

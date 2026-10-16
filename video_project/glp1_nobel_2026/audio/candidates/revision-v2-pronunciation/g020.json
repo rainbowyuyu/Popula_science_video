@@ -1,0 +1,69 @@
+{
+  "id": "g020",
+  "text": "肠道会通过神经等多条路线，与大脑沟通。饥饿和饱腹，并非只由胃里装了多少决定。",
+  "ttsText": "肠道会通过神经等多条路线，与大脑沟通。饥饿和饱腹，并非只由胃里装了多少决定。",
+  "signature": "b49cb995952423ef133d4bda8ad1839f379402492e419520db5aa80051fe25f6",
+  "raw": "audio/raw/g020-b49cb99595.wav",
+  "processed": "audio/candidates/revision-v2-pronunciation/g020.wav",
+  "rawDuration": 7.2000416666666665,
+  "duration": 7.2000416666666665,
+  "sha256": "b1dd2feac4e7b98cf7ece03683ebb95063a8bbd605bf26ce3921a723f5749686",
+  "seed": 2520285872,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g010",
+    "g020",
+    "g031",
+    "g041"
+  ],
+  "rawEndpointDB": -96.15541205602801,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "e0946dd8dec4563d4ed052d299ad547326a29f52f52fd687d78389b43de3a642",
+    "outputSha256": "b1dd2feac4e7b98cf7ece03683ebb95063a8bbd605bf26ce3921a723f5749686",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 1.7970062107955798,
+    "input": {
+      "seconds": 7.2000416666666665,
+      "peakDb": -5.23540272420891,
+      "activeRmsDb": -21.186923711899954,
+      "quietFrameP10Db": -58.835721464074666
+    },
+    "output": {
+      "seconds": 7.2000416666666665,
+      "peakDb": -3.8913542178350937,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.709903159743156
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

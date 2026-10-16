@@ -1,0 +1,83 @@
+{
+  "id": "h069",
+  "text": "斑块在管壁里慢慢长；血栓，则是血液在不该凝固的地方结成一团。有时，危险就发生在两者接上的那一刻。",
+  "ttsText": "斑块在管壁里慢慢长；血栓，则是血液在不该凝固的地方结成一团。有时，危险就发生在两者接上的那一刻。",
+  "signature": "664063a0cf3832054270e5f8aa98238481e91af74db9a2dc82491bbf5d4b8d71",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h069-664063a0cf38-bb22a64b14.wav",
+  "processed": "audio/revision-v5/voice/h069.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "1fee261fede22cc01cd46e63e47bfc33e8feab31ba0b11736c0c0117bea896a1",
+  "rawSHA256": "54ca84ce2dbd2e33db3b6ef71bdd25850423c48ed580344fbc1f6c47d3be51ff",
+  "seed": 3139610187,
+  "batchIds": [
+    "h067",
+    "h068",
+    "h069"
+  ],
+  "batchKey": "bb22a64b148709d27574d84daf129071e08dbb5b6486db520dc079ccd03ad484",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -97.16696865255983,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "54ca84ce2dbd2e33db3b6ef71bdd25850423c48ed580344fbc1f6c47d3be51ff",
+    "outputSha256": "1fee261fede22cc01cd46e63e47bfc33e8feab31ba0b11736c0c0117bea896a1",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.1006902269637244,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.8608512989419115,
+      "activeRmsDb": -22.883199846561215,
+      "quietFrameP10Db": -62.17053386779254
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -5.590521149684003,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -61.632353858592175
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

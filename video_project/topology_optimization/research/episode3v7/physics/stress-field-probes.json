@@ -1,0 +1,393 @@
+{
+  "native_version": "3.7.2",
+  "native_module": "D:\\Zwind_example\\Zwind_example\\1\\Zwind_example\\.venv\\Lib\\site-packages\\zdynpywin\\zdyn.pyd",
+  "native_sha256": "272a9ca377411d4986bc5733f541dbf4ef0974846ac1b9d86e5627f784b81933",
+  "script_sha256": "94d75fe181e33fda0c6734a44b4e377e93a51d5768b3e2114caa1aacf1db40e6",
+  "units": "m N Pa",
+  "cases": [
+    {
+      "name": "axial_tension",
+      "member": {
+        "id": 1,
+        "part_id": "axial_tension",
+        "section": {
+          "b": 0.18,
+          "h": 0.32
+        },
+        "roll_vec": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "endpoints_blender": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          3.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "axes_blender": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "elementID": 1,
+        "localEndForces": [
+          -1000.0,
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          0.0,
+          1000.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "checks": [
+        {
+          "s": 0.5,
+          "y": 0,
+          "z": 0,
+          "expected_Pa": 17361.111111111113,
+          "physical": "Axial tension must be positive."
+        }
+      ],
+      "native_status": 0
+    },
+    {
+      "name": "horizontal_cantilever_down",
+      "member": {
+        "id": 1,
+        "part_id": "horizontal_cantilever_down",
+        "section": {
+          "b": 0.18,
+          "h": 0.32
+        },
+        "roll_vec": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "endpoints_blender": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          3.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "axes_blender": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "elementID": 1,
+        "localEndForces": [
+          0.0,
+          0.0,
+          999.9999999999997,
+          -0.0,
+          -3000.0,
+          0.0,
+          0.0,
+          0.0,
+          -999.9999999999997,
+          0.0,
+          6.821210263296962e-13,
+          0.0
+        ]
+      },
+      "checks": [
+        {
+          "s": 0,
+          "y": 0,
+          "z": 0.16,
+          "expected_Pa": 976562.4999999999,
+          "physical": "Cantilever under downward local-z tip force: top root fiber is in tension."
+        },
+        {
+          "s": 0,
+          "y": 0,
+          "z": -0.16,
+          "expected_Pa": -976562.4999999999,
+          "physical": "Bottom root fiber is in compression."
+        }
+      ],
+      "native_status": 0
+    },
+    {
+      "name": "horizontal_cantilever_side",
+      "member": {
+        "id": 1,
+        "part_id": "horizontal_cantilever_side",
+        "section": {
+          "b": 0.18,
+          "h": 0.32
+        },
+        "roll_vec": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "endpoints_blender": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          3.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "axes_blender": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "response": {
+        "elementID": 1,
+        "localEndForces": [
+          0.0,
+          -999.9999999999992,
+          0.0,
+          -0.0,
+          0.0,
+          -2999.9999999999977,
+          0.0,
+          999.9999999999992,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "checks": [
+        {
+          "s": 0,
+          "y": 0.09,
+          "z": 0,
+          "expected_Pa": -1736111.111111111,
+          "physical": "Tip force toward local+y: local+y root fiber is in compression."
+        }
+      ],
+      "native_status": 0
+    },
+    {
+      "name": "oblique_rolled_cantilever",
+      "member": {
+        "id": 1,
+        "part_id": "oblique_rolled_cantilever",
+        "section": {
+          "b": 0.18,
+          "h": 0.32
+        },
+        "roll_vec": [
+          0.3,
+          0.1,
+          0.9
+        ]
+      },
+      "endpoints_blender": [
+        [
+          0.5,
+          -0.3,
+          2.0
+        ],
+        [
+          3.2,
+          1.4,
+          4.1
+        ]
+      ],
+      "axes_blender": [
+        [
+          0.7068644138165533,
+          0.44506277906968167,
+          0.5497834329684302
+        ],
+        [
+          -0.5879747322073337,
+          0.8017837257372731,
+          0.10690449676496974
+        ],
+        [
+          -0.39322819680879306,
+          -0.3988257512117653,
+          0.8284380516398775
+        ]
+      ],
+      "response": {
+        "elementID": 1,
+        "localEndForces": [
+          0.0,
+          -7.718502893790624e-12,
+          1000.0000000000166,
+          -4.136577234121644e-13,
+          -3819.6858509569174,
+          -2.8934435966806844e-11,
+          0.0,
+          7.718502893790624e-12,
+          -1000.0000000000166,
+          4.136577234121644e-13,
+          -1.3642420526593924e-12,
+          -5.478203271747469e-13
+        ]
+      },
+      "checks": [
+        {
+          "s": 0,
+          "y": 0,
+          "z": 0.16,
+          "expected_Pa": 1243387.321275018,
+          "physical": "Cantilever under downward local-z tip force: top root fiber is in tension."
+        },
+        {
+          "s": 0,
+          "y": 0,
+          "z": -0.16,
+          "expected_Pa": -1243387.321275018,
+          "physical": "Bottom root fiber is in compression."
+        }
+      ],
+      "native_status": 0
+    },
+    {
+      "name": "simply_supported_center_load",
+      "member": {
+        "id": 1,
+        "part_id": "simply_supported",
+        "section": {
+          "b": 0.18,
+          "h": 0.32
+        },
+        "roll_vec": [
+          0,
+          0,
+          1
+        ]
+      },
+      "endpoints_blender": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1.5,
+          0,
+          0
+        ]
+      ],
+      "axes_blender": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "response": {
+        "elementID": 1,
+        "localEndForces": [
+          0.0,
+          0.0,
+          500.0000000000002,
+          -0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -500.0000000000002,
+          0.0,
+          -750.0000000000003,
+          0.0
+        ]
+      },
+      "checks": [
+        {
+          "s": 1,
+          "y": 0,
+          "z": 0.16,
+          "expected_Pa": -244140.62499999997,
+          "physical": "Sagging simply supported beam: top fiber compression."
+        },
+        {
+          "s": 1,
+          "y": 0,
+          "z": -0.16,
+          "expected_Pa": 244140.62499999997,
+          "physical": "Sagging simply supported beam: bottom fiber tension."
+        }
+      ],
+      "midpoint_displacement_native_m": -0.00012715657552083337,
+      "midpoint_displacement_analytic_m": -0.00012715657552083332,
+      "displacement_relative_error": 4.263256414560602e-16,
+      "native_status": 0
+    }
+  ]
+}

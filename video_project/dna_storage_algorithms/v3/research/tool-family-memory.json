@@ -1,0 +1,44 @@
+{
+  "provider": "Alibaba Cloud DashScope Qwen",
+  "model": "qwen-image-2.0-pro-2026-06-22",
+  "endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+  "credentialAlias": "QWEN_API_KEY_BACKUP",
+  "createdAt": "2026-10-11T03:55:19.939921+00:00",
+  "status": "succeeded",
+  "prompt": "A beautiful intimate candid family photograph, horizontal 16:9. Three fictional ordinary people viewed from behind: an adult woman on the left, their small child in the middle, an adult man on the right, naturally holding hands and walking away from the camera along a quiet sandy beach at sunset. The figures occupy about 35 percent of the image height, centered in the lower middle, full bodies and feet visible. Natural anatomically believable limbs, relaxed walking posture, simple comfortable ivory and muted blue-grey summer clothes, absolutely no front-facing faces. Their footprints and soft reflections trail across damp sand. Gentle ocean waves on the right, a long hazy shoreline receding to the left, the low sun near the upper-left horizon filtered through soft clouds. Film-like 35mm documentary photography with subtle fine grain, muted champagne sunlight, pearl gold highlights, pale sage blue-grey sea, delicate atmospheric depth and a quiet nostalgic feeling. Realistic textures of linen clothes, sand and small wave foam. Soft cinematic natural backlight, coherent horizon and perspective. Keep the central family sharply readable, subtle depth of field in distant dunes, not excessive blur, no high-contrast silhouette, no dramatic fantasy. The frame is the actual scene only, not a photograph lying on a table and not inside a device. No text, no letters, no numbers, no captions, no logos, no watermark, no screen, no phone, no border, no UI, no split frame. This is an invented illustrative memory, not a photograph of any particular real family.",
+  "parameters": {
+    "size": "1536*864",
+    "n": 1,
+    "watermark": false,
+    "prompt_extend": false,
+    "seed": 26101105
+  },
+  "referenceDocumentation": "https://help.aliyun.com/zh/model-studio/qwen-image-api",
+  "sourceAI": true,
+  "intendedUse": "Illustrative fictional family memory inside a programmatic phone screen. No claim to depict the user, a real family, a real experiment, or a historically stored video.",
+  "scientificEvidence": false,
+  "visualReview": {
+    "status": "accepted",
+    "inspection": "Full generated 1536x864 image opened and inspected. Three fictional people seen from behind with coherent walking posture and hand contact, intact heads/arms/legs, unobstructed beach and horizon, muted pearl-gold/blue-grey palette. No visible text/watermark/device. Faces not front-facing.",
+    "intendedScreenCrop": "Phone screen is wider than16:9. Keep family centered and retain lower body/feet when using UV crop; gentle small UV shift only.",
+    "evidenceBoundary": "AI-generated illustrative memory photograph; do not present as a real user family video or recovered research payload."
+  },
+  "httpStatus": 200,
+  "requestId": "159e636f-42e8-9b9a-8880-f9de3d497b35",
+  "usage": {
+    "height": 864,
+    "image_count": 1,
+    "width": 1536
+  },
+  "completedAt": "2026-10-11T03:55:30.515015+00:00",
+  "output": {
+    "path": "public/bridges/family-memory.png",
+    "bytes": 1437656,
+    "sha256": "912e18c0adda26a9f31b75248313e17392a8be7a6cf22697dbb4b78df43b9ff8",
+    "dimensions": [
+      1536,
+      864
+    ],
+    "format": "PNG"
+  }
+}

@@ -1,0 +1,266 @@
+{
+  "version": 16,
+  "createdAt": "2026-10-14T06:24:09.628893+00:00",
+  "generationClosed": true,
+  "model": "wan2.7-i2v-2026-04-25",
+  "region": "China North 2 / Beijing",
+  "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+  "nominalPriceCNYPerSecond1080P": 1,
+  "nominalBudgetMaxCNY": 12.0,
+  "actualBillCNY": null,
+  "nativeModel": "public/beso-research/physics/native-model.json",
+  "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+  "officialVerification": "research/generation/v16-qwen-official.json",
+  "shots": {
+    "v16-platform-drone": {
+      "ready": true,
+      "first": "research/generation/v16-qwen/native-anchors/platform-7s.png",
+      "last": "research/generation/v16-qwen/native-anchors/platform-11s.png",
+      "fromFrame": 420,
+      "durationS": 4,
+      "durationInFrames": 240,
+      "sourceFrames": [
+        {
+          "path": "research/generation/v16-qwen/native-anchors/platform-7s.png",
+          "sha256": "d1b3e5cf09c31ca1f5d378af5265cb252258c6cf4564ff22195805ab9c5eec8e",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2562070
+        },
+        {
+          "path": "research/generation/v16-qwen/native-anchors/platform-11s.png",
+          "sha256": "93846765a44828ccc376bcfd42cfb9c2e883bcda44bcaa34fe2d087937b0eaf3",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 3057840
+        }
+      ],
+      "anchorsBoundAt": "2026-10-14T07:16:34.606605+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Single unbroken 4 second cinematic crane and lateral dolly shot, connecting exactly the supplied first and last frames. The same authentic native three-column semi-submersible offshore wind platform, in correct structural proportions. Exactly three inclined broad outer columns, three internal legs, three radial hub beams, one central circular hub and one tower remain rigidly connected throughout. The camera begins with the complete single turbine in view, gently glides toward its lower tower and hub on a precise descending drone arc, revealing the existing angled column connections. It ends with a medium view of the same lower tower and floating hull in the exact supplied final pose, with no abrupt stopping. Respect the front-to-back occlusion: the third column remains largely hidden behind the tower whenever it is hidden in the reference. Small natural ocean ripples, realistic broad reflections and narrow contact foam move consistently around the hull; turbine and platform proportions never deform. Premium quiet coastal light, ivory painted tower, desaturated slate-teal steel hull and warm sunlight edge, refined marine industrial advertising cinematography, stable horizon, precise perspective, continuous focus, no cuts. Keep the left visual lane clean. No extra towers, pylons, blades, disconnected floating parts, added supports, generated text, letters, numbers, diagrams, result contours, heatmaps, interface, logos, flares, magic particles, black bars or watermarks. Do not turn an independent specimen into the hull. The footage is only an editorial appearance/camera bridge; engineering values are added separately.",
+      "promptSource": "research/generation/v16-qwen/platform-waterline.prompt.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "same-native-platform-drone",
+      "seed": 202610130,
+      "conceptLabelRequired": false,
+      "conceptDisclosure": "delivery notes; user requested no on-screen AI transition label",
+      "generatedAudioMustBeMuted": true,
+      "nativeAnchorProof": {
+        "world": "LaunchWorldV16",
+        "createdAt": "2026-10-14T07:11:01.445Z",
+        "files": [
+          "beso-research/physics/native-model.json",
+          "beso-research/physics/zwind-response.json",
+          "beso-research/geometry/manifest.json",
+          "beso-research/geometry/shared.json",
+          "beso-research/geometry/state-000.json",
+          "beso-research/geometry/state-010.json",
+          "beso-research/geometry/state-026.json",
+          "beso-research/geometry/state-043.json",
+          "assets/v16/connected-native-hull.glb",
+          "assets/v16/nacelle-skin.glb",
+          "assets/v16/waterpro-adapter.min.js",
+          "assets/v16/world-webgpu.js",
+          "environment/v2-sky.hdr"
+        ],
+        "hashes": [
+          {
+            "file": "src/beso/LaunchWorldV16.ts",
+            "sha256": "2bd2cca34a11e3ad2c0a2a9b2fbc3378c4d0e0a3b1c38919b4bd4016678951e6"
+          },
+          {
+            "file": "src/beso/LaunchV16Camera.ts",
+            "sha256": "3f6bf8134219b8cf19b5aa869a3ad1b7fa9060bb5920c1db154f44667ba643c2"
+          },
+          {
+            "file": "src/beso/NativePlatformV16.ts",
+            "sha256": "08539683ecd03bdc3180d8fe16628b0e9ee93fa763c6e44b044ca582ebdd8ca4"
+          },
+          {
+            "file": "scripts/renderer-options-v16.mjs",
+            "sha256": "4e615dccbdcf0685b697946c4e975aa13b2279af0812327f5847dd5beafdd16e"
+          },
+          {
+            "file": "public/beso-research/physics/native-model.json",
+            "sha256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668"
+          },
+          {
+            "file": "public/beso-research/physics/zwind-response.json",
+            "sha256": "509c491df6bea647a3593fbc8e7e7d29675ec6dc3b64b0aaf9801e17982c6719"
+          },
+          {
+            "file": "public/beso-research/geometry/manifest.json",
+            "sha256": "4314ddad3034db9058e747b1a76d8be3e0df7faccf58e08f1f71187f469a1eb6"
+          },
+          {
+            "file": "public/beso-research/geometry/shared.json",
+            "sha256": "b9bc321fadd4ce296128a17efe92bbcb487733ad23a37ea5935206e65ad3d215"
+          },
+          {
+            "file": "public/beso-research/geometry/state-000.json",
+            "sha256": "46bd3e56e7f92991ffb572e7bcd52299a15e84bff7209a63ca95b88b2b88252f"
+          },
+          {
+            "file": "public/beso-research/geometry/state-010.json",
+            "sha256": "37d1874e0e1d94b89ad590f695a6bfd35aea2fc1bdc2f51ea92c773c5067b8e7"
+          },
+          {
+            "file": "public/beso-research/geometry/state-026.json",
+            "sha256": "04e63ace44a55adc90dad3c3b587ec97111c47c1fc6a9e5eb94f8a7324134d2f"
+          },
+          {
+            "file": "public/beso-research/geometry/state-043.json",
+            "sha256": "cab2996e666c6bd0af9ee6c7ce901fff4be5ab26f4cc27518ce8b16d3bc9e625"
+          },
+          {
+            "file": "public/assets/v16/connected-native-hull.glb",
+            "sha256": "1f0c8052f56cade0fc9ca7e1c31dcfac34ee9b1c2abe8ba437ff22198c8b35d9"
+          },
+          {
+            "file": "public/assets/v16/nacelle-skin.glb",
+            "sha256": "bb2435c7fe8fa74984e14541132bd6a97979fe1562b5503c9e26504b8a28ac80"
+          },
+          {
+            "file": "public/assets/v16/waterpro-adapter.min.js",
+            "sha256": "8efc3cb56e021fdf23ff89beaba413cb35724100880c3eeeac96799e79b08a19"
+          },
+          {
+            "file": "public/assets/v16/world-webgpu.js",
+            "sha256": "28d976553be495bc4265ca0cefac6b8c33e9f6fa0b2745a6c2508934e4ef5c34"
+          },
+          {
+            "file": "public/environment/v2-sky.hdr",
+            "sha256": "99451201586489ef3288c97bfac2a2ac232a5491c51a1faf0ec8ea39f3ccd533"
+          }
+        ],
+        "errors": []
+      }
+    },
+    "v16-paper-to-platform": {
+      "ready": true,
+      "first": "research/generation/v16-qwen/native-anchors/blueprint-17s.png",
+      "last": "research/generation/v16-qwen/native-anchors/platform-21s.png",
+      "fromFrame": 1020,
+      "durationS": 4,
+      "durationInFrames": 240,
+      "sourceFrames": [
+        {
+          "path": "research/generation/v16-qwen/native-anchors/blueprint-17s.png",
+          "sha256": "c0e4bd8260f031a7b4273a4b80f0299494ed0d9716b25b4746c73c7a94c606c7",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 71114
+        },
+        {
+          "path": "research/generation/v16-qwen/native-anchors/platform-21s.png",
+          "sha256": "6ffc0084dd2e13e19f1c3940fab3103bc6cbcd2779ad26fd7d7cb4c9b26905a0",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 3073706
+        }
+      ],
+      "anchorsBoundAt": "2026-10-14T07:16:35.015020+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "A single uninterrupted 4 second high-end engineering product-film shot, exactly respecting both supplied endpoint frames. The same three-column semi-submersible offshore wind platform throughout. First image: precision ink engineering perspective on a pale blue-white field. Last image: that exact assembled physical platform over calm deep-teal seawater. Keep every structural member in its place with stable dimensions and connections: exactly three slightly inclined broad outer columns, three inner diagonal legs meeting the lower column joints, three short radial beams meeting one central circular hub; one continuous tapering tower; only the rotor/parts already present in the endpoints. During the first second fine existing ink contours hold fixed; in the middle two seconds realistic pearl-white marine paint, subtle graphite metal and warm sunlight grow across the same surfaces along the existing structure, while the drawing background acquires sea depth and physically plausible small moving waves. The transition follows depth, not cross-dissolve. Respect the frontal oblique perspective: only the near two broad inclined outer columns are clearly exposed in these images; the third remains behind the tower and must not appear as a new extra column. Keep the circular central lower hub surface identical. Finish with the exact silhouette, perspective, member placement and color of the provided final frame. Measured smooth crane movement and gentle lateral parallax only; sophisticated restrained commercial cinematography, broad soft light, delicate occlusion and coherent contact shadows. Preserve clean negative space and generous composition. Never melt, bend, relocate or invent the structure. Do not generate any letters, numbers, labels, UI, graphs, stress contours, color maps, logo, watermark, lightning, particles, lens flare or extra mechanical members. This is an editorial appearance transformation, not simulation evidence.",
+      "promptSource": "research/generation/v16-qwen/paper-to-platform.prompt.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "same-native-drawing-to-surface",
+      "seed": 202610131,
+      "conceptLabelRequired": false,
+      "conceptDisclosure": "delivery notes; user requested no on-screen AI transition label",
+      "generatedAudioMustBeMuted": true,
+      "nativeAnchorProof": {
+        "world": "LaunchWorldV16",
+        "createdAt": "2026-10-14T07:11:01.445Z",
+        "files": [
+          "beso-research/physics/native-model.json",
+          "beso-research/physics/zwind-response.json",
+          "beso-research/geometry/manifest.json",
+          "beso-research/geometry/shared.json",
+          "beso-research/geometry/state-000.json",
+          "beso-research/geometry/state-010.json",
+          "beso-research/geometry/state-026.json",
+          "beso-research/geometry/state-043.json",
+          "assets/v16/connected-native-hull.glb",
+          "assets/v16/nacelle-skin.glb",
+          "assets/v16/waterpro-adapter.min.js",
+          "assets/v16/world-webgpu.js",
+          "environment/v2-sky.hdr"
+        ],
+        "hashes": [
+          {
+            "file": "src/beso/LaunchWorldV16.ts",
+            "sha256": "2bd2cca34a11e3ad2c0a2a9b2fbc3378c4d0e0a3b1c38919b4bd4016678951e6"
+          },
+          {
+            "file": "src/beso/LaunchV16Camera.ts",
+            "sha256": "3f6bf8134219b8cf19b5aa869a3ad1b7fa9060bb5920c1db154f44667ba643c2"
+          },
+          {
+            "file": "src/beso/NativePlatformV16.ts",
+            "sha256": "08539683ecd03bdc3180d8fe16628b0e9ee93fa763c6e44b044ca582ebdd8ca4"
+          },
+          {
+            "file": "scripts/renderer-options-v16.mjs",
+            "sha256": "4e615dccbdcf0685b697946c4e975aa13b2279af0812327f5847dd5beafdd16e"
+          },
+          {
+            "file": "public/beso-research/physics/native-model.json",
+            "sha256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668"
+          },
+          {
+            "file": "public/beso-research/physics/zwind-response.json",
+            "sha256": "509c491df6bea647a3593fbc8e7e7d29675ec6dc3b64b0aaf9801e17982c6719"
+          },
+          {
+            "file": "public/beso-research/geometry/manifest.json",
+            "sha256": "4314ddad3034db9058e747b1a76d8be3e0df7faccf58e08f1f71187f469a1eb6"
+          },
+          {
+            "file": "public/beso-research/geometry/shared.json",
+            "sha256": "b9bc321fadd4ce296128a17efe92bbcb487733ad23a37ea5935206e65ad3d215"
+          },
+          {
+            "file": "public/beso-research/geometry/state-000.json",
+            "sha256": "46bd3e56e7f92991ffb572e7bcd52299a15e84bff7209a63ca95b88b2b88252f"
+          },
+          {
+            "file": "public/beso-research/geometry/state-010.json",
+            "sha256": "37d1874e0e1d94b89ad590f695a6bfd35aea2fc1bdc2f51ea92c773c5067b8e7"
+          },
+          {
+            "file": "public/beso-research/geometry/state-026.json",
+            "sha256": "04e63ace44a55adc90dad3c3b587ec97111c47c1fc6a9e5eb94f8a7324134d2f"
+          },
+          {
+            "file": "public/beso-research/geometry/state-043.json",
+            "sha256": "cab2996e666c6bd0af9ee6c7ce901fff4be5ab26f4cc27518ce8b16d3bc9e625"
+          },
+          {
+            "file": "public/assets/v16/connected-native-hull.glb",
+            "sha256": "1f0c8052f56cade0fc9ca7e1c31dcfac34ee9b1c2abe8ba437ff22198c8b35d9"
+          },
+          {
+            "file": "public/assets/v16/nacelle-skin.glb",
+            "sha256": "bb2435c7fe8fa74984e14541132bd6a97979fe1562b5503c9e26504b8a28ac80"
+          },
+          {
+            "file": "public/assets/v16/waterpro-adapter.min.js",
+            "sha256": "8efc3cb56e021fdf23ff89beaba413cb35724100880c3eeeac96799e79b08a19"
+          },
+          {
+            "file": "public/assets/v16/world-webgpu.js",
+            "sha256": "28d976553be495bc4265ca0cefac6b8c33e9f6fa0b2745a6c2508934e4ef5c34"
+          },
+          {
+            "file": "public/environment/v2-sky.hdr",
+            "sha256": "99451201586489ef3288c97bfac2a2ac232a5491c51a1faf0ec8ea39f3ccd533"
+          }
+        ],
+        "errors": []
+      }
+    }
+  }
+}

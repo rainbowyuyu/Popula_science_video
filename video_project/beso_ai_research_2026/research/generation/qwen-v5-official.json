@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-11",
+  "apiSource": "https://help.aliyun.com/zh/model-studio/image-to-video-general-api-reference",
+  "pricingSource": "https://help.aliyun.com/zh/model-studio/model-pricing",
+  "model": "wan2.7-i2v-2026-04-25",
+  "apiVerified": {
+    "endpointType": "Asynchronous video-synthesis POST with X-DashScope-Async=enable",
+    "input": "input.media array containing type=first_frame and type=last_frame",
+    "imageSources": "Public URL, OSS temporary URL or data:image/png;base64",
+    "imageLimits": "Opaque PNG/JPEG/BMP/WEBP, 240–8000 pixels per side, 1:8–8:1 aspect, <=20 MB",
+    "resolution": [
+      "720P",
+      "1080P"
+    ],
+    "durationSeconds": "Integer 2–15",
+    "negativePrompt": "Supported in input, <=500 characters",
+    "outputAssetUrlLifetime": "24 hours"
+  },
+  "pricingVerified": {
+    "region": "China North 2 / Beijing",
+    "1080PCNYPerOutputSecond": 1,
+    "720PCNYPerOutputSecond": 0.6,
+    "two5sClipsNominalCNY": 10,
+    "billingRule": "Only successfully generated output seconds billed. Failed requests incur no fee.",
+    "actualBill": null,
+    "accountFreeQuotaKnown": false,
+    "authorizedRevisionNominalMaxCNY": 15,
+    "replacementClipNominalCNY": 5,
+    "revisionBudgetNote": "Two original tasks plus one replacement after parent-confirmed geometry rejection; failed editorial selection is still a successfully generated and billable output."
+  },
+  "snapshotDirectory": "work/qwen-v5-official",
+  "credentialHandling": "Existing runtime environment only; PRIMARY preferred; explicit authentication rejection may select authorized backup; no credentials in source, argv, ledger, prompts or logs.",
+  "endpointCompatibility": "Reuse the current project's native DashScope endpoint successfully used for earlier WAN2.7 tasks; current docs also describe workspace endpoints. No blind endpoint migration.",
+  "editorialBoundary": "Generated assets are concept transitions only. Original UI, native geometry, saved BESO and Z-wind response remain evidence."
+}

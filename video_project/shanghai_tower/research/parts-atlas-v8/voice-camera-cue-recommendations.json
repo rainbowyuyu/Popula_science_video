@@ -1,0 +1,100 @@
+{
+  "status": "recommendation_only_root_implements_camera",
+  "timelineSHA256": "b641306d6ca1a5c9cfb520dee66a54a1d76d6cbd510b7381cfd64902c6bfcd5e",
+  "voiceAudioFrozen": true,
+  "shots": [
+    {
+      "focus": "glass",
+      "cue": 2.06,
+      "cameraTimeSeconds": 17.0987,
+      "phrase": "玻璃和边框",
+      "speechStartsSeconds": 17.3667
+    },
+    {
+      "focus": "floors",
+      "cue": 2.39,
+      "cameraTimeSeconds": 21.6747,
+      "phrase": "楼板接住人和家具",
+      "speechStartsSeconds": 21.9667
+    },
+    {
+      "focus": "floorbeams",
+      "cue": 2.51,
+      "cameraTimeSeconds": 23.3387,
+      "phrase": "脚下的钢梁",
+      "speechStartsSeconds": 23.6467
+    },
+    {
+      "focus": "columnBridge",
+      "cue": 2.65,
+      "cameraTimeSeconds": 25.28,
+      "phrase": "交给旁边的柱子",
+      "speechStartsSeconds": 25.5667
+    },
+    {
+      "focus": "outrigger",
+      "cue": 3.0,
+      "cameraTimeSeconds": 30.1333,
+      "phrase": "斜着交叉的杆件",
+      "speechStartsSeconds": 30.6133
+    },
+    {
+      "focus": "belt",
+      "cue": 3.62,
+      "cameraTimeSeconds": 41.1073,
+      "phrase": "环带沿着周边接力",
+      "speechStartsSeconds": 41.4133
+    },
+    {
+      "focus": "megacolumn",
+      "cue": 3.7,
+      "cameraTimeSeconds": 42.5233,
+      "phrase": "把巨柱连成一伙",
+      "speechStartsSeconds": 42.7933
+    },
+    {
+      "focus": "core",
+      "cue": 4.0,
+      "cameraTimeSeconds": 47.8333,
+      "phrase": "中间的厚墙",
+      "speechStartsSeconds": 47.8333
+    },
+    {
+      "focus": "returnStart",
+      "cue": 4.55,
+      "cameraTimeSeconds": 54.2683,
+      "phrase": "现在",
+      "speechStartsSeconds": 54.2733
+    },
+    {
+      "focus": "returnAlmostAssembled",
+      "cue": 4.97,
+      "cameraTimeSeconds": 59.1823,
+      "phrase": "从地下看起",
+      "speechStartsSeconds": 57.6333
+    }
+  ],
+  "holds": [
+    {
+      "focus": "outrigger",
+      "fromCue": 3.0,
+      "throughCue": 3.5,
+      "why": "上下横杆33.993–35.033s；上弦下弦35.033–36.793s；斜杆/三角形37.173–38.973s。镜头可作小轨道运动但四杆须持续入镜。"
+    },
+    {
+      "focus": "outriggerToBelt",
+      "fromCue": 3.5,
+      "throughCue": 3.62,
+      "why": "伸臂39.493–41.053s；运镜逐渐带入环带，让伸臂至40.753s仍可读，41.107s提前建立环带。"
+    },
+    {
+      "focus": "coreToReturn",
+      "fromCue": 4.0,
+      "throughCue": 4.55,
+      "why": "厚墙/核心47.833–49.973s；外圈柱50.533–51.213s；地下筏板/桩群52.173–53.813s。不要4.22开始回装。"
+    }
+  ],
+  "bridgeProposal": "Relocate one existing original MEGACOL_Z04_C05 mesh from its atlas slot to the space between floorbeams and outriggers, x about -2 and z staggered for clearance. Add its own columnBridge anchor; no geometry duplication, original late megacolumn studies retained. This permits floorbeams(-4) -> columnBridge(-2) -> outrigger(0) without crossing the whole study row.",
+  "visualGates": "PartsInventory.weight hold to4.55, smooth assemble4.55–4.97; label availability can extend to4.52; s005 exact frame1786/59.533333s. Later detailed scenes untouched.",
+  "implementationBoundary": "Only src/parts-names.json compact name fields synchronized in this subtask. No CameraPath, PartsInventory, Film, World, physics, timeline or audio modifications."
+}

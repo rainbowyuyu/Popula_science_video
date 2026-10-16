@@ -1,0 +1,83 @@
+{
+  "id": "h024",
+  "text": "这封消息还有别的去处。GLP-1相关通路参与调节食欲，让吃饭这件事，和大脑感受到的饱足联系起来。",
+  "ttsText": "这封消息还有别的去处。G L P 一相关通路参与调节食欲，让吃饭这件事，和大脑感受到的饱足联系起来。",
+  "signature": "da3c91b56f610d25df51bf22854e5de7b8efd6463d1c3b427037c93e469c4e82",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h024-da3c91b56f61-171af6a0b6.wav",
+  "processed": "audio/revision-v5/candidates/clarity/voice/h024.wav",
+  "rawDuration": 9.600041666666666,
+  "duration": 9.600041666666666,
+  "sampleRate": 48000,
+  "sha256": "10717582253169d0c72393dadf12c317a32ce08595a4c10517a9bc2c02cfd841",
+  "rawSHA256": "b4f8ae346b30b84ddea0eb597e3e214d63f7ed0c8390ce502eb68cdce64fdf00",
+  "seed": 387643040,
+  "batchIds": [
+    "h007",
+    "h024",
+    "h037"
+  ],
+  "batchKey": "171af6a0b6dfd0354666acd72321572ad0d2a07bd09031ec951026a946374db9",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -96.15814401394856,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b4f8ae346b30b84ddea0eb597e3e214d63f7ed0c8390ce502eb68cdce64fdf00",
+    "outputSha256": "10717582253169d0c72393dadf12c317a32ce08595a4c10517a9bc2c02cfd841",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.2247023042385727,
+    "input": {
+      "seconds": 9.600041666666666,
+      "peakDb": -4.298193686565926,
+      "activeRmsDb": -21.824425618646433,
+      "quietFrameP10Db": -59.625024972222995
+    },
+    "output": {
+      "seconds": 9.600041666666666,
+      "peakDb": -3.5302903016827964,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.630474835149066
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

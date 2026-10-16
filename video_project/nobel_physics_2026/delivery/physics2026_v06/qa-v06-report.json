@@ -1,0 +1,87 @@
+{
+  "version": "physics2026-v06-webgl-upgrade",
+  "video": "delivery/physics2026_v06/2026诺贝尔物理学奖_一束蓝光穿过南极冰_v06_webgl升级1080p.mp4",
+  "sha256": "925cfffdb56282c318a19dd60ff2037c85d38022901f693999511ae8e4c42d15",
+  "spec": {
+    "width": 1920,
+    "height": 1080,
+    "fps": "30/1",
+    "durationSeconds": 262.433,
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "bit_rate": "1577700",
+      "side_data_list": [
+        {}
+      ]
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "r_frame_rate": "0/0",
+      "bit_rate": "290568"
+    }
+  ],
+  "decode": "ffmpeg map 0:v:0 and 0:a:0 -> null passed",
+  "audio": {
+    "source": "public/audio-v04/master.wav",
+    "sha256": "e2cd7f204603a8ac4b7f85c31dd20d1c1351c04a3e46df32183e10b21c790420",
+    "masterSeconds": 262.400042,
+    "timelineSeconds": 262.43333333333334,
+    "timelineDifferenceSeconds": 0.033292,
+    "loudnessMeasured": "input -14.73 LUFS, true peak -1.72 dBTP; normalized readout -14.01 LUFS, -1.00 dBTP",
+    "qa": "audio-qa-v04.json passed; no atempo"
+  },
+  "visualReview": {
+    "targetedFrames": [
+      0,
+      480,
+      1024,
+      1808,
+      2283,
+      3212,
+      3500,
+      4993,
+      5535,
+      6303,
+      7460,
+      7850
+    ],
+    "seamContactFrames": 30,
+    "manualRepresentativeReview": "passed after V06 WebGL haze, parallax dust, continuous camera rig and safe formula/caption layout",
+    "automatedSeamReview": "contact sheet rendered at tmp/visual-audit/v05-seams.jpg",
+    "limitations": "This is representative frame review, not a claim of every frame human-reviewed."
+  },
+  "opusReview": {
+    "model": "claude-opus-5-5",
+    "effort": "max",
+    "response": "tmp/claude-runs/v05-opus/response.md",
+    "adapted": [
+      "physics invariant comment",
+      "Cherenkov n=1.319",
+      "reduced cosmic-ray bend to a gentle deflection",
+      "stable formula slot and reserved layout guidance"
+    ],
+    "scope": "Opus supplied a design/code review; the local Remotion project performed adaptation and validation."
+  },
+  "assets": {
+    "formula": "public/formulas/cherenkov.svg",
+    "formulaCompile": "MiKTeX latex + dvisvgm --no-fonts --exact passed",
+    "logo": "public/brand/rainbow-white.svg"
+  },
+  "rollback": [
+    "delivery/physics2026_v04",
+    "delivery/physics2026_v03"
+  ]
+}

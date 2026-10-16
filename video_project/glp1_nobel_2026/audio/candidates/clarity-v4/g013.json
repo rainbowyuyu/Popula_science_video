@@ -1,0 +1,68 @@
+{
+  "id": "g013",
+  "text": "把镜头拉回腹部。胃的后面，是胰腺。接收这条消息的细胞，就藏在这个器官里面。",
+  "ttsText": "把镜头拉回腹部。胃的后面，是胰腺。接收这条消息的细胞，就藏在这个器官里面。",
+  "signature": "1f2f73220aa49502b23d0e52abf713c00d17160f7d3a341b1c3f2a10fa4379af",
+  "raw": "audio/raw/g013-1f2f73220a.wav",
+  "processed": "audio/candidates/clarity-v4/g013.wav",
+  "rawDuration": 6.56,
+  "duration": 6.56,
+  "sha256": "d188fc922f2625ffbf3bb96009013742e3000f53f21cb18371e11783306f9658",
+  "seed": 1591485453,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g005",
+    "g013",
+    "g019"
+  ],
+  "rawEndpointDB": -97.13355174588257,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b8f402107551e7d1c909f655598b2e642e5974e3e033a96ecbe0112694ed69ce",
+    "outputSha256": "d188fc922f2625ffbf3bb96009013742e3000f53f21cb18371e11783306f9658",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.217244241647954,
+    "input": {
+      "seconds": 6.56,
+      "peakDb": -8.470322992015154,
+      "activeRmsDb": -23.033232699893908,
+      "quietFrameP10Db": -60.1812305753174
+    },
+    "output": {
+      "seconds": 6.56,
+      "peakDb": -4.576648819903379,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.96455152263127
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

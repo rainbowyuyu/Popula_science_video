@@ -1,0 +1,21 @@
+{
+  "model": "qwen3-omni-flash",
+  "audio": "audio\\v02\\pronunciation\\soai-romaji.wav",
+  "audioSha256": "3b4c4dd39e122fc7881d7fdb1477690f504038a382002bd4529f5f9102dd14d9",
+  "prompt": "请只分析音频中你实际听到的外文姓名或音节。可能只有一个姓名。请用三条以内回答：1)近似实际音节或IPA；2)是否有英语双元音/新增r或l/错误重音；3)与普通话前后句衔接是否明显断裂。不要凭想象增加第二个姓名，不要按熟悉的人名自动修正，不知道请说不知道。不要长篇推测词源。\n",
+  "response": "1) /ˈkæn.səl/  \n2) 无英语双元音/新增r/l/错误重音  \n3) 与普通话前后句衔接无明显断裂",
+  "usage": {
+    "prompt_tokens": 179,
+    "completion_tokens": 40,
+    "total_tokens": 219,
+    "completion_tokens_details": {
+      "text_tokens": 40
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 80,
+      "text_tokens": 99
+    }
+  },
+  "humanListeningChecked": false,
+  "scope": "machine audio-comprehension pronunciation screen; not authoritative phonetic evidence"
+}

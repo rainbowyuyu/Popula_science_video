@@ -1,0 +1,83 @@
+{
+  "id": "h051",
+  "text": "肾小管多收回一些钠，水也容易跟着留下。循环里的液体增多，推动血流的负担就可能随之增加。",
+  "ttsText": "肾小管多收回一些钠，水也容易跟着留下。循环里的液体增多，推动血流的负担就可能随之增加。",
+  "signature": "0a576d559135a7b699dc9c0c2384cb95df6c20f750ded72fef9ed1791e486824",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h051-0a576d559135-1449b48cfe.wav",
+  "processed": "audio/revision-v5/voice/h051.wav",
+  "rawDuration": 7.92,
+  "duration": 7.92,
+  "sampleRate": 48000,
+  "sha256": "b6152ce65c944fc36ca01d25ec322b5db852c584033355541b790eb31d7ff3ab",
+  "rawSHA256": "086ef8ca6a8970d25080d30712c1e5878dc93c2eea3688146d9fe6ae8d305c0a",
+  "seed": 340374668,
+  "batchIds": [
+    "h051",
+    "h052",
+    "h053"
+  ],
+  "batchKey": "1449b48cfecb6d59f7e58be5a93858260bdabc2445bd7ce6fa6f2faee45f15a3",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -71.76810223666378,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "086ef8ca6a8970d25080d30712c1e5878dc93c2eea3688146d9fe6ae8d305c0a",
+    "outputSha256": "b6152ce65c944fc36ca01d25ec322b5db852c584033355541b790eb31d7ff3ab",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.992423756428284,
+    "input": {
+      "seconds": 7.92,
+      "peakDb": -8.446608663660797,
+      "activeRmsDb": -22.91163132956691,
+      "quietFrameP10Db": -63.38832115869637
+    },
+    "output": {
+      "seconds": 7.92,
+      "peakDb": -4.771208203365735,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.99946533042312
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

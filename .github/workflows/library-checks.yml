@@ -1,0 +1,26 @@
+name: Library and editor checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  source-and-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate source library
+        run: python tools/check_library.py
+      - name: Test safe asset restoration
+        run: python -m unittest discover -s tests -p test_assets.py -v
+      - name: Editor frontend behavior
+        working-directory: video_project/creator_workbench
+        run: node --test tests/app_navigation.test.cjs tests/agent_workspace.test.cjs tests/learning_independent.test.cjs
+      - name: Portable project metadata
+        working-directory: video_project/creator_workbench
+        run: python -m unittest discover -s tests -p test_export_metadata.py -v

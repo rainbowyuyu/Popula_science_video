@@ -1,0 +1,151 @@
+{
+  "version": "nobel-physics-2026-v02-natural-patch",
+  "baseTimeline": "src/physics2026/timeline-v02.json",
+  "baseAudio": "audio/v03/audio-manifest-v03.json",
+  "status": "candidate-text-only",
+  "note": "This patch keeps every clip's V02 picture clock. Existing V03 audio is intentionally untouched. Regenerate only the listed TTS clips, fit each take to targetSeconds, then replace subtitleParts from the final measured take.",
+  "clips": [
+    {
+      "id": "001",
+      "targetSeconds": 20.376,
+      "reason": "Adds the missing award-to-question bridge without repeating the full award description.",
+      "sourceAudit": ["P2", "P3", "P6 p.1"],
+      "original": "今年的奖项授予 Francis Halzen，威斯康星大学麦迪逊分校物理学家。授奖理由是：他对 IceCube 中微子观测站作出决定性贡献，并推动发现天体物理起源的高能中微子。得主是一人，IceCube则是十四国合作团队。",
+      "spoken": "今年的奖项授予 Francis Halzen，威斯康星大学麦迪逊分校物理学家。理由很具体：他为 IceCube 作出决定性贡献，推动发现天体高能中微子。奖杯上写一人，冰下却连着十四国、五十八家机构。他们在等什么？",
+      "subtitleTexts": [
+        "今年的奖项授予 Francis Halzen，",
+        "威斯康星大学麦迪逊分校物理学家。",
+        "理由很具体：他为 IceCube 作出决定性贡献，",
+        "推动发现天体高能中微子。",
+        "奖杯上写一人，冰下却连着十四国、五十八家机构。",
+        "他们在等什么？"
+      ]
+    },
+    {
+      "id": "003",
+      "targetSeconds": 13.152,
+      "reason": "Turns the repeated explanation into one visible three-path experiment and a human-scale image.",
+      "sourceAudit": ["P6 pp.3-4"],
+      "original": "把三种宇宙信使放在一起看：质子像被风吹偏，伽马射线在尘埃中变弱，中微子则沿直线穿过宇宙。它最难捕获，却也保留了最干净的来路。",
+      "spoken": "三种宇宙信使同时出发：质子被磁场拽弯，伽马射线在尘埃里熄灭，中微子沿原方向穿过宇宙。它最难抓，却像一封没改过地址的信。",
+      "subtitleTexts": [
+        "三种宇宙信使同时出发：",
+        "质子被磁场拽弯，伽马射线在尘埃里熄灭，",
+        "中微子沿原方向穿过宇宙。",
+        "它最难抓，却像一封没改过地址的信。"
+      ]
+    },
+    {
+      "id": "004",
+      "targetSeconds": 17.328,
+      "reason": "Makes the engineering bridge explicit: a large, quiet detector requires a field prototype before IceCube.",
+      "sourceAudit": ["P6 pp.6-8", "P6 ref. [12]"],
+      "original": "1988年，Halzen和 John G. Learned 提出：别造一座小探测器，把南极深冰本身变成望远镜。冰够大、够安静，也足够透明。这个思路后来经过 AMANDA 等试验，才走向 IceCube。",
+      "spoken": "既然难抓，1988年，Halzen 和 John G. Learned 提出：把南极深冰变成望远镜。冰够大、够安静，也足够透明；但要让它真正工作，还得经过 AMANDA 等试验，最后才走向 IceCube。",
+      "subtitleTexts": [
+        "既然难抓，1988年，Halzen 和 John G. Learned 提出：",
+        "把南极深冰变成望远镜。",
+        "冰够大、够安静，也足够透明；",
+        "但要让它真正工作，还得经过 AMANDA 等试验，",
+        "最后才走向 IceCube。"
+      ]
+    },
+    {
+      "id": "007",
+      "targetSeconds": 14.256,
+      "reason": "Uses a familiar sonic-boom analogy before the threshold equation, then explains n in plain language.",
+      "sourceAudit": ["P6 p.5"],
+      "original": "关键阈值写成公式就是：速度 v 大于光速 c 除以折射率 n。n 让光在冰里变慢；粒子超过这个相速度，光就从四面散开，收束成可追踪的圆锥。",
+      "spoken": "先看个类比：飞机超音速会留下音爆锥，带电粒子超过光在冰里的速度，也会留下光锥。公式写成：速度 v 大于光速 c 除以折射率 n；n 让光在冰里变慢。",
+      "subtitleTexts": [
+        "先看个类比：",
+        "飞机超音速会留下音爆锥，",
+        "带电粒子超过光在冰里的速度，也会留下光锥。",
+        "公式写成：速度 v 大于光速 c 除以折射率 n；",
+        "n 让光在冰里变慢。"
+      ]
+    },
+    {
+      "id": "011",
+      "targetSeconds": 19.608,
+      "reason": "Makes the discovery-to-source handoff explicit while keeping the measured numbers intact.",
+      "sourceAudit": ["P6 p.11", "P6 refs. [23], [25], [26]"],
+      "original": "2013年，1.04和1.14拍电子伏特的两个事件先亮了起来。随后三年数据的统计分析达到5.7个标准差，样本中积累出28个高能事件，纯大气背景的解释被排除。蓝光不再只是瞬间，而成了一条证据链。",
+      "spoken": "2013年，1.04 和 1.14 拍电子伏特的事件先亮起来。三年统计把信号推到 5.7 个标准差，累积 28 个高能事件。蓝光不再只是瞬间，而是一组事件压过背景的证据链。下一步，是追问它们从哪里来。",
+      "subtitleTexts": [
+        "2013年，1.04 和 1.14 拍电子伏特的事件先亮起来。",
+        "三年统计把信号推到 5.7 个标准差，",
+        "累积 28 个高能事件。",
+        "蓝光不再只是瞬间，",
+        "而是一组事件压过背景的证据链。",
+        "下一步，是追问它们从哪里来。"
+      ]
+    },
+    {
+      "id": "012",
+      "targetSeconds": 25.344,
+      "reason": "Removes the generic repeated opening and lets the camera move from the first candidate source to the second.",
+      "sourceAudit": ["P6 p.16", "P6 refs. [35], [37]"],
+      "original": "当方向和能量都保留下来，中微子就成了新的宇宙信使。2017年，约290 TeV事件指向耀变体 TXS 0506+056，差约0.06度；2022年，NGC 1068方向出现1到10 TeV过量，显著性约4.2个标准差。它们是候选线索，不能夸成唯一答案。",
+      "spoken": "方向和能量都留下，线索就能落到具体天体上。2017年，约 290 TeV 的事件落在耀变体 TXS 0506+056 方向，误差圈约 0.06 度。2022年，NGC 1068 方向又发现 79 个 1 到 10 TeV 的中微子，显著性约 4.2 个标准差。它们是候选线索，仍不是唯一答案。",
+      "subtitleTexts": [
+        "方向和能量都留下，线索就能落到具体天体上。",
+        "2017年，约 290 TeV 的事件落在耀变体 TXS 0506+056 方向，",
+        "误差圈约 0.06 度。",
+        "2022年，NGC 1068 方向又发现 79 个 1 到 10 TeV 的中微子，",
+        "显著性约 4.2 个标准差。",
+        "它们是候选线索，仍不是唯一答案。"
+      ]
+    },
+    {
+      "id": "013",
+      "targetSeconds": 16.536,
+      "reason": "Moves from the abstract contribution to the concrete work in the ice and the data pipeline.",
+      "sourceAudit": ["P6 p.1", "P6 pp.6-9"],
+      "original": "Halzen的贡献，是把早期设想变成长期运行的观测站。冰层、钻孔、模块、数据筛选，再加上十四国、五十八机构的合作，让一次极少见的相互作用有机会被可靠还原。",
+      "spoken": "要让这个想法常年工作，难点又回到工程现场：钻孔、布线、校准和数据筛选。十四国、五十八家机构一起把环节接起来，才让一次罕见相互作用有机会被可靠还原。",
+      "subtitleTexts": [
+        "要让这个想法常年工作，难点又回到工程现场：",
+        "钻孔、布线、校准和数据筛选。",
+        "十四国、五十八家机构一起把环节接起来，",
+        "才让一次罕见相互作用有机会被可靠还原。"
+      ]
+    },
+    {
+      "id": "015",
+      "targetSeconds": 16.272,
+      "reason": "Replaces the template-like closing with a direct evidence boundary and keeps track/cascade as useful terms.",
+      "sourceAudit": ["P6 pp.8-10"],
+      "original": "看到中微子，不等于已经看清源头。样本仍少，背景仍复杂，track和cascade的方向精度也不同。科学最诚实的地方，是把看见的证据和暂时不能断言的部分同时留下。",
+      "spoken": "看到中微子，还不等于看清源头。样本少，背景复杂，track 和 cascade 的方向精度也不同。所以结论只走到证据允许的地方：看见什么写什么，不能确定的也留下。",
+      "subtitleTexts": [
+        "看到中微子，还不等于看清源头。",
+        "样本少，背景复杂，",
+        "track 和 cascade 的方向精度也不同。",
+        "所以结论只走到证据允许的地方：",
+        "看见什么写什么，不能确定的也留下。"
+      ]
+    },
+    {
+      "id": "016",
+      "targetSeconds": 16.704,
+      "reason": "Ends on the continuing pursuit rather than a generic cosmic metaphor.",
+      "sourceAudit": ["P2", "P6 summary"],
+      "original": "回到开头，那束蓝光不是中微子本身，而是它在冰里留下的回应。Halzen和IceCube把南极冰变成一座向宇宙倾听的望远镜。下一次亮起的轨迹，可能就是亿万光年外的一次相遇。",
+      "spoken": "回到开头，那束蓝光不是中微子本身，而是它在冰里留下的回应。Halzen 和 IceCube 把南极深冰变成向宇宙倾听的望远镜。下一次亮起的轨迹，我们还会继续追它的方向。",
+      "subtitleTexts": [
+        "回到开头，那束蓝光不是中微子本身，",
+        "而是它在冰里留下的回应。",
+        "Halzen 和 IceCube 把南极深冰变成向宇宙倾听的望远镜。",
+        "下一次亮起的轨迹，我们还会继续追它的方向。"
+      ]
+    }
+  ],
+  "ttsPolicy": {
+    "model": "Qwen3-TTS-0.6B",
+    "spokenNormalization": "Use the existing V03 spoken_text policy: IceCube -> Ice Cube for voice; keep canonical spelling in captions.",
+    "fit": "Fit each cleaned take to targetSeconds with pitch-preserving atempo only when ratio is 0.75–1.10; otherwise shorten the sentence and regenerate.",
+    "subtitleTiming": "After TTS, measure each sentence boundary from the final take; do not reuse old subtitle timestamps or split a sentence across clip seams.",
+    "existingAudio": "audio/v03/master.wav remains the rollback asset and must not be overwritten."
+  }
+}

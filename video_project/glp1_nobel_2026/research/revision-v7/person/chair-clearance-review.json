@@ -1,0 +1,82 @@
+{
+  "status": "source stable; ready for actual Film04 check",
+  "sha256": "7a78109b068ead670aef7929831ea809bc9ad8e12577e669c467cac864cc2f17",
+  "scope": "sitStand fixed chair/body clearance and neutral handoff",
+  "bodyForward": "0.43 * (1-seated)^2 * sitWeight, where sitWeight includes anatomyBlend gating",
+  "footCompensation": "0.43 * seated * (1-seated) * sitWeight; full sitStand stance keeps ankle z=0.448m throughout rise",
+  "handIK": "backward elbow pole; same fixed bone lengths and contacts",
+  "chair": "position remains fixed whenever sitStand intent is active; alpha retires over sitWeight0.95..0.65 before calves return through chair space",
+  "checked": [
+    "18 front/side seated-to-standing stills (9 times)",
+    "7 side views of anatomyBlend0..1",
+    "native views sit, side1.2, side1.6, side2, side2.5, side5, front5, neutral0.7, neutral0.55",
+    "npm run check passed"
+  ],
+  "nonSitRegression": [
+    {
+      "id": "meal-rest-front",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "meal-lift-front",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "meal-rest-side",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "meal-lift-side",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "stand",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "walk-a",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "walk-b",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "measure-front",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "measure-side",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "eat-neutral-025",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "eat-neutral-050",
+      "bodySame": true,
+      "garmentSame": true
+    },
+    {
+      "id": "eat-neutral-075",
+      "bodySame": true,
+      "garmentSame": true
+    }
+  ],
+  "nonSitAllMatch": true,
+  "limitations": [
+    "Local sampled views; parent must check actual Film h016→h017 with existing pose/camera gates before export.",
+    "No exhaustive triangle-based collision solve; contact is illustrative reachable IK."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "version": "V15",
+  "id": "painted_drop_to_model",
+  "status": "pass",
+  "reviewedUTC": "2026-10-12T12:17:36.359585+00:00",
+  "taskId": "9912838b-ad46-4f2b-b9c3-0a408a3286d1",
+  "providerSHA256": "c98f76628c503af8f6cd7380eb5e5d839762ed854d2a7e15e72d1a4620f42439",
+  "scope": "Actual 33-frame native dense contact plus source endpoint/static largest pairs where present; all150frames fully decoded. Not normal-speed playback or full composite approval.",
+  "reviewedNativeSourceFrameIndices": [
+    0,
+    1,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110,
+    115,
+    120,
+    125,
+    130,
+    135,
+    140,
+    145,
+    148,
+    149
+  ],
+  "fullNormalSpeedPlaybackChecked": false,
+  "normalSpeedPlaybackPending": true,
+  "scientificApproval": false,
+  "compositeSeamReviewApproved": false,
+  "nativeFrames": 150,
+  "nativeFPS": "30/1",
+  "nativeSeconds": 5.0,
+  "identicalAdjacentFramePairs": 0,
+  "blockingFindingsWithinSampledScope": [],
+  "notes": [
+    "Actual single spherical droplet persists; fish moves left and leaves screen by roughly native40, no sudden unloading in sampled frames.",
+    "Environment reflection/highlight and exposure progressively become the root frozen dark optical sphere; terminal white input beam comes from screen left, no additional spectral rays/angles.",
+    "Actual preceding garden_to_painted_drop native149 decoded directly to RGBPNG is the first reference; not nominal drop_c keyframe."
+  ],
+  "contacts": [
+    {
+      "file": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v15\\output-v15\\work\\qwen-v15\\generated\\painted_drop_to_model\\contact.jpg",
+      "sha256": "a70791a8107c9ef7f76467993d625a78117e3510d37c75b20d700208c15d7832"
+    },
+    {
+      "file": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v15\\output-v15\\work\\qwen-v15\\generated\\painted_drop_to_model\\inspection-contact.jpg",
+      "sha256": "8dd06ebfd7837e79370631f3b14d49d7303f9c023076e2bde64b07a36dfa6689"
+    }
+  ],
+  "firstReferenceSHA256": "31431211db7773ee929dade88e691af013834c523d9f319a4b80d4adf6c4147b",
+  "lastReferenceSHA256": "57878fcb70728e0570ecac2ee83d28bf075d9be6fa06001d0eea65100d536cff",
+  "endpointError": [
+    {
+      "endpoint": "first",
+      "meanAbsoluteRGBError": 2.9483230113983154,
+      "referenceSHA256": "31431211db7773ee929dade88e691af013834c523d9f319a4b80d4adf6c4147b",
+      "frameSHA256": "413a854529f6a682c5cf14c70d87588e70595097a9fbfcd4d9098c134a517e20"
+    },
+    {
+      "endpoint": "last",
+      "meanAbsoluteRGBError": 1.626144528388977,
+      "referenceSHA256": "57878fcb70728e0570ecac2ee83d28bf075d9be6fa06001d0eea65100d536cff",
+      "frameSHA256": "a4381b91454f8489fc0bf7930f104a9f18ccc4174b46a55eb50de0c079dfd789"
+    }
+  ]
+}

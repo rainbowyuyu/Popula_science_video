@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "zju_marine_ep01",
+  "title": "海洋能源：从风浪到发电",
+  "category": "engineering",
+  "status": "source-library",
+  "currentVersion": "V8",
+  "workbench": {
+    "title": "浙江大学 · 海洋可再生能源",
+    "seriesId": "independent",
+    "episode": null,
+    "useSeriesStyle": false
+  },
+  "entrypoints": [
+    "src/index.tsx",
+    "scripts/render_server_final_v8.mjs",
+    "scripts/finalize_v8.py"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs --stills"
+      },
+      "lockfile": true
+    },
+    {
+      "root": "work/v8/recovery",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs --stills"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "output/rainbow-marine-ep01-v8/release/marine_energy_episode01_v8_final.mp4"
+    ],
+    "covers": []
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Blender (configure BLENDER_PATH; original D:/blender/blender.exe)"
+  ],
+  "notes": [
+    "服务器渲染脚本和 WaterPro 适配依赖需外置说明；存在 output 与 outputs 两代目录。"
+  ],
+  "originalMetadata": {}
+}

@@ -1,0 +1,102 @@
+{
+  "version": "nobel-v51-medical-redraw",
+  "implementation": {
+    "authoring": "Local Codex implementation and scientific/layout corrections",
+    "file": "src/nobel2026/WorldV51.ts",
+    "timelineSource": "src/nobel2026/timeline-v51.json",
+    "animationBasis": "absolute subtitle cue times, sampled cubic Bezier arc length, deterministic Canvas 2D",
+    "mechanisms": [
+      "curved soma/dendrite/axon neuronal cluster",
+      "expression AND illumination selectivity",
+      "two anterior flagella with eyespot phototaxis",
+      "lipid bilayer with heads/tails and paired membrane protein pore",
+      "current transient/plateau distinct from action potential",
+      "fiber reaching cortex with downstream whisker movement",
+      "separate clinical eye/glasses/object scene with amber light and ChrimsonR"
+    ],
+    "qwen": "No new Qwen-generated media used in V5.1.",
+    "files": [
+      "src/nobel2026/WorldV51.ts",
+      "src/nobel2026/BrainStudyV51.ts",
+      "src/nobel2026/FilmV51.tsx",
+      "src/nobel2026/EvidenceFigureV51.tsx"
+    ]
+  },
+  "checks": {
+    "typeScript": "passed",
+    "numericCanvasSamples": 1366,
+    "numericCanvasOperations": 2331425,
+    "invalidNumbers": 0,
+    "finalTechnicalQA": "passed",
+    "finalMovieSHA256": "af1d14b21dd8516658b6fb49c7f8c598b8b66a80d0f5ce22f7821481c3b2c34f",
+    "masterSHA256": "820f499d2b768049ed0937d3e46df95059546aab46ccfc30f7113df14d21e8e3",
+    "contentSamplesReviewed": 84,
+    "seamSamplesReviewed": 30,
+    "temporalStripsReviewed": 8,
+    "normalSpeedFullReview": false,
+    "subjectiveFullListening": false,
+    "latex": "not applicable; no new formula assets"
+  },
+  "externalRequests": [
+    {
+      "modelRequested": "claude-opus-5-5",
+      "modelReported": "claude-opus-5-5",
+      "effort": "max",
+      "transport": "claude-code-native safe-mode text-only",
+      "promptCharacters": 46683,
+      "promptContains": [
+        "full current WorldV51 source",
+        "all 22 clips and 81 subtitle sentence cues",
+        "medical illustration and scientific constraints"
+      ],
+      "directory": "D:/python_project/manim_extend_rainbow/tmp/claude-runs/nobel-v51-refine-2026-10-06T06-30-56-509Z",
+      "status": "failed",
+      "errorCode": "cli_exit_error",
+      "elapsedMs": 1413823,
+      "reportedThinkingTokens": 128000,
+      "returnedTextCharacters": 0,
+      "adoptedCode": false,
+      "wrapperRetries": 0,
+      "note": "Provider reported thinking-only output and process exit 1. No usable final artifact was returned. Model identity and usage are provider-reported, not independently verified."
+    },
+    {
+      "modelRequested": "claude-opus-5-5",
+      "effort": "high",
+      "timeoutSeconds": 480,
+      "elapsedSeconds": 480.759,
+      "status": "timeout",
+      "returnedTextCharacters": 0,
+      "adoptedCode": false,
+      "directory": "D:/python_project/manim_extend_rainbow/tmp/claude-runs/nobel-v51-brain-study-high",
+      "note": "Bounded independent behavior component request returned no usable response."
+    }
+  ],
+  "adoptedExternalCodeCount": 0,
+  "finalAudioMux": {
+    "method": "ffmpeg stream-copy video; exact master encoded AAC 320k 48k stereo once",
+    "durationSeconds": 273.06666666666666,
+    "purpose": "Remove approximately 42.6 ms browser audio pipeline delay and avoid extra resampling",
+    "correlationToMaster": 0.9999836601997,
+    "lagSeconds": 0.0,
+    "finalAACLoudness": {
+      "input_i": "-15.93",
+      "input_tp": "-1.10",
+      "input_lra": "3.40",
+      "input_thresh": "-26.69",
+      "output_i": "-23.99",
+      "output_tp": "-8.95",
+      "output_lra": "3.30",
+      "output_thresh": "-34.74",
+      "normalization_type": "dynamic",
+      "target_offset": "-0.01"
+    }
+  },
+  "sourceHashes": {
+    "src/nobel2026/WorldV51.ts": "da6d7d718ce2a943ef093463b4d38af131373b85011d2563d357641d7be76f3c",
+    "src/nobel2026/BrainStudyV51.ts": "b36e0439a214e613621dd9996d3500e0601b4386d6300b14e62addce64ce7a4b",
+    "src/nobel2026/FilmV51.tsx": "e9b5a566d58748c58ac2f5a3b63d681808a25416992c84565537cbde54e37dd5",
+    "src/nobel2026/EvidenceFigureV51.tsx": "817b0a1b66c362a0edff81f6adb7f10fe2e655f70960408a7a0dbdf767340d4c",
+    "src/nobel2026/timeline-v51.json": "d99c7c70c70d4880117a7559f0385bb93afd6bb3f35388c0717cd6bb09075961",
+    "scripts/render_nobel2026_v51.mjs": "c6c7fe303b99146d8440d22cbf801afa2eca27c2325d5f4f95d2fa026d75d3bb"
+  }
+}

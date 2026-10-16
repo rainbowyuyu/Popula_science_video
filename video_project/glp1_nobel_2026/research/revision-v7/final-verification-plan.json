@@ -1,0 +1,48 @@
+{
+  "status": "completed-see-final-release-qa",
+  "expectedFrames": 25621,
+  "fps": 30,
+  "durationSeconds": 854.0333333333333,
+  "checks": [
+    {
+      "name": "Frozen input identity",
+      "evidence": "tmp/v7-full-final/source-lock.json",
+      "status": "pending-end-of-render-hash-recheck"
+    },
+    {
+      "name": "Full video/audio decode and visual corruption scans",
+      "evidence": "tmp/v7-encoded-qa/technical.json",
+      "status": "pending"
+    },
+    {
+      "name": "All narration clips sampled from encoded MP4",
+      "samples": 267,
+      "additionalCodaSamples": 2,
+      "evidence": "tmp/v7-encoded-qa/sheets/index.json",
+      "status": "pending"
+    },
+    {
+      "name": "Repaired dense action samples correspond to accepted Film04 images",
+      "samples": 410,
+      "evidence": "tmp/v7-encoded-motion/comparison.json",
+      "status": "pending"
+    },
+    {
+      "name": "Actual AAC timing, loudness and protected audio hashes",
+      "evidence": "research/revision-v7/audio/final-mp4-check/verification.json",
+      "status": "pending"
+    },
+    {
+      "name": "V6 baseline preserved",
+      "status": "pending"
+    }
+  ],
+  "reviewLimits": [
+    "Manual review is targeted frame/contact-sheet inspection, not watching every final frame",
+    "No full subjective audio listening claim",
+    "Microscale mechanisms are representative teaching models, not patient-specific simulation"
+  ],
+  "finalQA": "research/revision-v7/release-qa.json",
+  "finalDelivery": "delivery/latest-v7.json",
+  "note": "Original planning paths are retained as history; corrected final paths and actual performed scope are in release-qa.json."
+}

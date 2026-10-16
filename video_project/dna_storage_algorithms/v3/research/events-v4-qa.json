@@ -1,0 +1,281 @@
+{
+  "status": "PASS",
+  "note": "Caption phrase boundaries are used. Fractions within merged captions are marked estimates, not ASR word timings.",
+  "checks": [
+    {
+      "name": "current",
+      "pass": true,
+      "events": [
+        {
+          "id": "substitution",
+          "cueId": "n19",
+          "label": "替换",
+          "timingKind": "caption-text-fraction",
+          "captionId": "n19-00",
+          "matchedPhrase": "一个字母认成另一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 143.17058823529413,
+          "audioEndSec": 146.3,
+          "sceneStartSec": 143.17058823529413,
+          "sceneEndSec": 146.3,
+          "motionAudioStartSec": 140.12058823529415,
+          "motionAudioEndSec": 143.32058823529414,
+          "motionSceneStartSec": 140.12058823529415,
+          "motionSceneEndSec": 143.32058823529417
+        },
+        {
+          "id": "insertion",
+          "cueId": "n19",
+          "label": "插入",
+          "timingKind": "caption-boundary",
+          "captionId": "n19-01",
+          "matchedPhrase": "多一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 146.3,
+          "audioEndSec": 148.03333333333333,
+          "sceneStartSec": 146.3,
+          "sceneEndSec": 148.0333333333333,
+          "motionAudioStartSec": 143.25000000000003,
+          "motionAudioEndSec": 146.45000000000002,
+          "motionSceneStartSec": 143.25000000000003,
+          "motionSceneEndSec": 146.45000000000002
+        },
+        {
+          "id": "deletion",
+          "cueId": "n19",
+          "label": "缺失",
+          "timingKind": "caption-boundary",
+          "captionId": "n19-02",
+          "matchedPhrase": "少一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 148.03333333333333,
+          "audioEndSec": 150.255,
+          "sceneStartSec": 148.0333333333333,
+          "sceneEndSec": 150.25500000000002,
+          "motionAudioStartSec": 144.98333333333335,
+          "motionAudioEndSec": 148.18333333333334,
+          "motionSceneStartSec": 144.98333333333335,
+          "motionSceneEndSec": 148.18333333333337
+        }
+      ]
+    },
+    {
+      "name": "missing-captions",
+      "pass": true,
+      "events": [
+        {
+          "id": "substitution",
+          "cueId": "n19",
+          "label": "替换",
+          "timingKind": "cue-text-fraction",
+          "matchedPhrase": "一个字母认成另一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 10,
+          "audioEndSec": 15,
+          "sceneStartSec": 12,
+          "sceneEndSec": 18,
+          "motionAudioStartSec": 6.95,
+          "motionAudioEndSec": 10.15,
+          "motionSceneStartSec": 8.34,
+          "motionSceneEndSec": 12.18
+        },
+        {
+          "id": "insertion",
+          "cueId": "n19",
+          "label": "插入",
+          "timingKind": "cue-text-fraction",
+          "matchedPhrase": "多一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 15,
+          "audioEndSec": 17.5,
+          "sceneStartSec": 18,
+          "sceneEndSec": 21,
+          "motionAudioStartSec": 11.95,
+          "motionAudioEndSec": 15.15,
+          "motionSceneStartSec": 14.339999999999998,
+          "motionSceneEndSec": 18.18
+        },
+        {
+          "id": "deletion",
+          "cueId": "n19",
+          "label": "缺失",
+          "timingKind": "cue-text-fraction",
+          "matchedPhrase": "少一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 17.5,
+          "audioEndSec": 20,
+          "sceneStartSec": 21,
+          "sceneEndSec": 24,
+          "motionAudioStartSec": 14.45,
+          "motionAudioEndSec": 17.65,
+          "motionSceneStartSec": 17.34,
+          "motionSceneEndSec": 21.179999999999996
+        }
+      ]
+    },
+    {
+      "name": "merged-caption",
+      "pass": true,
+      "events": [
+        {
+          "id": "substitution",
+          "cueId": "n19",
+          "label": "替换",
+          "timingKind": "caption-boundary",
+          "matchedPhrase": "一个字母认成另一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 10,
+          "audioEndSec": 15,
+          "sceneStartSec": 10,
+          "sceneEndSec": 15,
+          "motionAudioStartSec": 6.95,
+          "motionAudioEndSec": 10.15,
+          "motionSceneStartSec": 6.95,
+          "motionSceneEndSec": 10.15
+        },
+        {
+          "id": "insertion",
+          "cueId": "n19",
+          "label": "插入",
+          "timingKind": "caption-text-fraction",
+          "matchedPhrase": "多一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 15,
+          "audioEndSec": 17.5,
+          "sceneStartSec": 15,
+          "sceneEndSec": 17.5,
+          "motionAudioStartSec": 11.95,
+          "motionAudioEndSec": 15.15,
+          "motionSceneStartSec": 11.95,
+          "motionSceneEndSec": 15.15
+        },
+        {
+          "id": "deletion",
+          "cueId": "n19",
+          "label": "缺失",
+          "timingKind": "caption-text-fraction",
+          "matchedPhrase": "少一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 17.5,
+          "audioEndSec": 20,
+          "sceneStartSec": 17.5,
+          "sceneEndSec": 20,
+          "motionAudioStartSec": 14.45,
+          "motionAudioEndSec": 17.65,
+          "motionSceneStartSec": 14.45,
+          "motionSceneEndSec": 17.65
+        }
+      ]
+    },
+    {
+      "name": "stale-caption",
+      "pass": true,
+      "events": [
+        {
+          "id": "substitution",
+          "cueId": "n19",
+          "label": "替换",
+          "timingKind": "cue-text-fraction",
+          "matchedPhrase": "一个字母认成另一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 10,
+          "audioEndSec": 15,
+          "sceneStartSec": 10,
+          "sceneEndSec": 15,
+          "motionAudioStartSec": 6.95,
+          "motionAudioEndSec": 10.15,
+          "motionSceneStartSec": 6.95,
+          "motionSceneEndSec": 10.15
+        },
+        {
+          "id": "insertion",
+          "cueId": "n19",
+          "label": "插入",
+          "timingKind": "cue-text-fraction",
+          "matchedPhrase": "多一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 15,
+          "audioEndSec": 17.5,
+          "sceneStartSec": 15,
+          "sceneEndSec": 17.5,
+          "motionAudioStartSec": 11.95,
+          "motionAudioEndSec": 15.15,
+          "motionSceneStartSec": 11.95,
+          "motionSceneEndSec": 15.15
+        },
+        {
+          "id": "deletion",
+          "cueId": "n19",
+          "label": "缺失",
+          "timingKind": "cue-text-fraction",
+          "matchedPhrase": "少一个",
+          "wasOrderRepaired": false,
+          "audioStartSec": 17.5,
+          "audioEndSec": 20,
+          "sceneStartSec": 17.5,
+          "sceneEndSec": 20,
+          "motionAudioStartSec": 14.45,
+          "motionAudioEndSec": 17.65,
+          "motionSceneStartSec": 14.45,
+          "motionSceneEndSec": 17.65
+        }
+      ]
+    },
+    {
+      "name": "unknown-text",
+      "pass": true,
+      "events": [
+        {
+          "id": "substitution",
+          "cueId": "n19",
+          "label": "替换",
+          "timingKind": "cue-proportion-fallback",
+          "wasOrderRepaired": false,
+          "audioStartSec": 11,
+          "audioEndSec": 15.3,
+          "sceneStartSec": 11,
+          "sceneEndSec": 15.3,
+          "motionAudioStartSec": 7.95,
+          "motionAudioEndSec": 11.15,
+          "motionSceneStartSec": 7.95,
+          "motionSceneEndSec": 11.15
+        },
+        {
+          "id": "insertion",
+          "cueId": "n19",
+          "label": "插入",
+          "timingKind": "cue-proportion-fallback",
+          "wasOrderRepaired": false,
+          "audioStartSec": 15.3,
+          "audioEndSec": 17.5,
+          "sceneStartSec": 15.3,
+          "sceneEndSec": 17.5,
+          "motionAudioStartSec": 12.25,
+          "motionAudioEndSec": 15.450000000000001,
+          "motionSceneStartSec": 12.25,
+          "motionSceneEndSec": 15.450000000000001
+        },
+        {
+          "id": "deletion",
+          "cueId": "n19",
+          "label": "缺失",
+          "timingKind": "cue-proportion-fallback",
+          "wasOrderRepaired": false,
+          "audioStartSec": 17.5,
+          "audioEndSec": 20,
+          "sceneStartSec": 17.5,
+          "sceneEndSec": 20,
+          "motionAudioStartSec": 14.45,
+          "motionAudioEndSec": 17.65,
+          "motionSceneStartSec": 14.45,
+          "motionSceneEndSec": 17.65
+        }
+      ]
+    },
+    {
+      "name": "missing-cue",
+      "pass": true,
+      "events": []
+    }
+  ]
+}

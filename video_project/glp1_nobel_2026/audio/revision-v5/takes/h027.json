@@ -1,0 +1,87 @@
+{
+  "id": "h027",
+  "text": "后来，一些药物通过改变分子结构，延长作用时间，同时保留激活受体的能力。司美格鲁肽就是这类药的一种。",
+  "ttsText": "后来，一些药物通过改变分子结构，把作用时间拉得更久，同时保留激活受体的能力。司美格鲁肽就是这类药的一种。",
+  "signature": "fc5db5221880fdb8401901b638cd2c0a63b2f9f487e576c5341b9a42f09884b3",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h027-fc5db5221880-916b92bd3c.wav",
+  "processed": "audio/revision-v5/voice/h027.wav",
+  "rawDuration": 9.84,
+  "duration": 9.84,
+  "sampleRate": 48000,
+  "sha256": "859e11a36fcc17a0397038c7859246ae24e4ffb13efe9d1bd971ce2f9f55e710",
+  "rawSHA256": "88e39f80bd4b245aeb6191bb0399ef74c1c8ee2886c2e73df943c871fe5ef30f",
+  "seed": 2439746237,
+  "batchIds": [
+    "h009",
+    "h027"
+  ],
+  "batchKey": "916b92bd3c2117db1d92315349bccf43bf5a7946740264890dfb40fe2e4c2929",
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -41.34347349278599,
+  "rawEndpointFlag": true,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "88e39f80bd4b245aeb6191bb0399ef74c1c8ee2886c2e73df943c871fe5ef30f",
+    "outputSha256": "859e11a36fcc17a0397038c7859246ae24e4ffb13efe9d1bd971ce2f9f55e710",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.08138359335193,
+    "input": {
+      "seconds": 9.84,
+      "peakDb": -4.714454316960726,
+      "activeRmsDb": -21.488474451369154,
+      "quietFrameP10Db": -62.73007880348628
+    },
+    "output": {
+      "seconds": 9.84,
+      "peakDb": -3.082091005902246,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.294039191423686
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "pron-v2",
+  "candidateTakeSHA256": "99203527f49f527a1a02f180dbbf0c108fccb50703c9d36eb8d72980f371283c",
+  "candidateRecord": "audio/revision-v5/candidates/pron-v2/takes/h027.json",
+  "selectionReason": "Pronunciation pass: avoid ambiguous 长 readings with natural spoken synonyms; preserve original caption wording.",
+  "previousSelectedSHA256": "aafaf7c302f50dd1c9673891626fea215fe978e7ebb57132b43fa1535f0e23bd"
+}

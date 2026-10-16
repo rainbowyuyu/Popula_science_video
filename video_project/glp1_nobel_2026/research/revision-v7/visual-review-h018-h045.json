@@ -1,0 +1,87 @@
+{
+  "scope": "h018–h045 actual visual inspection; each of 15 full Film sheets opened with view_image",
+  "sheets": [
+    "h017-h018.jpg",
+    "h019-h020.jpg",
+    "h021-h022.jpg",
+    "h023-h024.jpg",
+    "h025-h026.jpg",
+    "h027-h028.jpg",
+    "h029-h030.jpg",
+    "h031-h032.jpg",
+    "h033-h034.jpg",
+    "h035-h036.jpg",
+    "h037-h038.jpg",
+    "h039-h040.jpg",
+    "h041-h042.jpg",
+    "h043-h044.jpg",
+    "h045-h046.jpg"
+  ],
+  "findings": [
+    {
+      "clips": "h018/24",
+      "issue": "Brain target was offscreen",
+      "correction": "Added gutBrain midpoint and 1.45 m macro frame; reviewed directed-macro images"
+    },
+    {
+      "clips": "h021/22",
+      "issue": "Opaque pancreatic surface crossed during zoom",
+      "correction": "Validated 1.5 mm anterior tissue inset, screen locator, earlier parent transparency; reviewed handoff sequence"
+    },
+    {
+      "clips": "h022/23/26/27",
+      "issue": "Unreadable receptor activity and many overlapping islet cells",
+      "correction": "V7BetaSignal cell-level annotations, natural decay and prolonged signal, earlier surrounding-islet fade; read full Film sheets"
+    },
+    {
+      "clips": "h025/28–32",
+      "issue": "Opaque stomach concealed dynamics",
+      "correction": "Wall opacity 0.30; integrated root updateGastricContents; latest module needs next Film QA"
+    },
+    {
+      "clips": "h031",
+      "issue": "Muscle endpoint of nutrition outside view",
+      "correction": "Added gutMuscle midpoint and real thigh muscles; source samples reviewed"
+    },
+    {
+      "clips": "h033/34",
+      "issue": "Fat storage/particle packaging not explicit",
+      "correction": "Integrated V7MacroActions; h034 joins same 480 nm lipid sequence; latest module needs next Film QA"
+    },
+    {
+      "clips": "h035–37/41–42",
+      "issue": "Small particle and retreat too early",
+      "correction": "480 nm camera, ordinary departure72%, optical duration guard for very deep transitions"
+    },
+    {
+      "clips": "h038–40",
+      "issue": "Nearly blank plaque due fixed p=.22; macro pool later obscured foam cell",
+      "correction": "Progress .48→.94, selected foam cell85um with pool fade; local artery view/roll; continuous handoff44frames reviewed"
+    },
+    {
+      "clips": "h043/44",
+      "issue": "Muscle side effects shown only on abdomen",
+      "correction": "Actual left rectus femoris camera plus integrated qualitative MacroActions overlay; latest module needs Film QA"
+    }
+  ],
+  "otherCorrections": [
+    "h016 sentence-local stand-sit-stand verified at4199,4250,4300,4360,4393",
+    "h067/087 hold measured pose to sentence end, labels follow actual attenuatedMeasure",
+    "h078 current meal replacement explicitly at10–45% before desk exits; h079 gets45-frame neutral gap then walk",
+    "h073/74 .105m atrium and .025 atlas heart opacity; h075–77 clinical macro summary",
+    "h080–85 unified regulation macro; h089 returns to walk"
+  ],
+  "evidence": [
+    "research/revision-v7/source-preview/handoffs/contact.jpg",
+    "research/revision-v7/source-preview/directed-macro/contact.jpg",
+    "research/revision-v7/camera-audit.json"
+  ],
+  "sourceHashes": {
+    "V5World.ts": "e70326dc58d60c446fdaa2b856badd68cf45b63b11002eb5ceb9b53ed69e33c7",
+    "V5CameraPath.ts": "c2ce5df97b79a63bc1fab89523bc26b022095058d61efe3324ca5eccd23e3c4a",
+    "V5HandoffContext.ts": "a2b290125a4f694f33c278da95170d0f5e829e6b92350f730627215df0891b9c",
+    "V7Director.ts": "6705270eb7ff47174c338c8b35db4dd2979a258024d125d1ede309c0889a050a",
+    "V7BetaSignal.ts": "0cec6a81a962240fb5f9aa862bf3a8ad7b7fd18bcaba56d23675c0704c811a6f"
+  },
+  "limits": "Sampled visual QA and mathematical camera finite-state checks. Not a claim of watching the final full rendered video. Parent is rebuilding full-Film previews for final changes."
+}

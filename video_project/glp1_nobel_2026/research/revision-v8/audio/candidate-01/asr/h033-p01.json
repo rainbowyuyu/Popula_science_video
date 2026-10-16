@@ -1,0 +1,130 @@
+{
+  "id": "h033",
+  "partIndex": 0,
+  "expected": "糖接走了，食物里的脂肪也在运输。",
+  "heard": "堂接走了,實物裡的紙房也在運輸。",
+  "words": [
+    {
+      "text": "堂",
+      "start": 0.0,
+      "end": 0.5,
+      "probability": 0.629290983080864
+    },
+    {
+      "text": "接",
+      "start": 0.5,
+      "end": 0.66,
+      "probability": 0.6261308193206787
+    },
+    {
+      "text": "走了,",
+      "start": 0.66,
+      "end": 0.94,
+      "probability": 0.9730011820793152
+    },
+    {
+      "text": "實",
+      "start": 1.32,
+      "end": 1.44,
+      "probability": 0.10488607734441757
+    },
+    {
+      "text": "物",
+      "start": 1.44,
+      "end": 1.58,
+      "probability": 0.8038884401321411
+    },
+    {
+      "text": "裡",
+      "start": 1.58,
+      "end": 1.68,
+      "probability": 0.7369771003723145
+    },
+    {
+      "text": "的",
+      "start": 1.68,
+      "end": 1.78,
+      "probability": 0.9954568147659302
+    },
+    {
+      "text": "紙",
+      "start": 1.78,
+      "end": 1.94,
+      "probability": 0.8422797322273254
+    },
+    {
+      "text": "房",
+      "start": 1.94,
+      "end": 2.18,
+      "probability": 0.993137001991272
+    },
+    {
+      "text": "也",
+      "start": 2.18,
+      "end": 2.36,
+      "probability": 0.990846574306488
+    },
+    {
+      "text": "在",
+      "start": 2.36,
+      "end": 2.48,
+      "probability": 0.989841878414154
+    },
+    {
+      "text": "運",
+      "start": 2.48,
+      "end": 2.66,
+      "probability": 0.9919513463973999
+    },
+    {
+      "text": "輸。",
+      "start": 2.66,
+      "end": 2.94,
+      "probability": 0.9901401698589325
+    }
+  ],
+  "sourceSHA256": "32d0fffd141190dc226b3776cdd27c1259efa6fe244fe5bc8184f4b4b88d2faf",
+  "ratio": 0.7142857142857143,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "糖",
+      "heard": "堂",
+      "end": 1
+    },
+    {
+      "op": "replace",
+      "expected": "食",
+      "heard": "实",
+      "end": 5
+    },
+    {
+      "op": "replace",
+      "expected": "脂肪",
+      "heard": "纸房",
+      "end": 10
+    }
+  ],
+  "rawTailNeedsReview": true,
+  "rawMetrics": {
+    "samples48k": 142080,
+    "seconds": 2.96,
+    "peakDBFS": -6.649366548432621,
+    "first20msDBFS": -65.52566004286135,
+    "last20msDBFS": -54.6355694373532,
+    "firstActiveMs": 240.0,
+    "lastActiveToEndMs": 20.0,
+    "activityThresholdDBFS": -47.75504205316242,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,52 @@
+{
+  "createdAt": "2026-10-07T18:53:07.551Z",
+  "passed": true,
+  "method": "Current production World.integrateFlow() with controlled constant contraction and zero pulse supplies phase rate. Actual current ArterioleDetail.update() supplies particle transforms. Area is measured/interpolated from the updated inner-wall geometry; finite-difference velocity × area compared with relaxed baseline.",
+  "model": "96-cell cumulative-volume advection map; actual 64-axial-segment wall measurement; 58 RBC tracers per condition; dt=1/30s",
+  "scope": "Three steady central-lumen cases only. Does not assert globally incompressible moving-wall flow, daughter-branch CFD, patient physiology, or validate bridge vessel flow. Interpolation/discretization tolerance 1%.",
+  "baselineFlux": 0.013467436817292617,
+  "cases": [
+    {
+      "contraction": 0,
+      "centerRadiusRatio": 1.0000000233856199,
+      "meanAreaRatio": 1,
+      "integratedPhaseRate": 0.08100000000000013,
+      "medianNormalizedAV": 1.0000022452332422,
+      "minNormalizedAV": 0.9999918321226947,
+      "maxNormalizedAV": 1.00001265834379,
+      "maxAbsoluteError": 0.000012658343790050708,
+      "samples": 58,
+      "excludedBoundaryWraps": 0
+    },
+    {
+      "contraction": 0.3,
+      "centerRadiusRatio": 0.8830000484557563,
+      "meanAreaRatio": 0.8073647791738189,
+      "integratedPhaseRate": 0.10032639779368119,
+      "medianNormalizedAV": 1.0000000535945517,
+      "minNormalizedAV": 0.9981346683410992,
+      "maxNormalizedAV": 1.0019966731606884,
+      "maxAbsoluteError": 0.0019966731606884114,
+      "samples": 58,
+      "excludedBoundaryWraps": 0
+    },
+    {
+      "contraction": 0.7692307692307692,
+      "centerRadiusRatio": 0.6999999981762305,
+      "meanAreaRatio": 0.548952235959261,
+      "integratedPhaseRate": 0.1475538210687083,
+      "medianNormalizedAV": 1.000000183670874,
+      "minNormalizedAV": 0.9953129652611461,
+      "maxNormalizedAV": 1.0056245671177897,
+      "maxAbsoluteError": 0.005624567117789692,
+      "samples": 58,
+      "excludedBoundaryWraps": 0
+    }
+  ],
+  "sourceHashes": {
+    "src/hypertension/World.ts": "765f79fcd7d7a6324842d75fd2a77c3088603553f892046511a8e3e7c035b92b",
+    "src/hypertension/VascularDetail.ts": "c2bdb06a4447c274a3f59728cb624693236dadb7d11c103f6defd71568569575",
+    "src/hypertension/timeline.json": "7d9f4bd1dc0b74a9c8a9d0936f233bce38653dad2cae444b5dacaac2e7bdfe42",
+    "public/hypertension/physics.json": "b9ef46da1a7febaaff2287a283858cce5cecc715db69016673b9ffee2fb9958a"
+  }
+}

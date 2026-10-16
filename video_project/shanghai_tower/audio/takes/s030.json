@@ -1,0 +1,80 @@
+{
+  "id": "s030",
+  "text": "先把空气横着切开，停在一百米高处。看平均风速：来风迎上大楼，再从两边绕过去，背后留下一片较慢的区域。切面升到三百米，楼的轮廓已经转了一个角度。来风方向没变，气流遇到的转角却变了，绕行路线也跟着变化。再升到五百米，塔身收得更细，方向又不一样。沿着同一套颜色比较，就能看见三个高度的风，分别从哪里经过。",
+  "ttsText": "先把空气横着切开，停在一百米高处。看平均风速：来风迎上大楼，再从两边绕过去，背后留下一片较慢的区域。切面升到三百米，楼的轮廓已经转了一个角度。来风方向没变，气流遇到的转角却变了，绕行路线也跟着变化。再升到五百米，塔身收得更细，方向又不一样。沿着同一套颜色比较，就能看见三个高度的风，分别从哪里经过。",
+  "signature": "4877636ac9261a5fc2d69b8398c5ede648367ad71ec0686c788d7b6df7987154",
+  "raw": "audio/raw/s030-4877636ac9.wav",
+  "processed": "public/voice/s030.wav",
+  "rawDuration": 26.8,
+  "duration": 27.04,
+  "sha256": "71c204ec29195f6b52a8e58072d988495a5b817b56f2fb8cd35bf16d762d9e81",
+  "seed": 1827519982,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s029",
+    "s030"
+  ],
+  "rawEndpointDB": -96.93162218511452,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "dcf3adb7f505c9bb2a4b3ee3ffc46feb80d5d0545beb5774a7e2b1f0fbb1668a",
+    "outputSha256": "71c204ec29195f6b52a8e58072d988495a5b817b56f2fb8cd35bf16d762d9e81",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.3708585835911897,
+    "input": {
+      "seconds": 27.04,
+      "peakDb": -5.683706223714452,
+      "activeRmsDb": -22.16819120036228,
+      "quietFrameP10Db": -59.81959509760497
+    },
+    "output": {
+      "seconds": 27.04,
+      "peakDb": -3.661257344251973,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.580995462072096
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "d28a5a889124883fa8b659e99b4ba2d729c613540565e861308286d068458a2f"
+  },
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "v7-cfd-provisional"
+}

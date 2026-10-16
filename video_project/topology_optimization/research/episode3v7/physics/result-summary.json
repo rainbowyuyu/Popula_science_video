@@ -1,0 +1,228 @@
+{
+  "provenance": {
+    "native_module": "D:\\Zwind_example\\Zwind_example\\1\\Zwind_example\\.venv\\Lib\\site-packages\\zdynpywin\\zdyn.pyd",
+    "native_version": "3.7.2",
+    "native_sha256": "272a9ca377411d4986bc5733f541dbf4ef0974846ac1b9d86e5627f784b81933",
+    "input": "D:\\python_project\\manim_extend_rainbow\\video_project\\topology_optimization\\research\\episode3v7\\frame-contract.json",
+    "input_sha256": "b0ab69efea4bb1cbf123fe789385766e72b2c43fdde10a983d6d83d957d0c733",
+    "script_sha256": "194fe048652a57c720511a42de2aba4237ca4b70f206b537d06bdee9ec76161c",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "provisional": false
+  },
+  "coverage": {
+    "nonprimary_component_not_solved": 9,
+    "base_reaction": 4,
+    "beam_solve": 88,
+    "connection_hardware_analytic_nominal_demand": 8,
+    "pressure_panel": 8
+  },
+  "static": {
+    "gravity": {
+      "max_displacement_mm": 0.3549456766386579,
+      "max_normal_stress_MPa": 0.7451769122114209,
+      "equilibrium": {
+        "appliedForce_N": [
+          0.0,
+          0.0,
+          -24434.26940332805
+        ],
+        "appliedMoment_Nm": [
+          -1.1368683772161603e-12,
+          -2.0463630789890885e-12,
+          0.0
+        ],
+        "supportForce_N": [
+          -1.1374226005500532e-09,
+          1.0439471509471332e-10,
+          24434.26940332826
+        ],
+        "supportMoment_Nm": [
+          -8.058123057708144e-10,
+          -5.727997631765902e-09,
+          -9.35230559662159e-10
+        ],
+        "forceResidual_N": [
+          -1.1374226005500532e-09,
+          1.0439471509471332e-10,
+          2.1100277081131935e-10
+        ],
+        "momentResidual_Nm": [
+          -8.069491741480306e-10,
+          -5.730043994844891e-09,
+          -9.35230559662159e-10
+        ],
+        "relativeForceResidual": 4.753690003102011e-14,
+        "relativeMomentResidual": 5.861674449527386e-09
+      }
+    },
+    "wind": {
+      "max_displacement_mm": 0.2732214139303329,
+      "max_normal_stress_MPa": 0.2278426234906893,
+      "equilibrium": {
+        "appliedForce_N": [
+          2227.3241221010526,
+          -5.1822510727106447e-14,
+          365.10566399999925
+        ],
+        "appliedMoment_Nm": [
+          1.2256862191861728e-13,
+          7534.432114318383,
+          -3.304023721284466e-13
+        ],
+        "supportForce_N": [
+          -2227.3241220931463,
+          9.554908864117806e-09,
+          -365.10566400335335
+        ],
+        "supportMoment_Nm": [
+          -3.694981387525331e-08,
+          -7534.432114288704,
+          1.3640374163514934e-08
+        ],
+        "forceResidual_N": [
+          7.906237442512065e-09,
+          9.554857041607078e-09,
+          -3.3541027733008377e-09
+        ],
+        "momentResidual_Nm": [
+          -3.6949691306631394e-08,
+          2.9679540602955967e-08,
+          1.3640043761142806e-08
+        ],
+        "relativeForceResidual": 5.692089141297902e-12,
+        "relativeMomentResidual": 6.545602362189419e-12
+      }
+    },
+    "gravity_wind": {
+      "max_displacement_mm": 0.5522567723061097,
+      "max_normal_stress_MPa": 0.8084199844857431,
+      "equilibrium": {
+        "appliedForce_N": [
+          2227.3241221010526,
+          -5.1822510727106447e-14,
+          -24069.163739328033
+        ],
+        "appliedMoment_Nm": [
+          -2.2737367544323206e-13,
+          7534.432114318375,
+          -3.304023721284466e-13
+        ],
+        "supportForce_N": [
+          -2227.324122094455,
+          9.570958248161787e-09,
+          24069.163739325217
+        ],
+        "supportMoment_Nm": [
+          -3.7251083995215595e-08,
+          -7534.432114295046,
+          1.2063878784829285e-08
+        ],
+        "forceResidual_N": [
+          6.5974745666608214e-09,
+          9.57090642565106e-09,
+          -2.815795596688986e-09
+        ],
+        "momentResidual_Nm": [
+          -3.725131136889104e-08,
+          2.3329448595177382e-08,
+          1.2063548382457157e-08
+        ],
+        "relativeForceResidual": 4.948150591412057e-13,
+        "relativeMomentResidual": 6.049438060838142e-12
+      }
+    },
+    "wind_45deg": {
+      "max_displacement_mm": 0.62637444131324,
+      "max_normal_stress_MPa": 0.875740981061907,
+      "equilibrium": {
+        "appliedForce_N": [
+          1784.6291575070225,
+          1784.629157507022,
+          -24616.822235328036
+        ],
+        "appliedMoment_Nm": [
+          -5903.927526639618,
+          5903.927526639617,
+          3.410605131648481e-13
+        ],
+        "supportForce_N": [
+          -1784.6291575015216,
+          -1784.6291574935549,
+          24616.82223532471
+        ],
+        "supportMoment_Nm": [
+          5903.927526582502,
+          -5903.927526624737,
+          2.212146910096635e-09
+        ],
+        "forceResidual_N": [
+          5.500851329998113e-09,
+          1.3467115422827192e-08,
+          -3.3251126296818256e-09
+        ],
+        "momentResidual_Nm": [
+          -5.7116267271339893e-08,
+          1.4880242815706879e-08,
+          2.2124879706098e-09
+        ],
+        "relativeForceResidual": 6.030272868546979e-13,
+        "relativeMomentResidual": 7.074058083272705e-12
+      }
+    },
+    "wind_90deg": {
+      "max_displacement_mm": 0.6358881383997348,
+      "max_normal_stress_MPa": 0.7924353647884335,
+      "equilibrium": {
+        "appliedForce_N": [
+          1.2315317937114305e-13,
+          2266.7561231186874,
+          -24069.163739328043
+        ],
+        "appliedMoment_Nm": [
+          -7584.332295642805,
+          1.1368683772161603e-13,
+          -3.090860900556436e-13
+        ],
+        "supportForce_N": [
+          -4.838582867705554e-10,
+          -2266.756123111405,
+          24069.163739327036
+        ],
+        "supportMoment_Nm": [
+          7584.332295608081,
+          -9.22773324418813e-09,
+          -1.0086409929499496e-08
+        ],
+        "forceResidual_N": [
+          -4.837351335911843e-10,
+          7.282324077095836e-09,
+          -1.0077201295644045e-09
+        ],
+        "momentResidual_Nm": [
+          -3.472359821898863e-08,
+          -9.227619557350408e-09,
+          -1.0086719015589551e-08
+        ],
+        "relativeForceResidual": 3.047533212231875e-13,
+        "relativeMomentResidual": 4.920382063294358e-12
+      }
+    }
+  },
+  "dynamic_max_displacement_mm": 0.5522984915996436,
+  "dynamic_max_normal_stress_MPa": 0.808428687465143,
+  "inverse": {
+    "rank": 4,
+    "unknowns": 4,
+    "condition_number": 14.191922743376487,
+    "pressure_relative_recovery_error": 0.0004128811159905629,
+    "holdout_relative_error": 0.00028163032296470966,
+    "recovery_passed": true
+  },
+  "passed": true,
+  "peg_nominal_demands": {
+    "parts": 8,
+    "passed": true,
+    "max_gravity_wind_double_shear_MPa": 1.0815476731538554,
+    "limitation": "Force assignment scenario, not local contact FE or a capacity check."
+  }
+}

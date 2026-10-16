@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "llm_hallucination",
+  "title": "大模型幻觉：从概率流到动力学",
+  "category": "computer-science",
+  "status": "source-library",
+  "currentVersion": "18 chapters",
+  "workbench": {
+    "title": "大模型为什么会一本正经地胡说",
+    "seriesId": "rainbow-science",
+    "episode": 8,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/index.ts",
+    "scripts/prepare.py",
+    "scripts/render_manim.py",
+    "scripts/compose_fast.py",
+    "scripts/finalize.py"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "dev": "remotion studio",
+        "build": "remotion bundle",
+        "upgrade": "remotion upgrade",
+        "lint": "eslint src && tsc"
+      },
+      "lockfile": true
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "output/master.mp4"
+    ],
+    "covers": []
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Manim + LaTeX/dvisvgm",
+    "root yty_manim where referenced"
+  ],
+  "notes": [
+    "需要 Manim/LaTeX/FFmpeg/Remotion；compose_fast 使用 NVIDIA NVENC，可改为 libx264；Chromium 的本机 junction 不应复制。"
+  ],
+  "originalMetadata": {}
+}

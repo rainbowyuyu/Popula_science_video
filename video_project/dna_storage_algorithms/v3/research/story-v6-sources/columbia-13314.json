@@ -1,0 +1,133 @@
+{
+  "id": 13314,
+  "date": "2020-01-05T21:32:07",
+  "date_gmt": "2020-01-06T02:32:07",
+  "guid": {
+    "rendered": "http://www.cs.columbia.edu/?p=13314"
+  },
+  "modified": "2024-03-27T13:51:31",
+  "modified_gmt": "2024-03-27T17:51:31",
+  "slug": "soda-2020",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.cs.columbia.edu/2020/soda-2020/",
+  "title": {
+    "rendered": "Papers from the Theory of Computing Group Accepted to SODA 2020"
+  },
+  "content": {
+    "rendered": "\n<p class=\"wp-block-paragraph\">Nine papers from CS researchers were accepted to the ACM-SIAM Symposium on Discrete Algorithms (SODA20), held in Salt Lake City, Utah. The conference focuses on algorithm design and discrete mathematics. </p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/abs/1907.01619\">Learning From Satisfying Assignments Under Continuous Distributions<br></a></strong><font size=\"-1\">Clement Canonne <em>Stanford University</em>, Anindya De <em>University of Pennsylvania</em>, Rocco A. Servedio <em>Columbia University</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">A common type of problem studied in machine learning is learning an unknown classification rule from labeled data. In this problem paradigm, the learner receives a collection of data points, some of which are labeled &#8220;positive&#8221; and some of which are labeled &#8220;negative&#8221;, and the goal is to come up with a rule which will have high accuracy in classifying future data points as either &#8220;positive&#8221; or &#8220;negative&#8221;.</p>\n\n\n\n<p class=\"wp-block-paragraph\">In a SODA 2015 paper, De, Diakonikolas, and Servedio studied the possibilities and limitations of efficient machine learning algorithms when the learner is only given access to one type of data point, namely points that are labeled &#8220;positive&#8221;.  (These are also known as &#8220;satisfying assignments&#8221; of the unknown classification rule.)  They showed that certain types of classification rules can be learned efficiently in this setting while others cannot. However, all of the settings considered in that earlier work were ones in which the data points themselves were defined in terms of &#8220;categorical&#8221; features also known as binary yes-no features (such as &#8220;hairy/hairless&#8221; &#8220;mammal/non-mammal&#8221; &#8220;aquatic/non-aquatic&#8221; and so on).<br>In many natural settings, though, data points are defined in terms of continuous numerical features (such as &#8220;eight inches tall&#8221; &#8220;weighs seventeen pounds&#8221; &#8220;six years old&#8221; and so on).  </p>\n\n\n\n<p class=\"wp-block-paragraph\">This paper extended the earlier SODA 2015 paper&#8217;s results to handle classification rules defined in terms of continuous features as well. It shows that certain types of classification rules over continuous data are efficiently learnable from positive examples only while others are not.</p>\n\n\n\n<p class=\"wp-block-paragraph\">&#8220;Most learning algorithms in the literature crucially use both positive and negative examples,&#8221; said <a href=\"http://www.cs.columbia.edu/~rocco/\">Rocco Servedio</a>. &#8220;So at first I thought that it is somewhat surprising that learning is possible at all in this kind of setting where you only have positive examples as opposed to both positive and negative examples.&#8221; </p>\n\n\n\n<p class=\"wp-block-paragraph\">But learning from positive examples only is actually pretty similar to what humans do when they learn — teachers rarely show students approaches  that fail to solve a problem, rarely have them carry out experiments that don&#8217;t work, etc.  Continued Servedio, &#8220;So maybe we should have expected this type of learning to be possible all along.&#8221;</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1907.04381.pdf\">Nearly Optimal Edge Estimation with Independent Set Queries</a></strong><br><font size=\"-1\">Xi Chen <em>Columbia University</em>, Amit Levi <em>University of Waterloo</em>, Erik Waingarten <em>Columbia University</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">The researchers were interested in algorithms which are given access to a large undirected graph G on n vertices and estimate the number of edges of the graph up to a small multiplicative error. In other words, for a very small ϵ &gt; 0 (think of this as 0.01) and a graph with m edges, they wanted to output a number m&#8217; satisfying (1-ε) m ≤ m&#8217; ≤ (1+ε) m with probability at least 2/3, and the goal is to perform this task without having to read the whole graph. </p>\n\n\n\n<p class=\"wp-block-paragraph\">For a simple example, suppose that the access to a graph allowed to check whether two vertices are connected by an edge. Then, an algorithm for counting the number of edges exactly would need to ask whether all pairs of vertices are connected, resulting in an (n choose 2)-query algorithm since these are all possible pairs of vertices. However, sampling Θ((n choose 2) / (m ε2)) random pairs of vertices one can estimate the edges up to (1± ε)-error with probability 2/3, which would result in a significantly faster algorithm! </p>\n\n\n\n<p class=\"wp-block-paragraph\">The question here is: how do different types of access to the graph result in algorithms with different complexities? Recent work by Beame, Har-Peled, Ramamoorthy, Rashtchian, and Sinha studied certain &#8220;independent set queries&#8221; and &#8220;bipartite independent set queries&#8221;: in the first (most relevant to our work), an algorithm is allowed to ask whether a set of vertices of the graph forms an independent set, and in the second, the algorithm is allowed to ask whether two sets form a bipartite independent set. The researchers give nearly matching upper and lower bounds for estimating edges with an independent set queries.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1907.12106.pdf\">A Lower Bound on Cycle-Finding in Sparse Digraphs</a></strong><br> <font size=\"-1\">Xi Chen <em>Columbia University</em>, Tim Randolph <em>Columbia University</em>, Rocco A. Servedio <em>Columbia University</em>, Timothy Sun <em>Columbia University</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">The researchers imagined situations in which the graph is extremely large and wanted to determine whether or not the graph has cycles in a computationally efficient manner (by looking at as few of the nodes in the graph as possible). As yet, there&#8217;s no known solution to this problem that does significantly better than looking at a constant fraction of the nodes, but they proved a new lower bound &#8211; that is, they found a new limit on how efficiently the problem can be solved. In particular, their proof of the lower bound uses a new technique to capture the best possible behavior of any algorithm for this problem.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Suppose there is a large directed graph that describes the connections between neurons in a portion of the brain, and the number of neurons is very large, say, several billion. If the graph has many cycles, this might indicate that the portion of the brain contains recurrences and feedback loops, while if it has no cycles, this might indicate information flows through the graph in a linear manner. Knowing this fact might help deduce the function of this part of the brain. The paper&#8217;s result is negative &#8211; it provides a lower bound on the number of neurons needed to determine this fact. (This might sound a little discouraging, but this research isn&#8217;t really targeted at specific applications &#8211; rather, it takes a step toward better understanding the types of approaches we need to use to efficiently determine the properties of large directed graphs.)</p>\n\n\n\n<p class=\"wp-block-paragraph\">This is part of a subfield of theoretical computer science that has to do with finding things out about enormous data objects by asking just a few questions (relatively speaking). Said <a href=\"https://twrand.github.io/\">Tim Randolph</a>, &#8220;Problems like these become increasingly important as we generate huge volumes of data, because without knowing how to solve them we can&#8217;t take advantage of what we know.&#8221;</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1904.04828.pdf\">Lower Bounds for Oblivious Near-Neighbor Search</a></strong><br><font size=\"-1\">Kasper Green Larsen <em>Aarhus University</em>, Tal Malkin <em>Columbia University</em>, Omri Weinstein <em>Columbia University</em>, Kevin Yeo <em>Google</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">The paper studies the problem of privacy-preserving (approximate) similarity search, which is the backbone of many industry-scale applications and machine learning algorithms. It obtains a quadratic improvement over the highest *unconditional* lower bound for oblivious (secure) near-neighbor search in dynamic settings. This shows that dynamic similarity search has a logarithmic price if one wishes to perform it in an (information theoretic) secure manner. </p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1903.02758.pdf\">A Face Cover Perspective to $\\ell_1$ Embeddings of Planar Graphs</a></strong><br> <font size=\"-1\">Arnold Filtser <em>Columbia University</em></font> </p>\n\n\n\n<p class=\"wp-block-paragraph\">In this paper the researcher studied the case where there is a set K of terminals, and the goal is to embed only the terminals into `1 with low distortion.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Given two metric spaces $(X,d_X),(Y,d_Y)$, an embedding is a function $f:X\\to Y$. We say that an embedding $f$ has distortion $t$ if for every two points $u,v\\in X$, it holds that $d_X(u,v)\\le d_Y(f(u),f(v))\\le t\\cdot d_X(u,v)$. &#8220;Given a hard problem in a space $X$, it is often useful to embed it into a simpler space $Y$, solve the problem there, and then pull the solution back to the original space $X$,&#8221; said <a href=\"https://www.cs.columbia.edu/~arnoldf/\">Arnold Filtser</a>, a postdoctoral fellow. &#8220;The quality of the received solution will usually depend on the quality of the embedding (distortion), and the simplicity of the host space. Metric embeddings have a fundamental place in the algorithmic toolbox.&#8221;</p>\n\n\n\n<p class=\"wp-block-paragraph\">In $\\ell_1$ distance, a.k.a. Manhattan distance, given two vectors $\\vec{x},\\vec{y}\\in\\mathbb{R}^d$ the distance defined as $\\Vert \\vec{x}-\\vec{y}\\Vert_1=\\sum_i |x_i-y_i|$. A planar graph $G=(V,E,w)$, is a graph that can be drawn in the plane in such a way that its edges $E$ intersect only at their endpoints. This paper studies metric embeddings of planar graphs into $\\ell_1$.</p>\n\n\n\n<p class=\"wp-block-paragraph\">It was conjectured by Gupta et al. that every planar graph can be embedded into $\\ell_1$ with constant distortion. However, given an $n$-vertex weighted planar graph, the best upper bound on the distortion is only &nbsp;$O(\\sqrt{\\log n})$, by Rao. The only known lower bound is $2$&#8217; and the fundamental question of the right bound is quite eluding.</p>\n\n\n\n<p class=\"wp-block-paragraph\">The paper studies the case where there is a set $K$ of terminals, and the goal is to embed only the terminals into $\\ell_1$ with low distortion and it&#8217;s contribution is a further improvement on the upper bound to $O(\\sqrt{\\log\\gamma})$. Since every planar graph has at most $O(n)$ faces, any further improvement on this result, will be a major breakthrough, directly improving upon Rao&#8217;s long standing upper bound.</p>\n\n\n\n<p class=\"wp-block-paragraph\">It is well known that the flow-cut gap equals to the distortion of the best embedding into $\\ell_1$. Therefore, our result provides a polynomial time &nbsp;$O(\\sqrt{\\log \\gamma})$-approximation to the sparsest cut problem on planar graphs, for the case where all the demand pairs can be covered by $\\gamma$ faces.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1911.06924.pdf\">Approximating the Distance to Monotonicity of Boolean Functions</a></strong><br><font size=\"-1\">Ramesh Krishnan Pallavoor <em>Boston University</em>, Sofya Raskhodnikova <em>Boston University</em>, Erik Waingarten <em>Columbia University</em></font> </p>\n\n\n\n<p class=\"wp-block-paragraph\">A Boolean function <em>f : {0,1}<sup>n</sup></em><em> → {0,1}</em> is monotone if for every two points <em>x, y ∈ {0,1}<sup>n</sup></em> where <em>x<sub>i</sub></em><em> ≤ y<sub>i</sub></em> for every <em>i∈[n]</em>, <em>f(x) ≤ f(y)</em>. There has been a long and very fruitful line of research, starting with the <a href=\"http://www.cs.columbia.edu/~rocco/Teaching/S14/Readings/GGLRS-mon.pdf\">work</a> of Goldreich, Goldwasser, Lehman, Ron, and Samorodnitsky, exploring algorithms which can test whether a Boolean function is monotone.&nbsp;</p>\n\n\n\n<p class=\"wp-block-paragraph\">The core question studied in the first paper was: suppose a function <em>f</em> is <em>ϵ</em>-far from monotone, i.e., any monotone function must differ with <em>f</em> on at least an <em>ϵ</em>-fraction of the points, how many pairs of points <em>x, y ∈ {0,1}<sup>n</sup></em> which differ in only one bit <em>i∈[n]</em> (an edge of the hypercube) must satisfy <em>f(x) = 1</em> but <em>f(y) = 0</em> but <em>x ≤ y</em> (a violation of monotonicity)?&nbsp;</p>\n\n\n\n<p class=\"wp-block-paragraph\">The paper focuses on the question of efficient algorithms which can estimate the distance to monotonicity of a function, i.e., the smallest possible <em>ϵ</em> where <em>f</em> is <em>ϵ</em>-far from monotone. It gives a non-adaptive algorithm making <em>poly(n)</em> queries which estimates <em>ϵ</em> up to a factor of <em>Õ(√n)</em>. &#8220;The above approximation is not good since it degrades very badly as the number of variables of the function increases,&#8221; said Erik Waingarten. &#8220;However, the surprising thing is that substantially better approximations require exponentially many non-adaptive queries.&#8221;</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"http://www.inbaltalgam.com/papers/The%20Complexity%20of%20Contracts.pdf\">The Complexity of Contracts</a></strong><br><font size=\"-1\">Paul Duetting <em>London School of Economics</em>, Tim Roughgarden <em>Columbia University</em>, Inbal Talgam-Cohen <em>Technion, Israel Institute of Technology</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">Contract theory is a major topic in economics (e.g., the 2016 Nobel Prize in Economics was awarded to Oliver Hart and Bengt Holmström for their work on the topic). A canonical problem in the area is how to structure compensation to employees (e.g. as a function of sales), when the effort exerted by employees is not directly observable.&nbsp; </p>\n\n\n\n<p class=\"wp-block-paragraph\">This paper provides both positive and negative results about when optimal or approximately optimal contracts can be computed efficiently by an algorithm. The researchers design such an efficient algorithm for settings with very large outcome spaces (such as all subsets of a set of products) and small agent action spaces (such as exerting low, medium, or high effort).</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1907.10874.pdf\">How to Store a Random Walk</a></strong><br><font size=\"-1\">Emanuele Viola <em>Northeastern University</em>, Omri Weinstein <em>Columbia University</em>, Huacheng Yu <em>Harvard University</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">Motivated by storage applications, the researchers studied the problem of &#8220;locally-decodable&#8221; data compression. For example, suppose an encoder wishes to store a collection of n *correlated* files using as little space as possible, such that each individual X_i can be recovered quickly with few (ideally constant) memory accesses.&nbsp;</p>\n\n\n\n<p class=\"wp-block-paragraph\">A natural example is a collection of similar images or DNA strands on a large sever, say, Dropbox. The researchers show that for file collections with &#8220;time-decaying&#8221; correlations (i.e., Markov chains), one can get the best of both worlds. This surprising result is achieved by proving that a random walk on any graph can be stored very close to its entropy, while still enabling *constant* time decoding on a word-RAM. The data structures generalize to dynamic (online) setting.&nbsp; </p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong><a href=\"https://arxiv.org/pdf/1907.06857.pdf\">Labelings vs. Embeddings: On Distributed Representations of Distances</a></strong><br> <font size=\"-1\">Arnold Filtser <em>Columbia University</em>, Lee-Ad Gottlieb <em>Ariel University</em>, Robert Krauthgamer <em>Weizmann Institute of Science</em></font></p>\n\n\n\n<p class=\"wp-block-paragraph\">The paper investigates for which metric spaces the performance of distance labeling and of `∞- embeddings differ, and how significant can this difference be.</p>\n\n\n\n<p class=\"wp-block-paragraph\">A distance labeling is a distributed representation of distances in a metric space $(X,d)$, where each point $x\\in X$ is assigned a succinct label, such that the distance between any two points $x,y \\in X$ can be approximated given only their labels.</p>\n\n\n\n<p class=\"wp-block-paragraph\">A highly structured special case is an embedding into $\\ell_\\infty$, where each point $x\\in X$ is assigned a vector $f(x)$ such that $\\|f(x)-f(y)\\|_\\infty$ is approximately $d(x,y)$. The performance of a distance labeling, or an $\\ell_\\infty$-embedding, is measured by its distortion and its label-size/dimension. &#8220;As $\\ell_\\infty$ is a norm space, it posses a natural structure that can be exploited by various algorithms,&#8221; said <a href=\"https://www.cs.columbia.edu/~arnoldf/\">Arnold Filtser</a>. &#8220;Thus it is more desirable to obtain embeddings rather than general labeling schemes.&#8221; </p>\n\n\n\n<p class=\"wp-block-paragraph\">The researchers also studied the analogous question for the prioritized versions of these two measures. Here, a priority order $\\pi=(x_1,\\dots,x_n)$ of the point set $X$ is given, and higher-priority points should have shorter labels. Formally, a distance labeling has prioritized label-size $\\alpha(.)$ if every $x_j$ has label size at most $\\alpha(j)$. Similarly, an embedding $f: X \\to \\ell_\\infty$ has prioritized dimension $\\alpha(\\cdot)$ if $f(x_j)$ is non-zero only in the first $\\alpha(j)$ coordinates. In addition, they compare these prioritized measures to their classical (worst-case) versions.</p>\n\n\n\n<p class=\"wp-block-paragraph\">They answer these questions in several scenarios, uncovering a surprisingly diverse range of behaviors. First, in some cases labelings and embeddings have very similar worst-case performance, but in other cases there is a huge disparity. However in the prioritized setting, they found a strict separation between the performance of labelings and embeddings. And finally, when comparing the classical and prioritized settings, they found that the worst-case bound for label size often &#8220;translates&#8221; to a prioritized one, but also a surprising exception to this rule.</p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Nine papers from CS researchers were accepted to the ACM-SIAM Symposium on Discrete Algorithms (SODA20), held in Salt Lake City, &hellip; <a href=\"https://www.cs.columbia.edu/2020/soda-2020/\" class=\"more-link\">Continue reading <span class=\"screen-reader-text\">Papers from the Theory of Computing Group Accepted to SODA 2020</span></a></p>\n",
+    "protected": false
+  },
+  "author": 816,
+  "featured_media": 13318,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": null,
+  "categories": [
+    4
+  ],
+  "tags": [
+    978,
+    1127,
+    1236
+  ],
+  "class_list": [
+    "post-13314",
+    "post",
+    "type-post",
+    "status-publish",
+    "format-standard",
+    "has-post-thumbnail",
+    "hentry",
+    "category-research",
+    "tag-computer-science",
+    "tag-computer-science-theory",
+    "tag-soda-2020"
+  ],
+  "acf": [],
+  "thumbnail": "https://www.cs.columbia.edu/wp-content/uploads/2020/01/WebsiteImage_2019_SODA-2020.jpg",
+  "mentioned": null,
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/posts/13314",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/posts"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/types/post"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/users/816"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/comments?post=13314"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 17,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/posts/13314/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 26191,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/posts/13314/revisions/26191"
+      }
+    ],
+    "wp:featuredmedia": [
+      {
+        "embeddable": true,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/media/13318"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/media?parent=13314"
+      }
+    ],
+    "wp:term": [
+      {
+        "taxonomy": "category",
+        "embeddable": true,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/categories?post=13314"
+      },
+      {
+        "taxonomy": "post_tag",
+        "embeddable": true,
+        "href": "https://www.cs.columbia.edu/wp-json/wp/v2/tags?post=13314"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

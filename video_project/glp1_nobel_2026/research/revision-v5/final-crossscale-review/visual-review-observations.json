@@ -1,0 +1,323 @@
+{
+  "reviewer": "transition_audit_now",
+  "reviewMethod": "Actual tools.view_image opening of all listed contact sheets and 17 native-resolution extracted frames. This is sampled still-image visual QA; it is not continuous real-time playback.",
+  "sampledReviewCompleted": true,
+  "continuousPlaybackReviewed": false,
+  "globalVisualPass": false,
+  "status": "requires-render-fixes",
+  "contactSheetsOpened": {
+    "crossscale-current": [
+      "nephron-to-meal-01.jpg",
+      "nephron-to-meal-02.jpg",
+      "nephron-to-meal-03.jpg",
+      "nephron-to-meal-04.jpg",
+      "stomach-to-drug-01.jpg",
+      "stomach-to-drug-02.jpg",
+      "stomach-to-drug-03.jpg",
+      "h040-dining-return-01.jpg",
+      "h040-dining-return-02.jpg",
+      "h040-dining-return-03.jpg",
+      "h040-dining-return-04.jpg",
+      "muscle-to-cell-01.jpg",
+      "muscle-to-cell-02.jpg",
+      "cell-to-muscle-01.jpg",
+      "cell-to-muscle-02.jpg",
+      "cell-to-muscle-03.jpg",
+      "lcell-to-islet-01.jpg",
+      "lcell-to-islet-02.jpg",
+      "lcell-to-islet-03.jpg",
+      "islet-to-receptor-01.jpg",
+      "islet-to-receptor-02.jpg",
+      "islet-to-receptor-03.jpg",
+      "opening-intestine-entry-01.jpg",
+      "opening-intestine-entry-02.jpg",
+      "opening-intestine-entry-03.jpg",
+      "opening-intestine-entry-04.jpg",
+      "opening-person-to-organs-01.jpg",
+      "opening-person-to-organs-02.jpg",
+      "opening-person-to-organs-03.jpg",
+      "opening-person-to-organs-04.jpg",
+      "opening-person-to-organs-05.jpg",
+      "opening-person-to-organs-06.jpg",
+      "atrium-to-clot-01.jpg",
+      "atrium-to-clot-02.jpg",
+      "atrium-to-clot-03.jpg",
+      "atrium-to-clot-04.jpg",
+      "meal-to-measurement-01.jpg",
+      "meal-to-measurement-02.jpg",
+      "meal-to-measurement-03.jpg",
+      "meal-to-measurement-04.jpg",
+      "meal-to-measurement-05.jpg"
+    ],
+    "focused-transitions": [
+      "measurement-entry-01.jpg",
+      "measurement-entry-02.jpg",
+      "measurement-entry-03.jpg",
+      "measurement-entry-04.jpg",
+      "resistance-return-01.jpg",
+      "resistance-return-02.jpg",
+      "muscle-membrane-entry-01.jpg",
+      "muscle-membrane-entry-02.jpg",
+      "lcell-islet-01.jpg",
+      "lcell-islet-02.jpg",
+      "lcell-islet-03.jpg",
+      "islet-receptor-01.jpg",
+      "islet-receptor-02.jpg",
+      "islet-receptor-03.jpg",
+      "receptor-secretion-01.jpg",
+      "receptor-secretion-02.jpg",
+      "statin-receptor-entry-01.jpg",
+      "statin-receptor-entry-02.jpg",
+      "statin-receptor-entry-03.jpg",
+      "statin-receptor-return-01.jpg",
+      "statin-receptor-return-02.jpg",
+      "airway-entry-01.jpg",
+      "airway-entry-02.jpg",
+      "cpap-opening-01.jpg",
+      "cpap-opening-02.jpg",
+      "measurement-exit-01.jpg",
+      "measurement-exit-02.jpg",
+      "measurement-exit-03.jpg",
+      "clot-to-atrium-01.jpg",
+      "clot-to-atrium-02.jpg",
+      "clot-to-atrium-03.jpg",
+      "atrial-anticoagulant-01.jpg",
+      "atrial-anticoagulant-02.jpg",
+      "atrial-anticoagulant-03.jpg"
+    ]
+  },
+  "nativeFramesOpened": [
+    "crossscale-current/frames/frame-014480.jpg",
+    "crossscale-current/frames/frame-014500.jpg",
+    "crossscale-current/frames/frame-014534.jpg",
+    "crossscale-current/frames/frame-014579.jpg",
+    "crossscale-current/frames/frame-007050.jpg",
+    "crossscale-current/frames/frame-007070.jpg",
+    "crossscale-current/frames/frame-007090.jpg",
+    "crossscale-current/frames/frame-007160.jpg",
+    "crossscale-current/frames/frame-011340.jpg",
+    "crossscale-current/frames/frame-011400.jpg",
+    "crossscale-current/frames/frame-003540.jpg",
+    "crossscale-current/frames/frame-003550.jpg",
+    "focused-transitions/frame-018430.jpg",
+    "focused-transitions/frame-018435.jpg",
+    "focused-transitions/frame-018440.jpg",
+    "crossscale-current/frames/frame-001244.jpg",
+    "crossscale-current/frames/frame-001314.jpg"
+  ],
+  "findings": [
+    {
+      "id": "CS-01",
+      "severity": "blocking",
+      "frames": [
+        14480,
+        14500,
+        14510,
+        14520,
+        14534
+      ],
+      "range": [
+        14480,
+        14534
+      ],
+      "title": "Kidney near surface dominates the return",
+      "observation": "At F14480 a very faint nephron is still visible through a broad low-contrast pink surface. F14500 is predominantly a solid-looking kidney surface with almost no explanatory context; shape becomes readable later. Contact sheets show this is not a one-frame flash. The native F14534 finally reads as the kidney.",
+      "evidence": [
+        "crossscale-current/nephron-to-meal-01.jpg",
+        "crossscale-current/nephron-to-meal-02.jpg",
+        "crossscale-current/frames/frame-014480.jpg",
+        "crossscale-current/frames/frame-014500.jpg",
+        "crossscale-current/frames/frame-014534.jpg"
+      ],
+      "recommendation": "Recheck this complete interval after the shared transparent-shader fix before changing organ alpha gates."
+    },
+    {
+      "id": "CS-02",
+      "severity": "blocking",
+      "frames": [
+        3540,
+        3550,
+        3570
+      ],
+      "range": [
+        3540,
+        3570
+      ],
+      "title": "Muscle entry has a low-information blank-to-wall handoff",
+      "observation": "F3540 shows no discernible model in the main scene area, while F3550 is a broad muscle surface and later samples show a micro-fiber strip. Native images confirm the contact-sheet observation.",
+      "evidence": [
+        "crossscale-current/muscle-to-cell-01.jpg",
+        "focused-transitions/muscle-membrane-entry-01.jpg",
+        "crossscale-current/frames/frame-003540.jpg",
+        "crossscale-current/frames/frame-003550.jpg"
+      ],
+      "recommendation": "Validate with the fixed shader path, then inspect the parent-surface to micro-detail overlap frame by frame."
+    },
+    {
+      "id": "CS-03",
+      "severity": "blocking",
+      "frames": [
+        11330,
+        11340,
+        11345,
+        11355
+      ],
+      "range": [
+        11330,
+        11355
+      ],
+      "title": "h040 vessel near wall blocks the explanatory scene",
+      "observation": "Several sampled frames are dominated by a tall solid-looking vessel wall. F11340 native frame has virtually no internal detail; vessel form returns later.",
+      "evidence": [
+        "crossscale-current/h040-dining-return-01.jpg",
+        "crossscale-current/h040-dining-return-02.jpg",
+        "crossscale-current/frames/frame-011340.jpg"
+      ],
+      "recommendation": "Recheck under corrected transparent materials before an additional fade change."
+    },
+    {
+      "id": "CS-04",
+      "severity": "blocking",
+      "frames": [
+        11400,
+        14579,
+        18430,
+        18435,
+        18440,
+        19141,
+        19156,
+        19171
+      ],
+      "title": "Exterior/organ handoff leaves pale shells and visible chair backs",
+      "observation": "F11400 and F14579 are head-and-chest exterior views with chair backs visible through the pale body. In measurement entry, F18430 has organ context; by F18435 organs have disappeared while the body remains very faint, and F18440 is still translucent. Measurement-exit contact sheets similarly show a pale exterior at F19156, followed by visible organs at F19171.",
+      "evidence": [
+        "crossscale-current/frames/frame-011400.jpg",
+        "crossscale-current/frames/frame-014579.jpg",
+        "focused-transitions/frame-018430.jpg",
+        "focused-transitions/frame-018435.jpg",
+        "focused-transitions/frame-018440.jpg",
+        "focused-transitions/measurement-exit-02.jpg"
+      ],
+      "recommendation": "Coordinate body reveal, organ suppression, and chair depth/opacity. Do not describe these as full-body wide views."
+    },
+    {
+      "id": "CS-05",
+      "severity": "blocking",
+      "frames": [
+        3500,
+        4260,
+        4300
+      ],
+      "title": "Trouser waist/crotch has conspicuous dark jagged folds",
+      "observation": "Crossscale contact sheets show rough, dark faceted folds during near views of the trouser waist/crotch, particularly around F4300. This reviewer did not independently open these native frames; person_garment_fix owns the native-frame diagnosis.",
+      "evidence": [
+        "crossscale-current/cell-to-muscle-01.jpg",
+        "crossscale-current/muscle-to-cell-01.jpg"
+      ],
+      "recommendation": "Use person-agent garment topology and shading correction, then visually validate the same final-video angles."
+    },
+    {
+      "id": "CS-06",
+      "severity": "improvement",
+      "frames": [
+        7050,
+        7070,
+        7090,
+        7140,
+        7160,
+        7180
+      ],
+      "title": "Drug-scale transit has real references but some sparse intervals",
+      "observation": "F7050 contains many minute particles; F7070 has discernible red-cell references; F7090 has clear red cells. F7160 has a faint molecule cloud. Thus this is not one sustained blank shot, but there are low-information intervals during scale handoff.",
+      "evidence": [
+        "crossscale-current/stomach-to-drug-01.jpg",
+        "crossscale-current/stomach-to-drug-02.jpg",
+        "crossscale-current/stomach-to-drug-03.jpg",
+        "crossscale-current/frames/frame-007050.jpg",
+        "crossscale-current/frames/frame-007070.jpg",
+        "crossscale-current/frames/frame-007090.jpg",
+        "crossscale-current/frames/frame-007160.jpg"
+      ],
+      "recommendation": "Consider stronger reference retention or shorter low-information intervals, without misrepresenting actual scale."
+    },
+    {
+      "id": "CS-07",
+      "severity": "improvement",
+      "frames": [
+        11836,
+        11851,
+        11926,
+        11941,
+        12132,
+        12222
+      ],
+      "title": "Statin scale transitions contain low-density waypoints",
+      "observation": "The liver-to-LDL-receptor route has organ context, red-cell scale references, and a receptor plane. Some waypoints reduce to near-empty or tiny reference objects. The route is spatially traceable in the samples but the low-information points merit playback review.",
+      "evidence": [
+        "focused-transitions/statin-receptor-entry-01.jpg",
+        "focused-transitions/statin-receptor-entry-02.jpg",
+        "focused-transitions/statin-receptor-return-01.jpg",
+        "focused-transitions/statin-receptor-return-02.jpg"
+      ]
+    },
+    {
+      "id": "CS-08",
+      "severity": "observation",
+      "frames": [
+        1244,
+        1314
+      ],
+      "title": "Opening digestive explanation stays at a relevant organ scale",
+      "observation": "Both native frames clearly show the small intestine at centimeter scale with stomach/liver context and a readable small-intestine callout. These samples do not use an unnecessary molecular zoom.",
+      "evidence": [
+        "crossscale-current/frames/frame-001244.jpg",
+        "crossscale-current/frames/frame-001314.jpg"
+      ]
+    },
+    {
+      "id": "CS-09",
+      "severity": "observation",
+      "title": "Endocrine route retains parent-child scale context",
+      "observation": "Sampled L-cell, islet, beta-cell, and receptor views progress through successive local contexts. The receptor pathway remains recognizable during its stable close-up. Some large cell-membrane views are sparse but do provide a location ring.",
+      "evidence": [
+        "focused-transitions/lcell-islet-01.jpg",
+        "focused-transitions/lcell-islet-02.jpg",
+        "focused-transitions/lcell-islet-03.jpg",
+        "focused-transitions/islet-receptor-01.jpg",
+        "focused-transitions/islet-receptor-02.jpg",
+        "focused-transitions/receptor-secretion-01.jpg",
+        "focused-transitions/receptor-secretion-02.jpg"
+      ]
+    },
+    {
+      "id": "CS-10",
+      "severity": "observation",
+      "title": "Airway/CPAP remain at anatomical scale appropriate to explanation",
+      "observation": "The tongue, posterior pharyngeal wall, and narrowing/opening airway are shown together; the shot does not unnecessarily descend to molecular scale. This is a readability observation, not a clinical anatomy certification.",
+      "evidence": [
+        "focused-transitions/airway-entry-01.jpg",
+        "focused-transitions/airway-entry-02.jpg",
+        "focused-transitions/cpap-opening-01.jpg",
+        "focused-transitions/cpap-opening-02.jpg"
+      ]
+    },
+    {
+      "id": "CS-11",
+      "severity": "observation",
+      "title": "Anticoagulant illustration keeps existing clot material",
+      "observation": "Stable anticoagulant detail samples retain an existing coagulation net while labeling reduction in new network formation, rather than visually deleting the entire prior clot. The heart transition still has large translucent surface patches for separate shader review.",
+      "evidence": [
+        "focused-transitions/atrial-anticoagulant-01.jpg",
+        "focused-transitions/atrial-anticoagulant-02.jpg",
+        "focused-transitions/atrial-anticoagulant-03.jpg"
+      ]
+    }
+  ],
+  "limitations": [
+    "This report judges sampled rendered images, not the validity of every medical claim or every anatomical dimension.",
+    "No audio or pronunciation review was performed by this reviewer.",
+    "Contact sheets do not establish continuous playback smoothness or exclude defects between sampled frames.",
+    "Root/camera and person agents have additional seam and garment evidence; those images are not represented as independently opened by this reviewer.",
+    "Findings describe the final video with SHA cd708646f4815878d84f422bd4e3bb2a072178d8ffc760d96c556b3902d7ee21 and must not be reused as proof that a later render passes."
+  ]
+}

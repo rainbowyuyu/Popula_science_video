@@ -1,0 +1,105 @@
+{
+  "final_file": "delivery/chemistry2026_v01/2026诺贝尔化学奖_让化学选择同一只手_v01_1080p.mp4",
+  "qa_file": "docs/v01/cache-cleanup-gate-v01.json",
+  "required_files": [
+    "src/index-chemistry2026-v01.tsx",
+    "src/chemistry2026/FilmV01.tsx",
+    "src/chemistry2026/timeline-v01.json",
+    "scripts/render_chemistry2026_v01.mjs",
+    "package.json",
+    "package-lock.json",
+    "public/audio-v01/master.wav",
+    "public/fonts/sans.woff2",
+    "public/fonts/serif.woff2",
+    "public/formulas/ee.svg",
+    "public/brand/rainbow-white.svg",
+    "audio/v01/narration-v01.srt",
+    "research/nobelchemistry2026/originals/advanced-chemistryprize2026.pdf"
+  ],
+  "protected_paths": [
+    "src",
+    "scripts",
+    "public",
+    "docs",
+    "research",
+    "audio",
+    "delivery"
+  ],
+  "active_process_patterns": [
+    "node(?:\\.exe)?[^\r\n]*render_chemistry2026_v01\\.mjs"
+  ],
+  "rules": [
+    {
+      "target": "tmp/chemistry-v01-bundle-31644",
+      "kind": "regenerable",
+      "rebuild": "node scripts/render_chemistry2026_v01.mjs rebuilds this Remotion bundle from retained src, public, lockfile and shared dependencies.",
+      "reason": "Completed per-process bundler cache; no persistent source path depends on this PID."
+    },
+    {
+      "target": "tmp/chemistry-v01-bundle-52476",
+      "kind": "regenerable",
+      "rebuild": "node scripts/render_chemistry2026_v01.mjs rebuilds this Remotion bundle from retained src, public, lockfile and shared dependencies.",
+      "reason": "Completed per-process bundler cache; no persistent source path depends on this PID."
+    },
+    {
+      "target": "tmp/chemistry-v01-bundle-57400",
+      "kind": "regenerable",
+      "rebuild": "node scripts/render_chemistry2026_v01.mjs rebuilds this Remotion bundle from retained src, public, lockfile and shared dependencies.",
+      "reason": "Completed per-process bundler cache; no persistent source path depends on this PID."
+    },
+    {
+      "target": "tmp/chemistry-v01-bundle-72396",
+      "kind": "regenerable",
+      "rebuild": "node scripts/render_chemistry2026_v01.mjs rebuilds this Remotion bundle from retained src, public, lockfile and shared dependencies.",
+      "reason": "Completed per-process bundler cache; no persistent source path depends on this PID."
+    },
+    {
+      "target": "tmp/chemistry-v01-bundle-72512",
+      "kind": "regenerable",
+      "rebuild": "node scripts/render_chemistry2026_v01.mjs rebuilds this Remotion bundle from retained src, public, lockfile and shared dependencies.",
+      "reason": "Completed per-process bundler cache; no persistent source path depends on this PID."
+    },
+    {
+      "target": "tmp/chemistry-v01-bundle-74168",
+      "kind": "regenerable",
+      "rebuild": "node scripts/render_chemistry2026_v01.mjs rebuilds this Remotion bundle from retained src, public, lockfile and shared dependencies.",
+      "reason": "Completed per-process bundler cache; no persistent source path depends on this PID."
+    },
+    {
+      "target": "tmp/chemistry-v01-public-31644",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Per-process public staging; delete only files identical to preserved public inputs."
+    },
+    {
+      "target": "tmp/chemistry-v01-public-52476",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Per-process public staging; delete only files identical to preserved public inputs."
+    },
+    {
+      "target": "tmp/chemistry-v01-public-57400",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Per-process public staging; delete only files identical to preserved public inputs."
+    },
+    {
+      "target": "tmp/chemistry-v01-public-72396",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Per-process public staging; delete only files identical to preserved public inputs."
+    },
+    {
+      "target": "tmp/chemistry-v01-public-72512",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Per-process public staging; delete only files identical to preserved public inputs."
+    },
+    {
+      "target": "tmp/chemistry-v01-public-74168",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Per-process public staging; delete only files identical to preserved public inputs."
+    }
+  ]
+}

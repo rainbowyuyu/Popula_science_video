@@ -1,0 +1,87 @@
+{
+  "id": "h040",
+  "partIndex": 0,
+  "ttsText": "所以还要看吃了什么。",
+  "storySHA256": "076d1a98b6ff5edde2c640d45ca8efa7dfe2b60e5a006180c580fdcbdfc17764",
+  "attempt": 1,
+  "seed": 1237159617,
+  "signature": "49bd8ec1ddc0c79cd584ad538825b848727434e79f8939b1e073c4870c796344",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h038-p01",
+    "h038-p02",
+    "h040-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\raw\\h040-p01.wav",
+  "rawSHA256": "87050411b103f5f809f8ec34de52b2e53fe164eba3083eececf6d86535cd6337",
+  "rawMetrics": {
+    "samples48k": 84480,
+    "seconds": 1.76,
+    "peakDBFS": -8.073878300630383,
+    "first20msDBFS": -63.08845515994552,
+    "last20msDBFS": -96.6251212032421,
+    "firstActiveMs": 210.0,
+    "lastActiveToEndMs": 80.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\guarded\\h040-p01.wav",
+  "guardedSHA256": "057ef5483c68829d1e98e926072ff9f83e1686181c8f9c289659c1800cc53ead",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v8\\audio\\candidate-01\\processed\\h040-p01.wav",
+  "sha256": "c3f51b403d5c39427ae9303e398ee6351b44e34a42b7d9d0b753d88f7a8b50e5",
+  "durationSeconds": 2.0,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "057ef5483c68829d1e98e926072ff9f83e1686181c8f9c289659c1800cc53ead",
+    "outputSha256": "c3f51b403d5c39427ae9303e398ee6351b44e34a42b7d9d0b753d88f7a8b50e5",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 2.0,
+      "peakDb": -8.074542567865194,
+      "activeRmsDb": -24.348410409428865,
+      "quietFrameP10Db": -90.42438680050559
+    },
+    "output": {
+      "seconds": 2.0,
+      "peakDb": -3.064221171588833,
+      "activeRmsDb": -21.351136388817178,
+      "quietFrameP10Db": -114.0532148048434
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

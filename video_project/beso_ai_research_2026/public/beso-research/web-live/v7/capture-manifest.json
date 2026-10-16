@@ -1,0 +1,115 @@
+{
+  "schema": "ai-engineer-v7-functional-api-capture-v1",
+  "capturedAt": "2026-10-11T12:07:51.401318+00:00",
+  "execution": "fastapi.testclient using unchanged production router; product pipeline preset function",
+  "apiTransport": "in-process ASGI request/response",
+  "browserStatus": "cua_repl unavailable: no enabled apps or browsers; no new UI recording created",
+  "localOnly": true,
+  "cloudCalls": 0,
+  "solverStarts": 0,
+  "productSourceChanged": false,
+  "parser": "rule_fallback",
+  "workspace": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\work\\v7-product-api-workspace",
+  "actions": [
+    {
+      "kind": "actual_product_api",
+      "method": "POST",
+      "route": "/api/design-requirements/parse",
+      "request": {
+        "text": "设计一台20MW半潜式漂浮风机基础，水深45m，有效波高12m，谱峰周期14s，参考风速11.4m/s，目标钢耗300t/MW，静倾角限值5度，疲劳设计寿命25年，CCS AIP。",
+        "persist": true
+      },
+      "httpStatus": 200,
+      "elapsedMs": 61,
+      "captureMs": 0,
+      "file": "public/beso-research/web-live/v7/01-demand-parsed.json",
+      "sha256": "1e71b2bc24d00f189ca9c124cbe0b984095e0984987815aafa762e14621fe2b7"
+    },
+    {
+      "kind": "actual_product_api",
+      "method": "POST",
+      "route": "/api/design-requirements/89291082ee664ffca38900d586c4fb66/clarify",
+      "request": {
+        "reply": "钢耗改为280t/MW，水深55m，其余保持。",
+        "mode": "edit"
+      },
+      "httpStatus": 200,
+      "elapsedMs": 17,
+      "captureMs": 64,
+      "file": "public/beso-research/web-live/v7/02-demand-edited.json",
+      "sha256": "9c95fbb5972390dd31e79466439f164646fc6ca05a67f11f767d9cb8421b69a4"
+    },
+    {
+      "kind": "actual_product_api",
+      "method": "GET",
+      "route": "/api/design-requirements/89291082ee664ffca38900d586c4fb66",
+      "request": null,
+      "httpStatus": 200,
+      "elapsedMs": 13,
+      "captureMs": 84,
+      "file": "public/beso-research/web-live/v7/03-persisted-readback.json",
+      "sha256": "8a13d54018f32dffa3c5d644caf529dca36080a84bcd57086d8a77b5c74595e2"
+    },
+    {
+      "kind": "actual_product_tool",
+      "tool": "apply_turbine_preset",
+      "arguments": {
+        "preset_id": "20",
+        "checklist_id": "89291082ee664ffca38900d586c4fb66"
+      },
+      "ok": true,
+      "elapsedMs": 23,
+      "file": "public/beso-research/web-live/v7/04-applied-20mw-preset.json",
+      "sha256": "899d6ff094bee185897e4a8ffbfd1fca4363cb39fcdc79a1294fc551668f7d0e"
+    },
+    {
+      "kind": "actual_product_api",
+      "method": "GET",
+      "route": "/api/design-requirements/89291082ee664ffca38900d586c4fb66",
+      "request": null,
+      "httpStatus": 200,
+      "elapsedMs": 15,
+      "captureMs": 123,
+      "file": "public/beso-research/web-live/v7/05-preset-readback.json",
+      "sha256": "74d0fcb078623a6a87d7f979205588dc23bab2a53edcf8032bfe5c94b220ec4b"
+    }
+  ],
+  "visualData": {
+    "file": "public/beso-research/web-live/v7/visual-data.json",
+    "sha256": "aa5ab552fa7d469bde09dbf724793ee960ead8d83cbb96215483e7962a4b35aa"
+  },
+  "persistedFiles": [
+    {
+      "file": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\work\\v7-product-api-workspace\\runs\\_design_brief\\89291082ee664ffca38900d586c4fb66\\design_checklist.json",
+      "sha256": "aedaae9694f7b8df15192f618ba9669a10eaa92baf04110497bcf26fdae1be85"
+    },
+    {
+      "file": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\work\\v7-product-api-workspace\\runs\\_design_brief\\89291082ee664ffca38900d586c4fb66\\design_checklist.md",
+      "sha256": "a5ef94ea6a07ab6ab401ef36471f067e7818a6ebc8518410a54a54dc98d5cc2c"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "file": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+      "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768"
+    },
+    {
+      "file": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+      "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2"
+    },
+    {
+      "file": "D:\\python_project\\beso_ai\\backend\\design_requirements\\clarifications.py",
+      "sha256": "d3e8b43a92183e55ec37fc40648a98d9064121b4d571e3dc4953921e502f10ec"
+    }
+  ],
+  "verified": [
+    "20MW text parsed",
+    "same checklist id edited",
+    "steel target 300→280 t/MW",
+    "water depth 45→55 m",
+    "GET readback persisted edits",
+    "real 20MW preset applied"
+  ],
+  "existingUIAsset": "public/beso-research/web-live/interaction-focused-v5.mp4",
+  "existingUIBoundary": "Previously recorded real results-viewer import and rotation of saved model; no new solve."
+}

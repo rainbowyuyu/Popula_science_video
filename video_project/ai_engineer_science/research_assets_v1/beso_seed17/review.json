@@ -1,0 +1,213 @@
+{
+  "schema": "beso-final-review-v1",
+  "power_mw": 20.0,
+  "seed": 17,
+  "study_role": null,
+  "position_angle_deg": 0.0,
+  "moment_angle_deg": 0.0,
+  "load_circle_center_xy_mm": [
+    0.0,
+    0.0
+  ],
+  "load_circle_z_mm": null,
+  "pattern_name": "center_mx",
+  "status": "passed",
+  "checks": {
+    "solver_completed": true,
+    "solver_terminal_marker": true,
+    "final_state1_exists": true,
+    "final_vtk_exists": true,
+    "load_balance_passed": true,
+    "iteration_history_available": true,
+    "final_history_record_present": true,
+    "solved_history_complete": true,
+    "mass_target_reached": true,
+    "single_face_connected_solid": true,
+    "state1_matches_vtk": true,
+    "strength_passed": true,
+    "written_loads_audited": true,
+    "solid_only_verification_passed": true,
+    "final_fi_finite": true,
+    "convergence_signal": true
+  },
+  "review_reasons": [],
+  "final_artifacts": {
+    "state1": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\file043_state1.inp",
+    "vtk": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\file043.vtk",
+    "parameters_summary": "D:\\python_project\\beso_ai\\runs\\beso9_centered_seed_campaign_v4\\mw_20\\seed_17\\beso_run\\parameters_summary.json"
+  },
+  "artifact_pairing": {
+    "vtk_iteration": 43,
+    "state1_iteration": 43,
+    "note": "采用最后已求解 VTK 及同编号 state1，逐项验证实体单元集合；未求解的振荡状态不作为结果。"
+  },
+  "iterations": {
+    "count": 44,
+    "first": {
+      "iteration": 0,
+      "mass": 1137203125.5579076,
+      "energy_density_mean": 2.5518943315137513e-09,
+      "violated_elements": 0,
+      "fi_mean": 1.7380252933594563e-05,
+      "fi_mean_without_state0": 1.7380252933594563e-05,
+      "fi_max": 0.006424360807745296
+    },
+    "final": {
+      "iteration": 43,
+      "mass": 284289808.4818409,
+      "energy_density_mean": 1.5104944611343092e-08,
+      "violated_elements": 0,
+      "fi_mean": 5.9879585925098235e-05,
+      "fi_mean_without_state0": 5.9879765573819326e-05,
+      "fi_max": 0.006410107208153328
+    },
+    "fi_mean_relative_change_last5": 0.0002103306185799873,
+    "energy_density_relative_change_last5": 0.000797679749643356
+  },
+  "mass": {
+    "initial": 1137203125.5579076,
+    "final": 284289808.4818409,
+    "final_ratio": 0.24998960095911069,
+    "target_ratio": 0.25
+  },
+  "mesh": {
+    "nodes": 16795,
+    "elements": 86207,
+    "active_elements": 21281,
+    "removed_elements": 64926,
+    "active_face_components": 1,
+    "largest_face_component_elements": 21281,
+    "component_sizes": [
+      21281
+    ],
+    "retained_volume_ratio": 0.24998960095911069,
+    "minimum_element_volume_mm3": 2098385.52088389,
+    "active_node_components": 1,
+    "largest_active_component_elements": 21281
+  },
+  "solid_verification": {
+    "method": "independent_calculix_solid_only",
+    "state1_sha256": "6a19407b16ec57b8b733dc1cc8e41d32291fb621fef6385a4134244ed16397f6",
+    "vtk_sha256": "207df1620c3ba08340008f2a0c76d9eb1c16b2dc69d350975e3a70d1e090eb84",
+    "input_sha256": "a9dc80b9ebcfc87edff011f66de17a24218b1cc52f7ba2f689ff8f3850aa95f6",
+    "config_sha256": "b3e5a928db39b1a945884677d6e13f720a13f9b102c13c31840a18db265d1689",
+    "load_case_sha256": "68e579850a2de0cf868e7486df804afe15fe1716387f242d86ae380a1b6b5eb5",
+    "missing_load_nodes": [],
+    "missing_support_nodes": [],
+    "status": "passed",
+    "void_stiffness_present": false,
+    "solver_exit_code": 0,
+    "output_complete": true,
+    "max_displacement_mm": 0.05361952633360573,
+    "max_von_mises_mpa": 6.410106871013997,
+    "allowable_stress_mpa": 1000.0,
+    "fi_max": 0.006410106871013997,
+    "compliance_n_mm": 1096437.8793293177,
+    "strain_energy_j": 548.2189396646588,
+    "applied_resultants": {
+      "force_n": [
+        0.0,
+        6.293786468372003e-08,
+        -21373917.977105517
+      ],
+      "moment_nm": [
+        102808568.6235489,
+        4.685390740633011e-05,
+        1.6543612251060553e-24
+      ]
+    },
+    "reaction_balance": {
+      "force_n": [
+        0.15999999997438863,
+        0.600000062957406,
+        0.422894487157464
+      ],
+      "moment_nm": [
+        -35.85135781764984,
+        18.27604132052511,
+        -4.758957745041698
+      ]
+    },
+    "force_residual_n": 0.7512921021872052,
+    "moment_residual_nm": 40.521367481093186,
+    "force_relative_residual": 2.837000070818211e-08,
+    "moment_relative_residual": 1.2556560541639885e-08
+  },
+  "run_directory": "beso_run",
+  "replan": null,
+  "load_balance": {
+    "balanced": true,
+    "reference_point_mm": [
+      7.637511675727039e-11,
+      2.5566688735532135e-12,
+      17100.0
+    ],
+    "expected_force_n": [
+      0.0,
+      0.0,
+      -21373917.97710295
+    ],
+    "actual_force_n": [
+      0.0,
+      6.293786468372003e-08,
+      -21373917.977105517
+    ],
+    "force_error_n": [
+      0.0,
+      6.293786468372003e-08,
+      -2.566725015640259e-06
+    ],
+    "expected_moment_nm": [
+      102808568.62354246,
+      0.0,
+      0.0
+    ],
+    "actual_moment_nm": [
+      102808568.6235489,
+      4.685390740633011e-05,
+      1.6543612251060553e-24
+    ],
+    "moment_error_nm": [
+      6.4373016357421875e-06,
+      4.685390740633011e-05,
+      1.6543612251060553e-24
+    ],
+    "tolerance": {
+      "force_n": 0.02137391797710295,
+      "moment_nm": 1.0280856862354246
+    },
+    "units": {
+      "force": "N",
+      "coordinate": "mm",
+      "moment": "N*m"
+    }
+  },
+  "load_error_norms": {
+    "force_n": 2.567496539573994e-06,
+    "moment_nm": 4.729405344850962e-05
+  },
+  "load_case": {
+    "force_vector_n": [
+      0.0,
+      0.0,
+      -21373917.97710295
+    ],
+    "moment_vector_nm": [
+      102808568.62354246,
+      0.0,
+      0.0
+    ],
+    "n_cload_lines": 76,
+    "load_circle_center_xy_mm": null,
+    "load_circle_radius_mm": null,
+    "load_circle_z_mm": null,
+    "moment_angle_deg": null
+  },
+  "research_scope": "真实 BESO/CalculiX beso9 完整四面体设计域结果；用于流程与论文方法验证，不是认证载荷结论。",
+  "material_assumptions": {
+    "elastic": "*ELASTIC \n200000,  0.27",
+    "density_kg_per_mm3": 7.833e-06,
+    "allowable_stress_mpa": 1000.0,
+    "source": "beso9 reference configuration; inherited research assumptions"
+  }
+}

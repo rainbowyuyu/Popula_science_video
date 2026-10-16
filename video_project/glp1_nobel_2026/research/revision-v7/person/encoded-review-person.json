@@ -1,0 +1,66 @@
+{
+  "review": "V7 encoded MP4 person and garment sample review",
+  "date": "2026-10-09",
+  "mode": "read-only; actual extracted contact-sheet images opened and inspected",
+  "video": "tmp/v7-full-final/GLP1_V7_1080p.mp4",
+  "videoSHA256FromTechnicalManifest": "d0cd00c79945f09e331c370bdc7c08949a666bc2cbd39301d7af31b90650cfd8",
+  "sourceIndex": "tmp/v7-encoded-qa/sheets/index.json",
+  "actualViewedSheets": [
+    "h001-h002.jpg", "h003-h004.jpg", "h005-h006.jpg",
+    "h007-h008.jpg", "h009-h010.jpg", "h011-h012.jpg",
+    "h013-h014.jpg", "h015-h016.jpg", "h017-h018.jpg",
+    "h077-h078.jpg", "h079-h080.jpg", "h085-h086.jpg",
+    "h087-h088.jpg", "h089-h089.jpg"
+  ],
+  "sheetCount": 14,
+  "clipCount": 27,
+  "sampleFrameCount": 81,
+  "verdict": "No new definite visible blocking defect found in the assigned encoded person/garment samples.",
+  "observations": [
+    {
+      "area": "opening dining and fork grip",
+      "clips": ["h001", "h002"],
+      "frames": [63, 163, 254, 345, 439, 524],
+      "result": "Seated person, tabletop, grip and fork remain coherent at sampled output resolution. The fork has a restrained presentation pose. No obvious ribbon-like forearm collapse or misplaced separate hand was seen. Small food detail is not independently resolved by these contact-sheet thumbnails."
+    },
+    {
+      "area": "initial anatomy reveal",
+      "clips": ["h003", "h004"],
+      "frames": [617, 719, 813, 907, 1005, 1095],
+      "result": "The early standing human sample precedes the transparent anatomy samples; organs remain inside the same overall body coordinates at the sampled endpoints. No encoded positional regression was apparent."
+    },
+    {
+      "area": "sit/stand and shorts",
+      "clips": ["h016", "h017"],
+      "frames": [4199, 4300, 4393, 4489],
+      "result": "Standing calves are in front of the seat, seated hands rest at the armrests, and the chair is already retiring at the later upright sample. Shorts retain two legs and continuous coverage in the standing and seated samples. No definite seat penetration, garment hole or explicit sensitive contour was seen."
+    },
+    {
+      "area": "anatomy after activity",
+      "clips": ["h017", "h018"],
+      "frames": [4489, 4590, 4683, 4774, 4866, 4950],
+      "result": "The sampled standing body and later abdominal/brain overview retain the same anatomical locations. Foreground transparency exposes the intended digestive anatomy without a second displaced torso."
+    },
+    {
+      "area": "late meal, drink and return to activity",
+      "clips": ["h077", "h078", "h079", "h080"],
+      "frames": [21659, 21760, 21851, 21947, 22049, 22143, 22239, 22340, 22433, 22529, 22630, 22723],
+      "result": "The person returns from anatomy into the same dining setup. The output retains distinct drink replacement states and table departure. Standing shorts and subsequent organ reveal remain coherent in the samples. No double cup, new hand/food crossing, obvious garment penetration or duplicated human was observed."
+    },
+    {
+      "area": "closing measurement and standing",
+      "clips": ["h085", "h086", "h087", "h088", "h089"],
+      "frames": [23870, 23966, 24054, 24152, 24263, 24364, 24460, 24554, 24639, 24735, 24842, 24940, 25035, 25131, 25219],
+      "result": "Measurement samples retain seated proportion, upper-arm cuff placement and supported forearm. The later standing person and anatomical overview preserve garment coverage and body alignment. No new encoded person/garment defect was apparent."
+    }
+  ],
+  "blockingFindings": [],
+  "continuityEvidence": "Film04 dense motion review in film-motion-review04.json complements this encoded snapshot review: 22 sheets / 248 actual sampled frames across chair action, meal-to-walk and drink replacement.",
+  "limitations": [
+    "These are actual frames extracted from the encoded MP4, viewed as contact sheets; three frames per assigned clip do not prove frame-by-frame temporal continuity.",
+    "No full real-time playback, audio/pronunciation judgement or exhaustive geometric collision check was performed by this subtask.",
+    "Root agent owns low-motion detector event review and the ending; this report does not clear those technical events on the basis of static images.",
+    "Original teaching skin retains visible mesh faceting; this review checks regressions and blocking action/garment defects, not photorealism."
+  ],
+  "sourceMutations": []
+}

@@ -1,0 +1,16 @@
+基于OpenSEES的分层壳剪力墙单元――THUShell 基于 OpenSEES 的分层壳剪力墙单元―― THUShell Ref: Lu XZ, Xie LL, Guan H, Huang YL, Lu X, A 
+          shear wall element for nonlinear seismic analysis of super-tall buildings 
+          using OpenSees , Finite Elements in Analysis & Design , 
+          2015, 98: 14-25. 清华大学防灾减灾与高性能结构课题组开发了用于模拟剪力墙构件的分层壳单元，下载地址 http://www.luxinzheng.net/download/OpenSEES/THUShell.zip 。 相关下载： 606m 
+          超高层建筑OpenSees算例 分层壳单元基于复合材料力学原理，将一个壳单元沿厚度方向划分成若干层，各层可根据构件的实际尺寸和配筋情况赋予相应的材料 ( 钢筋和混凝土 ) 和厚度，如图 1(a) 所示。计算时首先获得壳单元中心层的应变和曲率，根据各层材料之间满足平截面假定计算得到其它各层的应变，进而由各层的材料本构方程得到各层积分点上的应力，最终通过数值积分得到壳单元的内力。分层壳单元考虑了面内弯曲－面内剪切－面外弯曲之间的耦合作用，能较全面的反映壳体结构的空间力学性能。对于剪力墙内的分布钢筋，将纵向和横向钢筋网离散为正交异性的钢筋层分布在墙体对应的物理位置，如图 1(b) 所示。 (a) 分层壳单元 (b) 钢筋层分布示意图 图 1 
+    分层壳单元示意图 本研究基于分层壳原理开发了多维混凝土材料、多维钢筋材料和分层壳截面，应用分层壳截面定义 OpenSEES 现有的 ShellMITC4 单元可生成分层壳剪力墙单元，其定义流程如图 2 所示。 图 2 
+    分层壳模型构架 一、多维混凝土材料 该命令用于建立 基于损伤力学和弥散裂缝模型 的 多维混凝土材料 。 nDmaterial PlaneStressUserMaterial $matTag 40 7 $fc $ft $fcu $epsc0 $epscu $epstu 
+          $stc $matTag integer tag identifying material $fc concrete compressive strength at 28 days (positive) $ft concrete tensile strength (positive) $fcu concrete crushing strength (negative) $epsc0 concrete strain at maximum strength (negative) $epscu concrete strain at crushing strength (negative) $epstu ultimate tensile strain (positive) $stc shear retention factor nDmaterial PlateFromPlaneStress 
+          $newmatTag $matTag $OutofPlaneModulus $newmatTag new integer tag identifying material deriving from 
+          pre-defined PlaneStressUserMaterial $matTag integer tag identifying PlaneStressUserMaterial $OutofPlaneModulus shear modulus of out plane 二、多维钢筋材料 该命令用于创建多维钢筋材料模型。 nDmaterial PlateRebar $newmatTag 
+          $matTag $sita $newmatTag new integer tag identifying material deriving from 
+          pre-defined uniaxial steel material $matTag integer tag identifying uniaxial steel material $sita define the angle of steel layer, 90 ° (longitudinal 
+          steel), 0 ° (tranverse 
+          steel) 三、 分层壳截面 该命令用于根据多维钢筋材料、多维混凝土材料及其厚度创建分层壳的截面。 section LayeredShell $sectionTag 
+          $nLayers $matTag1 $thickness1...$matTagn $thicknessn $sectionTag unique tag among sections $nLayers total numbers of layers $matTag1 material tag of first layer $thickness1 thickness of first layer …. $matTagn material tag of last layer $thicknessn thickness of last layer 四、算例分析 选取两片一字型剪力墙进行数值模拟验证该模型的可靠性。 表 1 试件参数表 试件编号 截面尺寸 (mm) ( 高 × 宽 × 厚 ) 高宽比 混凝土强度 边缘约束区长度 轴压比 纵筋 箍筋 SW1-1 2000×1000×125 2.0 C30 200 0.1 6 Φ 10 Φ 6@80 SW2-1 1000×1000×125 1.0 C40 200 0.3 6 Φ 10 Φ 6@80 混凝土参数取值如下表： 表 2 混凝土参数表 试件编号 fc(MPa) ft(MPa) fcu(MPa) epsc0 epscu epstu stc SW1-1 20.7 2.07 -4.14 -0.002 -0.005 0.001 0.08 SW2-1 30.8 3.08 -6.16 -0.002 -0.005 0.001 0.05 箍筋离散为正交异性的钢筋层（ 0 °），墙板内纵筋离散为正交异性的钢筋层（ 90 °），边缘约束区内纵筋采用 truss 单元模拟，并与相应壳单元共结点以保证变形协调共同工作。 边缘约束构件和墙板壳单元各使用一个分层壳截面定义，边缘约束区沿厚度方向划分为 10 层，墙板沿厚度方向划分为 8 层。 (a) SW1-1 (b) SW2-1 图 3 试件顶点力―位移滞回曲线 ( 试验数据来源： 章红梅. 
+          剪力墙结构基于性态的抗震设计方法研究[D].上海: 同济大学) 主要完成人：解琳琳，林楷奇 等 指导教师：陆新征，黄羽立（ ARUP ），叶列平 下载地址 http://www.luxinzheng.net/download/OpenSEES/THUShell.zip 个人信息 研究工作 实际工程 论文工作 教学工作 资料下载 专题 其他 我们的实验室 抗倒塌专业委员会

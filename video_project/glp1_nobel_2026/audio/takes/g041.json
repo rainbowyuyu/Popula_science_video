@@ -1,0 +1,69 @@
+{
+  "id": "g041",
+  "text": "肥胖、睡眠呼吸暂停等问题，可能让交感和水盐调节长期偏向升压。腰围、睡眠和血压，也就连在了一起。",
+  "ttsText": "肥胖、睡眠呼吸暂停等问题，可能让交感和水盐调节长期偏向升压。腰围、睡眠和血压，也就连在了一起。",
+  "signature": "235f5241fbf7fabb0af65ee4237791efe06cefc44517dff3c6d3245dd32804f5",
+  "raw": "audio/raw/g041-235f5241fb.wav",
+  "processed": "public/voice/g041.wav",
+  "rawDuration": 9.52,
+  "duration": 9.52,
+  "sha256": "c4d8bd81b2c3db0c978d80571d7db1aa6a3a8bc2d5db791343dea369076b1542",
+  "seed": 593449537,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g041",
+    "g042",
+    "g043",
+    "g044"
+  ],
+  "rawEndpointDB": -96.44564114099433,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "6a9741c38257d0aaf90d17c9e439ec9e97dfe740e89fd881cc48bf2d6361ebe0",
+    "outputSha256": "c4d8bd81b2c3db0c978d80571d7db1aa6a3a8bc2d5db791343dea369076b1542",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.8042163278300336,
+    "input": {
+      "seconds": 9.52,
+      "peakDb": -7.826780039770076,
+      "activeRmsDb": -23.566199670129187,
+      "quietFrameP10Db": -63.71945891880617
+    },
+    "output": {
+      "seconds": 9.52,
+      "peakDb": -4.444596424751792,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.83950407694648
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

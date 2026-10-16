@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "model": "faster-whisper small (local CPU, int8)",
+    "language": "zh",
+    "vad_filter": false,
+    "scope": "spot-check of rewritten clips and acronym-heavy clips; not a human listening transcript",
+    "limitations": [
+      "Whisper often misrecognizes spoken GC and 质检, so these ASR substitutions do not imply TTS errors.",
+      "The standard captions use the authored Chinese text from timeline.json, not the ASR hypotheses."
+    ]
+  },
+  "clips": [
+    {
+      "index": 0,
+      "cueId": "n01",
+      "expected": "一段家庭视频，手机能存，硬盘也能存。",
+      "recognized": "一段家庭视频,手机能存,硬盘也能存。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.42,
+          "text": "一段家庭视频,手机能存,硬盘也能存。"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "cueId": "n02",
+      "expected": "要是换成一滴液体，画面还能留下来吗？",
+      "recognized": "要是换成一滴液体 画面还能留下来吗?",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.92,
+          "text": "要是换成一滴液体 画面还能留下来吗?"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "cueId": "n03",
+      "expected": "科学家试着把文件写进 DNA，再把它读回来。",
+      "recognized": "科学家试着把文件写进DNA,再把它读回来。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.24,
+          "text": "科学家试着把文件写进DNA,再把它读回来。"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "cueId": "n05",
+      "expected": "文件不能只剩一串字母。算法先分片，再给每片加地址。",
+      "recognized": "文件不能只剩一串字母, 算法先分片,再给每片加地址。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.76,
+          "text": "文件不能只剩一串字母, 算法先分片,再给每片加地址。"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "cueId": "n06",
+      "expected": "这样读回片段时，算法知道它来自文件哪一段。",
+      "recognized": "这样读回片段时 算法知道它来自文件哪一段。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.4,
+          "text": "这样读回片段时 算法知道它来自文件哪一段。"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "cueId": "n07",
+      "expected": "看到 DNA，算法已经留下两条线索：内容和地址。",
+      "recognized": "看到DNA算法已经留下两条线索,内容会递止。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.02,
+          "text": "看到DNA算法已经留下两条线索,内容会递止。"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "cueId": "n08",
+      "expected": "写入前，每条候选先过质检。GC 失衡，合成和读取都会变难。",
+      "recognized": "写入前,每条后选先过致见。既C,诗横,合成和读曲都会变难。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.66,
+          "text": "写入前,每条后选先过致见。"
+        },
+        {
+          "start": 3.3,
+          "end": 6.52,
+          "text": "既C,诗横,合成和读曲都会变难。"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "cueId": "n09",
+      "expected": "第二关看同一字母是否连得太长。长串 A，设备容易读错。",
+      "recognized": "第二关,看同一字母是否连得太长,长串A设备容易读错。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.84,
+          "text": "第二关,看同一字母是否连得太长,长串A设备容易读错。"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "cueId": "n14",
+      "expected": "液滴足够多时，解码器先找只有一个未知数的那滴。找回一片，就能继续消掉其他未知数。",
+      "recognized": "叶滴足够多时,解码器先找只有一个未知数的那滴,找回一片,就能继续消掉其他未知数。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.24,
+          "text": "叶滴足够多时,解码器先找只有一个未知数的那滴,"
+        },
+        {
+          "start": 4.6,
+          "end": 7.28,
+          "text": "找回一片,就能继续消掉其他未知数。"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "cueId": "n22",
+      "expected": "读回的短片段，首先要找到自己的位置。",
+      "recognized": "读回的短片段,首先要找到自己的位置。",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.16,
+          "text": "读回的短片段,首先要找到自己的位置。"
+        }
+      ]
+    }
+  ]
+}

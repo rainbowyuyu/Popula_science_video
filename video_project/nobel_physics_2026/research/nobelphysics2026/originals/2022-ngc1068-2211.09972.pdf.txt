@@ -1,0 +1,1122 @@
+                                              Evidence for neutrino emission from the nearby active
+                                                                galaxy NGC 1068
+arXiv:2211.09972v2 [astro-ph.HE] 8 Feb 2024
+
+
+
+
+                                                                                      IceCube Collaboration*
+
+
+                                                                               ∗
+                                                                                   E-mail: analysis@icecube.wisc.edu.
+
+
+
+                                                  We report three searches for high energy neutrino emission from astrophysical
+                                                  objects using data recorded with IceCube between 2011 and 2020. Improve-
+
+                                                  ments over previous work include new neutrino reconstruction and data cali-
+                                                  bration methods. In one search, the positions of 110 a priori selected gamma-
+                                                  ray sources were analyzed individually for a possible surplus of neutrinos over
+
+                                                  atmospheric and cosmic background expectations. We found an excess of
+                                                  79+22
+                                                    −20 neutrinos associated with the nearby active galaxy NGC 1068 at a sig-
+
+                                                  nificance of 4.2 σ. The excess, which is spatially consistent with the direction
+
+                                                  of the strongest clustering of neutrinos in the Northern Sky, is interpreted as
+                                                  direct evidence of TeV neutrino emission from a nearby active galaxy. The in-
+                                                  ferred flux exceeds the potential TeV gamma-ray flux by at least one order of
+
+                                                  magnitude.
+                                               * The full list of collaboration members and their affiliations is included in the supplementary material
+
+
+
+
+                                                                                                     1
+High energy cosmic neutrinos
+
+The observation of the highest-energy cosmic protons and nuclei (1–3) has revealed the exis-
+tence of powerful cosmic particle accelerators but not their nature and location in the universe.
+
+Due to the presence of interstellar magnetic fields, charged cosmic particles change direction
+during their propagation to Earth. Thus, the quest to identify cosmic accelerators relies on
+high-energy photons and neutrinos. Both travel along straight paths and are produced wherever
+
+cosmic rays interact with ambient matter, mainly protons, or photons in or near the acceleration
+sites. Depending on the environment in which these interactions occur, gamma rays can rapidly
+lose energy via several processes, such as pair-production through the interaction with lower
+
+energy photons. Similarly, above TeV energies gamma rays are strongly absorbed over cosmo-
+logical distances through interactions with the extragalactic background light and the cosmic
+microwave background (4). Neutrinos are not affected by absorption during their cosmic jour-
+
+ney, and thus are excellent probes of the most extreme cosmic accelerators. Being among the
+most energetic and enigmatic astrophysical sources in the universe, active galaxies, i.e. galax-
+ies that host an Active Galactic Nucleus (AGN) (5), have long been considered as candidate
+
+neutrino emitters (6–10). The accretion flow of matter into a central supermassive black hole
+(SMBH) powers the AGN, which is typically surrounded by an obscuring, dusty torus, and thus
+the observable characteristics of the AGN depend on the viewing angle. For example, Seyfert II
+
+galaxies (11) are assumed to be viewed edge on with the line of sight passing directly through
+the obscuring torus (12). In some cases, the AGN can launch a strong, narrow jet of accelerated
+plasma. If such a jet is oriented close to the line of sight, the AGN is also called a blazar (13).
+
+   The IceCube Neutrino Observatory (14), based at the Amundsen-Scott South Pole Station
+in Antarctica, is currently the world’s largest detector for neutrinos. Its construction was com-
+pleted on December 18, 2010. The telescope uses one cubic kilometer of the optically trans-
+
+
+
+                                                 2
+parent glacial ice as a detection medium to measure the Cherenkov light emitted by relativistic
+charged particles. These secondary particles are created when neutrinos interact in or near the
+
+instrument. In total, 5160 digital optical modules (DOMs) are installed on 86 vertical cables
+(“strings”), spaced 125 meters apart, thus forming a three-dimensional array in the ice. Each
+DOM records the number of induced photo-electrons, or charges, as a function of time. In
+
+2013, IceCube announced the detection of high-energy neutrinos of extra-terrestrial origin (15).
+The measured flux of these astrophysical neutrinos appears largely isotropic, equally distributed
+among flavors, and can be described by a single power-law energy distribution that extends from
+
+∼10 TeV to PeV energies (16–20), but its origin remains largely unresolved. To date the most
+compelling evidence of a source of high-energy cosmic neutrinos was reported following the
+space and time coincidence of a high-energy IceCube neutrino (21) with the gamma-ray flar-
+
+ing blazar TXS 0506+056 (22–24). TXS 0506+056 has recently been shown to host a standard
+accretion disk and a dusty torus, which has the peculiarity to be also an emitter of high-energy
+radiation and, possibly, cosmic rays (24). Additionally, a recent IceCube study (25) suggests a
+
+correlation of IceCube neutrinos with a catalog composed of 110 known gamma-ray emitters at
+a significance of 3.3 σ. The main contributors are the active galaxy NGC 1068 and the blazars
+TXS 0506+056, PKS 1424+240 and GB6 J1542+6129. The significance of the neutrino excess
+
+from the direction of NGC 1068 was reported as 2.9 σ (25).
+   Here, we present an improved search for neutrino point sources based on new data pro-
+cessing, data calibration, and event reconstruction methods that lead to a more precise neutrino
+
+event characterization and thereby to better signal and background discrimination, as well as a
+more accurate estimate of the neutrino fluxes from potential neutrino sources.
+
+
+
+
+                                               3
+Searching the Northern Sky for point-like neutrino emission
+
+In this paper, we present analyses of data collected with IceCube between May 13, 2011, and
+May 29, 2020. This period covers all the data recorded with the full 86-string detector config-
+
+uration. In contrast, a recently reported result from searches for cosmic neutrino sources (25)
+also included the partial detector configurations with fewer strings, going back to 2008, and
+stopping in spring 2018. In this analysis, we only use the full detector data as our methods de-
+
+pend on uniformly processed data. We have verified that the high-statistics Monte Carlo dataset
+agrees very well with the observed data. The IceCube dataset (26), constructed using selection
+criteria presented in (16), has been reprocessed uniformly, removing the data sample fragmenta-
+
+tion in earlier results, aligning different data-taking conditions and calibrations, and improving
+event reconstructions and resolutions (27). Specifically, for this reprocessing we consistently
+apply the most accurate version of the directional track reconstruction method (SplineReco al-
+
+gorithm (27–29)) to all events recorded throughout the entire data taking period (27). Here, we
+use the latest calibration information that increase the accuracy in the extraction of the charges
+at each DOM and in the corresponding arrival times of Cherenkov photons, thus leading to small
+
+changes in the reconstructed event energies, and in some cases also to the reconstructed event
+directions (27). To ensure a uniform detector response, DOMs of the DeepCore sub-array, com-
+monly used to study ≲ 100 GeV neutrinos, are excluded (16). The resulting dataset, optimised
+
+for νµ -induced track-like events, has a total livetime of 3186 days. The searches presented in
+this work focus on the Northern Sky (δ ≥ −3◦ ), where IceCube sensitivity to individual astro-
+nomical objects is maximal. IceCube uses the Earth as a passive cosmic muon shield and as
+
+target material for neutrinos. Hence, by selecting upward-going events we efficiently reject the
+atmospheric muon background, which contributes less than 0.3% to the final event sample (16).
+A total of around 670,000 neutrino-induced muon tracks pass the final event selection crite-
+
+
+
+                                                4
+ria (16). However, only a small fraction of these events originate from neutrinos produced in
+astrophysical sources. The vast majority arises from the decay of mesons which are produced in
+
+the interaction of cosmic radiation with nuclei of the Earth’s atmosphere. To discriminate neu-
+trinos that originate from individual astrophysical sources from the background of atmospheric
+and diffuse astrophysical neutrinos, we employ the maximum-likelihood method and likelihood
+
+ratio hypothesis testing based on the estimated energy, direction, and angular uncertainty of each
+event (27). The median angular resolution of the single neutrino arrival direction, composed of
+reconstruction error and stochasticity of kinematic processes, is 1.2◦ at 1 TeV, 0.4◦ at 100 TeV,
+
+and 0.3◦ at 1 PeV. For the source emission, we assume in the tests a generic power-law energy
+spectrum, Φνµ +ν̄µ (Eν ) = Φ0 ·(Eν /E0 )−γ , with E0 = 1 TeV and the spectral index γ and the flux
+normalization Φ0 as free parameters (27). This corresponds to two correlated model parameters
+
+which are expressed as a pair (µns , γ), where µns is the mean number of astrophysical neutrino
+events associated with a given point in the sky. Using the declination-dependent effective area
+of the detector and the spectral index γ, µns can be directly converted to Φ0 . Hence, the tuple
+
+of µns and γ fully determines the flux of muon neutrinos Φνµ +ν̄µ at any given energy.
+   Three different searches are presented here. The first search consists of three discrete scans
+of the Northern Sky to identify the location of the most significant excess of high-energy neu-
+
+trino events using three different hypotheses on the spectral index: γ as a free parameter and
+γ fixed to 2.0 and 2.5. The other two tests are done on a list of 110 astronomical objects, all
+located in the Northern Hemisphere: one is the search for the most significant candidate neu-
+
+trino source in the list, the second consists of a binomial test to evaluate the significance of
+observing an excess of k sources with local p-value below or equal to a certain threshold, with
+k going from 1 to 110. Similar to the sky scan, the binomial test is also repeated under the three
+
+spectral index hypotheses. All these searches are performed in the Northern Hemisphere from
+declination δ = −3◦ to δ = 81◦ . Higher declinations are excluded because low energy events
+
+
+                                                5
+tend to line-up completely with the strings of IceCube, complicating the numerical modeling of
+the signal and background in the likelihood. The resulting loss of sky coverage is less than 1%.
+
+   All analysis methods, including the selection of the hypotheses to be tested, were formulated
+a priori. The analysis performance was evaluated using simulations, as well as randomized
+experimental data. The local p-values are determined as the fraction of simulated background-
+
+only experiments, yielding a test statistic greater than or equal to the one obtained from the
+actual experimental data. The global p-value is determined from the smallest local p-value after
+correcting for multiple testing (27). It is used to assess the evidence the data provide against
+
+the background-only assumption, i.e., that the data consist purely of atmospheric and isotropic
+cosmic neutrinos.
+   The discrete scan of the sky maximizes the signal and background likelihood function at
+
+each point on a ∼ (0.2◦ × 0.2◦ ) grid, thus obtaining the local value of the test statistic, the best-
+fit value of the mean number of astrophysical neutrino events (µ̂ns ), and the spectral index (γ̂).
+The scan is repeated with fixed spectral indices γ = 2.0 and γ = 2.5 in order to reduce the im-
+
+pact of background fluctuations which arise from the conventional atmospheric neutrinos in the
+dataset. The conventional atmospheric spectrum follows a power law with γ ≈ 3.7 and hence
+those fluctuations typically yield soft spectral indices with γ ≳ 3. Fixing the spectral index
+
+therefore increases the sensitivity to astrophysical sources with harder spectra. For the 20 most
+significant hot-spots in each of the three searches, the vicinity is scanned with increased reso-
+lution of ∼ (0.03◦ × 0.03◦ ) on a square grid of total size 1.5◦ × 1.5◦ . Overall, the hottest spot
+
+is identified in the first scan with free spectral index at right ascension 40.69◦ and declination
+0.09◦ (J2000) with γ̂ = 3.2 and µ̂ns = 81.
+   The full skymap is shown in Figure 1. At the location of the hottest spot, the local p-value of
+
+5 × 10−8 corresponds to a local significance of 5.3 σ. After including a penalty for the multiple
+tests performed, i.e. asking how likely it is to observe an equal or larger significance when
+
+
+                                                  6
+Figure 1: Skymap of the scan for point sources in the Northern Hemisphere. The color scale
+represents the local p-value obtained from the maximum likelihood analysis evaluated (with the
+spectral index as free fit parameter) at each location in the sky, shown in Equatorial coordinates
+with Hammer-Aitoff projection. The black circles indicate the three most significant objects in
+the source list search. The circle of NGC 1068 also coincides with the overall hottest spot in the
+Northern Sky.
+
+scanning many independent positions in the sky under the three spectral index hypotheses, the
+global p-value corresponds (27) to a significance of 2.0 σ and therefore is not significant when
+
+the entire Northern Sky is scanned without additional prior information. A high-resolution scan
+around the best-fit position of the hottest spot is shown in Fig. 2.
+   As part of the various inspections to be carried out a posteriori, we also searched for astro-
+
+physical counterparts in close proximity with the direction of the five locally most significant
+spots in each of the three skymaps (reported in Tab. 2 (27)). We note that the nearby Seyfert I
+galaxy NGC 4151 (11) is located at ∼0.18 degrees distance from the fourth-hottest spot in the
+
+map obtained with γ=2.5. Because possible neutrino emission from NGC 4151 is not one of
+the hypotheses that were formulated for this work, we cannot estimate a global p-value for this
+coincidence.
+
+   Searching the entire Northern Hemisphere entails a strong penalty due to testing multiple
+
+
+                                                 7
+locations. A standard way to mitigate this trial factor is to reduce the search to a list of a
+priori selected positions in the sky based, for example, on known gamma-ray emission (30).
+
+Such a procedure has been followed by IceCube since the first analysis (31), and revised in
+2018 using recent multi-wavelength information (25). No indication of neutrino emission from
+NGC 1068 was noticeable at the time (32) when the selection method of candidate sources was
+
+updated (25). To avoid confirmation bias the procedure from (25) was kept to select a total
+of 110 objects within the declination range of this analysis, −3◦ ≤ δ ≤ 81◦ . The number of
+110 objects was chosen such that a local 5 σ detection will yield a final result above 4 σ after
+
+accounting for trials. To select the 110 astronomical objects, we consider the gamma-ray flux
+above 1 GeV of the Fermi-LAT sources in the 4FGL-DR2 catalog (33) weighted by the IceCube
+sensitivity. The final catalog contains 59 BL Lacs, 34 FSRQs, 2 blazars of uncertain type, 5
+
+AGNs, 9 galaxies, and one Galactic source from the TeVCAT catalog (34), see also (27). We
+do not further impose or require any relationship between the observed gamma-ray flux and the
+hypothesized neutrino flux when testing the selected objects for an association to neutrinos (27).
+
+   Among the 110 astronomical objects tested, NGC 1068 is the most significant with a local
+p-value of 1 × 10−7 (5.2 σ) and with best-fit values of spectral index γ̂ = 3.2 and mean number
+of signal events µ̂ns = 79. NGC 1068 is contained within the 68% confidence region around the
+
+hottest spot in the Northern Sky, located at a distance of 0.11◦ . Thus, the hottest spot location
+is consistent with possible neutrino emission from NGC 1068 (Fig. 2). After correcting for
+having tested the 110 sources in the catalog, the global p-value for NGC 1068 is 1.1 × 10−5 ,
+
+corresponding to a significance of 4.2 σ.
+To investigate the source catalog for an excess of k sources with local p-value below or equal to
+a certain threshold, we also perform a binomial test (27), as defined a priori. By scanning the
+
+p-value threshold, we find the smallest background probability for an excess of k = 3 sources,
+tested under the free spectral index hypothesis, with local p-values smaller or equal to 4.6×10−6 .
+
+
+                                                8
+                                                                       Signal                 Total
+                                                                       Background             Data
+
+
+                                                              80
+
+
+                                                              60
+
+
+
+
+                                                    #Events
+                                                              40
+
+
+                                                              20
+
+
+
+
+                                                                   0   1       2          3       4
+                                                                               ψ̂ 2 [deg2 ]
+
+
+Figure 2: The sky region around the most significant spot in the Northern Hemisphere
+and NGC 1068. The left plot shows a fine scan of the region around the hottest spot. The spot
+itself is marked by a yellow cross and the red star shows the position of NGC 1068. In addition,
+the solid and dashed contours show the 68% (solid) and 95% (dashed) confidence regions of
+the hot spot localization. The right plot shows the distribution of the squared angular distance
+between NGC 1068 and the reconstructed event direction. From Monte Carlo we estimate the
+background (orange) and the signal (blue) assuming the best-fit spectrum at the position of
+NGC 1068. The superposition of both components is shown in gray and provides an excellent
+match to the data (black). Note that this representation of the result neglects all the information
+on the energy and angular uncertainty of the events that is used in the unbinned maximum
+likelihood approach.
+
+This results in a local significance of 3.7 σ, a small increase with respect to what was reported
+
+in (25) that is independent of the increase of the significance at the location of NGC 1068.
+After correcting for having tested three different spectral index hypotheses, we obtain a final
+post-trial significance of 3.4 σ for the binomial test. Besides NGC 1068, the other two objects
+
+contributing to the excess are the blazars PKS 1424+240 and TXS 0506+056, for which we
+find potential neutrino emission with local significance of 3.7 σ and 3.5 σ, respectively. We
+emphasize that the significance of TXS 0506+056 reported here relates to a time-integrated
+
+
+                                                9
+ Test type                                Pre-trial p-value (plocal )   Post-trial p-value (pglobal )
+ Northern Hemisphere scan                   5.0 × 10−8 (5.3 σ)             2.2 × 10−2 (2.0 σ)
+ List of candidate sources, single test     1.0 × 10−7 (5.2 σ)             1.1 × 10−5 (4.2 σ)
+ List of candidate sources, binomial test   4.6 × 10−6 (4.4 σ)             3.4 × 10−4 (3.4 σ)
+
+Table 1: Summary of final p-values. For each of the three tests performed in this work, we
+report the local and global best p-values.
+
+
+signal, whereas previous analyses have provided evidence for transient emission (22, 23, 35).
+Such emission has not been tested in this work, which is instead optimized to measure possible
+steady neutrino fluxes over the whole period of the data taking. Compared to the methods
+
+presented here, a search for transient emission has a lower effective background. The total
+number of contributing candidate sources (k = 3) in the binomal test has been reduced by
+one compared to (25). While the local significance of PKS 1424+240 increased from 3.0 σ to
+
+3.7 σ, the local significance of GB6 J1542+61 decreased from 2.9 σ to 2.2 σ, falling now below
+the threshold corresponding to the best binomial p-value. The results of all three searches are
+summarized in Tab. 1. Additional details can be found in (27).
+
+
+Neutrino emission from the direction of NGC 1068
+
+A high-resolution scan around the most significant spot in the Northern Hemisphere is shown
+in Fig. 2 (left), with NGC 1068 located inside the 68% confidence region. The excess at the
+position of NGC 1068 is produced by µ̂ns =79+22
+                                            −20 events above the expectation from the atmo-
+
+spheric and diffuse astrophysical neutrino backgrounds. The systematic error on µ̂ns is around
+2 events (27). Among the 79 most contributing events, 63 were recorded during the time pe-
+riod that overlaps with the previous analysis (25) and all of them contributed to the previous
+
+result. Fig. 2 shows the distribution of all events in the vicinity of NGC 1068, as well as the
+confidence contours for the source location obtained in this work. The measured spectral index
+
+
+                                               10
+is γ̂ = 3.2+0.2
+           −0.2 with an estimated systematic uncertainty of 0.07 (27) and is thus consistent with
+
+the previous result reported in (25). Systematic uncertainties arise mainly from the modeling of
+
+the photon propagation in the glacial ice, e.g. scattering and absorption, as well as the efficiency
+with which they are detected by the IceCube optical modules. Systematic uncertainties are sub-
+dominant to statistical ones for directional track reconstructions (27), but have a non-negligible
+
+effect on the energy reconstructions, as the observed light yield is altered. The impact of these
+systematic uncertainties on the measured neutrino spectrum is estimated by analyzing simulated
+data, assuming a source with flux equal to the one measured for NGC 1068 but varying ice and
+
+detector properties correspondingly (27).
+   A detailed characterization of the source spectrum is shown in Fig. 3, where we report
+the likelihood as a function of the model parameters (Φ0 , γ) evaluated at the coordinates of
+
+NGC 1068. The conversion of µ̂ns to the flux Φ0 also accounts for the contribution from tau
+neutrino interactions which produce muons in the final state assuming an equal neutrino flavor
+ratio. The best-fit flux averaged over the data-taking period at a neutrino energy of 1 TeV is
+
+Φ1νµTeV
+     +ν̄µ = (5.0 ± 1.5stat ± 0.6sys ) × 10
+                                          −11
+                                              TeV−1 cm−2 s−1 . Here, the systematic uncertainty is
+estimated by varying the flux normalization under different ice and detector properties such that
+we reproduce the experimental result of γ̂ and µ̂ns in the median case.
+
+   The unbroken power-law assumption used as spectral model in the likelihood is defined over
+the entire energy range of the dataset. However, the main contribution to the excess and thus the
+measured spectral index and flux normalization comes from neutrinos in an energy range from
+
+1.5 TeV to 15 TeV. This energy range is defined as the range that contributes 68% to the total
+test statistic value of the measurement. Outside of this energy range, the data does not strongly
+constrain the inferred flux properties. Our results significantly strengthen the suggestive results
+
+reported in (25), where this source was also identified as the strongest association, albeit at
+reduced significance (2.9 σ) and larger separation from the hottest spot in the Northern sky
+
+
+                                                11
+Figure 3: Profile likelihood scan for the flux parameters of NGC 1068. The cross shows the
+best-fit value, solid and dashed lines represent 68% and 95% confidence levels derived from
+Wilks’ Theorem, respectively. The side panels show the corresponding one-dimensional profile
+likelihoods. All contours include only statistical uncertainties.
+
+(0.35◦ ).
+
+    The increased significance of the neutrino hotspot in spatial coincidence with NGC 1068
+can be traced to several (sometimes small) improvements applied to the entire sample before
+unblinding the data. The principle contributions come from 1) the new data processing, 2) the
+
+new calibration methods, and 3) the improved analysis methods and tools including a signifi-
+cantly more accurate characterization of IceCube point spread function and better estimation of
+both the event energy and angular uncertainty (27).
+
+    For instance, a reduced significance of 3.8 σ would have been obtained had we analyzed this
+sample of events based on the same up-to-date data calibration methods and associated event
+
+
+                                              12
+directions, but without these new methods. This difference is expected and can be reproduced
+in Monte Carlo studies, see (27). Incrementally removing the most significant events from the
+
+hot spot reveals that the excess persists, which demonstrates that the hot spot is not dominated
+by one or a few single events but is the result of an accumulation of neutrinos from this partic-
+ular direction (27). The neutrino events contributing to the excess from NGC 1068 have been
+
+visually inspected, and show well-reconstructed horizontal ∼TeV energy track events with no
+sign of unexpected contamination or anomalies (27). Out of the 20 events contributing most to
+the results presented here, 19 were included in the previous analysis (25). Although the hot spot
+
+is thus dominated by the same neutrinos, the new data reprocessing and improved modeling of
+the likelihood function slightly change the precise evaluation of the events’ characteristics and
+therefore their contribution to the likelihood function. These small but consistent recalibrations
+
+and the effects of the refined reconstructions align the events more precisely with the direction
+of NGC 1068, thus significantly strengthening the neutrino association (27).
+
+
+NGC 1068 as a neutrino source
+
+The signal identified during the 3186 days period of IceCube data taking in the complete con-
+figuration consists of an estimated 79+22
+                                      −20 muon-neutrino events that are present in addition to
+
+the expected background. Scaling the 1 TeV muon neutrino flux normalization Φ1νµTeV
+                                                                                 +ν̄µ = (5.0 ±
+
+1.5stat ) × 10−11 TeV−1 cm−2 s−1 by a factor of 3 we obtain the all-flavor neutrino flux, as-
+suming equal contributions from all flavors, e.g. from pion decay dominated sources and neu-
+
+trino oscillations over cosmic distances (36, 37). In the following we adopt a distance of 14.4
+Mpc for NGC 1068 (38), as most commonly used in the literature, but note that there is some
+uncertainty with values ranging between 10.3 ± 3 Mpc (from the NASA/IPAC Extragalactic
+
+Database) using the Tully-Fisher relation and 16.5 Mpc (39). The resulting redshift-corrected
+isotropic equivalent neutrino luminosity in the neutrino energy range from 1.5 TeV to 15 TeV
+
+                                               13
+is Lν = (2.9 ± 1.1stat ) × 1042 erg s−1 . This is significantly higher than the isotropic equivalent
+gamma-ray luminosity observed by Fermi-LAT of 1.6 × 1041 erg s−1 in the energy range be-
+
+tween 100 MeV and 100 GeV (40), and higher than the upper limits recently reported by the
+MAGIC collaboration (41) (see Fig. 4).
+
+                                   Murase et al νµ + ν̄µ        IceCube νµ + ν̄µ           Archival data
+                                   Inoue et al νµ + ν̄µ         4FGL-DR2                   MAGIC
+
+                         10−9
+
+
+                         10−10
+ E 2 φ [TeV cm−2 s−1 ]
+
+
+
+
+                         10−11
+
+
+                         10−12
+
+
+                         10−13
+
+
+                         10−14
+                                 10−15    10−12    10−9    10−6     10−3     100     103       106
+                                                           Energy [GeV]
+
+
+Figure 4: Spectral energy distribution of NGC 1068. Gray points show publicly available
+multi-frequency measurements (42). Dark and light green error bars refer to gamma-ray mea-
+surements from Fermi-LAT (33, 43) and MAGIC (41), respectively. The solid, dark blue line
+shows the best-fit neutrino spectrum, and the corresponding blue band covers all powerlaw
+neutrino fluxes that are consistent with the data at 95% C.L. It is shown in the energy range
+between 1.5 TeV and 15 TeV where the flux measurement is well constrained. Two theoretical
+AGN core models are shown for comparison: The light blue shaded region and the gray line
+show the NGC 1068 neutrino emission models from (44) and (45), respectively. Additional de-
+tails on the model construction of the light blue shaded region can be found in (46).
+
+                  High-energy neutrinos are generated in or near astronomical sources as decay products of
+charged mesons produced in proton-proton interactions (47), or interactions between protons
+and low energy ambient radiation (48) (for a review see (49)). Along with those neutrinos,
+
+                                                           14
+gamma rays are produced in the same processes through the decay of neutral mesons. After
+production, the neutrinos escape the site without further interactions. The photons, on the other
+
+hand, are prone to reactions depending on the optical depth of the environment. Hence the
+connection between neutrinos and gamma rays is highly dependent on the astrophysical envi-
+ronment in which the accelerated cosmic particles interact. NGC 1068 (11) is one of the closest
+
+and best-studied Seyfert II galaxies. It hosts a Compton-thick AGN (50–52), is also known
+for vigorous starburst activity (53, 54) and outflows (55), and has therefore been discussed as
+a potential source of high-energy neutrinos (56–58). Recent neutrino emission models (44, 45)
+
+renewed the interest in the production of neutrinos and gamma-rays within the heavily obscured
+environment around its core (56,59). In those models the supermassive black hole in the galaxy
+center provides the acceleration conditions, and the intrinsic X-ray photons generated through
+
+photon Comptonization from the accretion disk in the hot plasma above the disk, the so-called
+corona, provide the conditions for the production of neutrinos and at the same time also for
+the strong absorption of gamma rays. A comparison of the neutrino flux measurement and two
+
+recent model estimations (44,45) are reported in Fig. 4. Since NGC 1068 appears as a point-like
+neutrino source to IceCube, we cannot pinpoint directly which of its components is responsible
+for the neutrino emission.
+
+   The evidence of neutrino emission from NGC 1068 suggests that AGN could make a sub-
+stantial contribution to the diffuse neutrino flux observed by IceCube. However, Fig. 5 demon-
+strates that in their respective energy ranges the sources NGC 1068 and the blazar TXS 0506+056
+
+contribute no more than ∼ 1% to the overall diffuse flux of astrophysical neutrinos. A more
+quantitative comparison is challenging: for NGC 1068 the estimated flux ranges to energies
+not well covered by the measurements of the total diffuse flux, and, with a best-fit spectral in-
+
+dex of γ̂ = 3.2+0.2
+               −0.2 , the spectrum of NGC 1068 appears to be softer than the diffuse flux with
+
+γ = 2.53+0.07
+        −0.07 (17). Nonetheless, it is evident that there is room for both additional bright and
+
+
+
+                                               15
+                                                          NGC 1068              Astro. νµ
+                                                          TXS 0506+056          Astro. νe ντ
+
+                Eν2 φν+ν̄ [TeV cm−2 s−1 ]   10−9
+
+
+
+                                            10−11
+
+
+
+                                            10−13
+
+
+
+                                                    103     104        105          106        107
+                                                                     Eν [GeV]
+
+
+Figure 5: Comparison of point-source fluxes for NGC 1068 and TXS 0506+056 from this
+analysis with the total diffuse astrophysical neutrino flux (16, 17). Fluxes are given for a
+single flavor of neutrinos and anti-neutrinos assuming equal flavour ratio. The bands provide
+simultaneous coverage at 68% C.L.
+
+nearby sources, like NGC 1068, as well as a large population of faint sources. For example, the
+
+nearby Seyfert I galaxy NGC 4151 has been suggested as one plausible candidate (46, 60, 61).
+Depending on the luminosity function and cosmological evolution of the underlying population
+of sources, the contribution from many faint sources at large distances (z ≳ 1) to the diffuse
+
+neutrino flux can be large (62, 63).
+   The presented evidence of neutrinos from NGC 1068 is insufficient to further characterize
+the underlying source population, for example its luminosity function and cosmological evolu-
+
+tion. However, the observation provides some limited information on the density ρ of objects
+with similar or greater neutrino luminosity in the local universe – independent of the precise
+emission processes. Considering one source within a spherical volume of radius 14.4 Mpc (38),
+
+the distance to NGC 1068, would lead to ρ ≈ 10−4 Mpc−3 . Given that this density estimate
+relies on the observation of a single source, which may or may not be representative of the
+
+
+                                                                   16
+population, its uncertainty towards smaller densities is expected to be large and is difficult to
+quantify. Simulations of populations with various luminosity functions (64) show that it can
+
+reach well beyond an order of magnitude. Nevertheless, despite the intrinsic uncertainty in
+estimating the density, the nearness of NGC 1068 compared to TXS 0506+056, which is ap-
+proximately 100 times farther away, indicates that there are at least two populations of neutrino
+
+sources that differ in both density and luminosity by orders of magnitude.
+   Thanks to new reprocessing, recalibration and reconstruction of the IceCube data, we have
+presented here experimental evidence of neutrino emission from the active galaxy NGC 1068 at
+
+the 4.2 σ level of significance, which can be interpreted as a smoking gun signature of hadronic
+particle acceleration at this source. The evidence is supported by phenomenological scenarios
+(44, 45) that also predict a significant absorption of gamma-ray photons. Including the blazar
+
+TXS 0506+056 (23), the active galaxy NGC 1068 is the next compelling source of high-energy
+neutrinos, albeit with possibly very different emission mechanisms, pointing to a population of
+neutrino sources with obscured gamma-ray emission.
+
+
+References and Notes
+
+ 1. J. Abraham, et al., Nucl. Instrum. Meth. A523, 50 (2004).
+
+ 2. A. Aab, et al., Nucl. Instrum. Meth. A798, 172 (2015).
+
+ 3. T. Abu-Zayyad, et al., Nucl. Instrum. Meth. A689, 87 (2013).
+
+ 4. A. De Angelis, G. Galanti, M. Roncadelli, Mon. Not. Roy. Astron. Soc. 432, 3245 (2013).
+
+ 5. P. Padovani, et al., Astron. Astrophys. Rev. 25, 2 (2017).
+
+ 6. V. S. Berezinsky (1977), vol. 1 of Proc. Int. Conference Neutrino-77, p. 177.
+
+ 7. D. Eichler, Astrophys. J. 232, 106 (1979).
+
+                                                 17
+ 8. V. S. Berezinskii, V. L. Ginzburg, Mon. Not. Roy. Astron. Soc. 194, 3 (1981).
+
+ 9. K. Mannheim, P. L. Biermann, Astron. Astrophys. 221, 211 (1989).
+
+10. F. Halzen, E. Zas, Astrophys. J. 488, 669 (1997).
+
+11. C. K. Seyfert, Astrophys. J. 97, 28 (1943).
+
+12. R. Antonucci, Annu. Rev. Astron. Astrophys. 31, 473 (1993).
+
+13. C. M. Urry, P. Padovani, Publ. Astron. Soc. Pac. 107, 803 (1995).
+
+14. M. G. Aartsen, et al., JINST 12, P03012 (2017).
+
+15. M. G. Aartsen, et al., Science 342, 1242856 (2013).
+
+16. M. G. Aartsen, et al., Astrophys. J. 833, 3 (2016).
+
+17. M. G. Aartsen, et al., Phys. Rev. Lett. 125, 121104 (2020).
+
+18. R. Abbasi, et al., arXiv e-prints 2011.03561 (2020).
+
+19. M. G. Aartsen, et al., Nature 591, 220 (2021).
+
+20. R. Abbasi, et al., Phys. Rev. D 104, 022002 (2021).
+
+21. M. G. Aartsen, et al., Astropart. Phys. 92, 30 (2017).
+
+22. M. G. Aartsen, et al., Science 361, eaat1378 (2018).
+
+23. M. G. Aartsen, et al., Science 361, 147 (2018).
+
+24. P. Padovani, F. Oikonomou, M. Petropoulou, P. Giommi, E. Resconi, Mon. Not. Roy. Astron.
+    Soc. 484, L104 (2019).
+
+
+                                               18
+25. M. G. Aartsen, et al., Phys. Rev. Lett. 124, 051103 (2020).
+
+26. M. G. Aartsen, et al., Eur. Phys. J. C 79, 234 (2019).
+
+27. Material and methods are available as supplementary materials on Science online.
+
+28. J. Ahrens, et al., Nucl. Instrum. Meth. A 524, 169 (2004).
+
+29. R. Abbasi, et al., Journal of Instrumentation 16, P08034 (2021).
+
+30. T. K. Gaisser, R. Engel, E. Resconi, Cosmic Rays and Particle Physics: 2nd Edition (Cam-
+    bridge University Press, 2016).
+
+31. R. Abbasi, et al., Astrophys. J. Lett. 701, L47 (2009).
+
+32. M. Aartsen, et al., Astrophys. J. 835, 151 (2017).
+
+33. S. Abdollahi, et al., Astrophys. J. Suppl. 247, 33 (2020).
+
+34. S. P. Wakely, D. Horan, International Cosmic Ray Conference (2008), vol. 3 of Interna-
+    tional Cosmic Ray Conference, pp. 1341–1344.
+
+35. P. Padovani, et al., Mon. Not. Roy. Astron. Soc. 480, 192 (2018).
+
+36. M. Bustamante, J. F. Beacom, W. Winter, Phys. Rev. Lett. 115, 161302 (2015).
+
+37. C. A. Argüelles, T. Katori, J. Salvado, Phys. Rev. Lett. 115, 161303 (2015).
+
+38. J. Bland-Hawthorn, et al., Astrophysics and Space Science 248, 9 (1997).
+
+39. Gravity Collaboration, et al., Astron. Astrophys. 634, A1 (2020).
+
+40. M. Ajello, et al., Astrophys. J. 892, 105 (2020).
+
+41. V. A. Acciari, et al., Astrophys. J. 883, 135 (2019).
+
+                                               19
+42. Y.-L. Chang, C. Brandt, P. Giommi, Astron. Comput. 30, 100350 (2020).
+
+43. J. Ballet, T. H. Burnett, S. W. Digel, B. Lott (2020).
+
+44. Y. Inoue, D. Khangulyan, A. Doi, Astrophys. J. Lett. 891, L33 (2020).
+
+45. K. Murase, S. S. Kimura, P. Meszaros, Phys. Rev. Lett. 125, 011101 (2020).
+
+46. Y. Inoue, D. Khangulyan, S. Inoue, A. Doi, Astrophys. J. 880, 40 (2019).
+
+47. S. R. Kelner, F. A. Aharonian, V. V. Bugayov, Phys. Rev. D 74, 034018 (2006). [Erratum:
+    Phys.Rev.D 79, 039901 (2009)].
+
+48. S. R. Kelner, F. A. Aharonian, Phys. Rev. D 78, 034013 (2008). [Erratum: Phys.Rev.D 82,
+
+    099901 (2010)].
+
+49. M. Ahlers, F. Halzen, Prog. Part. Nucl. Phys. 102, 73 (2018).
+
+50. C. Ricci, et al., Astrophys. J. Lett. 815, L13 (2015).
+
+51. A. Marinucci, et al., Mon. Not. Roy. Astron. Soc. 456, L94 (2016).
+
+52. A. Zaino, et al., Mon. Not. Roy. Astron. Soc. 492, 3872 (2020).
+
+53. A. B. Romeo, K. Fathi, Mon. Not. Roy. Astron. Soc. 460, 2360 (2016).
+
+54. B. Eichmann, J. Becker Tjus, Astrophys. J. 821, 87 (2016).
+
+55. G. Cecil, J. Bland, R. B. Tully, Astrophys. J. 355, 70 (1990).
+
+56. R. Silberberg, M. M. Shapiro, Neutrinos as a Probe for the Nature of and Processes in
+
+    Active Galactic Nuclei, vol. 10 of International Cosmic Ray Conference (1979).
+
+57. T. M. Yoast-Hull, J. S. G. III, E. G. Zweibel, J. E. Everett, Astrophys. J. 780, 137 (2014).
+
+                                                20
+58. A. Lamastra, et al., Astron. Astrophys. 596, A68 (2016).
+
+59. R. Silberberg, M. M. Shapiro, Sources of extragalactic cosmic rays - Photons and neutrinos
+    as probes, vol. 107 of NATO Advanced Study Institute (ASI) Series C (1983).
+
+60. F. W. Stecker, C. Done, M. H. Salamon, P. Sommers, Phys. Rev. Lett. 66, 2697 (1991).
+
+    [Erratum: Phys. Rev. Lett. 69, 2738 (1992)].
+
+61. R. Silberberg, M. M. Shapiro, C. H. Starr, Particle Astrophysics and Cosmology, M. M.
+    Shapiro, R. Silberberg, J. P. Wefel, eds. (1993), vol. 394 of NATO Advanced Study Institute
+    (ASI) Series C, p. 53.
+
+62. K. Murase, E. Waxman, Phys. Rev. D 94, 103006 (2016).
+
+63. F. Capel, D. J. Mortlock, C. Finley, Phys. Rev. D 101, 123017 (2020).
+
+64. C. F. Tung, et al., J. Open Source Softw. 6, 3194 (2021).
+
+
+
+
+                                              21
+Supplementary Materials
+
+Supplemental materials are freely available through the Science web portal.
+https://www.science.org
+
+https://www.science.org/doi/10.1126/science.abg3395
+https://www.science.org/doi/suppl/10.1126/science.abg3395/suppl file/science.abg3395 sm.pdf
+Supplemental materials include:
+
+   • Materials and Methods
+
+   • Supplementary Text
+
+   • Figs. S1 to S30
+
+   • Tables S1 to S4.
+
+Acknowledgments
+
+We dedicate this work to our recently deceased colleagues, P. Buford Price and Thomas K.
+Gaisser. The IceCube collaboration acknowledges significant contributions to this manuscript
+
+from Hans Niederhausen and Theo Glauch.
+
+
+Funding: The authors gratefully acknowledge the support from the following agencies and in-
+
+stitutions: USA – U.S. National Science Foundation-Office of Polar Programs, U.S. National
+Science Foundation-Physics Division, U.S. National Science Foundation-EPSCoR, Wisconsin
+
+Alumni Research Foundation, Center for High Throughput Computing (CHTC) at the Uni-
+versity of Wisconsin–Madison, Open Science Grid (OSG), Extreme Science and Engineering
+Discovery Environment (XSEDE), Frontera computing project at the Texas Advanced Comput-
+
+ing Center, U.S. Department of Energy-National Energy Research Scientific Computing Cen-
+
+                                             22
+ter, Particle astrophysics research computing center at the University of Maryland, Institute
+for Cyber-Enabled Research at Michigan State University, and Astroparticle physics computa-
+
+tional facility at Marquette University; Belgium – Funds for Scientific Research (FRS-FNRS
+and FWO), FWO Odysseus and Big Science programmes, and Belgian Federal Science Policy
+Office (Belspo); Germany – Bundesministerium für Bildung und Forschung (BMBF), Deutsche
+
+Forschungsgemeinschaft (DFG), Helmholtz Alliance for Astroparticle Physics (HAP), Initia-
+tive and Networking Fund of the Helmholtz Association, Deutsches Elektronen Synchrotron
+(DESY), and High Performance Computing cluster of the RWTH Aachen; Sweden – Swedish
+
+Research Council, Swedish Polar Research Secretariat, Swedish National Infrastructure for
+Computing (SNIC), and Knut and Alice Wallenberg Foundation; Australia – Australian Re-
+search Council; Canada – Natural Sciences and Engineering Research Council of Canada, Cal-
+
+cul Québec, Compute Ontario, Canada Foundation for Innovation, WestGrid, and Compute
+Canada; Denmark – Villum Fonden and Carlsberg Foundation; New Zealand – Marsden Fund;
+Japan – Japan Society for Promotion of Science (JSPS) and Institute for Global Prominent Re-
+
+search (IGPR) of Chiba University; Korea – National Research Foundation of Korea (NRF);
+Switzerland – Swiss National Science Foundation (SNSF); United Kingdom – Department of
+Physics, University of Oxford.
+
+
+
+Author contributions: The IceCube Collaboration designed, constructed and now operates the
+IceCube Neutrino Observatory. Data processing and calibration, Monte Carlo simulations of
+
+the detector and of theoretical models, and data analyses were performed by a large number of
+collaboration members, who also discussed and approved the scientific results presented here.
+The manuscript was reviewed by the entire collaboration before publication, and all authors
+
+approved the final version.
+
+
+
+
+                                             23
+Competing interests: There are no competing interests to declare.
+
+
+
+Data and materials availability: Additional data and resources are available from the IceCube
+data archive at https://icecube.wisc.edu/science/data-releases. For each data sample these in-
+clude the events, neutrino effective areas, background rates, and other supporting information
+
+in machine-readable formats.
+
+
+
+
+                                             24
+IceCube Collaboration∗ :
+
+R. Abbasi17 , M. Ackermann61 , J. Adams18 , J. A. Aguilar12 , M. Ahlers22 , M. Ahrens51 , J.M.
+Alameddine23 , C. Alispach28 , A. A. Alves Jr.31 , N. M. Amin43 , K. Andeen41 , T. Anderson58 , G.
+
+Anton26 , C. Argüelles14 , Y. Ashida39 , S. Axani15 , X. Bai47 , A. Balagopal V.39 , A. Barbano28 , S.
+W. Barwick30 , B. Bastian61 , V. Basu39 , S. Baur12 , R. Bay8 , J. J. Beatty20, 21 , K.-H. Becker60 , J.
+Becker Tjus11 , C. Bellenghi27 , S. BenZvi49 , D. Berley19 , E. Bernardini61, 62 , D. Z. Besson34 , G.
+
+Binder8, 9 , D. Bindig60 , E. Blaufuss19 , S. Blot61 , M. Boddenberg1 , F. Bontempo31 , J. Borowka1 ,
+S. Böser40 , O. Botner59 , J. Böttcher1 , E. Bourbeau22 , F. Bradascio61 , J. Braun39 , B. Brinson6 ,
+S. Bron28 , J. Brostean-Kaiser61 , S. Browne32 , A. Burgman59 , R. T. Burley2 , R. S. Busse42 , M.
+
+A. Campana46 , E. G. Carnie-Bronca2 , C. Chen6 , Z. Chen52 , D. Chirkin39 , K. Choi53 , B. A.
+Clark24 , K. Clark33 , L. Classen42 , A. Coleman43 , G. H. Collin15 , J. M. Conrad15 , P. Coppin13 , P.
+Correa13 , D. F. Cowen57, 58 , R. Cross49 , C. Dappen1 , P. Dave6 , C. De Clercq13 , J. J. DeLaunay56 ,
+
+D. Delgado López14 , H. Dembinski43 , K. Deoskar51 , A. Desai39 , P. Desiati39 , K. D. de Vries13 ,
+G. de Wasseige36 , M. de With10 , T. DeYoung24 , A. Diaz15 , J. C. Dı́az-Vélez39 , M. Dittmer42 ,
+H. Dujmovic31 , M. Dunkman58 , M. A. DuVernois39 , E. Dvorak47 , T. Ehrhardt40 , P. Eller27 ,
+
+R. Engel31, 32 , H. Erpenbeck1 , J. Evans19 , P. A. Evenson43 , K. L. Fan19 , A. R. Fazely7 , A.
+Fedynitch55 , N. Feigl10 , S. Fiedlschuster26 , A. T. Fienberg58 , K. Filimonov8 , C. Finley51 , L.
+Fischer61 , D. Fox57 , A. Franckowiak11, 61 , E. Friedman19 , A. Fritz40 , P. Fürst1 , T. K. Gaisser43 , J.
+
+Gallagher38 , E. Ganster1 , A. Garcia14 , S. Garrappa61 , L. Gerhardt9 , A. Ghadimi56 , C. Glaser59 ,
+T. Glauch27 , T. Glüsenkamp26 , A. Goldschmidt9 , J. G. Gonzalez43 , S. Goswami56 , D. Grant24 , T.
+Grégoire58 , S. Griswold49 , C. Günther1 , P. Gutjahr23 , C. Haack27 , A. Hallgren59 , R. Halliday24 ,
+
+L. Halve1 , F. Halzen39 , M. Ha Minh27 , K. Hanson39 , J. Hardin39 , A. A. Harnisch24 , A. Haungs31 ,
+D. Hebecker10 , K. Helbing60 , F. Henningsen27 , E. C. Hettinger24 , S. Hickford60 , J. Hignight25 ,
+C. Hill16 , G. C. Hill2 , K. D. Hoffman19 , R. Hoffmann60 , B. Hokanson-Fasig39 , K. Hoshina39, 63 ,
+
+F. Huang58 , M. Huber27 , T. Huber31 , K. Hultqvist51 , M. Hünnefeld23 , R. Hussain39 , K. Hymon23 ,
+
+                                                    25
+S. In53 , N. Iovine12 , A. Ishihara16 , M. Jansson51 , G. S. Japaridze5 , M. Jeong53 , M. Jin14 , B. J.
+P. Jones4 , D. Kang31 , W. Kang53 , X. Kang46 , A. Kappes42 , D. Kappesser40 , L. Kardum23 , T.
+
+Karg61 , M. Karl27 , A. Karle39 , U. Katz26 , M. Kauer39 , M. Kellermann1 , J. L. Kelley39 , A.
+Kheirandish58 , K. Kin16 , T. Kintscher61 , J. Kiryluk52 , S. R. Klein8, 9 , R. Koirala43 , H. Kolanoski10 ,
+T. Kontrimas27 , L. Köpke40 , C. Kopper24 , S. Kopper56 , D. J. Koskinen22 , P. Koundal31 , M.
+
+Kovacevich46 , M. Kowalski10, 61 , T. Kozynets22 , E. Kun11 , N. Kurahashi46 , N. Lad61 , C. Lagu-
+nas Gualda61 , J. L. Lanfranchi58 , M. J. Larson19 , F. Lauber60 , J. P. Lazar14, 39 , J. W. Lee53 , K.
+Leonard39 , A. Leszczyńska32 , Y. Li58 , M. Lincetto11 , Q. R. Liu39 , M. Liubarska25 , E. Lohfink40 ,
+
+C. J. Lozano Mariscal42 , L. Lu39 , F. Lucarelli28 , A. Ludwig24, 35 , W. Luszczak39 , Y. Lyu8, 9 ,
+W. Y. Ma61 , J. Madsen39 , K. B. M. Mahn24 , Y. Makino39 , S. Mancina39 , I. C. Mariş12 , I.
+Martinez-Soler14 , R. Maruyama44 , K. Mase16 , T. McElroy25 , F. McNally37 , J. V. Mead22 , K.
+
+Meagher39 , S. Mechbal61 , A. Medina21 , M. Meier16 , S. Meighen-Berger27 , J. Micallef24 , D.
+Mockler12 , T. Montaruli28 , R. W. Moore25 , R. Morse39 , M. Moulai15 , R. Naab61 , R. Nagai16 , R.
+Nahnhauer61 , U. Naumann60 , J. Necker61 , L. V. Nguy˜ˆen24 , H. Niederhausen24 , M. U. Nisa24 ,
+
+S. C. Nowicki24 , D. Nygren9, 4 , A. Obertacke Pollmann60 , M. Oehler31 , B. Oeyen29 , A. Olivas19 ,
+E. O’Sullivan59 , H. Pandya43 , D. V. Pankova58 , N. Park33 , G. K. Parker4 , E. N. Paudel43 ,
+L. Paul41 , C. Pérez de los Heros59 , L. Peters1 , J. Peterson39 , S. Philippen1 , S. Pieper60 , M.
+
+Pittermann32 , A. Pizzuto39 , M. Plum41 , Y. Popovych40 , A. Porcelli29 , M. Prado Rodriguez39 , P.
+B. Price8 , B. Pries24 , G. T. Przybylski9 , C. Raab12 , J. Rack-Helleis40 , A. Raissi18 , M. Rameez22 ,
+K. Rawlins3 , I. C. Rea27 , A. Rehman43 , P. Reichherzer11 , R. Reimann1 , G. Renzi12 , E. Resconi27 ,
+
+S. Reusch61 , W. Rhode23 , M. Richman46 , B. Riedel39 , E. J. Roberts2 , S. Robertson8, 9 , G.
+Roellinghoff53 , M. Rongen40 , C. Rott50, 53 , T. Ruhe23 , D. Ryckbosch29 , D. Rysewyk Cantu24 , I.
+Safa14, 39 , J. Saffer32 , S. E. Sanchez Herrera24 , A. Sandrock23 , J. Sandroos40 , M. Santander56 , S.
+
+Sarkar45 , S. Sarkar25 , K. Satalecka61 , M. Schaufel1 , H. Schieler31 , S. Schindler26 , T. Schmidt19 ,
+A. Schneider39 , J. Schneider26 , F. G. Schröder31, 43 , L. Schumacher27 , G. Schwefer1 , S. Sclafani46 ,
+
+
+                                                   26
+D. Seckel43 , S. Seunarine48 , A. Sharma59 , S. Shefali32 , M. Silva39 , B. Skrzypek14 , B. Smithers4 ,
+R. Snihur39 , J. Soedingrekso23 , D. Soldin43 , C. Spannfellner27 , G. M. Spiczak48 , C. Spiering61 ,
+
+J. Stachurska61 , M. Stamatikos21 , T. Stanev43 , R. Stein61 , J. Stettner1 , A. Steuer40 , T. Stezelberger9 ,
+R. Stokstad9 , T. Stürwald60 , T. Stuttard22 , G. W. Sullivan19 , I. Taboada6 , S. Ter-Antonyan7 , S.
+Tilav43 , F. Tischbein1 , K. Tollefson24 , C. Tönnis54 , S. Toscano12 , D. Tosi39 , A. Trettin61 , M.
+
+Tselengidou26 , C. F. Tung6 , A. Turcati27 , R. Turcotte31 , C. F. Turley58 , J. P. Twagirayezu24 , B.
+Ty39 , M. A. Unland Elorrieta42 , N. Valtonen-Mattila59 , J. Vandenbroucke39 , N. van Eijndhoven13 ,
+D. Vannerom15 , J. van Santen61 , S. Verpoest29 , C. Walck51 , T. B. Watson4 , C. Weaver24 , P.
+
+Weigel15 , A. Weindl31 , M. J. Weiss58 , J. Weldert40 , C. Wendt39 , J. Werthebach23 , M. Weyrauch31 ,
+N. Whitehorn24, 35 , C. H. Wiebusch1 , D. R. Williams56 , M. Wolf27 , K. Woschnagg8 , G. Wrede26 ,
+J. Wulff11 , X. W. Xu7 , J. P. Yanez25 , S. Yoshida16 , S. Yu24 , T. Yuan39 , Z. Zhang52 , P. Zhelnin14
+
+
+1
+    III. Physikalisches Institut, Rheinisch-Westfälische Technische Hochschule Aachen Univer-
+sity, D-52056 Aachen, Germany
+2
+    Department of Physics, University of Adelaide, Adelaide, 5005, Australia
+3
+    Department of Physics and Astronomy, University of Alaska Anchorage, 3211 Providence
+Dr., Anchorage, AK 99508, USA
+4
+    Department of Physics, University of Texas at Arlington, 502 Yates St., Science Hall Rm 108,
+Box 19059, Arlington, TX 76019, USA
+5
+    The Center for Theoretical Studies of Physical Systems, Clark-Atlanta University, Atlanta,
+
+GA 30314, USA
+6
+    School of Physics and Center for Relativistic Astrophysics, Georgia Institute of Technology,
+Atlanta, GA 30332, USA
+7
+    Department of Physics, Southern University, Baton Rouge, LA 70813, USA
+8
+    Department of Physics, University of California, Berkeley, CA 94720, USA
+
+
+                                                    27
+9
+    Lawrence Berkeley National Laboratory, Berkeley, CA 94720, USA
+10
+     Institut für Physik, Humboldt-Universität zu Berlin, D-12489 Berlin, Germany
+11
+     Fakultät für Physik & Astronomie, Ruhr-Universität Bochum, D-44780 Bochum, Germany
+12
+     Science Faculty CP230, Université Libre de Bruxelles, B-1050 Brussels, Belgium
+13
+     Physics Department, Vrije Universiteit Brussel, B-1050 Brussels, Belgium
+14
+     Department of Physics and Laboratory for Particle Physics and Cosmology, Harvard Univer-
+sity, Cambridge, MA 02138, USA
+15
+     Department of Physics, Massachusetts Institute of Technology, Cambridge, MA 02139, USA
+16
+     Department of Physics and Institute for Global Prominent Research, Chiba University, Chiba
+263-8522, Japan
+17
+     Department of Physics, Loyola University Chicago, Chicago, IL 60660, USA
+18
+     Department of Physics and Astronomy, University of Canterbury, Private Bag 4800, Christchurch,
+New Zealand
+19
+     Department of Physics, University of Maryland, College Park, MD 20742, USA
+20
+     Department of Astronomy, Ohio State University, Columbus, OH 43210, USA
+21
+     Department of Physics, Ohio State University, Columbus, OH 43210, USA
+22
+     Niels Bohr Institute, University of Copenhagen, DK-2100 Copenhagen, Denmark
+23
+     Department of Physics, Technical University Dortmund, D-44221 Dortmund, Germany
+24
+     Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824,
+USA
+25
+     Department of Physics, University of Alberta, Edmonton, Alberta, Canada T6G 2E1
+26
+     Erlangen Centre for Astroparticle Physics, Friedrich-Alexander-Universität Erlangen-Nürnberg,
+D-91058 Erlangen, Germany
+27
+     Physik-department, Technische Universität München, D-85748 Garching, Germany
+28
+     Département de physique nucléaire et corpusculaire, Université de Genève, CH-1211 Genève,
+
+
+                                                 28
+Switzerland
+29
+     Department of Physics and Astronomy, University of Gent, B-9000 Gent, Belgium
+30
+     Department of Physics and Astronomy, University of California, Irvine, CA 92697, USA
+31
+     Karlsruhe Institute of Technology, Institute for Astroparticle Physics, D-76021 Karlsruhe,
+Germany
+32
+     Karlsruhe Institute of Technology, Institute of Experimental Particle Physics, D-76021 Karl-
+sruhe, Germany
+33
+     Department of Physics, Engineering Physics, and Astronomy, Queen’s University, Kingston,
+
+ON K7L 3N6, Canada
+34
+     Department of Physics and Astronomy, University of Kansas, Lawrence, KS 66045, USA
+35
+     Department of Physics and Astronomy, University of California, Los Angeles, CA 90095,
+
+USA
+36
+     Centre for Cosmology, Particle Physics and Phenomenology, Université catholique de Lou-
+vain, Louvain-la-Neuve, Belgium
+37
+     Department of Physics, Mercer University, Macon, GA 31207-0001, USA
+38
+     Department of Astronomy, University of Wisconsin–Madison, Madison, WI 53706, USA
+39
+     Department of Physics and Wisconsin IceCube Particle Astrophysics Center, University of
+
+Wisconsin–Madison, Madison, WI 53706, USA
+40
+     Institute of Physics, University of Mainz, Staudinger Weg 7, D-55099 Mainz, Germany
+41
+     Department of Physics, Marquette University, Milwaukee, WI, 53201, USA
+42
+     Institut für Kernphysik, Westfälische Wilhelms-Universität Münster, D-48149 Münster, Ger-
+many
+43
+     Department of Physics and Astronomy, University of Delaware, Newark, DE 19716, USA
+44
+     Department of Physics, Yale University, New Haven, CT 06520, USA
+45
+     Department of Physics, University of Oxford, Parks Road, Oxford OX1 3PU, UK
+
+
+                                                 29
+46
+     Department of Physics, Drexel University, 3141 Chestnut Street, Philadelphia, PA 19104,
+USA
+47
+     Physics Department, South Dakota School of Mines and Technology, Rapid City, SD 57701,
+USA
+48
+     Department of Physics, University of Wisconsin, River Falls, WI 54022, USA
+49
+     Department of Physics and Astronomy, University of Rochester, Rochester, NY 14627, USA
+50
+     Department of Physics and Astronomy, University of Utah, Salt Lake City, UT 84112, USA
+51
+     Oskar Klein Centre and Department of Physics, Stockholm University, SE-10691 Stockholm,
+
+Sweden
+52
+     Department of Physics and Astronomy, Stony Brook University, Stony Brook, NY 11794-
+3800, USA
+53
+     Department of Physics, Sungkyunkwan University, Suwon 16419, Korea
+54
+     Institute of Basic Science, Sungkyunkwan University, Suwon 16419, Korea
+55
+     Institute of Physics, Academia Sinica, Taipei, 11529, Taiwan
+56
+     Department of Physics and Astronomy, University of Alabama, Tuscaloosa, AL 35487, USA
+57
+     Department of Astronomy and Astrophysics, Pennsylvania State University, University Park,
+PA 16802, USA
+58
+     Department of Physics, Pennsylvania State University, University Park, PA 16802, USA
+59
+     Department of Physics and Astronomy, Uppsala University, Box 516, S-75120 Uppsala, Swe-
+den
+60
+     Department of Physics, University of Wuppertal, D-42119 Wuppertal, Germany
+61
+     Deutsches Elektronen-Synchrotron, D-15738 Zeuthen, Germany
+62
+     Dipartimento di Fisica e Astronomia ”Galileo Galilei”, Università di Padova, I-35131 Padova,
+
+Italy
+63
+     Earthquake Research Institute, University of Tokyo, Bunkyo, Tokyo 113-0032, Japan
+
+
+                                                 30
+∗
+    E-mail: analysis@icecube.wisc.edu
+
+
+
+
+                                        31
+

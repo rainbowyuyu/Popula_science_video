@@ -1,0 +1,80 @@
+{
+  "id": "s032",
+  "text": "在风洞里，工程师比较过多种方案，最后选定一百二十度的扭转。接下来，再给里面的骨架一段变化的侧向推力，看它怎样弯曲，怎样把这份力沿着连接，一直送回地下。",
+  "ttsText": "在风洞里，工程师比较过多种方案，最后选定一百二十度的扭转。接下来，再给里面的骨架一段变化的侧向推力，看它怎样弯曲，怎样把这份力沿着连接，一直送回地下。",
+  "signature": "ab184702efe7035b9a9117f422c2effac0da169f78e1306270f6e82593259c68",
+  "raw": "audio/raw/s032-ab184702ef.wav",
+  "processed": "public/voice/s032.wav",
+  "rawDuration": 13.12,
+  "duration": 13.36,
+  "sha256": "f678e6b8e4a6820649001573ee08a64011e1a5353e8e19ecd263e917a7d06bb7",
+  "seed": 18652773,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s031",
+    "s032"
+  ],
+  "rawEndpointDB": -66.79301447691871,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "2f7c6c6c2f8ce89fe76d7ffe4bc7e4c58fb84bd533669082c16dc827583d8bfb",
+    "outputSha256": "f678e6b8e4a6820649001573ee08a64011e1a5353e8e19ecd263e917a7d06bb7",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.477051316155059,
+    "input": {
+      "seconds": 13.36,
+      "peakDb": -6.18693026443144,
+      "activeRmsDb": -22.23203070843345,
+      "quietFrameP10Db": -62.37876412546495
+    },
+    "output": {
+      "seconds": 13.36,
+      "peakDb": -3.9611890944612167,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.32235308314689
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "616453c61e673df01884d3dee71b7fc01324628a05a2f304813e93513fe9db32"
+  },
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "v7-cfd-provisional"
+}

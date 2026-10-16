@@ -1,0 +1,29 @@
+{
+  "query": "C pointer address value difference",
+  "requestUrl": "https://api.stackexchange.com/2.3/search/advanced?site=stackoverflow&q=C+pointer+address+value+difference&sort=relevance&pagesize=3&filter=withbody",
+  "items": [
+    {
+      "title": "The difference between pointer address",
+      "url": "https://stackoverflow.com/questions/19347166/the-difference-between-pointer-address",
+      "score": -2,
+      "question_id": 19347166,
+      "body": "I am a Java programmer and recently play with C for fun. Now I am learning address and pointers which are a little bit confusing for me. Here is my question. See the below two blocks of the code. void withinArray(int * a, int size, int * ptr) {\n    int x;\n    printf(\"ptr is %d\\n\", ptr);\n    printf(\"a is %d\\n\", a);\n    printf(\"difference in pointers is: %d\\n\", ptr - a);\n    x = ptr - intArray;\n    printf(\"x is %d\\n\", x);\n}\n\nvoid doubleSize() {\n  double doubArray[10];\n  double * doubPtr1;\n  double * doubPtr2;\n\n  doubPtr1 = doubArray;\n  doubPtr2= doubArray+1;\n  int p2 = doubPtr2;\n  int p1 = doubPtr1;\n\n  printf(\"p2-p1 is %d\\n\", p2-p1);\n  printf(\"doubPtr2-doubPtr1 is %d\\n\", doubPtr2-doubPtr1);\n}\n\nint main(void)\n{\n  int a[10];\n  int *intarray = a;\n  int *p = intarray + 9;\n\n  printf(withinArray(a, 10, p));\n  return 0;\n} I am wondering for function withinArray() , why we could directly get the x value, which is 9? But for the other method, we have to convert doubPtr to int first and then we can get the difference between pointers in int ? From my understanding, in doubleSize() , doubPtr2-doubPtr1 = 1 means the difference in pointer address in memory is 1 . But why the withinArray() doesn't need to do so?"
+    },
+    {
+      "title": "passing a pointer address vs pointer to a pointer in C",
+      "url": "https://stackoverflow.com/questions/39009052/passing-a-pointer-address-vs-pointer-to-a-pointer-in-c",
+      "score": 1,
+      "question_id": 39009052,
+      "body": "I'm slightly confused between these two pieces of code: version 1: (gives warnings after compiling) int func(int *ptr2)\n{\n    *ptr2 += 1;\n}\n\nint main()\n{\n    int a = 5;\n    int *ptr = &a;\n\n    printf(\"Address of a: %x\\n\", a);\n    printf(\"Before: %x\\n\", ptr);\n    func(&ptr);\n    printf(\"After: %x\\n\", ptr);\n    return 0;\n} Output: Address of a: 5770a18c\nBefore: 5770a18c                                                                                                           \nAfter: 5770a18d version 2: int func(int **ptr2)\n{\n    *ptr2 += 1;\n}\n\nint main()\n{\n    int a = 5;\n    int *ptr = &a;\n\n    printf(\"address of a: %x\\n\", &a);\n    printf(\"Before: %x\\n\", ptr);\n    func(&ptr);\n    printf(\"After: %x\\n\", ptr);\n    return 0;\n} Output: Address of a: cc29385c\nBefore: cc29385c                                                                                                           \nAfter: cc293860 If I'm understanding pointers in C correctly when we pass by reference, we are creating a pointer to that location. This allows us to change the value at the address held by the pointer through the dereference operator. However, if we want to change the value held by a pointer, we use a pointer to a pointer. We pass the address of the pointer and create a new pointer to hold said address. If we want to change the value, we use the dereference operator to access our pointer's (defined elsewhere) value. Hopefully I'm on the right track, but I'm struggling to visualize what's happening with version 1 specifically. Mainly, I'd just like to understand the difference in make-up and output between these two programs. I assume version 1 is still a pointer to a pointer, but why are the incremented values different between both programs? If version 1 is successfully incrementing ptr's value (which I suspect is not), why is that I cannot find code with the same syntax? I think I'm missing something fairly trivial here... Any help is appreciated"
+    },
+    {
+      "title": "Checking pointer address and value from a function",
+      "url": "https://stackoverflow.com/questions/27609559/checking-pointer-address-and-value-from-a-function",
+      "score": 0,
+      "question_id": 27609559,
+      "body": "I'm a beginner to C and have been reading a book called \"Understanding and Using C Pointers\" and ended up running into a problem with using the printf function. When using debug_p, it turns out that the address of the pointer num_p is different but exact to num in debug, but it returns the correct value when attempting a printf within main(). My question is, why is this so? Is there an appropriate way to do a printf within a function and have a correct address of a pointer? #include <stdio.h>\nvoid debug(int num)\n{\n    printf(\"Address of num: %i Value: %i\\n\", &num, num);\n}\n\nvoid debug_p(int *num_p)\n{\n    printf(\"Address of num_p: %i Value %i\\n\", &num_p, num_p);\n\n}\n\n\nint main()\n{\nint num=11;\nint *num_p=&num;\nprintf(\"Address of num: %i Value: %i\\n\", &num, num);\nprintf(\"Address of num_p: %i Value: %i\\n\\n\", &num_p, num_p);\n\ndebug(num);\ndebug_p(num_p);\nreturn 0;\n} Output from main(): Address of num: 2358860 Value: 11\nAddress of num_p: 2358848 Value: 2358860 Output from debug, then debug_p: Address of num: 2358816 Value: 11\nAddress of num_p: 2358816 Value 2358860"
+    }
+  ],
+  "hasMore": true,
+  "error": null
+}

@@ -1,0 +1,48 @@
+{
+  "reviewedAtUTC": "2026-10-08T09:55:09.934540+00:00",
+  "scope": "只读科学/叙述源级审查；前三个文件为指派范围，Details.ts只读用于核对World标签锚点和小泡机制；未审最终画面",
+  "files": [
+    {
+      "path": "src/Film.tsx",
+      "sha256AtReportWrite": "d8a3653f0030c099551b083ae610b7bb2ca7d10040be98c9c5a64dcd0ff168be"
+    },
+    {
+      "path": "src/Evidence.tsx",
+      "sha256AtReportWrite": "a40cce4b724201bf4128766f646fc7e9622dcaf3390a96875a8e99b70c5fcffa"
+    },
+    {
+      "path": "src/World.ts",
+      "sha256AtReportWrite": "e4afb03c8d937924ea5138b77c74b804f5d37fadee0e2855af9d483e4fc58ad3"
+    },
+    {
+      "path": "src/Details.ts",
+      "sha256AtReportWrite": "c8fd31d36fe06e314fdde58f31cb5d204bc8c810d3e8ad4d4e4a90bbce26debb"
+    },
+    {
+      "path": "docs/story.json",
+      "sha256AtReportWrite": "9a4abc84dc0246f8e060a0407db8fdc62b79e2b258331e494ead9216ac9bf789"
+    }
+  ],
+  "mustFix": [
+    {
+      "id": "S1",
+      "priority": 2,
+      "file": "src/Evidence.tsx",
+      "line": 104,
+      "issue": "停药回升2/3和仍低5.6%缺少原司美格鲁肽组限定",
+      "suggestion": "在数字面板明确原司美格鲁肽组；327人是包含两组的延伸总样本。"
+    },
+    {
+      "id": "S2",
+      "priority": 2,
+      "file": "src/Film.tsx",
+      "line": 55,
+      "issue": "1987实验论文与2017受体结构同时出现但仅标1987作者年份，实验动作与结构证据类型未区分",
+      "suggestion": "g014标离体大鼠胰腺/不同肽段比较；g015标大鼠胰岛细胞系/内部信号；结构注明2017·机制示意。"
+    }
+  ],
+  "selectArithmeticAccepted": true,
+  "narrationOrTTSModified": false,
+  "sourceCodeModified": false,
+  "finalVideoAcceptance": null
+}

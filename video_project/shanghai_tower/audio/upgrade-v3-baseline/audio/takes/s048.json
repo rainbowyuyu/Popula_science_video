@@ -1,0 +1,67 @@
+{
+  "id": "s048",
+  "text": "每天五分钟，认识生活里的新知识。脚下的桩、身边的梁，和云里的那块重物，共同撑起了这座城的天际线。",
+  "ttsText": "每天五分钟，认识生活里的新知识。脚下的桩、身边的梁，和云里的那块重物，共同撑起了这座城的天际线。",
+  "signature": "da7a3568f57587a4a63f025cee64d4bcd877a50f64e4254e5b48c568d5b085d8",
+  "raw": "audio/raw/s048-da7a3568f5.wav",
+  "processed": "public/voice/s048.wav",
+  "rawDuration": 9.200041666666667,
+  "duration": 9.200041666666667,
+  "sha256": "5732b4a6c0cd5e495e6bfcf37e3dfbbf1217daf1a07351888e33f3559cb77476",
+  "seed": 3665442152,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s048"
+  ],
+  "rawEndpointDB": -72.31122164785847,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8385edc6a6a2ae6ef52a6db056718d2dbe7cafaf2193991582c180ebe622ed49",
+    "outputSha256": "5732b4a6c0cd5e495e6bfcf37e3dfbbf1217daf1a07351888e33f3559cb77476",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.9321692123502103,
+    "input": {
+      "seconds": 9.200041666666667,
+      "peakDb": -6.858451683710136,
+      "activeRmsDb": -22.4927821649553,
+      "quietFrameP10Db": -58.89252950671861
+    },
+    "output": {
+      "seconds": 9.200041666666667,
+      "peakDb": -5.3134490720643655,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.11117942300399
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,265 @@
+{
+  "schema": "v19-comparison-evidence-v1",
+  "createdAt": "2026-10-14T14:50:14.747106+00:00",
+  "purpose": "Restore substantiated TuQiang comparison and investor-relevant AI Engineer contributions.",
+  "newSolverRun": false,
+  "publishedPaperIndependentlyVerified": false,
+  "sources": [
+    {
+      "path": "D:/python_project/beso_ai/rules/ai_vs_tuqiang_comparison.yaml",
+      "role": "canonical comparison configuration",
+      "bytes": 3479,
+      "sha256": "f9439ce938553a0883dd3cc94a8a14a6d34f527ce2c007029b442ea1f268980f"
+    },
+    {
+      "path": "D:/python_project/beso_ai/rules/fleet_ai_review_reference.yaml",
+      "role": "reference confidence: TuQiang target / planned",
+      "bytes": 12401,
+      "sha256": "39efeea5242754e0eaa3f1f2e78a412cb61d70f2e46b0c35c8908d7c4ed1e4bd"
+    },
+    {
+      "path": "D:/python_project/beso_ai/rules/validation_rules.yaml",
+      "role": "review reference targets; cost proxy limitation",
+      "bytes": 17085,
+      "sha256": "9263ae87118f6fd21f2e4b90ac3afcc693b87d0aef3c2cd3434807fafe377e44"
+    },
+    {
+      "path": "D:/python_project/beso_ai/submission/manuscript/nature_article_draft_v1.md",
+      "role": "current draft manuscript",
+      "bytes": 14535,
+      "sha256": "c4a46d974875bb865bee0740323d1f558aa1f49b33c8d54d6c0689751ed124f2"
+    },
+    {
+      "path": "D:/python_project/beso_ai/third_party/zwind_newmodel/paper_fig2_metrics.json",
+      "role": "saved paper response metrics",
+      "bytes": 2128,
+      "sha256": "44a96f9d69dea4934d18c91cf0ec1a6caad657a63d2b9f4fad09299c42563e10"
+    },
+    {
+      "path": "D:/python_project/beso_ai/third_party/zwind_newmodel/draw.py",
+      "role": "plot values independently agree with metrics JSON",
+      "bytes": 7630,
+      "sha256": "aa5e38fe42e88151193882726e9d21a84bf2981461e3552bf5df5d5e786c2f8b"
+    },
+    {
+      "path": "D:/python_project/beso_ai/third_party/zwind_newmodel/README.md",
+      "role": "original optimized_geometry30.json has 30-degree columns",
+      "bytes": 2512,
+      "sha256": "c44248bd49ee8caf5a6749e127409636d977a6a2d84b3d433eff01ccd546e37a"
+    },
+    {
+      "path": "D:/python_project/beso_ai/docs/assets/浙江大学AIP证书-1.png",
+      "role": "visually inspected original certificate image",
+      "bytes": 2947281,
+      "sha256": "dc28634885427a5b5b553c42c3f607b4171ef61504e609f18aff629d60969b31"
+    },
+    {
+      "path": "D:/python_project/beso_ai/docs/assets/浙江大学AIP证书-2.png",
+      "role": "visually inspected certificate attachment",
+      "bytes": 1891474,
+      "sha256": "42596fbe1459d7a9ea01a0fe344921953887964314db79cc4902a77859cdcd46"
+    },
+    {
+      "path": "D:/python_project/beso_ai/backend/orchestrator/closed_loop.py",
+      "role": "bounded replan and tool results implementation",
+      "bytes": 40533,
+      "sha256": "7aaff8c3cb08dcbeb7e1793c4a1c6b64d28cd8414434bfa9883ddb2708325d52"
+    },
+    {
+      "path": "D:/python_project/beso_ai/backend/orchestrator/registry.py",
+      "role": "engineering tool adapter registry",
+      "bytes": 2735,
+      "sha256": "981c9d9f20792725a7b461ff21acc12b96bf9d294a1f1778e39c1f46833c57e4"
+    },
+    {
+      "path": "D:/python_project/beso_ai/backend/pipeline/steps.py",
+      "role": "geometry edits and downstream artifact invalidation",
+      "bytes": 37623,
+      "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2"
+    },
+    {
+      "path": "D:/python_project/manim_extend_rainbow/video_project/beso_ai_research_2026/public/beso-research/web-live/v7/replan-visual.json",
+      "role": "saved replan remains awaiting_post_check",
+      "bytes": 727,
+      "sha256": "b5b1ad2762642d38c41eea3752ae0892b8acf904ddf9ce317ea8dc430398697b"
+    },
+    {
+      "path": "D:/python_project/manim_extend_rainbow/video_project/beso_ai_research_2026/public/beso-research/web-live/v7/visual-data.json",
+      "role": "saved parameter demo uses rules parser",
+      "bytes": 1786,
+      "sha256": "aa5ab552fa7d469bde09dbf724793ee960ead8d83cbb96215483e7962a4b35aa"
+    }
+  ],
+  "comparison": {
+    "capacityMW": 20,
+    "baselineLabel": "图强号参考基线",
+    "candidateLabel": "本研究案例",
+    "visibleAttribution": "研究案例 · 同为20 MW",
+    "primary": {
+      "name": "foundation_steel_intensity",
+      "baseline": 278,
+      "candidate": 255.5,
+      "unit": "t/MW",
+      "scope": "current manuscript comparison; not weighing of an installed asset",
+      "change": -22.5,
+      "changePercent": -8.09352517985612,
+      "recommendedUse": "hero evidence"
+    },
+    "mass": {
+      "name": "foundation_steel_mass",
+      "baseline": 5560,
+      "candidate": 5110,
+      "unit": "t",
+      "scope": "same 20 MW reference capacity; intensity multiplied by 20",
+      "change": -450,
+      "changePercent": -8.09352517985612,
+      "recommendedUse": "450 t explanatory figure"
+    },
+    "secondary": {
+      "name": "maximum_mooring_tension",
+      "baseline": 14185,
+      "candidate": 13037,
+      "unit": "kN",
+      "scope": "saved paper extreme DLC 6.1",
+      "change": -1148,
+      "changePercent": -8.093056045118086,
+      "recommendedUse": "secondary evidence if scope remains visible"
+    },
+    "tradeoffs": [
+      {
+        "name": "pitch",
+        "baseline": 8.02,
+        "candidate": 9.56,
+        "unit": "deg",
+        "scope": "extreme DLC 6.1",
+        "change": 1.540000000000001,
+        "changePercent": 19.201995012468842,
+        "recommendedUse": "prevent all-metrics-better claim",
+        "recordedLimit": 10
+      },
+      {
+        "name": "surge",
+        "baseline": 8.53,
+        "candidate": 12.38,
+        "unit": "m",
+        "scope": "extreme DLC 6.1",
+        "change": 3.8500000000000014,
+        "changePercent": 45.134818288393916,
+        "recommendedUse": "not every motion is reduced"
+      },
+      {
+        "name": "tower_base_my",
+        "baseline": 1139.26,
+        "candidate": 1372,
+        "unit": "MN.m",
+        "scope": "extreme DLC 6.1",
+        "change": 232.74,
+        "changePercent": 20.429050436248097,
+        "recommendedUse": "not every load is reduced"
+      }
+    ],
+    "excluded": [
+      {
+        "claim": "capital cost reduction",
+        "reason": "configuration labels scaled EPC proxy; manuscript and rules use differing absolute cost series"
+      },
+      {
+        "claim": "all motions lower",
+        "reason": "contradicted by stored DLC metrics"
+      },
+      {
+        "claim": "new three-column visualization solved to these results",
+        "reason": "saved comparison references original optimized_geometry30; cinematic hull differs"
+      },
+      {
+        "claim": "actual purchase savings / ROI",
+        "reason": "no audited procurement or economic realization evidence"
+      },
+      {
+        "claim": "operating TuQiang measured 278 t/MW",
+        "reason": "reference YAML tags target/planned and old prose conflicts"
+      }
+    ]
+  },
+  "aip": {
+    "issuer": "中国船级社",
+    "certificateId": "OT25QTS60026",
+    "date": "2026-02-05",
+    "applicant": "浙江大学",
+    "subject": "AI Engineer端对端浮式基础智能设计软件认证项目",
+    "scope": "软件的功能、算法及参数等方面的原则性审查",
+    "visualSourceInspected": true,
+    "issuerOnlineAuthenticityVerified": false,
+    "safeNarration": "AI Engineer 智能设计软件，已获中国船级社原则性批准。",
+    "notCovered": [
+      "本次视觉模型的认证",
+      "任意自动生成候选均获证",
+      "型式认可",
+      "最终入级",
+      "制造安装批准"
+    ],
+    "attachment": [
+      "软件需求规格书 v2",
+      "软件设计说明书 v1",
+      "软件测试大纲 v1",
+      "测试报告 v2",
+      "软件使用说明书 v1",
+      "软件运维手册 v1"
+    ]
+  },
+  "web": [
+    {
+      "url": "https://news.qq.com/rain/a/20260521A099ZE00",
+      "status": 200,
+      "readDate": "2026-10-14",
+      "title": "全球首台！20兆瓦“图强号”开建，阳江深远海风电再添“国之重器”",
+      "readScope": "page title and meta description only; not script-rendered full article",
+      "descriptionExcerpt": "5月20日，国家电投“图强号”20兆瓦漂浮式风电示范机组建造启动仪式在珠海举行。这是全球首台适配钢混结构的20兆瓦漂浮式风机。",
+      "supports": [
+        "20 MW capacity",
+        "construction-start background",
+        "steel-concrete design background"
+      ],
+      "doesNotSupport": [
+        "278 t/MW",
+        "5560 t",
+        "candidate advantages"
+      ]
+    },
+    {
+      "url": "https://finance.people.com.cn/n1/2026/0522/c1004-40725195.html",
+      "status": "TLS certificate validation error; not used"
+    },
+    {
+      "url": "https://finance.people.com.cn/n1/2026/0521/c1004-40724826.html",
+      "status": "TLS certificate validation error; not used"
+    }
+  ],
+  "comparisonNarration": {
+    "durationEstimateOnly": true,
+    "long20to25s": "研究案例中，同为二十兆瓦，相对图强号参考基线，基础少用约四百五十吨钢，单位功率用钢量降低百分之八点一。极端工况的系泊峰值张力也更低。纵摇会增加，约束仍要逐项核查。",
+    "short15to20s": "看二十兆瓦研究案例：相对图强号参考基线，单位功率用钢量降低百分之八点一，相当于基础少用四百五十吨钢。系泊峰值张力也更低，运动约束继续核查。",
+    "pronunciation": {
+      "Zwind": "Zee wind",
+      "AI Engineer": "English",
+      "BESO": "贝索",
+      "系泊": "xì bó per user request",
+      "图强号": "图强号"
+    }
+  },
+  "investorRelevantContributions": [
+    "requirements and constraints become structured engineering work",
+    "heterogeneous deterministic engineering tools share inputs and artifacts",
+    "failure logs feed bounded next-step planning",
+    "engineer edits invalidate dependent inputs and preserve version consistency",
+    "replayable models, inputs and logs retain evidence",
+    "saved manuscript steel-intensity improvement with explicit comparison scope",
+    "software Approval in Principle documented in original certificate images"
+  ],
+  "limits": [
+    "No new coupled simulation performed",
+    "No elapsed-time or investor-return guarantees",
+    "Do not turn saved pending replan into successful rerun",
+    "Cinematic three-column model is explanatory visualization, not the original solved hull"
+  ]
+}

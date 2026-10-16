@@ -1,0 +1,244 @@
+{
+  "schema": "rainbow.su2-continuation-diagnostics/1",
+  "recordedUTC": "2026-10-08T21:25:51.549213+00:00",
+  "case": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\visual-v4\\flow-physics\\fullscale\\candidate-sa-negative-u01-v1",
+  "historyLastIteration": 599,
+  "historySamples": 600,
+  "acceptedForCoupling": false,
+  "status": "diagnostic-only; independent field and convergence acceptance still required",
+  "tailWindow": 100,
+  "history": {
+    "rms[P]": {
+      "last": 1.491543703,
+      "min": 1.478426556,
+      "max": 1.795502555,
+      "mean": 1.64052685236,
+      "std": 0.11071313126557239
+    },
+    "rms[U]": {
+      "last": 2.130929766,
+      "min": 2.130929766,
+      "max": 2.180193476,
+      "mean": 2.16373836165,
+      "std": 0.013872017383243921
+    },
+    "rms[V]": {
+      "last": 1.401311539,
+      "min": 1.218428943,
+      "max": 1.460055881,
+      "mean": 1.34714960784,
+      "std": 0.09059985334950155
+    },
+    "rms[W]": {
+      "last": 1.963379952,
+      "min": 1.89737371,
+      "max": 2.013421397,
+      "mean": 1.9839365611100002,
+      "std": 0.026772453819879177
+    },
+    "rms[nu]": {
+      "last": -1.826540139,
+      "min": -1.978302293,
+      "max": -1.826540139,
+      "mean": -1.89433718862,
+      "std": 0.046473370895247675
+    },
+    "CD": {
+      "last": -0.7511406255,
+      "min": -2.780545951,
+      "max": -0.7511406255,
+      "mean": -2.053311275026,
+      "std": 0.6326728111526987
+    },
+    "CFy": {
+      "last": -0.01830366341,
+      "min": -0.01830366341,
+      "max": 0.0204316003,
+      "mean": 0.0073889788020639995,
+      "std": 0.012529396446742211
+    },
+    "CFz": {
+      "last": 0.09834700163,
+      "min": 0.09834700163,
+      "max": 0.2125680062,
+      "mean": 0.1614709659397,
+      "std": 0.03358254104087147
+    },
+    "CMx": {
+      "last": 0.07224421245,
+      "min": 0.03989626226,
+      "max": 0.07224421245,
+      "mean": 0.050940175815900005,
+      "std": 0.010187015677370174
+    },
+    "CMy": {
+      "last": -0.281213056,
+      "min": -1.275578622,
+      "max": -0.281213056,
+      "mean": -0.905311171044,
+      "std": 0.30627941627319766
+    },
+    "CMz": {
+      "last": -0.00370933386,
+      "min": -0.00370933386,
+      "max": -0.0004418749534,
+      "mean": -0.002125412410618,
+      "std": 0.0009577296474821205
+    },
+    "LinSolRes": {
+      "last": -4.853538377,
+      "min": -5.068211855,
+      "max": -4.83987162,
+      "mean": -4.96589489,
+      "std": 0.08353134954060676
+    },
+    "LinSolIter": {
+      "last": 4.0,
+      "min": 4.0,
+      "max": 4.0,
+      "mean": 4.0,
+      "std": 0.0
+    }
+  },
+  "allFiveResidualsBelowMinus7": false,
+  "volumeFileMtime": "2026-10-08T21:25:34.623980+00:00",
+  "volumeFieldNames": [
+    "Pressure",
+    "Velocity",
+    "Enthalpy",
+    "Nu_Tilde",
+    "Pressure_Coefficient",
+    "Density",
+    "Laminar_Viscosity",
+    "Heat_Capacity",
+    "Thermal_Conductivity",
+    "Temperature",
+    "Skin_Friction_Coefficient",
+    "Heat_Flux",
+    "Y_Plus",
+    "Eddy_Viscosity",
+    "Residual_Pressure",
+    "Residual_Velocity",
+    "Residual_Enthalpy",
+    "Residual_Nu_Tilde"
+  ],
+  "volumeFieldsFinite": true,
+  "residualLocations": {
+    "Residual_Pressure": {
+      "max": 1522.2989501953125,
+      "maxXYZ_m": [
+        3079.96728515625,
+        129.278076171875,
+        0.0
+      ],
+      "top100Range_m": [
+        [
+          -2777.7978515625,
+          -2711.949951171875,
+          0.0
+        ],
+        [
+          6183.35546875,
+          2735.93603515625,
+          2.300000051036477e-05
+        ]
+      ],
+      "farGroundFractionSquaredResidual": 0.892737865447998,
+      "nearTowerFractionSquaredResidual": 0.0007159977685660124
+    },
+    "Residual_Velocity": {
+      "max": 3565.80322265625,
+      "maxXYZ_m": [
+        393.88189697265625,
+        2587.01123046875,
+        718.5447998046875
+      ],
+      "top100Range_m": [
+        [
+          -1762.0218505859375,
+          -2655.5703125,
+          2.645071506500244
+        ],
+        [
+          8973.6240234375,
+          2736.13818359375,
+          3262.577880859375
+        ]
+      ],
+      "farGroundFractionSquaredResidual": 0.557033121585846,
+      "nearTowerFractionSquaredResidual": 7.309208012884483e-05
+    },
+    "Residual_Enthalpy": {
+      "max": 15294583.0,
+      "maxXYZ_m": [
+        3079.96728515625,
+        129.278076171875,
+        0.0
+      ],
+      "top100Range_m": [
+        [
+          -2777.7978515625,
+          -2711.949951171875,
+          0.0
+        ],
+        [
+          6183.35546875,
+          2735.93603515625,
+          2.300000051036477e-05
+        ]
+      ],
+      "farGroundFractionSquaredResidual": 0.892737865447998,
+      "nearTowerFractionSquaredResidual": 0.0007159977103583515
+    },
+    "Residual_Nu_Tilde": {
+      "max": 2.3560307025909424,
+      "maxXYZ_m": [
+        -3160.0,
+        2106.666748046875,
+        2.0346627235412598
+      ],
+      "top100Range_m": [
+        [
+          -3160.0,
+          -3160.0,
+          1.5651174783706665
+        ],
+        [
+          -1207.967041015625,
+          3160.0,
+          2.645071506500244
+        ]
+      ],
+      "farGroundFractionSquaredResidual": 0.02270694263279438,
+      "nearTowerFractionSquaredResidual": 1.3564351320383139e-05
+    }
+  },
+  "surfaceFieldNames": [
+    "Pressure",
+    "Velocity",
+    "Enthalpy",
+    "Nu_Tilde",
+    "Pressure_Coefficient",
+    "Density",
+    "Laminar_Viscosity",
+    "Heat_Capacity",
+    "Thermal_Conductivity",
+    "Temperature",
+    "Skin_Friction_Coefficient",
+    "Heat_Flux",
+    "Y_Plus",
+    "Eddy_Viscosity",
+    "Residual_Pressure",
+    "Residual_Velocity",
+    "Residual_Enthalpy",
+    "Residual_Nu_Tilde"
+  ],
+  "towerYPlusPercentiles": {
+    "0": 0.004551371093839407,
+    "50": 0.10748877376317978,
+    "95": 0.1969127058982849,
+    "99": 0.22288988530635834,
+    "100": 0.23636656999588013
+  },
+  "maxAbsCpMinusTwiceRawPressure": 0.0
+}

@@ -1,0 +1,1703 @@
+Influence of Soil-Structure Interaction on Seismic Collapse Resistance 
+
+of Super-Tall Buildings, Journal of Rock Mechanics and Geotechnical Engineering, 2014
+Influence of Soil-Structure Interaction on Seismic Collapse 
+
+    Resistance of Super-Tall Buildings
+Mengke LI
+a
+, Xiao LU
+b
+, Xinzheng LU
+a,
+[*]
+, Lieping YE
+a
+a
+Department of Civil Engineering, Tsinghua University, 
+
+    Beijing, 100084, China
+b
+School of Civil Engineering, Beijing Jiaotong University, 
+
+    Beijing, 100044, China
+Journal 
+
+    of Rock Mechanics and Geotechnical Engineering, 2014, 6, 477-485.
+Download 
+
+    PDF version
+Abstract:
+Numerous field tests of super-tall buildings indicate that the soil-structure 
+
+    interaction (SSI) has a significant impact on the dynamic characteristics 
+
+    of super-tall buildings, which may lead to unexpected structural seismic responses 
+
+    and failure modes. Taking the Shanghai Tower (which, at a total height of 
+
+    632 m, represents a typical super-tall building), as the research object, 
+
+    the substructure approach is used to simulate the SSI effect on the seismic 
+
+    responses of Shanghai Tower. The
+refined finite element 
+
+    (FE) model
+of the superstructure of Shanghai Tower and the simplified 
+
+    analytical model of the foundation and adjacent soil are established. Subsequently, 
+
+    the collapse process of Shanghai Tower that takes into account the SSI is 
+
+    predicted, as well as its final collapse mechanism. The influence of the SSI 
+
+    on the collapse resistance capacity and failure sequences are discussed in 
+
+    detail. The research indicates that, considering the SSI, the fundamental 
+
+    period of Shanghai Tower has been extended significantly, and the collapse 
+
+    margin ratio has been improved, with a corresponding decrease of the seismic 
+
+    demand. In addition, the SSI has some impact on the failure sequences of Shanghai 
+
+    Tower subjected to extreme earthquakes, but a negligible impact on the final 
+
+    failure modes.
+Keywords:
+soil-structure interaction, substructure, super-tall building, collapse 
+
+    resistance, numerical simulation.
+1. Introduction
+With the rapid economic development in China 
+
+    over the past several decades, China has entered a period in which the design 
+
+    and construction of super-tall buildings are proceeding at an extremely rapid 
+
+    pace.
+Statistics
+in 2010 (Li, 2011) indicate that 
+
+    more than 350 super-tall buildings higher than 200 m have been built in China, 
+
+    such as the China World Trade Center Tower III (330 m), the Shanghai World 
+
+    Financial Center (492 m) and the Shanghai Jin Mao Tower (421 m). In addition, 
+
+    a series of super-tall buildings (e.g., Ping An Tower (660 m), Shanghai Tower 
+
+    (632 m) and Tianjin Goldin 117 Mega Tower (597 m)), are under construction. 
+
+    Because super-tall buildings have a large impact on the economy and society 
+
+    and most are constructed as the landmarks of a city, the seismic safety of 
+
+    these super-tall buildings is a critically important issue. Such buildings 
+
+    often have complex structural systems and adopt novel mega-structural components. 
+
+    Consequently, the structural performance and design philosophy of super-tall 
+
+    buildings remain immature and require further research.
+Generally, conventional seismic design and 
+
+    analysis practice does not take into account the flexibility of the foundation 
+
+    and adjacent soil. The foundation and the superstructure are typically designed 
+
+    as two independent systems, and the superstructure is constrained at the bottom. 
+
+    As a consequence, the evaluated seismic performance of the building only depends 
+
+    on the superstructure. This method is simple and convenient, but the dynamic 
+
+    characteristics and seismic performances of buildings that do not consider 
+
+    the flexibility of the foundation and adjacent soil may be significantly different 
+
+    from that of the actual buildings, which may lead to an unsafe design (Mylonakis 
+
+    and Gazetas, 2000), especially for the seismic design and analysis of important 
+
+    structures, such as super-tall buildings.
+To identify the effect of SSI on the dynamic 
+
+    characteristics of super-tall buildings, many researchers have conducted a 
+
+    number of field tests, laboratory tests and numerical simulations of super-tall 
+
+    buildings. Some typical comparisons on the field tested periods, laboratory 
+
+    tested periods and calculated periods of super-tall buildings are shown in 
+
+    Table 1. Theoretically, because most of the numerical models used to calculate 
+
+    the structural period do not consider the contribution of non-structural components 
+
+    to the overall structural stiffness, the field measured period would be shorter 
+
+    than the calculated period. This phenomenon is also very commonly observed 
+
+    in multi-story structures (Gao and Bu, 1993). However, Table 1 clearly demonstrates 
+
+    that the first two translational natural vibration periods measured in the 
+
+    field tests of super-tall buildings are all longer than those calculated from 
+
+    laboratory tests or numerical simulations and that the maximum relative deviation 
+
+    reaches approximately 21%. The main reason for this discrepancy is that the 
+
+    laboratory test models or the analytical models constrain the superstructure 
+
+    at the bottom without considering the flexibility of the foundation and adjacent 
+
+    soil, which overestimates the stiffness of the entire system. Therefore, the 
+
+    influence of SSI on the seismic performance of super-tall buildings cannot 
+
+    be ignored.
+Extensive studies have shown the critical role 
+
+    of SSI in the seismic response of structures (Veletsos and Meek, 1974; Wolf, 
+
+    1985; Ciampoli and Pinto, 1995; Gazetas and Mylonakis, 1998; Stewart et al., 
+
+    1999; ATC, 2012). It is becoming widely accepted that the seismic design and 
+
+    analysis of structures should take the SSI effect into consideration. Laboratory 
+
+    testing and numerical simulation are two major tools for understanding the 
+
+    behavior of the entire structure-foundation-soil system. Some researchers 
+
+    have conducted experimental studies to investigate the SSI effect. In 1988, 
+
+    Luco et al. (1988) performed forced vibration field tests for a nine-story 
+
+    reinforced concrete building, namely the Millikan Library Building, to study 
+
+    the effect of SSI. The tests indicated that SSI had a significant effect on 
+
+    the dynamic properties of the building and
+that the rigid-body 
+
+    motion caused by the translation and rocking of the base accounted for over 
+
+    30% of the total response on the roof.
+In 2007, Chang et al. (2007) performed 
+
+    dynamic centrifuge model tests of frame-wall-foundation structural systems 
+
+    to investigate their seismic performance and energy dissipation. In 2010, 
+
+    Lu et al. (2010) conducted shaking table tests of a dynamic soil-structure 
+
+    system to study the seismic response of the dynamic SSI system. The results 
+
+    indicated that the natural vibration period of the system in soft soil conditions 
+
+    was significantly larger than the period of the rigid base condition and that 
+
+    the damping ratio of the system was larger than the damping ratio of the superstructure. 
+
+    The ground motion at the foundation was different from that of the free field 
+
+    because of the vibrational feedback from the superstructure. The acceleration 
+
+    response at the top of the superstructure was dominated by the rotation of 
+
+    the basement and adjacent soil, followed by the translational movement. In 
+
+    addition, Deng et al. (2012), Drosos et al. (2012) and Liu et al. (2012) studied 
+
+    the effect of nonlinear SSI using centrifuge model tests or shaking table 
+
+    tests. Wang (2012), Ravichandran et al. (2012) and Banerjee and Lee (2013) 
+
+    studied the seismic performance of the pile foundation and soil-pile interaction 
+
+    by conducting a series of centrifuge model tests.
+With the continuous 
+
+    development of computer science, numerical methods have also become important 
+
+    tools for SSI research. In 1996,
+Chaallal
+et 
+
+    al. (1996) analyzed the
+sei
+smic performance of 
+
+    20-story ductile coupled-shear-wall models that considered the
+SSI 
+
+    effect. The study indicated that the consideration of
+foundation 
+
+    flexibility
+elongate
+d the fundamental period by up 
+
+    to 33% and
+amplified the deflections by up to 81%; 
+
+    however, the stresses in the walls and coupling beams decreased, particularly 
+
+    in the lower stories.
+The SSI had no obvious effect on
+the rotational ductility demands of the coupling beams.
+In 2006, Mylonakis
+et al. (2006)
+investigated 
+
+    the role of SSI in the collapse of the elevated Hanshin Expressway during 
+
+    the 1995 Kobe earthquake.
+In 2002, Han (2002)
+studied the seismic behavior of a 20-story frame tall building by considering 
+
+    the soil-pile interaction, leading to the conclusion that the rigid base model 
+
+    overestimated the stiffness and underestimated the damping.
+In 2003, Lu
+et al. (2003)
+performed a three-dimensional FE analysis on the dynamic 
+
+    SSI of a 12-story frame structure using the general-purpose FE program ANSYS 
+
+    and discussed the influence of various parameters, such as soil property, 
+
+    structural stiffness and buried depth, on the seismic response of the SSI 
+
+    system.
+In 2013,
+Farghaly and Ahmed 
+
+    (2013) performed a three-dimensional time history analysis of structure-foundation-soil 
+
+    system models under strong earthquake ground motion and concluded that SSI 
+
+    could have a detrimental effect on the building performance.
+Although 
+
+    great progress has been achieved in the research of SSI, the superstructures 
+
+    on which most studies focused are mainly multi-story buildings and bridges. 
+
+    There are few studies examining the effect of SSI on the seismic performance 
+
+    of super-tall buildings.
+In 2013, Jiang
+et al. (2013) took the Shanghai 
+
+    Tower as the research object and discussed the influence of SSI on the dynamic 
+
+    properties and seismic displacement responses. The results indicated that 
+
+    the consideration of the pile-soil-structure interaction elongated the vibration 
+
+    period and
+amplified the roof deflection. In contrast, 
+
+    the i
+nter-story drift ratio was smaller than that 
+
+    of the rigid base model.
+In addition, the
+studies
+mentioned 
+
+    above mainly focused on the SSI effect
+of the structural dynamic properties 
+
+    and seismic performance, such as the displacement and the internal force response 
+
+    of the superstructures. Few studies investigating the role of the
+SSI 
+
+    effect on the collapse resistance and collapse mechanism of the
+superstructure 
+
+    have been reported in the literature.
+Therefore, taking a typical super-tall building, 
+
+    the Shanghai Tower with a total height of 632 m, as the research object, the 
+
+    substructure approach is adopted to simulate the effect of SSI on the seismic 
+
+    responses of Shanghai Tower. The refined FE model of the superstructure of 
+
+    Shanghai Tower and the simplified analytical model of the foundation and adjacent 
+
+    soil are established. The collapse process of Shanghai Tower with the SSI 
+
+    effect is predicted, and the influence of SSI on the collapse mechanism and 
+
+    the collapse resistance capacity are discussed in detail.
+2. FE model of Shanghai Tower and its soil-foundation 
+
+    system
+The soil-structure interaction is a very complex 
+
+    nonlinear process and these nonlinearities may include: (1) yielding of the 
+
+    lateral resistance system in the superstructure; (2) yielding of the soil; 
+
+    (3) gapping between the foundation and the soil; (4) yielding of the foundation 
+
+    structural elements. Considering all these issues in the response history 
+
+    analysis is a formidable task, even with modern computational capabilities. 
+
+    The numerical methods used to evaluate the SSI effect can be categorized as 
+
+    the direct analysis approach and the substructure approach (ATC, 2012). In 
+
+    the direct analysis approach, the soil, foundation and structure are included 
+
+    within the same model and are analyzed as a complete system, as schematically 
+
+    depicted in Fig. 1(a). The direct analysis approach can address the detailed 
+
+    response and damage to the superstructure, foundation and soil when subjected 
+
+    to earthquakes. However, this method is difficult to implement, because of 
+
+    the large computational workload, especially for complex structures. Another 
+
+    method is the substructure approach (Pitilakis and Clouteau, 2010), in which 
+
+    a series of springs are incorporated to represent the foundation and adjacent 
+
+    soil, as depicted in Fig. 1(b). As early as 1953, Meyerhof (1953) proposed 
+
+    using the equivalent stiffness method to consider the interaction between 
+
+    the frame structure and the soil. According to different research objectives, 
+
+    the substructure approach can also be classified into two subclasses: (1) 
+
+    nonlinear structure and equivalent-linear soil; (2) nonlinear soil and linear 
+
+    structure. Structural engineers focus more attention on the responses of the 
+
+    superstructure than the soil. Hence, they generally choose the nonlinear structure 
+
+    and equivalent-linear soil model (Mylonakis and Gazetas 2000; Aviles and P��rez-Rocha 
+
+    2003; Jarernprasert et al. 2013) to evaluate the structural seismic responses.
+Note that in this study, the Shanghai Tower 
+
+    has hundreds of thousands of different components. The direct analysis approach, 
+
+    in which the three-dimensional refined FE model of the superstructure of Shanghai 
+
+    Tower, its foundation and adjacent soil must be established, will lead to 
+
+    a substantial volume of computation, making it difficult to perform a study 
+
+    on the parameter sensitivity. In addition, this study focuses on the seismic 
+
+    response and collapse resistance of the superstructure of Shanghai Tower, 
+
+    rather than the seismic response of only the foundation and soil. For the 
+
+    above reasons, the substructure approach including the nonlinear structure 
+
+    and equivalent-linear soil is adopted to evaluate the seismic responses of 
+
+    Shanghai Tower, in which a series of springs are incorporated to represent 
+
+    the foundation and adjacent soil.
+The shaking table test of a soil-structure 
+
+    system conducted by Lu et al. (2000) indicated that the seismic respons
+es of the superstructure were dominated by the rotation of the 
+
+    basement and adjacent soil, followed
+by the translational movement. Because 
+
+    the total height of Shanghai Tower is much greater than the embedded depth 
+
+    of its foundation, this research will focus on the influence of the rotation 
+
+    of the soil-foundation system on the seismic responses of superstructure subjected 
+
+    to a lateral earthquake; thus, the horizontal and vertical movements of the 
+
+    soil-foundation system are correspondingly ignored. Therefore, the soil-foundation 
+
+    system of Shanghai Tower is simplified as a series of linear rotation springs 
+
+    at the bottom of the building, and the main parameters of the springs are 
+
+    calibrated by the refined FE model of the soil-foundation system of Shanghai 
+
+    Tower. The details of the superstructure of Shanghai Tower and the soil-foundation 
+
+    system are presented
+in the following
+sections.
+2.1. Overview and FE model of Shanghai 
+
+    Tower
+The Shanghai Tower is a multi-functional office building located 
+
+    in Lujiazui, Shanghai. The tower consists of a 124-story main tower, a 7-story 
+
+    podium and a 5-story basement, and the total height of the tower is approximately 
+
+    632 m. The mega-column/core-tube/outrigger lateral-force-resisting system 
+
+    is adopted for the main tower, as shown in Fig. 2 (Lu et al., 2011). According 
+
+    to the architectural and functional requirements, the
+mechanical 
+
+    and refuge stories
+divide the main tower into eight zones along the height. 
+
+    The mega-column system contains eight mega-columns extending from the bottom 
+
+    to the top of the building and four corner mega-columns ending at Zone 5. 
+
+    All of the mega-columns are constructed
+using 
+
+    shaped-steel reinforced concrete columns
+, and the maximum cross section 
+
+    is approximately 5300 mm��3700 mm. The core tube is made up of a 30 m��30 m 
+
+    reinforced concrete tube, and the thickness of the concrete wall decreases 
+
+    gradually from the bottom to the top. The outrigger system is located at the 
+
+    mechanical and refuge stories, i.e., the junction of each of the two zones, 
+
+    consisting of the circle trusses and the outriggers with a total height of 
+
+    9.9 m.
+The three dimensional FE model of Shanghai 
+
+    Tower is built up based on the general FE program MSC.Marc. The diagram of 
+
+    the FE model is shown in Fig. 3. The widely used fiber beam element model 
+
+    is adopted to simulate the steel frame, outrigger and steel tower at the top. 
+
+    The multi-layer shell element, which has outstanding nonlinear performance, 
+
+    is used to simulate the shear wall and coupling beam in the core tube. Meanwhile, 
+
+    the concentrated reinforcement (i.e., H-shaped steel) in the boundary zones 
+
+    in the shear wall is simulated using beam elements, which are incorporated 
+
+    into the shell model with sharing the nodes. The combined simplified model 
+
+    including the multi-layer shell element and the truss element is adopted to 
+
+    simulate the mega-columns. The details of the modeling issues are presented 
+
+    in Lu et al. (2011).
+2.2. FE model and rotational stiffness 
+
+    of the soil-foundation system
+In a substructure approach, the foundation 
+
+    and adjacent soil are simplified into a series of springs to consider the 
+
+    effect of the SSI. In this section, the refined FE model of the foundation 
+
+    and adjacent soil is established to calibrate a reasonable range of the stiffness 
+
+    of the rotation spring.
+The schematic diagram of the foundation of 
+
+    Shanghai Tower and the adjacent soil is shown in Fig. 4. The piled raft foundation, 
+
+    including the basement, raft and piles, is used to support its main tower. 
+
+    The planar shape of the piled raft foundation is an octagon, with a total 
+
+    area of 8250 m
+2
+. The basement has 5 underground stories. The raft 
+
+    is constructed of reinforced concrete with a total thickness of 6 m. The top 
+
+    elevation of the raft is −25.4 m. The pile system is comprised of a 
+
+    series of bored piles, each with a diameter of 1 m and a total length of approximately 
+
+    87 m, and the piles are spaced at 3 m intervals in both directions. In the 
+
+    FE model, the piles are merged according to the assumption that the merged 
+
+    piles system has a stiffness approximately equal to the actual pile system. 
+
+    The diameter of the merged pile is 1.8 m, with the pile spacing increasing 
+
+    to 9 m. The material parameters of the piles remained unchanged.
+Jiang
+et al. (2013) divided the soil under the 
+
+    Shanghai Tower into approximately four layers and the thickness and material 
+
+    properties of each soil layer are described in Table 2, which are simplified 
+
+    from the actual conditions of the soil on site in the geological investigation 
+
+    report of Shanghai Tower. In the FE model, the width of the soil at each side 
+
+    of the raft is 100 m. A viscoelastic boundary condition is used for the outer 
+
+    edge of the soil, and a fixed boundary is applied to the top face of the bedrock.
+The refined FE model of the foundation and 
+
+    adjacent soil is implemented in the commercial software, ANSYS. In this model, 
+
+    the slab and the wall of the basement are simulated by a shell element (Shell 
+
+    63), the piles are simulated by a beam element (Beam 4) and the concrete raft 
+
+    is simulated by a solid element (Solid 45). The adjacent soil is also simulated 
+
+    by a solid element (Solid 45), and the deformation compatibility and force 
+
+    equilibrium at the interface of the soil and piles are achieved using shared 
+
+    nodes. In addition, all the material properties of the soil are treated as 
+
+    linear.
+To obtain the linear rotational stiffness of 
+
+    the soil-foundation system, two forces with the same magnitude and in opposite 
+
+    directions are applied to the two sides of the raft. The rotational moment
+M
+can be obtained by the force at each side of the raft,
+F
+, 
+
+    multiplied by the length of the raft,
+L
+. Because the basement is constructed 
+
+    of reinforced concrete and the Young's modulus of concrete is much larger 
+
+    than that of the soil (as shown in Table 2), the deflection of the basement 
+
+    and the raft can be ignored, and the substructure rocks as a rigid body under 
+
+    the external rotational moment
+M
+. The rotation angle
+q
+can be determined 
+
+    by the relative vertical displacement on both sides of the raft
+D
+divided by the length of the raft
+L
+, that is,
+q
+=
+D
+/
+L
+. Consequently, the elastic rotational stiffness can be expressed 
+
+    by Eq. (1).
+(1)
+Using the above calculation process, the equivalent 
+
+    rotational stiffness,
+K
+, of the soil-foundation system is determined 
+
+    to be approximately 4.36��10
+13
+N∙m/rad. The factors that may 
+
+    influence the rotational stiffness of the soil-foundation system are very 
+
+    complex. For example, the adjacent soil may enter the nonlinear stage under 
+
+    strong earthquakes, with a corresponding change in soil stiffness. The estimated 
+
+    rotational stiffness of 4.36��10
+13
+N∙m/rad may not precisely 
+
+    agree with the actual rotational stiffness. To account for this difference, 
+
+    the rotational stiffness is adjusted by 0.5 and 2.0, which yielded a range 
+
+    between the values of 0.5
+K
+= 2.18��10
+13
+N∙m/rad and 
+
+    2.0
+K
+= 8.72��10
+13
+N∙m/rad, respectively, to assess 
+
+    the sensitivity of soil-foundation system to the rotational stiffness.
+3. Collapse process and mechanism analysis
+Based on the above analyses, three values of 
+
+    rotational spring stiffness representing different conditions of the soil-foundation 
+
+    system are obtained. For the convenience of discussion in the following sections, 
+
+    the Shanghai Tower models, whose rotational spring stiffnesses are 0.5
+K
+, 
+
+    1.0
+K
+and 2.0
+K
+, are referred to as Models A, B and C. In addition, 
+
+    the model with the rigid base condition is referred to as Model O.
+3.1. Comparison of the basic dynamic properties
+Modal analysis of the above 
+
+    four models is conducted using the Lanczos Method. The first three translational 
+
+    vibration periods in the
+x
+and
+y
+direction are compared in Table 
+
+    3. The fundamental periods of Model O, which does not consider the SSI effect, 
+
+    are 9.83 s in the
+x
+direction and 9.77 s in the
+y
+direction. 
+
+    All of the periods of Models A, B and C are longer than that of Model O. The 
+
+    comparison also indicates that the smaller the equivalent rotational spring 
+
+    stiffness, the larger the fundamental period elongates. For the first translational 
+
+    vibration period of Models A and O, the relative deviation exceeds 30%; while 
+
+    for the higher vibration periods, the relative deviation becomes smaller, 
+
+    e.g., a 6% relative deviation for the third translational vibration period 
+
+    between Models A and O is a typical case. Therefore, the SSI has a significant 
+
+    impact on the lower order vibration mode periods, especially on the fundamental 
+
+    period.
+To evaluate the effect 
+
+    of SSI on the modal shapes of Shanghai Tower, the normalized modal difference 
+
+    (NMD) (Waters, 1995) is used to identify the correlations between the translational 
+
+    modal shape vectors of Models A, B or C and that of Model O. The formula of 
+
+    NMD is defined as follows:
+(2)
+(3)
+where X represents Models A, B or C.
+is the
+i
+-th modal shape vector of Model 
+
+    X, and
+is the
+i
+-th modal shape vector of 
+
+    Model O. The MAC is a dimensionless quantity, whose value is related to the 
+
+    correlation of the two modal shape vectors. The NMD is a close estimate of 
+
+    the average difference between the shape vectors of Models X and O. A smaller 
+
+    NMD value indicates a better correlation for the two modal shape vectors. 
+
+    Table 4 lists the values of NMD of Models A, B and C and Model O for the first 
+
+    three translational modes in both the
+x
+and
+y
+direction. A good 
+
+    correlation between the modal shapes of Models A, B and C and Model O is found, 
+
+    while a smaller stiffness of the soil-foundation system leads to a larger 
+
+    difference between the two modal shape vectors. On the whole, the SSI has 
+
+    little effect on the translational vibration modes of Shanghai Tower.
+3.2. Seismic collapse simulation considering 
+
+    the Soil-Structure Interaction
+Incremental dynamic analysis 
+
+    (IDA) (Vamvatsikos and Cornell, 2002) is an effective method to evaluate the 
+
+    seismic performance of structures and is widely used in structural seismic 
+
+    research. To evaluate the impact of SSI on the collapse resistance of Shanghai 
+
+    Tower, IDA is used in this research to perform the collapse simulations of 
+
+    the four models. The widely used ground motion recorded at the El-Centro station 
+
+    in the USA in 1940 (referred to as ��El-Centro�� hereafter) is selected as a 
+
+    typical seismic input. The ground motion record is inputted along the
+x
+direction of Shanghai Tower and the intensity increases gradually until collapse 
+
+    occurs. During the collapse simulation, the classical Rayleigh damping is 
+
+    used with the 5% damping ratio specified in Section 5.3.4 of the Specification 
+
+    for the Design of Steel-Concrete Hybrid Structures in Tall Buildings (China 
+
+    Institute of Building Standard Design & Research, 2008).
+The potential collapse process and final 
+
+    failure mode of Shanghai Tower without consideration of the SSI effect was 
+
+    predicted by Lu et al. (2011) to understand the earthquake-induced collapse 
+
+    mechanism subjected to extreme earthquakes. In comparison, this study
+focuses
+on the impact of SSI on the collapse resistance of Shanghai Tower; thus, the 
+
+    potential collapse process and the failure mode of Model B are discussed in 
+
+    detail in the following section, as an example to illustrate the SSI effect 
+
+    on the collapse resistance of Shanghai Tower.
+The earthquake-induced 
+
+    collapse is observed in Model B when the peak ground acceleration (PGA) of 
+
+    the El-Centro ground motion increases to 1.7
+g
+(
+g
+represents 
+
+    the gravity acceleration). The final collapse mode is shown in Fig. 5 and 
+
+    is mainly a vertical ��pan-cake�� collapse, similar to the description in Lu 
+
+    et al. (2011). The details of the collapse process are shown in Fig. 6. First, 
+
+    when
+t
+=1.50 s (Fig. 6(a)), the diagonal members of the outriggers in 
+
+    Zones 4 and 5 begin to yield. When
+t
+=2.6 s (Fig. 6(b)), some flange 
+
+    walls of the core tube at the bottom of Zone 7 are crushed as a result of 
+
+    the change of the openings layout in the core tube between Zones 6 and 7, 
+
+    which may lead to a sudden change in stiffness and a stress concentration. 
+
+    Next, when
+t
+=3.00 s, the diagonal members of the outriggers in nearly 
+
+    all eight zones have undergone severe yield and begin to dissipate a large 
+
+    amount of seismic energy. Subsequently, when
+t
+=3.43 s (Fig. 6(c)), 
+
+    the shear walls at the bottom of Zone 5 and the top of Zone 4 are crushed 
+
+    because the cross section of the core tube is reduced from Zone 4 to Zone 
+
+    5. When
+t
+=3.58 s (Fig. 6(d)), some coupling beams along the
+x
+direction in the core tube begin to fail, and then the number of damaged coupling 
+
+    beams increases gradually. Later, when
+t
+=5.38 s (Fig. 6(e)), most shear 
+
+    walls at the junction of Zones 4 and 5 have been damaged, and the vertical 
+
+    and horizontal loads distributed in the mega-columns increase gradually. Then, 
+
+    the mega-columns at the bottom of Zone 5 reach their load capacities and begin 
+
+    to fail. Finally, when
+t
+=6.28 s (Fig. 6(f)), the core tube and mega-columns 
+
+    at the bottom of Zone 5 are seriously damaged and unable to withstand the 
+
+    gravity and seismic loads. At this point, the entire structure begins to collapse.
+The distribution of the horizontal displacement 
+
+    along the height of Model B at the critical collapse state in the
+x
+direction is shown in Fig. 7. At the critical collapse state, the deformation 
+
+    mode is similar to that in the third translational vibration mode, and the 
+
+    mass center
+of the building above 
+
+    the failure region d
+oes not exhibit a very significant horizontal displacement. 
+
+    Therefore, the failure of Model B is dominated by high-order vibration modes, 
+
+    and the main collapse mode of Shanghai Tower is the vertical ��pan-cake�� collapse 
+
+    rather than lateral overturning.
+3.3. Comparison of the collapse resistance 
+
+    capacity and failure sequences
+In the IDA analysis, the ground motion intensity 
+
+    is increased gradually until the collapse occurs. Then, the critical ground 
+
+    motion intensity resulting in the structural collapse is obtained. In the 
+
+    study of structural seismic collapse prevention, the collapse margin ratio 
+
+    (CMR) is often used to quantify the capacity to resist structural collapse, 
+
+    which is calculated by the following equation, using PGA as the basic ground 
+
+    motion intensity measure in this research.
+(4)
+where PGA
+Collapse
+is the critical 
+
+    ground motion intensity resulting in the structural collapse. PGA
+MCE
+is the ground motion intensity corresponding to the MCE level for the design. 
+
+    Shanghai is an Intensity 7 region and the corresponding PGA
+MCE
+is 0.22
+g
+, as prescribed in the Chinese seismic design code GB50011-2010 
+
+    (Ministry of Construction of the People��s Republic of China, 2010).
+With the El-Centro ground motion input in the
+x
+direction, Model O begins to collapse when the PGA is scaled to 1.4
+g
+; in comparison, the critical collapse PGAs of Models A, B and C are 
+
+    1.8
+g
+, 1.7
+g
+and 1.6
+g
+, respectively. The CMR of these 
+
+    four models is compared in Fig. 8. It is clear that Model A has a maximum 
+
+    CMR of 8.2; the CMR of Model B is 7.7 and that of Model C is 7.3, while Model 
+
+    O has a minimum CMR of 6.4. The comparison shows that the consideration of 
+
+    the SSI effect increases the structural collapse resistance capacity. This 
+
+    increase is mainly because the SSI effect extends the vibrational periods 
+
+    of Shanghai Tower and reduces the seismic demand of the structure under the 
+
+    same given ground motion records.
+The failure sequences at the critical ground 
+
+    motion intensity of the four models subjected to El-Centro in the
+x
+direction are compared in Table 5. The entire failure sequences of these four 
+
+    models are very similar; that is, the yield of the diagonal members of the 
+
+    outriggers in Zones 4 and 5 occurs first, followed by the crushing of the 
+
+    core tube, the failure of the coupling beam and the mega-columns at Zone 5, 
+
+    which is the main damaged region; finally, collapse occurs at the bottom of 
+
+    Zone 5, and the entire structure breaks into two parts. The difference is 
+
+    that the shear walls at the bottom of Zone 7 in Models A and B fail after 
+
+    the yielding of diagonal members of the outriggers in Zones 4 and 5; however, 
+
+    no failure of the shear wall in Zone 7 is observed in Model C in the early 
+
+    stage of collapse simulation, and in Model O, some shear walls at the bottom 
+
+    of Zone 8 are crushed instead of at Zone 7. The distributions of the horizontal 
+
+    displacements along the height at the critical collapse state and the time 
+
+    histories of the roof vertical displacements of the four models are shown 
+
+    in Figs. 7 and 9, respectively. In Models A, B and C, the deformation mode 
+
+    at the critical collapse state is similar to that in the high-order vibration 
+
+    mode. The mass center of the structure above the failure region does not undergo 
+
+    a very significant displacement, and the final collapse mode is the vertical 
+
+    ��pan-cake�� collapse. In Model O, the collapse occurs at 20.23 s when Model 
+
+    O has entered the stage of free vibration. Because severe damage has occurred 
+
+    in the structure due to the earthquake, the development of structural damage 
+
+    continues after entering the free vibration stage, and finally the entire 
+
+    structure breaks into two parts at the bottom of Zone 5. Therefore, the deformation 
+
+    mode at the critical collapse state of the structure above the failure region 
+
+    is very similar to that in the first vibration mode; however, the final collapse 
+
+    mode is still the vertical ��pan-cake�� collapse.
+4. Conclusions
+In this study, the substructure approach is 
+
+    used to evaluate the influence of SSI on the seismic collapse resistance of 
+
+    Shanghai Tower. The refined FE model of the superstructure of Shanghai Tower 
+
+    and the simplified analytical model of the foundation and adjacent soil are 
+
+    established to predict the collapse process and collapse mode while considering 
+
+    the SSI, as well as the influence of SSI on the capacity to resist collapse 
+
+    and failure sequences. Consequently, the following conclusions are drawn.
+(1) The SSI effect could 
+
+    extend the periods of lower order vibration modes, particularly the fundamental 
+
+    period, and a smaller stiffness of the soil-foundation system leads to longer 
+
+    vibration periods. However, the SSI effect has little influence on the translational 
+
+    vibration modal shape vectors of Shanghai Tower.
+(2) The SSI effect increases the collapse resistance 
+
+    capacity of Shanghai Tower, and a smaller stiffness of soil-foundation system 
+
+    leads to a larger CMR.
+(3) The SSI effect has some impact on the failure 
+
+    sequences of Shanghai Tower subjected to extreme strong earthquakes but a 
+
+    negligible impact on the final failure modes.
+Acknowledgements
+The authors are grateful for the financial 
+
+    support received from the National Nature Science Foundation of China (No. 
+
+    51222804, 91315301), the Beijing Natural Science Foundation (No. 8142024) 
+
+    and the Fok Ying Dong Education Foundation (No. 131071).
+References
+ATC. Soil-structure interaction for building 
+
+    structures (ATC 84). Applied Technology Council, Redwood City, California
+, 2012.
+Avil��s J, P��rez-Rocha L E. Soil-structure interaction 
+
+    in yielding systems. Earthquake Engineering & Structural Dynamics, 2003, 
+
+    32(11): 1749-1771.
+Banerjee S, Lee F H. Centrifuge shaking table tests on 
+
+    a single pile embedded in clay subjected to earthquake excitation. International 
+
+    Journal of Geotechnical Engineering, 2013, 7(2): 117-123.
+Chaallal O, Ghlamallah N. 
+
+    Seismic response of flexibly supported coupled shear walls. Journal of Structural 
+
+    Engineering, 1996, 122(10): 1187-1197.
+Chang B J, Raychowdhury P, Hutchinson 
+
+    T C, Thomas J M, Gajan S, Kutter B L. Evaluation of the seismic performance 
+
+    of combined frame-wall-foundation structural systems through centrifuge testing. 
+
+    Proceedings of the 4th International Conference on Earthquake Geotechnical 
+
+    Engineering. Thessaloniki, Greece, Paper No. 1497, June 25-28
+, 2007.
+Chen W H, Lu Z R, Chen S H, 
+
+    Ni Y Q, Liao W Y. Monitoring dynamic characteristics of Canton Tower under 
+
+    different excitations. Journal of Vibration and Shock, 2012, 32(3): 49-54.
+(in Chinese)
+China Institute of Building 
+
+    Standard Design & Research. Specification for design of steel-concrete 
+
+    mixed structure of tall buildings (CECS 230: 2008). China Planning Press, 
+
+    Beijing, China, 2008.
+(in Chinese)
+Ciampoli M, Pinto P E. Effects of soil-structure interaction 
+
+    on inelastic seismic response of bridge piers. Journal of
+Structural Engineering, 1995, 121(5): 806-814.
+Deng L, Kutter B L, Kunnath 
+
+    S. Centrifuge modeling of bridge systems designed for rocking foundations. 
+
+    ASCE Journal of Geotechnical and Geoenvironmental Engineering, 2012, 138(3): 
+
+    335-344.
+Drosos V, Georgarakos T, Loli 
+
+    M, Anastasopoulos I, Zarzouras O, Gazetas G. Soil-foundation-structure interaction 
+
+    with mobilization of bearing capacity: An experimental study on sand. ASCE 
+
+    Journal of Geotechnical and Geoenvironmental Engineering, 2012, 138(11): 1369-1386.
+Farghaly A A, Ahmed H H. Contribution 
+
+    of soil-structure interaction to seismic response of buildings. KSCE Journal 
+
+    of Civil Engineering, 2013, 17(5): 959-971.
+Gao X W, Bu Q S. Rational 
+
+    factor of cycle reduction and inter-story elastic drift correction for multi-story 
+
+    RC-frame building. Building Structure, 1993, 17(2): 42-46. (in Chinese)
+Gazetas G, Mylonakis G. Seismic soil-structure interaction: 
+
+    new evidence and emerging issues. In: ASCE. Geotechnical Earthquake Engineering 
+
+    and Soil Dynamics III, vol. 2. Reston, Virginia: Geotechnical Special Publication, 
+
+    1998: 1119-1174.
+Han Y. Seismic response of 
+
+    tall building considering soil-pile-structure interaction. Earthquake Engineering 
+
+    and Engineering Vibration, 2002, 1(1): 57-64.
+Jarernprasert S, Bazan-Zurita E, Bielak J. Seismic soil-structure 
+
+    interaction response of inelastic structures. Soil Dynamics and Earthquake 
+
+    Engineering, 2013, 47: 132-143.
+Jiang X L, Li B Q, Lao H Y. 
+
+    Seismic response analysis of pile-soil-structure of the Shanghai Tower��s Miranda 
+
+    model. Earthquake Resistant Engineering and Retrofitting, 2013, 35(4): 42-47.
+(in Chinese)
+Li W Y. China: A country locked in fierce competition 
+
+    to build super high-rises. Time + Architecture, 2011, 28(3): 9. (in Chinese)
+Li Z Q. Research on structure 
+
+    health monitoring of Jin Mao Tower. PhD thesis, Tongji University, China, 
+
+    2007.
+(in Chinese)
+Liu W, Hutchinson T C, Kutter B L, Hakhamaneshi 
+
+    M, Aschheim M, Kunnath S. Demonstration of compatible yielding between soil-foundation 
+
+    and superstructure components. Journal of Structural Engineering
+, ASCE, 2012, 139: 1408-1420.
+Lu X L, Chen Y Q, Chen B, 
+
+    Huang W, Zhao L. Shaking table testing of dynamic soil-structure interaction 
+
+    system. Journal of Earthquake Engineering and Engineering Vibration, 2000, 
+
+    20(4): 20-29.
+(in Chinese)
+Lu X L, Li P Z, Guo X Q, Shi 
+
+    W X, Liu J. Vibration control and site measurement on Shanghai World Financial 
+
+    Center Tower. Structural Engineers, 2009, 25(4): 63-70.
+(in Chinese)
+Lu X L, Shi W X, Shen J H, 
+
+    Fan P F. Measurement on dynamic property of several super high-rise buildings 
+
+    in Shanghai. Building Science, 2001, 17(2): 36-39.
+(in Chinese)
+Lu X, Chen B, Li P Z, Chen 
+
+    Y Q. Numerical analysis of tall buildings considering dynamic soil-structure 
+
+    interaction. Journal of Asian Architecture and Building Engineering, 2003, 
+
+    2(1): 1-8.
+Lu X, Lu X Z, Zhang W K, Ye 
+
+    L P. Collapse simulation of a super high-rise building subjected to extremely 
+
+    strong earthquakes. Science China Technological Sciences, 2011, 54(10): 2549-2560.
+Luco J E, Trifunac M D, Wong 
+
+    H L. Isolation of soil-structure interaction effects by full-scale forced 
+
+    vibration tests. Earthquake Engineering & Structural Dynamics, 1988, 16(1): 
+
+    1-21.
+Meyerhof G G. Some recent 
+
+    foundation research and its application to design. The Structural Engineer, 
+
+    1953, 31(6):151-167.
+Ministry of Construction of 
+
+    the People��s Republic of China. Code for seismic design of buildings (GB50011-2010). 
+
+    China Architecture & Building Press, Beijing, China, 2010.
+(in Chinese)
+Mylonakis G, Gazetas G. Seismic 
+
+    soil-structure interaction: beneficial or detrimental? Journal of Earthquake 
+
+    Engineering, 2000, 4(03): 277-301.
+Mylonakis G, Syngros C, Gazetas 
+
+    G, Tazoh T. The role of soil in the collapse of 18 piers of Hanshin Expressway 
+
+    in the Kobe earthquake. Earthquake Engineering & Structural Dynamics, 
+
+    2006, 35(5): 547-575.
+Pitilakis D, Clouteau D. Equivalent 
+
+    linear substructure approximation of soil-foundation-structure interaction: 
+
+    model presentation and validation. Bulletin of Earthquake Engineering, 2010, 
+
+    8(2): 257-282.
+Ravichandran N, Krishnapillai S, Machmer B. Centrifuge 
+
+    modeling of unsaturated soil-pile system. Proceeding of GeoCongress 2012: 
+
+    State of the Art and Practice in Geotechnical Engineering, 2012: 1978-1987.
+Stewart J P, Fenves G L, Seed R B. Seismic soil-structure 
+
+    interaction in buildings. I: Analytical methods. Journal of Geotechnical and 
+
+    Geoenvironmental Engineering, 1999, 125(1): 26-37.
+Vamvatsikos D, Cornell C A. 
+
+    Incremental dynamic analysis. Earthquake Engineering & Structural Dynamics, 
+
+    2002, 31(3): 491-514.
+Veletsos A S, Meek J W. Dynamic 
+
+    behaviour of building-foundation systems. Earthquake Engineering & Structural 
+
+    Dynamics, 1974, 3(2): 121-138.
+Wang M W. Dynamic Centrifuge Tests and Numerical Modelling 
+
+    for Geotechnical Earthquake Engineering in Liquefiable Soils. Science Press, 
+
+    Beijing, China, 2012. (in Chinese)
+Wang X L, Qu W L, Liu H. Finite 
+
+    element analysis on dynamic characteristics of super high tower in Guangzhou. 
+
+    Journal of Wuhan University of Technology, 2007, 29(1): 142-144+156.
+(in Chinese)
+Waters T P. Finite element model updating 
+
+    using measured frequency response functions. PhD thesis, University of Bristol, 
+
+    U.K.
+, 1995.
+Wolf J P. Dynamic soil-structure interaction. N.J.: Prentice-Hall, 
+
+    Inc., Englewood Cliffs, 1985.
+Zhu J J, Lu X L, Zou Y. Shake-table 
+
+    test and theoretical analysis for Shanghai World Financial Center scale model. 
+
+    China Civil Engineering Journal, 2005, 38(10): 22-30.
+(in Chinese)
+Zhu J J, Lu X L. Elastoplastic time-history analysis of 
+
+    Shanghai World Financial Center Building. Journal of Natural Disasters, 2006, 
+
+    15(2): 49-56. (in Chinese)
+List of Tables
+Table 1.
+Typical comparison of the field test periods 
+
+    and the laboratory test or numerical simulation periods
+Table 2.
+Thickness and material properties of each 
+
+    soil layer in the FE model of the soil-foundation system
+Table 3.
+Comparison of the first three translational 
+
+    vibration periods of Shanghai Tower in the
+x
+and
+y
+direction
+Table 4.
+Comparison between the translational vibration 
+
+    modes of Models A, B and C and Model O
+Table 5.
+Comparison of the failure sequences at the 
+
+    critical ground motion intensity of El-Centro
+List of figures
+Fig. 1.
+Schematic illustration of analysis methods 
+
+    of the soil-structure interaction
+Fig. 2.
+Schematic illustration of the lateral-force-resisting 
+
+    system of Shanghai Tower (Lu et al., 2011)
+Fig. 3.
+Three-dimensional FE model of Shanghai Tower 
+
+    (Lu et al., 2011)
+Fig. 4.
+Schematic diagram of the soil-foundation system 
+
+    of Shanghai Tower
+Fig. 5.
+Final collapse mode of Model B subjected to 
+
+    El-Centro in the
+x
+direction (PGA=1.7 g)
+Fig. 6.
+Collapse process of Model B subjected to El-Centro 
+
+    in the
+x
+direction (PGA=1.7 g)
+Fig. 7.
+Distribution of the horizontal displacement 
+
+    along the height at the critical collapse state
+Fig. 8.
+Comparison of the CMR of the four models subjected 
+
+    to El-Centro in the
+x
+direction
+Fig. 9.
+Roof vertical displacement time histories 
+
+    at the critical ground motion intensity of El-Centro
+Table 1
+Typical comparison of the field test 
+
+    periods and the laboratory test or numerical simulation periods
+Height
+(m)
+Period
+Field test
+period (s)
+Laboratory test period (s)
+d
+(
+%
+)
+Numerical simulation period (s)
+d
+(
+%
+)
+Shanghai World Financial Center  (
+Lu et al., 2009; Zhu and Lu, 2006; 
+
+            Zhu et al., 2005)
+492
+T
+1
+6.502
+5.542
+-14.76
+6.500
+-0.03
+T
+2
+6.398
+5.542
+-21.74
+5.800
+-9.35
+Shanghai Triumphal Arch Building (
+Lu 
+
+            et al., 2001
+)
+100
+T
+1
+1.795
+1.577
+-12.14
+T
+2
+1.383
+1.082
+-21.76
+Shanghai Jin Mao Tower (
+Li, 2007
+)
+420.5
+T
+1
+6.862
+5.637
+-17.85
+T
+2
+6.829
+5.679
+-16.84
+Canton Tower (
+Wang et al., 2007; Chen 
+
+            et al., 2012
+)
+610
+T
+1
+10.68
+9.703
+-9.15
+T
+2
+7.191
+6.714
+-6.63
+Note: 
+
+    the relative deviation
+d
+indicates the difference from the field test
+period
+.
+Table 2 Thickness and material properties of each soil layer in the 
+
+    FE model of the soil-foundation system
+Soil layer
+Range of depth (m)
+Density (kN/m
+3
+)
+Poisson ratio
+Elasticity modulus (MPa)
+1
+0 ~ -15
+18.4
+0.49
+20.36
+2
+-15 ~ -30
+18.15
+0.47
+20.55
+3
+-30 ~ -115
+23.8
+0.46
+74.4
+4
+-115 ~ -157
+42.8
+0.46
+97.6
+Table 3 Comparison of the first three translational vibration periods 
+
+    of Shanghai Tower in the
+x
+and
+y
+direction
+Model O
+Model A
+Model B
+Model C
+T
+(s)
+T
+(s)
+d
+T
+(s)
+d
+T
+(s)
+d
+X Direction
+1st translational mode
+9.83
+13.49
+37.3%
+11.79
+20.0%
+10.85
+10.4%
+2nd translational mode
+3.57
+3.76
+5.4%
+3.70
+3.6%
+3.65
+2.2%
+3rd translational mode
+1.67
+1.78
+6.0%
+1.74
+4.1%
+1.72
+2.5%
+Y Direction
+1st translational mode
+9.77
+13.45
+37.7%
+11.74
+20.2%
+10.79
+10.5%
+2nd translational mode
+3.52
+3.71
+5.5%
+3.64
+3.6%
+3.59
+2.2%
+3rd translational mode
+1.66
+1.76
+6.3%
+1.73
+4.3%
+1.70
+2.6%
+Note: 
+
+    the relative deviation
+d
+indicates the difference from Model O.
+Table 4 Comparison between the translational 
+
+    vibration modes of Models A, B and C and Model O
+Mode
+X Direction
+Y Direction
+NMD(O-A)
+1st translational mode
+7.67%
+7.68%
+2nd translational mode
+11.40%
+11.21%
+3rd translational mode
+10.00%
+10.31%
+NMD(O-B)
+1st translational mode
+5.05%
+5.07%
+2nd translational mode
+7.59%
+7.50%
+3rd translational mode
+6.83%
+7.08%
+NMD(O-C)
+1st translational mode
+3.00%
+3.01%
+2nd translational mode
+4.54%
+4.50%
+3rd translational mode
+4.18%
+4.34%
+Table 5 Comparison of the failure sequences at the critical ground 
+
+    motion intensity of El-Centro
+Failure sequence
+Model A
+Model B
+Model C
+Model O
+1
+Diagonal members of the outriggers in Zones 4 and 5 
+
+            begin to yield
+Diagonal members of the outriggers in Zones 4 and 5 
+
+            begin to yield
+Diagonal members of the outriggers in Zones 4 and 5 
+
+            begin to yield
+Diagonal members of the outriggers in Zones 4 and 5 
+
+            begin to yield
+2
+Shear walls at the bottom of Zone 7 begin to fail
+Shear walls at the bottom of Zone 7 begin to fail
+Shear walls at the junction of Zones 4 and 5 are crushed
+Shear walls at the junction of Zones 4 and 5 are crushed
+3
+Shear walls at the junction of Zones 4 and 5 are crushed
+Shear walls at the junction of Zones 4 and 5 are crushed
+Coupling beams begin to fail
+Some shear walls at the bottom of Zone 8 begin to fail
+4
+Coupling beams begin to fail
+Coupling beams begin to fail
+Mega-columns at the bottom of zone 5 begin to fail
+Coupling beams begin to fail
+5
+Mega-columns at the bottom of Zone 5 begin to fail
+Mega-columns at the bottom of Zone 5 begin to fail
+The entire structure begins to collapse
+Mega-columns at the bottom of Zone 5 begin to fail
+6
+The entire structure begins to collapse
+The entire structure begins to collapse
+The entire structure begins to collapse
+(a) 
+
+            Direct analysis approach
+(b) 
+
+            Substructure approach
+Fig. 1. Schematic illustration of analysis methods of the soil-structure 
+
+    interaction
+Fig. 2. Schematic illustration of the lateral-force-resisting system 
+
+    of Shanghai Tower (Lu et al., 2011)
+Fig. 3. Three-dimensional FE model of Shanghai Tower (Lu et al., 2011)
+Fig. 4. Schematic diagram of the soil-foundation system of Shanghai 
+
+    Tower
+Fig. 5.    Final collapse mode of Model B 
+
+    subjected to El-Centro in the
+x
+direction (PGA=1.7 g)
+(a)
+t
+=1.50 s, diagonal members 
+
+          of the outriggers in Zones 4 and 5 begin to yield
+(b)
+t
+=2.60 s, flange walls of the 
+
+          core tube at the bottom of Zone 7 begin to fail
+(c)
+t
+=3.43 s, shear walls at the 
+
+          junction of Zones 4 and 5 are crushed
+(d)
+t
+=3.58 s, coupling beams along 
+
+          the
+x
+direction in the core tube begin to fail
+(e)
+t
+=5.83 s, mega-columns at the 
+
+          bottom of Zone 5 begin to fail
+(f)
+t
+=6.28 s, the entire structure 
+
+          begins to collapse
+Fig. 6. Collapse process of Model B subjected 
+
+    to El-Centro in the
+x
+direction (PGA=1.7 g)
+(a) Distribution of horizontal displacement
+(b)
+Distribution 
+
+          of drift ratio in each zone
+Fig. 7. Distribution of the horizontal displacement 
+
+    along the height at the critical collapse state
+Fig. 8. Comparison of the CMR of the four 
+
+    models subjected to El-Centro in the
+x
+direction
+Fig. 9.
+Roof vertical 
+
+    displacement time histories at the critical ground motion intensity of El-Centro
+[*]
+Corresponding 
+
+    author. Tel.: +86-10-62795364.
+E-mail 
+
+    address: luxz@mail.tsinghua.edu.cn (X.Z. Lu).
+Introduction
+Research
+Application
+Teaching
+Publications
+Download
+Issues
+Others
+Our Lab
+Collapse Prevention Committee

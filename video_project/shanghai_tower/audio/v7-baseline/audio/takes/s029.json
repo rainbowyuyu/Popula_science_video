@@ -1,0 +1,82 @@
+{
+  "id": "s029",
+  "text": "风吹过高楼，绕到背面，会形成不断变化的涡。它们带来的推拉，能让建筑来回晃动。",
+  "ttsText": "风吹过高楼，绕到背面，会形成不断变化的旋涡。它们带来的推拉，能让建筑来回晃动。",
+  "signature": "2113102467be8be1e5371fa396f4e60302514be8225969e5d688da34dfce7c00",
+  "raw": "audio/raw/s029-2113102467.wav",
+  "processed": "public/voice/s029.wav",
+  "rawDuration": 7.44,
+  "duration": 7.68,
+  "sha256": "0785826b282fe1dc8cde69b667fb42fc9ea27965ec2530a08bf53c1e47715058",
+  "seed": 3949518286,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s027",
+    "s029",
+    "s032",
+    "s033"
+  ],
+  "rawEndpointDB": -85.33825571305145,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "ccbb8233c3e62374842794a01f99de06cbc1c929e97458dd653ddfdbbe52f72e",
+    "outputSha256": "0785826b282fe1dc8cde69b667fb42fc9ea27965ec2530a08bf53c1e47715058",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.7320710370095966,
+    "input": {
+      "seconds": 7.68,
+      "peakDb": -7.903060913275403,
+      "activeRmsDb": -22.560566748190013,
+      "quietFrameP10Db": -64.5922268868397
+    },
+    "output": {
+      "seconds": 7.68,
+      "peakDb": -4.662671467527697,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -65.13698582833432
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "fad94be207475f636fb650057b6fffeba145cc7390df1629332292331428923f"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s029.wav"
+}

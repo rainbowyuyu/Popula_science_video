@@ -1,0 +1,86 @@
+{
+  "nodes": 126995,
+  "seconds": 53.99652600288391,
+  "elementQuality": {
+    "Tetrahedron 4": {
+      "count": 508772,
+      "minSICN": 0.08704845123142506,
+      "negative": 0,
+      "zero": 0
+    },
+    "Prism 6": {
+      "count": 81200,
+      "minSICN": 0.00018922684188698357,
+      "negative": 0,
+      "zero": 0
+    }
+  },
+  "bodyHeight": 632.0,
+  "crown": "film rim 615.5+16.5*cos(t-0.7); closed smooth top membrane approximation",
+  "twistDegrees": 120.0,
+  "wallLayerScope": "Tower only; base ring horizontal; no ground prism layer",
+  "firstLayer": 0.006,
+  "layers": 20,
+  "layerThicknessesCumulative": [
+    0.006,
+    0.0138,
+    0.023940000000000003,
+    0.037122,
+    0.054258600000000004,
+    0.07653618000000001,
+    0.10549703400000002,
+    0.14314614420000002,
+    0.19208998746000003,
+    0.25571698369800006,
+    0.3384320788074001,
+    0.44596170244962013,
+    0.5857502131845062,
+    0.7674752771398581,
+    1.0037178602818155,
+    1.3108332183663602,
+    1.7100831838762685,
+    2.229108139039149,
+    2.903840580750894,
+    3.780992754976162
+  ],
+  "surfaceTargetSize": 12.0,
+  "domain": [
+    -3160.0,
+    9480.0,
+    -3160.0,
+    3160.0,
+    0,
+    3792.0
+  ],
+  "externalSurfaceGroups": {
+    "inlet": [
+      3723
+    ],
+    "outlet": [
+      3721
+    ],
+    "sides": [
+      3720,
+      3722
+    ],
+    "ceiling": [
+      3724
+    ],
+    "ground": [
+      325,
+      347,
+      369,
+      391,
+      413,
+      435,
+      3719
+    ]
+  },
+  "allExternalSurfacesClassified": true,
+  "geometry": "Film support-function rounded triangle, taper area ratio 0.45, 120 degree twist, ground attached; no surrounding city.",
+  "limitations": [
+    "Smooth reconstructed envelope, not as-built facade, openings or neighboring city.",
+    "A RANS setup/mesh is not yet a converged or validated flow solution.",
+    "Prescribed isolated-building inflow is not a measured Shanghai atmospheric boundary layer."
+  ]
+}

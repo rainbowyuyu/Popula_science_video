@@ -1,0 +1,45 @@
+{
+  "version": "chemistry-v01",
+  "requestedModel": "claude-opus-5-5",
+  "returnedModel": null,
+  "callStatus": "failed",
+  "completionReceived": false,
+  "error": {
+    "code": "total_timeout",
+    "message": "Claude Code exceeded the total timeout"
+  },
+  "adoption": "Partial returned vector/projection, shaded sphere/cylinder primitives and tetrahedral molecule skeleton, corrected and completed by the project. Not a completed Opus module.",
+  "adoptedSource": {
+    "file": "src/chemistry2026/OpusChemistryV01.ts",
+    "bytes": 21918,
+    "sha256": "311feced4f1706cb5b3be951f92aacb72c93cb1ab71da0f5a614d204b00134b4"
+  },
+  "rawEvidence": [
+    {
+      "file": "research/generation/opus-v01/prompt.md",
+      "bytes": 3927,
+      "sha256": "d0618267fe395f9ba481484214074fc9a5cacac41283cc69c50a88be8ca5958a"
+    },
+    {
+      "file": "research/generation/opus-v01/report.json",
+      "bytes": 1275,
+      "sha256": "484ce73e7639ceeff7e5652183f4a029242abcbd397ddb0e8861e48793b9c868"
+    },
+    {
+      "file": "research/generation/opus-v01/response.partial.md",
+      "bytes": 8751,
+      "sha256": "dc4f3447abc5cd6b7790d615bc4af371d159180857edbc45bdfd01c7ea36b483"
+    }
+  ],
+  "audit": "docs/v01/opus-code-audit-v01.md",
+  "numericAudit": "docs/v01/opus-geometry-audit-v01.json",
+  "allSceneExports": [
+    "drawChiralPair",
+    "drawCrystalSorting",
+    "drawReactionVessel"
+  ],
+  "pending": [
+    "Final MP4 normal-speed visual continuity review",
+    "Narration and subtitle listening review"
+  ]
+}

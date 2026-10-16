@@ -1,0 +1,170 @@
+{
+  "capacityMW": 20,
+  "steel": {
+    "baseline": 278,
+    "ai": 247.9,
+    "unit": "t/MW",
+    "source": "Closed-loop_AI_1009.docx, Results, 9 October 2026"
+  },
+  "cost": {
+    "baseline": 19800,
+    "ai": 17656,
+    "unit": "CNY/kW",
+    "source": "Closed-loop_AI_1009.docx, Results, 9 October 2026",
+    "estimated": true,
+    "previousAI": 18197,
+    "previousSteelIntensity": 255.5,
+    "formula": "18197 * 247.9 / 255.5"
+  },
+  "responseLoads": {
+    "sourceRevision": "2026-10-09",
+    "baseline": "Tuqiang",
+    "panels": {
+      "c": {
+        "source": "Closed-loop_AI_1009.docx, Figure 2c",
+        "sha256": "8cf8045d4a8a3daa133896a343c045a8ce8818e97273490a63605712a40d3c57",
+        "condition": "DLC 1.1",
+        "metrics": [
+          {
+            "metric": "surge",
+            "ai": 5.1,
+            "tuqiang": 6.92,
+            "unit": "m",
+            "deltaPercent": -26.3,
+            "limit": null
+          },
+          {
+            "metric": "pitch",
+            "ai": 3.29,
+            "tuqiang": 2.47,
+            "unit": "deg",
+            "deltaPercent": 33.2,
+            "limit": null,
+            "plottedReference": 5,
+            "meanLimit": 5,
+            "maximumLimit": 10
+          },
+          {
+            "metric": "towerTopAcceleration",
+            "ai": 1.1,
+            "tuqiang": 0.82,
+            "unit": "m/s2",
+            "deltaPercent": 34.1,
+            "limit": 2.94
+          }
+        ],
+        "texture": "en/fig-revised-c.png",
+        "textureSha256": "cc7890e5d63d3d977e6d5ddf3fe0c4b78f7c758f17e8514a27d0b550b6c08f21",
+        "sourceAsset": "public/revision-oct10/fig-c.svg"
+      },
+      "d": {
+        "source": "Closed-loop_AI_1009.docx, Figure 2d",
+        "sha256": "d35ecc442e31c596728ce05b066a232889a74401eaea6a0b6162345e1c05ed90",
+        "condition": "DLC 6.1",
+        "metrics": [
+          {
+            "metric": "surge",
+            "ai": 11.2,
+            "tuqiang": 12.38,
+            "unit": "m",
+            "deltaPercent": -9.5,
+            "limit": null
+          },
+          {
+            "metric": "pitch",
+            "ai": 9.56,
+            "tuqiang": 8.02,
+            "unit": "deg",
+            "deltaPercent": 19.2,
+            "limit": 10
+          },
+          {
+            "metric": "towerTopAcceleration",
+            "ai": 3.67,
+            "tuqiang": 3.44,
+            "unit": "m/s2",
+            "deltaPercent": 6.7,
+            "limit": 5.89
+          }
+        ],
+        "texture": "en/fig-revised-d.png",
+        "textureSha256": "807fc12ebfc63b7a2abaa8cb2e15fb1ebefa595dab587ea3e1d73ce77d54f133",
+        "sourceAsset": "public/revision-oct10/fig-d.svg"
+      },
+      "e": {
+        "source": "Closed-loop_AI_1009.docx, Figure 2e",
+        "sha256": "3e37fbcc665e2d6d434dde7e3bdb95dd67d1eb3d1d7def3a55043c998940418b",
+        "condition": "DLC 1.1",
+        "metrics": [
+          {
+            "metric": "maxMooringTension",
+            "ai": 2788,
+            "tuqiang": 2840,
+            "unit": "kN",
+            "deltaPercent": -1.8,
+            "limit": null
+          },
+          {
+            "metric": "towerBaseMy",
+            "ai": 570,
+            "tuqiang": 565.6,
+            "unit": "MN m",
+            "deltaPercent": 0.8,
+            "limit": null
+          }
+        ],
+        "texture": "en/fig-revised-e.png",
+        "textureSha256": "02599501c75b8cf61b1bcc5976c2ff80f65b3e0cd2b9c5866ca77dfae16af71b",
+        "sourceAsset": "public/revision-oct10/fig-e.svg"
+      },
+      "f": {
+        "source": "Closed-loop_AI_1009.docx, Figure 2f",
+        "sha256": "53e27d8a69374ee0040fd428b5fff7f92a385669aa8092c3688c8032d1c60ad6",
+        "condition": "DLC 6.1",
+        "metrics": [
+          {
+            "metric": "maxMooringTension",
+            "ai": 14041,
+            "tuqiang": 14185,
+            "unit": "kN",
+            "deltaPercent": -1.0,
+            "limit": 20165.9,
+            "includesSafetyFactor": true
+          },
+          {
+            "metric": "towerBaseMy",
+            "ai": 1117,
+            "tuqiang": 1074,
+            "unit": "MN m",
+            "deltaPercent": 4.0,
+            "limit": null
+          }
+        ],
+        "texture": "en/fig-revised-f.png",
+        "textureSha256": "6d0a2f439536ff94a8d144c33f9eb9574346787fb0538da3d45bc201e516c1cd",
+        "sourceAsset": "public/revision-oct10/fig-f.svg"
+      }
+    }
+  },
+  "manuscript": {
+    "file": "Closed-loop_AI_1009.docx, Results, 9 October 2026",
+    "sha256": "2d6c177f8f7a29c73b77074336131e75d3a7f96013b425fc42fd781ce4160c9d"
+  },
+  "reviewer": {
+    "referenceFleet": 11,
+    "agreementCohort": 10,
+    "spearman": 0.612,
+    "meanAbsoluteDifference": 4.0,
+    "agreementCount": 9,
+    "interpretation": "Within-fleet comparison of two computational scoring channels; not certification probability."
+  },
+  "appraisal": {
+    "body": "CCS",
+    "type": "AIP",
+    "level": "concept",
+    "reportedScore": 91,
+    "retainedWorksheetScore": 91.2,
+    "clarificationRounds": 3,
+    "source": "Closed-loop_AI_1009.docx, Results, 9 October 2026"
+  }
+}

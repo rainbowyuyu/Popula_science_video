@@ -1,0 +1,64 @@
+{
+  "modelSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\public\\beso-research\\physics\\native-model.json",
+  "modelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+  "nativeElements": 9,
+  "nativeMoorings": 12,
+  "endpointType": "Native-node-derived hull; tower, blades, water and wireframe are editorial display skins; no numerical data generated",
+  "frames": [
+    {
+      "file": "public\\generated\\v4\\ocean-close.png",
+      "sha256": "385a1076da3c4c3e91c3c390f77dedce069bc3515833d7856fbe823168c56140"
+    },
+    {
+      "file": "public\\generated\\v4\\ocean-wide.png",
+      "sha256": "4673247dd709cfa2dc82e631a4912d80b6a514e6ed33ee73c8ce7cc24d2199ef"
+    },
+    {
+      "file": "public\\generated\\v4\\studio-solid.png",
+      "sha256": "6a51a999ca873b4798b11bcd38f26f37055bece4db487e3f9cc491154979dfea"
+    },
+    {
+      "file": "public\\generated\\v4\\studio-wire.png",
+      "sha256": "67f2e9d6ffd1eda630524e6a6e93020564e921cf72e2f92d7d1d1d14ced7c544"
+    }
+  ],
+  "selectedAdditionalFrames": [
+    {
+      "file": "public/generated/v4/ocean-wide-r2.png",
+      "sha256": "0dc7a8d9d56736bd3c729e9c3b54b96d60f0e97df9df0317c42b9c61b4e4cacb",
+      "derivedFrom": "public/generated/v2-ocean-first.png",
+      "derivedSourceSHA256": "0dc7a8d9d56736bd3c729e9c3b54b96d60f0e97df9df0317c42b9c61b4e4cacb",
+      "transform": "Exact native Three.js frame reuse"
+    },
+    {
+      "file": "public/generated/v4/ocean-close-r2.png",
+      "sha256": "62596cbcccef8bb544bc7fcb3b156c06d167756bb63bcecb3beaf24010121964",
+      "derivedFrom": "public/generated/v2-ocean-last.png",
+      "derivedSourceSHA256": "62596cbcccef8bb544bc7fcb3b156c06d167756bb63bcecb3beaf24010121964",
+      "transform": "Exact native Three.js frame reuse"
+    },
+    {
+      "file": "public/generated/v4/blueprint.png",
+      "sha256": "398b54bae5c14863f1732665c866de4100f965dcb9198b5703446772bd532ec8",
+      "derivedFrom": "public/generated/v4/studio-solid.png",
+      "derivedSourceSHA256": "6a51a999ca873b4798b11bcd38f26f37055bece4db487e3f9cc491154979dfea",
+      "transform": "Deterministic PIL contour/grid transformation; no dimensions/values/fake paper text"
+    },
+    {
+      "file": "public/generated/v4/evidence-plane.png",
+      "sha256": "0e507a8dcefbf25010a41247ea0528d8c73dd7d35dfef8301dfc56193858fe5e",
+      "derivedFrom": "public/generated/v4/blueprint.png",
+      "derivedSourceSHA256": "398b54bae5c14863f1732665c866de4100f965dcb9198b5703446772bd532ec8",
+      "transform": "Deterministic PIL contour/grid transformation; no dimensions/values/fake paper text"
+    },
+    {
+      "file": "public/generated/v4/report-plane.png",
+      "sha256": "c62ad70706314c663eeb94925f95a815bed430efa7372d89c973401c3eb3b737",
+      "derivedFrom": "public/generated/v4/blueprint.png",
+      "derivedSourceSHA256": "398b54bae5c14863f1732665c866de4100f965dcb9198b5703446772bd532ec8",
+      "transform": "Deterministic PIL contour/grid transformation; no dimensions/values/fake paper text"
+    }
+  ],
+  "additionalPreparationScript": "scripts/prepare_bridge_graphics_v4.py",
+  "oldOceanEndpointsRejectedReason": "Unexpected duplicated horizon bands in Blender ocean; retained as rejected originals and replaced with verified native Three.js endpoints."
+}

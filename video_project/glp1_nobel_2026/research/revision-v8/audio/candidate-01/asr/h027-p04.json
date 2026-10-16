@@ -1,0 +1,172 @@
+{
+  "id": "h027",
+  "partIndex": 3,
+  "expected": "这样，分子还能启动原来的受体，作用就能维持得更久。",
+  "heard": "这样分子还能启动原来的寿体 作用就能维持的更久",
+  "words": [
+    {
+      "text": "这样",
+      "start": 0.0,
+      "end": 0.48,
+      "probability": 0.4873535633087158
+    },
+    {
+      "text": "分",
+      "start": 0.48,
+      "end": 0.94,
+      "probability": 0.566694974899292
+    },
+    {
+      "text": "子",
+      "start": 0.94,
+      "end": 1.08,
+      "probability": 0.9995617270469666
+    },
+    {
+      "text": "还",
+      "start": 1.08,
+      "end": 1.16,
+      "probability": 0.9941527247428894
+    },
+    {
+      "text": "能",
+      "start": 1.16,
+      "end": 1.28,
+      "probability": 0.9986857771873474
+    },
+    {
+      "text": "启",
+      "start": 1.28,
+      "end": 1.44,
+      "probability": 0.980417400598526
+    },
+    {
+      "text": "动",
+      "start": 1.44,
+      "end": 1.58,
+      "probability": 0.9993689656257629
+    },
+    {
+      "text": "原",
+      "start": 1.58,
+      "end": 1.76,
+      "probability": 0.994806706905365
+    },
+    {
+      "text": "来",
+      "start": 1.76,
+      "end": 1.9,
+      "probability": 0.9989320635795593
+    },
+    {
+      "text": "的",
+      "start": 1.9,
+      "end": 2.0,
+      "probability": 0.9968432188034058
+    },
+    {
+      "text": "寿",
+      "start": 2.0,
+      "end": 2.18,
+      "probability": 0.6371892690658569
+    },
+    {
+      "text": "体",
+      "start": 2.18,
+      "end": 2.44,
+      "probability": 0.9776075482368469
+    },
+    {
+      "text": " 作",
+      "start": 2.8,
+      "end": 2.9,
+      "probability": 0.9872642755508423
+    },
+    {
+      "text": "用",
+      "start": 2.9,
+      "end": 3.06,
+      "probability": 0.9994070529937744
+    },
+    {
+      "text": "就",
+      "start": 3.06,
+      "end": 3.26,
+      "probability": 0.9929438233375549
+    },
+    {
+      "text": "能",
+      "start": 3.26,
+      "end": 3.38,
+      "probability": 0.9981332421302795
+    },
+    {
+      "text": "维",
+      "start": 3.38,
+      "end": 3.5,
+      "probability": 0.9936052560806274
+    },
+    {
+      "text": "持",
+      "start": 3.5,
+      "end": 3.66,
+      "probability": 0.9998738765716553
+    },
+    {
+      "text": "的",
+      "start": 3.66,
+      "end": 3.76,
+      "probability": 0.8205969929695129
+    },
+    {
+      "text": "更",
+      "start": 3.76,
+      "end": 3.94,
+      "probability": 0.9973422884941101
+    },
+    {
+      "text": "久",
+      "start": 3.94,
+      "end": 4.18,
+      "probability": 0.9984872341156006
+    }
+  ],
+  "sourceSHA256": "24ecc3d9438e86532455fa827731a759c0d072e7f954b759298aae91be1d5377",
+  "ratio": 0.9090909090909091,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "受",
+      "heard": "寿",
+      "end": 12
+    },
+    {
+      "op": "replace",
+      "expected": "得",
+      "heard": "的",
+      "end": 20
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 218882,
+    "seconds": 4.560041666666667,
+    "peakDBFS": -7.455991739575523,
+    "first20msDBFS": -47.40313813823039,
+    "last20msDBFS": -94.65441572079382,
+    "firstActiveMs": 10.0,
+    "lastActiveToEndMs": 420.0416666666667,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

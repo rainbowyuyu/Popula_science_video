@@ -1,0 +1,41 @@
+{
+  "reviewer": "audit_bp_lipids",
+  "reviewType": "read-only visual review of encoded aortic-label repair segment",
+  "video": "tmp/segment-7946-8149.mp4",
+  "videoSha256": "e008e5b9ab4bcd85f041d4f1d1d113c223fc2a6bee1fdec9501d8b486326e2fb",
+  "hashIndependentlyVerified": true,
+  "frameRangeGlobal": [7946, 8149],
+  "framesReviewedInContactSheets": [7946,7947,7961,7976,7984,7985,7986,7991,8006,8021,8023,8036,8051,8066,8073,8081,8096,8109,8110,8111,8126,8141,8148,8149],
+  "sampledVisualReviewCompleted": true,
+  "contactSheetsViewed": 2,
+  "sampledFramesReviewed": 24,
+  "originalResolutionFramesReviewed": [8023, 8096],
+  "viewedFiles": [
+    "revision4-patch-5-7946-8149/contact-1.jpg",
+    "revision4-patch-5-7946-8149/contact-2.jpg",
+    "revision4-patch-5-7946-8149/encoded-0011.jpg",
+    "revision4-patch-5-7946-8149/encoded-0017.jpg"
+  ],
+  "resolvedFinding": {
+    "id": "CARDIO-LABEL-01",
+    "status": "resolved in reviewed encoded segment samples",
+    "oldSymptom": "At global frame 8023 the aortic label leader appeared to point to the foreground liver because the aorta was obscured.",
+    "newObservation": "At frame 8023 the aortic label is absent while the liver remains foreground. During sampled frames 8051 through 8081 the liver becomes progressively transparent without prematurely showing the aortic label. At frame 8096 the aortic label is visible and its endpoint lies on the now-visible descending aortic tube. Subsequent sampled frames through 8149 retain the correct endpoint.",
+    "originalFrameConfirmation": "Both frame 8023 and frame 8096 were viewed at original 1920x1080 resolution."
+  },
+  "newFindings": [],
+  "otherObservations": [
+    "Heart label and scale bar remain present and readable at the sampled transition states.",
+    "No new text overlap or obvious anchor jump was observed in the 24 assigned samples."
+  ],
+  "fullRealtimePlaybackReviewed": false,
+  "audioListeningReviewed": false,
+  "assembledFinalMasterReviewed": false,
+  "sourceModified": false,
+  "limitations": [
+    "This verifies sampled frames from the separately encoded repair segment, not the entire final assembled film.",
+    "No continuous real-time playback, audio listening, or medical clinical validation was performed.",
+    "The earlier baseline reports remain archived and were not overwritten."
+  ],
+  "conclusion": "The old aorta-to-liver visual misidentification is eliminated in the reviewed encoded repair samples. No additional correction is requested for this segment."
+}

@@ -1,0 +1,1681 @@
+{
+  "schema": "rainbow.dna.timeline-map-qa/v5",
+  "checkedAt": "2026-10-11T12:44:25.930Z",
+  "label": "activated-v5-timeline",
+  "expectedVersion": 5,
+  "inputs": {
+    "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\TimelineV5.ts",
+    "narration": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\narration-v5.json",
+    "legacy": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\narration.json"
+  },
+  "checks": [
+    {
+      "id": "expected-narration-version",
+      "pass": true,
+      "detail": 5
+    },
+    {
+      "id": "timeline-transpiles",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "chapter-list-present",
+      "pass": true,
+      "detail": {
+        "groups": 8,
+        "oldGroups": 8
+      }
+    },
+    {
+      "id": "physical-duration-valid",
+      "pass": true,
+      "detail": 321.8
+    },
+    {
+      "id": "declared-frame-count",
+      "pass": true,
+      "detail": {
+        "frames": 9654,
+        "seconds": 321.8
+      }
+    },
+    {
+      "id": "knots-match-measured-chapters",
+      "pass": true,
+      "detail": {
+        "actual": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 18.54,
+            "y": 18
+          },
+          {
+            "x": 42.220042,
+            "y": 44
+          },
+          {
+            "x": 73.660083,
+            "y": 75
+          },
+          {
+            "x": 124.140083,
+            "y": 118
+          },
+          {
+            "x": 164.700125,
+            "y": 160
+          },
+          {
+            "x": 239.900167,
+            "y": 216
+          },
+          {
+            "x": 285.020167,
+            "y": 262
+          },
+          {
+            "x": 311.770167,
+            "y": 290
+          },
+          {
+            "x": 321.8,
+            "y": 300
+          }
+        ],
+        "expected": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 18.54,
+            "y": 18
+          },
+          {
+            "x": 42.220042,
+            "y": 44
+          },
+          {
+            "x": 73.660083,
+            "y": 75
+          },
+          {
+            "x": 124.140083,
+            "y": 118
+          },
+          {
+            "x": 164.700125,
+            "y": 160
+          },
+          {
+            "x": 239.900167,
+            "y": 216
+          },
+          {
+            "x": 285.020167,
+            "y": 262
+          },
+          {
+            "x": 311.770167,
+            "y": 290
+          },
+          {
+            "x": 321.8,
+            "y": 300
+          }
+        ]
+      }
+    },
+    {
+      "id": "knots-strictly-increasing",
+      "pass": true,
+      "detail": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 18.54,
+          "y": 18
+        },
+        {
+          "x": 42.220042,
+          "y": 44
+        },
+        {
+          "x": 73.660083,
+          "y": 75
+        },
+        {
+          "x": 124.140083,
+          "y": 118
+        },
+        {
+          "x": 164.700125,
+          "y": 160
+        },
+        {
+          "x": 239.900167,
+          "y": 216
+        },
+        {
+          "x": 285.020167,
+          "y": 262
+        },
+        {
+          "x": 311.770167,
+          "y": 290
+        },
+        {
+          "x": 321.8,
+          "y": 300
+        }
+      ]
+    },
+    {
+      "id": "knots-cover-full-film",
+      "pass": true
+    },
+    {
+      "id": "group-hook-bounds",
+      "pass": true,
+      "detail": {
+        "id": "hook",
+        "startSec": 0,
+        "endSec": 18.54,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 0,
+        "requestedEndSec": 18,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 0,
+        "endFrame": 556,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-encode-bounds",
+      "pass": true,
+      "detail": {
+        "id": "encode",
+        "startSec": 18.54,
+        "endSec": 42.220042,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 18,
+        "requestedEndSec": 44,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 556,
+        "endFrame": 1267,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-constraints-bounds",
+      "pass": true,
+      "detail": {
+        "id": "constraints",
+        "startSec": 42.220042,
+        "endSec": 73.660083,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 44,
+        "requestedEndSec": 75,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 1267,
+        "endFrame": 2210,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-fountain-bounds",
+      "pass": true,
+      "detail": {
+        "id": "fountain",
+        "startSec": 73.660083,
+        "endSec": 124.140083,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 75,
+        "requestedEndSec": 118,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 2210,
+        "endFrame": 3724,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-wetlab-bounds",
+      "pass": true,
+      "detail": {
+        "id": "wetlab",
+        "startSec": 124.140083,
+        "endSec": 164.700125,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 118,
+        "requestedEndSec": 160,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 3724,
+        "endFrame": 4941,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-consensus-bounds",
+      "pass": true,
+      "detail": {
+        "id": "consensus",
+        "startSec": 164.700125,
+        "endSec": 239.900167,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 160,
+        "requestedEndSec": 216,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 4941,
+        "endFrame": 7197,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-model-bounds",
+      "pass": true,
+      "detail": {
+        "id": "model",
+        "startSec": 239.900167,
+        "endSec": 285.020167,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 216,
+        "requestedEndSec": 262,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 7197,
+        "endFrame": 8551,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "group-return-bounds",
+      "pass": true,
+      "detail": {
+        "id": "return",
+        "startSec": 285.020167,
+        "endSec": 311.770167,
+        "timingStatus": "measured-local-natural-gap",
+        "requestedStartSec": 262,
+        "requestedEndSec": 290,
+        "requestedTimingStatus": "editorial-target",
+        "startFrame": 8551,
+        "endFrame": 9353,
+        "timingMode": "natural; requested windows never padded"
+      }
+    },
+    {
+      "id": "interval-0-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 0,
+        "endSec": 18.54,
+        "minimumVelocity": 0.9403357619622754,
+        "maximumVelocity": 1.0305183654028618,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 0.970873786407767
+          },
+          {
+            "u": 1,
+            "velocity": 1.0305183654028616
+          },
+          {
+            "u": 0,
+            "velocity": 0.970873786407767
+          },
+          {
+            "u": 0.40000000000000424,
+            "velocity": 0.9403357619622754
+          },
+          {
+            "u": 0.9999999999999956,
+            "velocity": 1.0305183654028618
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-0-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-1-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 18.54,
+        "endSec": 42.220042,
+        "minimumVelocity": 1.0305183654028667,
+        "maximumVelocity": 1.1533328012835824,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1.0305183654028667
+          },
+          {
+            "u": 1,
+            "velocity": 1.0389795424464054
+          },
+          {
+            "u": 0,
+            "velocity": 1.0305183654028667
+          },
+          {
+            "u": 0.506691632229789,
+            "velocity": 1.1533328012835824
+          },
+          {
+            "u": 0.9999999999999969,
+            "velocity": 1.0389795424464054
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-1-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-2-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 42.220042,
+        "endSec": 73.660083,
+        "minimumVelocity": 0.9140148068403371,
+        "maximumVelocity": 1.0389795424464032,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1.0389795424464032
+          },
+          {
+            "u": 1,
+            "velocity": 0.9140148068403371
+          },
+          {
+            "u": 0,
+            "velocity": 1.0389795424464032
+          },
+          {
+            "u": 0.9999999999999944,
+            "velocity": 0.9140148068403371
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-2-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-3-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 73.660083,
+        "endSec": 124.140083,
+        "minimumVelocity": 0.7881222584564345,
+        "maximumVelocity": 0.9347241144153209,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 0.9140148068403371
+          },
+          {
+            "u": 1,
+            "velocity": 0.9347241144153209
+          },
+          {
+            "u": 0,
+            "velocity": 0.9140148068403371
+          },
+          {
+            "u": 0.48572696324784204,
+            "velocity": 0.7881222584564345
+          },
+          {
+            "u": 1,
+            "velocity": 0.9347241144153209
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-3-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-4-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 124.140083,
+        "endSec": 164.700125,
+        "minimumVelocity": 0.8663359769420979,
+        "maximumVelocity": 1.1549011111789471,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 0.9347241144153179
+          },
+          {
+            "u": 1,
+            "velocity": 0.8663359769420979
+          },
+          {
+            "u": 0,
+            "velocity": 0.9347241144153179
+          },
+          {
+            "u": 0.4746657757829278,
+            "velocity": 1.1549011111789471
+          },
+          {
+            "u": 0.9999999999999996,
+            "velocity": 0.866335976942098
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-4-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-5-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 164.700125,
+        "endSec": 239.900167,
+        "minimumVelocity": 0.6406935694610713,
+        "maximumVelocity": 0.8663359769420966,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 0.8663359769420966
+          },
+          {
+            "u": 1,
+            "velocity": 0.8606861329844693
+          },
+          {
+            "u": 0,
+            "velocity": 0.8663359769420966
+          },
+          {
+            "u": 0.5023772677305711,
+            "velocity": 0.6406935694610713
+          },
+          {
+            "u": 1,
+            "velocity": 0.8606861329844693
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-5-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-6-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 239.900167,
+        "endSec": 285.020167,
+        "minimumVelocity": 0.8606861329844687,
+        "maximumVelocity": 1.0982720126265115,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 0.8606861329844687
+          },
+          {
+            "u": 1,
+            "velocity": 1.032936893009226
+          },
+          {
+            "u": 0,
+            "velocity": 0.8606861329844687
+          },
+          {
+            "u": 0.6184798062959764,
+            "velocity": 1.0982720126265115
+          },
+          {
+            "u": 1,
+            "velocity": 1.032936893009226
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-6-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-7-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 285.020167,
+        "endSec": 311.770167,
+        "minimumVelocity": 1.0212728881205537,
+        "maximumVelocity": 1.0641598685413862,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1.0329368930092306
+          },
+          {
+            "u": 1,
+            "velocity": 1.0212728881205537
+          },
+          {
+            "u": 0,
+            "velocity": 1.0329368930092306
+          },
+          {
+            "u": 0.4702813990314212,
+            "velocity": 1.0641598685413862
+          },
+          {
+            "u": 0.9999999999999964,
+            "velocity": 1.0212728881205537
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-7-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "interval-8-analytic-monotonicity",
+      "pass": true,
+      "detail": {
+        "startSec": 311.770167,
+        "endSec": 321.8,
+        "minimumVelocity": 0.9846109485749404,
+        "maximumVelocity": 1.0212728881205546,
+        "criticalPoints": [
+          {
+            "u": 0,
+            "velocity": 1.0212728881205546
+          },
+          {
+            "u": 1,
+            "velocity": 0.997025573606253
+          },
+          {
+            "u": 0,
+            "velocity": 1.0212728881205546
+          },
+          {
+            "u": 0.6000000000000234,
+            "velocity": 0.9846109485749404
+          },
+          {
+            "u": 0.9999999999999607,
+            "velocity": 0.997025573606253
+          }
+        ]
+      }
+    },
+    {
+      "id": "interval-8-endpoint-position",
+      "pass": true,
+      "detail": {
+        "startError": 0,
+        "endError": 0
+      }
+    },
+    {
+      "id": "actual-function-matches-independent-quintic",
+      "pass": true,
+      "detail": {
+        "samples": 19309,
+        "maximumIndependentError": 1.7053025658242404e-13
+      }
+    },
+    {
+      "id": "actual-function-sampled-monotone",
+      "pass": true,
+      "detail": {
+        "samples": 19309,
+        "minimumSceneStep": 0.010678226359914333,
+        "physicalSampleStep": 0.016666666666666666
+      }
+    },
+    {
+      "id": "join-1-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 18.54,
+        "sceneSec": 18,
+        "finiteDifferenceStep": 0.01854,
+        "expectedVelocity": 1.0305183654028667,
+        "leftVelocity": 1.0305190782771794,
+        "rightVelocity": 1.0305175826785207,
+        "leftAcceleration": 5.650228221059308e-7,
+        "rightAcceleration": 5.415917441665132e-7
+      }
+    },
+    {
+      "id": "join-1-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 18.54,
+        "sceneSec": 18,
+        "finiteDifferenceStep": 0.01854,
+        "expectedVelocity": 1.0305183654028667,
+        "leftVelocity": 1.0305190782771794,
+        "rightVelocity": 1.0305175826785207,
+        "leftAcceleration": 5.650228221059308e-7,
+        "rightAcceleration": 5.415917441665132e-7
+      }
+    },
+    {
+      "id": "join-2-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 42.220042,
+        "sceneSec": 44,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1.0389795424464032,
+        "leftVelocity": 1.0389786559569458,
+        "rightVelocity": 1.0389795667681057,
+        "leftAcceleration": -6.245315375963401e-7,
+        "rightAcceleration": 2.2577495428777183e-8
+      }
+    },
+    {
+      "id": "join-2-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 42.220042,
+        "sceneSec": 44,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1.0389795424464032,
+        "leftVelocity": 1.0389786559569458,
+        "rightVelocity": 1.0389795667681057,
+        "leftAcceleration": -6.245315375963401e-7,
+        "rightAcceleration": 2.2577495428777183e-8
+      }
+    },
+    {
+      "id": "join-3-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 73.660083,
+        "sceneSec": 75,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.9140148068403371,
+        "leftVelocity": 0.9140146290786078,
+        "rightVelocity": 0.9140150276930825,
+        "leftAcceleration": -5.8122395785176195e-8,
+        "rightAcceleration": -7.37188088351104e-8
+      }
+    },
+    {
+      "id": "join-3-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 73.660083,
+        "sceneSec": 75,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.9140148068403371,
+        "leftVelocity": 0.9140146290786078,
+        "rightVelocity": 0.9140150276930825,
+        "leftAcceleration": -5.8122395785176195e-8,
+        "rightAcceleration": -7.37188088351104e-8
+      }
+    },
+    {
+      "id": "join-4-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 124.140083,
+        "sceneSec": 118,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.934724114415318,
+        "leftVelocity": 0.9347243482576317,
+        "rightVelocity": 0.9347234927492565,
+        "leftAcceleration": 7.421618875014246e-8,
+        "rightAcceleration": 2.6279423082087305e-7
+      }
+    },
+    {
+      "id": "join-4-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 124.140083,
+        "sceneSec": 118,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.934724114415318,
+        "leftVelocity": 0.9347243482576317,
+        "rightVelocity": 0.9347234927492565,
+        "leftAcceleration": 7.421618875014246e-8,
+        "rightAcceleration": 2.6279423082087305e-7
+      }
+    },
+    {
+      "id": "join-5-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 164.700125,
+        "sceneSec": 160,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.8663359769420966,
+        "leftVelocity": 0.8663352888220288,
+        "rightVelocity": 0.8663361456456187,
+        "leftAcceleration": -2.7000623958883807e-7,
+        "rightAcceleration": -3.68771679859492e-8
+      }
+    },
+    {
+      "id": "join-5-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 164.700125,
+        "sceneSec": 160,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.8663359769420966,
+        "leftVelocity": 0.8663352888220288,
+        "rightVelocity": 0.8663361456456187,
+        "leftAcceleration": -2.7000623958883807e-7,
+        "rightAcceleration": -3.68771679859492e-8
+      }
+    },
+    {
+      "id": "join-6-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 239.900167,
+        "sceneSec": 216,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.8606861329844687,
+        "leftVelocity": 0.8606863000927945,
+        "rightVelocity": 0.8606857802632817,
+        "leftAcceleration": 3.737454790098127e-8,
+        "rightAcceleration": 1.1219469797651982e-7
+      }
+    },
+    {
+      "id": "join-6-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 239.900167,
+        "sceneSec": 216,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 0.8606861329844687,
+        "leftVelocity": 0.8606863000927945,
+        "rightVelocity": 0.8606857802632817,
+        "leftAcceleration": 3.737454790098127e-8,
+        "rightAcceleration": 1.1219469797651982e-7
+      }
+    },
+    {
+      "id": "join-7-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 285.020167,
+        "sceneSec": 262,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1.0329368930092306,
+        "leftVelocity": 1.0329366755669867,
+        "rightVelocity": 1.0329366873705226,
+        "leftAcceleration": -9.691802915767767e-8,
+        "rightAcceleration": 1.3315570868144277e-7
+      }
+    },
+    {
+      "id": "join-7-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 285.020167,
+        "sceneSec": 262,
+        "finiteDifferenceStep": 0.02,
+        "expectedVelocity": 1.0329368930092306,
+        "leftVelocity": 1.0329366755669867,
+        "rightVelocity": 1.0329366873705226,
+        "leftAcceleration": -9.691802915767767e-8,
+        "rightAcceleration": 1.3315570868144277e-7
+      }
+    },
+    {
+      "id": "join-8-C1",
+      "pass": true,
+      "detail": {
+        "physicalSec": 311.770167,
+        "sceneSec": 290,
+        "finiteDifferenceStep": 0.010029832999999997,
+        "expectedVelocity": 1.0212728881205546,
+        "leftVelocity": 1.0212728297501539,
+        "rightVelocity": 1.021273177917641,
+        "leftAcceleration": -3.7293807299672016e-8,
+        "rightAcceleration": -4.215330340235655e-7
+      }
+    },
+    {
+      "id": "join-8-C2",
+      "pass": true,
+      "detail": {
+        "physicalSec": 311.770167,
+        "sceneSec": 290,
+        "finiteDifferenceStep": 0.010029832999999997,
+        "expectedVelocity": 1.0212728881205546,
+        "leftVelocity": 1.0212728297501539,
+        "rightVelocity": 1.021273177917641,
+        "leftAcceleration": -3.7293807299672016e-8,
+        "rightAcceleration": -4.215330340235655e-7
+      }
+    },
+    {
+      "id": "clamps-and-invalid-inputs",
+      "pass": true
+    },
+    {
+      "id": "deterministic-arbitrary-seeks",
+      "pass": true,
+      "detail": {
+        "seeks": 86
+      }
+    },
+    {
+      "id": "mapped-cues-complete",
+      "pass": true
+    },
+    {
+      "id": "cue-n01-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          0.3,
+          8.46
+        ],
+        "scene": [
+          0.29124392266722193,
+          8.063296906790072
+        ]
+      }
+    },
+    {
+      "id": "cue-n02-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          8.78,
+          18.38
+        ],
+        "scene": [
+          8.364803313008007,
+          17.835121277071774
+        ]
+      }
+    },
+    {
+      "id": "cue-n03-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          18.7,
+          26.22
+        ],
+        "scene": [
+          18.164887571486705,
+          26.214605307107384
+        ]
+      }
+    },
+    {
+      "id": "cue-n04-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          26.54,
+          34.86
+        ],
+        "scene": [
+          26.574830391336505,
+          36.092149709852514
+        ]
+      }
+    },
+    {
+      "id": "cue-n05-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          35.18,
+          42.060042
+        ],
+        "scene": [
+          36.45119846501741,
+          43.83375876337938
+        ]
+      }
+    },
+    {
+      "id": "cue-n06-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          42.380042,
+          50.620042
+        ],
+        "scene": [
+          44.1662366012163,
+          52.69910713783316
+        ]
+      }
+    },
+    {
+      "id": "cue-n07-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          50.940042,
+          58.380083
+        ],
+        "scene": [
+          53.02788410580138,
+          60.55083097251031
+        ]
+      }
+    },
+    {
+      "id": "cue-n08-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          58.700083,
+          66.380083
+        ],
+        "scene": [
+          60.86785288806099,
+          68.27743002729278
+        ]
+      }
+    },
+    {
+      "id": "cue-n09-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          66.700083,
+          73.500083
+        ],
+        "scene": [
+          68.57793954569146,
+          74.85375672347017
+        ]
+      }
+    },
+    {
+      "id": "cue-n10-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          73.820083,
+          81.340083
+        ],
+        "scene": [
+          75.14624124175421,
+          81.92171180166521
+        ]
+      }
+    },
+    {
+      "id": "cue-n11-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          81.660083,
+          90.220083
+        ],
+        "scene": [
+          82.20263983734274,
+          89.42676643467615
+        ]
+      }
+    },
+    {
+      "id": "cue-n12-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          90.540083,
+          97.820083
+        ],
+        "scene": [
+          89.68677784790522,
+          95.48542346287509
+        ]
+      }
+    },
+    {
+      "id": "cue-n13-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          98.140083,
+          106.140083
+        ],
+        "scene": [
+          95.73762918191838,
+          102.11286024300479
+        ]
+      }
+    },
+    {
+      "id": "cue-n14-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          106.460083,
+          116.140083
+        ],
+        "scene": [
+          102.37370813477551,
+          110.63934825724829
+        ]
+      }
+    },
+    {
+      "id": "cue-n15-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          116.460083,
+          123.980083
+        ],
+        "scene": [
+          110.92604339138151,
+          117.85044533550413
+        ]
+      }
+    },
+    {
+      "id": "cue-n16-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          124.300083,
+          131.340083
+        ],
+        "scene": [
+          118.14955902903549,
+          124.94635207488412
+        ]
+      }
+    },
+    {
+      "id": "cue-n17-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          131.660083,
+          140.620125
+        ],
+        "scene": [
+          125.27215006697364,
+          135.0538646966762
+        ]
+      }
+    },
+    {
+      "id": "cue-n18-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          140.940125,
+          147.900125
+        ],
+        "scene": [
+          135.42079488534563,
+          143.41559485308264
+        ]
+      }
+    },
+    {
+      "id": "cue-n19-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          148.220125,
+          157.500125
+        ],
+        "scene": [
+          143.77669642277328,
+          153.51776472075588
+        ]
+      }
+    },
+    {
+      "id": "cue-n20-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          157.820125,
+          164.540125
+        ],
+        "scene": [
+          153.82340333481014,
+          159.86138273308742
+        ]
+      }
+    },
+    {
+      "id": "cue-n21-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          164.860125,
+          175.020125
+        ],
+        "scene": [
+          160.13861289426677,
+          168.75354039579338
+        ]
+      }
+    },
+    {
+      "id": "cue-n22-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          175.340125,
+          183.580125
+        ],
+        "scene": [
+          169.0142611551901,
+          175.41546754835986
+        ]
+      }
+    },
+    {
+      "id": "cue-n23-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          183.900125,
+          192.140125
+        ],
+        "scene": [
+          175.65161981910433,
+          181.44330013641064
+        ]
+      }
+    },
+    {
+      "id": "cue-n24-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          192.460125,
+          201.340125
+        ],
+        "scene": [
+          181.6584077595999,
+          187.4511518810248
+        ]
+      }
+    },
+    {
+      "id": "cue-n25-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          201.660125,
+          210.220125
+        ],
+        "scene": [
+          187.6562712940605,
+          193.18873763827546
+        ]
+      }
+    },
+    {
+      "id": "cue-n26-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          210.540125,
+          219.260167
+        ],
+        "scene": [
+          193.39990957358148,
+          199.3983452658252
+        ]
+      }
+    },
+    {
+      "id": "cue-n27-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          219.580167,
+          229.660167
+        ],
+        "scene": [
+          199.6292941956662,
+          207.36762639848314
+        ]
+      }
+    },
+    {
+      "id": "cue-n28-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          229.980167,
+          239.740167
+        ],
+        "scene": [
+          207.62776405378565,
+          215.86229107259075
+        ]
+      }
+    },
+    {
+      "id": "cue-n29-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          240.060167,
+          246.700167
+        ],
+        "scene": [
+          216.13771158200097,
+          221.96568732359626
+        ]
+      }
+    },
+    {
+      "id": "cue-n30-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          247.020167,
+          252.940167
+        ],
+        "scene": [
+          222.25651535447824,
+          227.87203583290977
+        ]
+      }
+    },
+    {
+      "id": "cue-n31-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          253.260167,
+          260.060167
+        ],
+        "scene": [
+          228.1887394931412,
+          235.20509100941402
+        ]
+      }
+    },
+    {
+      "id": "cue-n32-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          260.380167,
+          268.780167
+        ],
+        "scene": [
+          235.54673761691063,
+          244.69974205463254
+        ]
+      }
+    },
+    {
+      "id": "cue-n33-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          269.100167,
+          276.380167
+        ],
+        "scene": [
+          245.05098348293077,
+          252.9555564004459
+        ]
+      }
+    },
+    {
+      "id": "cue-n34-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          276.700167,
+          284.860167
+        ],
+        "scene": [
+          253.29724178720502,
+          261.83472898829325
+        ]
+      }
+    },
+    {
+      "id": "cue-n35-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          285.180167,
+          293.500167
+        ],
+        "scene": [
+          262.1652709495756,
+          270.8487370219315
+        ]
+      }
+    },
+    {
+      "id": "cue-n36-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          293.820167,
+          301.420167
+        ],
+        "scene": [
+          271.18736749309505,
+          279.2603451076514
+        ]
+      }
+    },
+    {
+      "id": "cue-n37-mapped-bounds",
+      "pass": true,
+      "detail": {
+        "physical": [
+          301.740167,
+          311.420167
+        ],
+        "scene": [
+          279.5988406984462,
+          289.64254226607375
+        ]
+      }
+    }
+  ],
+  "v5TimelineVerified": true,
+  "limits": [
+    "CPU source/timeline verification only; no encoded video or visual-quality approval.",
+    "C2 continuity applies at interior chapter joins. Clamping before zero and after the film end intentionally need not preserve the endpoint velocity."
+  ],
+  "sourceHashes": {
+    "source": "b483041409317ef1f4cf224cf4db05fd5b8c5d5996766112e97ab19c9baf3b01",
+    "narration": "2672f9059e4fba92dcc28cd520ded1933415c39cc0ba43182b3b20d0d6ca6f85",
+    "legacy": "a4e3099e67d477e8a12f5c872d4848423d6d096b96eaf590c33f10ccb887c625"
+  },
+  "actualNarrationVersion": 5,
+  "intervals": [
+    {
+      "start": 0,
+      "end": 18.54,
+      "span": 18.54,
+      "coefficients": [
+        0,
+        18,
+        0,
+        -4.423241978276593,
+        7.740673461983988,
+        -3.3174314837074235
+      ],
+      "minimumVelocity": 0.9403357619622754,
+      "maximumVelocity": 1.0305183654028618
+    },
+    {
+      "start": 18.54,
+      "end": 42.220042,
+      "span": 23.680042,
+      "coefficients": [
+        18,
+        24.40271817451123,
+        0,
+        15.17137414384618,
+        -22.556700188008904,
+        8.982607869651503
+      ],
+      "minimumVelocity": 1.0305183654028667,
+      "maximumVelocity": 1.1533328012835824
+    },
+    {
+      "start": 42.220042,
+      "end": 73.660083,
+      "span": 31.440041,
+      "coefficients": [
+        44,
+        32.66555941267616,
+        0,
+        -0.9400084827261139,
+        -2.5188836869197644,
+        1.7933327569697042
+      ],
+      "minimumVelocity": 0.9140148068403371,
+      "maximumVelocity": 1.0389795424464032
+    },
+    {
+      "start": 73.660083,
+      "end": 124.140083,
+      "span": 50.480000000000004,
+      "coefficients": [
+        75,
+        46.13946744930022,
+        0,
+        -35.576297878542334,
+        54.409852664198525,
+        -21.973022234956375
+      ],
+      "minimumVelocity": 0.7881222584564345,
+      "maximumVelocity": 0.9347241144153209
+    },
+    {
+      "start": 124.140083,
+      "end": 164.700125,
+      "span": 40.56004200000001,
+      "coefficients": [
+        118,
+        37.91244933909811,
+        0,
+        51.97080952188145,
+        -80.73004001103777,
+        32.846781150058234
+      ],
+      "minimumVelocity": 0.8663359769420979,
+      "maximumVelocity": 1.1549011111789471
+    },
+    {
+      "start": 164.700125,
+      "end": 239.900167,
+      "span": 75.200042,
+      "coefficients": [
+        160,
+        65.1485018521567,
+        0,
+        -89.78554450993875,
+        134.25344826200103,
+        -53.61640560421898
+      ],
+      "minimumVelocity": 0.6406935694610713,
+      "maximumVelocity": 0.8663359769420966
+    },
+    {
+      "start": 239.900167,
+      "end": 285.020167,
+      "span": 45.120000000000005,
+      "coefficients": [
+        216,
+        38.834158320259235,
+        0,
+        40.57059962813861,
+        -53.083945149890724,
+        19.679187201492823
+      ],
+      "minimumVelocity": 0.8606861329844687,
+      "maximumVelocity": 1.0982720126265115
+    },
+    {
+      "start": 285.020167,
+      "end": 311.770167,
+      "span": 26.75,
+      "coefficients": [
+        262,
+        27.63106188799692,
+        0,
+        4.937429643119117,
+        -7.718156595450807,
+        3.149665064334755
+      ],
+      "minimumVelocity": 1.0212728881205537,
+      "maximumVelocity": 1.0641598685413862
+    },
+    {
+      "start": 311.770167,
+      "end": 321.8,
+      "span": 10.029832999999996,
+      "coefficients": [
+        290,
+        10.243196515276843,
+        0,
+        -1.4591790916610705,
+        1.9455721222147417,
+        -0.7295895458305353
+      ],
+      "minimumVelocity": 0.9846109485749404,
+      "maximumVelocity": 1.0212728881205546
+    }
+  ],
+  "interiorJoins": [
+    {
+      "physicalSec": 18.54,
+      "sceneSec": 18,
+      "finiteDifferenceStep": 0.01854,
+      "expectedVelocity": 1.0305183654028667,
+      "leftVelocity": 1.0305190782771794,
+      "rightVelocity": 1.0305175826785207,
+      "leftAcceleration": 5.650228221059308e-7,
+      "rightAcceleration": 5.415917441665132e-7
+    },
+    {
+      "physicalSec": 42.220042,
+      "sceneSec": 44,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1.0389795424464032,
+      "leftVelocity": 1.0389786559569458,
+      "rightVelocity": 1.0389795667681057,
+      "leftAcceleration": -6.245315375963401e-7,
+      "rightAcceleration": 2.2577495428777183e-8
+    },
+    {
+      "physicalSec": 73.660083,
+      "sceneSec": 75,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 0.9140148068403371,
+      "leftVelocity": 0.9140146290786078,
+      "rightVelocity": 0.9140150276930825,
+      "leftAcceleration": -5.8122395785176195e-8,
+      "rightAcceleration": -7.37188088351104e-8
+    },
+    {
+      "physicalSec": 124.140083,
+      "sceneSec": 118,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 0.934724114415318,
+      "leftVelocity": 0.9347243482576317,
+      "rightVelocity": 0.9347234927492565,
+      "leftAcceleration": 7.421618875014246e-8,
+      "rightAcceleration": 2.6279423082087305e-7
+    },
+    {
+      "physicalSec": 164.700125,
+      "sceneSec": 160,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 0.8663359769420966,
+      "leftVelocity": 0.8663352888220288,
+      "rightVelocity": 0.8663361456456187,
+      "leftAcceleration": -2.7000623958883807e-7,
+      "rightAcceleration": -3.68771679859492e-8
+    },
+    {
+      "physicalSec": 239.900167,
+      "sceneSec": 216,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 0.8606861329844687,
+      "leftVelocity": 0.8606863000927945,
+      "rightVelocity": 0.8606857802632817,
+      "leftAcceleration": 3.737454790098127e-8,
+      "rightAcceleration": 1.1219469797651982e-7
+    },
+    {
+      "physicalSec": 285.020167,
+      "sceneSec": 262,
+      "finiteDifferenceStep": 0.02,
+      "expectedVelocity": 1.0329368930092306,
+      "leftVelocity": 1.0329366755669867,
+      "rightVelocity": 1.0329366873705226,
+      "leftAcceleration": -9.691802915767767e-8,
+      "rightAcceleration": 1.3315570868144277e-7
+    },
+    {
+      "physicalSec": 311.770167,
+      "sceneSec": 290,
+      "finiteDifferenceStep": 0.010029832999999997,
+      "expectedVelocity": 1.0212728881205546,
+      "leftVelocity": 1.0212728297501539,
+      "rightVelocity": 1.021273177917641,
+      "leftAcceleration": -3.7293807299672016e-8,
+      "rightAcceleration": -4.215330340235655e-7
+    }
+  ],
+  "summary": {
+    "samples": 19309,
+    "knots": 10,
+    "minimumVelocity": 0.6406935694610713,
+    "maximumVelocity": 1.1549011111789471,
+    "maximumIndependentError": 1.7053025658242404e-13
+  },
+  "status": "cpu-timeline-checks-pass",
+  "failedCheckIds": []
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "rainbow.su2-candidate-acceptance/1",
+  "case": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\research\\visual-v4\\flow-physics\\fullscale\\candidate-sa-negative-u05-v2",
+  "solver": {
+    "status": "executable-completed",
+    "exitCode": 0,
+    "historyLastIteration": 1199
+  },
+  "gates": {
+    "targetSpeed": {
+      "targetU500_m_s": 30.0,
+      "caseReferenceSpeed_m_s": 5.0,
+      "pass": false,
+      "reason": "5 m/s continuation stage is not the 30 m/s target Reynolds number."
+    },
+    "allFiveResidualsBelowMinus7": {
+      "pass": false,
+      "values": {
+        "rms[P]": 0.7004522224,
+        "rms[U]": 1.347278518,
+        "rms[V]": 0.7463323682,
+        "rms[W]": 1.355656653,
+        "rms[nu]": -1.064227605
+      },
+      "reason": "All five residual logs remain O(1), far above -7."
+    },
+    "fieldFinite": {
+      "pass": true
+    },
+    "surfacePressureConsistency": {
+      "pass": true,
+      "maxAbsCpMinusTwiceRawPressure": 0.0
+    },
+    "towerYPlusResolved": {
+      "pass": true,
+      "percentiles": {
+        "0": 0.016611292958259583,
+        "50": 0.2703823745250702,
+        "95": 0.3336584270000458,
+        "99": 0.34438011050224304,
+        "100": 0.3608485162258148
+      }
+    },
+    "forceStability": {
+      "pass": false,
+      "tailCDMean": 0.6525993065219999,
+      "tailCDStd": 0.19742061840081382,
+      "tailCFyStd": 0.021947365169925313,
+      "reason": "Tail force coefficients retain visible oscillation/drift; no averaging window acceptance defined."
+    }
+  },
+  "acceptedForCoupling": false,
+  "decision": "REJECTED_FOR_COUPLING",
+  "limitations": [
+    "The complete ground shares 10 micrometre near-wall spacing; extreme tangential aspect ratio remains a candidate risk.",
+    "Power-law inlet clamps below 10m and is not a measured/equilibrium atmospheric boundary layer.",
+    "Steady pseudo-iterations are not physical flow time.",
+    "Do not couple, render or call this a converged flow until field, residual, force, wall and conservation gates pass.",
+    "This run is useful as a numerical continuation diagnostic only; do not present its loads as final Shanghai Tower wind loads."
+  ]
+}

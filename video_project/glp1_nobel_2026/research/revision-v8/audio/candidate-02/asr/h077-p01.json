@@ -1,0 +1,196 @@
+{
+  "id": "h077",
+  "partIndex": 0,
+  "expected": "如果突然嘴歪、说不清话、一侧胳膊没力，要立即拨打幺二零急救电话。",
+  "heard": "如果突然嘴歪,說不清話,一側胳膊沒力,要立即撥打120急救電話。",
+  "words": [
+    {
+      "text": "如果",
+      "start": 0.0,
+      "end": 0.52,
+      "probability": 0.9761552810668945
+    },
+    {
+      "text": "突",
+      "start": 0.52,
+      "end": 0.72,
+      "probability": 0.9880247712135315
+    },
+    {
+      "text": "然",
+      "start": 0.72,
+      "end": 0.86,
+      "probability": 0.9999246597290039
+    },
+    {
+      "text": "嘴",
+      "start": 0.86,
+      "end": 1.06,
+      "probability": 0.9932238757610321
+    },
+    {
+      "text": "歪,",
+      "start": 1.06,
+      "end": 1.32,
+      "probability": 0.9822844862937927
+    },
+    {
+      "text": "說",
+      "start": 1.68,
+      "end": 1.78,
+      "probability": 0.8327381610870361
+    },
+    {
+      "text": "不",
+      "start": 1.78,
+      "end": 1.9,
+      "probability": 0.9989790916442871
+    },
+    {
+      "text": "清",
+      "start": 1.9,
+      "end": 2.02,
+      "probability": 0.959510087966919
+    },
+    {
+      "text": "話,",
+      "start": 2.02,
+      "end": 2.28,
+      "probability": 0.9987117052078247
+    },
+    {
+      "text": "一",
+      "start": 2.66,
+      "end": 2.72,
+      "probability": 0.7482339143753052
+    },
+    {
+      "text": "側",
+      "start": 2.72,
+      "end": 2.86,
+      "probability": 0.9659536778926849
+    },
+    {
+      "text": "胳",
+      "start": 2.86,
+      "end": 2.98,
+      "probability": 0.8214932382106781
+    },
+    {
+      "text": "膊",
+      "start": 2.98,
+      "end": 3.12,
+      "probability": 0.9851503074169159
+    },
+    {
+      "text": "沒",
+      "start": 3.12,
+      "end": 3.28,
+      "probability": 0.9681747555732727
+    },
+    {
+      "text": "力,",
+      "start": 3.28,
+      "end": 3.48,
+      "probability": 0.9926328063011169
+    },
+    {
+      "text": "要",
+      "start": 3.88,
+      "end": 3.92,
+      "probability": 0.957135796546936
+    },
+    {
+      "text": "立",
+      "start": 3.92,
+      "end": 4.08,
+      "probability": 0.9943769574165344
+    },
+    {
+      "text": "即",
+      "start": 4.08,
+      "end": 4.28,
+      "probability": 0.9932278990745544
+    },
+    {
+      "text": "撥",
+      "start": 4.28,
+      "end": 4.42,
+      "probability": 0.9181527197360992
+    },
+    {
+      "text": "打",
+      "start": 4.42,
+      "end": 4.6,
+      "probability": 0.9949756860733032
+    },
+    {
+      "text": "120",
+      "start": 4.6,
+      "end": 5.04,
+      "probability": 0.9450461864471436
+    },
+    {
+      "text": "急",
+      "start": 5.04,
+      "end": 5.34,
+      "probability": 0.7104473114013672
+    },
+    {
+      "text": "救",
+      "start": 5.34,
+      "end": 5.5,
+      "probability": 0.9808576107025146
+    },
+    {
+      "text": "電",
+      "start": 5.5,
+      "end": 5.6,
+      "probability": 0.995915949344635
+    },
+    {
+      "text": "話。",
+      "start": 5.6,
+      "end": 5.86,
+      "probability": 0.9982765913009644
+    }
+  ],
+  "sourceSHA256": "c10a057e03d38c9497c1139d95d1662b1b65896e319fcfdb6b439840c782e469",
+  "ratio": 0.9122807017543859,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "幺",
+      "heard": "一百",
+      "end": 22
+    },
+    {
+      "op": "replace",
+      "expected": "零",
+      "heard": "十",
+      "end": 24
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 307200,
+    "seconds": 6.4,
+    "peakDBFS": -8.790646805204533,
+    "first20msDBFS": -68.50505337149143,
+    "last20msDBFS": -94.46582631442939,
+    "firstActiveMs": 320.0,
+    "lastActiveToEndMs": 520.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

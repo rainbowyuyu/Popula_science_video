@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-11T03:18:47.745185+00:00",
+  "method": "GET /api/v1/uploads?action=getPolicy&model=wan2.6-i2v",
+  "checks": [
+    {
+      "credentialAlias": "QWEN_API_KEY_PRIMARY",
+      "status": 401,
+      "code": "InvalidApiKey",
+      "message": "Invalid API-key provided.",
+      "generationSubmitted": false
+    },
+    {
+      "credentialAlias": "QWEN_API_KEY_BACKUP",
+      "status": 200,
+      "responseKeys": [
+        "data",
+        "request_id"
+      ],
+      "generationSubmitted": false
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "g006",
+  "text": "一部分糖马上供能，一部分存进肝脏和肌肉。饭后血糖上升，身体就得及时安排这批新到的营养。",
+  "ttsText": "一部分糖马上供能，一部分存进肝脏和肌肉。饭后血糖上升，身体就得及时安排这批新到的营养。",
+  "signature": "f354d51b7e66818548a44f1cd21611496f60086152e12cf5732c47cfd6e613e2",
+  "raw": "audio/raw/g006-f354d51b7e.wav",
+  "processed": "public/voice/g006.wav",
+  "rawDuration": 8.64,
+  "duration": 8.64,
+  "sha256": "014d492d029f5844d6425c05a82295fb668ee38b894f8e82b93b827be49a1412",
+  "seed": 3887286995,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g005",
+    "g006",
+    "g007",
+    "g008"
+  ],
+  "rawEndpointDB": -80.09321299933356,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "dfc5850ac2440375eac5a14f69d3980ca56473b6c01a3af37c74f8b4377b7fe3",
+    "outputSha256": "014d492d029f5844d6425c05a82295fb668ee38b894f8e82b93b827be49a1412",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.091430120545038,
+    "input": {
+      "seconds": 8.64,
+      "peakDb": -7.945329811536875,
+      "activeRmsDb": -22.911555756425326,
+      "quietFrameP10Db": -63.84187033308056
+    },
+    "output": {
+      "seconds": 8.64,
+      "peakDb": -5.428068088134927,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.34829626690337
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

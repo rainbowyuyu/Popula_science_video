@@ -1,0 +1,1778 @@
+{
+  "schema": "rainbow.real-assembly-pavilion/v1",
+  "title": "四柱三米开间可装配榫卯亭",
+  "units": "m",
+  "educational_reconstruction": true,
+  "construction_warning": "按传统构造逻辑的影视/科普模型，施工前须由结构工程师和木作师复核",
+  "design_basis": {
+    "bay_span_m": 3.0,
+    "module_m": 0.3,
+    "post_section_m": [
+      0.3,
+      0.3
+    ],
+    "eave_height_m": 3.6,
+    "ridge_height_m": 5.25
+  },
+  "assembly_steps": [
+    "基础 / foundation stones",
+    "立柱 / four posts",
+    "地栿 / sill beams",
+    "穿插枋 / tie beams",
+    "斗栱 / bracket sets",
+    "檩椽 / purlins and rafters",
+    "屋面 / roof boards and tiles",
+    "栏杆 / horizontal rails"
+  ],
+  "joint_types": [
+    "穿枋榫",
+    "坐榫",
+    "栌斗-拱-昂",
+    "拉肩木销",
+    "搭接"
+  ],
+  "components": [
+    {
+      "name": "stone_foot_01",
+      "part_type": "stone footing",
+      "assembly_step": 0,
+      "joint": "none",
+      "dimensions_m": [
+        0.52,
+        0.52,
+        0.28
+      ]
+    },
+    {
+      "name": "stone_foot_02",
+      "part_type": "stone footing",
+      "assembly_step": 0,
+      "joint": "none",
+      "dimensions_m": [
+        0.52,
+        0.52,
+        0.28
+      ]
+    },
+    {
+      "name": "stone_foot_03",
+      "part_type": "stone footing",
+      "assembly_step": 0,
+      "joint": "none",
+      "dimensions_m": [
+        0.52,
+        0.52,
+        0.28
+      ]
+    },
+    {
+      "name": "stone_foot_04",
+      "part_type": "stone footing",
+      "assembly_step": 0,
+      "joint": "none",
+      "dimensions_m": [
+        0.52,
+        0.52,
+        0.28
+      ]
+    },
+    {
+      "name": "post_01",
+      "part_type": "post",
+      "assembly_step": 1,
+      "joint": "mortises at sill/tie/eave levels",
+      "dimensions_m": [
+        0.3,
+        0.3,
+        3.2
+      ]
+    },
+    {
+      "name": "post_02",
+      "part_type": "post",
+      "assembly_step": 1,
+      "joint": "mortises at sill/tie/eave levels",
+      "dimensions_m": [
+        0.3,
+        0.3,
+        3.2
+      ]
+    },
+    {
+      "name": "post_03",
+      "part_type": "post",
+      "assembly_step": 1,
+      "joint": "mortises at sill/tie/eave levels",
+      "dimensions_m": [
+        0.3,
+        0.3,
+        3.2
+      ]
+    },
+    {
+      "name": "post_04",
+      "part_type": "post",
+      "assembly_step": 1,
+      "joint": "mortises at sill/tie/eave levels",
+      "dimensions_m": [
+        0.3,
+        0.3,
+        3.2
+      ]
+    },
+    {
+      "name": "SILL_x_+1_body",
+      "part_type": "beam body",
+      "assembly_step": 2,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        2.7,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "SILL_x_+1_tenon_x_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_x_+1_tenon_x_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_x_-1_body",
+      "part_type": "beam body",
+      "assembly_step": 2,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        2.7,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "SILL_x_-1_tenon_x_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_x_-1_tenon_x_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_y_+1_body",
+      "part_type": "beam body",
+      "assembly_step": 2,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        0.22,
+        2.7,
+        0.22
+      ]
+    },
+    {
+      "name": "SILL_y_+1_tenon_y_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_y_+1_tenon_y_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_y_-1_body",
+      "part_type": "beam body",
+      "assembly_step": 2,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        0.22,
+        2.7,
+        0.22
+      ]
+    },
+    {
+      "name": "SILL_y_-1_tenon_y_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "SILL_y_-1_tenon_y_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 2,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_x_+1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        2.7,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "EAVE_x_+1_tenon_x_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_x_+1_tenon_x_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_x_-1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        2.7,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "EAVE_x_-1_tenon_x_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_x_-1_tenon_x_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_y_+1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        0.22,
+        2.7,
+        0.22
+      ]
+    },
+    {
+      "name": "EAVE_y_+1_tenon_y_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_y_+1_tenon_y_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_y_-1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        0.22,
+        2.7,
+        0.22
+      ]
+    },
+    {
+      "name": "EAVE_y_-1_tenon_y_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "EAVE_y_-1_tenon_y_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_x_+1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        2.7,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "TIE_x_+1_tenon_x_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_x_+1_tenon_x_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_x_-1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        2.7,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "TIE_x_-1_tenon_x_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_x_-1_tenon_x_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.15,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_y_+1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        0.22,
+        2.7,
+        0.22
+      ]
+    },
+    {
+      "name": "TIE_y_+1_tenon_y_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_y_+1_tenon_y_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_y_-1_body",
+      "part_type": "beam body",
+      "assembly_step": 3,
+      "joint": "through mortise-and-tenon",
+      "dimensions_m": [
+        0.22,
+        2.7,
+        0.22
+      ]
+    },
+    {
+      "name": "TIE_y_-1_tenon_y_+1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "TIE_y_-1_tenon_y_-1.43",
+      "part_type": "tenon",
+      "assembly_step": 3,
+      "joint": "enter post mortise",
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_01_1_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_01_1_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_01_2_depth",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.22,
+        0.64,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_01_2_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_01_3_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_01_3_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_02_1_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_02_1_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_02_2_depth",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.22,
+        0.64,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_02_2_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_02_3_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_02_3_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_03_1_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_03_1_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_03_2_depth",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.22,
+        0.64,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_03_2_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_03_3_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_03_3_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_04_1_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_04_1_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_04_2_depth",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.22,
+        0.64,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_04_2_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "dou_04_3_cross",
+      "part_type": "拱",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.64,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "name": "dou_04_3_pad",
+      "part_type": "栌斗",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.31,
+        0.31,
+        0.1
+      ]
+    },
+    {
+      "name": "昂_01",
+      "part_type": "昂",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.15,
+        0.15,
+        0.7006
+      ]
+    },
+    {
+      "name": "昂_02",
+      "part_type": "昂",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.15,
+        0.15,
+        0.7006
+      ]
+    },
+    {
+      "name": "昂_03",
+      "part_type": "昂",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.15,
+        0.15,
+        0.7006
+      ]
+    },
+    {
+      "name": "昂_04",
+      "part_type": "昂",
+      "assembly_step": 4,
+      "joint": "栌斗-拱-昂",
+      "dimensions_m": [
+        0.15,
+        0.15,
+        0.7006
+      ]
+    },
+    {
+      "name": "purlin_eave_01",
+      "part_type": "檩",
+      "assembly_step": 5,
+      "joint": "坐榫",
+      "dimensions_m": [
+        3.65,
+        0.16,
+        0.16
+      ]
+    },
+    {
+      "name": "purlin_eave_02",
+      "part_type": "檩",
+      "assembly_step": 5,
+      "joint": "坐榫",
+      "dimensions_m": [
+        3.65,
+        0.16,
+        0.16
+      ]
+    },
+    {
+      "name": "purlin_eave_03",
+      "part_type": "檩",
+      "assembly_step": 5,
+      "joint": "坐榫",
+      "dimensions_m": [
+        0.16,
+        3.65,
+        0.16
+      ]
+    },
+    {
+      "name": "purlin_eave_04",
+      "part_type": "檩",
+      "assembly_step": 5,
+      "joint": "坐榫",
+      "dimensions_m": [
+        0.16,
+        3.65,
+        0.16
+      ]
+    },
+    {
+      "name": "rafter_s1_01",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s1_02",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s1_03",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s1_04",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7066
+      ]
+    },
+    {
+      "name": "rafter_s1_05",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s1_06",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s1_07",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s2_01",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s2_02",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s2_03",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s2_04",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7066
+      ]
+    },
+    {
+      "name": "rafter_s2_05",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s2_06",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s2_07",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s3_01",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s3_02",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s3_03",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s3_04",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7066
+      ]
+    },
+    {
+      "name": "rafter_s3_05",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s3_06",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s3_07",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s4_01",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "rafter_s4_02",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s4_03",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s4_04",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7066
+      ]
+    },
+    {
+      "name": "rafter_s4_05",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.7693
+      ]
+    },
+    {
+      "name": "rafter_s4_06",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        1.9452
+      ]
+    },
+    {
+      "name": "rafter_s4_07",
+      "part_type": "椽",
+      "assembly_step": 5,
+      "joint": "搭接 at eave purlin",
+      "dimensions_m": [
+        0.105,
+        0.105,
+        2.2074
+      ]
+    },
+    {
+      "name": "ridge_cross_purlin",
+      "part_type": "脊檩",
+      "assembly_step": 5,
+      "joint": "坐榫",
+      "dimensions_m": [
+        0.26,
+        0.26,
+        0.26
+      ]
+    },
+    {
+      "name": "ridge_finial",
+      "part_type": "宝顶",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.28,
+        0.28,
+        0.34
+      ]
+    },
+    {
+      "name": "roof_board_1",
+      "part_type": "望板",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        3.3139,
+        1.5776,
+        0.08
+      ]
+    },
+    {
+      "name": "roof_board_2",
+      "part_type": "望板",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        1.5776,
+        3.3139,
+        0.08
+      ]
+    },
+    {
+      "name": "roof_board_3",
+      "part_type": "望板",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        3.3139,
+        1.5776,
+        0.08
+      ]
+    },
+    {
+      "name": "roof_board_4",
+      "part_type": "望板",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        1.5776,
+        3.3139,
+        0.08
+      ]
+    },
+    {
+      "name": "tile_batten_s1_1",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.6702
+      ]
+    },
+    {
+      "name": "tile_batten_s1_2",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.1804
+      ]
+    },
+    {
+      "name": "tile_batten_s1_3",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        1.6906
+      ]
+    },
+    {
+      "name": "tile_batten_s2_1",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.6702
+      ]
+    },
+    {
+      "name": "tile_batten_s2_2",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.1804
+      ]
+    },
+    {
+      "name": "tile_batten_s2_3",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        1.6906
+      ]
+    },
+    {
+      "name": "tile_batten_s3_1",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.6702
+      ]
+    },
+    {
+      "name": "tile_batten_s3_2",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.1804
+      ]
+    },
+    {
+      "name": "tile_batten_s3_3",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        1.6906
+      ]
+    },
+    {
+      "name": "tile_batten_s4_1",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.6702
+      ]
+    },
+    {
+      "name": "tile_batten_s4_2",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        2.1804
+      ]
+    },
+    {
+      "name": "tile_batten_s4_3",
+      "part_type": "瓦条",
+      "assembly_step": 6,
+      "joint": "none",
+      "dimensions_m": [
+        0.06,
+        0.06,
+        1.6906
+      ]
+    },
+    {
+      "name": "baluster_x+1_1",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x+1_2",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x+1_3",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x+1_4",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x+1_5",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x+1_6",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x-1_1",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x-1_2",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x-1_3",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x-1_4",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x-1_5",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_x-1_6",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y+1_1",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y+1_2",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y+1_3",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y+1_4",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y+1_5",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y+1_6",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y-1_1",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y-1_2",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y-1_3",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y-1_4",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y-1_5",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "baluster_y-1_6",
+      "part_type": "栏杆望柱",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.08,
+        0.08,
+        0.52
+      ]
+    },
+    {
+      "name": "rail_horizontal_x+1_z0.86",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.1,
+        2.72,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_x+1_z1.20",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.1,
+        2.72,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_x-1_z0.86",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.1,
+        2.72,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_x-1_z1.20",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        0.1,
+        2.72,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_y+1_z0.86",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        2.72,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_y+1_z1.20",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        2.72,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_y-1_z0.86",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        2.72,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "name": "rail_horizontal_y-1_z1.20",
+      "part_type": "栏杆横枋",
+      "assembly_step": 7,
+      "joint": "none",
+      "dimensions_m": [
+        2.72,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "name": "demo_beam",
+      "part_type": "穿枋",
+      "assembly_step": 9,
+      "joint": "穿枋榫",
+      "dimensions_m": [
+        1.8,
+        0.22,
+        0.22
+      ]
+    },
+    {
+      "name": "demo_post",
+      "part_type": "post",
+      "assembly_step": 9,
+      "joint": "穿枋榫",
+      "dimensions_m": [
+        0.3,
+        0.3,
+        3.0
+      ]
+    },
+    {
+      "name": "demo_tenon",
+      "part_type": "榫头",
+      "assembly_step": 9,
+      "joint": "穿枋榫",
+      "dimensions_m": [
+        0.24,
+        0.14,
+        0.14
+      ]
+    },
+    {
+      "name": "demo_wood_peg",
+      "part_type": "木销",
+      "assembly_step": 9,
+      "joint": "drawbore peg",
+      "dimensions_m": [
+        0.09,
+        0.09,
+        0.4
+      ]
+    }
+  ],
+  "outputs": {
+    "blend": "D:\\python_project\\manim_extend_rainbow\\video_project\\episode3\\blender\\real_assembly_pavilion.blend",
+    "glb": "D:\\python_project\\manim_extend_rainbow\\video_project\\topology_optimization\\public\\episode3\\models\\real-assembly-pavilion.glb"
+  }
+}

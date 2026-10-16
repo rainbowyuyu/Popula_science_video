@@ -1,0 +1,69 @@
+{
+  "id": "g028",
+  "text": "胆固醇参与细胞膜和激素等的制造。LDL负责运送它，肝细胞表面的受体，也会把颗粒接回来清除。",
+  "ttsText": "胆固醇参与细胞膜和激素等的制造。低密度脂蛋白负责运送它，肝细胞表面的受体，也会把颗粒接回来清除。",
+  "signature": "c6ff0cd510c0c1ba5d0168ba9104e200a08d515d82bd56b7d48301d4c57e982c",
+  "raw": "audio/raw/g028-c6ff0cd510.wav",
+  "processed": "public/voice/g028.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sha256": "247cfc37fd2298a2540e0ae63d4f0ba52fff5c27d22d0a80ad6eb8efc46ba105",
+  "seed": 2159122090,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g025",
+    "g026",
+    "g027",
+    "g028"
+  ],
+  "rawEndpointDB": -96.71194587874052,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "51172558e9008dc9531d8bf6effa8bffe01a9ddc8c221ca636bc99a4eabdfa9a",
+    "outputSha256": "247cfc37fd2298a2540e0ae63d4f0ba52fff5c27d22d0a80ad6eb8efc46ba105",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.8392989712009893,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.933437337765847,
+      "activeRmsDb": -22.477928728900114,
+      "quietFrameP10Db": -59.97219324245638
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.436970140062369,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.47655112451227
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

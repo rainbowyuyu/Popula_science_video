@@ -1,0 +1,55 @@
+{
+  "version": "v15",
+  "generatedAtUTC": "2026-10-10T20:40:26.325907Z",
+  "modelSource": "public/models/shanghai-tower.glb",
+  "physicsSources": [
+    "public/physics/response.json",
+    "public/physics/environment-response.json",
+    "public/physics/computed-wind-paths.json",
+    "public/physics/computed-pressure.json",
+    "public/physics/computed-flow-slices.json",
+    "public/physics/pile-dynamics.json"
+  ],
+  "illustrativeAssets": [
+    "work/v15/blender/assets/shanghai_tower_v15_underground.glb",
+    "work/v15/blender/assets/shanghai_tower_v15_water.glb"
+  ],
+  "qwen": {
+    "used": false,
+    "reason": "local procedural environment fallback retained; no Qwen task submitted in this build"
+  },
+  "lux3d": {
+    "used": false,
+    "reason": "existing Shanghai Tower GLB and local Blender reference assets sufficient for V15 build"
+  },
+  "audio": {
+    "source": "public/v15-master.wav",
+    "processing": "validated v15-master.wav; vertical excerpt public/v15-vertical-master.wav",
+    "outputs": [
+      "public/v15-master.wav",
+      "public/v15-vertical-master.wav"
+    ]
+  },
+  "notes": [
+    "WaterPro-style surface is environmental transition only",
+    "solver data retains original units and provenance",
+    "illustrative displacement is labelled in Blender scene metadata"
+  ],
+  "outputs": [
+    {
+      "path": "delivery/ShanghaiTower_1080p_v15.mp4",
+      "bytes": 123359151,
+      "sha256": "6bd985b1a07896dddeb73c7ceeaecd9810e5cb0f4ccbcb736f186090a11bc1b8"
+    },
+    {
+      "path": "delivery/ShanghaiTower_1080x1920_v15.mp4",
+      "bytes": 67065290,
+      "sha256": "661b3c1c94f8d7a40fe1d90211e9dcbf6ecbe11430dcb9927078eed592a51fc0"
+    }
+  ],
+  "qa": {
+    "source": "research/qa/v15/latest-report.json",
+    "media": "research/qa/v15/latest-media-report.json",
+    "acceptance": "research/qa/v15/acceptance.json"
+  }
+}

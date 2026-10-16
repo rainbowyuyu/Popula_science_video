@@ -1,0 +1,25 @@
+{
+  "version": "V17-water-gs-review",
+  "passed": true,
+  "poolBoundary": "1.57 x 1.34, irregular edge shader matches Blender build-environment-v16.py",
+  "removed": [
+    "runtime CylinderGeometry bed",
+    "24 procedural runtime rim cylinders",
+    "3 independent RingGeometry ripple overlays"
+  ],
+  "gaussian": "Restored frozen category gain table .03/.10/.02/.52/.08/.32 in vertex shader, CPU sorting, and audit",
+  "stills": "research/qa-v16/v17-pool-gs-stills",
+  "frames": [
+    "300 Qwen painted handoff",
+    "500 Gaussian garden + natural pool",
+    "650 Gaussian gather/scatter + natural pool",
+    "800 garden return, natural pool and fish",
+    "1000 drop transition"
+  ],
+  "visual": "Pool reads as continuous irregular creek bed with authored stone shore; no cylindrical rim or circular boundary. Gaussian garden remains depth-sorted and stable.",
+  "checks": [
+    "npm run check PASS",
+    "node work/audit-gaussian-scene-v16.mjs PASS (8 checks, 419604 splats)",
+    "node scripts/audit-v16.mjs PASS; only camera warning at frames 7157/7661"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "version": "nobel2026-v3-final-qa",
+  "timeline": {
+    "file": "src/nobel2026/timeline-v3.json",
+    "fps": 30,
+    "frames": 7213,
+    "seconds": 240.433,
+    "scenes": 8,
+    "clips": 22,
+    "referencesCodaSeconds": 12.0
+  },
+  "audio": {
+    "voice": {
+      "file": "public\\nobel2026\\master-v3-voice.wav",
+      "seconds": "240.433000",
+      "sha256": "1a3e817e58f7ad9b29e704b5b30c49688b8f556f6731cfad6cac286e8ea68a49"
+    },
+    "master": {
+      "file": "public\\nobel2026\\master-v4.wav",
+      "seconds": "240.433000",
+      "sha256": "682935c5f79976560e5d02a62bb84f2405240d3663ba2988fb3c0518617dd8bb"
+    },
+    "bgm": {
+      "file": "public\\nobel2026\\nobel-v2-bgm.wav",
+      "seconds": "300.000000",
+      "sha256": "26955fa183b3d619b5acc17691af0b5b5323b74beb168c1415f5d899b4d2d691"
+    },
+    "loudnorm": {
+      "input_i": "-18.15",
+      "input_tp": "-1.50",
+      "input_lra": "2.90",
+      "input_thresh": "-28.54",
+      "output_i": "-24.17",
+      "output_tp": "-7.32",
+      "output_lra": "2.80",
+      "output_thresh": "-34.57",
+      "normalization_type": "dynamic",
+      "target_offset": "0.17"
+    },
+    "silencedetectNoiseDb": -42,
+    "silencedetectMinSeconds": 0.75,
+    "silenceEvents": [],
+    "voicePolicy": true,
+    "noClipTrim": true
+  },
+  "alignment": {
+    "report": "research/nobel2026/asr-alignment-v3.json",
+    "captionMismatches": [],
+    "clipsWithAsr": 22,
+    "minSimilarity": 0.9412,
+    "meanSimilarity": 0.9861818181818183,
+    "builderNarrationMismatches": [],
+    "lowSimilarityBelow0.90": [],
+    "speechTailsOver0.65s": [],
+    "reviewedHomophonicAsrParts": 13,
+    "sourceErrors": [],
+    "timingErrors": []
+  },
+  "render": {
+    "file": "delivery\\nobel2026_v3\\一束蓝光能叫醒一颗神经元_v3_1080p.mp4",
+    "exists": true,
+    "fullDecode": true,
+    "durationSeconds": 240.490667,
+    "streams": [
+      {
+        "codec_type": "video",
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1"
+      },
+      {
+        "codec_type": "audio",
+        "codec_name": "aac",
+        "r_frame_rate": "0/0",
+        "sample_rate": "48000",
+        "channels": 2
+      }
+    ],
+    "silenceEvents": [],
+    "sha256": "ad4a3b953b976b1d96702644313c71e026ad3c937aceeca3ed9da07408981c29"
+  },
+  "passed": true,
+  "failures": []
+}

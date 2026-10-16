@@ -1,0 +1,494 @@
+{
+  "title": "表1 | 同一五维指标：AI Review vs 法规标准打分对照",
+  "title_en": "Table 1 | AI Review vs. regulatory scores (same five metrics)",
+  "note": "左右五列指标名称相同（容量、钢耗、造价、工期、寿命）；左为 AI Review（机队分位/AI 参考线/经济性代理），右为法规口径（DNV 规则合成分、300 t/MW 目标、25 年设计寿命、示范 EPC/工期上限）。原始物理量见 ai_metrics，两套打分共用同一实测值。 已建成机队 (n=9)：综合分 Spearman=0.717，平均 |AI−法规|=3.9 分，双通道均≥60 且差≤15 分占比 88.9%。",
+  "note_en": "Same five metrics left (AI Review) and right (regulatory / DNV thresholds). Raw values shared per row. Commissioned fleet (n=9): overall Spearman=0.717, mean |AI-reg|=3.9 pts, agreement (both >=60, diff<=15)=88.9%.",
+  "ai_columns": [
+    {
+      "key": "capacity_mw",
+      "label": "单机兆瓦数"
+    },
+    {
+      "key": "steel_per_mw",
+      "label": "单位兆瓦用钢量"
+    },
+    {
+      "key": "unit_cost",
+      "label": "单位造价"
+    },
+    {
+      "key": "construction_years",
+      "label": "施工年限"
+    },
+    {
+      "key": "fatigue_life",
+      "label": "疲劳寿命"
+    }
+  ],
+  "regulatory_columns": [
+    {
+      "key": "capacity_mw",
+      "label": "单机兆瓦数",
+      "source": "DNV-ST-0437 20 MW 半潜式设计基点"
+    },
+    {
+      "key": "steel_per_mw",
+      "label": "单位兆瓦用钢量",
+      "source": "行业钢耗规则合成分（300 t/MW 目标 / 机队对标 / 图强）"
+    },
+    {
+      "key": "unit_cost",
+      "label": "单位造价",
+      "source": "漂浮式示范 EPC 投资强度控制线（非 AI 参考价）"
+    },
+    {
+      "key": "construction_years",
+      "label": "施工年限",
+      "source": "示范工程批复工期管理惯例"
+    },
+    {
+      "key": "fatigue_life",
+      "label": "疲劳寿命",
+      "source": "DNV 25 年设计寿命 + RP-0286 疲劳细节规则"
+    }
+  ],
+  "validity_summary": {
+    "n": 9,
+    "overall_spearman": 0.717,
+    "overall_mean_abs_diff": 3.9,
+    "dimension_mean_abs_diff": {
+      "capacity_mw": 0.0,
+      "steel_per_mw": 10.0,
+      "unit_cost": 18.2,
+      "construction_years": 7.0,
+      "fatigue_life": 7.6
+    },
+    "high_agreement_pct": 88.9,
+    "interpretation": "综合分 Spearman 越接近 1，说明 AI 与法规在机队排序上越一致；各维平均绝对差 |AI−法规| 越小，说明同指标下两套口径越接近。"
+  },
+  "candidate": {
+    "name": "本方案",
+    "region": "candidate",
+    "year_status": "candidate",
+    "ai_overall": 94.9,
+    "regulatory_overall": 96.3,
+    "raw_metrics": {
+      "capacity_mw": "20.0",
+      "steel_per_mw": "256",
+      "unit_cost": "2500",
+      "construction_years": "3.0",
+      "fatigue_life": "27.5"
+    },
+    "ai_scores": {
+      "capacity_mw": 98.0,
+      "steel_per_mw": 96.8,
+      "unit_cost": 94.6,
+      "construction_years": 85.7,
+      "fatigue_life": 98.0
+    },
+    "ai_metrics": {
+      "capacity_mw": 20.0,
+      "steel_per_mw": 255.501605,
+      "unit_cost": 2500.0157045009787,
+      "construction_years": 3.001672016666667,
+      "fatigue_life": 27.5
+    },
+    "regulatory_scores": {
+      "capacity_mw": 98.0,
+      "steel_per_mw": 93.8,
+      "unit_cost": 98.0,
+      "construction_years": 94.0,
+      "fatigue_life": 98.9
+    },
+    "is_candidate": true
+  },
+  "commissioned_cohort": [
+    {
+      "name": "WindFloat",
+      "region": "international",
+      "year_status": "commissioned",
+      "ai_overall": 67.0,
+      "regulatory_overall": 64.6,
+      "raw_metrics": {
+        "capacity_mw": "2.0",
+        "steel_per_mw": "690",
+        "unit_cost": "15000",
+        "construction_years": "3.0",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 90.9,
+        "unit_cost": 25.0,
+        "construction_years": 85.7,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 2.0,
+        "steel_per_mw": 690.0,
+        "unit_cost": 15000.0,
+        "construction_years": 3.0,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 82.4,
+        "unit_cost": 25.0,
+        "construction_years": 94.0,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "Fukushima Shimpuu",
+      "region": "international",
+      "year_status": "commissioned",
+      "ai_overall": 54.5,
+      "regulatory_overall": 57.7,
+      "raw_metrics": {
+        "capacity_mw": "7.0",
+        "steel_per_mw": "930",
+        "unit_cost": "5000",
+        "construction_years": "4.0",
+        "fatigue_life": "30.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 53.0,
+        "unit_cost": 43.4,
+        "construction_years": 44.2,
+        "fatigue_life": 95.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 7.0,
+        "steel_per_mw": 930.0,
+        "unit_cost": 5000.0,
+        "construction_years": 4.0,
+        "fatigue_life": 30.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 55.7,
+        "unit_cost": 56.7,
+        "construction_years": 48.6,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "WindFloat Atlantic",
+      "region": "international",
+      "year_status": "commissioned",
+      "ai_overall": 78.1,
+      "regulatory_overall": 78.0,
+      "raw_metrics": {
+        "capacity_mw": "8.4",
+        "steel_per_mw": "417",
+        "unit_cost": "3600",
+        "construction_years": "2.5",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 81.3,
+        "unit_cost": 73.3,
+        "construction_years": 98.0,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 8.4,
+        "steel_per_mw": 417.0,
+        "unit_cost": 3600.0,
+        "construction_years": 2.5,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 64.1,
+        "unit_cost": 98.0,
+        "construction_years": 98.0,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "Kincardine Ph2",
+      "region": "international",
+      "year_status": "commissioned",
+      "ai_overall": 66.5,
+      "regulatory_overall": 60.6,
+      "raw_metrics": {
+        "capacity_mw": "9.5",
+        "steel_per_mw": "316",
+        "unit_cost": "6800",
+        "construction_years": "2.5",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 82.0,
+        "unit_cost": 26.0,
+        "construction_years": 98.0,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 9.5,
+        "steel_per_mw": 316.0,
+        "unit_cost": 6800.0,
+        "construction_years": 2.5,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 65.5,
+        "unit_cost": 26.7,
+        "construction_years": 98.0,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "三峡引领",
+      "region": "domestic",
+      "year_status": "commissioned",
+      "ai_overall": 75.2,
+      "regulatory_overall": 81.8,
+      "raw_metrics": {
+        "capacity_mw": "5.5",
+        "steel_per_mw": "891",
+        "unit_cost": "4436",
+        "construction_years": "3.5",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 92.5,
+        "unit_cost": 64.1,
+        "construction_years": 71.5,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 5.5,
+        "steel_per_mw": 891.0,
+        "unit_cost": 4436.0,
+        "construction_years": 3.5,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 85.5,
+        "unit_cost": 92.4,
+        "construction_years": 90.0,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "海装扶瑶",
+      "region": "domestic",
+      "year_status": "commissioned",
+      "ai_overall": 76.1,
+      "regulatory_overall": 82.8,
+      "raw_metrics": {
+        "capacity_mw": "6.2",
+        "steel_per_mw": "630",
+        "unit_cost": "4000",
+        "construction_years": "3.4",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 92.8,
+        "unit_cost": 66.4,
+        "construction_years": 73.4,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 6.2,
+        "steel_per_mw": 630.0,
+        "unit_cost": 4000.0,
+        "construction_years": 3.4,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 86.1,
+        "unit_cost": 95.3,
+        "construction_years": 90.8,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "海油观澜",
+      "region": "domestic",
+      "year_status": "commissioned",
+      "ai_overall": 77.2,
+      "regulatory_overall": 79.3,
+      "raw_metrics": {
+        "capacity_mw": "7.2",
+        "steel_per_mw": "552",
+        "unit_cost": "4800",
+        "construction_years": "2.6",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 87.2,
+        "unit_cost": 62.7,
+        "construction_years": 98.0,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 7.25,
+        "steel_per_mw": 552.0,
+        "unit_cost": 4800.0,
+        "construction_years": 2.6,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 75.4,
+        "unit_cost": 90.0,
+        "construction_years": 97.2,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "GHN Energy gongxiang",
+      "region": "domestic",
+      "year_status": "commissioned",
+      "ai_overall": 76.4,
+      "regulatory_overall": 82.4,
+      "raw_metrics": {
+        "capacity_mw": "4.0",
+        "steel_per_mw": "1225",
+        "unit_cost": "4300",
+        "construction_years": "3.2",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 92.5,
+        "unit_cost": 64.6,
+        "construction_years": 78.8,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 4.0,
+        "steel_per_mw": 1225.0,
+        "unit_cost": 4300.0,
+        "construction_years": 3.2,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 45.0,
+        "steel_per_mw": 85.5,
+        "unit_cost": 93.3,
+        "construction_years": 92.4,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "Mingyang Tiancheng",
+      "region": "domestic",
+      "year_status": "commissioned",
+      "ai_overall": 85.2,
+      "regulatory_overall": 83.3,
+      "raw_metrics": {
+        "capacity_mw": "16.6",
+        "steel_per_mw": "482",
+        "unit_cost": "2800",
+        "construction_years": "2.0",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 60.8,
+        "steel_per_mw": 86.4,
+        "unit_cost": 86.2,
+        "construction_years": 98.0,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 16.6,
+        "steel_per_mw": 482.0,
+        "unit_cost": 2800.0,
+        "construction_years": 2.0,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 60.8,
+        "steel_per_mw": 73.8,
+        "unit_cost": 98.0,
+        "construction_years": 98.0,
+        "fatigue_life": 85.4
+      }
+    }
+  ],
+  "planned_cohort": [
+    {
+      "name": "三峡领航",
+      "region": "domestic",
+      "year_status": "planned",
+      "ai_overall": 78.2,
+      "regulatory_overall": 72.8,
+      "raw_metrics": {
+        "capacity_mw": "16.0",
+        "steel_per_mw": "468",
+        "unit_cost": "3000",
+        "construction_years": "2.8",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 56.0,
+        "steel_per_mw": 70.1,
+        "unit_cost": 81.4,
+        "construction_years": 96.8,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 16.0,
+        "steel_per_mw": 468.5,
+        "unit_cost": 3000.0,
+        "construction_years": 2.8,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 56.0,
+        "steel_per_mw": 42.5,
+        "unit_cost": 98.0,
+        "construction_years": 95.6,
+        "fatigue_life": 85.4
+      }
+    },
+    {
+      "name": "图强",
+      "region": "domestic",
+      "year_status": "planned",
+      "ai_overall": 91.7,
+      "regulatory_overall": 92.5,
+      "raw_metrics": {
+        "capacity_mw": "20.0",
+        "steel_per_mw": "278",
+        "unit_cost": "2720",
+        "construction_years": "3.0",
+        "fatigue_life": "25.0"
+      },
+      "ai_scores": {
+        "capacity_mw": 98.0,
+        "steel_per_mw": 93.8,
+        "unit_cost": 88.5,
+        "construction_years": 85.7,
+        "fatigue_life": 92.7
+      },
+      "ai_metrics": {
+        "capacity_mw": 20.0,
+        "steel_per_mw": 278.0,
+        "unit_cost": 2720.0,
+        "construction_years": 3.0,
+        "fatigue_life": 25.0
+      },
+      "regulatory_scores": {
+        "capacity_mw": 98.0,
+        "steel_per_mw": 88.0,
+        "unit_cost": 98.0,
+        "construction_years": 94.0,
+        "fatigue_life": 85.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "status": "pass",
+  "providerSHA256": "f76effed82f6708d719684c1d6b28cc120167ee53a48e5a67c1849d94f9d7a89",
+  "reviewedUTC": "2026-10-12T17:00:55.790154+00:00",
+  "reviewer": "/root/v14_fish independent visual QA",
+  "scope": "Actual contact plus native-frame dense sheets every 5 frames, and separately opened full-resolution 1920x1080 frames. All provider video frames were strictly decoded and all extracted JPEG hashes were bound to provenance.",
+  "inspectedFrames": [
+    1,
+    2,
+    6,
+    11,
+    16,
+    21,
+    26,
+    31,
+    36,
+    41,
+    46,
+    51,
+    56,
+    61,
+    66,
+    71,
+    76,
+    81,
+    86,
+    91,
+    96,
+    101,
+    106,
+    111,
+    116,
+    121,
+    126,
+    131,
+    136,
+    141,
+    146,
+    149,
+    150
+  ],
+  "nativeFrameNumbering": "One-based: frame_0001.jpg is decoded frame index 0.",
+  "individualFullResolutionFrames": [
+    51,
+    101,
+    126
+  ],
+  "denseSheetsActuallyViewed": [
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\painted_to_garden_v16-dense-01.jpg",
+      "nativeFrameNumbers": [
+        1,
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\painted_to_garden_v16-dense-02.jpg",
+      "nativeFrameNumbers": [
+        51,
+        56,
+        61,
+        66,
+        71,
+        76,
+        81,
+        86,
+        91,
+        96
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\painted_to_garden_v16-dense-03.jpg",
+      "nativeFrameNumbers": [
+        101,
+        106,
+        111,
+        116,
+        121,
+        126,
+        131,
+        136,
+        141,
+        146
+      ]
+    },
+    {
+      "path": "research\\qa-v16\\qwen-independent-fish\\painted_to_garden_v16-dense-04.jpg",
+      "nativeFrameNumbers": [
+        150
+      ]
+    }
+  ],
+  "normalSpeedPlaybackReviewed": false,
+  "everyFrameManuallyReviewed": false,
+  "audioListened": false,
+  "providerAudioUsed": false,
+  "technicalChecks": {
+    "strictFullVideoDecodeExitCode": 0,
+    "frameCount": 150,
+    "allExtractedFrameHashesMatchProvenance": true,
+    "adjacentIdenticalJPEGHashes": 0,
+    "fps": "30/1",
+    "width": 1920,
+    "height": 1080
+  },
+  "findings": [
+    {
+      "frames": [
+        1,
+        51,
+        101,
+        126,
+        150
+      ],
+      "finding": "The rounded mint/cream fish retains two dark eyes and one coherent body while the drawn contour becomes the authored 3D look. No sampled duplicate face or appended limb was observed."
+    },
+    {
+      "frames": [
+        21,
+        46,
+        66,
+        86,
+        101
+      ],
+      "finding": "Large defocused leaves move across the upper foreground, but the fish face remains readable. The path, pond and garden scenery gain dimensionality progressively."
+    },
+    {
+      "frames": [
+        106,
+        126,
+        146,
+        150
+      ],
+      "finding": "Fish size and garden framing approach the 3D endpoint progressively. No numeric optical explanation is generated in this bridge."
+    }
+  ],
+  "limits": "This is a source-clip sampled visual decision. It does not certify every unsampled frame, normal-speed perceived motion, listening, final composite subtitles/logo, or the complete encoded film. Generated transitions are artistic and do not replace deterministic optics validation."
+}

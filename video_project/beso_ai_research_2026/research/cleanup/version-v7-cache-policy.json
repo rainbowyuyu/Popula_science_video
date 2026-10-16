@@ -1,0 +1,1231 @@
+{
+  "schema": "version-cleanup-config-v1",
+  "status": "read-only-candidate-policy-awaiting-final-qa",
+  "created_at": "2026-10-11T13:27:27.318979+00:00",
+  "final_file": "output/ai_engineer_launch_v7_1080p60.mp4",
+  "qa_file": "research/qa/launch-v7-cleanup-gate.json",
+  "protected_paths": [
+    "src",
+    "public",
+    "scripts",
+    "research",
+    "delivery",
+    "work",
+    "tmp/launch-v7-bundle-b6a150fc6370",
+    "tmp/launch-v7-public-b6a150fc6370",
+    "output/launch-v7-render-b6a150fc6370",
+    "output/ai_engineer_launch_v6_1080p60.mp4",
+    "output/ai_engineer_launch_v7_1080p60.mp4",
+    "tmp/launch-v7-bundle-102a8d052bb7",
+    "tmp/launch-v7-public-102a8d052bb7",
+    "output/launch-v7-render-102a8d052bb7",
+    "tmp/launch-v7-bundle-27ef33bc9eb3",
+    "tmp/launch-v7-public-27ef33bc9eb3",
+    "output/launch-v7-render-27ef33bc9eb3",
+    "tmp/launch-v7-bundle-4dcf5c443110",
+    "tmp/launch-v7-public-4dcf5c443110",
+    "output/launch-v7-render-4dcf5c443110"
+  ],
+  "required_files": [
+    "output/ai_engineer_launch_v6_1080p60.mp4",
+    "output/launch-v7-render-b6a150fc6370/render-manifest.json",
+    "public/assets/v4/nacelle-skin.glb",
+    "public/audio/launch-v7-master.wav",
+    "public/beso-research/geometry/manifest.json",
+    "public/beso-research/geometry/shared.json",
+    "public/beso-research/geometry/state-000.json",
+    "public/beso-research/geometry/state-010.json",
+    "public/beso-research/geometry/state-026.json",
+    "public/beso-research/geometry/state-043.json",
+    "public/beso-research/physics/native-model.json",
+    "public/beso-research/physics/zwind-response.json",
+    "public/beso-research/web-live/interaction-focused-v5.mp4",
+    "public/brand/zju-horizontal-mark.svg",
+    "public/environment/v2-sky.hdr",
+    "public/generated/v7/v7-drawing-emergence.mp4",
+    "public/generated/v7/v7-joint-parametric-r2.mp4",
+    "public/generated/v7/v7-mesh-materialize.mp4",
+    "public/generated/v7/v7-ocean-drone-r3.mp4",
+    "public/generated/v7/v7-report-hero.mp4",
+    "public/generated/v7/v7-underwater-follow.mp4",
+    "research/generation/launch-v7-bridges.json",
+    "research/generation/qwen-v7-final-freeze.json",
+    "research/generation/qwen-v7-tasks.json",
+    "scripts/render_launch_v7.mjs",
+    "scripts/renderer-options.mjs",
+    "src/index-launch-v7.tsx",
+    "src/launch-v7-captions.json",
+    "src/launch-v7-story.json",
+    "output/launch-v7-render-102a8d052bb7/render-manifest.json",
+    "output/launch-v7-render-27ef33bc9eb3/render-manifest.json",
+    "output/launch-v7-render-4dcf5c443110/render-manifest.json"
+  ],
+  "active_process_patterns": [
+    "render_launch_v7\\.mjs",
+    "render-v7-runtime",
+    "launch-v7-bundle-b6a150fc6370",
+    "launch-v7-public-b6a150fc6370",
+    "ai_engineer_launch_v7_1080p60\\.mp4",
+    "launch-v7-bundle-27ef33bc9eb3",
+    "launch-v7-public-27ef33bc9eb3",
+    "launch-v7-bundle-4dcf5c443110",
+    "launch-v7-public-4dcf5c443110"
+  ],
+  "rules": [
+    {
+      "target": "tmp/launch-v7-bundle-193a7bb31012",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-193a7bb31012/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-223c4d062fa1",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-223c4d062fa1/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-2725b29fd2ec",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-2725b29fd2ec/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-3cb94fb54d3c",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-3cb94fb54d3c/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-45dd1a332bb3",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-45dd1a332bb3/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-4a4b40a53bd1",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-4a4b40a53bd1/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-6bfce7e676ac",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-6bfce7e676ac/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-71a75fd7cfd5",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-71a75fd7cfd5/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-96403356c4b7",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-96403356c4b7/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-a1e0f5851d06",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-a1e0f5851d06/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-a836b841e0c0",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-a836b841e0c0/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-c0f129c04546",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-c0f129c04546/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-c384e8359dba",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-c384e8359dba/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-c9a3feadc92c",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-c9a3feadc92c/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-da41f2b6779b",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-da41f2b6779b/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-e3aa90e9189e",
+      "kind": "regenerable",
+      "reason": "Obsolete v7 Remotion compiled JS, source maps and generated loader files; current frozen build and canonical project sources remain protected.",
+      "rebuild": "After production and preview processes have ended, run node scripts/render_launch_v7.mjs --stills --frames=0 from the retained project. This regenerates the latest equivalent Remotion bundle from src and preserved runtime assets. Historic compiled revision bytes are obsolete and are not promised to be reproduced; the current b6a150fc6370 compiled freeze is retained.",
+      "recursive": false,
+      "include": [
+        "*.js",
+        "*.js.map",
+        "index.html",
+        "favicon.ico"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-bundle-e3aa90e9189e/public",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete compiled-bundle public copies: delete only when size and full SHA-256 match a surviving canonical public file. Missing or differing originals are retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-193a7bb31012",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-223c4d062fa1",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-2725b29fd2ec",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-3cb94fb54d3c",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-45dd1a332bb3",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-4a4b40a53bd1",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-6bfce7e676ac",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-71a75fd7cfd5",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-96403356c4b7",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-a1e0f5851d06",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-a836b841e0c0",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-c0f129c04546",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-c384e8359dba",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-c9a3feadc92c",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-da41f2b6779b",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/launch-v7-public-e3aa90e9189e",
+      "kind": "duplicate_tree",
+      "source": "public",
+      "reason": "Obsolete v7 public staging copies: delete only when size and full SHA-256 match surviving canonical public files. Differing older narration/media snapshots remain retained.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    },
+    {
+      "target": "tmp/render-v7-runtime",
+      "kind": "regenerable",
+      "reason": "Rebuildable renderer-owned browser profiles, Remotion extraction and temporary render files. Eligible only after every production/browser process has ended and final QA passes. No user browser profile is targeted.",
+      "rebuild": "node scripts/render_launch_v7.mjs --stills --frames=0 recreates renderer-owned TEMP/TMP, Chromium profiles and Remotion extraction caches from retained source, generated originals and frozen runtime media. Final movie, source assets, response records and current b6a150fc6370 freeze are outside this rule.",
+      "recursive": true,
+      "include": [
+        "*"
+      ]
+    }
+  ],
+  "gateAdapterRequirement": {
+    "sourceReport": "research/qa/launch-v7-delivery.json",
+    "adapterPath": "research/qa/launch-v7-cleanup-gate.json",
+    "state": "not-created; final rendering and QA are still pending",
+    "requirements": [
+      "source report technicalPassed is true",
+      "source report fullDecodePassed is true",
+      "actual decodedFrames equals 6300",
+      "source report errors is an empty array",
+      "actual final file SHA-256 matches source report sha256",
+      "all production and renderer browser processes have ended"
+    ],
+    "requiredAdapterSchema": {
+      "errors": [],
+      "checks": {
+        "fullDecode": "passed",
+        "finalSHA256": "ACTUAL_VERIFIED_FINAL_SHA256_ONLY"
+      }
+    },
+    "explanation": "version_cleanup.py requires checks.fullDecode to be the literal passed and checks.finalSHA256. verify_launch_v7.py has an object fullDecode check, a top-level fullDecodePassed and sha256. Root may create this separate adapter from genuine successful final QA and a newly computed actual hash; never modify or invent the original QA report."
+  },
+  "inventory": {
+    "scope": "Original sixteen old revision pairs and exact renderer runtime only; b6a150fc6370,102a8d052bb7,27ef33bc9eb3,4dcf5c443110 are retained. Observed sizes predate any separately logged emergency duplicate cleanup.",
+    "readOnly": true,
+    "deletionExecuted": false,
+    "planExecuted": false,
+    "applyExecuted": false,
+    "observedTotalBytes": 8769516349,
+    "observedTotalFiles": 13449,
+    "sizeMeaning": "Candidate-scope upper bound observed during prior active rendering, not promised freed space. Re-inventory during final cleanup plan; duplicate copies require full canonical SHA match. No new cleanup roots added by final revision update.",
+    "candidates": [
+      {
+        "target": "tmp/launch-v7-bundle-193a7bb31012",
+        "bytes": 31990153,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-193a7bb31012/public",
+        "bytes": 220240818,
+        "fileCount": 102,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-223c4d062fa1",
+        "bytes": 31985100,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-223c4d062fa1/public",
+        "bytes": 211045456,
+        "fileCount": 88,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-2725b29fd2ec",
+        "bytes": 31996373,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-2725b29fd2ec/public",
+        "bytes": 253676799,
+        "fileCount": 125,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-3cb94fb54d3c",
+        "bytes": 31998623,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-3cb94fb54d3c/public",
+        "bytes": 286669365,
+        "fileCount": 134,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-45dd1a332bb3",
+        "bytes": 31978008,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-45dd1a332bb3/public",
+        "bytes": 210628553,
+        "fileCount": 84,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-4a4b40a53bd1",
+        "bytes": 32001950,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-4a4b40a53bd1/public",
+        "bytes": 300796322,
+        "fileCount": 148,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-6bfce7e676ac",
+        "bytes": 31983164,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-6bfce7e676ac/public",
+        "bytes": 89345659,
+        "fileCount": 19,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-71a75fd7cfd5",
+        "bytes": 31981495,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-71a75fd7cfd5/public",
+        "bytes": 210628553,
+        "fileCount": 84,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-96403356c4b7",
+        "bytes": 31969762,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-96403356c4b7/public",
+        "bytes": 181906362,
+        "fileCount": 68,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-a1e0f5851d06",
+        "bytes": 31985100,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-a1e0f5851d06/public",
+        "bytes": 211045456,
+        "fileCount": 88,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-a836b841e0c0",
+        "bytes": 31943393,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-a836b841e0c0/public",
+        "bytes": 81106128,
+        "fileCount": 65,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-c0f129c04546",
+        "bytes": 31994031,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-c0f129c04546/public",
+        "bytes": 249011746,
+        "fileCount": 117,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-c384e8359dba",
+        "bytes": 31975218,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-c384e8359dba/public",
+        "bytes": 181906362,
+        "fileCount": 68,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-c9a3feadc92c",
+        "bytes": 31994265,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-c9a3feadc92c/public",
+        "bytes": 249011746,
+        "fileCount": 117,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-da41f2b6779b",
+        "bytes": 32000970,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-da41f2b6779b/public",
+        "bytes": 298652497,
+        "fileCount": 143,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-e3aa90e9189e",
+        "bytes": 31999915,
+        "fileCount": 50,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "top-level generated compilation only"
+      },
+      {
+        "target": "tmp/launch-v7-bundle-e3aa90e9189e/public",
+        "bytes": 288678970,
+        "fileCount": 138,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-193a7bb31012",
+        "bytes": 220240818,
+        "fileCount": 102,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-223c4d062fa1",
+        "bytes": 211045456,
+        "fileCount": 88,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-2725b29fd2ec",
+        "bytes": 253676799,
+        "fileCount": 125,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-3cb94fb54d3c",
+        "bytes": 286669365,
+        "fileCount": 134,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-45dd1a332bb3",
+        "bytes": 210628553,
+        "fileCount": 84,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-4a4b40a53bd1",
+        "bytes": 300796322,
+        "fileCount": 148,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-6bfce7e676ac",
+        "bytes": 89345659,
+        "fileCount": 19,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-71a75fd7cfd5",
+        "bytes": 210628553,
+        "fileCount": 84,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-96403356c4b7",
+        "bytes": 181906362,
+        "fileCount": 68,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-a1e0f5851d06",
+        "bytes": 211045456,
+        "fileCount": 88,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-a836b841e0c0",
+        "bytes": 81106128,
+        "fileCount": 65,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-c0f129c04546",
+        "bytes": 249011746,
+        "fileCount": 117,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-c384e8359dba",
+        "bytes": 181906362,
+        "fileCount": 68,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-c9a3feadc92c",
+        "bytes": 249011746,
+        "fileCount": 117,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-da41f2b6779b",
+        "bytes": 298652497,
+        "fileCount": 143,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/launch-v7-public-e3aa90e9189e",
+        "bytes": 288678970,
+        "fileCount": 138,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": false,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "duplicate_tree",
+        "eligibility": "pending canonical-file full SHA-256 comparison by cleanup plan"
+      },
+      {
+        "target": "tmp/render-v7-runtime",
+        "bytes": 1209037245,
+        "fileCount": 9473,
+        "excludedLinkCount": 0,
+        "disappearedDuringScan": 0,
+        "volatile": true,
+        "snapshotUtc": "2026-10-11T13:27:27.318979+00:00",
+        "kind": "regenerable",
+        "eligibility": "render-active live estimate only; re-inventory after all processes stop"
+      }
+    ],
+    "freezeFilesValidated": [
+      {
+        "path": "scripts/qwen_bridges_v7.py",
+        "sha256": "9643f0b9a6abcd132bdfcede4d63ad9fe29c07424534985aa4ff95557506ba6f",
+        "matchesFreeze": true
+      },
+      {
+        "path": "src/beso/GeneratedLaunchBridgesV7.tsx",
+        "sha256": "fe5ac666b1cf9b270c5720844949160e805e3d4752e02c10bd07f15960eb499b",
+        "matchesFreeze": true
+      },
+      {
+        "path": "research/generation/qwen-v7-specs.json",
+        "sha256": "145cae1e4cb06c3c4984df941f0967c33b9edc1283e9c94dc2bb4f9fd740410c",
+        "matchesFreeze": true
+      },
+      {
+        "path": "research/generation/qwen-v7-tasks.json",
+        "sha256": "b6fc690a49c344c3f60c4df62c28fef3599f5517c0712938f4a11d5fc17e5336",
+        "matchesFreeze": true
+      },
+      {
+        "path": "research/generation/launch-v7-bridges.json",
+        "sha256": "a8bb5541f22c68570ab92e7e943c1917016a7bfff09f09cdaa96219a52497906",
+        "matchesFreeze": true
+      }
+    ],
+    "currentFrozenRevision": "4dcf5c443110",
+    "requiredFilesPresentAtPreparation": true,
+    "browserProfileContentRead": false,
+    "reparseTraversal": false,
+    "retainedPreviousFrozenRevisions": [
+      "b6a150fc6370",
+      "102a8d052bb7",
+      "27ef33bc9eb3"
+    ],
+    "freezeRevisionUpdatedUTC": "2026-10-11T14:05:38.121844+00:00",
+    "newRevisionFreezeState": "source/assets frozen in new render manifest; six unaffected segments reused, final segment5/render/mux/QA pending"
+  },
+  "nextStep": "After actual complete final technical QA and source/asset freeze verification, create the separate verified gate adapter, then run version_cleanup.py plan to produce an exact per-file plan; inspect that plan before apply. This file does not authorize deletion while rendering is active.",
+  "current_final_revision": "4dcf5c443110",
+  "prior_patch_revision_retained": [
+    "b6a150fc6370",
+    "102a8d052bb7",
+    "27ef33bc9eb3"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "h027",
+  "partIndex": 0,
+  "ttsText": "司美格鲁肽的设计，就从这里下手。研究者把容易被剪的位置换了换，又接上一条能和白蛋白暂时结合的侧链。前一步让它不容易被酶剪掉，后一步让它在体内停留更久。分子还能启动原来的受体，作用时间却长了许多。",
+  "storySHA256": "85cdc9a97a2f8269a7f33ebb9cfc5c6617c623ed907949a5c448a0164ecec7e2",
+  "attempt": 8,
+  "seed": 1327560160,
+  "signature": "4f20f5e0d70869bceefade8b6d5883618b73cafb3448420d24ed931d7024425c",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h026-p01",
+    "h027-p01",
+    "h036-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-08\\raw\\h027-p01.wav",
+  "rawSHA256": "e8f2f29ab11e48bced39c1c40f92278314ac6aacd266509b766cb5b66da1d9ae",
+  "rawMetrics": {
+    "samples48k": 852480,
+    "seconds": 17.76,
+    "peakDBFS": -7.332452073118734,
+    "first20msDBFS": -73.35258182378689,
+    "last20msDBFS": -70.01051415838084,
+    "firstActiveMs": 180.0,
+    "lastActiveToEndMs": 210.0,
+    "activityThresholdDBFS": -49.91639951904602,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-08\\guarded\\h027-p01.wav",
+  "guardedSHA256": "79e62b8cb98f9de7bb763c21b90547d0c57fded59e02887ac22919cbea98edab",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-08\\processed\\h027-p01.wav",
+  "sha256": "e5007901c7ed4f3f7c98023f416e90391cf67bd9b67d52924ba75c94ad6e2296",
+  "durationSeconds": 18.0,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "79e62b8cb98f9de7bb763c21b90547d0c57fded59e02887ac22919cbea98edab",
+    "outputSha256": "e5007901c7ed4f3f7c98023f416e90391cf67bd9b67d52924ba75c94ad6e2296",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.032572069985214,
+    "input": {
+      "seconds": 18.0,
+      "peakDb": -7.331931628166313,
+      "activeRmsDb": -22.71673613167788,
+      "quietFrameP10Db": -63.256430842373625
+    },
+    "output": {
+      "seconds": 18.0,
+      "peakDb": -4.58829266178012,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -62.94362191541681
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

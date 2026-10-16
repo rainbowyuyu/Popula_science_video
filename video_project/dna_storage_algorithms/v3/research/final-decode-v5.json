@@ -1,0 +1,271 @@
+{
+  "schema": "rainbow.dna.final-decode/v5",
+  "checkedAt": "2026-10-11T12:59:28.416360+00:00",
+  "video": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\delivery\\DNA存储_连续数据之旅_V5_1080p.mp4",
+    "bytes": 112706818,
+    "sha256": "694fb6203db3e297a7445b0c20053a637292fc827b7a95a886f0acfb146cade7"
+  },
+  "status": "pass",
+  "exitCode": 0,
+  "command": [
+    "ffmpeg",
+    "-nostdin",
+    "-hide_banner",
+    "-xerror",
+    "-err_detect",
+    "explode",
+    "-i",
+    "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\delivery\\DNA存储_连续数据之旅_V5_1080p.mp4",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0",
+    "-vf",
+    "blackdetect=d=0.5:pix_th=0.10:pic_th=0.98",
+    "-af",
+    "silencedetect=noise=-50dB:d=1,loudnorm=I=-16:TP=-1.5:LRA=9:print_format=json",
+    "-f",
+    "null",
+    "-"
+  ],
+  "log": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\research\\final-decode-v5.ffmpeg.log",
+    "sha256": "6864b69235164bf28ba8bc7c5fe1ffd48d154590996cfc35e37270c5ae86eefe"
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "duration": "321.800000",
+        "nb_frames": "9654",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "duration": "321.800000",
+        "nb_frames": "15086"
+      }
+    ],
+    "format": {
+      "duration": "321.800000"
+    }
+  },
+  "blackdetect": {
+    "minimumDurationSec": 0.5,
+    "pixelLuminanceThreshold": 0.1,
+    "minimumBlackPixelRatio": 0.98,
+    "intervals": []
+  },
+  "checks": [
+    {
+      "id": "complete-video-and-audio-decode",
+      "pass": true,
+      "detail": 0
+    },
+    {
+      "id": "no-black-interval-at-least-half-second",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "no-silence-at-least-one-second",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "id": "actual-encoded-audio-loudness-measured",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "encoded-loudness-near-minus16-lufs",
+      "pass": true,
+      "detail": {
+        "actualLufs": -16.04,
+        "acceptableRangeLufs": [
+          -17,
+          -15
+        ]
+      }
+    },
+    {
+      "id": "encoded-true-peak-below-minus1-dbtp",
+      "pass": true,
+      "detail": {
+        "actualTruePeakDbtp": -1.38,
+        "maximumDbtp": -1
+      }
+    },
+    {
+      "id": "encoded-audio-matches-selected-master",
+      "pass": true,
+      "detail": {
+        "checked": true,
+        "scope": "Decoded mono 8 kHz signal comparison identifies selected master content; it does not certify lossless AAC samples.",
+        "sampleRate": 8000,
+        "referenceFrames": 2574400,
+        "encodedFrames": 2574507,
+        "comparedSeconds": 321.8,
+        "correlation": 0.9999529804642145,
+        "gain": 0.9987188130376883,
+        "normalizedErrorRms": 0.009697260475426015,
+        "minimumTenSecondCorrelation": 0.999869824871745,
+        "tenSecondWindows": [
+          {
+            "startSec": 0.0,
+            "correlation": 0.9999554076572587
+          },
+          {
+            "startSec": 10.0,
+            "correlation": 0.9999424913802951
+          },
+          {
+            "startSec": 20.0,
+            "correlation": 0.9999268958170457
+          },
+          {
+            "startSec": 30.0,
+            "correlation": 0.9999767528127042
+          },
+          {
+            "startSec": 40.0,
+            "correlation": 0.9999849499530874
+          },
+          {
+            "startSec": 50.0,
+            "correlation": 0.9999420909896682
+          },
+          {
+            "startSec": 60.0,
+            "correlation": 0.999970500336081
+          },
+          {
+            "startSec": 70.0,
+            "correlation": 0.9999514721627617
+          },
+          {
+            "startSec": 80.0,
+            "correlation": 0.9999368993662952
+          },
+          {
+            "startSec": 90.0,
+            "correlation": 0.9999439435079727
+          },
+          {
+            "startSec": 100.0,
+            "correlation": 0.9999608363189583
+          },
+          {
+            "startSec": 110.0,
+            "correlation": 0.9999357626696388
+          },
+          {
+            "startSec": 120.0,
+            "correlation": 0.99994625941837
+          },
+          {
+            "startSec": 130.0,
+            "correlation": 0.9999723243432246
+          },
+          {
+            "startSec": 140.0,
+            "correlation": 0.9999635284748216
+          },
+          {
+            "startSec": 150.0,
+            "correlation": 0.9999380034071769
+          },
+          {
+            "startSec": 160.0,
+            "correlation": 0.9999700709774871
+          },
+          {
+            "startSec": 170.0,
+            "correlation": 0.999869824871745
+          },
+          {
+            "startSec": 180.0,
+            "correlation": 0.9999312194997331
+          },
+          {
+            "startSec": 190.0,
+            "correlation": 0.9999713144010899
+          },
+          {
+            "startSec": 200.0,
+            "correlation": 0.9999700552619875
+          },
+          {
+            "startSec": 210.0,
+            "correlation": 0.9999274329932603
+          },
+          {
+            "startSec": 220.0,
+            "correlation": 0.99996752165061
+          },
+          {
+            "startSec": 230.0,
+            "correlation": 0.9999763622036433
+          },
+          {
+            "startSec": 240.0,
+            "correlation": 0.9999667947155265
+          },
+          {
+            "startSec": 250.0,
+            "correlation": 0.9999526827014095
+          },
+          {
+            "startSec": 260.0,
+            "correlation": 0.999963078993747
+          },
+          {
+            "startSec": 270.0,
+            "correlation": 0.999929463957427
+          },
+          {
+            "startSec": 280.0,
+            "correlation": 0.9999676220927861
+          },
+          {
+            "startSec": 290.0,
+            "correlation": 0.9999596556798084
+          },
+          {
+            "startSec": 300.0,
+            "correlation": 0.9999434558402032
+          },
+          {
+            "startSec": 310.0,
+            "correlation": 0.9999902035706585
+          },
+          {
+            "startSec": 320.0,
+            "correlation": 0.9999790457633301
+          }
+        ]
+      }
+    },
+    {
+      "id": "video-unchanged-through-audit",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "failedCheckIds": [],
+  "limits": [
+    "No decoded errors or extended black/silent interval is not a visual-quality approval.",
+    "Complete decoding was forced with -xerror -err_detect explode; both primary video and audio streams were mapped."
+  ]
+}

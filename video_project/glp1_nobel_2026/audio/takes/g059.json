@@ -1,0 +1,69 @@
+{
+  "id": "g059",
+  "text": "打鼾很响、夜里憋醒、白天困倦，可以把这些情况告诉医生。睡眠呼吸暂停，可能同时影响体重和血压管理。",
+  "ttsText": "打鼾很响、夜里憋醒、白天困倦，可以把这些情况告诉医生。睡眠呼吸暂停，可能同时影响体重和血压管理。",
+  "signature": "8f41f447030c331b6de6a99ad70685fb4ebd16e51e82749425fb46bb10d0c635",
+  "raw": "audio/raw/g059-8f41f44703.wav",
+  "processed": "public/voice/g059.wav",
+  "rawDuration": 9.12,
+  "duration": 9.12,
+  "sha256": "0634d83e3b669a32753be61f5c9c83a656f4a79fffd417f90eca34973a5208d6",
+  "seed": 3304954695,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g057",
+    "g058",
+    "g059",
+    "g060"
+  ],
+  "rawEndpointDB": -63.15448029797697,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "d4f929c69c8025458ac35ee55ed3595c8676c87256ce0f60f7bf05f66186cc51",
+    "outputSha256": "0634d83e3b669a32753be61f5c9c83a656f4a79fffd417f90eca34973a5208d6",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.40330475977024,
+    "input": {
+      "seconds": 9.12,
+      "peakDb": -8.03147302255837,
+      "activeRmsDb": -23.155653196952418,
+      "quietFrameP10Db": -63.26381657753744
+    },
+    "output": {
+      "seconds": 9.12,
+      "peakDb": -3.5882078867032785,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.175688049044226
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

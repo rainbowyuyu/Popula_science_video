@@ -1,0 +1,82 @@
+{
+  "id": "s006",
+  "text": "如果只把重量压在浅层软土上，地基会明显变形。所以，工程师把桩伸进更深的土层。",
+  "ttsText": "如果只把重量压在较浅的软土层上，地基会明显变形。所以，工程师把桩伸进更深的土层。",
+  "signature": "32771d8897d6ead9aea56d0b417a7b6742fbadff6f48c0616980cb467469ab54",
+  "raw": "audio/raw/s006-32771d8897.wav",
+  "processed": "public/voice/s006.wav",
+  "rawDuration": 8.32,
+  "duration": 8.56,
+  "sha256": "0cd85c3e9de5539142b18b08e9fc2627929f3c4d8f3adb8cd294a4e4964b45de",
+  "seed": 2965918880,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s003",
+    "s006",
+    "s007",
+    "s008"
+  ],
+  "rawEndpointDB": -79.77910180235016,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "562bb6c867e9d9be32a1fdab49df0fea33051086a3d192bc09f7f53605603a8d",
+    "outputSha256": "0cd85c3e9de5539142b18b08e9fc2627929f3c4d8f3adb8cd294a4e4964b45de",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.0574912401927037,
+    "input": {
+      "seconds": 8.56,
+      "peakDb": -5.880974773306344,
+      "activeRmsDb": -21.51504144482422,
+      "quietFrameP10Db": -61.09032320067092
+    },
+    "output": {
+      "seconds": 8.56,
+      "peakDb": -4.948276971938721,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.74445305735696
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "8cc6e78ffaffd10ba349dfb422b6088b4af07142ab63a1a2fb237795df8a7d18"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s006.wav"
+}

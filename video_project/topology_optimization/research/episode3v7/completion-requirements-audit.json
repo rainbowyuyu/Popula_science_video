@@ -1,0 +1,97 @@
+{
+  "objective": "Retain the warm pointed-roof pavilion film while rebuilding actual joinery and assembly; use the same parts for explanations and actual native structural and diffusion inverse results.",
+  "requirements": [
+    {
+      "requirement": "Assembly-capable unified geometry",
+      "evidence": [
+        "geometry-qa.json",
+        "assembly-path-qa.json",
+        "global-assembly-qa.json",
+        "glb-qa.json"
+      ],
+      "result": "117 closed meshes; 83 prerequisite paths and 136 whole-scene states checked; tolerance 2e-7 m3; educational geometry, not fabrication certification"
+    },
+    {
+      "requirement": "Documentary basis and corresponding drawings",
+      "evidence": [
+        "research-note.md",
+        "drawings/README.md",
+        "drawings/01-plan-elevation.svg",
+        "drawings/02-joints-assembly.svg",
+        "drawings/cut-list.csv"
+      ],
+      "result": "Read modern timber construction sources and retained historical source pages; dimensions are explicit model parameters, not historical survey"
+    },
+    {
+      "requirement": "Same physical parts throughout joint and assembly explanations",
+      "evidence": [
+        "../../src/episode3v7/World.ts",
+        "../../public/episode3v7/models/pavilion-manifest.json",
+        "visual-qa/camera-audit.json"
+      ],
+      "result": "Stable part IDs, persisted meshes, constrained assembly keys; frame, pin, pillar, support and hip details share one pavilion"
+    },
+    {
+      "requirement": "Actual Zwind and diffusion computation",
+      "evidence": [
+        "physics/final-validation.json",
+        "physics/result-summary.json",
+        "physics/part-analysis-coverage.json",
+        "physics/peg-connection-demands.json",
+        "physics/README.md"
+      ],
+      "result": "Native Zwind/ZDyn 3.7.2: gravity, wind and transient structural response; graph-diffusion-regularized inverse with native forward rerun. Two independent 2D D2Q9 flow slices; not building CFD."
+    },
+    {
+      "requirement": "Per-part stress/response traceability",
+      "evidence": [
+        "physics/part-analysis-coverage.json",
+        "physics/stress-field-validation.json",
+        "physics/peg-connection-demands.json"
+      ],
+      "result": "88 beam-model structural parts; 8 pin nominal connection demand checks; all visible components have explicit coverage categories, without fabricated contact stress"
+    },
+    {
+      "requirement": "Coherent approximately five-minute edit",
+      "evidence": [
+        "story.json",
+        "../../src/episode3v7/timeline.json",
+        "audio-edit-assembly-removed.json"
+      ],
+      "result": "8933 frames at 30 fps; removed moisture digression and repetitive assembly recap; 12-second coda"
+    },
+    {
+      "requirement": "Narration and Chinese music preservation",
+      "evidence": [
+        "audio-final-qa.json",
+        "audio-v7-audit.json",
+        "audio-pronunciation.json",
+        "audio-workflow.md"
+      ],
+      "result": "47 whole takes retained, no time stretching; pronunciation substitutions and ASR checks; original pentatonic music; no claim of human listening"
+    },
+    {
+      "requirement": "Motion and typography verification",
+      "evidence": [
+        "visual-qa/camera-audit.json",
+        "title-final-fix.json",
+        "visual-audit.md"
+      ],
+      "result": "9 continuous scene boundaries; no camera inside/near static part AABBs; title moved ahead of joint close-up; sampled visual review, not full human playback"
+    }
+  ],
+  "final_encoded_video_gate": {
+    "passed": true,
+    "video_sha256": "1e03cca53e8d14f46f90ee6288b4d7bfd138782313d1f0637873e3aa8b882656",
+    "frames": 8933,
+    "seconds": 297.76666666666665,
+    "sampled_frames": 129,
+    "complete_decode": true,
+    "narration_clips_preserved": 47,
+    "post_cleanup_dependencies_match": 50,
+    "post_cleanup_typecheck": "npm run check: exit 0",
+    "files_deleted": 809,
+    "bytes_released": 2590467525,
+    "finished_utc": "2026-10-05T04:52:35.667617+00:00"
+  }
+}

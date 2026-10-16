@@ -1,0 +1,638 @@
+{
+  "schema": "ai-engineer-v13-story-claim-review-v1",
+  "checkedAt": "2026-10-12T08:19:13.319456+00:00",
+  "projectRoot": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026",
+  "sourceStorySHA256": "edc220f7570ef0ae2ef6b52260c2ed4dad730515d833d2a6be297afd0de62b32",
+  "scope": "Read-only source/UI/evidence audit; src/public unchanged.16utterances audited, not human full listening.",
+  "productValue": "AI Engineer把需求、工具调用和计算反馈放进同一项工程任务，减少重复衔接软件，让工程师保留设计判断和复查依据。",
+  "recommendation": "Keep all16verified personal-TTS utterances in v13; improve causality through visible UI actions and camera match cuts. No mandatory re-record.",
+  "claims": [
+    {
+      "id": "v8-hero-0",
+      "text": "让这台海上风机，少用一点钢。",
+      "startSeconds": 0.55,
+      "endSeconds": 4.0,
+      "assessment": "engineering_context",
+      "boundary": "Contextual design goal; no new calculated saving claimed.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 65,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "    tools: list[StructuredTool] = [\n        _wrap(\"cad_convert\", \"Convert CAD file (step/iges/stl/brep) under workspace.\"),\n        _wrap(\"open_results_viewer\", \"Open topology optimization results viewer for scan_dir.\"),\n        _wrap(\"list_scan_dir\", \"List input files in scan_dir.\"),\n        _wrap(\"cad_skill_help\", \"Return text-to-cad skill documentation.\"),\n        _wrap(\"cad_skill_step\", \"Run build123d STEP generator script.\"),\n        _wrap(\"open_cad_explorer\", \"Open CAD Explorer tab for a STEP file.\"),\n        _wrap(\"cad_drawing_pack\", \"Generate engineering drawing PNG/PDF pack.\"),\n        _wrap(\"export_design_deliverables\", \"Export INP design-space deliverables.\"),\n        _wrap(\"get_design_checklist\", \"Read Phase I design checklist summary.\"),\n        _wrap(\"update_design_checklist\", \"Update Phase I checklist from user reply.\"),\n        _wrap(\"probe_execution\", \"Probe FreeCAD/CalculiX/gmsh and recommend live|preview.\"),\n        _wrap(\"set_execution_mode\", \"Set BESO_EXECUTION_MODE to live or preview.\"),\n        _wrap(\"apply_turbine_preset\", \"Apply 5/10/15/20 MW turbine preset to checklist/session.\"),\n        _wrap(\"start_design_domain_session\", \"Create OC4 design-domain session from IGES upload/path.\"),\n        _wrap(\"run_design_domain_build\", \"Build design domain, optional HITL pause before mesh.\"),\n        _wrap(\"request_human_edit\", \"Pause for human geometry review/edit.\"),\n        _wrap(\"apply_geometry_patch\", \"Replace session geometry and invalidate downstream.\"),\n        _wrap(\"commit_preview_to_session\", \"Commit results-viewer preview into design-domain session.\"),\n        _wrap(\"start_beso_job\", \"Start live CalculiX–BESO job from session or inp.\"),\n        _wrap(\"get_job_status\", \"Poll BESO job status.\"),\n        _wrap(\"run_sizing\", \"Steel sizing / scale optimization for target MW (restruction6).\"),\n        _wrap(\n            \"run_platform_restruction\",\n            \"Fixed-draft horizontal scale (restruction6); pitch≤5°, min t/MW; opens 尺寸时域分析 UI.\",\n        ),\n        _wrap(\n            \"run_zwind_eval\",\n            \"Zwind Fig.2 envelope check; opens 尺寸时域分析 UI with figures.\",\n        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\assistant_graph.py",
+          "line": 145,
+          "endLine": 186,
+          "sha256": "97c26c201828147b5d97a1134968654a1ab0e5f29f9ed3c21e9f578cd88a7742",
+          "excerpt": "    tool_trace = list(state.get(\"tool_trace\") or [])\n    events: list[dict[str, Any]] = []\n\n    ok, summary, extra = _run_assistant_tool(\n        tname,\n        targs,\n        workspace_root=ws,\n        runs_root=runs,\n        client_actions=client_actions,\n        design_checklist_id=state.get(\"design_checklist_id\"),\n    )\n    ex = extra if isinstance(extra, dict) else {}\n    artifacts = _artifacts_from_tool_extra(ex)\n    arg_snip = json.dumps(targs, ensure_ascii=False)[:800]\n    tool_trace.append(\n        {\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"arguments_preview\": arg_snip,\n            \"artifacts\": artifacts,\n        }\n    )\n    events.append(\n        {\n            \"type\": \"tool_done\",\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"artifacts\": artifacts,\n        }\n    )\n    hist_tool = json.dumps(data, ensure_ascii=False)[:12_000]\n    hist_res = json.dumps({\"ok\": ok, \"summary\": summary, **ex}, ensure_ascii=False)[:24_000]\n    history = list(state.get(\"history\") or [])\n    history.append({\"role\": \"assistant\", \"content\": hist_tool})\n    history.append({\"role\": \"user\", \"content\": f\"工具结果:\\n{hist_res}\"})\n    return {\n        \"events\": events,\n        \"history\": history,\n        \"client_actions\": client_actions,\n        \"tool_trace\": tool_trace,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 461,
+          "endLine": 515,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_start_beso_job(\n    *,\n    session_id: str | None = None,\n    scan_dir: str | None = None,\n    inp_path: str | None = None,\n    design_checklist_id: str | None = None,\n    task_id: str | None = None,\n    message: str = \"conversation-driven BESO\",\n    auto_start: bool = True,\n    execution_mode: str | None = None,\n    mass_goal_ratio: float | None = None,\n    filter_radius: float | None = None,\n    continuation: dict[str, Any] | None = None,\n    solver_overrides: dict[str, Any] | None = None,\n) -> dict[str, Any]:\n    mode, probe = resolve_execution_mode(execution_mode)\n    if mode == \"preview\":\n        return {\n            \"ok\": False,\n            \"execution_mode\": \"preview\",\n            \"preview\": True,\n            \"error\": \"Preview mode: refusing to start live BESO. Set live solvers or use teaching demo (?demo=beso7-pipeline).\",\n            \"solvers\": probe.to_dict(),\n        }\n    assert_live_or_raise(mode)\n\n    from backend.design_requirements.paths import load_checklist\n    from backend.jobs.manager import jobs\n    from backend.oc4_design_domain_service import read_session_meta, session_dir\n    from backend.replan.checklist_bridge import write_job_context\n    from backend.tools.prism_design_domain import prism_session_dir, read_prism_session_meta\n\n    root = workspace_root()\n    mass = 0.15\n    filt = 2.0\n    opt_base = \"stiffness\"\n    save_every = 1\n    cid = str(design_checklist_id or \"\").strip() or None\n    resolved_inp = inp_path\n    resolved_scan = scan_dir\n    prism_meta: dict[str, Any] = {}\n\n    if session_id:\n        # Prefer OC4 session; fall back to prism session layout\n        sdir = session_dir(root, session_id)\n        if sdir.is_dir():\n            meta = read_session_meta(sdir)\n            cid = cid or str(meta.get(\"design_checklist_id\") or \"\").strip() or None\n            for_beso = sdir / \"03_for_beso.inp\"\n            if not for_beso.is_file():\n                raise FileNotFoundError(\n                    f\"设计域会话缺少 03_for_beso.inp。请先完成载荷划分；\"\n                    f\"不能用无 *CLOAD/*BOUNDARY 的 02_mesh_body.inp 启动拓扑。session={session_id}\"\n                )\n            resolved_inp = str(for_beso)"
+        }
+      ]
+    },
+    {
+      "id": "v8-hero-1",
+      "text": "真正费时间的，是改完模型，还得把每个软件重新接一遍。",
+      "startSeconds": 4.166666666666667,
+      "endSeconds": 9.366666666666667,
+      "assessment": "benefit_framing",
+      "boundary": "Specific repetitive workflow pain; qualitative benefit, no measured time saving.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 65,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "    tools: list[StructuredTool] = [\n        _wrap(\"cad_convert\", \"Convert CAD file (step/iges/stl/brep) under workspace.\"),\n        _wrap(\"open_results_viewer\", \"Open topology optimization results viewer for scan_dir.\"),\n        _wrap(\"list_scan_dir\", \"List input files in scan_dir.\"),\n        _wrap(\"cad_skill_help\", \"Return text-to-cad skill documentation.\"),\n        _wrap(\"cad_skill_step\", \"Run build123d STEP generator script.\"),\n        _wrap(\"open_cad_explorer\", \"Open CAD Explorer tab for a STEP file.\"),\n        _wrap(\"cad_drawing_pack\", \"Generate engineering drawing PNG/PDF pack.\"),\n        _wrap(\"export_design_deliverables\", \"Export INP design-space deliverables.\"),\n        _wrap(\"get_design_checklist\", \"Read Phase I design checklist summary.\"),\n        _wrap(\"update_design_checklist\", \"Update Phase I checklist from user reply.\"),\n        _wrap(\"probe_execution\", \"Probe FreeCAD/CalculiX/gmsh and recommend live|preview.\"),\n        _wrap(\"set_execution_mode\", \"Set BESO_EXECUTION_MODE to live or preview.\"),\n        _wrap(\"apply_turbine_preset\", \"Apply 5/10/15/20 MW turbine preset to checklist/session.\"),\n        _wrap(\"start_design_domain_session\", \"Create OC4 design-domain session from IGES upload/path.\"),\n        _wrap(\"run_design_domain_build\", \"Build design domain, optional HITL pause before mesh.\"),\n        _wrap(\"request_human_edit\", \"Pause for human geometry review/edit.\"),\n        _wrap(\"apply_geometry_patch\", \"Replace session geometry and invalidate downstream.\"),\n        _wrap(\"commit_preview_to_session\", \"Commit results-viewer preview into design-domain session.\"),\n        _wrap(\"start_beso_job\", \"Start live CalculiX–BESO job from session or inp.\"),\n        _wrap(\"get_job_status\", \"Poll BESO job status.\"),\n        _wrap(\"run_sizing\", \"Steel sizing / scale optimization for target MW (restruction6).\"),\n        _wrap(\n            \"run_platform_restruction\",\n            \"Fixed-draft horizontal scale (restruction6); pitch≤5°, min t/MW; opens 尺寸时域分析 UI.\",\n        ),\n        _wrap(\n            \"run_zwind_eval\",\n            \"Zwind Fig.2 envelope check; opens 尺寸时域分析 UI with figures.\",\n        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\assistant_graph.py",
+          "line": 145,
+          "endLine": 186,
+          "sha256": "97c26c201828147b5d97a1134968654a1ab0e5f29f9ed3c21e9f578cd88a7742",
+          "excerpt": "    tool_trace = list(state.get(\"tool_trace\") or [])\n    events: list[dict[str, Any]] = []\n\n    ok, summary, extra = _run_assistant_tool(\n        tname,\n        targs,\n        workspace_root=ws,\n        runs_root=runs,\n        client_actions=client_actions,\n        design_checklist_id=state.get(\"design_checklist_id\"),\n    )\n    ex = extra if isinstance(extra, dict) else {}\n    artifacts = _artifacts_from_tool_extra(ex)\n    arg_snip = json.dumps(targs, ensure_ascii=False)[:800]\n    tool_trace.append(\n        {\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"arguments_preview\": arg_snip,\n            \"artifacts\": artifacts,\n        }\n    )\n    events.append(\n        {\n            \"type\": \"tool_done\",\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"artifacts\": artifacts,\n        }\n    )\n    hist_tool = json.dumps(data, ensure_ascii=False)[:12_000]\n    hist_res = json.dumps({\"ok\": ok, \"summary\": summary, **ex}, ensure_ascii=False)[:24_000]\n    history = list(state.get(\"history\") or [])\n    history.append({\"role\": \"assistant\", \"content\": hist_tool})\n    history.append({\"role\": \"user\", \"content\": f\"工具结果:\\n{hist_res}\"})\n    return {\n        \"events\": events,\n        \"history\": history,\n        \"client_actions\": client_actions,\n        \"tool_trace\": tool_trace,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 461,
+          "endLine": 515,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_start_beso_job(\n    *,\n    session_id: str | None = None,\n    scan_dir: str | None = None,\n    inp_path: str | None = None,\n    design_checklist_id: str | None = None,\n    task_id: str | None = None,\n    message: str = \"conversation-driven BESO\",\n    auto_start: bool = True,\n    execution_mode: str | None = None,\n    mass_goal_ratio: float | None = None,\n    filter_radius: float | None = None,\n    continuation: dict[str, Any] | None = None,\n    solver_overrides: dict[str, Any] | None = None,\n) -> dict[str, Any]:\n    mode, probe = resolve_execution_mode(execution_mode)\n    if mode == \"preview\":\n        return {\n            \"ok\": False,\n            \"execution_mode\": \"preview\",\n            \"preview\": True,\n            \"error\": \"Preview mode: refusing to start live BESO. Set live solvers or use teaching demo (?demo=beso7-pipeline).\",\n            \"solvers\": probe.to_dict(),\n        }\n    assert_live_or_raise(mode)\n\n    from backend.design_requirements.paths import load_checklist\n    from backend.jobs.manager import jobs\n    from backend.oc4_design_domain_service import read_session_meta, session_dir\n    from backend.replan.checklist_bridge import write_job_context\n    from backend.tools.prism_design_domain import prism_session_dir, read_prism_session_meta\n\n    root = workspace_root()\n    mass = 0.15\n    filt = 2.0\n    opt_base = \"stiffness\"\n    save_every = 1\n    cid = str(design_checklist_id or \"\").strip() or None\n    resolved_inp = inp_path\n    resolved_scan = scan_dir\n    prism_meta: dict[str, Any] = {}\n\n    if session_id:\n        # Prefer OC4 session; fall back to prism session layout\n        sdir = session_dir(root, session_id)\n        if sdir.is_dir():\n            meta = read_session_meta(sdir)\n            cid = cid or str(meta.get(\"design_checklist_id\") or \"\").strip() or None\n            for_beso = sdir / \"03_for_beso.inp\"\n            if not for_beso.is_file():\n                raise FileNotFoundError(\n                    f\"设计域会话缺少 03_for_beso.inp。请先完成载荷划分；\"\n                    f\"不能用无 *CLOAD/*BOUNDARY 的 02_mesh_body.inp 启动拓扑。session={session_id}\"\n                )\n            resolved_inp = str(for_beso)"
+        }
+      ]
+    },
+    {
+      "id": "v8-brief-0",
+      "text": "AI Engineer，把这串操作接成一个任务。",
+      "startSeconds": 11.55,
+      "endSeconds": 15.55,
+      "assessment": "source_supported_capability",
+      "boundary": "Tool registry/event trace connects operations. The recorded capture is not a completed new full pipeline.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 65,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "    tools: list[StructuredTool] = [\n        _wrap(\"cad_convert\", \"Convert CAD file (step/iges/stl/brep) under workspace.\"),\n        _wrap(\"open_results_viewer\", \"Open topology optimization results viewer for scan_dir.\"),\n        _wrap(\"list_scan_dir\", \"List input files in scan_dir.\"),\n        _wrap(\"cad_skill_help\", \"Return text-to-cad skill documentation.\"),\n        _wrap(\"cad_skill_step\", \"Run build123d STEP generator script.\"),\n        _wrap(\"open_cad_explorer\", \"Open CAD Explorer tab for a STEP file.\"),\n        _wrap(\"cad_drawing_pack\", \"Generate engineering drawing PNG/PDF pack.\"),\n        _wrap(\"export_design_deliverables\", \"Export INP design-space deliverables.\"),\n        _wrap(\"get_design_checklist\", \"Read Phase I design checklist summary.\"),\n        _wrap(\"update_design_checklist\", \"Update Phase I checklist from user reply.\"),\n        _wrap(\"probe_execution\", \"Probe FreeCAD/CalculiX/gmsh and recommend live|preview.\"),\n        _wrap(\"set_execution_mode\", \"Set BESO_EXECUTION_MODE to live or preview.\"),\n        _wrap(\"apply_turbine_preset\", \"Apply 5/10/15/20 MW turbine preset to checklist/session.\"),\n        _wrap(\"start_design_domain_session\", \"Create OC4 design-domain session from IGES upload/path.\"),\n        _wrap(\"run_design_domain_build\", \"Build design domain, optional HITL pause before mesh.\"),\n        _wrap(\"request_human_edit\", \"Pause for human geometry review/edit.\"),\n        _wrap(\"apply_geometry_patch\", \"Replace session geometry and invalidate downstream.\"),\n        _wrap(\"commit_preview_to_session\", \"Commit results-viewer preview into design-domain session.\"),\n        _wrap(\"start_beso_job\", \"Start live CalculiX–BESO job from session or inp.\"),\n        _wrap(\"get_job_status\", \"Poll BESO job status.\"),\n        _wrap(\"run_sizing\", \"Steel sizing / scale optimization for target MW (restruction6).\"),\n        _wrap(\n            \"run_platform_restruction\",\n            \"Fixed-draft horizontal scale (restruction6); pitch≤5°, min t/MW; opens 尺寸时域分析 UI.\",\n        ),\n        _wrap(\n            \"run_zwind_eval\",\n            \"Zwind Fig.2 envelope check; opens 尺寸时域分析 UI with figures.\",\n        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\assistant_graph.py",
+          "line": 145,
+          "endLine": 186,
+          "sha256": "97c26c201828147b5d97a1134968654a1ab0e5f29f9ed3c21e9f578cd88a7742",
+          "excerpt": "    tool_trace = list(state.get(\"tool_trace\") or [])\n    events: list[dict[str, Any]] = []\n\n    ok, summary, extra = _run_assistant_tool(\n        tname,\n        targs,\n        workspace_root=ws,\n        runs_root=runs,\n        client_actions=client_actions,\n        design_checklist_id=state.get(\"design_checklist_id\"),\n    )\n    ex = extra if isinstance(extra, dict) else {}\n    artifacts = _artifacts_from_tool_extra(ex)\n    arg_snip = json.dumps(targs, ensure_ascii=False)[:800]\n    tool_trace.append(\n        {\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"arguments_preview\": arg_snip,\n            \"artifacts\": artifacts,\n        }\n    )\n    events.append(\n        {\n            \"type\": \"tool_done\",\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"artifacts\": artifacts,\n        }\n    )\n    hist_tool = json.dumps(data, ensure_ascii=False)[:12_000]\n    hist_res = json.dumps({\"ok\": ok, \"summary\": summary, **ex}, ensure_ascii=False)[:24_000]\n    history = list(state.get(\"history\") or [])\n    history.append({\"role\": \"assistant\", \"content\": hist_tool})\n    history.append({\"role\": \"user\", \"content\": f\"工具结果:\\n{hist_res}\"})\n    return {\n        \"events\": events,\n        \"history\": history,\n        \"client_actions\": client_actions,\n        \"tool_trace\": tool_trace,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 461,
+          "endLine": 515,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_start_beso_job(\n    *,\n    session_id: str | None = None,\n    scan_dir: str | None = None,\n    inp_path: str | None = None,\n    design_checklist_id: str | None = None,\n    task_id: str | None = None,\n    message: str = \"conversation-driven BESO\",\n    auto_start: bool = True,\n    execution_mode: str | None = None,\n    mass_goal_ratio: float | None = None,\n    filter_radius: float | None = None,\n    continuation: dict[str, Any] | None = None,\n    solver_overrides: dict[str, Any] | None = None,\n) -> dict[str, Any]:\n    mode, probe = resolve_execution_mode(execution_mode)\n    if mode == \"preview\":\n        return {\n            \"ok\": False,\n            \"execution_mode\": \"preview\",\n            \"preview\": True,\n            \"error\": \"Preview mode: refusing to start live BESO. Set live solvers or use teaching demo (?demo=beso7-pipeline).\",\n            \"solvers\": probe.to_dict(),\n        }\n    assert_live_or_raise(mode)\n\n    from backend.design_requirements.paths import load_checklist\n    from backend.jobs.manager import jobs\n    from backend.oc4_design_domain_service import read_session_meta, session_dir\n    from backend.replan.checklist_bridge import write_job_context\n    from backend.tools.prism_design_domain import prism_session_dir, read_prism_session_meta\n\n    root = workspace_root()\n    mass = 0.15\n    filt = 2.0\n    opt_base = \"stiffness\"\n    save_every = 1\n    cid = str(design_checklist_id or \"\").strip() or None\n    resolved_inp = inp_path\n    resolved_scan = scan_dir\n    prism_meta: dict[str, Any] = {}\n\n    if session_id:\n        # Prefer OC4 session; fall back to prism session layout\n        sdir = session_dir(root, session_id)\n        if sdir.is_dir():\n            meta = read_session_meta(sdir)\n            cid = cid or str(meta.get(\"design_checklist_id\") or \"\").strip() or None\n            for_beso = sdir / \"03_for_beso.inp\"\n            if not for_beso.is_file():\n                raise FileNotFoundError(\n                    f\"设计域会话缺少 03_for_beso.inp。请先完成载荷划分；\"\n                    f\"不能用无 *CLOAD/*BOUNDARY 的 02_mesh_body.inp 启动拓扑。session={session_id}\"\n                )\n            resolved_inp = str(for_beso)"
+        }
+      ]
+    },
+    {
+      "id": "v8-brief-1",
+      "text": "你改一句需求，功率、用钢量和水深，就写回同一份设计清单。",
+      "startSeconds": 15.733333333333333,
+      "endSeconds": 21.816666666666666,
+      "assessment": "source_plus_actual_ui",
+      "boundary": "Same checklist ID edit with explicit numerics; local rule parser in saved capture, not a new cloud reasoning call.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+          "line": 51,
+          "endLine": 68,
+          "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768",
+          "excerpt": "@router.post(\"/parse\")\ndef parse_design_requirements(body: ParseDesignRequirementsRequest) -> dict:\n    try:\n        checklist = parse_design_checklist(body.text)\n    except ValueError as e:\n        raise HTTPException(status_code=400, detail=str(e)) from e\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=f\"设计清单解析失败: {e}\") from e\n\n    md = checklist_to_markdown(checklist)\n    out_dir = None\n    if body.persist:\n        out_dir = str(save_checklist(checklist, markdown=md))\n\n    payload = _enrich_response(checklist, markdown=md)\n    payload[\"out_dir\"] = out_dir\n    return payload\n"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+          "line": 70,
+          "endLine": 105,
+          "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768",
+          "excerpt": "@router.post(\"/{checklist_id}/clarify\")\ndef clarify_design_requirements(checklist_id: str, body: ClarifyDesignRequirementsRequest) -> dict:\n    cl = load_checklist(checklist_id)\n    if cl is None:\n        raise HTTPException(status_code=404, detail=\"设计清单不存在\")\n    mode = body.mode or \"clarify\"\n    pending_before = build_pending_clarifications(cl.meta.source_text, cl)\n    pending_ids = [p[\"field_id\"] for p in pending_before] if mode == \"clarify\" else []\n    try:\n        updated, _, remaining, updated_fields = apply_clarification_reply(\n            cl,\n            body.reply,\n            pending_field_ids=pending_ids,\n            mode=mode,\n        )\n    except Exception as e:\n        raise HTTPException(status_code=400, detail=f\"澄清回复解析失败: {e}\") from e\n    if mode == \"edit\" and not updated_fields:\n        raise HTTPException(\n            status_code=400,\n            detail=\"未识别到可更新的参数。请写明数值，例如：钢耗改为 280 t/MW；水深 55 m；静倾 4 度\",\n        )\n    md = checklist_to_markdown(updated)\n    save_checklist(updated, markdown=md)\n    payload = _enrich_response(updated, markdown=md)\n    payload[\"clarification_reply\"] = body.reply\n    payload[\"mode\"] = mode\n    payload[\"updated_fields\"] = updated_fields\n    payload[\"remaining_pending_count\"] = len(remaining)\n    return payload\n\n\n@router.get(\"/{checklist_id}\")\ndef get_design_requirements(checklist_id: str) -> dict:\n    cl = load_checklist(checklist_id)\n    if cl is None:"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\design_requirements\\nl_parser.py",
+          "line": 42,
+          "endLine": 57,
+          "sha256": "3b9456c6e4840d3ded0d54d56b6a29e3b5ebba423daba76f4b17c931f9726f6d",
+          "excerpt": "def parse_design_checklist(\n    text: str,\n    *,\n    qwen: QwenClient | None = None,\n    checklist_id: str | None = None,\n) -> DesignChecklist:\n    t = (text or \"\").strip()\n    if not t:\n        raise ValueError(\"设计需求文本为空\")\n\n    cid = checklist_id or uuid.uuid4().hex\n    base = parse_rule_fallback(t, checklist_id=cid)\n\n    qwen = qwen or QwenClient()\n    if not qwen.api_key:\n        return base"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\design_requirements\\clarifications.py",
+          "line": 186,
+          "endLine": 209,
+          "sha256": "d3e8b43a92183e55ec37fc40648a98d9064121b4d571e3dc4953921e502f10ec",
+          "excerpt": "def apply_clarification_reply(\n    checklist: DesignChecklist,\n    reply: str,\n    *,\n    pending_field_ids: list[str] | None = None,\n    mode: str = \"clarify\",\n) -> tuple[DesignChecklist, list[str], list[dict[str, Any]], list[dict[str, Any]]]:\n    \"\"\"\n    Merge user clarification or post-lock edit.\n\n    ``mode``:\n    - ``clarify``: fill pending fields (numeric / 用默认); also apply any explicit\n      numeric updates found in the reply (including already-set fields).\n    - ``edit``: only apply explicit numeric updates; never auto-fill defaults for\n      unspecified pending fields.\n\n    Returns: (checklist, assumptions, remaining_pending, updated_field_records)\n    \"\"\"\n    text = (reply or \"\").strip()\n    mode_norm = str(mode or \"clarify\").strip().lower()\n    if mode_norm not in (\"clarify\", \"edit\"):\n        mode_norm = \"clarify\"\n\n    pending_ids = list(pending_field_ids or [])"
+        }
+      ]
+    },
+    {
+      "id": "v8-topology-0",
+      "text": "清单往下走：建立几何，划分网格，调用贝索优化。",
+      "startSeconds": 23.55,
+      "endSeconds": 29.0,
+      "assessment": "source_supported_capability",
+      "boundary": "Registered CAD/mesh/BESO functions and bounded pipeline dispatch. Use workflow illustration plus separately identified saved BESO.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 65,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "    tools: list[StructuredTool] = [\n        _wrap(\"cad_convert\", \"Convert CAD file (step/iges/stl/brep) under workspace.\"),\n        _wrap(\"open_results_viewer\", \"Open topology optimization results viewer for scan_dir.\"),\n        _wrap(\"list_scan_dir\", \"List input files in scan_dir.\"),\n        _wrap(\"cad_skill_help\", \"Return text-to-cad skill documentation.\"),\n        _wrap(\"cad_skill_step\", \"Run build123d STEP generator script.\"),\n        _wrap(\"open_cad_explorer\", \"Open CAD Explorer tab for a STEP file.\"),\n        _wrap(\"cad_drawing_pack\", \"Generate engineering drawing PNG/PDF pack.\"),\n        _wrap(\"export_design_deliverables\", \"Export INP design-space deliverables.\"),\n        _wrap(\"get_design_checklist\", \"Read Phase I design checklist summary.\"),\n        _wrap(\"update_design_checklist\", \"Update Phase I checklist from user reply.\"),\n        _wrap(\"probe_execution\", \"Probe FreeCAD/CalculiX/gmsh and recommend live|preview.\"),\n        _wrap(\"set_execution_mode\", \"Set BESO_EXECUTION_MODE to live or preview.\"),\n        _wrap(\"apply_turbine_preset\", \"Apply 5/10/15/20 MW turbine preset to checklist/session.\"),\n        _wrap(\"start_design_domain_session\", \"Create OC4 design-domain session from IGES upload/path.\"),\n        _wrap(\"run_design_domain_build\", \"Build design domain, optional HITL pause before mesh.\"),\n        _wrap(\"request_human_edit\", \"Pause for human geometry review/edit.\"),\n        _wrap(\"apply_geometry_patch\", \"Replace session geometry and invalidate downstream.\"),\n        _wrap(\"commit_preview_to_session\", \"Commit results-viewer preview into design-domain session.\"),\n        _wrap(\"start_beso_job\", \"Start live CalculiX–BESO job from session or inp.\"),\n        _wrap(\"get_job_status\", \"Poll BESO job status.\"),\n        _wrap(\"run_sizing\", \"Steel sizing / scale optimization for target MW (restruction6).\"),\n        _wrap(\n            \"run_platform_restruction\",\n            \"Fixed-draft horizontal scale (restruction6); pitch≤5°, min t/MW; opens 尺寸时域分析 UI.\",\n        ),\n        _wrap(\n            \"run_zwind_eval\",\n            \"Zwind Fig.2 envelope check; opens 尺寸时域分析 UI with figures.\",\n        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\assistant_graph.py",
+          "line": 145,
+          "endLine": 186,
+          "sha256": "97c26c201828147b5d97a1134968654a1ab0e5f29f9ed3c21e9f578cd88a7742",
+          "excerpt": "    tool_trace = list(state.get(\"tool_trace\") or [])\n    events: list[dict[str, Any]] = []\n\n    ok, summary, extra = _run_assistant_tool(\n        tname,\n        targs,\n        workspace_root=ws,\n        runs_root=runs,\n        client_actions=client_actions,\n        design_checklist_id=state.get(\"design_checklist_id\"),\n    )\n    ex = extra if isinstance(extra, dict) else {}\n    artifacts = _artifacts_from_tool_extra(ex)\n    arg_snip = json.dumps(targs, ensure_ascii=False)[:800]\n    tool_trace.append(\n        {\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"arguments_preview\": arg_snip,\n            \"artifacts\": artifacts,\n        }\n    )\n    events.append(\n        {\n            \"type\": \"tool_done\",\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"artifacts\": artifacts,\n        }\n    )\n    hist_tool = json.dumps(data, ensure_ascii=False)[:12_000]\n    hist_res = json.dumps({\"ok\": ok, \"summary\": summary, **ex}, ensure_ascii=False)[:24_000]\n    history = list(state.get(\"history\") or [])\n    history.append({\"role\": \"assistant\", \"content\": hist_tool})\n    history.append({\"role\": \"user\", \"content\": f\"工具结果:\\n{hist_res}\"})\n    return {\n        \"events\": events,\n        \"history\": history,\n        \"client_actions\": client_actions,\n        \"tool_trace\": tool_trace,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 461,
+          "endLine": 515,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_start_beso_job(\n    *,\n    session_id: str | None = None,\n    scan_dir: str | None = None,\n    inp_path: str | None = None,\n    design_checklist_id: str | None = None,\n    task_id: str | None = None,\n    message: str = \"conversation-driven BESO\",\n    auto_start: bool = True,\n    execution_mode: str | None = None,\n    mass_goal_ratio: float | None = None,\n    filter_radius: float | None = None,\n    continuation: dict[str, Any] | None = None,\n    solver_overrides: dict[str, Any] | None = None,\n) -> dict[str, Any]:\n    mode, probe = resolve_execution_mode(execution_mode)\n    if mode == \"preview\":\n        return {\n            \"ok\": False,\n            \"execution_mode\": \"preview\",\n            \"preview\": True,\n            \"error\": \"Preview mode: refusing to start live BESO. Set live solvers or use teaching demo (?demo=beso7-pipeline).\",\n            \"solvers\": probe.to_dict(),\n        }\n    assert_live_or_raise(mode)\n\n    from backend.design_requirements.paths import load_checklist\n    from backend.jobs.manager import jobs\n    from backend.oc4_design_domain_service import read_session_meta, session_dir\n    from backend.replan.checklist_bridge import write_job_context\n    from backend.tools.prism_design_domain import prism_session_dir, read_prism_session_meta\n\n    root = workspace_root()\n    mass = 0.15\n    filt = 2.0\n    opt_base = \"stiffness\"\n    save_every = 1\n    cid = str(design_checklist_id or \"\").strip() or None\n    resolved_inp = inp_path\n    resolved_scan = scan_dir\n    prism_meta: dict[str, Any] = {}\n\n    if session_id:\n        # Prefer OC4 session; fall back to prism session layout\n        sdir = session_dir(root, session_id)\n        if sdir.is_dir():\n            meta = read_session_meta(sdir)\n            cid = cid or str(meta.get(\"design_checklist_id\") or \"\").strip() or None\n            for_beso = sdir / \"03_for_beso.inp\"\n            if not for_beso.is_file():\n                raise FileNotFoundError(\n                    f\"设计域会话缺少 03_for_beso.inp。请先完成载荷划分；\"\n                    f\"不能用无 *CLOAD/*BOUNDARY 的 02_mesh_body.inp 启动拓扑。session={session_id}\"\n                )\n            resolved_inp = str(for_beso)"
+        }
+      ]
+    },
+    {
+      "id": "v8-topology-1",
+      "text": "每个工具接着上一环的文件工作，省下手动导出、转格式，和反复配置输入。",
+      "startSeconds": 29.166666666666668,
+      "endSeconds": 36.05,
+      "assessment": "source_supported_qualitative_benefit",
+      "boundary": "File handoff/tool trace supports avoiding repeated export/configuration. No quantified speedup.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 65,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "    tools: list[StructuredTool] = [\n        _wrap(\"cad_convert\", \"Convert CAD file (step/iges/stl/brep) under workspace.\"),\n        _wrap(\"open_results_viewer\", \"Open topology optimization results viewer for scan_dir.\"),\n        _wrap(\"list_scan_dir\", \"List input files in scan_dir.\"),\n        _wrap(\"cad_skill_help\", \"Return text-to-cad skill documentation.\"),\n        _wrap(\"cad_skill_step\", \"Run build123d STEP generator script.\"),\n        _wrap(\"open_cad_explorer\", \"Open CAD Explorer tab for a STEP file.\"),\n        _wrap(\"cad_drawing_pack\", \"Generate engineering drawing PNG/PDF pack.\"),\n        _wrap(\"export_design_deliverables\", \"Export INP design-space deliverables.\"),\n        _wrap(\"get_design_checklist\", \"Read Phase I design checklist summary.\"),\n        _wrap(\"update_design_checklist\", \"Update Phase I checklist from user reply.\"),\n        _wrap(\"probe_execution\", \"Probe FreeCAD/CalculiX/gmsh and recommend live|preview.\"),\n        _wrap(\"set_execution_mode\", \"Set BESO_EXECUTION_MODE to live or preview.\"),\n        _wrap(\"apply_turbine_preset\", \"Apply 5/10/15/20 MW turbine preset to checklist/session.\"),\n        _wrap(\"start_design_domain_session\", \"Create OC4 design-domain session from IGES upload/path.\"),\n        _wrap(\"run_design_domain_build\", \"Build design domain, optional HITL pause before mesh.\"),\n        _wrap(\"request_human_edit\", \"Pause for human geometry review/edit.\"),\n        _wrap(\"apply_geometry_patch\", \"Replace session geometry and invalidate downstream.\"),\n        _wrap(\"commit_preview_to_session\", \"Commit results-viewer preview into design-domain session.\"),\n        _wrap(\"start_beso_job\", \"Start live CalculiX–BESO job from session or inp.\"),\n        _wrap(\"get_job_status\", \"Poll BESO job status.\"),\n        _wrap(\"run_sizing\", \"Steel sizing / scale optimization for target MW (restruction6).\"),\n        _wrap(\n            \"run_platform_restruction\",\n            \"Fixed-draft horizontal scale (restruction6); pitch≤5°, min t/MW; opens 尺寸时域分析 UI.\",\n        ),\n        _wrap(\n            \"run_zwind_eval\",\n            \"Zwind Fig.2 envelope check; opens 尺寸时域分析 UI with figures.\",\n        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\assistant_graph.py",
+          "line": 145,
+          "endLine": 186,
+          "sha256": "97c26c201828147b5d97a1134968654a1ab0e5f29f9ed3c21e9f578cd88a7742",
+          "excerpt": "    tool_trace = list(state.get(\"tool_trace\") or [])\n    events: list[dict[str, Any]] = []\n\n    ok, summary, extra = _run_assistant_tool(\n        tname,\n        targs,\n        workspace_root=ws,\n        runs_root=runs,\n        client_actions=client_actions,\n        design_checklist_id=state.get(\"design_checklist_id\"),\n    )\n    ex = extra if isinstance(extra, dict) else {}\n    artifacts = _artifacts_from_tool_extra(ex)\n    arg_snip = json.dumps(targs, ensure_ascii=False)[:800]\n    tool_trace.append(\n        {\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"arguments_preview\": arg_snip,\n            \"artifacts\": artifacts,\n        }\n    )\n    events.append(\n        {\n            \"type\": \"tool_done\",\n            \"name\": tname,\n            \"ok\": ok,\n            \"summary\": _sanitize(summary, ws),\n            \"artifacts\": artifacts,\n        }\n    )\n    hist_tool = json.dumps(data, ensure_ascii=False)[:12_000]\n    hist_res = json.dumps({\"ok\": ok, \"summary\": summary, **ex}, ensure_ascii=False)[:24_000]\n    history = list(state.get(\"history\") or [])\n    history.append({\"role\": \"assistant\", \"content\": hist_tool})\n    history.append({\"role\": \"user\", \"content\": f\"工具结果:\\n{hist_res}\"})\n    return {\n        \"events\": events,\n        \"history\": history,\n        \"client_actions\": client_actions,\n        \"tool_trace\": tool_trace,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 461,
+          "endLine": 515,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_start_beso_job(\n    *,\n    session_id: str | None = None,\n    scan_dir: str | None = None,\n    inp_path: str | None = None,\n    design_checklist_id: str | None = None,\n    task_id: str | None = None,\n    message: str = \"conversation-driven BESO\",\n    auto_start: bool = True,\n    execution_mode: str | None = None,\n    mass_goal_ratio: float | None = None,\n    filter_radius: float | None = None,\n    continuation: dict[str, Any] | None = None,\n    solver_overrides: dict[str, Any] | None = None,\n) -> dict[str, Any]:\n    mode, probe = resolve_execution_mode(execution_mode)\n    if mode == \"preview\":\n        return {\n            \"ok\": False,\n            \"execution_mode\": \"preview\",\n            \"preview\": True,\n            \"error\": \"Preview mode: refusing to start live BESO. Set live solvers or use teaching demo (?demo=beso7-pipeline).\",\n            \"solvers\": probe.to_dict(),\n        }\n    assert_live_or_raise(mode)\n\n    from backend.design_requirements.paths import load_checklist\n    from backend.jobs.manager import jobs\n    from backend.oc4_design_domain_service import read_session_meta, session_dir\n    from backend.replan.checklist_bridge import write_job_context\n    from backend.tools.prism_design_domain import prism_session_dir, read_prism_session_meta\n\n    root = workspace_root()\n    mass = 0.15\n    filt = 2.0\n    opt_base = \"stiffness\"\n    save_every = 1\n    cid = str(design_checklist_id or \"\").strip() or None\n    resolved_inp = inp_path\n    resolved_scan = scan_dir\n    prism_meta: dict[str, Any] = {}\n\n    if session_id:\n        # Prefer OC4 session; fall back to prism session layout\n        sdir = session_dir(root, session_id)\n        if sdir.is_dir():\n            meta = read_session_meta(sdir)\n            cid = cid or str(meta.get(\"design_checklist_id\") or \"\").strip() or None\n            for_beso = sdir / \"03_for_beso.inp\"\n            if not for_beso.is_file():\n                raise FileNotFoundError(\n                    f\"设计域会话缺少 03_for_beso.inp。请先完成载荷划分；\"\n                    f\"不能用无 *CLOAD/*BOUNDARY 的 02_mesh_body.inp 启动拓扑。session={session_id}\"\n                )\n            resolved_inp = str(for_beso)"
+        }
+      ]
+    },
+    {
+      "id": "v8-physics-0",
+      "text": "减下来的钢，还要经得起风浪。Zwind 检查平台运动，和系泊缆绳张力。",
+      "startSeconds": 40.266666666666666,
+      "endSeconds": 47.06666666666667,
+      "assessment": "source_plus_saved_response",
+      "boundary": "Zwind adapter/checks and saved native six-DOF/tensions support this. Visual wave not a computed CFD field; this is not the BESO specimen in a newly coupled solve.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 94,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\tools\\zwind_eval.py",
+          "line": 845,
+          "endLine": 906,
+          "sha256": "38e08cda2170c4c63187b4924b6b85b0375fd66192af2601bef0fcc36cb18e3b",
+          "excerpt": "def evaluate_zwind_bundle(*, run_dir: Path | None = None, platform: str = \"ai\", prefer_live: bool | None = None) -> dict[str, Any]:\n    \"\"\"Import paper Fig. 2 reference metrics; never label them native.\"\"\"\n    if not PAPER_METRICS.is_file():\n        raise FileNotFoundError(f\"缺少 Zwind 论文指标: {PAPER_METRICS}. 请确认 third_party/zwind_newmodel 已入库。\")\n    metrics = json.loads(PAPER_METRICS.read_text(encoding=\"utf-8\"))\n    from backend.surrogate.zwind_adapter import attach_dynamic_to_prediction, envelope_from_paper_fig2\n\n    envelope = envelope_from_paper_fig2(platform)\n    highlights = _highlights(metrics, platform)\n    live: dict[str, Any] | None = None\n    mode = \"paper_fig2_import\"\n    if prefer_live if prefer_live is not None else _live_enabled():\n        live = _try_live_campaign(Path(run_dir) if run_dir is not None else None)\n        mode = \"native_campaign_complete\" if live.get(\"native_complete\") else \"reference_fixture_after_native_blocker\"\n    panels: list[dict[str, Any]] = []\n    artifacts: dict[str, str] = {}\n    if run_dir is not None:\n        run_dir = Path(run_dir)\n        run_dir.mkdir(parents=True, exist_ok=True)\n        metrics_path = run_dir / \"zwind_fig2_metrics.json\"\n        env_path = run_dir / \"zwind_envelope.json\"\n        report_path = run_dir / \"zwind_report.json\"\n        metrics_path.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        env_path.write_text(json.dumps(envelope, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        panels = _copy_panels(run_dir)\n        report = {\n            \"mode\": mode,\n            \"evidence_type\": \"reference_fixture\",\n            \"native_complete\": False,\n            \"is_real_candidate\": False,\n            \"bundle\": str(ZWIND_ROOT.relative_to(_REPO)).replace(\"\\\\\", \"/\"),\n            \"platform\": platform,\n            \"highlights\": highlights,\n            \"envelope\": envelope,\n            \"panels\": [{\"label\": p[\"label\"], \"rel\": p[\"rel\"]} for p in panels],\n            \"live\": live,\n            \"source_metrics\": \"third_party/zwind_newmodel/paper_fig2_metrics.json\",\n        }\n        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        artifacts = {\"metrics\": str(metrics_path), \"envelope\": str(env_path), \"report\": str(report_path)}\n    ctx = attach_dynamic_to_prediction({}, envelope)\n    ctx.update({\"evidence_type\": \"reference_fixture\", \"native_complete\": False, \"native_truth_required\": True})\n    return {\n        \"ok\": True,\n        \"mode\": mode,\n        \"evidence_type\": \"reference_fixture\",\n        \"native_complete\": False,\n        \"is_real_candidate\": False,\n        \"native_truth_required\": True,\n        \"bundle_rel\": \"third_party/zwind_newmodel\",\n        \"platform\": platform,\n        \"metrics\": metrics,\n        \"envelope\": envelope,\n        \"highlights\": highlights,\n        \"panels\": panels,\n        \"artifacts\": artifacts,\n        \"live\": live,\n        \"surrogate_context\": ctx,\n        \"pass_checks\": {\n            \"extreme_pitch_within_limit\": highlights.get(\"extreme_pitch_deg\") is not None and highlights.get(\"pitch_limit_extreme_deg\") is not None and float(highlights[\"extreme_pitch_deg\"]) <= float(highlights[\"pitch_limit_extreme_deg\"]),\n            \"mooring_within_limit\": highlights.get(\"max_mooring_tension_kn\") is not None and highlights.get(\"mooring_limit_kn\") is not None and float(highlights[\"max_mooring_tension_kn\"]) <= float(highlights[\"mooring_limit_kn\"]),\n        },"
+        }
+      ]
+    },
+    {
+      "id": "v8-physics-1",
+      "text": "AI Engineer，把响应带回约束，检查方案能不能继续。",
+      "startSeconds": 47.25,
+      "endSeconds": 52.45,
+      "assessment": "source_supported_workflow",
+      "boundary": "Readback/check gates are implemented; do not show all checks passed or declare the saved independent BESO+Zwind pair accepted.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 94,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\tools\\zwind_eval.py",
+          "line": 845,
+          "endLine": 906,
+          "sha256": "38e08cda2170c4c63187b4924b6b85b0375fd66192af2601bef0fcc36cb18e3b",
+          "excerpt": "def evaluate_zwind_bundle(*, run_dir: Path | None = None, platform: str = \"ai\", prefer_live: bool | None = None) -> dict[str, Any]:\n    \"\"\"Import paper Fig. 2 reference metrics; never label them native.\"\"\"\n    if not PAPER_METRICS.is_file():\n        raise FileNotFoundError(f\"缺少 Zwind 论文指标: {PAPER_METRICS}. 请确认 third_party/zwind_newmodel 已入库。\")\n    metrics = json.loads(PAPER_METRICS.read_text(encoding=\"utf-8\"))\n    from backend.surrogate.zwind_adapter import attach_dynamic_to_prediction, envelope_from_paper_fig2\n\n    envelope = envelope_from_paper_fig2(platform)\n    highlights = _highlights(metrics, platform)\n    live: dict[str, Any] | None = None\n    mode = \"paper_fig2_import\"\n    if prefer_live if prefer_live is not None else _live_enabled():\n        live = _try_live_campaign(Path(run_dir) if run_dir is not None else None)\n        mode = \"native_campaign_complete\" if live.get(\"native_complete\") else \"reference_fixture_after_native_blocker\"\n    panels: list[dict[str, Any]] = []\n    artifacts: dict[str, str] = {}\n    if run_dir is not None:\n        run_dir = Path(run_dir)\n        run_dir.mkdir(parents=True, exist_ok=True)\n        metrics_path = run_dir / \"zwind_fig2_metrics.json\"\n        env_path = run_dir / \"zwind_envelope.json\"\n        report_path = run_dir / \"zwind_report.json\"\n        metrics_path.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        env_path.write_text(json.dumps(envelope, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        panels = _copy_panels(run_dir)\n        report = {\n            \"mode\": mode,\n            \"evidence_type\": \"reference_fixture\",\n            \"native_complete\": False,\n            \"is_real_candidate\": False,\n            \"bundle\": str(ZWIND_ROOT.relative_to(_REPO)).replace(\"\\\\\", \"/\"),\n            \"platform\": platform,\n            \"highlights\": highlights,\n            \"envelope\": envelope,\n            \"panels\": [{\"label\": p[\"label\"], \"rel\": p[\"rel\"]} for p in panels],\n            \"live\": live,\n            \"source_metrics\": \"third_party/zwind_newmodel/paper_fig2_metrics.json\",\n        }\n        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        artifacts = {\"metrics\": str(metrics_path), \"envelope\": str(env_path), \"report\": str(report_path)}\n    ctx = attach_dynamic_to_prediction({}, envelope)\n    ctx.update({\"evidence_type\": \"reference_fixture\", \"native_complete\": False, \"native_truth_required\": True})\n    return {\n        \"ok\": True,\n        \"mode\": mode,\n        \"evidence_type\": \"reference_fixture\",\n        \"native_complete\": False,\n        \"is_real_candidate\": False,\n        \"native_truth_required\": True,\n        \"bundle_rel\": \"third_party/zwind_newmodel\",\n        \"platform\": platform,\n        \"metrics\": metrics,\n        \"envelope\": envelope,\n        \"highlights\": highlights,\n        \"panels\": panels,\n        \"artifacts\": artifacts,\n        \"live\": live,\n        \"surrogate_context\": ctx,\n        \"pass_checks\": {\n            \"extreme_pitch_within_limit\": highlights.get(\"extreme_pitch_deg\") is not None and highlights.get(\"pitch_limit_extreme_deg\") is not None and float(highlights[\"extreme_pitch_deg\"]) <= float(highlights[\"pitch_limit_extreme_deg\"]),\n            \"mooring_within_limit\": highlights.get(\"max_mooring_tension_kn\") is not None and highlights.get(\"mooring_limit_kn\") is not None and float(highlights[\"max_mooring_tension_kn\"]) <= float(highlights[\"mooring_limit_kn\"]),\n        },"
+        }
+      ]
+    },
+    {
+      "id": "v8-interaction-0",
+      "text": "计算卡住，日志里有下一步的线索。",
+      "startSeconds": 53.5,
+      "endSeconds": 57.266666666666666,
+      "assessment": "source_plus_saved_log",
+      "boundary": "Recorded residual plateau establishes a diagnosable log clue.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\engine.py",
+          "line": 13,
+          "endLine": 41,
+          "sha256": "61ec0b594b7638bac1af3309cecb3f50a388a5d4c68194dd358d82216cdd25da",
+          "excerpt": "def evaluate_feedback(\n    *,\n    phase: str = \"II\",\n    step: str = \"\",\n    logs: str | list[str] | None = None,\n    metrics: dict[str, Any] | None = None,\n) -> FeedbackTuple:\n    sig = parse_diagnostics(logs, metrics)\n    kind = classify_failure(sig)\n    log_lines: list[str] = []\n    if isinstance(logs, list):\n        log_lines = [str(x) for x in logs]\n    elif logs:\n        log_lines = [str(logs)]\n    m = dict(metrics or {})\n    if sig.mesh_quality_min is not None:\n        m.setdefault(\"mesh_quality_min\", sig.mesh_quality_min)\n    if sig.residual_norm is not None:\n        m.setdefault(\"residual_norm\", sig.residual_norm)\n    if sig.pitch_max_deg is not None:\n        m.setdefault(\"pitch_max\", sig.pitch_max_deg)\n    return FeedbackTuple(\n        phase=phase,\n        step=step,\n        L_p=log_lines,\n        M_p=m,\n        rho_p=1 if kind else 0,\n        signals=sig,\n        failure_kind=kind,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\engine.py",
+          "line": 61,
+          "endLine": 112,
+          "sha256": "61ec0b594b7638bac1af3309cecb3f50a388a5d4c68194dd358d82216cdd25da",
+          "excerpt": "    feedback: FeedbackTuple,\n    *,\n    checklist: Any | None = None,\n    case_id: str | None = None,\n    persist: bool = True,\n) -> ReplanResult:\n    theta_before = dict(theta or {})\n    if feedback.rho_p == 0 or not feedback.failure_kind:\n        return ReplanResult(\n            feedback=feedback,\n            theta_before=theta_before,\n            theta_after=theta_before,\n            message=\"ρ_p=0：无需重规划，可进入下一阶段。\",\n        )\n\n    actions = select_policies(feedback.failure_kind, theta_before, feedback.signals)\n    # Honour checklist retry_policy names when present\n    rp = _retry_policy_from_checklist(checklist)\n    if feedback.failure_kind == \"mesh\" and rp.get(\"on_mesh_fail\") and actions:\n        actions[0].policy = str(rp[\"on_mesh_fail\"])\n    if feedback.failure_kind == \"solver\" and rp.get(\"on_solver_fail\"):\n        for a in actions:\n            if a.policy == \"relax_increment\":\n                a.policy = str(rp[\"on_solver_fail\"])\n                break\n\n    theta_after = apply_actions(theta_before, actions)\n    event = ReplanEvent(\n        event_id=new_event_id(),\n        created_at=ReplanEvent.now_iso(),\n        phase=feedback.phase,\n        case_id=case_id,\n        failure_kind=feedback.failure_kind,\n        signals_before=feedback.signals,\n        actions=actions,\n        theta_before=theta_before,\n        theta_after=theta_after,\n        rho_after=0,\n        outcome={\"status\": \"planned\"},\n    )\n    if persist:\n        save_event(event)\n\n    msg = f\"检测到 {feedback.failure_kind} 失败，已应用 {len(actions)} 项策略并更新 θ。\"\n    return ReplanResult(\n        feedback=feedback,\n        actions=actions,\n        theta_before=theta_before,\n        theta_after=theta_after,\n        event=event,\n        message=msg,\n    )"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\executor.py",
+          "line": 136,
+          "endLine": 185,
+          "sha256": "99f45229b7130d4fa7c1b3adb663159cfcb98e143bd84cb2ba137ca6ed0c2e8d",
+          "excerpt": "            # max_iterations, filter radius and mass target are consumed by the\n            # BESO adapter. Load-step/restart fields remain auditable deferred\n            # hints until a native kernel hook exists.\n            # ``theta_after`` is the complete persisted plan.  Reading only\n            # action patches loses unchanged but intentionally carried values\n            # such as a manually raised mass target on the next retry.\n            planned_theta = dict(event.theta_after or {})\n            overrides = {\n                key: planned_theta[key]\n                for key in (\n                    \"max_iterations\", \"mass_goal_ratio\", \"filter_radius\",\n                    \"load_increment\", \"restart_increment\", \"load_increment_first_n\",\n                )\n                if key in planned_theta\n            }\n            native_overrides = {\n                key: value\n                for key, value in overrides.items()\n                if key in {\"max_iterations\", \"mass_goal_ratio\", \"filter_radius\"}\n            }\n            started = step_start_beso_job(\n                session_id=None,\n                inp_path=str(source_inp_path),\n                scan_dir=str(source_inp_path.parent),\n                design_checklist_id=design_checklist_id,\n                task_id=task_id,\n                auto_start=True,\n                mass_goal_ratio=float(planned_theta[\"mass_goal_ratio\"])\n                if planned_theta.get(\"mass_goal_ratio\") is not None else None,\n                filter_radius=float(planned_theta[\"filter_radius\"])\n                if planned_theta.get(\"filter_radius\") is not None else None,\n                solver_overrides=overrides,\n            )\n            if not started.get(\"ok\"):\n                return _event_result(event, status=\"execution_blocked\", reason=started.get(\"error\"), executor=\"step_start_beso_job\")\n            updated = _record(\n                event,\n                status=\"awaiting_post_check\",\n                executor=\"pipeline.steps.step_start_beso_job\",\n                job_id=started.get(\"job_id\"),\n                solver_overrides=overrides,\n                applied_fields=list(native_overrides),\n                deferred_fields=[k for k in overrides if k not in native_overrides],\n                source_job_id=source_job_id,\n                source_run_dir=str(source_run) if source_run else None,\n                source_input_path=str(source_inp_path),\n                note=\"The new BESO job must complete before rho_pending can be cleared.\",\n            )\n            return {\"ok\": True, \"status\": updated.outcome[\"status\"], \"job\": started, \"event\": updated.model_dump(mode=\"json\")}\n"
+        }
+      ]
+    },
+    {
+      "id": "v8-interaction-1",
+      "text": "系统读出未收敛的原因，调整迭代上限，安排下一轮，并留下修改记录。",
+      "startSeconds": 57.43333333333333,
+      "endSeconds": 64.0,
+      "assessment": "source_plus_saved_replan",
+      "boundary": "Failure classified from logs; max_iterations100→300 persists. Outcome awaiting_post_check, not recovered success. Retained mass0.15→0.25 also changed in saved record.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\engine.py",
+          "line": 13,
+          "endLine": 41,
+          "sha256": "61ec0b594b7638bac1af3309cecb3f50a388a5d4c68194dd358d82216cdd25da",
+          "excerpt": "def evaluate_feedback(\n    *,\n    phase: str = \"II\",\n    step: str = \"\",\n    logs: str | list[str] | None = None,\n    metrics: dict[str, Any] | None = None,\n) -> FeedbackTuple:\n    sig = parse_diagnostics(logs, metrics)\n    kind = classify_failure(sig)\n    log_lines: list[str] = []\n    if isinstance(logs, list):\n        log_lines = [str(x) for x in logs]\n    elif logs:\n        log_lines = [str(logs)]\n    m = dict(metrics or {})\n    if sig.mesh_quality_min is not None:\n        m.setdefault(\"mesh_quality_min\", sig.mesh_quality_min)\n    if sig.residual_norm is not None:\n        m.setdefault(\"residual_norm\", sig.residual_norm)\n    if sig.pitch_max_deg is not None:\n        m.setdefault(\"pitch_max\", sig.pitch_max_deg)\n    return FeedbackTuple(\n        phase=phase,\n        step=step,\n        L_p=log_lines,\n        M_p=m,\n        rho_p=1 if kind else 0,\n        signals=sig,\n        failure_kind=kind,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\engine.py",
+          "line": 61,
+          "endLine": 112,
+          "sha256": "61ec0b594b7638bac1af3309cecb3f50a388a5d4c68194dd358d82216cdd25da",
+          "excerpt": "    feedback: FeedbackTuple,\n    *,\n    checklist: Any | None = None,\n    case_id: str | None = None,\n    persist: bool = True,\n) -> ReplanResult:\n    theta_before = dict(theta or {})\n    if feedback.rho_p == 0 or not feedback.failure_kind:\n        return ReplanResult(\n            feedback=feedback,\n            theta_before=theta_before,\n            theta_after=theta_before,\n            message=\"ρ_p=0：无需重规划，可进入下一阶段。\",\n        )\n\n    actions = select_policies(feedback.failure_kind, theta_before, feedback.signals)\n    # Honour checklist retry_policy names when present\n    rp = _retry_policy_from_checklist(checklist)\n    if feedback.failure_kind == \"mesh\" and rp.get(\"on_mesh_fail\") and actions:\n        actions[0].policy = str(rp[\"on_mesh_fail\"])\n    if feedback.failure_kind == \"solver\" and rp.get(\"on_solver_fail\"):\n        for a in actions:\n            if a.policy == \"relax_increment\":\n                a.policy = str(rp[\"on_solver_fail\"])\n                break\n\n    theta_after = apply_actions(theta_before, actions)\n    event = ReplanEvent(\n        event_id=new_event_id(),\n        created_at=ReplanEvent.now_iso(),\n        phase=feedback.phase,\n        case_id=case_id,\n        failure_kind=feedback.failure_kind,\n        signals_before=feedback.signals,\n        actions=actions,\n        theta_before=theta_before,\n        theta_after=theta_after,\n        rho_after=0,\n        outcome={\"status\": \"planned\"},\n    )\n    if persist:\n        save_event(event)\n\n    msg = f\"检测到 {feedback.failure_kind} 失败，已应用 {len(actions)} 项策略并更新 θ。\"\n    return ReplanResult(\n        feedback=feedback,\n        actions=actions,\n        theta_before=theta_before,\n        theta_after=theta_after,\n        event=event,\n        message=msg,\n    )"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\replan\\executor.py",
+          "line": 136,
+          "endLine": 185,
+          "sha256": "99f45229b7130d4fa7c1b3adb663159cfcb98e143bd84cb2ba137ca6ed0c2e8d",
+          "excerpt": "            # max_iterations, filter radius and mass target are consumed by the\n            # BESO adapter. Load-step/restart fields remain auditable deferred\n            # hints until a native kernel hook exists.\n            # ``theta_after`` is the complete persisted plan.  Reading only\n            # action patches loses unchanged but intentionally carried values\n            # such as a manually raised mass target on the next retry.\n            planned_theta = dict(event.theta_after or {})\n            overrides = {\n                key: planned_theta[key]\n                for key in (\n                    \"max_iterations\", \"mass_goal_ratio\", \"filter_radius\",\n                    \"load_increment\", \"restart_increment\", \"load_increment_first_n\",\n                )\n                if key in planned_theta\n            }\n            native_overrides = {\n                key: value\n                for key, value in overrides.items()\n                if key in {\"max_iterations\", \"mass_goal_ratio\", \"filter_radius\"}\n            }\n            started = step_start_beso_job(\n                session_id=None,\n                inp_path=str(source_inp_path),\n                scan_dir=str(source_inp_path.parent),\n                design_checklist_id=design_checklist_id,\n                task_id=task_id,\n                auto_start=True,\n                mass_goal_ratio=float(planned_theta[\"mass_goal_ratio\"])\n                if planned_theta.get(\"mass_goal_ratio\") is not None else None,\n                filter_radius=float(planned_theta[\"filter_radius\"])\n                if planned_theta.get(\"filter_radius\") is not None else None,\n                solver_overrides=overrides,\n            )\n            if not started.get(\"ok\"):\n                return _event_result(event, status=\"execution_blocked\", reason=started.get(\"error\"), executor=\"step_start_beso_job\")\n            updated = _record(\n                event,\n                status=\"awaiting_post_check\",\n                executor=\"pipeline.steps.step_start_beso_job\",\n                job_id=started.get(\"job_id\"),\n                solver_overrides=overrides,\n                applied_fields=list(native_overrides),\n                deferred_fields=[k for k in overrides if k not in native_overrides],\n                source_job_id=source_job_id,\n                source_run_dir=str(source_run) if source_run else None,\n                source_input_path=str(source_inp_path),\n                note=\"The new BESO job must complete before rho_pending can be cleared.\",\n            )\n            return {\"ok\": True, \"status\": updated.outcome[\"status\"], \"job\": started, \"event\": updated.model_dump(mode=\"json\")}\n"
+        }
+      ]
+    },
+    {
+      "id": "v8-toolchain-0",
+      "text": "需要你判断的地方，可以停下来。比如网格生成前，亲手改梁的截面。",
+      "startSeconds": 65.55,
+      "endSeconds": 71.88333333333334,
+      "assessment": "source_supported_capability",
+      "boundary": "before_mesh HITL gate; editable/replaced CAD. Current saved viewer clip is not live geometry modification; label saved view / flow illustration as appropriate.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 252,
+          "endLine": 274,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "    if pause_before_mesh:\n        merge_session_meta(\n            sdir,\n            {\n                \"hitl_pause\": \"before_mesh\",\n                \"hitl_pause_at\": __import__(\"datetime\").datetime.utcnow().isoformat() + \"Z\",\n            },\n        )\n        out[\"hitl\"] = {\n            \"paused\": True,\n            \"reason\": \"before_mesh\",\n            \"message\": \"Design domain built. Review / edit geometry, then continue with run_mesh or apply_geometry_patch.\",\n        }\n        out[\"client_hint\"] = {\n            \"type\": \"await_user_confirm\",\n            \"session_id\": session_id,\n            \"reason\": \"before_mesh\",\n            \"open_parametric_editor\": True,\n        }\n        return out\n\n    meta = read_session_meta(sdir)\n    cload = meta.get(\"cload_mag\")"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 315,
+          "endLine": 416,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_replace_geometry(\n    *,\n    session_id: str,\n    source_path: str | None = None,\n    file_id: str | None = None,\n    as_design_domain: bool = True,\n    task_id: str | None = None,\n) -> dict[str, Any]:\n    \"\"\"Replace session CAD, invalidate downstream, snapshot user_edit version.\"\"\"\n    from backend.oc4_design_domain_service import (\n        invalidate_oc4_downstream_from_rail_step,\n        merge_session_meta,\n        session_dir,\n        source_cad_path,\n    )\n    from backend.tools.files import resolve_file\n    from backend.versions.store import commit_files, open_process\n\n    root = workspace_root()\n    sdir = session_dir(root, session_id)\n    if not sdir.is_dir():\n        raise FileNotFoundError(f\"session not found: {session_id}\")\n\n    src: Path | None = None\n    if file_id:\n        sf = resolve_file(root, file_id)\n        src = Path(sf.path)\n    elif source_path:\n        p = Path(source_path)\n        if not p.is_file():\n            p = (root / source_path).resolve()\n        if p.is_file():\n            src = p\n    if src is None or not src.is_file():\n        raise FileNotFoundError(\"replace geometry requires valid source_path or file_id\")\n\n    from backend.oc4_design_domain_service import read_session_meta\n\n    tid = str(task_id or read_session_meta(sdir).get(\"task_id\") or session_id)\n    files_to_snap = [\n        str(sdir / name)\n        for name in (\"01_design_domain.step\", \"01_design_domain.igs\", \"00_source.igs\", \"00_source.iges\", \"00_source.step\")\n        if (sdir / name).is_file()\n    ]\n    try:\n        proc = open_process(tid, process_type=\"user_edit\", label=\"geometry replace\")\n        pid = str(proc.get(\"process_id\") or proc.get(\"id\") or \"\")\n        if pid and files_to_snap:\n            commit_files(\n                tid,\n                pid,\n                message=f\"user_edit before replace · {src.name}\",\n                file_paths=files_to_snap,\n                applied_handlers=[\"snapshot_files\"],\n            )\n    except Exception as e:\n        logger.info(\"user_edit snapshot skipped: %s\", e)\n\n    invalidate_oc4_downstream_from_rail_step(sdir, rail_step=1 if as_design_domain else 1)\n    suf = src.suffix.lower()\n    if as_design_domain and suf in {\".step\", \".stp\", \".iges\", \".igs\"}:\n        # write as design domain primary + keep as source\n        if suf in {\".step\", \".stp\"}:\n            dest = sdir / \"01_design_domain.step\"\n            shutil.copy2(src, dest)\n            # also refresh source if missing\n            if not any((sdir / n).is_file() for n in (\"00_source.igs\", \"00_source.iges\", \"00_source.stp\", \"00_source.step\")):\n                shutil.copy2(src, sdir / f\"00_source{suf}\")\n        else:\n            dest = sdir / (\"00_source.igs\" if suf == \".igs\" else \"00_source.iges\")\n            shutil.copy2(src, dest)\n            # clear old design domain so rebuild is required\n            for n in (\"01_design_domain.step\", \"01_design_domain.igs\"):\n                try:\n                    (sdir / n).unlink(missing_ok=True)\n                except OSError:\n                    pass\n    else:\n        # replace source only\n        for n in (\"00_source.igs\", \"00_source.iges\", \"00_source.stp\", \"00_source.step\"):\n            try:\n                (sdir / n).unlink(missing_ok=True)\n            except OSError:\n                pass\n        dest = sdir / f\"00_source{suf if suf else '.igs'}\"\n        shutil.copy2(src, dest)\n\n    merge_session_meta(\n        sdir,\n        {\n            \"design_domain_full_build_done\": False,\n            \"hitl_pause\": None,\n            \"geometry_replaced_from\": str(src),\n            \"user_edit\": True,\n        },\n    )\n    return {\n        \"ok\": True,\n        \"session_id\": session_id,\n        \"replaced_from\": str(src),\n        \"as_design_domain\": as_design_domain,\n        \"next\": \"run_design_domain_build or run_mesh after rebuild\","
+        }
+      ]
+    },
+    {
+      "id": "v8-toolchain-1",
+      "text": "交回任务后，旧网格和旧载荷失效，后续按新模型继续。",
+      "startSeconds": 72.05,
+      "endSeconds": 77.65,
+      "assessment": "source_supported_capability",
+      "boundary": "step_replace_geometry invalidates downstream mesh/load artifacts. Do not imply this entire update was performed in captured UI.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 252,
+          "endLine": 274,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "    if pause_before_mesh:\n        merge_session_meta(\n            sdir,\n            {\n                \"hitl_pause\": \"before_mesh\",\n                \"hitl_pause_at\": __import__(\"datetime\").datetime.utcnow().isoformat() + \"Z\",\n            },\n        )\n        out[\"hitl\"] = {\n            \"paused\": True,\n            \"reason\": \"before_mesh\",\n            \"message\": \"Design domain built. Review / edit geometry, then continue with run_mesh or apply_geometry_patch.\",\n        }\n        out[\"client_hint\"] = {\n            \"type\": \"await_user_confirm\",\n            \"session_id\": session_id,\n            \"reason\": \"before_mesh\",\n            \"open_parametric_editor\": True,\n        }\n        return out\n\n    meta = read_session_meta(sdir)\n    cload = meta.get(\"cload_mag\")"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 315,
+          "endLine": 416,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_replace_geometry(\n    *,\n    session_id: str,\n    source_path: str | None = None,\n    file_id: str | None = None,\n    as_design_domain: bool = True,\n    task_id: str | None = None,\n) -> dict[str, Any]:\n    \"\"\"Replace session CAD, invalidate downstream, snapshot user_edit version.\"\"\"\n    from backend.oc4_design_domain_service import (\n        invalidate_oc4_downstream_from_rail_step,\n        merge_session_meta,\n        session_dir,\n        source_cad_path,\n    )\n    from backend.tools.files import resolve_file\n    from backend.versions.store import commit_files, open_process\n\n    root = workspace_root()\n    sdir = session_dir(root, session_id)\n    if not sdir.is_dir():\n        raise FileNotFoundError(f\"session not found: {session_id}\")\n\n    src: Path | None = None\n    if file_id:\n        sf = resolve_file(root, file_id)\n        src = Path(sf.path)\n    elif source_path:\n        p = Path(source_path)\n        if not p.is_file():\n            p = (root / source_path).resolve()\n        if p.is_file():\n            src = p\n    if src is None or not src.is_file():\n        raise FileNotFoundError(\"replace geometry requires valid source_path or file_id\")\n\n    from backend.oc4_design_domain_service import read_session_meta\n\n    tid = str(task_id or read_session_meta(sdir).get(\"task_id\") or session_id)\n    files_to_snap = [\n        str(sdir / name)\n        for name in (\"01_design_domain.step\", \"01_design_domain.igs\", \"00_source.igs\", \"00_source.iges\", \"00_source.step\")\n        if (sdir / name).is_file()\n    ]\n    try:\n        proc = open_process(tid, process_type=\"user_edit\", label=\"geometry replace\")\n        pid = str(proc.get(\"process_id\") or proc.get(\"id\") or \"\")\n        if pid and files_to_snap:\n            commit_files(\n                tid,\n                pid,\n                message=f\"user_edit before replace · {src.name}\",\n                file_paths=files_to_snap,\n                applied_handlers=[\"snapshot_files\"],\n            )\n    except Exception as e:\n        logger.info(\"user_edit snapshot skipped: %s\", e)\n\n    invalidate_oc4_downstream_from_rail_step(sdir, rail_step=1 if as_design_domain else 1)\n    suf = src.suffix.lower()\n    if as_design_domain and suf in {\".step\", \".stp\", \".iges\", \".igs\"}:\n        # write as design domain primary + keep as source\n        if suf in {\".step\", \".stp\"}:\n            dest = sdir / \"01_design_domain.step\"\n            shutil.copy2(src, dest)\n            # also refresh source if missing\n            if not any((sdir / n).is_file() for n in (\"00_source.igs\", \"00_source.iges\", \"00_source.stp\", \"00_source.step\")):\n                shutil.copy2(src, sdir / f\"00_source{suf}\")\n        else:\n            dest = sdir / (\"00_source.igs\" if suf == \".igs\" else \"00_source.iges\")\n            shutil.copy2(src, dest)\n            # clear old design domain so rebuild is required\n            for n in (\"01_design_domain.step\", \"01_design_domain.igs\"):\n                try:\n                    (sdir / n).unlink(missing_ok=True)\n                except OSError:\n                    pass\n    else:\n        # replace source only\n        for n in (\"00_source.igs\", \"00_source.iges\", \"00_source.stp\", \"00_source.step\"):\n            try:\n                (sdir / n).unlink(missing_ok=True)\n            except OSError:\n                pass\n        dest = sdir / f\"00_source{suf if suf else '.igs'}\"\n        shutil.copy2(src, dest)\n\n    merge_session_meta(\n        sdir,\n        {\n            \"design_domain_full_build_done\": False,\n            \"hitl_pause\": None,\n            \"geometry_replaced_from\": str(src),\n            \"user_edit\": True,\n        },\n    )\n    return {\n        \"ok\": True,\n        \"session_id\": session_id,\n        \"replaced_from\": str(src),\n        \"as_design_domain\": as_design_domain,\n        \"next\": \"run_design_domain_build or run_mesh after rebuild\","
+        }
+      ]
+    },
+    {
+      "id": "v8-proof-0",
+      "text": "最后交付模型、计算输入、日志和报告，每个结果都能回头查。",
+      "startSeconds": 79.55,
+      "endSeconds": 85.4,
+      "assessment": "source_plus_artifacts",
+      "boundary": "Job manifests, logs, input/artifact recovery and exports exist. Generic report not certified construction documentation.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\jobs\\manager.py",
+          "line": 262,
+          "endLine": 316,
+          "sha256": "079fd3b444c2b83be21af8f6f70d3563273a68c4f306050189e6379023c35050",
+          "excerpt": "        manifest: dict[str, Any] = {}\n        mf = run_dir / \"task_manifest.json\"\n        if mf.is_file():\n            try:\n                raw = json.loads(mf.read_text(encoding=\"utf-8\"))\n                if isinstance(raw, dict):\n                    manifest = raw\n            except (OSError, json.JSONDecodeError):\n                manifest = {}\n        inp_path: Optional[str] = None\n        if manifest.get(\"primary_inp\"):\n            inp_path = str(manifest[\"primary_inp\"])\n        if not inp_path:\n            inps = sorted([p for p in run_dir.glob(\"*.inp\") if p.is_file()], key=lambda p: p.name)\n            if inps:\n                inp_path = inps[0].name\n        mass_goal_ratio, filter_radius, optimization_base, save_every = self._parse_beso_conf_numbers(run_dir)\n        logs = self._read_logs_from_run_dir(run_dir)\n        status = self._infer_status_from_disk(run_dir, logs)\n        artifacts = self._artifacts_from_disk(job_id, run_dir)\n        latest_vtk = self._latest_vtk_url(job_id, run_dir)\n        gen_files = [n for n in (\n            \"task_manifest.json\",\n            \"input_router.py\",\n            \"strategy.py\",\n            \"beso_conf.py\",\n            \"run_generated.py\",\n        ) if (run_dir / n).is_file()]\n        selected: dict[str, Any] | None = None\n        if manifest.get(\"primary_inp\") is not None:\n            selected = {\n                \"primary_inp\": manifest.get(\"primary_inp\"),\n                \"aux_inps\": manifest.get(\"aux_inps\") or {},\n                \"step_mapping\": manifest.get(\"step_mapping\") or {},\n            }\n        try:\n            created_at = run_dir.stat().st_mtime\n        except OSError:\n            created_at = time.time()\n        return Job(\n            id=job_id,\n            created_at=float(created_at),\n            status=status,\n            user_message=\"\",\n            inp_path=inp_path,\n            mass_goal_ratio=mass_goal_ratio,\n            filter_radius=filter_radius,\n            optimization_base=optimization_base,\n            save_every=save_every,\n            run_dir=str(run_dir),\n            logs=logs,\n            latest_vtk_url=latest_vtk,\n            artifacts=artifacts,\n            generated_code_files=gen_files,\n            selected_inputs=selected,"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\tools\\inp_design_deliverables.py",
+          "line": 197,
+          "endLine": 222,
+          "sha256": "6b98b332eac45df61a0170bd30f661bf4740de62833138e7338a951387e8aa4f",
+          "excerpt": "    manifest = {\n        \"pack_id\": pack_id,\n        \"source_path\": rel_src,\n        \"elset\": elset_name,\n        \"node_count\": len(node_ids),\n        \"element_count\": len(elem_rows),\n        \"triangle_count\": int(len(tris)),\n        \"generated_at\": datetime.now(timezone.utc).isoformat(),\n        \"files\": files,\n    }\n    (out_dir / \"manifest.json\").write_text(\n        __import__(\"json\").dumps(manifest, ensure_ascii=False, indent=2),\n        encoding=\"utf-8\",\n    )\n\n    return {\n        \"ok\": True,\n        \"pack_id\": pack_id,\n        \"source_path\": rel_src,\n        \"elset\": elset_name,\n        \"base_url\": f\"/runs/{DELIVERABLES_SUBDIR}/{pack_id}\",\n        \"files\": files,\n        \"manifest_url\": f\"/runs/{DELIVERABLES_SUBDIR}/{pack_id}/manifest.json\",\n    }\n\n"
+        }
+      ]
+    },
+    {
+      "id": "v8-proof-1",
+      "text": "论文案例的单位功率用钢量减少约百分之八点一，强度和运动响应也要一起检查。",
+      "startSeconds": 85.56666666666666,
+      "endSeconds": 92.7,
+      "assessment": "manuscript_case",
+      "boundary": "278→255.5t/MW =8.093525%≈8.1%; separately attribute to manuscript, not current native replay. Strength/motion are checks not guarantee.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\agents\\tools.py",
+          "line": 94,
+          "endLine": 103,
+          "sha256": "1d0a41ec07a346c7aebd16c0daeeec4788eb90ba5f68a057fb7aacacc1e7e622",
+          "excerpt": "        ),\n        _wrap(\"run_validation\", \"Run Automated Reviewer validation scoring.\"),\n        _wrap(\"evaluate_halt\", \"Evaluate S≥85 halt gate.\"),\n        _wrap(\n            \"parse_prism_design_brief\",\n            \"Parse Chinese/English prompt into prism design-domain parameters (center ring load + three bottom arcs).\",\n        ),\n        _wrap(\"start_prism_session\", \"Create prism design-domain session under runs/_prism_sessions/.\"),\n        _wrap(\"build_prism_design_domain\", \"FreeCAD-build equilateral prism + dig-outs + load ring.\"),\n        _wrap(\"mesh_prism_design_domain\", \"Gmsh mesh prism session to 03_for_beso.inp (skip OC4 loads).\"),"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\tools\\zwind_eval.py",
+          "line": 845,
+          "endLine": 906,
+          "sha256": "38e08cda2170c4c63187b4924b6b85b0375fd66192af2601bef0fcc36cb18e3b",
+          "excerpt": "def evaluate_zwind_bundle(*, run_dir: Path | None = None, platform: str = \"ai\", prefer_live: bool | None = None) -> dict[str, Any]:\n    \"\"\"Import paper Fig. 2 reference metrics; never label them native.\"\"\"\n    if not PAPER_METRICS.is_file():\n        raise FileNotFoundError(f\"缺少 Zwind 论文指标: {PAPER_METRICS}. 请确认 third_party/zwind_newmodel 已入库。\")\n    metrics = json.loads(PAPER_METRICS.read_text(encoding=\"utf-8\"))\n    from backend.surrogate.zwind_adapter import attach_dynamic_to_prediction, envelope_from_paper_fig2\n\n    envelope = envelope_from_paper_fig2(platform)\n    highlights = _highlights(metrics, platform)\n    live: dict[str, Any] | None = None\n    mode = \"paper_fig2_import\"\n    if prefer_live if prefer_live is not None else _live_enabled():\n        live = _try_live_campaign(Path(run_dir) if run_dir is not None else None)\n        mode = \"native_campaign_complete\" if live.get(\"native_complete\") else \"reference_fixture_after_native_blocker\"\n    panels: list[dict[str, Any]] = []\n    artifacts: dict[str, str] = {}\n    if run_dir is not None:\n        run_dir = Path(run_dir)\n        run_dir.mkdir(parents=True, exist_ok=True)\n        metrics_path = run_dir / \"zwind_fig2_metrics.json\"\n        env_path = run_dir / \"zwind_envelope.json\"\n        report_path = run_dir / \"zwind_report.json\"\n        metrics_path.write_text(json.dumps(metrics, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        env_path.write_text(json.dumps(envelope, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        panels = _copy_panels(run_dir)\n        report = {\n            \"mode\": mode,\n            \"evidence_type\": \"reference_fixture\",\n            \"native_complete\": False,\n            \"is_real_candidate\": False,\n            \"bundle\": str(ZWIND_ROOT.relative_to(_REPO)).replace(\"\\\\\", \"/\"),\n            \"platform\": platform,\n            \"highlights\": highlights,\n            \"envelope\": envelope,\n            \"panels\": [{\"label\": p[\"label\"], \"rel\": p[\"rel\"]} for p in panels],\n            \"live\": live,\n            \"source_metrics\": \"third_party/zwind_newmodel/paper_fig2_metrics.json\",\n        }\n        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding=\"utf-8\")\n        artifacts = {\"metrics\": str(metrics_path), \"envelope\": str(env_path), \"report\": str(report_path)}\n    ctx = attach_dynamic_to_prediction({}, envelope)\n    ctx.update({\"evidence_type\": \"reference_fixture\", \"native_complete\": False, \"native_truth_required\": True})\n    return {\n        \"ok\": True,\n        \"mode\": mode,\n        \"evidence_type\": \"reference_fixture\",\n        \"native_complete\": False,\n        \"is_real_candidate\": False,\n        \"native_truth_required\": True,\n        \"bundle_rel\": \"third_party/zwind_newmodel\",\n        \"platform\": platform,\n        \"metrics\": metrics,\n        \"envelope\": envelope,\n        \"highlights\": highlights,\n        \"panels\": panels,\n        \"artifacts\": artifacts,\n        \"live\": live,\n        \"surrogate_context\": ctx,\n        \"pass_checks\": {\n            \"extreme_pitch_within_limit\": highlights.get(\"extreme_pitch_deg\") is not None and highlights.get(\"pitch_limit_extreme_deg\") is not None and float(highlights[\"extreme_pitch_deg\"]) <= float(highlights[\"pitch_limit_extreme_deg\"]),\n            \"mooring_within_limit\": highlights.get(\"max_mooring_tension_kn\") is not None and highlights.get(\"mooring_limit_kn\") is not None and float(highlights[\"max_mooring_tension_kn\"]) <= float(highlights[\"mooring_limit_kn\"]),\n        },"
+        }
+      ]
+    },
+    {
+      "id": "v8-close-0",
+      "text": "把重复操作交给工具，把时间用在设计判断上。",
+      "startSeconds": 95.4,
+      "endSeconds": 99.65,
+      "assessment": "qualitative_product_positioning",
+      "boundary": "Reasonable benefit grounded in tool handoff and human gates; no measured saving asserted.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 252,
+          "endLine": 274,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "    if pause_before_mesh:\n        merge_session_meta(\n            sdir,\n            {\n                \"hitl_pause\": \"before_mesh\",\n                \"hitl_pause_at\": __import__(\"datetime\").datetime.utcnow().isoformat() + \"Z\",\n            },\n        )\n        out[\"hitl\"] = {\n            \"paused\": True,\n            \"reason\": \"before_mesh\",\n            \"message\": \"Design domain built. Review / edit geometry, then continue with run_mesh or apply_geometry_patch.\",\n        }\n        out[\"client_hint\"] = {\n            \"type\": \"await_user_confirm\",\n            \"session_id\": session_id,\n            \"reason\": \"before_mesh\",\n            \"open_parametric_editor\": True,\n        }\n        return out\n\n    meta = read_session_meta(sdir)\n    cload = meta.get(\"cload_mag\")"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\pipeline\\steps.py",
+          "line": 315,
+          "endLine": 416,
+          "sha256": "7b070ac4eb6114f22d3ff9a075170e4459a2f633c4b7a0b63dab73cf26a700a2",
+          "excerpt": "def step_replace_geometry(\n    *,\n    session_id: str,\n    source_path: str | None = None,\n    file_id: str | None = None,\n    as_design_domain: bool = True,\n    task_id: str | None = None,\n) -> dict[str, Any]:\n    \"\"\"Replace session CAD, invalidate downstream, snapshot user_edit version.\"\"\"\n    from backend.oc4_design_domain_service import (\n        invalidate_oc4_downstream_from_rail_step,\n        merge_session_meta,\n        session_dir,\n        source_cad_path,\n    )\n    from backend.tools.files import resolve_file\n    from backend.versions.store import commit_files, open_process\n\n    root = workspace_root()\n    sdir = session_dir(root, session_id)\n    if not sdir.is_dir():\n        raise FileNotFoundError(f\"session not found: {session_id}\")\n\n    src: Path | None = None\n    if file_id:\n        sf = resolve_file(root, file_id)\n        src = Path(sf.path)\n    elif source_path:\n        p = Path(source_path)\n        if not p.is_file():\n            p = (root / source_path).resolve()\n        if p.is_file():\n            src = p\n    if src is None or not src.is_file():\n        raise FileNotFoundError(\"replace geometry requires valid source_path or file_id\")\n\n    from backend.oc4_design_domain_service import read_session_meta\n\n    tid = str(task_id or read_session_meta(sdir).get(\"task_id\") or session_id)\n    files_to_snap = [\n        str(sdir / name)\n        for name in (\"01_design_domain.step\", \"01_design_domain.igs\", \"00_source.igs\", \"00_source.iges\", \"00_source.step\")\n        if (sdir / name).is_file()\n    ]\n    try:\n        proc = open_process(tid, process_type=\"user_edit\", label=\"geometry replace\")\n        pid = str(proc.get(\"process_id\") or proc.get(\"id\") or \"\")\n        if pid and files_to_snap:\n            commit_files(\n                tid,\n                pid,\n                message=f\"user_edit before replace · {src.name}\",\n                file_paths=files_to_snap,\n                applied_handlers=[\"snapshot_files\"],\n            )\n    except Exception as e:\n        logger.info(\"user_edit snapshot skipped: %s\", e)\n\n    invalidate_oc4_downstream_from_rail_step(sdir, rail_step=1 if as_design_domain else 1)\n    suf = src.suffix.lower()\n    if as_design_domain and suf in {\".step\", \".stp\", \".iges\", \".igs\"}:\n        # write as design domain primary + keep as source\n        if suf in {\".step\", \".stp\"}:\n            dest = sdir / \"01_design_domain.step\"\n            shutil.copy2(src, dest)\n            # also refresh source if missing\n            if not any((sdir / n).is_file() for n in (\"00_source.igs\", \"00_source.iges\", \"00_source.stp\", \"00_source.step\")):\n                shutil.copy2(src, sdir / f\"00_source{suf}\")\n        else:\n            dest = sdir / (\"00_source.igs\" if suf == \".igs\" else \"00_source.iges\")\n            shutil.copy2(src, dest)\n            # clear old design domain so rebuild is required\n            for n in (\"01_design_domain.step\", \"01_design_domain.igs\"):\n                try:\n                    (sdir / n).unlink(missing_ok=True)\n                except OSError:\n                    pass\n    else:\n        # replace source only\n        for n in (\"00_source.igs\", \"00_source.iges\", \"00_source.stp\", \"00_source.step\"):\n            try:\n                (sdir / n).unlink(missing_ok=True)\n            except OSError:\n                pass\n        dest = sdir / f\"00_source{suf if suf else '.igs'}\"\n        shutil.copy2(src, dest)\n\n    merge_session_meta(\n        sdir,\n        {\n            \"design_domain_full_build_done\": False,\n            \"hitl_pause\": None,\n            \"geometry_replaced_from\": str(src),\n            \"user_edit\": True,\n        },\n    )\n    return {\n        \"ok\": True,\n        \"session_id\": session_id,\n        \"replaced_from\": str(src),\n        \"as_design_domain\": as_design_domain,\n        \"next\": \"run_design_domain_build or run_mesh after rebuild\","
+        }
+      ]
+    },
+    {
+      "id": "v8-close-1",
+      "text": "AI Engineer。从你的工程目标，开始下一项任务。",
+      "startSeconds": 99.81666666666666,
+      "endSeconds": 104.21666666666667,
+      "assessment": "call_to_action",
+      "boundary": "CTA, no new factual performance claim.",
+      "evidence": [
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+          "line": 51,
+          "endLine": 68,
+          "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768",
+          "excerpt": "@router.post(\"/parse\")\ndef parse_design_requirements(body: ParseDesignRequirementsRequest) -> dict:\n    try:\n        checklist = parse_design_checklist(body.text)\n    except ValueError as e:\n        raise HTTPException(status_code=400, detail=str(e)) from e\n    except Exception as e:\n        raise HTTPException(status_code=500, detail=f\"设计清单解析失败: {e}\") from e\n\n    md = checklist_to_markdown(checklist)\n    out_dir = None\n    if body.persist:\n        out_dir = str(save_checklist(checklist, markdown=md))\n\n    payload = _enrich_response(checklist, markdown=md)\n    payload[\"out_dir\"] = out_dir\n    return payload\n"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\routes\\design_requirements_api.py",
+          "line": 70,
+          "endLine": 105,
+          "sha256": "3c4cd52678afc777f8bfcff40ee5012b6ba923497e9895435b93e6f38e721768",
+          "excerpt": "@router.post(\"/{checklist_id}/clarify\")\ndef clarify_design_requirements(checklist_id: str, body: ClarifyDesignRequirementsRequest) -> dict:\n    cl = load_checklist(checklist_id)\n    if cl is None:\n        raise HTTPException(status_code=404, detail=\"设计清单不存在\")\n    mode = body.mode or \"clarify\"\n    pending_before = build_pending_clarifications(cl.meta.source_text, cl)\n    pending_ids = [p[\"field_id\"] for p in pending_before] if mode == \"clarify\" else []\n    try:\n        updated, _, remaining, updated_fields = apply_clarification_reply(\n            cl,\n            body.reply,\n            pending_field_ids=pending_ids,\n            mode=mode,\n        )\n    except Exception as e:\n        raise HTTPException(status_code=400, detail=f\"澄清回复解析失败: {e}\") from e\n    if mode == \"edit\" and not updated_fields:\n        raise HTTPException(\n            status_code=400,\n            detail=\"未识别到可更新的参数。请写明数值，例如：钢耗改为 280 t/MW；水深 55 m；静倾 4 度\",\n        )\n    md = checklist_to_markdown(updated)\n    save_checklist(updated, markdown=md)\n    payload = _enrich_response(updated, markdown=md)\n    payload[\"clarification_reply\"] = body.reply\n    payload[\"mode\"] = mode\n    payload[\"updated_fields\"] = updated_fields\n    payload[\"remaining_pending_count\"] = len(remaining)\n    return payload\n\n\n@router.get(\"/{checklist_id}\")\ndef get_design_requirements(checklist_id: str) -> dict:\n    cl = load_checklist(checklist_id)\n    if cl is None:"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\design_requirements\\nl_parser.py",
+          "line": 42,
+          "endLine": 57,
+          "sha256": "3b9456c6e4840d3ded0d54d56b6a29e3b5ebba423daba76f4b17c931f9726f6d",
+          "excerpt": "def parse_design_checklist(\n    text: str,\n    *,\n    qwen: QwenClient | None = None,\n    checklist_id: str | None = None,\n) -> DesignChecklist:\n    t = (text or \"\").strip()\n    if not t:\n        raise ValueError(\"设计需求文本为空\")\n\n    cid = checklist_id or uuid.uuid4().hex\n    base = parse_rule_fallback(t, checklist_id=cid)\n\n    qwen = qwen or QwenClient()\n    if not qwen.api_key:\n        return base"
+        },
+        {
+          "path": "D:\\python_project\\beso_ai\\backend\\design_requirements\\clarifications.py",
+          "line": 186,
+          "endLine": 209,
+          "sha256": "d3e8b43a92183e55ec37fc40648a98d9064121b4d571e3dc4953921e502f10ec",
+          "excerpt": "def apply_clarification_reply(\n    checklist: DesignChecklist,\n    reply: str,\n    *,\n    pending_field_ids: list[str] | None = None,\n    mode: str = \"clarify\",\n) -> tuple[DesignChecklist, list[str], list[dict[str, Any]], list[dict[str, Any]]]:\n    \"\"\"\n    Merge user clarification or post-lock edit.\n\n    ``mode``:\n    - ``clarify``: fill pending fields (numeric / 用默认); also apply any explicit\n      numeric updates found in the reply (including already-set fields).\n    - ``edit``: only apply explicit numeric updates; never auto-fill defaults for\n      unspecified pending fields.\n\n    Returns: (checklist, assumptions, remaining_pending, updated_field_records)\n    \"\"\"\n    text = (reply or \"\").strip()\n    mode_norm = str(mode or \"clarify\").strip().lower()\n    if mode_norm not in (\"clarify\", \"edit\"):\n        mode_norm = \"clarify\"\n\n    pending_ids = list(pending_field_ids or [])"
+        }
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "id": "hero",
+      "start": 0,
+      "end": 11,
+      "heading": [
+        "让设计往前走",
+        "少些重复操作"
+      ],
+      "action": "一座真实比例风机，镜头接近塔底；工程目标“少用钢”变成同一张需求输入面的内容。",
+      "benefit": "开场先说工程师为什么想用：改模型后软件不必逐个重新衔接。",
+      "heroObject": "同一风机与需求输入面"
+    },
+    {
+      "id": "brief",
+      "start": 11,
+      "end": 23,
+      "heading": [
+        "改需求",
+        "更新同一份清单"
+      ],
+      "action": "真实输入框中仅改两个数；45→55m和300→280t/MW从原字段原位变化。",
+      "benefit": "需求变化留在同一checklist版本链。",
+      "heroObject": "同一输入面与清单"
+    },
+    {
+      "id": "topology",
+      "start": 23,
+      "end": 40,
+      "heading": [
+        "文件接力",
+        "工具继续"
+      ],
+      "action": "相同文件锚点交给几何/网格/BESO；真实保存迭代只作为一段独立证据。",
+      "benefit": "减少重复导出、转换和配置。",
+      "heroObject": "同一模型、文件包及BESO证据"
+    },
+    {
+      "id": "physics",
+      "start": 40,
+      "end": 53,
+      "heading": [
+        "响应回读",
+        "约束复查"
+      ],
+      "action": "从平台纵荡沿真实fairlead到缆绳；一个响应点与数字同步，只一次切换关注物理量。",
+      "benefit": "结果能回到方案的限制条件。",
+      "heroObject": "平台与单根当前张力缆绳"
+    },
+    {
+      "id": "interaction",
+      "start": 53,
+      "end": 65,
+      "heading": [
+        "计算卡住",
+        "下一步有依据"
+      ],
+      "action": "日志同一行残差标明问题；迭代100→300；任务停在等待复查。",
+      "benefit": "失败不丢失，修改有依据。",
+      "heroObject": "真实日志与保存replan"
+    },
+    {
+      "id": "toolchain",
+      "start": 65,
+      "end": 79,
+      "heading": [
+        "你来判断",
+        "后续重新生成"
+      ],
+      "action": "镜头聚焦可编辑梁的局部；人工介入；旧网格/旧载荷变为失效状态，新文件沿同一路线继续。",
+      "benefit": "控制权与后续版本一致性。",
+      "heroObject": "平台局部构件与流程状态"
+    },
+    {
+      "id": "proof",
+      "start": 79,
+      "end": 95,
+      "heading": [
+        "模型与依据",
+        "一起带走"
+      ],
+      "action": "真实交付目录保留四类文件；随后独立论文案例的278→255.5t/MW逐字、原位呈现。",
+      "benefit": "别人能复查，不只带走渲染图。",
+      "heroObject": "同一交付数据包与单个案例数值"
+    },
+    {
+      "id": "close",
+      "start": 95,
+      "end": 105,
+      "heading": [
+        "AI Engineer"
+      ],
+      "action": "报告中的模型轮廓与完整平台match cut，完整风机至少保留到103.5秒，最后才离镜。",
+      "benefit": "把时间用在设计判断上。",
+      "heroObject": "回到片头同一风机"
+    }
+  ],
+  "googleReferences": [
+    {
+      "url": "https://gemini.google/overview/gemini-in-chrome/",
+      "title": "Gemini in Chrome — AI assistance, right in your browser",
+      "verified": "2026-10-12, CUA actual official page + rendered screenshots + video DOM playback metadata",
+      "observed": "White hero, large two-line title, single blue product accent, pale-blue rounded demo stage. One actual30.6s browser demo visible and playing; sampled ~1.63s logo state and ~27.17s sleeping-bag prompt/side panel state. Not a complete timeline review or audio review.",
+      "apply": "Benefit first, specific one-step prompt/action/outcome, browser context retained, one input field magnified; human control after usefulness.",
+      "headings": [
+        "Get the gist, instantly",
+        "Compare options with ease",
+        "Automate your tasks with auto browse",
+        "Your web, your control"
+      ]
+    },
+    {
+      "url": "https://gemini.google/overview/video-generation/",
+      "title": "Gemini Omni – Create & edit videos as easy as having a conversation",
+      "verified": "2026-10-12, CUA actual page/DOM/screenshot",
+      "observed": "Speak it. See it. Share it. Large headline and one action CTA. Video items initially reported unavailable; not reviewed as played footage.",
+      "apply": "Short concrete verbs and visible examples, not technical noun pile-ups."
+    }
+  ],
+  "minimalOptionalVoiceChanges": [],
+  "manuscriptComparison": {
+    "category": "manuscript_case",
+    "capacityMW": 20,
+    "aiSteelT": 5110,
+    "tuqiangSteelT": 5560,
+    "aiSteelTperMW": 255.5,
+    "tuqiangSteelTperMW": 278,
+    "reductionPercent": 8.093525179856115,
+    "source": {
+      "path": "D:\\python_project\\beso_ai\\rules\\ai_vs_tuqiang_comparison.yaml",
+      "exists": true,
+      "bytes": 3479,
+      "sha256": "f9439ce938553a0883dd3cc94a8a14a6d34f527ce2c007029b442ea1f268980f",
+      "line": 25,
+      "claim": "paper economic comparison, distinct from displayed static case"
+    },
+    "boundary": "Not current product live output or v4 coupled-load certification"
+  },
+  "bridgeGates": [
+    "Exact labels/numerics/logs rendered natively over concept footage; no generated result data.",
+    "First/last frame from actual same model/camera anchors. Compare silhouette and3columns/3innerlegs/3radials; count drift or detached structures rejects bridge.",
+    "One web plane/object per transition; object exits frame before removal; no stacked browsers and no double model.",
+    "At least18–24overlapframes at each end; source duration native playback, no54×shortcut; sequential frame QA checks focal target, masks and occlusion."
+  ],
+  "externalReview": {
+    "status": "completed_and_locally_reviewed",
+    "requestedModel": "claude-opus-5-5",
+    "returnedModel": "claude-opus-5-5",
+    "stopReason": "end_turn",
+    "elapsedMs": 105277,
+    "responseSHA256": "99ba4361a615b3feb147a4dfbf2b3a3810b36301c5bd14d85e556b278fd10b26",
+    "runPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\beso_ai_research_2026\\work\\opus-runs\\v13-product-story-20261012-161533-9565347c",
+    "scope": "Bounded story/visual direction critique; no generated code; source/public not edited.",
+    "adopt": [
+      "One hero object per beat on a continuous camera corridor.",
+      "Show concrete requirement edits and file handoff rather than abstract registered-tool names.",
+      "Differentiate saved replay, edited checklist and awaiting-post-check by consistent small status treatment."
+    ],
+    "reject": [
+      "Do not adopt mandatory23–40s rewrite from 调用 to 登记: less precise and no necessity; tool dispatch exists.",
+      "Do not adopt79–95s rewrite calling 图强号案例 as if the optimized value belonged to the baseline; current manuscript-case attribution is clearer. New proposal also exceeds verified length.",
+      "Do not require fresh narration53–65s; native overlay can show awaiting_post_check and full saved patch, while current prose accurately says arranged next round, not succeeded.",
+      "Do not implement universal≤2pxendpoint UI gate across changing3D camera: endpoint preservation must use each actual anchor, not same pixel position throughout."
+    ],
+    "remaining": "Generated bridges and final visual integration still require separate QA."
+  }
+}

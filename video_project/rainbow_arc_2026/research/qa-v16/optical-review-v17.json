@@ -1,0 +1,24 @@
+{
+  "version": "V17",
+  "scope": "independent optical review of src/optics.ts and WorldV10.ts",
+  "passed": true,
+  "frames": [
+    "f09000: dispersion path, white incoming segment, separate internal paths",
+    "f11900: one internal reflection and outgoing branch",
+    "f13000: exit direction after first reflection",
+    "f29400: two internal reflections for secondary bow",
+    "f30000: macro arcs follow primary/secondary angular geometry"
+  ],
+  "checks": [
+    "check-optics-v16.mjs passed: 2786 paths, max residual 9.44e-15",
+    "primary extremum angles red→violet 42.428→40.703° (red outside, violet inside)",
+    "secondary extremum angles red→violet 50.260→53.375° (violet outside, reversed order)",
+    "entry/exit Snell, internal reflection and sphere contacts independently verified",
+    "primary and secondary path arrays retain 1 and 2 internal reflections",
+    "renderer uses commonImpact for white incident primary beam and exact wavelength-specific contacts in SpectralRibbonV15",
+    "transmitted branch is a visibly labelled partial-transmission cue at first internal hit and does not replace principal ray",
+    "frame review f09000/f11900/f13000/f29400 confirms entry→reflection→exit ordering",
+    "no optical source edits made"
+  ],
+  "checkedUTC": "2026-10-12T19:11:43.7375966Z"
+}

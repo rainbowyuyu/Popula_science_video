@@ -1,0 +1,75 @@
+{
+  "version": "V18",
+  "representation": "Authored artistic volumetric covariance splats sampled from a three-dimensional Blender scene and rendered with mesh ground/tree support; not a trained photographic reconstruction",
+  "notPhotogrammetry": true,
+  "physicalAuthority": false,
+  "checks": [
+    {
+      "label": "Metadata byte/count and finite values",
+      "pass": true,
+      "detail": {
+        "count": 419573
+      }
+    },
+    {
+      "label": "Positive anisotropic covariance and normalized rotations",
+      "pass": true,
+      "detail": {
+        "maxQuaternionResidual": 1.7881393432617188e-07
+      }
+    },
+    {
+      "label": "Linear colours and alpha bounded",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic depth permutation frame0",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic depth permutation frame60",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic depth permutation frame120",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic depth permutation frame180",
+      "pass": true
+    },
+    {
+      "label": "Complete deterministic depth permutation frame240",
+      "pass": true
+    },
+    {
+      "label": "Absolute frame60 reproduces after reverse/random seek",
+      "pass": true
+    }
+  ],
+  "snapshots": [
+    {
+      "frame": 0,
+      "sortSHA256": "6fb569f4cd0ea6b4beda0f5dff69c7e96ef8f027dfe1b857d038580d5a0bcb08"
+    },
+    {
+      "frame": 60,
+      "sortSHA256": "f59605a74eb2d837ea9d2b2b160b6d293b9a4b6c78d90da9159fade66e6f0e80"
+    },
+    {
+      "frame": 120,
+      "sortSHA256": "e9ff809716d33e28d88b2e5eb0df907a459d7829479528338ae9b3f862585e6b"
+    },
+    {
+      "frame": 180,
+      "sortSHA256": "628506ae32526c604da18c82d74d6c8d19ff35730784e54f4a9cef35eafc090d"
+    },
+    {
+      "frame": 240,
+      "sortSHA256": "a3ddac6d35935579a015064ee339d9cd607c4a8bc7c41579626a42bd127d973b"
+    }
+  ],
+  "count": 419573,
+  "sourceGLBSHA256": "1bd8142c9ce91f41d72eb4f333e1e7deef6dc5f3bfafb51b65a1524f68c76fb3",
+  "binarySHA256": "2061c3276a87611e9aa4b3fdffbe3cbad7d6cdf2462890b70d038a60af58cce0"
+}

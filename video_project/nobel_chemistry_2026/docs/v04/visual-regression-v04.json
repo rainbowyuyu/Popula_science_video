@@ -1,0 +1,7784 @@
+{
+  "status": "pass",
+  "totalCases": 966,
+  "totalDrawCalls": 424578,
+  "quantities": {
+    "probabilities": {
+      "RR": 0.5625,
+      "RS": 0.375,
+      "SS": 0.0625,
+      "sum": 1
+    },
+    "activeRatio": 9,
+    "productR": 0.9,
+    "productS": 0.1,
+    "ligandEE": 0.5,
+    "productEE": 0.8,
+    "trialCount": 37,
+    "rightTrials": 18,
+    "leftTrials": 19,
+    "initialEE": 5e-7,
+    "initialRightFraction": 0.50000025,
+    "thirdRoundEEBound": 0.995,
+    "thirdRoundMajorityBound": 0.9975,
+    "reactionTetrahedralCosines": [
+      -0.33333333333333337,
+      -0.33333333333333337,
+      -0.33333333333333337,
+      -0.33333333333333337,
+      -0.33333333333333337,
+      -0.33333333333333337
+    ]
+  },
+  "chirality": {
+    "originalSignedVolume6": 3.0792014356780055,
+    "mirrorSignedVolume6": -3.0792014356780055,
+    "alignedSignedVolume6": -3.079201435678004,
+    "alignedSubstituentDistances": [
+      3.1401849173675503e-16,
+      3.1401849173675503e-16,
+      1.6329931618554523,
+      1.6329931618554523
+    ],
+    "atomCount": 12,
+    "bondCount": 11,
+    "bondOrderSum": 12,
+    "allCoordinatesFinite": true
+  },
+  "sourceSha256": {
+    "ChemistryMechanismsV04.ts": "2a48c1bbcfa77595aa33f6f5f6625b0fc85c209b4550211a5cacbba2f905a2be",
+    "CinematicMechanismsV04.ts": "570dd9e7c616eb56f8f18ce12f7424724a946d5b3c2498041a289ed4c5b90a92",
+    "OpusChemistryV04.ts": "b0ce596e285c11557706c19960d3527c74c87bc6a6626b41df96e95896358da9"
+  },
+  "scope": "Actual scene calls under parent alpha 0/0.25/1; finite geometry and Canvas state isolation, exact model probabilities and mirror invariants. Rendered layout/motion must still be checked.",
+  "cases": [
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.005,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.025,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.06,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.1,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.15,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.2,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.25,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 672,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.3,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 674,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.35,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 674,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.4,
+      "calls": 218,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 676,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.45,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 676,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 571,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.5,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 571,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.55,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 577,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.6,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 579,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.65,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 579,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.7,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 579,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.75,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 579,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.8,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 577,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.85,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 579,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.9,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 0.95,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 678,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 637,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 76,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 401,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 1509,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 894,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 390,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 190,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 196,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 88,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 202,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 104,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 573,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0,
+      "progress": 1,
+      "calls": 216,
+      "maxAlpha": 0,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.005,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.025,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.06,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.1,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.15,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.2,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.25,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 672,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.3,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 674,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.35,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 674,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.4,
+      "calls": 218,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 676,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.45,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 676,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 571,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.5,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 571,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.55,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 577,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.6,
+      "calls": 216,
+      "maxAlpha": 0.2240000000000001,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 579,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.65,
+      "calls": 216,
+      "maxAlpha": 0.14368750000000002,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 579,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.7,
+      "calls": 216,
+      "maxAlpha": 0.1959999999999999,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 579,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.75,
+      "calls": 216,
+      "maxAlpha": 0.2481875,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 579,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.8,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 577,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.85,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 579,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.9,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 0.95,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 678,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 637,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 76,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 401,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 1509,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 894,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 390,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 190,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 196,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 88,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 202,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 104,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 573,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 0.25,
+      "progress": 1,
+      "calls": 216,
+      "maxAlpha": 0.25,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.005,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.025,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.06,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.1,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.15,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.2,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.25,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 672,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.3,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 674,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.35,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 674,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.4,
+      "calls": 218,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 676,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.45,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 676,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 571,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.5,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 571,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.55,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 577,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.6,
+      "calls": 216,
+      "maxAlpha": 0.8960000000000004,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 579,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.65,
+      "calls": 216,
+      "maxAlpha": 0.5747500000000001,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 579,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.7,
+      "calls": 216,
+      "maxAlpha": 0.7839999999999996,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 579,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.75,
+      "calls": 216,
+      "maxAlpha": 0.99275,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 579,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.8,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 577,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.85,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 579,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.9,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 0.95,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "kaganV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 678,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "nonlinearV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 637,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "soaiV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 76,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "feedbackV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 401,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "amplificationV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 1509,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "chanceV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 894,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "toolsV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 390,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "catalystV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 190,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "frankV02",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 196,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "award",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 88,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "life",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 202,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "coda",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 104,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawChiralPair",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 573,
+      "maxAlpha": 1,
+      "balanced": true
+    },
+    {
+      "scene": "drawCrystalSorting",
+      "parentAlpha": 1,
+      "progress": 1,
+      "calls": 216,
+      "maxAlpha": 1,
+      "balanced": true
+    }
+  ]
+}

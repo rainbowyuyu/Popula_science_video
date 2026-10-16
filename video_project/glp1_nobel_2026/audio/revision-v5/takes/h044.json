@@ -1,0 +1,83 @@
+{
+  "id": "h044",
+  "text": "严重的肌肉损伤很少见。但若明显肌无力，或尿色变深，要尽快就医，排查肌肉、肝脏等问题。",
+  "ttsText": "严重的肌肉损伤很少见。但若明显肌无力，或尿色变深，要尽快就医，排查肌肉、肝脏等问题。",
+  "signature": "363059b2cc9bdce9ca3d78580a5304f0db8348f6e618e8731a143cc1b8cc0768",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h044-363059b2cc9b-27214a13cf.wav",
+  "processed": "audio/revision-v5/voice/h044.wav",
+  "rawDuration": 9.04,
+  "duration": 9.04,
+  "sampleRate": 48000,
+  "sha256": "a45b37f0f3a4a4fdea35122c310bb99378a5d8d9edd556ac554658ff20b61130",
+  "rawSHA256": "cf8c256ef5f5081ebba0bd7e39cc6f0d395458cfbc5414d2f6eb9313be5b7959",
+  "seed": 656493075,
+  "batchIds": [
+    "h042",
+    "h043",
+    "h044"
+  ],
+  "batchKey": "27214a13cf2dfaef1cf6c15ce144fc00da227d091a73835cc56d1b6bea8d5a2a",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -97.26129661605812,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "cf8c256ef5f5081ebba0bd7e39cc6f0d395458cfbc5414d2f6eb9313be5b7959",
+    "outputSha256": "a45b37f0f3a4a4fdea35122c310bb99378a5d8d9edd556ac554658ff20b61130",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.87865596940593,
+    "input": {
+      "seconds": 9.04,
+      "peakDb": -7.51724551127519,
+      "activeRmsDb": -22.653241271533986,
+      "quietFrameP10Db": -63.03082577269851
+    },
+    "output": {
+      "seconds": 9.04,
+      "peakDb": -5.087310324508598,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.40580733491462
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

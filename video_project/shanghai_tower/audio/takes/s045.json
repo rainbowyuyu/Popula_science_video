@@ -1,0 +1,80 @@
+{
+  "id": "s045",
+  "text": "当玻璃重新合拢，那些粗壮的柱子、巨大的钢桁架，连同六米厚的底盘，又都藏了起来。",
+  "ttsText": "当玻璃重新合拢，那些粗壮的柱子、巨大的钢架，连同六米厚的底盘，又都藏了起来。",
+  "signature": "e1256a4458d0ab4aa4da9a3d44af5cff7cb4949c9c129ca6885a511796a92c03",
+  "raw": "audio/raw/s045-e1256a4458.wav",
+  "processed": "public/voice/s045.wav",
+  "rawDuration": 6.8,
+  "duration": 7.04,
+  "sha256": "461574c13c955f8bcb504bc6ebb4e3826f1dd6d385dabe559d1c9efdcb067a83",
+  "seed": 3777325636,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s045",
+    "s048"
+  ],
+  "rawEndpointDB": -96.99282051717093,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "d1d51533270067753e7a5658c4d2d0aa3e47f268ae798e805f52b92bfe9258a3",
+    "outputSha256": "461574c13c955f8bcb504bc6ebb4e3826f1dd6d385dabe559d1c9efdcb067a83",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.6761882561858847,
+    "input": {
+      "seconds": 7.04,
+      "peakDb": -7.6367020600709274,
+      "activeRmsDb": -22.48678178804211,
+      "quietFrameP10Db": -63.55396351291212
+    },
+    "output": {
+      "seconds": 7.04,
+      "peakDb": -4.89119026775832,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -63.47562576244953
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "a6efc19b5dc7844f208188d4e040636c1298d7ffa08f9b61e1d0a18efd13e4dd"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s045.wav"
+}

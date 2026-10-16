@@ -1,0 +1,187 @@
+{
+  "id": "v4c-proof-1",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "text": "强度、运动和寄泊逐项检查。模型、图纸、日志和报告，一起成为可追溯的交付。",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "elapsedSeconds": 1.75,
+  "events": [
+    {
+      "event_id": "event_I4Q9QkmBs8BvidfuUjxzr",
+      "type": "session.created",
+      "session": {
+        "object": "realtime.session",
+        "mode": "server_commit",
+        "model": "qwen3-tts-flash-realtime",
+        "voice": "Cherry",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "id": "sess_OgiNvYNDBrtbhTo55A6Zd"
+      }
+    },
+    {
+      "event_id": "event_CgXHLqcbwcFexXVaFrDy3",
+      "type": "session.updated",
+      "session": {
+        "id": "sess_OgiNvYNDBrtbhTo55A6Zd",
+        "object": "realtime.session",
+        "model": "qwen3-tts-flash-realtime",
+        "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。",
+        "voice": "Ethan",
+        "mode": "server_commit",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "speech_rate": 1.04,
+        "language_type": "auto",
+        "optimize_instructions": false
+      }
+    },
+    {
+      "event_id": "event_YbYjEhXKcWj3KQJxSZTMB",
+      "type": "response.created",
+      "response": {
+        "id": "resp_DWW3YCuvK9suGP2quW4Ka",
+        "object": "realtime.response",
+        "conversation_id": "",
+        "status": "in_progress",
+        "voice": "Ethan",
+        "output": []
+      }
+    },
+    {
+      "event_id": "event_UDDDn9v7gGnJlcRuLHWbj",
+      "type": "response.output_item.added",
+      "response_id": "resp_DWW3YCuvK9suGP2quW4Ka",
+      "output_index": 0,
+      "item": {
+        "id": "item_ZEvEYuOdeVhBLYtYrgZAx",
+        "object": "realtime.item",
+        "type": "message",
+        "status": "in_progress",
+        "role": "assistant",
+        "content": []
+      }
+    },
+    {
+      "event_id": "event_CsZO4dJqjGafdb5lYnYcz",
+      "type": "response.content_part.added",
+      "response_id": "resp_DWW3YCuvK9suGP2quW4Ka",
+      "item_id": "item_ZEvEYuOdeVhBLYtYrgZAx",
+      "output_index": 0,
+      "content_index": 0,
+      "part": {
+        "type": "audio",
+        "text": ""
+      }
+    },
+    {
+      "event_id": "event_UzDKPipDh2MQxCMThs7LV",
+      "type": "response.audio.done",
+      "response_id": "resp_DWW3YCuvK9suGP2quW4Ka",
+      "item_id": "item_ZEvEYuOdeVhBLYtYrgZAx",
+      "output_index": 0,
+      "content_index": 0
+    },
+    {
+      "event_id": "event_Cs3AyrITUuzcwUJKU9mFH",
+      "type": "response.content_part.done",
+      "response_id": "resp_DWW3YCuvK9suGP2quW4Ka",
+      "item_id": "item_ZEvEYuOdeVhBLYtYrgZAx",
+      "output_index": 0,
+      "content_index": 0,
+      "part": {
+        "type": "audio",
+        "text": ""
+      }
+    },
+    {
+      "event_id": "event_B8noMHALGY58lnfukRBp4",
+      "type": "response.output_item.done",
+      "response_id": "resp_DWW3YCuvK9suGP2quW4Ka",
+      "output_index": 0,
+      "item": {
+        "id": "item_ZEvEYuOdeVhBLYtYrgZAx",
+        "object": "realtime.item",
+        "type": "message",
+        "status": "completed",
+        "role": "assistant",
+        "output": {
+          "usage": {
+            "input_tokens": 26,
+            "output_tokens": 81,
+            "total_tokens": 107,
+            "input_tokens_details": {
+              "text_tokens": 26
+            },
+            "output_tokens_details": {
+              "audio_tokens": 81,
+              "text_tokens": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "event_id": "event_Gxaewaxuj1uc2mVnhNIUT",
+      "type": "response.done",
+      "response": {
+        "id": "resp_DWW3YCuvK9suGP2quW4Ka",
+        "object": "realtime.response",
+        "conversation_id": "",
+        "status": "completed",
+        "modalities": [
+          "text",
+          "audio"
+        ],
+        "voice": "Ethan",
+        "output": [
+          {
+            "id": "item_ZEvEYuOdeVhBLYtYrgZAx",
+            "object": "realtime.item",
+            "type": "message",
+            "status": "completed",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "audio",
+                "transcript": ""
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "characters": 66,
+          "total_tokens": 107,
+          "input_tokens": 26,
+          "output_tokens": 81,
+          "input_tokens_details": {
+            "text_tokens": 26
+          },
+          "output_tokens_details": {
+            "text_tokens": 0,
+            "audio_tokens": 81
+          }
+        }
+      }
+    },
+    {
+      "event_id": "event_M1jUoRFPhcvlZO8LIQXnV",
+      "type": "session.finished"
+    },
+    {
+      "type": "transport.close",
+      "code": null,
+      "message": null
+    }
+  ],
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "personalReferenceUploaded": false,
+  "voiceSource": "Provider public voice; clone runtime unavailable"
+}

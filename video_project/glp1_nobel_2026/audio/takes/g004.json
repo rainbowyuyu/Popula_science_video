@@ -1,0 +1,69 @@
+{
+  "id": "g004",
+  "text": "米饭经过消化，变成可以吸收的糖；食物中的脂肪，也要拆开、重新包装，才能送往需要它的地方。",
+  "ttsText": "米饭经过消化，变成可以吸收的糖；食物中的脂肪，也要拆开、重新包装，才能送往需要它的地方。",
+  "signature": "910e6d9a22bba0526b4c491f1ce539b6cb781bc14ddca5d031e6647f7b69a5dc",
+  "raw": "audio/raw/g004-910e6d9a22.wav",
+  "processed": "public/voice/g004.wav",
+  "rawDuration": 8.4,
+  "duration": 8.4,
+  "sha256": "89e1ac910ab50192178014e7f7d8f8fa371d3c3fdd2e13767736dcf5bedfd68f",
+  "seed": 3461485832,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g001",
+    "g002",
+    "g003",
+    "g004"
+  ],
+  "rawEndpointDB": -91.14632822057615,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "e78c5502c500bba8f99268c05a52658650c97ec504b23041182492cba28738e7",
+    "outputSha256": "89e1ac910ab50192178014e7f7d8f8fa371d3c3fdd2e13767736dcf5bedfd68f",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.4359853627100136,
+    "input": {
+      "seconds": 8.4,
+      "peakDb": -5.489941509305675,
+      "activeRmsDb": -23.30130696920978,
+      "quietFrameP10Db": -63.188019776709936
+    },
+    "output": {
+      "seconds": 8.4,
+      "peakDb": -2.7817314120075842,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.255791363895526
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

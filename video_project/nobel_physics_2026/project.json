@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "nobel_physics_2026",
+  "title": "诺贝尔物理学奖：一束蓝光穿过南极冰",
+  "category": "science-awards",
+  "status": "source-library",
+  "currentVersion": "V12 source/delivery",
+  "workbench": {
+    "title": "诺贝尔物理学奖专题",
+    "seriesId": "rainbow-science",
+    "episode": 10,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/index-physics2026-v12.tsx",
+    "scripts/render_physics2026_v12.mjs"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "audio": "python scripts/build_audio.py",
+        "audio:v03": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v03_user_tts.py --generate",
+        "audio:v03:mix": "D:/python_project/tts/.venv/Scripts/python.exe scripts/build_audio_v03_user_tts.py",
+        "render": "node scripts/render_physics2026_v01.mjs",
+        "stills": "node scripts/render_physics2026_v01.mjs stills",
+        "render:v02": "node scripts/render_physics2026_v02_chunked.mjs",
+        "render:v09": "node scripts/render_physics2026_v09.mjs",
+        "stills:v09": "node scripts/render_physics2026_v09.mjs stills",
+        "render:v10": "node scripts/render_physics2026_v10.mjs",
+        "stills:v10": "node scripts/render_physics2026_v10.mjs stills",
+        "render:v02:single": "node scripts/render_physics2026_v02.mjs",
+        "stills:v02": "node scripts/render_physics2026_v02.mjs stills",
+        "qa:v02": "python scripts/qa_physics2026_v02.py",
+        "qa": "python scripts/qa_physics2026_v01.py --mode full",
+        "render:v11": "node scripts/render_physics2026_v11.mjs",
+        "stills:v11": "node scripts/render_physics2026_v11.mjs stills",
+        "render:v12": "node scripts/render_physics2026_v12.mjs",
+        "stills:v12": "node scripts/render_physics2026_v12.mjs stills"
+      },
+      "lockfile": false
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "delivery/physics2026_v12/2026诺贝尔物理学奖_一束蓝光穿过南极冰_v12_完整重绘_1080p.mp4"
+    ],
+    "covers": [
+      "delivery/physics2026_cover_v02/covers/physics2026-cover-16x9.jpg",
+      "delivery/physics2026_cover_v02/covers/physics2026-cover-3x4.jpg",
+      "delivery/physics2026_cover_v02/covers/physics2026-cover-4x3.jpg",
+      "delivery/physics2026_cover_v02/covers/physics2026-cover-9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable"
+  ],
+  "notes": [
+    "README 当前版本称 V11，但 V12 入口与交付目录实际存在。"
+  ],
+  "originalMetadata": {}
+}

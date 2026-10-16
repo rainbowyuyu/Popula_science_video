@@ -1,0 +1,2340 @@
+{
+  "scope": "Every frame of actual v8 Film stateAt; actual GLB bounds expanded by an upper bound on displayed native displacement. No rendered-pixel/aesthetic claim.",
+  "provisional": false,
+  "diagnostic": false,
+  "timingProblems": [],
+  "provenance": [
+    {
+      "file": "src/episode3v8/World.ts",
+      "sha256": "585ab01bea7e3eb8145dc0c56b7b0a68fb1b51cf8b9f827d268508e925536cf4"
+    },
+    {
+      "file": "src/episode3v8/ForceStory.ts",
+      "sha256": "e5b15b1718c25b17dcadcad83d06e17cf05490e843f2cccb265ae55ffa972843"
+    },
+    {
+      "file": "src/episode3v8/StressField.ts",
+      "sha256": "97aa08fbd401d220349b6c0194b76dbc47b0cdab9f3c24e371f613b21b599f7c"
+    },
+    {
+      "file": "src/episode3v8/SurfaceSampling.ts",
+      "sha256": "f5d5566d22e0466c1472268b8e4664f474a14c943df0f71130cc9bbdb846d49c"
+    },
+    {
+      "file": "src/episode3v8/force-evidence.json",
+      "sha256": "c21cad1da9265b0c3456e9895d9dff9797fc0e411819449fadf07c62746434d4"
+    },
+    {
+      "file": "src/episode3v8/Film.tsx",
+      "sha256": "f0711e12b75c1190a10da5d15a6c125b1b7e44fe90c53da314b5423029c80284"
+    },
+    {
+      "file": "src/episode3v8/Annotations.tsx",
+      "sha256": "ab5bc8ecf71d9581bfc55077d22fa5ffb72ea90d27c7fccb64540f34d598ba54"
+    },
+    {
+      "file": "src/episode3v8/annotations.json",
+      "sha256": "55fd86438d73f00e5435b5b30edadeb6fe0cc605c185867c255b77d3bc259354"
+    },
+    {
+      "file": "src/episode3v8/timeline.json",
+      "sha256": "52bb66266f26d549d34be865b7a2d184564a914cbe95210d1f2640daf5bbe8e8"
+    },
+    {
+      "file": "research/episode3v8/story.json",
+      "sha256": "000b8a9c6b14589b370080337f591717b7ef9cafae768f18e8f3b677c6d74909"
+    },
+    {
+      "file": "public/episode3v7/models/pavilion-manifest.json",
+      "sha256": "84bfcdc036c9eb13ee57f8931bed31440bba06d2ece3187d032fdd6732634488"
+    },
+    {
+      "file": "public/episode3v7/models/pavilion-v7.glb",
+      "sha256": "60154242cbd467edf577c76d01d0b8f08e40423c9db975c9fbd5e36194245f2d"
+    },
+    {
+      "file": "public/episode3v7/physics/dynamic-response.json",
+      "sha256": "0c4dc02c867c430d26e896a2befcf8877e7f50af68838623ddfa1b68e14758af"
+    },
+    {
+      "file": "public/episode3v7/physics/static-cases.json",
+      "sha256": "28c9e4699d0c2de3fc8992bc76ce3988e509f97ba865fce446c68bae05c3d7de"
+    }
+  ],
+  "totalFrames": 9764,
+  "fps": 30,
+  "sceneRanges": [
+    {
+      "id": "intro",
+      "title": "一座亭子，怎样站住",
+      "start": 0,
+      "end": 767
+    },
+    {
+      "id": "straight",
+      "title": "先留一条装进去的路",
+      "start": 767,
+      "end": 2004
+    },
+    {
+      "id": "frame",
+      "title": "两榀，合成一个空间",
+      "start": 2004,
+      "end": 2909
+    },
+    {
+      "id": "bracket",
+      "title": "柱头，怎样接住屋檐",
+      "start": 2909,
+      "end": 3867
+    },
+    {
+      "id": "hip",
+      "title": "四个角，托起一个尖顶",
+      "start": 3867,
+      "end": 4918
+    },
+    {
+      "id": "gravity",
+      "title": "重量，沿着木头往下走",
+      "start": 4918,
+      "end": 6995
+    },
+    {
+      "id": "wind",
+      "title": "侧面来的力，走哪条路",
+      "start": 6995,
+      "end": 8780
+    },
+    {
+      "id": "return",
+      "title": "每一块，都有它的位置",
+      "start": 8780,
+      "end": 9404
+    },
+    {
+      "id": "references",
+      "title": "图纸、模型与工况",
+      "start": 9404,
+      "end": 9764
+    }
+  ],
+  "hipDemonstration": {
+    "line": 1,
+    "offsetPolicy": "actual World.getPartAssemblyQ(partID,state,pose)"
+  },
+  "geometryChecks": [
+    {
+      "part": "PLINTH",
+      "maxBoundError": 6.745866080274793e-8
+    },
+    {
+      "part": "STONE_FL",
+      "maxBoundError": 1.618131635138059e-8
+    },
+    {
+      "part": "POST_FL",
+      "maxBoundError": 1.1444402244282315e-7
+    },
+    {
+      "part": "STONE_FR",
+      "maxBoundError": 1.618131635138059e-8
+    },
+    {
+      "part": "POST_FR",
+      "maxBoundError": 1.1444402244282315e-7
+    },
+    {
+      "part": "STONE_BL",
+      "maxBoundError": 1.618131635138059e-8
+    },
+    {
+      "part": "POST_BL",
+      "maxBoundError": 1.1444402244282315e-7
+    },
+    {
+      "part": "STONE_BR",
+      "maxBoundError": 1.618131635138059e-8
+    },
+    {
+      "part": "POST_BR",
+      "maxBoundError": 1.1444402244282315e-7
+    },
+    {
+      "part": "CROSS_FRONT",
+      "maxBoundError": 1.5508665785129403e-8
+    },
+    {
+      "part": "CROSS_BACK",
+      "maxBoundError": 1.5508665785129403e-8
+    },
+    {
+      "part": "LONG_LEFT",
+      "maxBoundError": 8.026180974355555e-8
+    },
+    {
+      "part": "LONG_RIGHT",
+      "maxBoundError": 8.026180974355555e-8
+    },
+    {
+      "part": "BRACE_X_FL",
+      "maxBoundError": 1.0209437310410745e-7
+    },
+    {
+      "part": "BRACE_Y_FL",
+      "maxBoundError": 4.5453330110301656e-7
+    },
+    {
+      "part": "BRACE_X_FR",
+      "maxBoundError": 8.46503298887427e-8
+    },
+    {
+      "part": "BRACE_Y_FR",
+      "maxBoundError": 4.5453330110301656e-7
+    },
+    {
+      "part": "BRACE_X_BL",
+      "maxBoundError": 1.0209437310410745e-7
+    },
+    {
+      "part": "BRACE_Y_BL",
+      "maxBoundError": 3.969793848556605e-7
+    },
+    {
+      "part": "BRACE_X_BR",
+      "maxBoundError": 8.46503298887427e-8
+    },
+    {
+      "part": "BRACE_Y_BR",
+      "maxBoundError": 3.969793848556605e-7
+    },
+    {
+      "part": "PEG_X_FL",
+      "maxBoundError": 1.3595682828479365e-8
+    },
+    {
+      "part": "PEG_Y_FL",
+      "maxBoundError": 8.456384935580317e-8
+    },
+    {
+      "part": "PEG_X_FR",
+      "maxBoundError": 1.3595682828479365e-8
+    },
+    {
+      "part": "PEG_Y_FR",
+      "maxBoundError": 8.456384935580317e-8
+    },
+    {
+      "part": "PEG_X_BL",
+      "maxBoundError": 1.3595682828479365e-8
+    },
+    {
+      "part": "PEG_Y_BL",
+      "maxBoundError": 8.456384935580317e-8
+    },
+    {
+      "part": "PEG_X_BR",
+      "maxBoundError": 1.3595682828479365e-8
+    },
+    {
+      "part": "PEG_Y_BR",
+      "maxBoundError": 8.456384935580317e-8
+    },
+    {
+      "part": "DOU_FL",
+      "maxBoundError": 5.965826484176825e-8
+    },
+    {
+      "part": "GONG_X_FL",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "GONG_Y_FL",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "CAP_FL",
+      "maxBoundError": 5.96999360306562e-8
+    },
+    {
+      "part": "DOU_FR",
+      "maxBoundError": 5.965826484176825e-8
+    },
+    {
+      "part": "GONG_X_FR",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "GONG_Y_FR",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "CAP_FR",
+      "maxBoundError": 5.96999360306562e-8
+    },
+    {
+      "part": "DOU_BL",
+      "maxBoundError": 5.965826484176825e-8
+    },
+    {
+      "part": "GONG_X_BL",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "GONG_Y_BL",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "CAP_BL",
+      "maxBoundError": 5.96999360306562e-8
+    },
+    {
+      "part": "DOU_BR",
+      "maxBoundError": 5.965826484176825e-8
+    },
+    {
+      "part": "GONG_X_BR",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "GONG_Y_BR",
+      "maxBoundError": 5.9023836299573974e-8
+    },
+    {
+      "part": "CAP_BR",
+      "maxBoundError": 5.96999360306562e-8
+    },
+    {
+      "part": "PURLIN_X_FRONT",
+      "maxBoundError": 1.8126501626169753e-7
+    },
+    {
+      "part": "PURLIN_X_BACK",
+      "maxBoundError": 1.8126501626169753e-7
+    },
+    {
+      "part": "PURLIN_Y_LEFT",
+      "maxBoundError": 1.8126501626169753e-7
+    },
+    {
+      "part": "PURLIN_Y_RIGHT",
+      "maxBoundError": 1.8126501626169753e-7
+    },
+    {
+      "part": "SUPPORT_X",
+      "maxBoundError": 1.751780918546973e-7
+    },
+    {
+      "part": "SUPPORT_Y",
+      "maxBoundError": 1.751780918546973e-7
+    },
+    {
+      "part": "CENTRE_POST",
+      "maxBoundError": 1.5880690937929983e-7
+    },
+    {
+      "part": "HUB",
+      "maxBoundError": 2.1302886785046313e-7
+    },
+    {
+      "part": "HIP_FL",
+      "maxBoundError": 4.903941711709431e-7
+    },
+    {
+      "part": "HIP_FR",
+      "maxBoundError": 5.898386419334779e-7
+    },
+    {
+      "part": "HIP_BL",
+      "maxBoundError": 6.367732957359706e-7
+    },
+    {
+      "part": "HIP_BR",
+      "maxBoundError": 4.903941711709431e-7
+    },
+    {
+      "part": "RAF_0_00",
+      "maxBoundError": 1.1374340464704782e-7
+    },
+    {
+      "part": "RAF_0_01",
+      "maxBoundError": 1.4976136634505734e-7
+    },
+    {
+      "part": "RAF_0_02",
+      "maxBoundError": 2.0521088065636767e-7
+    },
+    {
+      "part": "RAF_0_03",
+      "maxBoundError": 2.2560798713902457e-7
+    },
+    {
+      "part": "RAF_0_04",
+      "maxBoundError": 1.562936991516072e-7
+    },
+    {
+      "part": "RAF_0_05",
+      "maxBoundError": 1.2697643092510557e-7
+    },
+    {
+      "part": "RAF_0_06",
+      "maxBoundError": 1.5640276994263092e-7
+    },
+    {
+      "part": "RAF_0_07",
+      "maxBoundError": 2.2656026297351615e-7
+    },
+    {
+      "part": "RAF_0_08",
+      "maxBoundError": 2.042112458369331e-7
+    },
+    {
+      "part": "RAF_0_09",
+      "maxBoundError": 1.4792825975387874e-7
+    },
+    {
+      "part": "RAF_0_10",
+      "maxBoundError": 1.0915301447431863e-7
+    },
+    {
+      "part": "RAF_1_00",
+      "maxBoundError": 1.0915301447431863e-7
+    },
+    {
+      "part": "RAF_1_01",
+      "maxBoundError": 1.4792825975387874e-7
+    },
+    {
+      "part": "RAF_1_02",
+      "maxBoundError": 2.042112458369331e-7
+    },
+    {
+      "part": "RAF_1_03",
+      "maxBoundError": 2.2656026297351615e-7
+    },
+    {
+      "part": "RAF_1_04",
+      "maxBoundError": 1.5640276994263092e-7
+    },
+    {
+      "part": "RAF_1_05",
+      "maxBoundError": 1.2697643092510557e-7
+    },
+    {
+      "part": "RAF_1_06",
+      "maxBoundError": 1.562936991516072e-7
+    },
+    {
+      "part": "RAF_1_07",
+      "maxBoundError": 2.2560798713902457e-7
+    },
+    {
+      "part": "RAF_1_08",
+      "maxBoundError": 2.0521088065636767e-7
+    },
+    {
+      "part": "RAF_1_09",
+      "maxBoundError": 1.4976136634505734e-7
+    },
+    {
+      "part": "RAF_1_10",
+      "maxBoundError": 1.1374340464704782e-7
+    },
+    {
+      "part": "RAF_2_00",
+      "maxBoundError": 1.2296482980042308e-7
+    },
+    {
+      "part": "RAF_2_01",
+      "maxBoundError": 1.5006773746973286e-7
+    },
+    {
+      "part": "RAF_2_02",
+      "maxBoundError": 1.9997868238316505e-7
+    },
+    {
+      "part": "RAF_2_03",
+      "maxBoundError": 2.2094444637907445e-7
+    },
+    {
+      "part": "RAF_2_04",
+      "maxBoundError": 1.5253889558090663e-7
+    },
+    {
+      "part": "RAF_2_05",
+      "maxBoundError": 1.1524254010090573e-7
+    },
+    {
+      "part": "RAF_2_06",
+      "maxBoundError": 1.5265064924944528e-7
+    },
+    {
+      "part": "RAF_2_07",
+      "maxBoundError": 2.219167350234367e-7
+    },
+    {
+      "part": "RAF_2_08",
+      "maxBoundError": 1.9895276020758586e-7
+    },
+    {
+      "part": "RAF_2_09",
+      "maxBoundError": 1.4823841949223964e-7
+    },
+    {
+      "part": "RAF_2_10",
+      "maxBoundError": 1.1873149470960001e-7
+    },
+    {
+      "part": "RAF_3_00",
+      "maxBoundError": 1.187314947096e-7
+    },
+    {
+      "part": "RAF_3_01",
+      "maxBoundError": 1.4823841949223964e-7
+    },
+    {
+      "part": "RAF_3_02",
+      "maxBoundError": 1.9895276020758586e-7
+    },
+    {
+      "part": "RAF_3_03",
+      "maxBoundError": 2.219167350234367e-7
+    },
+    {
+      "part": "RAF_3_04",
+      "maxBoundError": 1.5265064924944528e-7
+    },
+    {
+      "part": "RAF_3_05",
+      "maxBoundError": 1.1524254010090573e-7
+    },
+    {
+      "part": "RAF_3_06",
+      "maxBoundError": 1.5253889558090663e-7
+    },
+    {
+      "part": "RAF_3_07",
+      "maxBoundError": 2.2094444637907445e-7
+    },
+    {
+      "part": "RAF_3_08",
+      "maxBoundError": 1.9997868238316507e-7
+    },
+    {
+      "part": "RAF_3_09",
+      "maxBoundError": 1.5006773746973286e-7
+    },
+    {
+      "part": "RAF_3_10",
+      "maxBoundError": 1.2296482980042308e-7
+    },
+    {
+      "part": "DECK_FRONT",
+      "maxBoundError": 1.0765965130104614e-7
+    },
+    {
+      "part": "TILE_FRONT",
+      "maxBoundError": 2.203792570466617e-7
+    },
+    {
+      "part": "DECK_RIGHT",
+      "maxBoundError": 1.0765965130104614e-7
+    },
+    {
+      "part": "TILE_RIGHT",
+      "maxBoundError": 2.203792570466617e-7
+    },
+    {
+      "part": "DECK_BACK",
+      "maxBoundError": 1.0213224167133747e-7
+    },
+    {
+      "part": "TILE_BACK",
+      "maxBoundError": 2.1773243030607136e-7
+    },
+    {
+      "part": "DECK_LEFT",
+      "maxBoundError": 1.0213224167133747e-7
+    },
+    {
+      "part": "TILE_LEFT",
+      "maxBoundError": 2.1773243030607136e-7
+    },
+    {
+      "part": "FINIAL",
+      "maxBoundError": 1.7266016020830426e-7
+    },
+    {
+      "part": "RAIL_BACK_0",
+      "maxBoundError": 5.982421878916097e-8
+    },
+    {
+      "part": "RAIL_BACK_1",
+      "maxBoundError": 5.7492418633417906e-8
+    },
+    {
+      "part": "BALUSTER_00",
+      "maxBoundError": 2.645187385258224e-8
+    },
+    {
+      "part": "BALUSTER_01",
+      "maxBoundError": 1.8739808308538652e-8
+    },
+    {
+      "part": "BALUSTER_02",
+      "maxBoundError": 1.526024413302489e-8
+    },
+    {
+      "part": "BALUSTER_03",
+      "maxBoundError": 1.856840144340913e-8
+    },
+    {
+      "part": "BALUSTER_04",
+      "maxBoundError": 2.6209003395034393e-8
+    }
+  ],
+  "minimumClearance": 0.8367357431170488,
+  "displayGain": 205.63422471181534,
+  "cameraInside": [],
+  "cameraNear": [],
+  "boundaries": [
+    {
+      "previous": "intro",
+      "frame": 767,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.010978545899056327,
+      "targetDelta": 0.0000027572974952150275,
+      "rotationRadians": 0.0004678902211086112,
+      "partDelta": 0.0000013646356239460644,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          820.9360360991369,
+          758.9622602797862,
+          0.9973750939754711
+        ],
+        "after": [
+          820.9952410960232,
+          758.9929227885068,
+          0.9973749825293818
+        ],
+        "pixelDelta": 0.06667399116105348,
+        "centreVisible": true
+      },
+      "qDelta": 0.0007084811428355597
+    },
+    {
+      "previous": "straight",
+      "frame": 2004,
+      "scene": "frame",
+      "line": 0,
+      "cameraDelta": 0.000004443968960062402,
+      "targetDelta": 0,
+      "rotationRadians": 0.0000012255242583127268,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previous": "frame",
+      "frame": 2909,
+      "scene": "bracket",
+      "line": 0,
+      "cameraDelta": 0.00002109304040633894,
+      "targetDelta": 0,
+      "rotationRadians": 0.000002289547779163106,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previous": "bracket",
+      "frame": 3867,
+      "scene": "hip",
+      "line": 0,
+      "cameraDelta": 0.0000034467724810759693,
+      "targetDelta": 0,
+      "rotationRadians": 0.0000012367066098002648,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previous": "hip",
+      "frame": 4918,
+      "scene": "gravity",
+      "line": 0,
+      "cameraDelta": 0.000021531714916023317,
+      "targetDelta": 0,
+      "rotationRadians": 0.0000016974247534154141,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previous": "gravity",
+      "frame": 6995,
+      "scene": "wind",
+      "line": 0,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previous": "wind",
+      "frame": 8780,
+      "scene": "return",
+      "line": 0,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previous": "return",
+      "frame": 9404,
+      "scene": "references",
+      "line": 0,
+      "cameraDelta": 0.007081424988484233,
+      "targetDelta": 0,
+      "rotationRadians": 0.0005054839377373226,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    }
+  ],
+  "lineBoundaries": [
+    {
+      "previousScene": "intro",
+      "previousLine": 0,
+      "frame": 199,
+      "scene": "intro",
+      "line": 1,
+      "cameraDelta": 0.012712392049271961,
+      "targetDelta": 0.0010201489835708344,
+      "rotationRadians": 0.000468858718321356,
+      "partDelta": 0.026215520114241997,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          797.5018226284058,
+          737.6282194533161,
+          0.9974500425673055
+        ],
+        "after": [
+          796.4326894346833,
+          738.3828826863714,
+          0.9974482444177384
+        ],
+        "pixelDelta": 1.3086490672616187,
+        "centreVisible": true
+      },
+      "qDelta": 0.004074410625094449
+    },
+    {
+      "previousScene": "intro",
+      "previousLine": 1,
+      "frame": 399,
+      "scene": "intro",
+      "line": 2,
+      "cameraDelta": 0.09521693533223595,
+      "targetDelta": 0.015080419773314091,
+      "rotationRadians": 0.00039134802456108924,
+      "partDelta": 0.3880784960239301,
+      "part": "DECK_FRONT",
+      "screen": {
+        "before": [
+          910.46291093827,
+          23.487785144447667,
+          0.9951873593009067
+        ],
+        "after": [
+          910.6565117928528,
+          69.97896944899554,
+          0.9952006905414035
+        ],
+        "pixelDelta": 46.491587403855476,
+        "centreVisible": true
+      },
+      "qDelta": 0.001886493202550299
+    },
+    {
+      "previousScene": "intro",
+      "previousLine": 2,
+      "frame": 573,
+      "scene": "intro",
+      "line": 3,
+      "cameraDelta": 0.006481304238275909,
+      "targetDelta": 0,
+      "rotationRadians": 0.00046609678513594735,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "intro",
+      "previousLine": 3,
+      "frame": 767,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.010978545899056327,
+      "targetDelta": 0.0000027572974952150275,
+      "rotationRadians": 0.0004678902211086112,
+      "partDelta": 0.0000013646356239460644,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          820.9360360991369,
+          758.9622602797862,
+          0.9973750939754711
+        ],
+        "after": [
+          820.9952410960232,
+          758.9929227885068,
+          0.9973749825293818
+        ],
+        "pixelDelta": 0.06667399116105348,
+        "centreVisible": true
+      },
+      "qDelta": 0.0007084811428355597
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 0,
+      "frame": 945,
+      "scene": "straight",
+      "line": 1,
+      "cameraDelta": 0.0015247172141491078,
+      "targetDelta": 0,
+      "rotationRadians": 0.00042046708407648915,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 1,
+      "frame": 1131,
+      "scene": "straight",
+      "line": 2,
+      "cameraDelta": 0.0027910235823959033,
+      "targetDelta": 0,
+      "rotationRadians": 0.0007696729317706433,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 2,
+      "frame": 1322,
+      "scene": "straight",
+      "line": 3,
+      "cameraDelta": 0.0034534934373421653,
+      "targetDelta": 0,
+      "rotationRadians": 0.0009523604426976464,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 3,
+      "frame": 1484,
+      "scene": "straight",
+      "line": 4,
+      "cameraDelta": 0.003391785247302589,
+      "targetDelta": 0,
+      "rotationRadians": 0.000935343343258752,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 4,
+      "frame": 1639,
+      "scene": "straight",
+      "line": 5,
+      "cameraDelta": 0.0022309906028111035,
+      "targetDelta": 0,
+      "rotationRadians": 0.0007726203224649342,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 5,
+      "frame": 1810,
+      "scene": "straight",
+      "line": 6,
+      "cameraDelta": 0.0008072050842876072,
+      "targetDelta": 0,
+      "rotationRadians": 0.00045756817174064037,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "straight",
+      "previousLine": 6,
+      "frame": 2004,
+      "scene": "frame",
+      "line": 0,
+      "cameraDelta": 0.000004443968960062402,
+      "targetDelta": 0,
+      "rotationRadians": 0.0000012255242583127268,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "frame",
+      "previousLine": 0,
+      "frame": 2223,
+      "scene": "frame",
+      "line": 1,
+      "cameraDelta": 0.008358899031950811,
+      "targetDelta": 0,
+      "rotationRadians": 0.0009073308157205903,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "frame",
+      "previousLine": 1,
+      "frame": 2394,
+      "scene": "frame",
+      "line": 2,
+      "cameraDelta": 0.01091349291352156,
+      "targetDelta": 0,
+      "rotationRadians": 0.00128770107618521,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "frame",
+      "previousLine": 2,
+      "frame": 2553,
+      "scene": "frame",
+      "line": 3,
+      "cameraDelta": 0.005131139143219113,
+      "targetDelta": 0,
+      "rotationRadians": 0.0012465478396228465,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "frame",
+      "previousLine": 3,
+      "frame": 2732,
+      "scene": "frame",
+      "line": 4,
+      "cameraDelta": 0.004679175085270182,
+      "targetDelta": 0,
+      "rotationRadians": 0.0007623368595299039,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "frame",
+      "previousLine": 4,
+      "frame": 2909,
+      "scene": "bracket",
+      "line": 0,
+      "cameraDelta": 0.00002109304040633894,
+      "targetDelta": 0,
+      "rotationRadians": 0.000002289547779163106,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "bracket",
+      "previousLine": 0,
+      "frame": 3128,
+      "scene": "bracket",
+      "line": 1,
+      "cameraDelta": 0.0029040630462095133,
+      "targetDelta": 0,
+      "rotationRadians": 0.0004953677959696454,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "bracket",
+      "previousLine": 1,
+      "frame": 3328,
+      "scene": "bracket",
+      "line": 2,
+      "cameraDelta": 0.0020608878957897045,
+      "targetDelta": 0,
+      "rotationRadians": 0.0007394485135744816,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "bracket",
+      "previousLine": 2,
+      "frame": 3531,
+      "scene": "bracket",
+      "line": 3,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "bracket",
+      "previousLine": 3,
+      "frame": 3702,
+      "scene": "bracket",
+      "line": 4,
+      "cameraDelta": 0.00012995082972872506,
+      "targetDelta": 0,
+      "rotationRadians": 0.00004032426024860696,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "bracket",
+      "previousLine": 4,
+      "frame": 3867,
+      "scene": "hip",
+      "line": 0,
+      "cameraDelta": 0.0000034467724810759693,
+      "targetDelta": 0,
+      "rotationRadians": 0.0000012367066098002648,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "hip",
+      "previousLine": 0,
+      "frame": 4074,
+      "scene": "hip",
+      "line": 1,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "hip",
+      "previousLine": 1,
+      "frame": 4298,
+      "scene": "hip",
+      "line": 2,
+      "cameraDelta": 0.0014030958972381274,
+      "targetDelta": 0,
+      "rotationRadians": 0.0002444473432905755,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "hip",
+      "previousLine": 2,
+      "frame": 4517,
+      "scene": "hip",
+      "line": 3,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "hip",
+      "previousLine": 3,
+      "frame": 4734,
+      "scene": "hip",
+      "line": 4,
+      "cameraDelta": 0.0005853963178512549,
+      "targetDelta": 0,
+      "rotationRadians": 0.00008927353698215608,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "hip",
+      "previousLine": 4,
+      "frame": 4918,
+      "scene": "gravity",
+      "line": 0,
+      "cameraDelta": 0.000021531714916023317,
+      "targetDelta": 0,
+      "rotationRadians": 0.0000016974247534154141,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 0,
+      "frame": 5113,
+      "scene": "gravity",
+      "line": 1,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 1,
+      "frame": 5335,
+      "scene": "gravity",
+      "line": 2,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 2,
+      "frame": 5531,
+      "scene": "gravity",
+      "line": 3,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 3,
+      "frame": 5746,
+      "scene": "gravity",
+      "line": 4,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 4,
+      "frame": 5965,
+      "scene": "gravity",
+      "line": 5,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 5,
+      "frame": 6187,
+      "scene": "gravity",
+      "line": 6,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 2.9802322387695312e-8,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 6,
+      "frame": 6394,
+      "scene": "gravity",
+      "line": 7,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 4.2146848510894035e-8,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 7,
+      "frame": 6601,
+      "scene": "gravity",
+      "line": 8,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 8,
+      "frame": 6797,
+      "scene": "gravity",
+      "line": 9,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "gravity",
+      "previousLine": 9,
+      "frame": 6995,
+      "scene": "wind",
+      "line": 0,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 0,
+      "frame": 7214,
+      "scene": "wind",
+      "line": 1,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 1,
+      "frame": 7436,
+      "scene": "wind",
+      "line": 2,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 2,
+      "frame": 7634,
+      "scene": "wind",
+      "line": 3,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 3,
+      "frame": 7849,
+      "scene": "wind",
+      "line": 4,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 4,
+      "frame": 8090,
+      "scene": "wind",
+      "line": 5,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 5,
+      "frame": 8293,
+      "scene": "wind",
+      "line": 6,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 4.2146848510894035e-8,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 6,
+      "frame": 8563,
+      "scene": "wind",
+      "line": 7,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "wind",
+      "previousLine": 7,
+      "frame": 8780,
+      "scene": "return",
+      "line": 0,
+      "cameraDelta": 0,
+      "targetDelta": 0,
+      "rotationRadians": 0,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "return",
+      "previousLine": 0,
+      "frame": 8996,
+      "scene": "return",
+      "line": 1,
+      "cameraDelta": 0.007081424988485953,
+      "targetDelta": 0,
+      "rotationRadians": 0.0005067470884581324,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "return",
+      "previousLine": 1,
+      "frame": 9194,
+      "scene": "return",
+      "line": 2,
+      "cameraDelta": 0.007081424988486769,
+      "targetDelta": 0,
+      "rotationRadians": 0.0005060975041623977,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    },
+    {
+      "previousScene": "return",
+      "previousLine": 2,
+      "frame": 9404,
+      "scene": "references",
+      "line": 0,
+      "cameraDelta": 0.007081424988484233,
+      "targetDelta": 0,
+      "rotationRadians": 0.0005054839377373226,
+      "partDelta": 0,
+      "part": "",
+      "screen": null,
+      "qDelta": 0
+    }
+  ],
+  "maxCameraStep": [
+    {
+      "frame": 827,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.36877607549572367,
+      "targetDelta": 0.05229794167078921,
+      "rotationRadians": 0.008347073226498997,
+      "partDelta": 0.016488571348603154,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          878.2725731096103,
+          817.1037323100079,
+          0.9949165769717417
+        ],
+        "after": [
+          879.8831685640706,
+          820.1145312945004,
+          0.9947716275233334
+        ],
+        "pixelDelta": 3.4145172781740185,
+        "centreVisible": true
+      },
+      "qDelta": 0.0023111853309738806
+    },
+    {
+      "frame": 828,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.3687567575750503,
+      "targetDelta": 0.05229794167078921,
+      "rotationRadians": 0.00882240765484965,
+      "partDelta": 0.01649253389897265,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          879.8831685640706,
+          820.1145312945004,
+          0.9947716275233334
+        ],
+        "after": [
+          881.5851826740438,
+          823.2619612339673,
+          0.9946190800935518
+        ],
+        "pixelDelta": 3.578151373880235,
+        "centreVisible": true
+      },
+      "qDelta": 0.0020559565086583353
+    },
+    {
+      "frame": 826,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.36838508207366333,
+      "targetDelta": 0.05223984630121557,
+      "rotationRadians": 0.007899574542395375,
+      "partDelta": 0.016471166902734535,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          876.7490966074386,
+          814.2249539377023,
+          0.9950543028395666
+        ],
+        "after": [
+          878.2725731096103,
+          817.1037323100079,
+          0.9949165769717417
+        ],
+        "pixelDelta": 3.2570455277021066,
+        "centreVisible": true
+      },
+      "qDelta": 0.002710637359065654
+    },
+    {
+      "frame": 829,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.36832716247782116,
+      "targetDelta": 0.05223984630121557,
+      "rotationRadians": 0.009327438917301345,
+      "partDelta": 0.01646323105038061,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          881.5851826740438,
+          823.2619612339673,
+          0.9946190800935518
+        ],
+        "after": [
+          883.3859034116361,
+          826.5507277472092,
+          0.9944585443017883
+        ],
+        "pixelDelta": 3.7494773440328966,
+        "centreVisible": true
+      },
+      "qDelta": 0.001874909385523732
+    },
+    {
+      "frame": 825,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.367584428072749,
+      "targetDelta": 0.05212375242804473,
+      "rotationRadians": 0.007478139219619,
+      "partDelta": 0.016429483501094966,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          875.3072155503813,
+          811.4734164940877,
+          0.9951851646425758
+        ],
+        "after": [
+          876.7490966074386,
+          814.2249539377023,
+          0.9950543028395666
+        ],
+        "pixelDelta": 3.1064415794141986,
+        "centreVisible": true
+      },
+      "qDelta": 0.0034481820093009707
+    },
+    {
+      "frame": 830,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.3674880092143153,
+      "targetDelta": 0.05212375242804457,
+      "rotationRadians": 0.009864110261352674,
+      "partDelta": 0.016437590489979614,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          883.3859034116361,
+          826.5507277472092,
+          0.9944585443017883
+        ],
+        "after": [
+          885.2875380645622,
+          829.9849651964105,
+          0.9942896186650061
+        ],
+        "pixelDelta": 3.9255829134927165,
+        "centreVisible": true
+      },
+      "qDelta": 0.0017419740732833033
+    },
+    {
+      "frame": 824,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.3663754492678257,
+      "targetDelta": 0.05194985378322951,
+      "rotationRadians": 0.007081087090603174,
+      "partDelta": 0.01638138718277138,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          873.9438907044154,
+          808.8445421269205,
+          0.995309504743519
+        ],
+        "after": [
+          875.3072155503813,
+          811.4734164940877,
+          0.9951851646425758
+        ],
+        "pixelDelta": 2.9613569649701024,
+        "centreVisible": true
+      },
+      "qDelta": 0.005582303292384738
+    },
+    {
+      "frame": 831,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.3662407015481286,
+      "targetDelta": 0.05194985378322951,
+      "rotationRadians": 0.010434436621499888,
+      "partDelta": 0.016374553019757154,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          885.2875380645622,
+          829.9849651964105,
+          0.9942896186650061
+        ],
+        "after": [
+          887.2983651029934,
+          833.5689469418702,
+          0.9941118875754329
+        ],
+        "pixelDelta": 4.1095438348160345,
+        "centreVisible": true
+      },
+      "qDelta": 0.0016367402008248821
+    },
+    {
+      "frame": 823,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.3647601665207797,
+      "targetDelta": 0.051718440964702496,
+      "rotationRadians": 0.00670683138365656,
+      "partDelta": 0.007428760229181652,
+      "part": "PEG_X_BL",
+      "screen": {
+        "before": [
+          969.5980449793789,
+          520.0241907093077,
+          0.9963961972425823
+        ],
+        "after": [
+          971.1707915411457,
+          516.4764756397475,
+          0.9963194670400528
+        ],
+        "pixelDelta": 3.8806976128441475,
+        "centreVisible": true
+      },
+      "qDelta": 0.0374300738666363
+    },
+    {
+      "frame": 832,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.36458732790035814,
+      "targetDelta": 0.051718440964702364,
+      "rotationRadians": 0.011040489159343353,
+      "partDelta": 0.0163062104831333,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          887.2983651029934,
+          833.5689469418702,
+          0.9941118875754329
+        ],
+        "after": [
+          889.4220155723884,
+          837.306240425993,
+          0.9939249284238718
+        ],
+        "pixelDelta": 4.298517640143902,
+        "centreVisible": true
+      },
+      "qDelta": 0.0015534533666248518
+    },
+    {
+      "frame": 822,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.36274128585153276,
+      "targetDelta": 0.051429901436368525,
+      "rotationRadians": 0.006353878148798315,
+      "partDelta": 0.016213937424548075,
+      "part": "PEG_X_BL",
+      "screen": {
+        "before": [
+          968.1398969180169,
+          523.1227693410796,
+          0.9964714877359299
+        ],
+        "after": [
+          969.5980449793789,
+          520.0241907093077,
+          0.9963961972425823
+        ],
+        "pixelDelta": 3.4245270193307875,
+        "centreVisible": true
+      },
+      "qDelta": 0.003992383878162059
+    },
+    {
+      "frame": 833,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.3625306612489321,
+      "targetDelta": 0.05142990143636924,
+      "rotationRadians": 0.011684373521123462,
+      "partDelta": 0.016215358273090064,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          889.4220155723884,
+          837.306240425993,
+          0.9939249284238718
+        ],
+        "after": [
+          891.6647209096826,
+          841.200064323416,
+          0.9937283119679696
+        ],
+        "pixelDelta": 4.493505510630878,
+        "centreVisible": true
+      },
+      "qDelta": 0.00148465155220881
+    }
+  ],
+  "maxPartStep": [
+    {
+      "frame": 134,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13706567881361528,
+      "targetDelta": 0.021726339168049336,
+      "rotationRadians": 0.0005385314660890806,
+      "partDelta": 0.5586747687881108,
+      "part": "CENTRE_POST",
+      "screen": {
+        "before": [
+          978.781819508098,
+          435.8201676303122,
+          0.996687025642596
+        ],
+        "after": [
+          978.8394533047141,
+          389.41112889570553,
+          0.996677285149177
+        ],
+        "pixelDelta": 46.40907452131247,
+        "centreVisible": true
+      },
+      "qDelta": 0.002934646304383115
+    },
+    {
+      "frame": 131,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13696485143469242,
+      "targetDelta": 0.02171200259794137,
+      "rotationRadians": 0.0005412797353846411,
+      "partDelta": 0.5583947875056106,
+      "part": "HUB",
+      "screen": {
+        "before": [
+          979.8407251865472,
+          247.73736981029302,
+          0.9964795968733063
+        ],
+        "after": [
+          979.9047854243702,
+          198.13720028173086,
+          0.9964686971902877
+        ],
+        "pixelDelta": 49.6002108964889,
+        "centreVisible": true
+      },
+      "qDelta": 0.00215030999840804
+    },
+    {
+      "frame": 132,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13709609181975838,
+      "targetDelta": 0.02173232385158297,
+      "rotationRadians": 0.0005404006107960201,
+      "partDelta": 0.5583636559676846,
+      "part": "HUB",
+      "screen": {
+        "before": [
+          979.9047854243702,
+          198.13720028173086,
+          0.9964686971902877
+        ],
+        "after": [
+          979.9691043312099,
+          148.26088391585222,
+          0.9964577526200542
+        ],
+        "pixelDelta": 49.87635783766684,
+        "centreVisible": true
+      },
+      "qDelta": 0.003554708725723721
+    },
+    {
+      "frame": 135,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13690407632860777,
+      "targetDelta": 0.02170003965320122,
+      "rotationRadians": 0.0005375460990250135,
+      "partDelta": 0.5579916141711732,
+      "part": "CENTRE_POST",
+      "screen": {
+        "before": [
+          978.8394533047141,
+          389.41112889570553,
+          0.996677285149177
+        ],
+        "after": [
+          978.8973687635805,
+          342.80900208606676,
+          0.9966674944447308
+        ],
+        "pixelDelta": 46.60216279725684,
+        "centreVisible": true
+      },
+      "qDelta": 0.0024522385822989268
+    },
+    {
+      "frame": 130,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13673612198849827,
+      "targetDelta": 0.021676162468091675,
+      "rotationRadians": 0.000542118693026339,
+      "partDelta": 0.5576482112555914,
+      "part": "HUB",
+      "screen": {
+        "before": [
+          979.7771001937639,
+          296.99205868819644,
+          0.996490417803071
+        ],
+        "after": [
+          979.8407251865472,
+          247.73736981029302,
+          0.9964795968733063
+        ],
+        "pixelDelta": 49.25472997183895,
+        "centreVisible": true
+      },
+      "qDelta": 0.0019327017572582372
+    },
+    {
+      "frame": 136,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.1366450866473699,
+      "targetDelta": 0.02165823410679968,
+      "rotationRadians": 0.000536529866533275,
+      "partDelta": 0.5567975030864398,
+      "part": "CENTRE_POST",
+      "screen": {
+        "before": [
+          978.8973687635805,
+          342.80900208606676,
+          0.9966674944447308
+        ],
+        "after": [
+          978.9554926653984,
+          296.05602979975447,
+          0.9966576675258939
+        ],
+        "pixelDelta": 46.75300841649281,
+        "centreVisible": true
+      },
+      "qDelta": 0.0024695727214116836
+    },
+    {
+      "frame": 129,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13641014219959519,
+      "targetDelta": 0.021624841954295704,
+      "rotationRadians": 0.0005429150188878275,
+      "partDelta": 0.5562709616697874,
+      "part": "HUB",
+      "screen": {
+        "before": [
+          979.7140302251304,
+          345.848232104323,
+          0.9965011369889669
+        ],
+        "after": [
+          979.7771001937639,
+          296.99205868819644,
+          0.996490417803071
+        ],
+        "pixelDelta": 48.85621412561126,
+        "centreVisible": true
+      },
+      "qDelta": 0.0020536956146766094
+    },
+    {
+      "frame": 137,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13628899955264664,
+      "targetDelta": 0.021600967443434982,
+      "rotationRadians": 0.0005354849373830176,
+      "partDelta": 0.5553901364571363,
+      "part": "CENTRE_POST",
+      "screen": {
+        "before": [
+          978.9554926653984,
+          296.05602979975447,
+          0.9966576675258939
+        ],
+        "after": [
+          979.0138485423204,
+          249.16837200356517,
+          0.9966477998311678
+        ],
+        "pixelDelta": 46.88769411072507,
+        "centreVisible": true
+      },
+      "qDelta": 0.003033559840858846
+    },
+    {
+      "frame": 128,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13598725642406864,
+      "targetDelta": 0.021558096230184454,
+      "rotationRadians": 0.0005436662030961981,
+      "partDelta": 0.5541913549429522,
+      "part": "HUB",
+      "screen": {
+        "before": [
+          979.6516578374245,
+          394.24801293871684,
+          0.9965117270296731
+        ],
+        "after": [
+          979.7140302251304,
+          345.848232104323,
+          0.9965011369889669
+        ],
+        "pixelDelta": 48.39982102376106,
+        "centreVisible": true
+      },
+      "qDelta": 0.0028497582094427765
+    },
+    {
+      "frame": 139,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13528722128520443,
+      "targetDelta": 0.021440313831015523,
+      "rotationRadians": 0.0005333173079077934,
+      "partDelta": 0.5511006939226433,
+      "part": "SUPPORT_Y",
+      "screen": {
+        "before": [
+          977.9753105225575,
+          506.81659890181515,
+          0.9968480741206749
+        ],
+        "after": [
+          978.0275936336209,
+          463.27279588154545,
+          0.9968393009301569
+        ],
+        "pixelDelta": 43.54383440846421,
+        "centreVisible": true
+      },
+      "qDelta": 0.004022791754866639
+    },
+    {
+      "frame": 126,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13485267246815064,
+      "targetDelta": 0.02137863325238909,
+      "rotationRadians": 0.0005450228878282378,
+      "partDelta": 0.5505857683209735,
+      "part": "HIP_FL",
+      "screen": {
+        "before": [
+          531.382738075837,
+          445.28286501675944,
+          0.9963139707775744
+        ],
+        "after": [
+          478.09562127562367,
+          450.9410518144103,
+          0.9963221295934082
+        ],
+        "pixelDelta": 53.586676466419206,
+        "centreVisible": true
+      },
+      "qDelta": 0.002337638052307245
+    },
+    {
+      "frame": 140,
+      "scene": "intro",
+      "line": 0,
+      "cameraDelta": 0.13464263885183664,
+      "targetDelta": 0.02133710011798673,
+      "rotationRadians": 0.0005321985915555342,
+      "partDelta": 0.5486741230129166,
+      "part": "SUPPORT_Y",
+      "screen": {
+        "before": [
+          978.0275936336209,
+          463.27279588154545,
+          0.9968393009301569
+        ],
+        "after": [
+          978.0800142333773,
+          419.69988951778856,
+          0.9968305043001889
+        ],
+        "pixelDelta": 43.57293789617592,
+        "centreVisible": true
+      },
+      "qDelta": 0.002659344732015567
+    }
+  ],
+  "maxRotationStep": [
+    {
+      "frame": 859,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.19282672446312024,
+      "targetDelta": 0.027446394131995875,
+      "rotationRadians": 0.03645942051761858,
+      "partDelta": 0.008653506180104686,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          976.2699079289703,
+          964.1468769765723,
+          0.9855826475483248
+        ],
+        "after": [
+          978.0812693721033,
+          967.2927316848334,
+          0.9852415759524492
+        ],
+        "pixelDelta": 3.6300732944607352,
+        "centreVisible": true
+      },
+      "qDelta": 0.0009916748713260093
+    },
+    {
+      "frame": 860,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.18342711570183656,
+      "targetDelta": 0.02611584307494285,
+      "rotationRadians": 0.03637093162793664,
+      "partDelta": 0.008233914005311593,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          978.0812693721033,
+          967.2927316848334,
+          0.9852415759524492
+        ],
+        "after": [
+          979.4445441736742,
+          970.0665777985354,
+          0.9849182105326199
+        ],
+        "pixelDelta": 3.090750790196125,
+        "centreVisible": true
+      },
+      "qDelta": 0.000986338048919122
+    },
+    {
+      "frame": 858,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.20215617203841632,
+      "targetDelta": 0.028766895343956673,
+      "rotationRadians": 0.036315625904129546,
+      "partDelta": 0.009069873950807938,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          974.0278698376133,
+          960.63484555168,
+          0.9859391769770038
+        ],
+        "after": [
+          976.2699079289703,
+          964.1468769765723,
+          0.9855826475483248
+        ],
+        "pixelDelta": 4.166665277236383,
+        "centreVisible": true
+      },
+      "qDelta": 0.0009973348697762119
+    },
+    {
+      "frame": 861,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.17397922585625025,
+      "targetDelta": 0.024778341884058582,
+      "rotationRadians": 0.03604138162793442,
+      "partDelta": 0.007812040450541513,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          979.4445441736742,
+          970.0665777985354,
+          0.9849182105326199
+        ],
+        "after": [
+          980.3554010881119,
+          972.4698323450049,
+          0.9846144379106958
+        ],
+        "pixelDelta": 2.570076406199863,
+        "centreVisible": true
+      },
+      "qDelta": 0.0009812962380416346
+    },
+    {
+      "frame": 857,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.21139425813345114,
+      "targetDelta": 0.03007434386554563,
+      "rotationRadians": 0.03595405225476448,
+      "partDelta": 0.009482107901568282,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          971.3843699795934,
+          956.769746842501,
+          0.986308635019819
+        ],
+        "after": [
+          974.0278698376133,
+          960.63484555168,
+          0.9859391769770038
+        ],
+        "pixelDelta": 4.6826359596970075,
+        "centreVisible": true
+      },
+      "qDelta": 0.0010033484185168196
+    },
+    {
+      "frame": 862,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.16450561460633698,
+      "targetDelta": 0.023437087136574813,
+      "rotationRadians": 0.03546835589864228,
+      "partDelta": 0.0073888637615775465,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          980.3554010881119,
+          972.4698323450049,
+          0.9846144379106958
+        ],
+        "after": [
+          980.8230242994258,
+          974.5108161643021,
+          0.9843317203128432
+        ],
+        "pixelDelta": 2.0938687681879107,
+        "centreVisible": true
+      },
+      "qDelta": 0.0009765231375620798
+    },
+    {
+      "frame": 856,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.22052046248834653,
+      "targetDelta": 0.031365833717460614,
+      "rotationRadians": 0.03539396290182553,
+      "partDelta": 0.009889330237242477,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          968.378471924781,
+          952.5716502829057,
+          0.9866883040445101
+        ],
+        "after": [
+          971.3843699795934,
+          956.769746842501,
+          0.986308635019819
+        ],
+        "pixelDelta": 5.163277819332527,
+        "centreVisible": true
+      },
+      "qDelta": 0.0010097484688910696
+    },
+    {
+      "frame": 855,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.22951494510166123,
+      "targetDelta": 0.03263855578637331,
+      "rotationRadians": 0.03465818864175897,
+      "partDelta": 0.010290692335792051,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          965.0566717452144,
+          948.0669260168603,
+          0.9870753747598421
+        ],
+        "after": [
+          968.378471924781,
+          952.5716502829057,
+          0.9866883040445101
+        ],
+        "pixelDelta": 5.597043607661721,
+        "centreVisible": true
+      },
+      "qDelta": 0.0010165709465444206
+    },
+    {
+      "frame": 863,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.15502952097993722,
+      "targetDelta": 0.022095372275696804,
+      "rotationRadians": 0.034656033768857473,
+      "partDelta": 0.006965398715730764,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          980.8230242994258,
+          974.5108161643021,
+          0.9843317203128432
+        ],
+        "after": [
+          980.8696541696132,
+          976.204147023848,
+          0.9840710559573164
+        ],
+        "pixelDelta": 1.693972769758737,
+        "centreVisible": true
+      },
+      "qDelta": 0.0009719939754762874
+    },
+    {
+      "frame": 854,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.23835854645142066,
+      "targetDelta": 0.033889797824935265,
+      "rotationRadians": 0.03377183724128042,
+      "partDelta": 0.0106853717354633,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          961.470273306726,
+          943.2872852920434,
+          0.9874670401310578
+        ],
+        "after": [
+          965.0566717452144,
+          948.0669260168603,
+          0.9870753747598421
+        ],
+        "pixelDelta": 5.975551791920187,
+        "centreVisible": true
+      },
+      "qDelta": 0.0010238551875736968
+    },
+    {
+      "frame": 864,
+      "scene": "straight",
+      "line": 0,
+      "cameraDelta": 0.14557486312242968,
+      "targetDelta": 0.020756587610619125,
+      "rotationRadians": 0.03361498998658828,
+      "partDelta": 0.006542697686666932,
+      "part": "POST_FL",
+      "screen": {
+        "before": [
+          980.8696541696132,
+          976.204147023848,
+          0.9840710559573164
+        ],
+        "after": [
+          980.5292805841324,
+          977.5699377011249,
+          0.9838329650758929
+        ],
+        "pixelDelta": 1.4075646883285886,
+        "centreVisible": true
+      },
+      "qDelta": 0.0009676851773819384
+    },
+    {
+      "frame": 4463,
+      "scene": "hip",
+      "line": 2,
+      "cameraDelta": 0.23638533367777606,
+      "targetDelta": 0.02480326545739504,
+      "rotationRadians": 0.03344338535771013,
+      "partDelta": 0.1563624411224509,
+      "part": "RAF_0_04",
+      "screen": {
+        "before": [
+          1073.1369929215218,
+          207.99009015022725,
+          0.9865035567591324
+        ],
+        "after": [
+          1088.8463120060987,
+          267.75589306576836,
+          0.98683753563176
+        ],
+        "pixelDelta": 61.79590523845699,
+        "centreVisible": true
+      },
+      "qDelta": 0.0007402205231755721
+    }
+  ],
+  "checks": {
+    "geometryBoundsMatch": true,
+    "all117PartsPresent": true,
+    "zeroCameraInsideConservativeBounds": true,
+    "nearPlaneClearance": true,
+    "sceneBoundaryCameraStepsUnder025m": true,
+    "sceneBoundaryPartStepsUnder015m": true,
+    "sourceUnchangedDuringAudit": true
+  },
+  "formalGeometryPass": true,
+  "sourceChanged": [],
+  "limitations": [
+    "Conservative AABBs can flag empty space around diagonal members. A positive flag needs rendered or triangle review; zero is a sufficient clearance result.",
+    "This checks geometry persistence and coordinate continuity, not text occlusion, labels, material opacity, aesthetics, or audible timing.",
+    "Step thresholds are review gates; smoothness still requires motion playback."
+  ]
+}

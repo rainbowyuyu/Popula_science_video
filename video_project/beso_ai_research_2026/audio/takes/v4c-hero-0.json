@@ -1,0 +1,72 @@
+{
+  "id": "v4c-hero-0",
+  "text": "二十兆瓦海上风机。让工程需求，接上真实计算。",
+  "ttsText": "二十兆瓦海上风机。让工程需求，接上真实计算。",
+  "signature": "fc96f074e66fc13e2c6d6bd04560d2888d04bc3254900ffe6d85e510e106e59c",
+  "raw": "audio/raw/v4c-hero-0-fc96f074e6.wav",
+  "processed": "public/voice/v4c-hero-0.wav",
+  "rawDuration": 3.72875,
+  "duration": 3.96875,
+  "sha256": "587dfe81aa030c048b56b7a51bf369566d9211396875a1711830a1c9b56154f8",
+  "rawSHA256": "3a4382165873f0e20f989f04988daf79c99c92fb345c0cb3c91b816b3cc32b74",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "rawEndpointDB": -43.55783055810665,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8685bcdced57bd5fd34094d7c7c905e35fae03258a61f70b3b0cac76406625ec",
+    "outputSha256": "587dfe81aa030c048b56b7a51bf369566d9211396875a1711830a1c9b56154f8",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 3.96875,
+      "peakDb": -9.352455288313434,
+      "activeRmsDb": -26.907234688941042,
+      "quietFrameP10Db": -74.69199825314156
+    },
+    "output": {
+      "seconds": 3.96875,
+      "peakDb": -5.5902951492235795,
+      "activeRmsDb": -23.575091893225135,
+      "quietFrameP10Db": -81.84605570851724
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "sourceCandidateId": "v4-hero-0",
+  "voiceSource": "Provider public voice; not personal clone",
+  "personalReferenceUploaded": false,
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "subjectiveListeningChecked": false
+}

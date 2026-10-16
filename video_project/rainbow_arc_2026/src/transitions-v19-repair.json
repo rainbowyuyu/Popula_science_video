@@ -1,0 +1,80 @@
+{
+  "version": "V19Repair",
+  "fps": 30,
+  "strategy": "Original hand-painted opening, two newly generated first/last-frame handoffs from repaired scene plates, and continuous deterministic native 3D camera throughout the optical story.",
+  "pendingRegeneration": [],
+  "removedInteriorBridgeIds": [
+    "garden_to_drop_v16",
+    "drop_to_world_v16",
+    "world_to_secondary_v16b",
+    "secondary_to_world_v16b"
+  ],
+  "clips": [
+    {
+      "id": "painted_chase",
+      "frames": 300,
+      "framePath": "assets_v15/qwen/painted_chase/frames",
+      "taskId": "59f79d2a-693d-47cd-aae0-effce19241fc",
+      "anchor": {
+        "kind": "frame",
+        "offsetFrames": 0
+      },
+      "transition": {
+        "kind": "matched",
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "enterFrames": 1,
+        "exitFrames": 1,
+        "overlapFrames": 0,
+        "maxBlurPx": 0
+      },
+      "sourceVersion": "V15"
+    },
+    {
+      "id": "painted_to_garden_v19repair_c",
+      "frames": 150,
+      "framePath": "assets_v19_repair/qwen/painted_to_garden_v19repair_c/frames",
+      "taskId": "81ad0bbd-94f7-42af-abdb-83643092722d",
+      "sourceVersion": "V19Repair",
+      "anchor": {
+        "kind": "frame",
+        "offsetFrames": 300
+      },
+      "transition": {
+        "kind": "matched",
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "enterFrames": 1,
+        "exitFrames": 1,
+        "overlapFrames": 0,
+        "maxBlurPx": 0
+      }
+    },
+    {
+      "id": "garden_to_painted_v19repair_b",
+      "frames": 150,
+      "framePath": "assets_v19_repair/qwen/garden_to_painted_v19repair_b/frames",
+      "taskId": "44275afc-dc73-46d0-89df-a1658d55552d",
+      "sourceVersion": "V19Repair",
+      "anchor": {
+        "kind": "frame",
+        "offsetFrames": 10402
+      },
+      "transition": {
+        "kind": "matched",
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "enterFrames": 1,
+        "exitFrames": 1,
+        "overlapFrames": 0,
+        "maxBlurPx": 0
+      }
+    }
+  ]
+}

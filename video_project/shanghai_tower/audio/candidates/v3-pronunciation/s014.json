@@ -1,0 +1,83 @@
+{
+  "id": "s014",
+  "text": "只靠中间这根硬骨头，离六百多米的目标还差一把力。帮手就在钢梁另一头，大楼的外圈。",
+  "ttsText": "只靠中间这根硬骨头，离六百多米的目标还差一把力。帮手就在钢梁另一头，大楼的外圈。",
+  "signature": "0ff23d8e595a226677b76db96203a08e273bb420b5f845c4fd68b59747715127",
+  "raw": "audio/raw/s014-522ec66998.wav",
+  "processed": "audio/candidates/v3-pronunciation/s014.wav",
+  "rawDuration": 7.44,
+  "duration": 7.68,
+  "sha256": "378db4ec5b94439df8df44cf50e3dff21dbe1950d46be62ced478f19707ff946",
+  "seed": 3046010602,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s009",
+    "s011",
+    "s014"
+  ],
+  "rawEndpointDB": -96.993569538267,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "76513c0ea027d8642617131766cd108d4ff82a12f74cc7eda3c54e3e75a7d922",
+    "outputSha256": "378db4ec5b94439df8df44cf50e3dff21dbe1950d46be62ced478f19707ff946",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.4055700885254048,
+    "input": {
+      "seconds": 7.68,
+      "peakDb": -6.201787334605838,
+      "activeRmsDb": -22.115157599306386,
+      "quietFrameP10Db": -61.026748395911
+    },
+    "output": {
+      "seconds": 7.68,
+      "peakDb": -4.6785445845883,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.595612688432
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "9b2a008632c4e772771257398fd73cdce73f63a2862808a5877a3d472f788e77"
+  },
+  "subjectiveListeningChecked": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "previousSignature": "522ec669989ed3f575ae6873d85800c17662863c971ef5d4527877f9b203c125",
+  "synthesisRetained": true,
+  "revisionReason": "Reprocess untouched raw once with silence outside the cleaner edge tapers; no resynthesis, trimming or stretching"
+}

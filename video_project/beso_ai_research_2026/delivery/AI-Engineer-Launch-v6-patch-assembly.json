@@ -1,0 +1,762 @@
+{
+  "schema": "launch-v6-patch-assembly-v1",
+  "revision": "9496ac531fc1",
+  "startedUTC": "2026-10-11T11:46:01.113862+00:00",
+  "expected": {
+    "frames": 6300,
+    "fps": 60,
+    "seconds": 105,
+    "width": 1920,
+    "height": 1080
+  },
+  "baselineExpectedSHA256": "7cf5894b368a2f07f334527c143dd481a92ee653d001b53ef084ee68d2bb8c23",
+  "sources": {
+    "baseline": {
+      "file": "output/ai_engineer_launch_v5_1080p60.mp4",
+      "sha256": "7cf5894b368a2f07f334527c143dd481a92ee653d001b53ef084ee68d2bb8c23",
+      "sizeBytes": 44096160
+    },
+    "patchBrief": {
+      "file": "output/launch-v6-brief-patch.mp4",
+      "sha256": "1993ba76f4de60cbd7c7699b3dbb6da1545a0995cc0f3a322035f731d14c7cf1",
+      "sizeBytes": 8692060
+    },
+    "patchInteraction": {
+      "file": "output/launch-v6-interaction-margin-fixed-patch.mp4",
+      "sha256": "f9eb0ddb31d7aa92a56a7d0be44ded3b4cb569b037c8dacf6c99a96e5eee232a",
+      "sizeBytes": 10416383
+    },
+    "audioMaster": {
+      "file": "public/audio/launch-v5-master.wav",
+      "sha256": "a4334caa7dbcfe281a244a1b9d4c17c200f665579a0ae00afdb9f3d174fd5c0c",
+      "sizeBytes": 30240102
+    }
+  },
+  "sourceMedia": {
+    "baseline": {
+      "width": 1920,
+      "height": 1080,
+      "avgFps": 60.0,
+      "nominalFps": 60.0,
+      "metadataFrames": 6300,
+      "decodedFrames": 6300,
+      "durationSeconds": 105.0,
+      "timeBase": "1/90000",
+      "codec": "h264",
+      "profile": "High",
+      "pixelFormat": "yuv420p"
+    },
+    "patchBrief": {
+      "width": 1920,
+      "height": 1080,
+      "avgFps": 60.0,
+      "nominalFps": 60.0,
+      "metadataFrames": 780,
+      "decodedFrames": 780,
+      "durationSeconds": 13.0,
+      "timeBase": "1/90000",
+      "codec": "h264",
+      "profile": "High",
+      "pixelFormat": "yuv420p"
+    },
+    "patchInteraction": {
+      "width": 1920,
+      "height": 1080,
+      "avgFps": 60.0,
+      "nominalFps": 60.0,
+      "metadataFrames": 960,
+      "decodedFrames": 960,
+      "durationSeconds": 16.0,
+      "timeBase": "1/90000",
+      "codec": "h264",
+      "profile": "High",
+      "pixelFormat": "yuv420p"
+    },
+    "audioMaster": {
+      "sampleRate": "48000",
+      "channels": 2,
+      "durationSeconds": 105.0,
+      "codec": "pcm_s24le"
+    }
+  },
+  "timelineSources": [
+    {
+      "file": "src/launch-v5-story.json",
+      "sha256": "75ca5e220a90c38f07b0fcf32f8dd4f7b0e11d5aec32204b0e715ceb3bdd67e2",
+      "sizeBytes": 15765
+    },
+    {
+      "file": "src/launch-v5-captions.json",
+      "sha256": "f4a2a5261112562f54c1688341c8a6afee8a4fccf0930f115df4d086b09c72a3",
+      "sizeBytes": 6918
+    },
+    {
+      "file": "research/generation/launch-v6-bridges.json",
+      "sha256": "a84a6531b2cf37305bc9c4d1eb69e15621ef9ef3029faf52e9cc8a92f5e68ce2",
+      "sizeBytes": 1471
+    },
+    {
+      "file": "research/generation/qwen-v5-specs.json",
+      "sha256": "c875a55a2a560317b38080b8a0175b87e0579c476b5c4cd7bf8b33d65ce5ca37",
+      "sizeBytes": 8611
+    },
+    {
+      "file": "research/generation/qwen-v5-tasks.json",
+      "sha256": "8d2aa3a6db0e3cabbb1f7e5bd4f1bd7c0aa2ba929a43a944eaea6d9f6770c301",
+      "sizeBytes": 12025
+    },
+    {
+      "file": "scripts/assemble_launch_v6_patches.py",
+      "sha256": "aa94445c50925d14b1d1ddb759f9712057af84460a398f7cf6b1bd3edcc44295",
+      "sizeBytes": 15227
+    }
+  ],
+  "filmSourceHashes": [
+    {
+      "file": "src/beso/BesoFilm.tsx",
+      "sha256": "8a835a59a4ba916f24af91aafcda4cf160c7ead32bf8a4da11b57967f77cc3e8",
+      "sizeBytes": 10491
+    },
+    {
+      "file": "src/beso/BesoShortFilm.tsx",
+      "sha256": "ebd90c9a8ab95e3d12059ea89234124e7871f147d92e2bfe6f3013381c77ec48",
+      "sizeBytes": 11712
+    },
+    {
+      "file": "src/beso/CinematicMotion.ts",
+      "sha256": "6dd635cb1c6db88a25c1800dbd16e7e0677cd6272fac731be3a209b5f5582ce3",
+      "sizeBytes": 2704
+    },
+    {
+      "file": "src/beso/CinematicOcean.ts",
+      "sha256": "c14b65481df4dfd247adac079af3aec4d15a266183742d4c33ca2d9c32de6e72",
+      "sizeBytes": 353
+    },
+    {
+      "file": "src/beso/CinematicWorld.ts",
+      "sha256": "e74425267f5b95c490256b69cccd3bfd9772899e30966907af9a76e3d885abf3",
+      "sizeBytes": 20271
+    },
+    {
+      "file": "src/beso/ComparisonTiming.ts",
+      "sha256": "06220a98e7a7a32be8e7eab7c8dd0953b5d5062e65ad03bb88d58edcf922cb9b",
+      "sizeBytes": 596
+    },
+    {
+      "file": "src/beso/ContinuousLaunchWorld.ts",
+      "sha256": "1992ebe1dae40bb563b1b78a79439d53da100a292a948775d137862a1519639c",
+      "sizeBytes": 13039
+    },
+    {
+      "file": "src/beso/EngineeringTaskGraph.ts",
+      "sha256": "44dd79e73e53845b6cb2dd1c79e63ff9c1925cefa286a5b70f6f3ab525c11bbc",
+      "sizeBytes": 3460
+    },
+    {
+      "file": "src/beso/GeneratedLaunchBridges.tsx",
+      "sha256": "06e7a2e36ebe38207636ff1f38cf9f7a921ca7407ad97a702654141b6718f70a",
+      "sizeBytes": 5241
+    },
+    {
+      "file": "src/beso/GeneratedLaunchBridgesV6.tsx",
+      "sha256": "081b6202cd11a1633ead88238f4ce5a094763434c66d0257973a1d33aad77be8",
+      "sizeBytes": 2409
+    },
+    {
+      "file": "src/beso/LaunchV5Camera.ts",
+      "sha256": "431adb865c362f042b58310dba8ec919268bae80dcd6b9792d159c2f80d82e4d",
+      "sizeBytes": 1134
+    },
+    {
+      "file": "src/beso/LuxConcept.tsx",
+      "sha256": "6cbb821a7c017b26d6e106561ce58c14a59b4cf8434eff362ca73dc278fea561",
+      "sizeBytes": 6561
+    },
+    {
+      "file": "src/beso/NativePlatform.ts",
+      "sha256": "64f79874367bf0843677cbd1443ed843a9e9a01fcd91a812cdaf13bfca9d2835",
+      "sizeBytes": 36626
+    },
+    {
+      "file": "src/beso/NativePlatformV5.ts",
+      "sha256": "b94c8d864bd7bfebd31922b1af6c084ae7e3e2ea59c4f7fa3253ddfe0da3664b",
+      "sizeBytes": 45796
+    },
+    {
+      "file": "src/beso/ResearchHUD.tsx",
+      "sha256": "50c050f7ddeba6a0fc365ec5edaa2066998ea892b99734de3313339348cfda8e",
+      "sizeBytes": 4344
+    },
+    {
+      "file": "src/beso/ResearchHUDShort.tsx",
+      "sha256": "26a350a237254710ac50a47428dc0e7e2199246c9c835fc138bee56eab4c43d7",
+      "sizeBytes": 4403
+    },
+    {
+      "file": "src/beso/WaterProCompat.ts",
+      "sha256": "35c7bc3c386a1cd59aa339d9f415964861d4801125d68aabc3848abf1e6202c3",
+      "sizeBytes": 1487
+    },
+    {
+      "file": "src/beso/WebProductDemo.tsx",
+      "sha256": "bb4ad748acdce11988c754645e2223bc91d0338732047e15d8d30f0ffe6591ec",
+      "sizeBytes": 5393
+    },
+    {
+      "file": "src/beso/World.ts",
+      "sha256": "011cb17380527b2a276c01074212b4ce27e2c7e48595e8677fbc816a20d8d1bb",
+      "sizeBytes": 18289
+    },
+    {
+      "file": "src/beso-captions-compact.json",
+      "sha256": "5b029a330fd35354ce6a550ac35c7ca36bcb7d648e5e14cd1ed196b9022f4693",
+      "sizeBytes": 7652
+    },
+    {
+      "file": "src/beso-captions-launch-105.json",
+      "sha256": "ed29bde798db1dd8d6e0ffd2883af9e5be1685b9965622aa13f8c474e93d46c7",
+      "sizeBytes": 5596
+    },
+    {
+      "file": "src/beso-captions.json",
+      "sha256": "7578df1f4e64246e426c47c75668789de6b35d80ae3f21548c52bbbedea6bbce",
+      "sizeBytes": 16496
+    },
+    {
+      "file": "src/beso-story-compact.json",
+      "sha256": "29fc157647865561419c1a95e4fb2e7b2d226e2cb4235253eceae9a1d2f2b5d4",
+      "sizeBytes": 15361
+    },
+    {
+      "file": "src/beso-story.json",
+      "sha256": "4125e2d4e042f7085075a965fc538a00a329f6c559927a600530d6b8383b165c",
+      "sizeBytes": 36712
+    },
+    {
+      "file": "src/captions.json",
+      "sha256": "7791cbe3b24e5c5d81392ec6e0c36a928ea1ee22fc05d3cd4c0d3250fcc47cb4",
+      "sizeBytes": 6586
+    },
+    {
+      "file": "src/design.tsx",
+      "sha256": "fa7f8546cc1c0b7a4047c1a9df1078c993b650e42e0d8fdc96cecb3afa85a4fc",
+      "sizeBytes": 6006
+    },
+    {
+      "file": "src/en/captions.json",
+      "sha256": "0d1a4d0ebdb73c11baf63468ad40eecfb134db445cc251fd45151f0f415412ed",
+      "sizeBytes": 5139
+    },
+    {
+      "file": "src/en/case-metrics.json",
+      "sha256": "724f4e75914bd58987adbc9a17b19f3390a8f84198e182bb9d2dea5d4920ffcb",
+      "sizeBytes": 5243
+    },
+    {
+      "file": "src/en/design.tsx",
+      "sha256": "e9456ed9f85fe172f9e8fc151c07c0fb5cbe6a52b2ae22c2244d1cff365da032",
+      "sizeBytes": 6468
+    },
+    {
+      "file": "src/en/Film.tsx",
+      "sha256": "181b8a495358d054852a35e87830f25b75decf19acd8c7d393f8de757cfaba0f",
+      "sizeBytes": 2605
+    },
+    {
+      "file": "src/en/horizontal-mark-paths.json",
+      "sha256": "a3040ebf254bf0ecc37a7da1a5537ca40e256f1e1a51037285f1bceac56870ba",
+      "sizeBytes": 27654
+    },
+    {
+      "file": "src/en/ocean-paths.json",
+      "sha256": "17d6ee3896df971c49466baa205f500080e888f2a92c2136a20afc1f5515da8a",
+      "sizeBytes": 39685
+    },
+    {
+      "file": "src/en/scenes/Deliver.tsx",
+      "sha256": "4043cfce9a43db8700eb213d82592aec8eb223f2b7ca1dec186496688d461f1d",
+      "sizeBytes": 1538
+    },
+    {
+      "file": "src/en/scenes/Evolve.tsx",
+      "sha256": "969ad3929eaf674ea5f8291119c5a5f0c8772f69e11e0d24c64888876c5e5f75",
+      "sizeBytes": 1306
+    },
+    {
+      "file": "src/en/scenes/Future.tsx",
+      "sha256": "929e133904bc87ddfb387f5ea3713c9e5c9ba0c04ff12f06571f6a9dcb0ac5dc",
+      "sizeBytes": 893
+    },
+    {
+      "file": "src/en/scenes/Gate.tsx",
+      "sha256": "9f39734b36c50efbe4ad1fc662e3898edca69028a758fd5bcb40a7583a40afc8",
+      "sizeBytes": 1856
+    },
+    {
+      "file": "src/en/scenes/Intent.tsx",
+      "sha256": "69c96991eadb4155837464cfba28c3b8d0469ddd8af931c55243aa57cc1e9175",
+      "sizeBytes": 1501
+    },
+    {
+      "file": "src/en/scenes/Physics.tsx",
+      "sha256": "a8a7adf21d88dacc355ca1f4373d11a11784ac40a83228828a211e4f75a49303",
+      "sizeBytes": 1226
+    },
+    {
+      "file": "src/en/scenes/Proof.tsx",
+      "sha256": "68d2357f00c34bffea131c99a7e603c1b04a18709cdd98ae64658e42a077b4f4",
+      "sizeBytes": 2454
+    },
+    {
+      "file": "src/en/scenes/Rethink.tsx",
+      "sha256": "5fb67a4b18b17e745b187473a9ace5f071ac9bab95870447eaa05e3ab33b9eb8",
+      "sizeBytes": 1340
+    },
+    {
+      "file": "src/en/scenes/Shape.tsx",
+      "sha256": "a04ae64d05b94d5dea6ea284c7c3b7c51cdae714a3f321a1f30252d19a820c4a",
+      "sizeBytes": 987
+    },
+    {
+      "file": "src/en/scenes/Spark.tsx",
+      "sha256": "4e5e3281293f221965b5f0665bbebbd6836469a9ff90513acca1257f16278e1e",
+      "sizeBytes": 745
+    },
+    {
+      "file": "src/en/timeline.json",
+      "sha256": "1182b38a5a0aba93273a35f3b4f1c32a30a6a34f812d3e9b1ff2a069e3425a56",
+      "sizeBytes": 8146
+    },
+    {
+      "file": "src/en/UniversityMark.tsx",
+      "sha256": "b8588453b0f57ee6c8ee6014243de81074a3c9439aaef6b8dbd18192f8a95215",
+      "sizeBytes": 2289
+    },
+    {
+      "file": "src/en/zju-paths.json",
+      "sha256": "0400bd699f2e61f83c9b5b23707fe7a34908d298a41ec96d02f3103bd9ca6905",
+      "sizeBytes": 32598
+    },
+    {
+      "file": "src/index-beso-short.tsx",
+      "sha256": "56cece009ce89ac47eb76cf3800bd5e2f81caab50674ff8449becc84c63bb02c",
+      "sizeBytes": 393
+    },
+    {
+      "file": "src/index-beso.tsx",
+      "sha256": "b909c817411cc6a4f6ebdb554bfbf725b4e0f76a2a8c009b2a1651b020390fa5",
+      "sizeBytes": 378
+    },
+    {
+      "file": "src/index-launch-film.tsx",
+      "sha256": "93ba0921e75e3fc1660f21e325d3bb94ad9d1ecb2e2cbb8aec8ebc312e1320fd",
+      "sizeBytes": 357
+    },
+    {
+      "file": "src/index-launch-v4.tsx",
+      "sha256": "330bb3717429cc3256c4bdad7415cab5dfec24a4a8977076149cf02d747aaa13",
+      "sizeBytes": 355
+    },
+    {
+      "file": "src/index-launch-v5.tsx",
+      "sha256": "c7efbbc5c283a69c93c45de32cd47d778e5beaa8db79bd996eef0831f164f1d0",
+      "sizeBytes": 359
+    },
+    {
+      "file": "src/index.ts",
+      "sha256": "2e0e358282a1b998a65387c653b97c2bb2eb7aae94cf200fc0b8d919f7be73a6",
+      "sizeBytes": 88
+    },
+    {
+      "file": "src/launch-captions.json",
+      "sha256": "3874641db1661abf06399fb521529ab5767c1506ac164ca95a7287732d195c73",
+      "sizeBytes": 7001
+    },
+    {
+      "file": "src/launch-story.json",
+      "sha256": "b1a5db2e939735499bd11326d9a4862234f4f0ed62418487376f7a2c71bdeb41",
+      "sizeBytes": 15552
+    },
+    {
+      "file": "src/launch-v5-captions.json",
+      "sha256": "f4a2a5261112562f54c1688341c8a6afee8a4fccf0930f115df4d086b09c72a3",
+      "sizeBytes": 6918
+    },
+    {
+      "file": "src/launch-v5-story.json",
+      "sha256": "75ca5e220a90c38f07b0fcf32f8dd4f7b0e11d5aec32204b0e715ceb3bdd67e2",
+      "sizeBytes": 15765
+    },
+    {
+      "file": "src/LaunchFilm.tsx",
+      "sha256": "0249c13220f2d496666b424a62795c2a3a7935aa8530f9eee739c1c534bfbabb",
+      "sizeBytes": 19609
+    },
+    {
+      "file": "src/LaunchV4.tsx",
+      "sha256": "dc9e9837486e99946b3467e95e94597bb31cdcddc3f621d509e42d80f09c1ebf",
+      "sizeBytes": 16866
+    },
+    {
+      "file": "src/LaunchV5.tsx",
+      "sha256": "7de047dc55d2cf71bb7998068a78a200db62bc0d80eaa379abe7f9999b9d211c",
+      "sizeBytes": 15594
+    },
+    {
+      "file": "src/Root.tsx",
+      "sha256": "e7e217c450f76ebc90edfc13258effc17999995bc0ddf84339e4a08b75c01046",
+      "sizeBytes": 310
+    },
+    {
+      "file": "src/scenes/Closing.tsx",
+      "sha256": "5d46ff29db5e821dc60586be9310111f12fda28893d63440c262893cae1fd1b9",
+      "sizeBytes": 1534
+    },
+    {
+      "file": "src/scenes/Delivery.tsx",
+      "sha256": "167be7e77441edf2f2d4b1fa04d6d2c79518eb3cbe1179d8743940da4f37b277",
+      "sizeBytes": 1024
+    },
+    {
+      "file": "src/scenes/Demo.tsx",
+      "sha256": "dde79a68cc4b5e3d1a6f2d72196da9d3621d38ad230d1b2d365eab69747e5dd5",
+      "sizeBytes": 385
+    },
+    {
+      "file": "src/scenes/Domain.tsx",
+      "sha256": "55fe2badffd112c2081e0f0095b35eea8d31fcf4c50b10eb66d33c226b0e6963",
+      "sizeBytes": 503
+    },
+    {
+      "file": "src/scenes/Dynamics.tsx",
+      "sha256": "1316e6b14b5c6d4d708b0df9e937b43b6cca29ae60a36f8d2310015d671e8f94",
+      "sizeBytes": 1508
+    },
+    {
+      "file": "src/scenes/Evidence.tsx",
+      "sha256": "55297a8c90c7512e48fe73ac01737a8aa5d519ab5269214123aeffb795b462a8",
+      "sizeBytes": 2122
+    },
+    {
+      "file": "src/scenes/Mesh.tsx",
+      "sha256": "d239aaafd7002bc9cad78b84ff0add773419a47e5a0d3cf59b00f309fa3babc5",
+      "sizeBytes": 2363
+    },
+    {
+      "file": "src/scenes/Opening.tsx",
+      "sha256": "4960d2b7c7792eba7864c015f2a0cc74731a01793a133ddcee6abcd924d4046e",
+      "sizeBytes": 1924
+    },
+    {
+      "file": "src/scenes/Replan.tsx",
+      "sha256": "1a0fd68e1bab1a610bab817e18bd20aa272e43d15ccb518724c8bbdf83730695",
+      "sizeBytes": 1976
+    },
+    {
+      "file": "src/scenes/Research.tsx",
+      "sha256": "860a97f622655c2e05db010947dfab38e5cbe1cc74923e1ff7d1881e70d142ee",
+      "sizeBytes": 1377
+    },
+    {
+      "file": "src/scenes/Review.tsx",
+      "sha256": "83d2bf974941cd5f308f8719363076b29f4a33cf669827b4a24bd20d06d24ad4",
+      "sizeBytes": 2311
+    },
+    {
+      "file": "src/scenes/Sizing.tsx",
+      "sha256": "ef5f1f68590da519d9f95710ab8d1215acc0bcd9f40269e20a36d941793e18ed",
+      "sizeBytes": 389
+    },
+    {
+      "file": "src/scenes/Topology.tsx",
+      "sha256": "24054b7f92c84115d93b1ed9cb001dbe1a61db217ac9e0cb0f3e78b606f0ff40",
+      "sizeBytes": 1031
+    },
+    {
+      "file": "src/scenes/Trace.tsx",
+      "sha256": "9bd5c8447a6c5dd20e9ec015065bc3d06d455ff40432581a53167ab17ec42e72",
+      "sizeBytes": 424
+    },
+    {
+      "file": "src/scenes/Viewer.tsx",
+      "sha256": "cafc13508512af910ad76263d7c508a5746265dab1e2e12785d5d46ed2e4fbb3",
+      "sizeBytes": 1129
+    },
+    {
+      "file": "src/scenes/Workspace.tsx",
+      "sha256": "43c745b353a9af254bf7de2c0293c20d8be69f473d4f4b8ab95662a37da467f4",
+      "sizeBytes": 419
+    },
+    {
+      "file": "src/timeline.json",
+      "sha256": "f88e8c1f27794b82f83fa6fb433de006b255f223a829cd30a1612a3f12812049",
+      "sizeBytes": 13978
+    },
+    {
+      "file": "src/v2/captions.json",
+      "sha256": "c7cfd8ffb8df09a60b70762b9872d0325e7baaf36ab8feffd720fc4610a8c168",
+      "sizeBytes": 3314
+    },
+    {
+      "file": "src/v2/design.tsx",
+      "sha256": "5ba7e70dd5a6a5cd6b5219effc0fab6e095ff85fd0c681ae7d0419af2d6e0743",
+      "sizeBytes": 6500
+    },
+    {
+      "file": "src/v2/Film.tsx",
+      "sha256": "df0d72b60c3e5a7ee894755630c84f49a2ee483833cf6bf1c1d4ae6aa4d95bff",
+      "sizeBytes": 2536
+    },
+    {
+      "file": "src/v2/motion.tsx",
+      "sha256": "fbffeac523210ba8b6697e726377a9d45a9a8585c81517c19d67fb154ec649b8",
+      "sizeBytes": 1048
+    },
+    {
+      "file": "src/v2/RenderReady.tsx",
+      "sha256": "1e138579342efeb9bd46360efe5764fda8f5f887146984024c654310a77cd7f1",
+      "sizeBytes": 1064
+    },
+    {
+      "file": "src/v2/scenes/Deliver.tsx",
+      "sha256": "98e0d2b740401ca63a17fd437ddc4f4f55aa5bdd73ab9bfff635195fc2b6b874",
+      "sizeBytes": 1289
+    },
+    {
+      "file": "src/v2/scenes/Evolve.tsx",
+      "sha256": "ca588997af41ff21ce510a01e122dffc4cd27b5ee6719cbfee0d15874405210b",
+      "sizeBytes": 911
+    },
+    {
+      "file": "src/v2/scenes/Future.tsx",
+      "sha256": "1fd7c79e65dfbf2006d7fedd5720b03872e2a5c347df5170a92a924408d22f30",
+      "sizeBytes": 883
+    },
+    {
+      "file": "src/v2/scenes/Gate.tsx",
+      "sha256": "57c569a610c132420bba3934fddcccb786196711c238c3ded0be8560c4405a8b",
+      "sizeBytes": 1055
+    },
+    {
+      "file": "src/v2/scenes/Intent.tsx",
+      "sha256": "7830635f51522f1b35dc801b1eddce8e738d84ce2356fe1d8ce81004bbcd654c",
+      "sizeBytes": 1494
+    },
+    {
+      "file": "src/v2/scenes/Physics.tsx",
+      "sha256": "1aad957415869dc2b432bf8d9b1f6c161913287bc8e8df90cbdb3b17884e2556",
+      "sizeBytes": 1172
+    },
+    {
+      "file": "src/v2/scenes/Proof.tsx",
+      "sha256": "b967869e19d5363486eb41adbae1ef758f69a5c77a76dd1d6b2b406e20f1497b",
+      "sizeBytes": 1051
+    },
+    {
+      "file": "src/v2/scenes/Rethink.tsx",
+      "sha256": "958c28673b7bfba697a6c3ab30d584d8521629026dbce475f719e5a322b8421c",
+      "sizeBytes": 1341
+    },
+    {
+      "file": "src/v2/scenes/Shape.tsx",
+      "sha256": "8051a2f544db50f3119da5964595bb3f8c7f25a741556cba229fffc0c3bd4881",
+      "sizeBytes": 997
+    },
+    {
+      "file": "src/v2/scenes/Spark.tsx",
+      "sha256": "eb4a802563b3d4a790911bee4b0d8a9851d15953e12422f9bc0b0fe862b8e11b",
+      "sizeBytes": 703
+    },
+    {
+      "file": "src/v2/timeline.json",
+      "sha256": "ca29c5f06beca208d189bd2fb20c50ac5ee332b7783276c0eb63b664016572fb",
+      "sizeBytes": 6703
+    },
+    {
+      "file": "src/zh/captions.json",
+      "sha256": "a2a54cdefc61f6d8f33623d35e99aaa4a1145421d61beca7d3f9b1ab6e271308",
+      "sizeBytes": 4424
+    },
+    {
+      "file": "src/zh/design.tsx",
+      "sha256": "80c46aecf2d640f3874e49031d02ffb07781403f4c72c6f65aa95392c36c2d0d",
+      "sizeBytes": 6487
+    },
+    {
+      "file": "src/zh/Film.tsx",
+      "sha256": "679dc6c57c7398d6e877b42c3e744f269012e03c8987bf4f1ae83b857020e03c",
+      "sizeBytes": 2622
+    },
+    {
+      "file": "src/zh/scenes/Deliver.tsx",
+      "sha256": "72a3c10c9c93f9005450915705fa157384e6f8d513d522badc9000a512361973",
+      "sizeBytes": 1543
+    },
+    {
+      "file": "src/zh/scenes/Evolve.tsx",
+      "sha256": "9f00224c963e8bf8f889d549045c3c30a7cea6622b467dae14bb7576ce24c182",
+      "sizeBytes": 1323
+    },
+    {
+      "file": "src/zh/scenes/Future.tsx",
+      "sha256": "a29819fc07ca0724f9bb3d0a281ca9ba3bb104392ba6ba7b80c128405bb3bafd",
+      "sizeBytes": 885
+    },
+    {
+      "file": "src/zh/scenes/Gate.tsx",
+      "sha256": "e6ba4c9f6f32a78fb1d13acb2b9318eb60d8ad7df2525836dee0db7ba52abd12",
+      "sizeBytes": 1843
+    },
+    {
+      "file": "src/zh/scenes/Intent.tsx",
+      "sha256": "0d728202379f5f5985051f96e82e21f4104d05b44e9a915e030defe56507d263",
+      "sizeBytes": 1519
+    },
+    {
+      "file": "src/zh/scenes/Physics.tsx",
+      "sha256": "7940bfa92bd39ab145e186433629ee94690ec4236f6d3e9f9b96f6b97dd6fbab",
+      "sizeBytes": 1252
+    },
+    {
+      "file": "src/zh/scenes/Proof.tsx",
+      "sha256": "8cc130d1bbc96f731fb5bb73957a392f3c65b02295af446ea0933fdf99035995",
+      "sizeBytes": 2473
+    },
+    {
+      "file": "src/zh/scenes/Rethink.tsx",
+      "sha256": "8c49eea5078ccbaadb7933754656db5e6e135ac8bd7e06bd39e0f5bc8196aa17",
+      "sizeBytes": 1349
+    },
+    {
+      "file": "src/zh/scenes/Shape.tsx",
+      "sha256": "e424f74cd77086ac642e8a55dc32a88d8f20946ea3594111483ed2090ef6cb36",
+      "sizeBytes": 1013
+    },
+    {
+      "file": "src/zh/scenes/Spark.tsx",
+      "sha256": "2113c36ff7b98d90798814acd7ee47fb5f48216235a2b364cdd59685efb514d3",
+      "sizeBytes": 761
+    },
+    {
+      "file": "src/zh/timeline.json",
+      "sha256": "dcb51c78525918ee8f2ed5bb36b377d75ee860180fd2a2bed4f6c03bf49c4e64",
+      "sizeBytes": 7959
+    },
+    {
+      "file": "src/zh/UniversityMark.tsx",
+      "sha256": "9ed23e17a621ed93333b23b24e11220e71891330dd37b4b19d7f9493f36d375d",
+      "sizeBytes": 2339
+    }
+  ],
+  "encoder": {
+    "codec": "libx264",
+    "profile": "high",
+    "crf": 17,
+    "preset": "medium",
+    "fps": 60,
+    "pixelFormat": "yuv420p",
+    "videoTrackTimescale": 90000,
+    "colorSpace": "bt709"
+  },
+  "segments": [
+    {
+      "index": 0,
+      "kind": "preserved-v5",
+      "sourceKey": "baseline",
+      "sourceFromFrame": 0,
+      "sourceEndFrameExclusive": 420,
+      "startFrame": 0,
+      "endFrameExclusive": 420,
+      "frames": 420,
+      "file": "output/launch-v6-patch-assembly-9496ac531fc1/segment-00.mp4",
+      "sha256": "2ed7463f756a728d7a2d64736f73614aa579f949282852cc26ae46293256763e",
+      "sizeBytes": 2396517
+    },
+    {
+      "index": 1,
+      "kind": "v6-replacement",
+      "sourceKey": "patchBrief",
+      "sourceFromFrame": 0,
+      "sourceEndFrameExclusive": 780,
+      "startFrame": 420,
+      "endFrameExclusive": 1200,
+      "frames": 780,
+      "file": "output/launch-v6-patch-assembly-9496ac531fc1/segment-01.mp4",
+      "sha256": "45951ca003f303a39c8e07542b37cb463a016d0cc48033d2a5c6f09c64c4c650",
+      "sizeBytes": 7087643
+    },
+    {
+      "index": 2,
+      "kind": "preserved-v5",
+      "sourceKey": "baseline",
+      "sourceFromFrame": 1200,
+      "sourceEndFrameExclusive": 2940,
+      "startFrame": 1200,
+      "endFrameExclusive": 2940,
+      "frames": 1740,
+      "file": "output/launch-v6-patch-assembly-9496ac531fc1/segment-02.mp4",
+      "sha256": "6514102194cd544f1c4e2aded265f214db0c11e63d8ea28b5af5e38a22a03ecf",
+      "sizeBytes": 14433916
+    },
+    {
+      "index": 3,
+      "kind": "v6-replacement",
+      "sourceKey": "patchInteraction",
+      "sourceFromFrame": 0,
+      "sourceEndFrameExclusive": 960,
+      "startFrame": 2940,
+      "endFrameExclusive": 3900,
+      "frames": 960,
+      "file": "output/launch-v6-patch-assembly-9496ac531fc1/segment-03.mp4",
+      "sha256": "2b15ddadf0f7edbaaab8c724831101576b4a38f15700b3b8b60e06123bb46e78",
+      "sizeBytes": 8444975
+    },
+    {
+      "index": 4,
+      "kind": "preserved-v5",
+      "sourceKey": "baseline",
+      "sourceFromFrame": 3900,
+      "sourceEndFrameExclusive": 6300,
+      "startFrame": 3900,
+      "endFrameExclusive": 6300,
+      "frames": 2400,
+      "file": "output/launch-v6-patch-assembly-9496ac531fc1/segment-04.mp4",
+      "sha256": "e8226a43670bf1c30e585e85f1e8bc1c9f4990321da02100a8b59de19a272c15",
+      "sizeBytes": 12745758
+    }
+  ],
+  "output": "output/ai_engineer_launch_v6_1080p60.mp4",
+  "outputAudio": {
+    "codec": "aac",
+    "sampleRate": 48000,
+    "bitrate": "256k"
+  },
+  "sourceContentPreserved": "Unchanged intervals are decoded from the SHA-verified v5 film and reencoded uniformly; original AAC is discarded.",
+  "fullDecodePassed": true,
+  "subjectiveVisualReviewPassed": false,
+  "acceptance": "Technical QA and SHA-bound sampled visual review passed; no claim of full real-time human viewing or listening.",
+  "ffmpegVersion": "ffmpeg version 2026-02-09-git-9bfa1635ae-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "finishedUTC": "2026-10-11T11:47:51.204760+00:00",
+  "finalSHA256": "336fd7e68f5cb293c5df4823139608d3e0875d2a9ae330805e0bc5b282b9ed60",
+  "finalSizeBytes": 48506867,
+  "finalMedia": {
+    "width": 1920,
+    "height": 1080,
+    "avgFps": 60.0,
+    "nominalFps": 60.0,
+    "metadataFrames": 6300,
+    "decodedFrames": 6300,
+    "durationSeconds": 105.0,
+    "timeBase": "1/90000",
+    "codec": "h264",
+    "profile": "High",
+    "pixelFormat": "yuv420p"
+  },
+  "assembled": true,
+  "sampledVisualReviewPassed": true,
+  "qaReferences": [
+    "research/qa/launch-v6-delivery.json",
+    "research/qa/launch-v6-root-visual-review.json",
+    "research/qa/launch-v6-independent-review.json"
+  ]
+}

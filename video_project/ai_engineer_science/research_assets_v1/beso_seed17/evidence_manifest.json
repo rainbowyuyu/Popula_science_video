@@ -1,0 +1,68 @@
+{
+  "schema": "beso9-physical-evidence-v1",
+  "seed": 17,
+  "target_power_mw": 20.0,
+  "written_deck_load_audit": {
+    "balanced": true,
+    "reference_point_mm": [
+      7.637511675727039e-11,
+      2.5566688735532135e-12,
+      17100.0
+    ],
+    "expected_force_n": [
+      0.0,
+      0.0,
+      -21373917.97710295
+    ],
+    "actual_force_n": [
+      0.0,
+      6.293786468372003e-08,
+      -21373917.977105517
+    ],
+    "force_error_n": [
+      0.0,
+      6.293786468372003e-08,
+      -2.566725015640259e-06
+    ],
+    "expected_moment_nm": [
+      102808568.62354246,
+      0.0,
+      0.0
+    ],
+    "actual_moment_nm": [
+      102808568.6235489,
+      4.685390740633011e-05,
+      1.6543612251060553e-24
+    ],
+    "moment_error_nm": [
+      6.4373016357421875e-06,
+      4.685390740633011e-05,
+      1.6543612251060553e-24
+    ],
+    "tolerance": {
+      "force_n": 0.02137391797710295,
+      "moment_nm": 1.0280856862354246
+    },
+    "units": {
+      "force": "N",
+      "coordinate": "mm",
+      "moment": "N*m"
+    }
+  },
+  "seed_role": "fixed top-center force nodes; bounded force magnitude and local horizontal bending moments; fixed reference mesh",
+  "method": "full C3D4 BESO with protected attachments and face-connectivity projection + same-formula CSR filter + independent solid-only CalculiX",
+  "files": {
+    "input_seed_load_case.inp": "a9dc80b9ebcfc87edff011f66de17a24218b1cc52f7ba2f689ff8f3850aa95f6",
+    "load_case.json": "68e579850a2de0cf868e7486df804afe15fe1716387f242d86ae380a1b6b5eb5",
+    "beso_run\\file043_state1.inp": "6a19407b16ec57b8b733dc1cc8e41d32291fb621fef6385a4134244ed16397f6",
+    "beso_run\\file043.vtk": "207df1620c3ba08340008f2a0c76d9eb1c16b2dc69d350975e3a70d1e090eb84",
+    "beso_run\\beso_conf.py": "b3e5a928db39b1a945884677d6e13f720a13f9b102c13c31840a18db265d1689",
+    "beso_run\\beso_main.py": "1716e35be6cc21ce3a563d70f9e98583bcd718ab06bec7dd764f0d31fe68f215",
+    "beso_run\\beso_lib.py": "6f287f53a85c99cdaf05631e35daddc8639f8f2cd3120b5378c431ba075394df",
+    "beso_run\\beso_filters.py": "ba1e92df5726151f846c99764a93f994afba9cbc2464c455442724c5e9c86a98",
+    "beso_run\\input_seed_load_case.log": "4ec6ac6cf17b3638e46faac6f699683bd90e0ae3c6ecdafbf21845480a8aadd9",
+    "solid_verification\\final_solid.inp": "c8e21c55dd98ba9c597f01cb29cfa1bdfdae2696d6be0e9099c2665b3b5baa3a",
+    "solid_verification\\final_solid.dat": "6abaa4c67fc356772de1afe0843e03fcea9c3780f99c99e4cd70f73eec4a9ef2",
+    "solid_verification\\verification.json": "c5daf46cc40c000eb64574d2683337c8d65693e855c798d9843b63d7d1f47a17"
+  }
+}

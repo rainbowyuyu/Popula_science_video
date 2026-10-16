@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "transport": "claude-code-native",
+  "status": "success",
+  "started": "2026-10-07T03:13:21.037Z",
+  "requestedModel": "claude-opus-5-5",
+  "returnedModel": "claude-opus-5-5",
+  "providerOrigin": "https://api.ebondai.com",
+  "processExitCode": 0,
+  "processSignal": null,
+  "completionReceived": true,
+  "stopReason": "end_turn",
+  "request": {
+    "maxTokens": 18000,
+    "effort": "low",
+    "totalTimeoutMs": 900000
+  },
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 925,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 11887,
+    "output_tokens_details": {
+      "thinking_tokens": 6949
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 0,
+      "ephemeral_5m_input_tokens": 925
+    }
+  },
+  "modelUsage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 11887,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 925,
+      "webSearchRequests": 0,
+      "costUSD": 0.242373,
+      "contextWindow": 200000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 6949
+    }
+  },
+  "wrapperRetryCount": 0,
+  "retryNote": "The wrapper never retries. Claude Code may apply its own internal retry policy.",
+  "provenance": "Model and usage are reported by Claude Code and its provider; weights are not independently verified.",
+  "promptSha256": "366a8db6ae15e10f757e5929c5552bf9555219601c49d6cb4a1b84f75231419c",
+  "promptCharacters": 1630,
+  "resultSubtype": "success",
+  "resultIsError": false,
+  "sdkEstimateCostUSD": 0.242373,
+  "finished": "2026-10-07T03:17:17.215Z",
+  "elapsedMs": 236178,
+  "streamEvents": 4309,
+  "textCharacters": 10355,
+  "responseSha256": "53f6873366d1c49c1794480d297ffa14b1e0f3c6d2a7b2de2815e8e09662b7ba",
+  "billingNote": "SDK cost is an estimate, not the provider bill. Failed or timed-out calls may be billable."
+}

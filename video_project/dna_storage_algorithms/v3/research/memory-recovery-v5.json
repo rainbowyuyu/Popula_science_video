@@ -1,0 +1,1636 @@
+{
+  "version": 5,
+  "status": "PASS",
+  "boundary": "Fixed educational linear XOR-chain code with one toy multiread consensus region. Not complete DNA Fountain; no synthesis or sequencing experiment was performed.",
+  "sourceImage": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\bridges\\family-memory.png",
+  "sourceIdentity": "existing generated family-memory illustration; not The Arrival of a Train footage",
+  "encode": {
+    "originalLengthBytes": 205572,
+    "blockBytes": 1024,
+    "blockCount": 201,
+    "paddingBytes": 252,
+    "code": "fixed adjacent XOR chain, all N-1 parity packets retained",
+    "mapping": {
+      "00": "A",
+      "01": "C",
+      "10": "G",
+      "11": "T"
+    },
+    "paddedOriginalBytes": 205824,
+    "redundantPayloadBytes": 204800,
+    "redundancyRatioOverPaddedOriginal": 0.9950248756218906,
+    "packetIdentityPolicy": "packet identities/member lists, exact byte length, read grouping and edited-region location are known educational metadata; not noisy DNA headers"
+  },
+  "channel": {
+    "removedOriginalBlockIndices": [
+      1,
+      2,
+      4,
+      8,
+      9,
+      11,
+      15,
+      16,
+      18,
+      22,
+      23,
+      25,
+      29,
+      30,
+      32,
+      36,
+      37,
+      39,
+      43,
+      44,
+      46,
+      50,
+      51,
+      53,
+      57,
+      58,
+      60,
+      64,
+      65,
+      67,
+      71,
+      72,
+      74,
+      78,
+      79,
+      81,
+      85,
+      86,
+      88,
+      92,
+      93,
+      95,
+      99,
+      100,
+      102,
+      106,
+      107,
+      109,
+      113,
+      114,
+      116,
+      120,
+      121,
+      123,
+      127,
+      128,
+      130,
+      134,
+      135,
+      137,
+      141,
+      142,
+      144,
+      148,
+      149,
+      151,
+      155,
+      156,
+      158,
+      162,
+      163,
+      165,
+      169,
+      170,
+      172,
+      176,
+      177,
+      179,
+      183,
+      184,
+      186,
+      190,
+      191,
+      193,
+      197,
+      198,
+      200
+    ],
+    "removedOriginalCount": 87,
+    "retainedOriginalCount": 114,
+    "retainedXorPacketCount": 200,
+    "packetOrder": "reversed",
+    "trueRegionForValidationOnly": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+    "regionPacketId": "b0000",
+    "regionStartBase0": 688,
+    "allReadsBeforeDropping": [
+      {
+        "id": "r01",
+        "kind": "substitution",
+        "position0": 9,
+        "sequence": "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA"
+      },
+      {
+        "id": "r02",
+        "kind": "deletion",
+        "position0": 17,
+        "sequence": "CTAGCGCTAGTTCTGAAAGATCGATCAAGTGCGGACTCACGTCCGTA"
+      },
+      {
+        "id": "r03",
+        "kind": "insertion",
+        "position0": 25,
+        "sequence": "CTAGCGCTAGTTCTGAATAGATCGAGTCAAGTGCGGACTCACGTCCGTA"
+      },
+      {
+        "id": "r04",
+        "kind": "substitution",
+        "position0": 34,
+        "sequence": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGTACTCACGTCCGTA"
+      },
+      {
+        "id": "r05",
+        "kind": "substitution",
+        "position0": 42,
+        "sequence": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGGACTCACGACCGTA"
+      },
+      {
+        "id": "r06",
+        "kind": "uncorrupted-but-dropped",
+        "sequence": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA"
+      }
+    ],
+    "droppedReadIds": [
+      "r06"
+    ]
+  },
+  "decode": {
+    "consensus": {
+      "method": "observed-read medoid + global star alignment + strict majority including gaps",
+      "backboneReadIndex": 0,
+      "medoidDistanceSums": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "inputReads": [
+        "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAAAGATCGATCAAGTGCGGACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAATAGATCGAGTCAAGTGCGGACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGTACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGGACTCACGACCGTA"
+      ],
+      "pairwiseAlignments": [
+        {
+          "backbone": "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+          "read": "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+          "score": 96
+        },
+        {
+          "backbone": "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+          "read": "CTAGCGCTAGTTCTGAA-AGATCGATCAAGTGCGGACTCACGTCCGTA",
+          "score": 89
+        },
+        {
+          "backbone": "CTAGCGCTATTTCTGAATAGATCGA-TCAAGTGCGGACTCACGTCCGTA",
+          "read": "CTAGCGCTAGTTCTGAATAGATCGAGTCAAGTGCGGACTCACGTCCGTA",
+          "score": 91
+        },
+        {
+          "backbone": "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+          "read": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGTACTCACGTCCGTA",
+          "score": 90
+        },
+        {
+          "backbone": "CTAGCGCTATTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA",
+          "read": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGGACTCACGACCGTA",
+          "score": 90
+        }
+      ],
+      "alignedReads": [
+        "CTAGCGCTATTTCTGAATAGATCGA-TCAAGTGCGGACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAA-AGATCGA-TCAAGTGCGGACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAATAGATCGAGTCAAGTGCGGACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAATAGATCGA-TCAAGTGCGTACTCACGTCCGTA",
+        "CTAGCGCTAGTTCTGAATAGATCGA-TCAAGTGCGGACTCACGACCGTA"
+      ],
+      "columns": [
+        {
+          "column": 0,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 1,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 2,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 3,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 4,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 5,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 6,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 7,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 8,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 9,
+          "votes": {
+            "T": 1,
+            "G": 4
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 10,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 11,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 12,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 13,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 14,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 15,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 16,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 17,
+          "votes": {
+            "T": 4,
+            "-": 1
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 18,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 19,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 20,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 21,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 22,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 23,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 24,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 25,
+          "votes": {
+            "-": 4,
+            "G": 1
+          },
+          "winner": "-",
+          "strictMajority": true
+        },
+        {
+          "column": 26,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 27,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 28,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 29,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 30,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 31,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 32,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 33,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 34,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 35,
+          "votes": {
+            "G": 4,
+            "T": 1
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 36,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 37,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 38,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 39,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 40,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        },
+        {
+          "column": 41,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 42,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 43,
+          "votes": {
+            "T": 4,
+            "A": 1
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 44,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 45,
+          "votes": {
+            "C": 5
+          },
+          "winner": "C",
+          "strictMajority": true
+        },
+        {
+          "column": 46,
+          "votes": {
+            "G": 5
+          },
+          "winner": "G",
+          "strictMajority": true
+        },
+        {
+          "column": 47,
+          "votes": {
+            "T": 5
+          },
+          "winner": "T",
+          "strictMajority": true
+        },
+        {
+          "column": 48,
+          "votes": {
+            "A": 5
+          },
+          "winner": "A",
+          "strictMajority": true
+        }
+      ],
+      "sequence": "CTAGCGCTAGTTCTGAATAGATCGATCAAGTGCGGACTCACGTCCGTA"
+    },
+    "recoverySteps": [
+      {
+        "knownBlock": 0,
+        "xorPacket": "x0000_0001",
+        "recoveredBlock": 1,
+        "equation": "B1 = B0 XOR (B0 XOR B1)"
+      },
+      {
+        "knownBlock": 1,
+        "xorPacket": "x0001_0002",
+        "recoveredBlock": 2,
+        "equation": "B2 = B1 XOR (B1 XOR B2)"
+      },
+      {
+        "knownBlock": 3,
+        "xorPacket": "x0003_0004",
+        "recoveredBlock": 4,
+        "equation": "B4 = B3 XOR (B3 XOR B4)"
+      },
+      {
+        "knownBlock": 7,
+        "xorPacket": "x0007_0008",
+        "recoveredBlock": 8,
+        "equation": "B8 = B7 XOR (B7 XOR B8)"
+      },
+      {
+        "knownBlock": 8,
+        "xorPacket": "x0008_0009",
+        "recoveredBlock": 9,
+        "equation": "B9 = B8 XOR (B8 XOR B9)"
+      },
+      {
+        "knownBlock": 10,
+        "xorPacket": "x0010_0011",
+        "recoveredBlock": 11,
+        "equation": "B11 = B10 XOR (B10 XOR B11)"
+      },
+      {
+        "knownBlock": 14,
+        "xorPacket": "x0014_0015",
+        "recoveredBlock": 15,
+        "equation": "B15 = B14 XOR (B14 XOR B15)"
+      },
+      {
+        "knownBlock": 15,
+        "xorPacket": "x0015_0016",
+        "recoveredBlock": 16,
+        "equation": "B16 = B15 XOR (B15 XOR B16)"
+      },
+      {
+        "knownBlock": 17,
+        "xorPacket": "x0017_0018",
+        "recoveredBlock": 18,
+        "equation": "B18 = B17 XOR (B17 XOR B18)"
+      },
+      {
+        "knownBlock": 21,
+        "xorPacket": "x0021_0022",
+        "recoveredBlock": 22,
+        "equation": "B22 = B21 XOR (B21 XOR B22)"
+      },
+      {
+        "knownBlock": 22,
+        "xorPacket": "x0022_0023",
+        "recoveredBlock": 23,
+        "equation": "B23 = B22 XOR (B22 XOR B23)"
+      },
+      {
+        "knownBlock": 24,
+        "xorPacket": "x0024_0025",
+        "recoveredBlock": 25,
+        "equation": "B25 = B24 XOR (B24 XOR B25)"
+      },
+      {
+        "knownBlock": 28,
+        "xorPacket": "x0028_0029",
+        "recoveredBlock": 29,
+        "equation": "B29 = B28 XOR (B28 XOR B29)"
+      },
+      {
+        "knownBlock": 29,
+        "xorPacket": "x0029_0030",
+        "recoveredBlock": 30,
+        "equation": "B30 = B29 XOR (B29 XOR B30)"
+      },
+      {
+        "knownBlock": 31,
+        "xorPacket": "x0031_0032",
+        "recoveredBlock": 32,
+        "equation": "B32 = B31 XOR (B31 XOR B32)"
+      },
+      {
+        "knownBlock": 35,
+        "xorPacket": "x0035_0036",
+        "recoveredBlock": 36,
+        "equation": "B36 = B35 XOR (B35 XOR B36)"
+      },
+      {
+        "knownBlock": 36,
+        "xorPacket": "x0036_0037",
+        "recoveredBlock": 37,
+        "equation": "B37 = B36 XOR (B36 XOR B37)"
+      },
+      {
+        "knownBlock": 38,
+        "xorPacket": "x0038_0039",
+        "recoveredBlock": 39,
+        "equation": "B39 = B38 XOR (B38 XOR B39)"
+      },
+      {
+        "knownBlock": 42,
+        "xorPacket": "x0042_0043",
+        "recoveredBlock": 43,
+        "equation": "B43 = B42 XOR (B42 XOR B43)"
+      },
+      {
+        "knownBlock": 43,
+        "xorPacket": "x0043_0044",
+        "recoveredBlock": 44,
+        "equation": "B44 = B43 XOR (B43 XOR B44)"
+      },
+      {
+        "knownBlock": 45,
+        "xorPacket": "x0045_0046",
+        "recoveredBlock": 46,
+        "equation": "B46 = B45 XOR (B45 XOR B46)"
+      },
+      {
+        "knownBlock": 49,
+        "xorPacket": "x0049_0050",
+        "recoveredBlock": 50,
+        "equation": "B50 = B49 XOR (B49 XOR B50)"
+      },
+      {
+        "knownBlock": 50,
+        "xorPacket": "x0050_0051",
+        "recoveredBlock": 51,
+        "equation": "B51 = B50 XOR (B50 XOR B51)"
+      },
+      {
+        "knownBlock": 52,
+        "xorPacket": "x0052_0053",
+        "recoveredBlock": 53,
+        "equation": "B53 = B52 XOR (B52 XOR B53)"
+      },
+      {
+        "knownBlock": 56,
+        "xorPacket": "x0056_0057",
+        "recoveredBlock": 57,
+        "equation": "B57 = B56 XOR (B56 XOR B57)"
+      },
+      {
+        "knownBlock": 57,
+        "xorPacket": "x0057_0058",
+        "recoveredBlock": 58,
+        "equation": "B58 = B57 XOR (B57 XOR B58)"
+      },
+      {
+        "knownBlock": 59,
+        "xorPacket": "x0059_0060",
+        "recoveredBlock": 60,
+        "equation": "B60 = B59 XOR (B59 XOR B60)"
+      },
+      {
+        "knownBlock": 63,
+        "xorPacket": "x0063_0064",
+        "recoveredBlock": 64,
+        "equation": "B64 = B63 XOR (B63 XOR B64)"
+      },
+      {
+        "knownBlock": 64,
+        "xorPacket": "x0064_0065",
+        "recoveredBlock": 65,
+        "equation": "B65 = B64 XOR (B64 XOR B65)"
+      },
+      {
+        "knownBlock": 66,
+        "xorPacket": "x0066_0067",
+        "recoveredBlock": 67,
+        "equation": "B67 = B66 XOR (B66 XOR B67)"
+      },
+      {
+        "knownBlock": 70,
+        "xorPacket": "x0070_0071",
+        "recoveredBlock": 71,
+        "equation": "B71 = B70 XOR (B70 XOR B71)"
+      },
+      {
+        "knownBlock": 71,
+        "xorPacket": "x0071_0072",
+        "recoveredBlock": 72,
+        "equation": "B72 = B71 XOR (B71 XOR B72)"
+      },
+      {
+        "knownBlock": 73,
+        "xorPacket": "x0073_0074",
+        "recoveredBlock": 74,
+        "equation": "B74 = B73 XOR (B73 XOR B74)"
+      },
+      {
+        "knownBlock": 77,
+        "xorPacket": "x0077_0078",
+        "recoveredBlock": 78,
+        "equation": "B78 = B77 XOR (B77 XOR B78)"
+      },
+      {
+        "knownBlock": 78,
+        "xorPacket": "x0078_0079",
+        "recoveredBlock": 79,
+        "equation": "B79 = B78 XOR (B78 XOR B79)"
+      },
+      {
+        "knownBlock": 80,
+        "xorPacket": "x0080_0081",
+        "recoveredBlock": 81,
+        "equation": "B81 = B80 XOR (B80 XOR B81)"
+      },
+      {
+        "knownBlock": 84,
+        "xorPacket": "x0084_0085",
+        "recoveredBlock": 85,
+        "equation": "B85 = B84 XOR (B84 XOR B85)"
+      },
+      {
+        "knownBlock": 85,
+        "xorPacket": "x0085_0086",
+        "recoveredBlock": 86,
+        "equation": "B86 = B85 XOR (B85 XOR B86)"
+      },
+      {
+        "knownBlock": 87,
+        "xorPacket": "x0087_0088",
+        "recoveredBlock": 88,
+        "equation": "B88 = B87 XOR (B87 XOR B88)"
+      },
+      {
+        "knownBlock": 91,
+        "xorPacket": "x0091_0092",
+        "recoveredBlock": 92,
+        "equation": "B92 = B91 XOR (B91 XOR B92)"
+      },
+      {
+        "knownBlock": 92,
+        "xorPacket": "x0092_0093",
+        "recoveredBlock": 93,
+        "equation": "B93 = B92 XOR (B92 XOR B93)"
+      },
+      {
+        "knownBlock": 94,
+        "xorPacket": "x0094_0095",
+        "recoveredBlock": 95,
+        "equation": "B95 = B94 XOR (B94 XOR B95)"
+      },
+      {
+        "knownBlock": 98,
+        "xorPacket": "x0098_0099",
+        "recoveredBlock": 99,
+        "equation": "B99 = B98 XOR (B98 XOR B99)"
+      },
+      {
+        "knownBlock": 99,
+        "xorPacket": "x0099_0100",
+        "recoveredBlock": 100,
+        "equation": "B100 = B99 XOR (B99 XOR B100)"
+      },
+      {
+        "knownBlock": 101,
+        "xorPacket": "x0101_0102",
+        "recoveredBlock": 102,
+        "equation": "B102 = B101 XOR (B101 XOR B102)"
+      },
+      {
+        "knownBlock": 105,
+        "xorPacket": "x0105_0106",
+        "recoveredBlock": 106,
+        "equation": "B106 = B105 XOR (B105 XOR B106)"
+      },
+      {
+        "knownBlock": 106,
+        "xorPacket": "x0106_0107",
+        "recoveredBlock": 107,
+        "equation": "B107 = B106 XOR (B106 XOR B107)"
+      },
+      {
+        "knownBlock": 108,
+        "xorPacket": "x0108_0109",
+        "recoveredBlock": 109,
+        "equation": "B109 = B108 XOR (B108 XOR B109)"
+      },
+      {
+        "knownBlock": 112,
+        "xorPacket": "x0112_0113",
+        "recoveredBlock": 113,
+        "equation": "B113 = B112 XOR (B112 XOR B113)"
+      },
+      {
+        "knownBlock": 113,
+        "xorPacket": "x0113_0114",
+        "recoveredBlock": 114,
+        "equation": "B114 = B113 XOR (B113 XOR B114)"
+      },
+      {
+        "knownBlock": 115,
+        "xorPacket": "x0115_0116",
+        "recoveredBlock": 116,
+        "equation": "B116 = B115 XOR (B115 XOR B116)"
+      },
+      {
+        "knownBlock": 119,
+        "xorPacket": "x0119_0120",
+        "recoveredBlock": 120,
+        "equation": "B120 = B119 XOR (B119 XOR B120)"
+      },
+      {
+        "knownBlock": 120,
+        "xorPacket": "x0120_0121",
+        "recoveredBlock": 121,
+        "equation": "B121 = B120 XOR (B120 XOR B121)"
+      },
+      {
+        "knownBlock": 122,
+        "xorPacket": "x0122_0123",
+        "recoveredBlock": 123,
+        "equation": "B123 = B122 XOR (B122 XOR B123)"
+      },
+      {
+        "knownBlock": 126,
+        "xorPacket": "x0126_0127",
+        "recoveredBlock": 127,
+        "equation": "B127 = B126 XOR (B126 XOR B127)"
+      },
+      {
+        "knownBlock": 127,
+        "xorPacket": "x0127_0128",
+        "recoveredBlock": 128,
+        "equation": "B128 = B127 XOR (B127 XOR B128)"
+      },
+      {
+        "knownBlock": 129,
+        "xorPacket": "x0129_0130",
+        "recoveredBlock": 130,
+        "equation": "B130 = B129 XOR (B129 XOR B130)"
+      },
+      {
+        "knownBlock": 133,
+        "xorPacket": "x0133_0134",
+        "recoveredBlock": 134,
+        "equation": "B134 = B133 XOR (B133 XOR B134)"
+      },
+      {
+        "knownBlock": 134,
+        "xorPacket": "x0134_0135",
+        "recoveredBlock": 135,
+        "equation": "B135 = B134 XOR (B134 XOR B135)"
+      },
+      {
+        "knownBlock": 136,
+        "xorPacket": "x0136_0137",
+        "recoveredBlock": 137,
+        "equation": "B137 = B136 XOR (B136 XOR B137)"
+      },
+      {
+        "knownBlock": 140,
+        "xorPacket": "x0140_0141",
+        "recoveredBlock": 141,
+        "equation": "B141 = B140 XOR (B140 XOR B141)"
+      },
+      {
+        "knownBlock": 141,
+        "xorPacket": "x0141_0142",
+        "recoveredBlock": 142,
+        "equation": "B142 = B141 XOR (B141 XOR B142)"
+      },
+      {
+        "knownBlock": 143,
+        "xorPacket": "x0143_0144",
+        "recoveredBlock": 144,
+        "equation": "B144 = B143 XOR (B143 XOR B144)"
+      },
+      {
+        "knownBlock": 147,
+        "xorPacket": "x0147_0148",
+        "recoveredBlock": 148,
+        "equation": "B148 = B147 XOR (B147 XOR B148)"
+      },
+      {
+        "knownBlock": 148,
+        "xorPacket": "x0148_0149",
+        "recoveredBlock": 149,
+        "equation": "B149 = B148 XOR (B148 XOR B149)"
+      },
+      {
+        "knownBlock": 150,
+        "xorPacket": "x0150_0151",
+        "recoveredBlock": 151,
+        "equation": "B151 = B150 XOR (B150 XOR B151)"
+      },
+      {
+        "knownBlock": 154,
+        "xorPacket": "x0154_0155",
+        "recoveredBlock": 155,
+        "equation": "B155 = B154 XOR (B154 XOR B155)"
+      },
+      {
+        "knownBlock": 155,
+        "xorPacket": "x0155_0156",
+        "recoveredBlock": 156,
+        "equation": "B156 = B155 XOR (B155 XOR B156)"
+      },
+      {
+        "knownBlock": 157,
+        "xorPacket": "x0157_0158",
+        "recoveredBlock": 158,
+        "equation": "B158 = B157 XOR (B157 XOR B158)"
+      },
+      {
+        "knownBlock": 161,
+        "xorPacket": "x0161_0162",
+        "recoveredBlock": 162,
+        "equation": "B162 = B161 XOR (B161 XOR B162)"
+      },
+      {
+        "knownBlock": 162,
+        "xorPacket": "x0162_0163",
+        "recoveredBlock": 163,
+        "equation": "B163 = B162 XOR (B162 XOR B163)"
+      },
+      {
+        "knownBlock": 164,
+        "xorPacket": "x0164_0165",
+        "recoveredBlock": 165,
+        "equation": "B165 = B164 XOR (B164 XOR B165)"
+      },
+      {
+        "knownBlock": 168,
+        "xorPacket": "x0168_0169",
+        "recoveredBlock": 169,
+        "equation": "B169 = B168 XOR (B168 XOR B169)"
+      },
+      {
+        "knownBlock": 169,
+        "xorPacket": "x0169_0170",
+        "recoveredBlock": 170,
+        "equation": "B170 = B169 XOR (B169 XOR B170)"
+      },
+      {
+        "knownBlock": 171,
+        "xorPacket": "x0171_0172",
+        "recoveredBlock": 172,
+        "equation": "B172 = B171 XOR (B171 XOR B172)"
+      },
+      {
+        "knownBlock": 175,
+        "xorPacket": "x0175_0176",
+        "recoveredBlock": 176,
+        "equation": "B176 = B175 XOR (B175 XOR B176)"
+      },
+      {
+        "knownBlock": 176,
+        "xorPacket": "x0176_0177",
+        "recoveredBlock": 177,
+        "equation": "B177 = B176 XOR (B176 XOR B177)"
+      },
+      {
+        "knownBlock": 178,
+        "xorPacket": "x0178_0179",
+        "recoveredBlock": 179,
+        "equation": "B179 = B178 XOR (B178 XOR B179)"
+      },
+      {
+        "knownBlock": 182,
+        "xorPacket": "x0182_0183",
+        "recoveredBlock": 183,
+        "equation": "B183 = B182 XOR (B182 XOR B183)"
+      },
+      {
+        "knownBlock": 183,
+        "xorPacket": "x0183_0184",
+        "recoveredBlock": 184,
+        "equation": "B184 = B183 XOR (B183 XOR B184)"
+      },
+      {
+        "knownBlock": 185,
+        "xorPacket": "x0185_0186",
+        "recoveredBlock": 186,
+        "equation": "B186 = B185 XOR (B185 XOR B186)"
+      },
+      {
+        "knownBlock": 189,
+        "xorPacket": "x0189_0190",
+        "recoveredBlock": 190,
+        "equation": "B190 = B189 XOR (B189 XOR B190)"
+      },
+      {
+        "knownBlock": 190,
+        "xorPacket": "x0190_0191",
+        "recoveredBlock": 191,
+        "equation": "B191 = B190 XOR (B190 XOR B191)"
+      },
+      {
+        "knownBlock": 192,
+        "xorPacket": "x0192_0193",
+        "recoveredBlock": 193,
+        "equation": "B193 = B192 XOR (B192 XOR B193)"
+      },
+      {
+        "knownBlock": 196,
+        "xorPacket": "x0196_0197",
+        "recoveredBlock": 197,
+        "equation": "B197 = B196 XOR (B196 XOR B197)"
+      },
+      {
+        "knownBlock": 197,
+        "xorPacket": "x0197_0198",
+        "recoveredBlock": 198,
+        "equation": "B198 = B197 XOR (B197 XOR B198)"
+      },
+      {
+        "knownBlock": 199,
+        "xorPacket": "x0199_0200",
+        "recoveredBlock": 200,
+        "equation": "B200 = B199 XOR (B199 XOR B200)"
+      }
+    ],
+    "recoveredBlockCount": 87,
+    "allBlocksRecovered": true,
+    "decoderInputs": [
+      "decode-metadata.json",
+      "received-packets.jsonl",
+      "observed-region-reads.json"
+    ],
+    "originalFileReadByDecoder": false,
+    "videoReencodedAfterRecovery": false
+  },
+  "localAlignmentExample": {
+    "algorithm": "Smith-Waterman local alignment",
+    "a": "ACGTCAGTAC",
+    "b": "ACGTAGTAC",
+    "scoring": {
+      "match": 2,
+      "mismatch": -1,
+      "gap": -2,
+      "floor": 0
+    },
+    "score": 16,
+    "startCell": [
+      0,
+      0
+    ],
+    "maxCell": [
+      10,
+      9
+    ],
+    "alignedA": "ACGTCAGTAC",
+    "alignedB": "ACGT-AGTAC",
+    "tracebackMaxToZero": [
+      {
+        "row": 10,
+        "column": 9,
+        "score": 16
+      },
+      {
+        "row": 9,
+        "column": 8,
+        "score": 14
+      },
+      {
+        "row": 8,
+        "column": 7,
+        "score": 12
+      },
+      {
+        "row": 7,
+        "column": 6,
+        "score": 10
+      },
+      {
+        "row": 6,
+        "column": 5,
+        "score": 8
+      },
+      {
+        "row": 5,
+        "column": 4,
+        "score": 6
+      },
+      {
+        "row": 4,
+        "column": 4,
+        "score": 8
+      },
+      {
+        "row": 3,
+        "column": 3,
+        "score": 6
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "score": 4
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "score": 2
+      },
+      {
+        "row": 0,
+        "column": 0,
+        "score": 0
+      }
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        2,
+        6,
+        4,
+        2,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        8,
+        6,
+        4,
+        4,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        6,
+        7,
+        5,
+        3,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        4,
+        8,
+        6,
+        4,
+        5,
+        3
+      ],
+      [
+        0,
+        0,
+        1,
+        2,
+        2,
+        6,
+        10,
+        8,
+        6,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        8,
+        12,
+        10,
+        8
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        2,
+        6,
+        6,
+        10,
+        14,
+        12
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        4,
+        5,
+        8,
+        12,
+        16
+      ]
+    ]
+  },
+  "chineseAnalogyAlignment": {
+    "algorithm": "Smith-Waterman local alignment",
+    "a": "今天我们去看海",
+    "b": "今天我们看海",
+    "scoring": {
+      "match": 2,
+      "mismatch": -1,
+      "gap": -2,
+      "floor": 0
+    },
+    "score": 10,
+    "startCell": [
+      0,
+      0
+    ],
+    "maxCell": [
+      7,
+      6
+    ],
+    "alignedA": "今天我们去看海",
+    "alignedB": "今天我们-看海",
+    "tracebackMaxToZero": [
+      {
+        "row": 7,
+        "column": 6,
+        "score": 10
+      },
+      {
+        "row": 6,
+        "column": 5,
+        "score": 8
+      },
+      {
+        "row": 5,
+        "column": 4,
+        "score": 6
+      },
+      {
+        "row": 4,
+        "column": 4,
+        "score": 8
+      },
+      {
+        "row": 3,
+        "column": 3,
+        "score": 6
+      },
+      {
+        "row": 2,
+        "column": 2,
+        "score": 4
+      },
+      {
+        "row": 1,
+        "column": 1,
+        "score": 2
+      },
+      {
+        "row": 0,
+        "column": 0,
+        "score": 0
+      }
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        6,
+        4,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        8,
+        6,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        6,
+        7,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        8,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        6,
+        10
+      ]
+    ]
+  },
+  "validation": {
+    "byteForByteEqual": true,
+    "sha256Equal": true,
+    "originalSha256": "5471d35fc6fd7bdcfaaefc30b58f1338e2effb01d2fee0cb32c1d6c152c7ca32",
+    "recoveredSha256": "5471d35fc6fd7bdcfaaefc30b58f1338e2effb01d2fee0cb32c1d6c152c7ca32",
+    "correctedActualFileRegionEqual": true,
+    "strictVideoDecodeExitCode": 0,
+    "videoProbe": {
+      "width": 1280,
+      "height": 720,
+      "r_frame_rate": "30/1",
+      "duration": "3.000000",
+      "nb_read_frames": "90"
+    },
+    "shaIsValidationNotErrorCorrection": true
+  },
+  "atlas": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\bridges\\memory-film-atlas.jpg",
+    "sha256": "4f73db885d545e38e3b84f739ab4bbc57beb98645274469bf69416d6cd86f48d",
+    "width": 3840,
+    "height": 1944,
+    "columns": 10,
+    "rows": 9,
+    "cellWidth": 384,
+    "cellHeight": 216,
+    "frames": 90,
+    "fps": 30,
+    "durationSec": 3,
+    "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\recovered.mp4",
+    "ordering": "row-major, top-left frame 0, bottom-right frame 89",
+    "threeTextureRepeat": [
+      0.1,
+      0.1111111111111111
+    ],
+    "threeTextureOffset": "[frame % 10 / 10, 1 - (floor(frame / 10) + 1) / 9] with default flipY=true"
+  },
+  "limitations": [
+    "High redundancy: N-1 full-size parity blocks for N original blocks; no Fountain degree distribution or biochemical sequence screening.",
+    "Packet identities, original byte count, region location, read grouping and full-length endpoints are assumed known and reliable.",
+    "The five retained toy reads have independent, deliberately separated errors. Majority voting can fail for correlated errors or inadequate evidence.",
+    "The repair path uses global alignment on these known full-length toy reads; Smith-Waterman is demonstrated separately for local correspondence and is not the whole decoder.",
+    "All XOR parity packets and original block zero survive. Other erasure patterns may lack independent information and fail.",
+    "Byte equality verifies exact digital recovery. It makes no claim about real chemical DNA recovery rates."
+  ],
+  "commands": {
+    "createOriginal": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\bridges\\family-memory.png",
+      "-vf",
+      "zoompan=z='1.04':x='(iw-iw/zoom)/2+10*sin(on/89*PI)':y='(ih-ih/zoom)/2':d=90:s=1280x720:fps=30,format=yuv420p",
+      "-frames:v",
+      "90",
+      "-an",
+      "-c:v",
+      "libx264",
+      "-preset",
+      "medium",
+      "-crf",
+      "20",
+      "-threads",
+      "2",
+      "-map_metadata",
+      "-1",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\original.mp4"
+    ],
+    "decodeAtlasFromRecovered": [
+      "ffmpeg",
+      "-y",
+      "-hide_banner",
+      "-loglevel",
+      "error",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\recovered.mp4",
+      "-vf",
+      "fps=30,scale=384:216:flags=lanczos,tile=10x9:nb_frames=90:padding=0:margin=0",
+      "-frames:v",
+      "1",
+      "-q:v",
+      "2",
+      "-update",
+      "1",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\bridges\\memory-film-atlas.jpg"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\bridges\\family-memory.png",
+      "bytes": 1437656,
+      "sha256": "912e18c0adda26a9f31b75248313e17392a8be7a6cf22697dbb4b78df43b9ff8"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\scripts\\recover_memory_v5.py",
+      "bytes": 19485,
+      "sha256": "0dc8d647e9d1cdec39280df4542bad92911dd6b75e4a4eab32e74cb79167eccf"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\original.mp4",
+      "bytes": 205572,
+      "sha256": "5471d35fc6fd7bdcfaaefc30b58f1338e2effb01d2fee0cb32c1d6c152c7ca32"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\recovered.mp4",
+      "bytes": 205572,
+      "sha256": "5471d35fc6fd7bdcfaaefc30b58f1338e2effb01d2fee0cb32c1d6c152c7ca32"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\bridges\\memory-film-atlas.jpg",
+      "bytes": 1171836,
+      "sha256": "4f73db885d545e38e3b84f739ab4bbc57beb98645274469bf69416d6cd86f48d"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\encoded-packets.jsonl",
+      "bytes": 1669634,
+      "sha256": "fe18ea3fb608d7fb8d29357cc4f0937efca9ccb6512b98b7f00a09e4509e27c1"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\decode-metadata.json",
+      "bytes": 571,
+      "sha256": "213b621356b220a9e57abf87555292938ec23ad84646527cc5d4dfebe5ab04a9"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\received-packets.jsonl",
+      "bytes": 1307588,
+      "sha256": "ae93611dc9389e7b2769592ef261fdf8e02101f87c943e048c1885ba5e459b78"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\memory-v5\\observed-region-reads.json",
+      "bytes": 1037,
+      "sha256": "a2c8f10aa5d2f66427613f0040665ddbd7b5e1b3f8f770c511d01f9f3f325aad"
+    }
+  ]
+}

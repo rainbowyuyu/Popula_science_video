@@ -1,0 +1,82 @@
+{
+  "id": "s038",
+  "text": "它主要照顾强风下的舒适度。托住大楼的，还是下面这套一路相连的结构和基础。",
+  "ttsText": "它主要照顾大风天气下的舒适度。真正支撑大楼的，还是下面这套一路相连的结构和基础。",
+  "signature": "6979a6137d93a19eeb5568da254f2ecef357b6b6e2b2c391fce2f56832b88ef4",
+  "raw": "audio/raw/s038-6979a6137d.wav",
+  "processed": "public/voice/s038.wav",
+  "rawDuration": 6.960041666666666,
+  "duration": 7.2000416666666665,
+  "sha256": "091a943722ca23c54fa4e2454f592d4821b1c0ca06d120fd3f1e9c5cfd753b69",
+  "seed": 1769580051,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s038",
+    "s040",
+    "s042",
+    "s043"
+  ],
+  "rawEndpointDB": -96.05882939941269,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "6869ff9d4b18bf936bf9695ed97d12375c3cb0e559e8c559d5f83676ada94bbf",
+    "outputSha256": "091a943722ca23c54fa4e2454f592d4821b1c0ca06d120fd3f1e9c5cfd753b69",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.8632371760499282,
+    "input": {
+      "seconds": 7.2000416666666665,
+      "peakDb": -7.088729855699706,
+      "activeRmsDb": -22.71710206429824,
+      "quietFrameP10Db": -60.86698009750361
+    },
+    "output": {
+      "seconds": 7.2000416666666665,
+      "peakDb": -4.293648711575637,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.58090560867345
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "c34a3d091a13f3c3bb72ae3e307ac35669900bfee06995aed3008a9420929aa6"
+  },
+  "subjectiveListeningChecked": false,
+  "promotedFrom": "audio/candidates/v6-pronunciation/s038.wav"
+}

@@ -1,0 +1,109 @@
+{
+  "reviewType": "read-only factual and narration-mechanism review of current V5 source",
+  "narrationSource": "src/story-v5.json (frozen new script); temporary narration-v5 timing not treated as new audio",
+  "reviewedAt": "2026-10-11T20:21:20.312002+08:00",
+  "snapshotFiles": [
+    {
+      "path": "src/story-v5.json",
+      "sha256": "f65df8db71d43896ab37ca926041d318e11a1ace4e6db06248d9b35932a09db5"
+    },
+    {
+      "path": "src/scene/StationsV5.ts",
+      "sha256": "edf4e927908a49c398aa0aaa2552df90918e60e80351a0e13123e9010f50ceed"
+    },
+    {
+      "path": "src/EventsV5.ts",
+      "sha256": "9a514ba05fc45ae05c264f4112ef7abcb4f5b4b60e9eb4d3c972728baa9ec4d1"
+    },
+    {
+      "path": "src/FilmV5.tsx",
+      "sha256": "a2cde0ea7d3ec98ad92dd04992c35b513dd62cb0479b899a73e8e7d4595fa7b0"
+    },
+    {
+      "path": "src/scene/MemoryArchiveV5.ts",
+      "sha256": "8513ee383dcfc6838893b7848a2669dff53d5b03c735db9e9a598778eb9d4ab7"
+    },
+    {
+      "path": "src/teaching-data.json",
+      "sha256": "4d0f5a4eb9ccdfd3fb86c62c89762923360592567c71ff83fc462d5e28254848"
+    }
+  ],
+  "findings": [
+    {
+      "priority": 1,
+      "id": "fountain-loss-timing",
+      "files": [
+        "src/scene/StationsV5.ts",
+        "src/FilmV5.tsx",
+        "src/EventsV5.ts"
+      ],
+      "trigger": "n10 says remove whole blocks at the beginning of the Fountain group",
+      "evidence": "missing=ease((t-12)/3) fixes loss at scene 87-90; the missing-block callout is tied to n13, which explains XOR.",
+      "fix": "Create a n10 semantic loss event and use it for both B/C removal and the missing-block callout. Keep known A visible."
+    },
+    {
+      "priority": 1,
+      "id": "sw-zero-endpoint",
+      "files": [
+        "src/teaching-data.json",
+        "src/scene/StationsV5.ts"
+      ],
+      "trigger": "n25 promises traceback from the maximum score until zero",
+      "evidence": "The current path scores are [2,4,2,4,6,8]. The animation traverses indices 5 down to 0, stopping at score 2. Independent Smith-Waterman recomputation confirms the matrix and maximum score 8 are correct, but the path requires [0,0].",
+      "fix": "Prepend [0,0], derive animation step counts from path.length-1 instead of hard-coded 5/4, and verify the ring reaches the zero cell."
+    },
+    {
+      "priority": 2,
+      "id": "mapping-consistency",
+      "files": [
+        "src/scene/StationsV5.ts",
+        "scripts/recover_memory_v5.py"
+      ],
+      "trigger": "the same video is encoded and recovered throughout the story",
+      "evidence": "EncodeLine maps 00/01/10/11 to ATCG, while the real recovery script maps them to ACGT. Both conventions can work independently but disagree within this demonstration.",
+      "fix": "Use ACGT in the visible four-row mapping to match the actual bytes-to-DNA encoding."
+    },
+    {
+      "priority": 2,
+      "id": "playback-after-reassembly",
+      "files": [
+        "src/scene/MemoryArchiveV5.ts"
+      ],
+      "trigger": "return-shot image playback is intended to begin after all tiles are assembled",
+      "evidence": "Playback begins at local scene t=8, while the final tile completes at 1.6 + 17*0.07 + 9*0.055 + 6.4 = 9.685.",
+      "fix": "Start atlas playback no earlier than final assembly, or derive both assembly finish and playback trigger from one event."
+    },
+    {
+      "priority": 2,
+      "id": "new-error-phrases",
+      "files": [
+        "src/EventsV5.ts",
+        "src/scene/StationsV5.ts"
+      ],
+      "trigger": "n19 uses the frozen new verbs 换掉一个 / 多塞一个 / 少掉一个 / 再扔掉一整条读段",
+      "evidence": "The resolver still prefers old explanatory phrases, so it falls back to later technical nouns. Error rows already contain mutations and enter up to 3.2 audio seconds before those nouns.",
+      "fix": "Match the new explanatory phrases. If mutation is required to coincide with speech, allow an unmutated row to enter early and change the sequence only at action onset."
+    },
+    {
+      "priority": 2,
+      "id": "visible-demo-boundary",
+      "files": [
+        "src/FilmV5.tsx"
+      ],
+      "trigger": "n35 claims recovery and the film cites DNA Fountain",
+      "evidence": "The real local byte recovery uses a fixed high-redundancy XOR chain and a toy read cluster, while no on-screen label names that simplification. n02 does correctly say this is on a computer.",
+      "fix": "Add a brief return-shot label such as 电脑演示 · 固定XOR教学码 and 原始字节一致, without changing frozen narration."
+    }
+  ],
+  "verifiedCorrect": [
+    "Fountain graph includes a known A singleton; A then B then C is algebraically recoverable.",
+    "All three accepted constraint examples have exactly three G/C bases among six bases; the 50% label is numerically correct for these examples.",
+    "AAAAAA is a genuine six-base homopolymer example; suitability limits are presented in narration as device-dependent rather than universal numbers.",
+    "The Chinese analogy 今天我们去看海 / 今天我们看海 / 今天我们去看每 correctly demonstrates deletion and substitution.",
+    "DNA rows switch from compacted deletion to an inserted gap before voting, consistent with n23/n24.",
+    "Smith-Waterman score matrix exactly matches an independent dynamic-programming computation with match 2, mismatch -1, gap -2.",
+    "The local digital MP4 demonstration is byte-identical after actual 87-block erasure and five-read region repair; separate research reports document its limitations.",
+    "The historical 2017 train-film storage statement is sourced independently and is not represented by the generated family-memory picture."
+  ],
+  "timingLimitation": "Final word/audio timing must be reviewed after the newly synthesized V5 narration and captions replace temporary V4-derived data. This review identifies source-level semantic mismatches, not measured V5 phrase offsets."
+}

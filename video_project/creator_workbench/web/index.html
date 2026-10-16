@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>rainbow鱼 · 视频智能编辑器</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/editor-favicon.svg?v=rainbow2">
+  <link rel="alternate icon" type="image/png" href="/assets/editor-favicon-32.png?v=rainbow2">
+  <link rel="apple-touch-icon" href="/assets/editor-apple-touch.png?v=rainbow2">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/studio.css">
+  <link rel="stylesheet" href="/workspace.css">
+  <link rel="stylesheet" href="/context-control.css">
+  <link rel="stylesheet" href="/interactions.css">
+  <link rel="stylesheet" href="/video-review.css">
+  <link rel="stylesheet" href="/project-flow.css">
+  <link rel="stylesheet" href="/cover-editor.css">
+  <link rel="stylesheet" href="/project-memory.css">
+  <link rel="stylesheet" href="/agent-workspace.css">
+  <link rel="stylesheet" href="/workbench-shell.css">
+  <link rel="stylesheet" href="/app-navigation.css">
+  <script src="/app-navigation.js"></script>
+</head>
+<body>
+  <header class="topbar app-header">
+    <a class="brand" href="/" aria-label="rainbow鱼视频智能编辑器"><img src="/assets/editor-icon.svg?v=rainbow2" alt=""><span>rainbow鱼<small>AI 视频编辑</small></span></a>
+    <nav class="app-navigation" aria-label="工作台导航"><a href="/" class="selected" aria-current="page">创作工作台</a><a href="/learning.html" class="global-learn">学习与参考</a></nav>
+    <div class="header-actions"><div class="header-center"><span class="live-dot"></span><span id="connection-label">正在连接本地工作台</span></div><details id="task-center" class="task-center"><summary id="task-center-count">任务</summary><div class="task-center-panel"><strong>后台任务</strong><p>切换作品不会停止任务。刷新后可重新连接进度。</p><div id="task-center-list"></div></div></details><button id="refresh-button" class="icon-button" title="重新扫描工程、素材与技能" aria-label="刷新工作台">↻</button><button id="shutdown-button" class="icon-button" title="关闭本地工作台服务" aria-label="关闭工作台">⏻</button><span class="local-badge">LOCAL STUDIO</span></div>
+  </header>
+
+  <div id="global-error" class="error-banner" role="alert" hidden></div>
+  <div class="mobile-projectbar"><label for="mobile-project-select">当前工程</label><select id="mobile-project-select" aria-label="切换视频工程"></select><button id="mobile-resources-button" class="text-button">资源库 ↗</button></div>
+  <div class="workspace">
+    <aside class="library panel">
+      <div class="section-heading"><div><span class="eyebrow">WORKSPACE</span><h2>我的系列</h2></div><button id="new-project-button" class="icon-button" aria-label="新建视频工程" title="新建视频工程">＋</button></div>
+      <div class="library-management"><button id="series-manage-button" class="text-button">管理系列</button><button id="project-features-button" class="text-button">工程功能</button></div>
+      <div class="search-field"><span aria-hidden="true">⌕</span><input id="library-search" type="search" placeholder="搜索系列、作品或资源" aria-label="搜索创作资源"></div>
+      <div class="library-tabs" role="tablist" aria-label="资源类型"><button class="active" role="tab" aria-selected="true" data-library="projects">作品 <span id="project-count">—</span></button><button role="tab" aria-selected="false" data-library="skills">技能 <span id="skill-count">—</span></button><button role="tab" aria-selected="false" data-library="tools">工具</button></div>
+      <div id="library-list" class="library-list"><div class="empty-state">正在读取本地资源…</div></div>
+      <div class="library-footer"><span id="resource-summary">素材与能力，随工程一起创作</span><span id="version-label"></span></div>
+    </aside>
+    <main class="creation panel">
+      <div class="creation-heading"><div><span class="eyebrow">CURRENT PROJECT</span><h1 id="project-name">选择一个视频工程</h1><p id="project-context">从一个好故事开始。</p><details class="project-details"><summary>工程设置</summary><p id="project-location">所有生成与修改都保存在选定工程中</p><div class="studio-bindings"><label>系列<select id="series-select"><option value="">独立作品</option></select></label><label>模板<select id="template-select"><option value="">自由创作</option></select></label><button id="save-binding" class="text-button">应用</button></div><label class="series-reference"><input id="use-series-style" type="checkbox" checked>参考系列风格与封面规范</label></details></div><span id="project-status" class="status-pill">就绪</span></div>
+      <nav class="project-modules" aria-label="当前工程模块"><button data-section="creative" class="active">剪辑</button><button data-section="covers">封面与文案</button><button data-section="audio">声音</button><button data-section="motion">镜头</button><button data-section="memory">创作记忆</button><button data-section="organize">整理</button></nav>
+      <div id="editing-context-bar" class="editing-context-bar" hidden><span></span><button id="clear-editing-context" class="text-button">解除选段联动</button></div>
+      <section id="studio-workspace" class="studio-workspace" hidden></section>
+      <div id="conversation" class="conversation" aria-live="polite" aria-relevant="additions text">
+        <section id="welcome" class="welcome"><span class="welcome-mark">✦</span><h2>让下一个故事，<br>从这里开始。</h2><p>把想法交给工作台。连接你的模型、工具和素材，在右侧预览每一次创作。</p><div class="prompt-suggestions"><button data-prompt="先阅读当前工程，梳理故事、镜头、配音和素材，给出最值得优化的三个地方。">先看看这个工程 <span>↗</span></button><button data-prompt="分析当前成片，检查字幕遮挡、运镜连贯性和音画对应，整理具体时间点与修复建议。">检查成片与字幕 <span>↗</span></button><button data-prompt="根据当前主题和已有素材，设计一个有悬念、能让大众听懂的开场，保留rainbow鱼品牌规范。">打磨一个好开场 <span>↗</span></button></div></section>
+      </div>
+      <section class="composer-section"><div class="agent-dock-heading"><button id="agent-thread-toggle"><span class="live-dot"></span> 主智能体 <span id="agent-module-label">· 剪辑</span><span class="agent-expand">⌃</span></button><span>同一工程 · 连续协作</span></div>
+        <div id="prompt-context" class="prompt-context" hidden></div>
+        <div id="selected-skills" class="selected-skills" hidden></div>
+        <div id="run-activity" class="run-activity" hidden><span class="activity-dot"></span><span id="run-activity-text">正在创作…</span><button id="cancel-run" class="text-button">停止</button></div>
+        <form id="prompt-form" class="composer">
+          <label class="sr-only" for="prompt">你的创作要求</label><textarea id="prompt" rows="3" placeholder="描述想创作的内容，或告诉我这一版哪里可以更好…"></textarea>
+          <div class="composer-toolbar"><div class="composer-controls"><label class="select-shell" title="选择模型服务"><span class="sr-only">模型服务</span><select id="provider-select"><option value="dual">双模型协作</option><option value="openai">ChatGPT</option><option value="claude">Claude</option></select></label><label class="select-shell mode-select" title="创造模式可修改选定工程；审阅模式只读"><span class="sr-only">工作模式</span><select id="mode-select"><option value="creative">✦ 创造模式</option><option value="review">◎ 审阅模式</option></select></label><div id="context-control" class="context-control"><button id="context-toggle" type="button" class="context-toggle" aria-label="模型参数：上下文与独立思考强度" aria-expanded="false" aria-controls="context-panel"><span class="mini-dial" aria-hidden="true">◴</span><output id="context-value">1M</output><span class="dial-chevron">⌄</span></button><div id="context-panel" class="context-panel" hidden><div class="context-label"><strong>模型参数</strong><button id="context-reset" type="button">恢复默认</button></div><div class="context-budget-row"><div id="context-dial" class="context-dial" role="slider" tabindex="0" aria-label="上下文容量旋钮" aria-valuemin="16000" aria-valuemax="1000000" aria-valuenow="1000000"><span id="context-dial-value">1M</span></div><label>上下文容量<input id="context-number" type="number" min="16000" max="1000000" step="1000" value="1000000" aria-label="上下文 token 数"><small>16k — 1M tokens</small></label></div><input id="context-budget" type="range" min="0" max="1000" step="1" value="1000" aria-label="上下文容量" aria-describedby="context-hint"><div class="context-efforts"><label>GPT · effort<select id="effort-openai"><option value="default">跟随接口</option><option value="low">低</option><option value="medium">中</option><option value="high">高</option><option value="xhigh" selected>最高 xhigh</option></select></label><label>Claude · effort<select id="effort-claude"><option value="default">跟随接口</option><option value="low">低</option><option value="medium">中</option><option value="high">高</option><option value="max" selected>最高 max</option></select></label></div><p id="context-hint">新任务生效 · 容量与 effort 受所选接口支持范围约束。</p><div id="context-usage" class="context-usage" hidden></div></div></div><button type="button" id="skills-button" class="icon-button" title="添加技能" aria-label="添加技能">＋</button></div><button id="send-button" class="send-button" type="submit" disabled aria-label="开始创作"><span>开始</span><span aria-hidden="true">↑</span></button></div>
+        </form>
+        <div class="composer-footer"><span id="mode-help">在选定工程内读取素材、生成与修改文件</span><button id="restore-previous-draft" type="button" class="text-button" hidden>恢复之前的草稿</button><span>Ctrl ↵</span></div>
+        <label class="candidate-toggle"><input id="candidate-toggle" type="checkbox" checked>先比较 3 个方案，再选一个制作</label>
+        <details class="model-roles"><summary>协作偏好 · 优先主导</summary><div class="model-role-grid"><label>联合计划<select id="role-plan"><option value="openai">ChatGPT</option><option value="claude">Claude</option></select></label><label>主导实现<select id="role-model"><option value="openai">ChatGPT</option><option value="claude">Claude</option></select></label><label>协作完善<select id="role-motion"><option value="claude">Claude</option><option value="openai">ChatGPT</option></select></label><label>交叉验证<select id="role-integrate"><option value="openai">ChatGPT</option><option value="claude">Claude</option></select></label></div><p>选择优先主导；双方可按问题互补、实现与复核，共享工程上下文，串行接力。</p></details>
+        <div id="provider-help" class="provider-help"><span>正在读取 CC Switch 配置…</span><button id="check-provider" class="text-button" type="button">检查连接</button></div>
+      </section>
+    </main>
+    <aside class="preview panel">
+      <div class="section-heading"><div><span class="eyebrow">LIVE PREVIEW</span><h2>当前成片</h2></div><button id="reload-media" class="icon-button" title="刷新当前工程素材" aria-label="刷新素材">↻</button></div>
+      <div class="preview-stage" id="preview-stage"><div id="preview-empty" class="preview-empty"><span class="play-outline">▷</span><h3>让作品出现在这里</h3><p>选取成片、封面或音频，即可直接预览。</p></div><video id="video-preview" playsinline preload="metadata" hidden></video><img id="image-preview" alt="当前素材预览" hidden><div id="audio-wrap" class="audio-wrap" hidden><span>♫</span><audio id="audio-preview" controls preload="metadata"></audio></div></div>
+      <div class="preview-caption"><div><h3 id="media-title">尚未选择素材</h3><p id="media-detail">支持视频 / 封面 / 音频</p></div><a id="open-media" class="icon-button" hidden target="_blank" rel="noopener" aria-label="在新标签页打开素材" title="独立打开">↗</a></div>
+      <details class="video-versions"><summary>成片版本 <span id="media-count">0</span></summary><div class="media-filters" hidden><button data-media="all">全部</button><button data-media="video" class="active">视频</button><button data-media="image">封面</button><button data-media="audio">音频</button></div><div id="media-list" class="media-list"></div><div class="media-history-toolbar"><button id="show-history" class="text-button">查看历史版本</button><button id="history-more" class="text-button" hidden>再加载 30 项</button><span id="history-status"></span></div></details>
+      <div class="preview-footer"><span class="live-dot"></span><span>本地素材 · 直接预览</span></div>
+    </aside>
+  </div>
+  <dialog id="skill-dialog" class="detail-dialog"><div class="dialog-heading"><div><span class="eyebrow">SKILL REFERENCE</span><h2 id="skill-title">技能详情</h2></div><button class="icon-button" data-close-dialog aria-label="关闭">×</button></div><p id="skill-description"></p><pre id="skill-content"></pre><div class="dialog-actions"><button id="attach-skill" class="primary-button">用于这次创作</button><button class="secondary-button" data-close-dialog>关闭</button></div></dialog>
+  <dialog id="project-dialog" class="project-dialog"><form id="new-project-form"><div class="dialog-heading"><div><span class="eyebrow">NEW PROJECT</span><h2>新建视频工程</h2></div><button type="button" class="icon-button" data-close-dialog aria-label="关闭">×</button></div><p>为新故事建立独立目录，素材、脚本和成片保存在一起。</p><label for="new-project-name">工程名称</label><input id="new-project-name" name="name" required maxlength="70" placeholder="例如：光为什么会拐弯"><p id="new-project-error" class="inline-error" role="alert"></p><div class="dialog-actions"><button id="create-project-submit" type="submit" class="primary-button">创建工程</button><button type="button" class="secondary-button" data-close-dialog>取消</button></div></form></dialog>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script src="/app.js" defer></script>
+  <script src="/agent-workspace.js" defer></script>
+  <script src="/cover-editor.js" defer></script>
+  <script src="/project-memory.js" defer></script>
+  <script src="/module-feedback.js" defer></script>
+  <script src="/studio.js" defer></script>
+  <script src="/editor-bridge.js" defer></script>
+  <script src="/context-control.js" defer></script>
+  <script src="/interactions.js" defer></script>
+  <script src="/video-review.js" defer></script>
+  <script src="/workbench-shell.js" defer></script>
+</body>
+</html>

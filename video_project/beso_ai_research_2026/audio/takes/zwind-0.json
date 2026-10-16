@@ -1,0 +1,80 @@
+{
+  "id": "zwind-0",
+  "text": "静力算得过，还要把候选结构放进随时间变化的风和浪里。这里用到 Zwind。",
+  "ttsText": "静力算得过，还要把候选结构放进随时间变化的风和浪里。这里用到 Z，风。",
+  "signature": "e728be76c93ab43c5a36ffc79fd1c0836864b2dd067c35b0698a9d9422c0f293",
+  "raw": "audio/raw/zwind-0-e728be76c9.wav",
+  "processed": "public/voice/zwind-0.wav",
+  "rawDuration": 5.92,
+  "duration": 6.16,
+  "sha256": "559f9ee8badd48dea3e87494e187ca80afe06ca1e99cd8bdf61314a81b1b4e7b",
+  "seed": 3878207094,
+  "attempt": 3,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "zwind-0"
+  ],
+  "rawEndpointDB": -96.97285851890511,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "04d11c6a912baa63c6069a00d7ff6b4f57ef85248d7d807fbc01eb47d7e80d9c",
+    "outputSha256": "559f9ee8badd48dea3e87494e187ca80afe06ca1e99cd8bdf61314a81b1b4e7b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 6.16,
+      "peakDb": -9.3663105042225,
+      "activeRmsDb": -25.761138926770876,
+      "quietFrameP10Db": -93.28510472382115
+    },
+    "output": {
+      "seconds": 6.16,
+      "peakDb": -5.1351479996514735,
+      "activeRmsDb": -22.657915830951115,
+      "quietFrameP10Db": -93.21141208743964
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.5508860759493671,
+    "unmodifiedRawSHA256": "f80cb998ffb27ab2b397b4b05317bdceefb49270b7c8db8d8181ac467bc5cac0"
+  },
+  "subjectiveListeningChecked": false,
+  "selectionReason": "Short pause separates Latin Z from Chinese wind; fresh ASR now recognizes 风. No claim of subjective listening."
+}

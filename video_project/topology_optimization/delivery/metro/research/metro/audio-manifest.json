@@ -1,0 +1,72 @@
+{
+  "title": "下一站·留白（疏朗版）",
+  "composer": "rainbow鱼 original procedural composition",
+  "source": "scripts/score_metro_v2.py; deterministic synthesis",
+  "license": "Original synthesized score; no third-party samples",
+  "tempoBpm": 75,
+  "instrumentation": [
+    "felt piano low layer",
+    "felt piano upper layer",
+    "soft root tone"
+  ],
+  "arrangement": "One slow chord per eight seconds; two restrained piano layers plus one low root; no plucks, pulses or continuous percussion",
+  "musicReused": false,
+  "durationSeconds": 307.06666666666666,
+  "targetLufs": -16,
+  "targetTruePeak": -1.5,
+  "premasterMeasurement": {
+    "input_i": "-19.81",
+    "input_tp": "-1.72",
+    "input_lra": "2.30",
+    "input_thresh": "-30.55",
+    "output_i": "-16.05",
+    "output_tp": "-1.50",
+    "output_lra": "2.40",
+    "output_thresh": "-26.78",
+    "normalization_type": "dynamic",
+    "target_offset": "0.05"
+  },
+  "masterMeasurement": {
+    "input_i": "-16.00",
+    "input_tp": "-1.50",
+    "input_lra": "2.40",
+    "input_thresh": "-26.73",
+    "output_i": "-16.00",
+    "output_tp": "-1.50",
+    "output_lra": "2.40",
+    "output_thresh": "-26.73",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.00"
+  },
+  "voiceToMusicTargetRmsSeparationDb": 22.5,
+  "voiceToMusicActiveRmsSeparationDb": 25.60414058539836,
+  "voiceToMusicActiveRmsMeasurement": {
+    "voiceRmsDb": -20.01077835382308,
+    "musicRmsDb": -45.61491893922144,
+    "afterDucking": true,
+    "activeMask": "narration samples with peak > 0.012"
+  },
+  "files": {
+    "narration.wav": {
+      "sha256": "ad19b1cd16d0adea4f0e8b687e8e69dda17d986c075db5c8fdaee47df1e84e0b",
+      "bytes": 88435244
+    },
+    "music.wav": {
+      "sha256": "965e8ae681096113f049ede3939c5e861e780683501b67b2f1d98da94fc94327",
+      "bytes": 88435244
+    },
+    "master.wav": {
+      "sha256": "0b828ec39e2d38b33ec4b6fe875536e208ac2615b85d37ea5a30d906f8ab56e5",
+      "bytes": 88435302
+    }
+  },
+  "subjectiveListeningChecked": false,
+  "aacMeasurementPending": false,
+  "aacMeasurement": {
+    "integratedLUFS": -16.01,
+    "truePeakDbTP": -1.47,
+    "sampleRate": 48000,
+    "channels": 2,
+    "source": "research/metro/final-media-qa.json"
+  }
+}

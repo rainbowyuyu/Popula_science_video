@@ -1,0 +1,83 @@
+{
+  "id": "h074",
+  "text": "这时需要考虑的抗凝药，作用在凝血过程中的不同环节，减少血栓形成或继续长大的机会，和抗血小板药用途有区别。",
+  "ttsText": "这时需要考虑的抗凝药，作用在凝血过程中的不同环节，减少血栓形成或继续长大的机会，和抗血小板药用途有区别。",
+  "signature": "56a494ee7a48c1ccbbfb824002155a5d0f47eb2b8f2617e4d41339ad8d94f6b7",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h074-56a494ee7a48-8f64b6a8ac.wav",
+  "processed": "audio/revision-v5/voice/h074.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "cab0f584c2c7d86c89ac084a560bffc00f78832cc7f303e6c5f8ba7b77b1d9b5",
+  "rawSHA256": "4f92b2806e0aa5d6ff9031080f0cef677857f68490d4d28c3d1f7d1b7e755658",
+  "seed": 2405742248,
+  "batchIds": [
+    "h073",
+    "h074",
+    "h075"
+  ],
+  "batchKey": "8f64b6a8ac2ec4f963d6dde271e68bd7f5ea476691ff375556efe0cb2fe13f3e",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -98.42447908664327,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "4f92b2806e0aa5d6ff9031080f0cef677857f68490d4d28c3d1f7d1b7e755658",
+    "outputSha256": "cab0f584c2c7d86c89ac084a560bffc00f78832cc7f303e6c5f8ba7b77b1d9b5",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.634613664110052,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -7.064299161570169,
+      "activeRmsDb": -23.404468744475587,
+      "quietFrameP10Db": -56.290279115740816
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.054809167937237,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -54.326248509618075
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

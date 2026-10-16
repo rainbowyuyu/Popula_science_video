@@ -1,0 +1,292 @@
+{
+  "version": 13,
+  "createdAt": "2026-10-12T08:16:12.738769+00:00",
+  "generationClosed": true,
+  "model": "wan2.7-i2v-2026-04-25",
+  "region": "China North 2 / Beijing",
+  "purpose": "Editorial concept transition only. No numerical, solver, stress, displacement, engineering-success or product-execution claim.",
+  "nominalPriceCNYPerSecond1080P": 1,
+  "nominalBudgetMaxCNY": 24,
+  "actualBillCNY": null,
+  "nativeModel": "public/beso-research/physics/native-model.json",
+  "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+  "officialVerification": "research/generation/v13-qwen-official.json",
+  "shots": {
+    "v13-waterline": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-000180.png",
+      "last": "work/v13-qwen/native-anchors/frame-000360.png",
+      "fromFrame": 180,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-000180.png",
+          "sha256": "2977aa9acc76eaf0a4cabe8ce1768968d882b13f613975f848ee0fffdce59116",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2194515
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-000360.png",
+          "sha256": "55f04e0ee879bcacd1df3118652198917421e28d3e7ce849351f50e7da57f608",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2157352
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:22:04.045267+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium cinematic THREE-SECOND editorial camera bridge between the supplied exact first and exact last images. Use both images as strict endpoint compositions. One continuous camera move, carefully eased acceleration and deceleration, no cuts, no dissolve, no fade to black, no jump, no shaking. Keep the same geometrical objects, proportions, connections and number of structural members as the endpoint images. Fine physically plausible brushed metal, soft daylight, elegant restrained ocean reflections and atmospheric perspective. The first image is the exact first frame; the last image is the exact last frame. Do not invent a new assembly, add or remove columns, detach beams, change the turbine, or produce duplicate structures. No text, no numbers, no labels, no UI controls, no logos. No stress simulation, physical-result imagery or engineering certification. This is a cinematic concept transition, not an engineering result. No extra boat, person, bird or flying object. No ornamental particle cloud. Preserve clean foreground and left-hand negative space for genuine program-composited interface and headings.\n\nThe lens glides laterally past the close metal column root and gently cranes upward to reveal more of the same semi-submersible platform. The ocean remains one connected surface, steel intersections stay intact, and light travels gently along the existing metal edges.",
+      "promptSource": "work/v13-qwen/prompts/v13-waterline.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "waterline-camera",
+      "seed": 202610130,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-plan-to-space": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-001200.png",
+      "last": "work/v13-qwen/native-anchors/frame-001380.png",
+      "fromFrame": 1200,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-001200.png",
+          "sha256": "2221168abef8715b23839f2c6f9b6032f3b85d637a455a06bc3920ec13ae118b",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2349026
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-001380.png",
+          "sha256": "b89cc321a3cd299c942bf51326e6dee22420881a4718030b58fac3b0dbca336b",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2588537
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:22:04.490483+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium cinematic THREE-SECOND editorial camera bridge between the supplied exact first and exact last images. Use both images as strict endpoint compositions. One continuous camera move, carefully eased acceleration and deceleration, no cuts, no dissolve, no fade to black, no jump, no shaking. Keep the same geometrical objects, proportions, connections and number of structural members as the endpoint images. Fine physically plausible brushed metal, soft daylight, elegant restrained ocean reflections and atmospheric perspective. The first image is the exact first frame; the last image is the exact last frame. Do not invent a new assembly, add or remove columns, detach beams, change the turbine, or produce duplicate structures. No text, no numbers, no labels, no UI controls, no logos. No stress simulation, physical-result imagery or engineering certification. This is a cinematic concept transition, not an engineering result. No extra boat, person, bird or flying object. No ornamental particle cloud. Preserve clean foreground and left-hand negative space for genuine program-composited interface and headings.\n\nMake a graceful orbital travel in the same ocean world. Introduce a very subtle technical contour as a reflection along the original metal edges, then return to solid material before the last frame. Do not turn the actual platform into another shape. The planned task UI is composited separately; leave the left-hand interface space untouched.",
+      "promptSource": "work/v13-qwen/prompts/v13-plan-to-space.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "plan-spatial-handoff",
+      "seed": 202610131,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-domain-closeup": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-001596.png",
+      "last": "work/v13-qwen/native-anchors/frame-001776.png",
+      "fromFrame": 1596,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-001596.png",
+          "sha256": "49cc599ff55556d98252852cd338d326515ffb97f69602c61d6bbae5cd05d181",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2280620
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-001776.png",
+          "sha256": "f6be3e30e5455af2a769079beba3c55d52e9873de3198f7de7b147babda1af0e",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2226511
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:28:34.072356+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium cinematic THREE-SECOND editorial camera bridge between the supplied exact first and exact last images. Use both images as strict endpoint compositions. One continuous camera move, carefully eased acceleration and deceleration, no cuts, no dissolve, no fade to black, no jump, no shaking. Keep the same geometrical objects, proportions, connections and number of structural members as the endpoint images. Fine physically plausible brushed metal, soft daylight, elegant restrained ocean reflections and atmospheric perspective. The first image is the exact first frame; the last image is the exact last frame. Do not invent a new assembly, add or remove columns, detach beams, change the turbine, or produce duplicate structures. No text, no numbers, no labels, no UI controls, no logos. No stress simulation, physical-result imagery or engineering certification. This is a cinematic concept transition, not an engineering result. No extra boat, person, bird or flying object. No ornamental particle cloud. Preserve clean foreground and left-hand negative space for genuine program-composited interface and headings.\n\nThe lens makes one gentle three-second lateral orbit around the SAME solid teal rectangular design-domain specimen visible in BOTH exact endpoint images. The specimen is an independent rectangular engineering display beside the ocean platform. Keep its complete rectangular geometry, thickness, edges, proportions and material unchanged. Reveal depth only through camera parallax and soft light. Do not optimize, remove material, excavate, bend, scale, fracture, or turn it into an arch. Do not create any BESO iteration, physical field, output data or result. Keep any platform visible in the background unchanged and separate. Match the exact same rectangular specimen at the final frame.\n",
+      "promptSource": "work/v13-qwen/prompts/v13-domain-closeup.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "independent-domain-camera",
+      "seed": 202610132,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-domain-to-ocean": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-002220.png",
+      "last": "work/v13-qwen/native-anchors/frame-002400.png",
+      "fromFrame": 2220,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-002220.png",
+          "sha256": "08d4327bedecbf066412c348eeeeada05450d212f3952c6b3b0f81faa4a99cc8",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2346892
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-002400.png",
+          "sha256": "7da99675513fcc50e15f8bcdc06209ab50d68666aa576162868df6d369f2e8db",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2107761
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:22:05.369102+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium cinematic THREE-SECOND editorial camera bridge between the supplied exact first and exact last images. Use both images as strict endpoint compositions. One continuous camera move, carefully eased acceleration and deceleration, no cuts, no dissolve, no fade to black, no jump, no shaking. Keep the same geometrical objects, proportions, connections and number of structural members as the endpoint images. Fine physically plausible brushed metal, soft daylight, elegant restrained ocean reflections and atmospheric perspective. The first image is the exact first frame; the last image is the exact last frame. Do not invent a new assembly, add or remove columns, detach beams, change the turbine, or produce duplicate structures. No text, no numbers, no labels, no UI controls, no logos. No stress simulation, physical-result imagery or engineering certification. This is a cinematic concept transition, not an engineering result. No extra boat, person, bird or flying object. No ornamental particle cloud. Preserve clean foreground and left-hand negative space for genuine program-composited interface and headings.\n\nThe camera retreats along a clean spatial arc from the separate saved topology specimen back to the original semi-submersible platform over the ocean, as shown in the final reference. These are two separate objects; DO NOT morph one into the other. Carry the viewpoint using gentle depth parallax and clean light; the saved numerical outputs will be composited by software.",
+      "promptSource": "work/v13-qwen/prompts/v13-domain-to-ocean.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "independent-domain-return",
+      "seed": 202610133,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-engineer-inspection": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-004080.png",
+      "last": "work/v13-qwen/native-anchors/frame-004260.png",
+      "fromFrame": 4080,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-004080.png",
+          "sha256": "973afb3ddb33cc33ef19672e5c502f9e8cd5f97d910670a86eba00a62802922d",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2651000
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-004260.png",
+          "sha256": "f0a875b2c098fc79fc77ec8578af03dae5ac24d2677b72a0a559c1ba44c68775",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2857159
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:22:05.794961+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium cinematic THREE-SECOND editorial camera bridge between the supplied exact first and exact last images. Use both images as strict endpoint compositions. One continuous camera move, carefully eased acceleration and deceleration, no cuts, no dissolve, no fade to black, no jump, no shaking. Keep the same geometrical objects, proportions, connections and number of structural members as the endpoint images. Fine physically plausible brushed metal, soft daylight, elegant restrained ocean reflections and atmospheric perspective. The first image is the exact first frame; the last image is the exact last frame. Do not invent a new assembly, add or remove columns, detach beams, change the turbine, or produce duplicate structures. No text, no numbers, no labels, no UI controls, no logos. No stress simulation, physical-result imagery or engineering certification. This is a cinematic concept transition, not an engineering result. No extra boat, person, bird or flying object. No ornamental particle cloud. Preserve clean foreground and left-hand negative space for genuine program-composited interface and headings.\n\nMove smoothly around the existing beam and hub assembly for an engineer inspection. Use subtle edge reflections to reveal a connection from overhead to a three-quarter close view. Every beam stays attached; do not disassemble, scale, thicken or recolor the platform. Keep the established three outer columns and three radial connections.",
+      "promptSource": "work/v13-qwen/prompts/v13-engineer-inspection.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "engineer-inspection-orbit",
+      "seed": 202610134,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-delivery-aerial": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-005730.png",
+      "last": "work/v13-qwen/native-anchors/frame-005910.png",
+      "fromFrame": 5730,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-005730.png",
+          "sha256": "8f583806c11007126b658d4683069f0c0b5ca4ca3244a5bd9e94ee965312ae59",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1752015
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-005910.png",
+          "sha256": "9f6dcfad58d37ea8207450cc30412947d2a7a95a6d2117b75f9b2e9e270c9afc",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 1750358
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:22:06.223764+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium cinematic THREE-SECOND editorial camera bridge between the supplied exact first and exact last images. Use both images as strict endpoint compositions. One continuous camera move, carefully eased acceleration and deceleration, no cuts, no dissolve, no fade to black, no jump, no shaking. Keep the same geometrical objects, proportions, connections and number of structural members as the endpoint images. Fine physically plausible brushed metal, soft daylight, elegant restrained ocean reflections and atmospheric perspective. The first image is the exact first frame; the last image is the exact last frame. Do not invent a new assembly, add or remove columns, detach beams, change the turbine, or produce duplicate structures. No text, no numbers, no labels, no UI controls, no logos. No stress simulation, physical-result imagery or engineering certification. This is a cinematic concept transition, not an engineering result. No extra boat, person, bird or flying object. No ornamental particle cloud. Preserve clean foreground and left-hand negative space for genuine program-composited interface and headings.\n\nA restrained drone-like aerial pullback around the complete turbine and three-column platform, ending exactly on the final image composition. Keep the full coherent machine present and steady; no multiplying turbines, no beam disassembly, no new landscape. Gentle light and ocean texture motion, dignified final hero shot.",
+      "promptSource": "work/v13-qwen/prompts/v13-delivery-aerial.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "complete-platform-aerial",
+      "seed": 202610135,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-waterline-r2": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-000180.png",
+      "last": "work/v13-qwen/native-anchors/frame-000360.png",
+      "fromFrame": 180,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-000180.png",
+          "sha256": "2977aa9acc76eaf0a4cabe8ce1768968d882b13f613975f848ee0fffdce59116",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2194515
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-000360.png",
+          "sha256": "55f04e0ee879bcacd1df3118652198917421e28d3e7ce849351f50e7da57f608",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2157352
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:38:05.764471+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium THREE-SECOND editorial camera movement between the supplied EXACT FIRST and EXACT LAST frame of the SAME single semi-submersible wind turbine. Respect both endpoint compositions strictly. Make only the small lateral camera translation and modest upward crane implied by these reference frames, with smooth easing. No wide detour, no pass behind an occluder, no cut, no dissolve, no black frame. The same original right-hand turbine remains continuously visible throughout, with its original three outer columns, three inclined inner legs, three radial hub connections, one hub and EXACTLY ONE tower.\n\nThere is ONLY ONE TOWER in this entire scene: the existing tall slender tower at the RIGHT of both reference images. Keep it the unique tower at every intermediate frame. There are no other turbines anywhere. Do not create any near-camera column, giant foreground tower, pipe, mast, wall, blade or foreground structure. Nothing new may slide in from any screen edge. No invented occlusion or foreground wipe. The left part of the composition remains clean open sea and sky, exactly as in both images.\n\nAll existing steel connections remain attached with unchanged proportions and member count; partly submerged members stay partly submerged. Reveal the same existing structure with gentle camera parallax and subtle natural surface lighting only. Keep one coherent sea surface and restrained physically plausible ocean texture. No floating detached parts, bending or topology evolution. No numbers, words, labels, UI, graphs, results, logos, watermarks, extra boats, people, birds or decorative particles. This is a camera concept bridge, not a stress or solver result. Match the final supplied image exactly.",
+      "promptSource": "work/v13-qwen/prompts/v13-waterline-r2.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "waterline-camera-corrected-one-tower",
+      "seed": 202610136,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    },
+    "v13-platform-reveal": {
+      "ready": true,
+      "first": "work/v13-qwen/native-anchors/frame-000480.png",
+      "last": "work/v13-qwen/native-anchors/frame-000660.png",
+      "fromFrame": 480,
+      "durationS": 3,
+      "durationInFrames": 180,
+      "sourceFrames": [
+        {
+          "path": "work/v13-qwen/native-anchors/frame-000480.png",
+          "sha256": "539f9377b5d7e10ed6b2db07222e61cf81468ee112c82c0d023db67890a902ce",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2277938
+        },
+        {
+          "path": "work/v13-qwen/native-anchors/frame-000660.png",
+          "sha256": "f72ebd4809d5667a9a6c64e40082ecf797feb30ea4629036b475fccb84ab8b87",
+          "width": 1920,
+          "height": 1080,
+          "bytes": 2343219
+        }
+      ],
+      "anchorsBoundAt": "2026-10-12T08:45:35.286507+00:00",
+      "nativeModel": "public/beso-research/physics/native-model.json",
+      "nativeModelSHA256": "2d156156e6faff7073fa34dd46546f2dd90e215c3ebac58290f9dc4fe8381668",
+      "prompt": "Create one premium THREE-SECOND editorial camera movement between the supplied EXACT FIRST and EXACT LAST frame of the SAME single semi-submersible wind turbine. Respect both endpoint compositions strictly. Make only the modest upward crane and gentle backward pull implied by these reference frames, revealing the SAME platform with smooth easing. Do not redesign or modify the existing native tower, hub, beams, legs, outer columns or rotor; this is solely a camera movement. Refine only natural ocean texture and restrained daylight. No wide detour, no pass behind an occluder, no cut, no dissolve, no black frame. The same original right-hand turbine remains continuously visible throughout, with its original three outer columns, three inclined inner legs, three radial hub connections, one hub and EXACTLY ONE tower.\n\nThere is ONLY ONE TOWER in this entire scene: the existing tall slender tower at the RIGHT of both reference images. Keep it the unique tower at every intermediate frame. There are no other turbines anywhere. Do not create any near-camera column, giant foreground tower, pipe, mast, wall, blade or foreground structure. Nothing new may slide in from any screen edge. No invented occlusion or foreground wipe. The left part of the composition remains clean open sea and sky, exactly as in both images.\n\nAll existing steel connections remain attached with unchanged proportions and member count; partly submerged members stay partly submerged. Reveal the same existing structure with gentle camera parallax and subtle natural surface lighting only. Keep one coherent sea surface and restrained physically plausible ocean texture. No floating detached parts, bending or topology evolution. No numbers, words, labels, UI, graphs, results, logos, watermarks, extra boats, people, birds or decorative particles. This is a camera concept bridge, not a stress or solver result. Match the final supplied image exactly.",
+      "promptSource": "work/v13-qwen/prompts/v13-platform-reveal.txt",
+      "negativePrompt": "generated letters, generated numbers, UI text, charts, stress results, extra columns, floating disconnected parts, extra wind turbines, extra blades, melted geometry, camera cut, flicker, logo, watermark, black bars, neon, lens flare",
+      "role": "single-platform-upward-reveal",
+      "seed": 202610137,
+      "conceptLabelRequired": true,
+      "generatedAudioMustBeMuted": true
+    }
+  },
+  "generationClosedAt": "2026-10-12T08:47:37.679534+00:00",
+  "generationClosedReason": "Parent explicitly forbids further paid submissions after the final one corrected stable-platform reveal task; editorial review and publish may continue",
+  "generationReopenedAt": "2026-10-12T08:45:35.263020+00:00",
+  "generationReopenedOnlyForTask": "v13-platform-reveal"
+}

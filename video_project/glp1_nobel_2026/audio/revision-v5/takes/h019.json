@@ -1,0 +1,83 @@
+{
+  "id": "h019",
+  "text": "研究者做过一个比较：喝糖水，和从静脉把血糖升到相近水平。喝下去时，胰岛素反应常常更强。",
+  "ttsText": "研究者做过一个比较：喝糖水，和从静脉把血糖升到相近水平。喝下去时，胰岛素反应常常更强。",
+  "signature": "e2a67624c9ee1af70ffd59ffda21aaf4700ba423c3c02af7a6140f89b5cc137b",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h019-e2a67624c9ee-388b2128f5.wav",
+  "processed": "audio/revision-v5/voice/h019.wav",
+  "rawDuration": 8.4,
+  "duration": 8.4,
+  "sampleRate": 48000,
+  "sha256": "7e0f3cfa2bbb1e70fcf3effb4bad4041d2b8be38a63700b0c80b65ed86fe61c5",
+  "rawSHA256": "b635845bade7bcabf8210180281a0dd4f6441f5472a70962ceaebe6186ffce7b",
+  "seed": 948642088,
+  "batchIds": [
+    "h017",
+    "h018",
+    "h019"
+  ],
+  "batchKey": "388b2128f57f65d1d164c33528acad9ae53469fd9b29fb7acbac6383cc134754",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -72.79098835951469,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "b635845bade7bcabf8210180281a0dd4f6441f5472a70962ceaebe6186ffce7b",
+    "outputSha256": "7e0f3cfa2bbb1e70fcf3effb4bad4041d2b8be38a63700b0c80b65ed86fe61c5",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.9139890433657563,
+    "input": {
+      "seconds": 8.4,
+      "peakDb": -6.541063794314477,
+      "activeRmsDb": -22.532920759872486,
+      "quietFrameP10Db": -61.85583284231708
+    },
+    "output": {
+      "seconds": 8.4,
+      "peakDb": -4.584541915026776,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.32913967995718
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

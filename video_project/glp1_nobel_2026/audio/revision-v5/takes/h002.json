@@ -1,0 +1,83 @@
+{
+  "id": "h002",
+  "text": "先看这顿家常饭：米饭、肉菜，再来一杯甜饮。吃下去以后，身体得把这批营养安排到合适的地方。",
+  "ttsText": "先看这顿家常饭：米饭、肉菜，再来一杯甜饮。吃下去以后，身体得把这批营养安排到合适的地方。",
+  "signature": "d20e1551fdfc324c4ef6967fced8e0cb34aa924a56d0183a375c4899a5092a51",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h002-d20e1551fdfc-68037936e8.wav",
+  "processed": "audio/revision-v5/voice/h002.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.720041666666667,
+  "sampleRate": 48000,
+  "sha256": "e908623fc52b83b6d6bc5176210177342477cf9a19b262d67c74df439674394b",
+  "rawSHA256": "23fd3ac3dafb9218511a850c512e428413758c4dec1ec19d09e4f150b4c43508",
+  "seed": 1745058102,
+  "batchIds": [
+    "h002",
+    "h003",
+    "h004"
+  ],
+  "batchKey": "68037936e8a69fb5c82c3705de83365ae770db71f132ae2c3cdf37ee01ecc68e",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -63.333771682514744,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "23fd3ac3dafb9218511a850c512e428413758c4dec1ec19d09e4f150b4c43508",
+    "outputSha256": "e908623fc52b83b6d6bc5176210177342477cf9a19b262d67c74df439674394b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.064744880383806,
+    "input": {
+      "seconds": 8.720041666666667,
+      "peakDb": -7.275137176100353,
+      "activeRmsDb": -22.894099178046613,
+      "quietFrameP10Db": -61.32073527008649
+    },
+    "output": {
+      "seconds": 8.720041666666667,
+      "peakDb": -4.464558057915122,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -60.8038482276483
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

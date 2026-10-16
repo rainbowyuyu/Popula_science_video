@@ -1,0 +1,83 @@
+{
+  "id": "h016",
+  "text": "尤其上了年纪，减重时还要留住肌肉。扶着稳固椅子练起坐，或做合适的弹力带练习，和散步各有用处。",
+  "ttsText": "尤其上了年纪，减重时还要留住肌肉。扶着稳固椅子练起坐，或做合适的弹力带练习，和散步各有用处。",
+  "signature": "7462cb3375fae6e7409b3c174a2128b9e577c4690a81d40e35a2c6908063e17e",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h016-7462cb3375fa-485f30f9c9.wav",
+  "processed": "audio/revision-v5/voice/h016.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "0b01556fcecc46cfbc3921da8ae19dd81fc31a602185a2c7c0c73b176fdb081f",
+  "rawSHA256": "9f1de76eead5bc35f18a0793e800ed9d1073596d13301a358b962f5fef7a11c2",
+  "seed": 1214198009,
+  "batchIds": [
+    "h014",
+    "h015",
+    "h016"
+  ],
+  "batchKey": "485f30f9c94206083f028dbbf0c5d1a961b7a6a3eba51aaccc624353e42c6558",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -96.5279311027693,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "9f1de76eead5bc35f18a0793e800ed9d1073596d13301a358b962f5fef7a11c2",
+    "outputSha256": "0b01556fcecc46cfbc3921da8ae19dd81fc31a602185a2c7c0c73b176fdb081f",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.5478004265603467,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -6.256304643538271,
+      "activeRmsDb": -22.224426319941536,
+      "quietFrameP10Db": -60.834991126420846
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -6.271748712423325,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.14892475117644
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

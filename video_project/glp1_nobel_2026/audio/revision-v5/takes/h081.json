@@ -1,0 +1,83 @@
+{
+  "id": "h081",
+  "text": "睡眠也在这张网里。经常睡不够，会影响食欲调节，让人更想吃，也更难察觉已经吃饱。",
+  "ttsText": "睡眠也在这张网里。经常睡不够，会影响食欲调节，让人更想吃，也更难察觉已经吃饱。",
+  "signature": "dd9af5a579802a54c42f1c503b48da2a738fbdb50bf794696eeeaa8ba0b21ba2",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h081-dd9af5a57980-93d1e4e4b3.wav",
+  "processed": "audio/revision-v5/voice/h081.wav",
+  "rawDuration": 7.12,
+  "duration": 7.12,
+  "sampleRate": 48000,
+  "sha256": "c1d19f9c7a7b95c5008def45312e5c54cf5527f05e596be06a535ee07d344a33",
+  "rawSHA256": "08796eac31df04602600f8b0830fc9bbd2b5b8e20804572af67116b2a6de60c7",
+  "seed": 2480006372,
+  "batchIds": [
+    "h079",
+    "h080",
+    "h081"
+  ],
+  "batchKey": "93d1e4e4b30944c97104318e5eff55da1bce2c1c608fb4091ab31a079e631d0e",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -56.32911853091101,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "08796eac31df04602600f8b0830fc9bbd2b5b8e20804572af67116b2a6de60c7",
+    "outputSha256": "c1d19f9c7a7b95c5008def45312e5c54cf5527f05e596be06a535ee07d344a33",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.8731393677524295,
+    "input": {
+      "seconds": 7.12,
+      "peakDb": -8.658601638835782,
+      "activeRmsDb": -23.69177304018222,
+      "quietFrameP10Db": -59.81402695523631
+    },
+    "output": {
+      "seconds": 7.12,
+      "peakDb": -4.529156998026179,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -58.51200510175799
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

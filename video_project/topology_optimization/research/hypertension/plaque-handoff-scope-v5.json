@@ -1,0 +1,166 @@
+{
+  "sourceDiff": {
+    "priorVerifiedHash": "add7f8173c1ad64b5990a3385f59332b7bd04fadfad1ed6e87b32b98326e0d82",
+    "currentSourceHash": "5c213cbb262fcfa1ee6824db91fcb93677f233f909f8058b66093975c11282d1",
+    "reconstructionMatchesPriorHash": true,
+    "exactRemovedBlock": "  // Hand the lesion close-up back to its atlas context before the cutaway\n  // closes. Keep this correction within the final organ pullback interval.\n  if(s.time>=timeline.clips.find(c=>c.id==='h044')!.start/30&&s.time<timeline.scenes.find(c=>c.id==='measure')!.start/30){\n   macro*=mix(1,this.aortaDetailVisibility(s.time,microContext),this.clipProgress('h044',s.time,.7));\n  }\n",
+    "additionalTokenChange": "let macro -> const macro when reconstructing prior version",
+    "unchangedPlaqueOpacityAndCamera": true,
+    "branchTimeCondition": "s.time >= h044.start / 30 && s.time < measure.start / 30",
+    "firstPotentialFrame": 8011,
+    "lastPotentialFrame": 8180,
+    "exclusiveEndFrame": 8181,
+    "scope": "Current source minus this exact condition block and let-to-const token change reproduces the previously fully audited source SHA256. All other code, including lesion opacity and camera calls, is identical."
+  },
+  "samples": [
+    {
+      "frame": 8010,
+      "previous": {
+        "aortaCutawayOpacity": 0.92,
+        "plaqueMaxOpacity": 1,
+        "atlasAortaOpacity": 0.0008000000000000229,
+        "atlasArteryOpacity": 0.00040000000000001146,
+        "atlasHeartOpacity": 0.0008000000000000229,
+        "atlasKidneyOpacity": 0.008000000000000007
+      },
+      "current": {
+        "aortaCutawayOpacity": 0.92,
+        "plaqueMaxOpacity": 1,
+        "atlasAortaOpacity": 0.0008000000000000229,
+        "atlasArteryOpacity": 0.00040000000000001146,
+        "atlasHeartOpacity": 0.0008000000000000229,
+        "atlasKidneyOpacity": 0.008000000000000007
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    },
+    {
+      "frame": 8011,
+      "previous": {
+        "aortaCutawayOpacity": 0.92,
+        "plaqueMaxOpacity": 1,
+        "atlasAortaOpacity": 0.0008000000000000229,
+        "atlasArteryOpacity": 0.00040000000000001146,
+        "atlasHeartOpacity": 0.0008000000000000229,
+        "atlasKidneyOpacity": 0.008000000000000007
+      },
+      "current": {
+        "aortaCutawayOpacity": 0.92,
+        "plaqueMaxOpacity": 1,
+        "atlasAortaOpacity": 0.0008000000000000229,
+        "atlasArteryOpacity": 0.00040000000000001146,
+        "atlasHeartOpacity": 0.0008000000000000229,
+        "atlasKidneyOpacity": 0.008000000000000007
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    },
+    {
+      "frame": 8025,
+      "previous": {
+        "aortaCutawayOpacity": 0.6454501346339825,
+        "plaqueMaxOpacity": 0.701576233297807,
+        "atlasAortaOpacity": 0.0008000000000000229,
+        "atlasArteryOpacity": 0.00040000000000001146,
+        "atlasHeartOpacity": 0.0008000000000000229,
+        "atlasKidneyOpacity": 0.008000000000000007
+      },
+      "current": {
+        "aortaCutawayOpacity": 0.6454501346339825,
+        "plaqueMaxOpacity": 0.701576233297807,
+        "atlasAortaOpacity": 0.1302967566797691,
+        "atlasArteryOpacity": 0.08990649824406471,
+        "atlasHeartOpacity": 0.14916008613057302,
+        "atlasKidneyOpacity": 0.14287280557324816
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    },
+    {
+      "frame": 8047,
+      "previous": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.0008000000000000229,
+        "atlasArteryOpacity": 0.00040000000000001146,
+        "atlasHeartOpacity": 0.0008000000000000229,
+        "atlasKidneyOpacity": 0.008000000000000007
+      },
+      "current": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.55,
+        "atlasArteryOpacity": 0.38,
+        "atlasHeartOpacity": 0.63,
+        "atlasKidneyOpacity": 0.58
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    },
+    {
+      "frame": 8065,
+      "previous": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.044167614567918845,
+        "atlasArteryOpacity": 0.030375139275276797,
+        "atlasHeartOpacity": 0.05048481989463682,
+        "atlasKidneyOpacity": 0.05316801808603344
+      },
+      "current": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.55,
+        "atlasArteryOpacity": 0.38,
+        "atlasHeartOpacity": 0.63,
+        "atlasKidneyOpacity": 0.58
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    },
+    {
+      "frame": 8180,
+      "previous": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.55,
+        "atlasArteryOpacity": 0.38,
+        "atlasHeartOpacity": 0.63,
+        "atlasKidneyOpacity": 0.58
+      },
+      "current": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.55,
+        "atlasArteryOpacity": 0.38,
+        "atlasHeartOpacity": 0.63,
+        "atlasKidneyOpacity": 0.58
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    },
+    {
+      "frame": 8181,
+      "previous": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.55,
+        "atlasArteryOpacity": 0.38,
+        "atlasHeartOpacity": 0.63,
+        "atlasKidneyOpacity": 0.58
+      },
+      "current": {
+        "aortaCutawayOpacity": 0,
+        "plaqueMaxOpacity": 0,
+        "atlasAortaOpacity": 0.55,
+        "atlasArteryOpacity": 0.38,
+        "atlasHeartOpacity": 0.63,
+        "atlasKidneyOpacity": 0.58
+      },
+      "plaqueOpacityUnchanged": true,
+      "aortaCutawayUnchanged": true
+    }
+  ],
+  "actualRenderCalls": 14,
+  "passed": true
+}

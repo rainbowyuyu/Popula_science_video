@@ -1,0 +1,81 @@
+{
+  "version": "V19Repair",
+  "schema": "rainbow.v19-repair.delivery-encode-qa/1",
+  "renderRunId": "caption-composite-20261013T042006210350Z",
+  "createdUTC": "2026-10-13T04:27:52.373951+00:00",
+  "video": "C:\\Users\\zju\\.codex\\visualizations\\2026\\10\\02\\01a0fc88-2a0a-7d81-86a9-bfe4cdd86204\\rainbow-v19-repair\\delivery\\彩虹为什么是弧形_V19_场景修复_定稿1080p.mp4",
+  "videoSHA256": "297d5e83808a6cd817d91cf462f5e85d9fc15dd9a7b29c711323a6ac9cc7a5ac",
+  "sourceAudit": "C:\\Users\\zju\\.codex\\visualizations\\2026\\10\\02\\01a0fc88-2a0a-7d81-86a9-bfe4cdd86204\\rainbow-v19-repair\\delivery\\caption-composite-20261013T042006210350Z\\audit.snapshot.json",
+  "renderRecord": "C:\\Users\\zju\\.codex\\visualizations\\2026\\10\\02\\01a0fc88-2a0a-7d81-86a9-bfe4cdd86204\\rainbow-v19-repair\\delivery\\caption-composite-20261013T042006210350Z\\render-composite.json",
+  "renderStatus": "completed",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 10702,
+    "duration": 356.73333333333335,
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "checks": {
+    "V19Repair source audit passed": true,
+    "V19Repair render record completed": true,
+    "Delivery path matches V19Repair render record": true,
+    "Delivery SHA256 matches V19Repair render record": true,
+    "Render record binds immutable V19Repair audit snapshot": true,
+    "V19Repair master WAV exists": true,
+    "V19Repair source audit binds current master WAV": true,
+    "Video and audio streams exist": true,
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "avgFPS": 30.0,
+    "nominalFPS": 30.0,
+    "frameCount": 10702,
+    "videoSeconds": 356.733008,
+    "audioSeconds": 356.733,
+    "Video is 1920x1080": true,
+    "Video is 30 fps": true,
+    "V19Repair frame count is 10702": true,
+    "V19Repair duration matches 10702 frames": true,
+    "Audio codec is AAC": true,
+    "Audio is 48 kHz stereo": true,
+    "Audio/video drift <= two frames": true,
+    "Strict FFmpeg audio/video decode passes": true,
+    "Black-frame analysis completed": true,
+    "Silence analysis completed": true,
+    "Loudness analysis completed": true,
+    "Decoded AAC true peak stays below -0.1 dBTP": true,
+    "Decoded AAC integrated loudness is between -20 and -12 LUFS": true
+  },
+  "errors": [],
+  "warnings": [],
+  "passed": true,
+  "scope": "ffprobe metadata, strict FFmpeg decode, black/silence reports, AAC loudness measurement and source/render provenance. No normal-speed visual playback or human listening is claimed.",
+  "audio": {
+    "master": "public/audio_v18/master-v18.wav",
+    "masterSHA256": "d2edf3cbc4059c7ef1f2e67009b4a54e959a2daad2d03fdfcf9db713ba40beaf",
+    "decodedAACLoudnorm": {
+      "input_i": "-16.06",
+      "input_tp": "-1.91",
+      "input_lra": "2.60",
+      "input_thresh": "-26.65",
+      "output_i": "-16.09",
+      "output_tp": "-1.63",
+      "output_lra": "2.40",
+      "output_thresh": "-26.66",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "blackDetect": {
+    "spans": [],
+    "longSpans": [],
+    "automaticPassPolicy": "reported-only"
+  },
+  "silenceDetect": {
+    "spans": [],
+    "longSpans": [],
+    "automaticPassPolicy": "reported-only"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "id": "v4c-brief-0",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "text": "AI Engineer，把这条路接起来。",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "elapsedSeconds": 3.2810000000026776,
+  "events": [
+    {
+      "event_id": "event_KVUmERIM7hOZAodfcCvns",
+      "type": "session.created",
+      "session": {
+        "object": "realtime.session",
+        "mode": "server_commit",
+        "model": "qwen3-tts-flash-realtime",
+        "voice": "Cherry",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "id": "sess_I3uPjWBmxSuSqXAuUMmvo"
+      }
+    },
+    {
+      "event_id": "event_IsdFmt6I8bCko7JvHcacw",
+      "type": "session.updated",
+      "session": {
+        "id": "sess_I3uPjWBmxSuSqXAuUMmvo",
+        "object": "realtime.session",
+        "model": "qwen3-tts-flash-realtime",
+        "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。",
+        "voice": "Ethan",
+        "mode": "server_commit",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "speech_rate": 1.04,
+        "language_type": "auto",
+        "optimize_instructions": false
+      }
+    },
+    {
+      "event_id": "event_RqOwbWQaodpC3rdRb2zVU",
+      "type": "response.created",
+      "response": {
+        "id": "resp_RhFNYddErRBVXaRMzfF5H",
+        "object": "realtime.response",
+        "conversation_id": "",
+        "status": "in_progress",
+        "voice": "Ethan",
+        "output": []
+      }
+    },
+    {
+      "event_id": "event_Dv5RepbmPCHGfH3BLOj4X",
+      "type": "response.output_item.added",
+      "response_id": "resp_RhFNYddErRBVXaRMzfF5H",
+      "output_index": 0,
+      "item": {
+        "id": "item_FPWBXgwERUnxolAogf3NZ",
+        "object": "realtime.item",
+        "type": "message",
+        "status": "in_progress",
+        "role": "assistant",
+        "content": []
+      }
+    },
+    {
+      "event_id": "event_EhEj5swpVUsHEJuhOo3eR",
+      "type": "response.content_part.added",
+      "response_id": "resp_RhFNYddErRBVXaRMzfF5H",
+      "item_id": "item_FPWBXgwERUnxolAogf3NZ",
+      "output_index": 0,
+      "content_index": 0,
+      "part": {
+        "type": "audio",
+        "text": ""
+      }
+    },
+    {
+      "event_id": "event_Qmtyg5pJ23Q6RVcKDdkdr",
+      "type": "response.audio.done",
+      "response_id": "resp_RhFNYddErRBVXaRMzfF5H",
+      "item_id": "item_FPWBXgwERUnxolAogf3NZ",
+      "output_index": 0,
+      "content_index": 0
+    },
+    {
+      "event_id": "event_Adibqg7q5T2aEbuBfZIcO",
+      "type": "response.content_part.done",
+      "response_id": "resp_RhFNYddErRBVXaRMzfF5H",
+      "item_id": "item_FPWBXgwERUnxolAogf3NZ",
+      "output_index": 0,
+      "content_index": 0,
+      "part": {
+        "type": "audio",
+        "text": ""
+      }
+    },
+    {
+      "event_id": "event_QfEbqykjY453gncJGdbeB",
+      "type": "response.output_item.done",
+      "response_id": "resp_RhFNYddErRBVXaRMzfF5H",
+      "output_index": 0,
+      "item": {
+        "id": "item_FPWBXgwERUnxolAogf3NZ",
+        "object": "realtime.item",
+        "type": "message",
+        "status": "completed",
+        "role": "assistant",
+        "output": {
+          "usage": {
+            "input_tokens": 8,
+            "output_tokens": 28,
+            "total_tokens": 36,
+            "input_tokens_details": {
+              "text_tokens": 8
+            },
+            "output_tokens_details": {
+              "audio_tokens": 28,
+              "text_tokens": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "event_id": "event_GRRMmeV59I2lqnNPd72dA",
+      "type": "response.done",
+      "response": {
+        "id": "resp_RhFNYddErRBVXaRMzfF5H",
+        "object": "realtime.response",
+        "conversation_id": "",
+        "status": "completed",
+        "modalities": [
+          "text",
+          "audio"
+        ],
+        "voice": "Ethan",
+        "output": [
+          {
+            "id": "item_FPWBXgwERUnxolAogf3NZ",
+            "object": "realtime.item",
+            "type": "message",
+            "status": "completed",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "audio",
+                "transcript": ""
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "characters": 27,
+          "total_tokens": 36,
+          "input_tokens": 8,
+          "output_tokens": 28,
+          "input_tokens_details": {
+            "text_tokens": 8
+          },
+          "output_tokens_details": {
+            "text_tokens": 0,
+            "audio_tokens": 28
+          }
+        }
+      }
+    },
+    {
+      "event_id": "event_HRZDNGWMHAO2Bl1KfWrNf",
+      "type": "session.finished"
+    },
+    {
+      "type": "transport.close",
+      "code": null,
+      "message": null
+    }
+  ],
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "personalReferenceUploaded": false,
+  "voiceSource": "Provider public voice; clone runtime unavailable"
+}

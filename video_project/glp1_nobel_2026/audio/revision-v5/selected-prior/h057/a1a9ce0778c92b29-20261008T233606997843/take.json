@@ -1,0 +1,83 @@
+{
+  "id": "h057",
+  "text": "交感神经一兴奋，心脏会加把劲，一些血管也会收紧。长期睡不好、反复缺氧等问题，也会增加调节负担。",
+  "ttsText": "交感神经一兴奋，心脏会加把劲，一些血管也会收紧。长期睡不好、反复缺氧等问题，也会增加调节负担。",
+  "signature": "74e6aaad8e6f84e1031342b913c807df36c8a2f170733cdd62d3f228aa735ac5",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h057-74e6aaad8e6f-d65394c830.wav",
+  "processed": "audio/revision-v5/voice/h057.wav",
+  "rawDuration": 9.36,
+  "duration": 9.36,
+  "sampleRate": 48000,
+  "sha256": "a1a9ce0778c92b2910a448c67dd3f9144fcf2c119ab644b7f853988b51d7306c",
+  "rawSHA256": "45171ee9865ec66c512f3f62fd3ce4c81fb073d677b0f128bddefb16248f6bc1",
+  "seed": 3595801800,
+  "batchIds": [
+    "h055",
+    "h056",
+    "h057"
+  ],
+  "batchKey": "d65394c830a49c837245befeb98fc7f13abfa763a55369edd0fd50030593b4f8",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -95.4364358994813,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "45171ee9865ec66c512f3f62fd3ce4c81fb073d677b0f128bddefb16248f6bc1",
+    "outputSha256": "a1a9ce0778c92b2910a448c67dd3f9144fcf2c119ab644b7f853988b51d7306c",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 3.3079128205661057,
+    "input": {
+      "seconds": 9.36,
+      "peakDb": -6.68970798578497,
+      "activeRmsDb": -23.009818019851235,
+      "quietFrameP10Db": -64.37547194609367
+    },
+    "output": {
+      "seconds": 9.36,
+      "peakDb": -4.123173689904971,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.42795237860064
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

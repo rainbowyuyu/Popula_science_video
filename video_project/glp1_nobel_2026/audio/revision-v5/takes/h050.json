@@ -1,0 +1,83 @@
+{
+  "id": "h050",
+  "text": "要找水钠这一头，得顺着血液到肾脏。它把水和小分子滤出来，再把身体要留下的部分收回去。",
+  "ttsText": "要找水钠这一头，得顺着血液到肾脏。它把水和小分子滤出来，再把身体要留下的部分收回去。",
+  "signature": "e959c97d33ebe384a33ea4892bc88c6e2e780e750d522339b1719a3dadd56fd5",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h050-e959c97d33eb-6b4d65f42d.wav",
+  "processed": "audio/revision-v5/voice/h050.wav",
+  "rawDuration": 8.0,
+  "duration": 8.0,
+  "sampleRate": 48000,
+  "sha256": "e5ccf6dbeae23dac388ed6697e50c2b49ee5e459f2b15a6e0894b221cee95f51",
+  "rawSHA256": "30a19705e4e45081c3221376ace969f789f51d902248348afba026a395a4a0ad",
+  "seed": 1800234484,
+  "batchIds": [
+    "h048",
+    "h049",
+    "h050"
+  ],
+  "batchKey": "6b4d65f42d83b87fdf065a9a3d530bc0ea20e3a0888d119430fee5661c8dc257",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -95.17899317688794,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "30a19705e4e45081c3221376ace969f789f51d902248348afba026a395a4a0ad",
+    "outputSha256": "e5ccf6dbeae23dac388ed6697e50c2b49ee5e459f2b15a6e0894b221cee95f51",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.879451593381205,
+    "input": {
+      "seconds": 8.0,
+      "peakDb": -6.222432060008609,
+      "activeRmsDb": -22.710215974304795,
+      "quietFrameP10Db": -60.319227473470214
+    },
+    "output": {
+      "seconds": 8.0,
+      "peakDb": -3.721938735301507,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -59.75835204266589
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

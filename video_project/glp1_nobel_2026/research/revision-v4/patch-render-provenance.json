@@ -1,0 +1,1042 @@
+{
+  "version": "v4-patch-render-provenance",
+  "state": "complete",
+  "createdUTC": "2026-10-08T16:16:47.554990+00:00",
+  "planPath": "research/revision-v4/patches/patch-plan.json",
+  "plan": {
+    "version": "v4-local-patches",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+    "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+    "baseVideo": "delivery/GLP1_1080p.mp4",
+    "baseVideoSHA256": "4e7c01c94316ae2ca7fca606b6e1e5189922e886c7cbe3804ceb5e6a0436b329",
+    "baseSourceHashes": {
+      "src/V4World.ts": "02f818c59612ee2adda2ee0c56442c3cad2a28177bf1e43ab2b69bca9429c4fb",
+      "src/V4CameraPath.ts": "baf06f9dd8a6ffc3c2a7f6ad4bf2fc2d8fb97bdc30048f1c13940fccb5a907c8",
+      "src/CardioDetail.ts": "637a0cc8422c99183e7836bbad99d15e12895835edc48c7f3a4d5db1f7d3313a",
+      "src/V4Film.tsx": "4b686e10a98aaf0d7f3935c736e31bbafd25c665765916e8b126b0e15ad60486",
+      "src/V4Measure.ts": "35e1f22aa3e0c5d6f666723d55b63835f74eeaba331ed9ac59bcdeee253312d8",
+      "src/World.ts": "365949efb18d1abf1cb51ba23ec9d69d650389b1dd5763fab332fcf291e7b851",
+      "src/timeline.json": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2"
+    },
+    "baseSourceSnapshots": {
+      "src/V4World.ts": "research/revision-v4/patches/base-source/V4World.ts",
+      "src/V4CameraPath.ts": "research/revision-v4/patches/base-source/V4CameraPath.ts",
+      "src/CardioDetail.ts": "research/revision-v4/patches/base-source/CardioDetail.ts",
+      "src/V4Film.tsx": "research/revision-v4/patches/base-source/V4Film.tsx",
+      "src/V4Measure.ts": "research/revision-v4/patches/base-source/V4Measure.ts",
+      "src/World.ts": "research/revision-v4/patches/base-source/World.ts",
+      "src/timeline.json": "research/revision-v4/patches/base-source/timeline.json"
+    },
+    "patches": [
+      {
+        "start": 4091,
+        "end": 4521,
+        "supportFrames": [
+          4130,
+          4482
+        ],
+        "video": "tmp/segment-4091-4521.mp4",
+        "marker": "research/revision-v4/segment-4091-4521-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Sort the same islet cell instances individually through the beta-cell entry with fixed transparent/depth-write policies; prevent colour batches swapping at opacity 0.96."
+      },
+      {
+        "start": 5688,
+        "end": 5793,
+        "supportFrames": [
+          5727,
+          5754
+        ],
+        "video": "tmp/segment-5688-5793.mp4",
+        "marker": "research/revision-v4/segment-5688-5793-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Preserve individual islet-cell depth order during beta-cell exit; restore the original instanced draw only after full opacity."
+      },
+      {
+        "start": 6714,
+        "end": 7168,
+        "supportFrames": [
+          6753,
+          7129
+        ],
+        "video": "tmp/segment-6714-7168.mp4",
+        "marker": "research/revision-v4/segment-6714-7168-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Cross the real hepatic shell only after it becomes translucent; bridge plasma scales with fixed 2.5 um platelets and same-location annotation.",
+        "sourceSnapshots": {
+          "src/V4World.ts": "research/revision-v4/patches/revision3-rendered-source/V4World.ts",
+          "src/V4HandoffContext.ts": "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts"
+        }
+      },
+      {
+        "start": 7641,
+        "end": 7923,
+        "supportFrames": [
+          7680,
+          7884
+        ],
+        "video": "tmp/segment-7641-7923.mp4",
+        "marker": "research/revision-v4/segment-7641-7923-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Delay hepatic shell recovery until the camera is outside the physical liver surface, with a continuous plasma position reference during the return zoom.",
+        "sourceSnapshots": {
+          "src/V4World.ts": "research/revision-v4/patches/revision3-rendered-source/V4World.ts",
+          "src/V4HandoffContext.ts": "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts"
+        }
+      },
+      {
+        "start": 7946,
+        "end": 8149,
+        "supportFrames": [
+          7985,
+          8110
+        ],
+        "video": "tmp/segment-7946-8149.mp4",
+        "marker": "research/revision-v4/segment-7946-8149-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Delay the g030 aorta label until the real aortic anchor is visible beyond the liver; preserve all camera, geometry, anatomy opacity and other labels."
+      },
+      {
+        "start": 11743,
+        "end": 12519,
+        "supportFrames": [
+          11782,
+          12480
+        ],
+        "video": "tmp/segment-11743-12519.mp4",
+        "marker": "research/revision-v4/segment-11743-12519-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Continuous artery-to-endothelium opacity, foam-cell labels selected by visible geometry, gradual plaque-parent return after F12364, and label/ruler collision avoidance during pull-out.",
+        "sourceSnapshots": {
+          "src/V4World.ts": "research/revision-v4/patches/revision3-rendered-source/V4World.ts",
+          "src/V4HandoffContext.ts": "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts"
+        }
+      },
+      {
+        "start": 16736,
+        "end": 16981,
+        "supportFrames": [
+          16775,
+          16942
+        ],
+        "video": "tmp/segment-16736-16981.mp4",
+        "marker": "research/revision-v4/segment-16736-16981-render.json",
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "reason": "Delay g062 macro labels until the seated-measurement weight is below 0.025 and standing organs have returned, with smooth label opacity only."
+      }
+    ],
+    "baseRenderMarker": "tmp/final-render.json",
+    "appliedAt": "2026-10-08T22:53:30.302886+08:00",
+    "revision": 4,
+    "revisedAt": "2026-10-08T16:03:32.7006125Z"
+  },
+  "originalFinalRenderMarker": {
+    "finished": "2026-10-08T14:50:46.681Z",
+    "frames": [
+      0,
+      20287
+    ],
+    "seconds": 2539.974,
+    "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+    "success": true,
+    "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+    "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+    "videoSHA256": "4e7c01c94316ae2ca7fca606b6e1e5189922e886c7cbe3804ceb5e6a0436b329"
+  },
+  "originalFinalRenderMarkerCopy": "tmp/v4-local-fixes-20261008T160838Z-96a9613e/base-final-render-original.json",
+  "originalFinalRenderMarkerText": "{\n  \"finished\": \"2026-10-08T14:50:46.681Z\",\n  \"frames\": [\n    0,\n    20287\n  ],\n  \"seconds\": 2539.974,\n  \"outputLocation\": \"D:\\\\python_project\\\\manim_extend_rainbow\\\\video_project\\\\glp1_nobel_2026\\\\delivery\\\\GLP1_1080p.mp4\",\n  \"success\": true,\n  \"timelineSHA256\": \"1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2\",\n  \"masterSHA256\": \"cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f\",\n  \"videoSHA256\": \"4e7c01c94316ae2ca7fca606b6e1e5189922e886c7cbe3804ceb5e6a0436b329\"\n}",
+  "originalFinalRenderMarkerSHA256": "2b7ad7da4879e7f84b36db3aaa2c8fa32a63ad0fff1eb56e668f6e05c9668748",
+  "originalVideoProbe": {
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "pix_fmt": "yuv420p",
+    "color_range": "tv",
+    "color_space": "bt709",
+    "r_frame_rate": "30/1",
+    "avg_frame_rate": "30/1",
+    "time_base": "1/90000",
+    "start_time": "0.000000",
+    "duration": "676.266667",
+    "nb_frames": "20288",
+    "nb_read_frames": "20288"
+  },
+  "finalRenderMarker": {
+    "finished": "2026-10-08T16:16:47.554543+00:00",
+    "frames": [
+      0,
+      20287
+    ],
+    "seconds": 488.556,
+    "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+    "success": true,
+    "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+    "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+    "videoSHA256": "375a546df710e84b44dfd5d0667805a49320deb1d269114d922655429cb42772",
+    "renderMode": "remotion-base-with-local-remotion-patches-and-ffmpeg-composition",
+    "singlePassRender": false,
+    "baseRender": {
+      "videoSHA256": "4e7c01c94316ae2ca7fca606b6e1e5189922e886c7cbe3804ceb5e6a0436b329",
+      "originalMarkerSHA256": "2b7ad7da4879e7f84b36db3aaa2c8fa32a63ad0fff1eb56e668f6e05c9668748",
+      "marker": {
+        "finished": "2026-10-08T14:50:46.681Z",
+        "frames": [
+          0,
+          20287
+        ],
+        "seconds": 2539.974,
+        "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "success": true,
+        "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+        "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+        "videoSHA256": "4e7c01c94316ae2ca7fca606b6e1e5189922e886c7cbe3804ceb5e6a0436b329"
+      },
+      "verifiedSourceSnapshots": {
+        "src/V4World.ts": {
+          "sha256": "02f818c59612ee2adda2ee0c56442c3cad2a28177bf1e43ab2b69bca9429c4fb",
+          "verifiedFile": "research/revision-v4/patches/base-source/V4World.ts",
+          "archivedSnapshot": true
+        },
+        "src/V4CameraPath.ts": {
+          "sha256": "baf06f9dd8a6ffc3c2a7f6ad4bf2fc2d8fb97bdc30048f1c13940fccb5a907c8",
+          "verifiedFile": "research/revision-v4/patches/base-source/V4CameraPath.ts",
+          "archivedSnapshot": true
+        },
+        "src/CardioDetail.ts": {
+          "sha256": "637a0cc8422c99183e7836bbad99d15e12895835edc48c7f3a4d5db1f7d3313a",
+          "verifiedFile": "research/revision-v4/patches/base-source/CardioDetail.ts",
+          "archivedSnapshot": true
+        },
+        "src/V4Film.tsx": {
+          "sha256": "4b686e10a98aaf0d7f3935c736e31bbafd25c665765916e8b126b0e15ad60486",
+          "verifiedFile": "research/revision-v4/patches/base-source/V4Film.tsx",
+          "archivedSnapshot": true
+        },
+        "src/V4Measure.ts": {
+          "sha256": "35e1f22aa3e0c5d6f666723d55b63835f74eeaba331ed9ac59bcdeee253312d8",
+          "verifiedFile": "research/revision-v4/patches/base-source/V4Measure.ts",
+          "archivedSnapshot": true
+        },
+        "src/World.ts": {
+          "sha256": "365949efb18d1abf1cb51ba23ec9d69d650389b1dd5763fab332fcf291e7b851",
+          "verifiedFile": "research/revision-v4/patches/base-source/World.ts",
+          "archivedSnapshot": true
+        },
+        "src/timeline.json": {
+          "sha256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "verifiedFile": "research/revision-v4/patches/base-source/timeline.json",
+          "archivedSnapshot": true
+        }
+      },
+      "originalVideoBackup": "tmp/pre-local-fixes.mp4"
+    },
+    "patches": [
+      {
+        "start": 4091,
+        "end": 4521,
+        "path": "tmp/segment-4091-4521.mp4",
+        "markerPath": "research/revision-v4/segment-4091-4521-render.json",
+        "videoSHA256": "cf4e539f550cd683848b72e00b6dd69178a3cd1de3b357228c7b3ae1a71a79f3",
+        "markerSHA256": "cb9da45fd4edc5c2bc1cc627fb6db130b981c8651bd3fab826d56623489a30db",
+        "marker": {
+          "finished": "2026-10-08T16:05:35.979Z",
+          "frames": [
+            4091,
+            4521
+          ],
+          "seconds": 63.303,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-4091-4521.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "cf4e539f550cd683848b72e00b6dd69178a3cd1de3b357228c7b3ae1a71a79f3",
+          "sourceHashes": {
+            "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+          },
+          "sourceVerification": "Checked before bundling and after completed render against frozen patch plan"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "verifiedFile": "src/V4World.ts",
+            "archivedSnapshot": false
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "src/V4HandoffContext.ts",
+            "archivedSnapshot": false
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "14.366667",
+          "nb_frames": "431",
+          "nb_read_frames": "431"
+        },
+        "supportFrames": [
+          4130,
+          4482
+        ],
+        "reason": "Sort the same islet cell instances individually through the beta-cell entry with fixed transparent/depth-write policies; prevent colour batches swapping at opacity 0.96."
+      },
+      {
+        "start": 5688,
+        "end": 5793,
+        "path": "tmp/segment-5688-5793.mp4",
+        "markerPath": "research/revision-v4/segment-5688-5793-render.json",
+        "videoSHA256": "555469d7f8114c6703ea6ee61b6c2f452444e6d0fc610945e6e433cb4688da6d",
+        "markerSHA256": "eb5308358f1a2b222270ce0a6d3d844b264e5ff362f698644b1d41df671bb77a",
+        "marker": {
+          "finished": "2026-10-08T16:05:59.290Z",
+          "frames": [
+            5688,
+            5793
+          ],
+          "seconds": 18.848,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-5688-5793.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "555469d7f8114c6703ea6ee61b6c2f452444e6d0fc610945e6e433cb4688da6d",
+          "sourceHashes": {
+            "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+          },
+          "sourceVerification": "Checked before bundling and after completed render against frozen patch plan"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "verifiedFile": "src/V4World.ts",
+            "archivedSnapshot": false
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "src/V4HandoffContext.ts",
+            "archivedSnapshot": false
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "3.533333",
+          "nb_frames": "106",
+          "nb_read_frames": "106"
+        },
+        "supportFrames": [
+          5727,
+          5754
+        ],
+        "reason": "Preserve individual islet-cell depth order during beta-cell exit; restore the original instanced draw only after full opacity."
+      },
+      {
+        "start": 6714,
+        "end": 7168,
+        "path": "tmp/segment-6714-7168.mp4",
+        "markerPath": "research/revision-v4/segment-6714-7168-render.json",
+        "videoSHA256": "bb72dadbb449e96c13628147cd22909bd09ff1285ab3fe9eff67e6cf5c0b0f59",
+        "markerSHA256": "85d4a23ece1f5cbf3a29d352f16e77296f93623537c4b6dee3d14b59f1629bd5",
+        "marker": {
+          "finished": "2026-10-08T15:17:32.838Z",
+          "frames": [
+            6714,
+            7168
+          ],
+          "seconds": 49.548,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-6714-7168.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "bb72dadbb449e96c13628147cd22909bd09ff1285ab3fe9eff67e6cf5c0b0f59"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+            "verifiedFile": "research/revision-v4/patches/revision3-rendered-source/V4World.ts",
+            "archivedSnapshot": true
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts",
+            "archivedSnapshot": true
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "15.166667",
+          "nb_frames": "455",
+          "nb_read_frames": "455"
+        },
+        "supportFrames": [
+          6753,
+          7129
+        ],
+        "reason": "Cross the real hepatic shell only after it becomes translucent; bridge plasma scales with fixed 2.5 um platelets and same-location annotation."
+      },
+      {
+        "start": 7641,
+        "end": 7923,
+        "path": "tmp/segment-7641-7923.mp4",
+        "markerPath": "research/revision-v4/segment-7641-7923-render.json",
+        "videoSHA256": "0e87dc5389f5f1304a22d9da9f483ed919240d2350158b88c845ff533a188503",
+        "markerSHA256": "980e945b18bdae66361a3071fdd9cc1fe6bc2c23b0700668b137d96a7123fefb",
+        "marker": {
+          "finished": "2026-10-08T15:18:27.822Z",
+          "frames": [
+            7641,
+            7923
+          ],
+          "seconds": 49.945,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-7641-7923.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "0e87dc5389f5f1304a22d9da9f483ed919240d2350158b88c845ff533a188503"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+            "verifiedFile": "research/revision-v4/patches/revision3-rendered-source/V4World.ts",
+            "archivedSnapshot": true
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts",
+            "archivedSnapshot": true
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "9.433333",
+          "nb_frames": "283",
+          "nb_read_frames": "283"
+        },
+        "supportFrames": [
+          7680,
+          7884
+        ],
+        "reason": "Delay hepatic shell recovery until the camera is outside the physical liver surface, with a continuous plasma position reference during the return zoom."
+      },
+      {
+        "start": 7946,
+        "end": 8149,
+        "path": "tmp/segment-7946-8149.mp4",
+        "markerPath": "research/revision-v4/segment-7946-8149-render.json",
+        "videoSHA256": "e008e5b9ab4bcd85f041d4f1d1d113c223fc2a6bee1fdec9501d8b486326e2fb",
+        "markerSHA256": "66c5118e606460686008ffb1f08dd05761f3a22c07565c892a26d12222ea4d61",
+        "marker": {
+          "finished": "2026-10-08T16:06:30.744Z",
+          "frames": [
+            7946,
+            8149
+          ],
+          "seconds": 27.095,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-7946-8149.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "e008e5b9ab4bcd85f041d4f1d1d113c223fc2a6bee1fdec9501d8b486326e2fb",
+          "sourceHashes": {
+            "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+          },
+          "sourceVerification": "Checked before bundling and after completed render against frozen patch plan"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "verifiedFile": "src/V4World.ts",
+            "archivedSnapshot": false
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "src/V4HandoffContext.ts",
+            "archivedSnapshot": false
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "6.800000",
+          "nb_frames": "204",
+          "nb_read_frames": "204"
+        },
+        "supportFrames": [
+          7985,
+          8110
+        ],
+        "reason": "Delay the g030 aorta label until the real aortic anchor is visible beyond the liver; preserve all camera, geometry, anatomy opacity and other labels."
+      },
+      {
+        "start": 11743,
+        "end": 12519,
+        "path": "tmp/segment-11743-12519.mp4",
+        "markerPath": "research/revision-v4/segment-11743-12519-render.json",
+        "videoSHA256": "f16e0e5d23a7d2ba5de23f4e3a7f0b97f953a5c96a4fd5d58f9ca8ebb9b4c23f",
+        "markerSHA256": "2cb3e17be0e8a7ef63fa591d5e28dc32a1653c4a51ebba9e13f3a5946885a761",
+        "marker": {
+          "finished": "2026-10-08T15:20:35.073Z",
+          "frames": [
+            11743,
+            12519
+          ],
+          "seconds": 122.371,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-11743-12519.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "f16e0e5d23a7d2ba5de23f4e3a7f0b97f953a5c96a4fd5d58f9ca8ebb9b4c23f"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+            "verifiedFile": "research/revision-v4/patches/revision3-rendered-source/V4World.ts",
+            "archivedSnapshot": true
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts",
+            "archivedSnapshot": true
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "25.900000",
+          "nb_frames": "777",
+          "nb_read_frames": "777"
+        },
+        "supportFrames": [
+          11782,
+          12480
+        ],
+        "reason": "Continuous artery-to-endothelium opacity, foam-cell labels selected by visible geometry, gradual plaque-parent return after F12364, and label/ruler collision avoidance during pull-out."
+      },
+      {
+        "start": 16736,
+        "end": 16981,
+        "path": "tmp/segment-16736-16981.mp4",
+        "markerPath": "research/revision-v4/segment-16736-16981-render.json",
+        "videoSHA256": "1e6ca43c4186e0f5b11d7350d28fadabaa0c3ddbc456b547786499e4005e267c",
+        "markerSHA256": "f1da167cf6d3f257bfbd1823c6514873a647868a91b56c1eadb29aade64a73f0",
+        "marker": {
+          "finished": "2026-10-08T16:07:05.288Z",
+          "frames": [
+            16736,
+            16981
+          ],
+          "seconds": 30.194,
+          "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-16736-16981.mp4",
+          "success": true,
+          "timelineSHA256": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+          "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+          "videoSHA256": "1e6ca43c4186e0f5b11d7350d28fadabaa0c3ddbc456b547786499e4005e267c",
+          "sourceHashes": {
+            "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+          },
+          "sourceVerification": "Checked before bundling and after completed render against frozen patch plan"
+        },
+        "sourceHashes": {
+          "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+          "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6"
+        },
+        "verifiedSources": {
+          "src/V4World.ts": {
+            "sha256": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+            "verifiedFile": "src/V4World.ts",
+            "archivedSnapshot": false
+          },
+          "src/V4HandoffContext.ts": {
+            "sha256": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+            "verifiedFile": "src/V4HandoffContext.ts",
+            "archivedSnapshot": false
+          }
+        },
+        "probe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_time": "0.000000",
+          "duration": "8.200000",
+          "nb_frames": "246",
+          "nb_read_frames": "246"
+        },
+        "supportFrames": [
+          16775,
+          16942
+        ],
+        "reason": "Delay g062 macro labels until the seated-measurement weight is below 0.025 and standing organs have returned, with smooth label opacity only."
+      }
+    ],
+    "composition": {
+      "method": "decode; exact-frame trim; video-only concat; full original master encoded once",
+      "ffmpeg": "ffmpeg version 2026-02-09-git-9bfa1635ae-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+      "command": [
+        "ffmpeg",
+        "-hide_banner",
+        "-nostdin",
+        "-n",
+        "-filter_complex_threads",
+        "2",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-4091-4521.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-5688-5793.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-6714-7168.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-7641-7923.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-7946-8149.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-11743-12519.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\segment-16736-16981.mp4",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_1080p.mp4",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\public\\master.wav",
+        "-filter_complex_script",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v4-local-fixes-20261008T160838Z-96a9613e\\filtergraph.txt",
+        "-map",
+        "[outv]",
+        "-map",
+        "15:a:0",
+        "-map_metadata",
+        "-1",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "16",
+        "-threads",
+        "12",
+        "-pix_fmt",
+        "yuv420p",
+        "-fps_mode:v",
+        "passthrough",
+        "-color_range",
+        "tv",
+        "-colorspace",
+        "bt709",
+        "-color_primaries",
+        "bt709",
+        "-color_trc",
+        "bt709",
+        "-bsf:v",
+        "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1:video_full_range_flag=0",
+        "-c:a",
+        "aac",
+        "-b:a",
+        "320k",
+        "-ar",
+        "48000",
+        "-af",
+        "asetpts=PTS-STARTPTS",
+        "-movflags",
+        "+faststart+write_colr",
+        "-progress",
+        "pipe:1",
+        "-nostats",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v4-local-fixes-20261008T160838Z-96a9613e\\composed.mp4"
+      ],
+      "filterGraph": "[0:v:0]trim=start_frame=0:end_frame=4091,settb=expr=1/30,setpts=N[v0];\n[1:v:0]trim=start_frame=0:end_frame=431,settb=expr=1/30,setpts=N[v1];\n[2:v:0]trim=start_frame=4522:end_frame=5688,settb=expr=1/30,setpts=N[v2];\n[3:v:0]trim=start_frame=0:end_frame=106,settb=expr=1/30,setpts=N[v3];\n[4:v:0]trim=start_frame=5794:end_frame=6714,settb=expr=1/30,setpts=N[v4];\n[5:v:0]trim=start_frame=0:end_frame=455,settb=expr=1/30,setpts=N[v5];\n[6:v:0]trim=start_frame=7169:end_frame=7641,settb=expr=1/30,setpts=N[v6];\n[7:v:0]trim=start_frame=0:end_frame=283,settb=expr=1/30,setpts=N[v7];\n[8:v:0]trim=start_frame=7924:end_frame=7946,settb=expr=1/30,setpts=N[v8];\n[9:v:0]trim=start_frame=0:end_frame=204,settb=expr=1/30,setpts=N[v9];\n[10:v:0]trim=start_frame=8150:end_frame=11743,settb=expr=1/30,setpts=N[v10];\n[11:v:0]trim=start_frame=0:end_frame=777,settb=expr=1/30,setpts=N[v11];\n[12:v:0]trim=start_frame=12520:end_frame=16736,settb=expr=1/30,setpts=N[v12];\n[13:v:0]trim=start_frame=0:end_frame=246,settb=expr=1/30,setpts=N[v13];\n[14:v:0]trim=start_frame=16982:end_frame=20288,settb=expr=1/30,setpts=N[v14];\n[v0][v1][v2][v3][v4][v5][v6][v7][v8][v9][v10][v11][v12][v13][v14]concat=n=15:v=1:a=0,settb=expr=1/30,setpts=N,format=yuv420p[outv]\n",
+      "filterGraphSHA256": "dbed0048201080bfecacae40a5eb971f7c50f1e7f0c7a6b879a446f917971f40",
+      "video": {
+        "codec": "libx264",
+        "crf": 16,
+        "preset": "medium",
+        "pix_fmt": "yuv420p",
+        "colorSpace": "bt709"
+      },
+      "audio": {
+        "source": "public/master.wav",
+        "masterSHA256": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+        "trimmed": false,
+        "codec": "aac",
+        "bitrate": "320k",
+        "sampleRate": 48000,
+        "start": 0
+      },
+      "segments": [
+        {
+          "kind": "base",
+          "start": 0,
+          "end": 4090,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 4091,
+          "end": 4521,
+          "path": "tmp/segment-4091-4521.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 4522,
+          "end": 5687,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 5688,
+          "end": 5793,
+          "path": "tmp/segment-5688-5793.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 5794,
+          "end": 6713,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 6714,
+          "end": 7168,
+          "path": "tmp/segment-6714-7168.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 7169,
+          "end": 7640,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 7641,
+          "end": 7923,
+          "path": "tmp/segment-7641-7923.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 7924,
+          "end": 7945,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 7946,
+          "end": 8149,
+          "path": "tmp/segment-7946-8149.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 8150,
+          "end": 11742,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 11743,
+          "end": 12519,
+          "path": "tmp/segment-11743-12519.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 12520,
+          "end": 16735,
+          "path": "delivery/GLP1_1080p.mp4"
+        },
+        {
+          "kind": "patch",
+          "start": 16736,
+          "end": 16981,
+          "path": "tmp/segment-16736-16981.mp4"
+        },
+        {
+          "kind": "base",
+          "start": 16982,
+          "end": 20287,
+          "path": "delivery/GLP1_1080p.mp4"
+        }
+      ],
+      "measuredVideo": {
+        "codec_name": "h264",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "color_transfer": "bt709",
+        "color_primaries": "bt709",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "30/1",
+        "time_base": "1/15360",
+        "start_time": "0.000000",
+        "duration": "676.266016",
+        "nb_frames": "20288",
+        "nb_read_frames": "20288"
+      },
+      "measuredAudio": {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "time_base": "1/48000",
+        "start_time": "0.000000",
+        "duration_ts": 32460768,
+        "duration": "676.266000",
+        "bit_rate": "281710"
+      },
+      "diagnostics": "tmp/v4-local-fixes-20261008T160838Z-96a9613e",
+      "originalRetainedAt": "tmp/pre-local-fixes.mp4",
+      "reusedEncoding": null,
+      "colorMetadataRemux": {
+        "command": [
+          "ffmpeg",
+          "-hide_banner",
+          "-nostdin",
+          "-n",
+          "-i",
+          "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v4-local-fixes-20261008T160838Z-96a9613e\\encoded-before-color.mp4",
+          "-map",
+          "0:v:0",
+          "-map",
+          "0:a:0",
+          "-c",
+          "copy",
+          "-map_metadata",
+          "-1",
+          "-bsf:v",
+          "h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1:video_full_range_flag=0",
+          "-color_range",
+          "tv",
+          "-colorspace",
+          "bt709",
+          "-color_primaries",
+          "bt709",
+          "-color_trc",
+          "bt709",
+          "-movflags",
+          "+faststart+write_colr",
+          "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\tmp\\v4-local-fixes-20261008T160838Z-96a9613e\\composed.mp4"
+        ],
+        "inputSHA256": "4f6d2a2aecfb053d61c31b1871f22447d60e188b75ee0e55b72c10a0419d6167",
+        "videoReencoded": false,
+        "audioReencoded": false,
+        "beforeProbe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_time": "0.000000",
+          "duration": "676.266016",
+          "nb_frames": "20288",
+          "nb_read_frames": "20288"
+        },
+        "outputSHA256": "375a546df710e84b44dfd5d0667805a49320deb1d269114d922655429cb42772",
+        "afterProbe": {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/15360",
+          "start_time": "0.000000",
+          "duration": "676.266016",
+          "nb_frames": "20288",
+          "nb_read_frames": "20288"
+        }
+      }
+    },
+    "provenancePath": "research/revision-v4/patch-render-provenance.json",
+    "planSHA256": "013f6df802fcf7bb53ba5c0ee8ed19569b63687623a3f2e392b9af00e0938c80",
+    "composerSHA256": "1f308d50b3a46cc7cd0d984c11c286614bd698240a4ebc542a4c0c4f8846da60"
+  },
+  "inputFiles": {
+    "research/revision-v4/patches/patch-plan.json": "013f6df802fcf7bb53ba5c0ee8ed19569b63687623a3f2e392b9af00e0938c80",
+    "scripts/compose_v4_patches.py": "1f308d50b3a46cc7cd0d984c11c286614bd698240a4ebc542a4c0c4f8846da60",
+    "delivery/GLP1_1080p.mp4": "4e7c01c94316ae2ca7fca606b6e1e5189922e886c7cbe3804ceb5e6a0436b329",
+    "tmp/final-render.json": "2b7ad7da4879e7f84b36db3aaa2c8fa32a63ad0fff1eb56e668f6e05c9668748",
+    "public/master.wav": "cd304ff3393c3f19264807973dbb1b47ad9dd53e957abcccc9fa10bd1b5e208f",
+    "src/timeline.json": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+    "public/timeline.json": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+    "research/revision-v4/patches/base-source/V4World.ts": "02f818c59612ee2adda2ee0c56442c3cad2a28177bf1e43ab2b69bca9429c4fb",
+    "research/revision-v4/patches/base-source/V4CameraPath.ts": "baf06f9dd8a6ffc3c2a7f6ad4bf2fc2d8fb97bdc30048f1c13940fccb5a907c8",
+    "research/revision-v4/patches/base-source/CardioDetail.ts": "637a0cc8422c99183e7836bbad99d15e12895835edc48c7f3a4d5db1f7d3313a",
+    "research/revision-v4/patches/base-source/V4Film.tsx": "4b686e10a98aaf0d7f3935c736e31bbafd25c665765916e8b126b0e15ad60486",
+    "research/revision-v4/patches/base-source/V4Measure.ts": "35e1f22aa3e0c5d6f666723d55b63835f74eeaba331ed9ac59bcdeee253312d8",
+    "research/revision-v4/patches/base-source/World.ts": "365949efb18d1abf1cb51ba23ec9d69d650389b1dd5763fab332fcf291e7b851",
+    "research/revision-v4/patches/base-source/timeline.json": "1208c8901ec34c05623e9520a680673104103bc87bfdc4f7daa6ede254af8ba2",
+    "src/V4World.ts": "71aec18a72efbb6b8319debb136a3a927362eef61b3f99a24e6492713dea65f6",
+    "src/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+    "tmp/segment-4091-4521.mp4": "cf4e539f550cd683848b72e00b6dd69178a3cd1de3b357228c7b3ae1a71a79f3",
+    "research/revision-v4/segment-4091-4521-render.json": "cb9da45fd4edc5c2bc1cc627fb6db130b981c8651bd3fab826d56623489a30db",
+    "tmp/segment-5688-5793.mp4": "555469d7f8114c6703ea6ee61b6c2f452444e6d0fc610945e6e433cb4688da6d",
+    "research/revision-v4/segment-5688-5793-render.json": "eb5308358f1a2b222270ce0a6d3d844b264e5ff362f698644b1d41df671bb77a",
+    "research/revision-v4/patches/revision3-rendered-source/V4World.ts": "f939e5d7a731a53bb73fa70bd1b35d3242180cf1c5ac930b274fdad3290f2252",
+    "research/revision-v4/patches/revision3-rendered-source/V4HandoffContext.ts": "13e81826dd679bf70a704f86f56b7e2232912a676c70929ed61640c6a7ed5ec6",
+    "tmp/segment-6714-7168.mp4": "bb72dadbb449e96c13628147cd22909bd09ff1285ab3fe9eff67e6cf5c0b0f59",
+    "research/revision-v4/segment-6714-7168-render.json": "85d4a23ece1f5cbf3a29d352f16e77296f93623537c4b6dee3d14b59f1629bd5",
+    "tmp/segment-7641-7923.mp4": "0e87dc5389f5f1304a22d9da9f483ed919240d2350158b88c845ff533a188503",
+    "research/revision-v4/segment-7641-7923-render.json": "980e945b18bdae66361a3071fdd9cc1fe6bc2c23b0700668b137d96a7123fefb",
+    "tmp/segment-7946-8149.mp4": "e008e5b9ab4bcd85f041d4f1d1d113c223fc2a6bee1fdec9501d8b486326e2fb",
+    "research/revision-v4/segment-7946-8149-render.json": "66c5118e606460686008ffb1f08dd05761f3a22c07565c892a26d12222ea4d61",
+    "tmp/segment-11743-12519.mp4": "f16e0e5d23a7d2ba5de23f4e3a7f0b97f953a5c96a4fd5d58f9ca8ebb9b4c23f",
+    "research/revision-v4/segment-11743-12519-render.json": "2cb3e17be0e8a7ef63fa591d5e28dc32a1653c4a51ebba9e13f3a5946885a761",
+    "tmp/segment-16736-16981.mp4": "1e6ca43c4186e0f5b11d7350d28fadabaa0c3ddbc456b547786499e4005e267c",
+    "research/revision-v4/segment-16736-16981-render.json": "f1da167cf6d3f257bfbd1823c6514873a647868a91b56c1eadb29aade64a73f0"
+  },
+  "completedUTC": "2026-10-08T16:16:47.843348+00:00"
+}

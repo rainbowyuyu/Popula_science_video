@@ -1,0 +1,12 @@
+import data from './timeline-data.json';
+export const timeline=data;
+export const FPS=30;
+export const DURATION=data.durationFrames;
+export const groups=data.groups;
+export const clamp=(n:number,a=0,b=1)=>Math.min(b,Math.max(a,n));
+export const ease=(n:number)=>{const v=clamp(n);return v*v*(3-2*v);};
+export const cue=(id:string)=>data.cues.find(c=>c.id===id)!;
+export const phase=(id:string,t:number)=>{const c=cue(id);return clamp((t-c.startSec)/Math.max(.01,c.endSec-c.startSec));};
+export const after=(id:string,t:number,seconds=1.5)=>ease((t-cue(id).startSec)/seconds);
+export const currentCue=(t:number)=>data.cues.find(c=>t>=c.startSec&&t<c.endSec);
+export const group=(name:string)=>groups.find(g=>g.id===name)!;

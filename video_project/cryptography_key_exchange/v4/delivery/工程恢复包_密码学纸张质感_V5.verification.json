@@ -1,0 +1,37 @@
+{
+  "archive": "D:\\python_project\\manim_extend_rainbow\\video_project\\cryptography_key_exchange\\v4\\delivery\\工程恢复包_密码学纸张质感_V5.zip",
+  "sha256": "21400dc087603399112de43f896eefc1629bf398e669e016219aed837d090fef",
+  "bytes": 237239472,
+  "fileCountIncludingInventory": 287,
+  "uncompressedBytes": 270639324,
+  "allEntryCRCAndSHA256Verified": true,
+  "securityScan": {
+    "scannedTextFiles": 176,
+    "findings": 0,
+    "scope": "Allowlisted project text only; private references, external settings and scratch provider runs excluded."
+  },
+  "qaGate": {
+    "passed": true,
+    "finalVideoSha256": "709fc593f5f4add59bf4b2f5342b9e9d63e232b2a9e8ad0666ae2719867bc215",
+    "finalVideoBytes": 247356513,
+    "reports": [
+      "work/qa/encoded-final.json",
+      "work/qa/av-sync.json",
+      "work/qa/motion.json",
+      "work/qa/visual-final.json"
+    ],
+    "motionStatus": "PASS",
+    "limits": "QA gate covers encoded format/full decode, bounded audio sync, numeric camera motion and recorded representative visual review. It does not assert complete subjective listening."
+  },
+  "recoverySourceCompile": {
+    "passed": true,
+    "command": "node existing/typescript/bin/tsc --noEmit -p extracted/tsconfig.json",
+    "exitCode": 0,
+    "stdout": "",
+    "stderr": "",
+    "dependencyScope": "Existing project lock-compatible dependency tree resolved from ancestor; not a fresh npm install",
+    "extractedFiles": 287,
+    "temporaryExtraction": "D:\\python_project\\manim_extend_rainbow\\video_project\\cryptography_key_exchange\\v4\\work\\recovery-checks\\package-f1788d213cfd4a0c9f411e82a2f89bf0",
+    "temporaryExtractionRemoved": true
+  }
+}

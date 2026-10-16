@@ -1,0 +1,39 @@
+generators, structural solvers and coupled simulators. When meshes degenerate, element sets 
+diverge from solver conventions, geometry interferes after parametric updates, or a structural 
+unity check exceeds 1.0, humans diagnose and restart the toolchain—a loop that leaves large 
+regions of the design space unexplored (Fig. 1a). Generative models trained on static datasets lack 
+live access to governing physics and tool error codes; reinforcement learning and Bayesian 
+optimization, while effective for scalar tuning inside a fixed pipeline, struggle with heterogeneous 
+software ecosystems and discrete failures spanning geometry, numerics and limit states. 
+What is missing is an agentic orchestrator that reads solver diagnostics against codified limit 
+states and replans—remeshing, relaxing increments or resetting the design domain—without 
+human attention at every failure. Here we introduce The AI Engineer, which couples large 
+language models with schema-validated deterministic backends in a closed loop (Fig. 1b). 
+Natural-language requirements are parsed into structured specifications; the system then executes 
+topology optimization (bi-directional evolutionary structural optimization, BESO, with CalculiX), 
+parametric upscaling, particle-swarm size optimization under aero-hydro-servo-elastic load cases 
+(Zwind), and automated reporting. Exploration terminates not at local convergence alone, but 
+when an Automated Reviewer calibrated on real regulatory benchmarks judges the candidate 
+certification-ready. Formal Approval in Principle (AIP) from a classification society is used once 
+as an external calibration of that gate, not as a per-run objective. We demonstrate the framework 
+on a 20 MW FOWT foundation relevant to China’s dual-carbon goals; the AI-generated design 
+obtained China Classification Society (CCS) AIP and surpassed a human-optimized baseline on 
+key economic metrics while satisfying limit-state constraints. 
+Autonomous design beats human baseline 
+We benchmarked the AI-generated foundation against the “TuQiang” baseline—the world’s first 
+20 MW floating wind demonstration unit, developed over two years by a large university–
+industry consortium. Figure 2a compares the three-dimensional configurations. The AI candidate 
+reduces steel intensity from 278 to 255.5 t·MW⁻¹ (8.1%) and unit capital cost from ¥19,800 to 
+¥18,197 kW⁻¹ (8.1%), remaining below the national demonstration target of 300 t·MW⁻¹. These 
+gains are not obtained by sacrificing dynamics or integrity. Tower natural frequencies lie outside 
+the 1P and 3P excitation bands of the 20 MW turbine (Fig. 2b); platform motions under power 
+production and extreme sea state (DLC 6.1) are comparable to or lower than the baseline (Fig. 
+2c,d); maximum strength unity check remains below 1.0, fatigue damage stays within a 25-year 
+life with Design Fatigue Factor 3.0, and mooring peak tensions remain below breaking strength 
+(Fig. 2e). Thus the system converged to a design that is lighter, cheaper and compliant with 
+coupled limit states. 
+Calibrated internal certification gate 
+Submitting every exploratory candidate to a classification society is infeasible. The Automated 
+Reviewer therefore scores each candidate on five dimensions—capacity, steel intensity, unit cost, 
+constructability and fatigue life—using piecewise linear functions calibrated on a reference fleet 
+of **11** real floating wind projects (WindFloat and WindFloat Atlantic counted as two entries). 

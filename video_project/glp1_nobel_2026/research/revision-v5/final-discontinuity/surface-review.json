@@ -1,0 +1,66 @@
+{
+  "createdUTC": "2026-10-09T05:56:59.932037+00:00",
+  "reviewer": "camera_transition_fix",
+  "baselineVideoSHA256": "6d77b4522f419fa56ba01cfc3abe89ccf2a31b6905c0e3e9857293dc537e8e7c",
+  "productionSources": {
+    "V5World.ts": "86cf21813e4989719e10ed579fa5ab1e28c4c1f6e14683300bca8d1e25daa014",
+    "V5CameraPath.ts": "266aaab5a8c9aaf4f470b91c1ea3b21ca7fbda9dc1befdfff38439ad7d08f32b",
+    "timeline.json": "0ef7997628a5c9d86e8364da053e803ec38b1a34d69b0db24d7b49f9bcd6819d"
+  },
+  "candidate": {
+    "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v5\\final-discontinuity\\V5World.surface.ts",
+    "sha256": "c29c9119c350cc3d9e8e21312aea02253a689057e795e90fcbaaa54028b02465"
+  },
+  "diagnostic": {
+    "baselineReportSHA256": "34c7f13b123f22c7915b9cd42653a0030de09427fd752205e38bdc6fc06b133e",
+    "candidateReportSHA256": "5a12fdab066d7e43ccfef4ffb6e0e848cd3edace4094dc06fafbb089b6c69801",
+    "cause": "The camera passes within 0.6–5.8 mm of real ventricular-wall/cavity surfaces while the atlas heart opacity has already returned to 0.165–0.428. Dense low-poly surfaces become large translucent facets across the lens.",
+    "identifiedMeshes": [
+      "FJ2428_Wall_of_ventricle",
+      "FJ2422_Cavity_of_left_ventricle",
+      "FJ2418_Anterolateral_head_of_lateral_papillary_muscle_of_left_ventricle"
+    ]
+  },
+  "repair": "Delay only the atlas heart during the h073 and h077 microscopic pull-outs. Smoothly restore at lens distance 0.13–0.28 m. Keep artery/clot and separate atrial teaching children unchanged. No camera, model geometry, timebase or audio changes.",
+  "strictSupportFrameIntervals": [
+    [
+      20373,
+      20658
+    ],
+    [
+      21518,
+      21803
+    ]
+  ],
+  "supportEndpointWeight": 0,
+  "candidateFramesActuallyViewed": [
+    20534,
+    20549,
+    20551,
+    20564,
+    20579,
+    20598,
+    20630,
+    20658,
+    21670,
+    21685,
+    21686,
+    21701,
+    21725,
+    21758,
+    21803
+  ],
+  "contactSheetsActuallyViewed": [
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v5\\final-discontinuity\\surface-gates\\candidate\\contact-1.jpg",
+      "sha256": "163c3999745f4f080cece2f85e44125a818e0b95e2f5a2b69b2cfb628f30d763"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v5\\final-discontinuity\\surface-gates\\candidate\\contact-2.jpg",
+      "sha256": "26da5c3ee8dbb30fd9f824cdeb74d16fe1d64db7c38789c641c43e16cc57565d"
+    }
+  ],
+  "visualResult": "The large foreground ventricular facets are absent at F20551/F21685/F21686. Arterial parent cylinder and fixed plaque remain visible. The heart returns as a readable whole at F20579 and F21725. No empty field was introduced in these sampled handoffs.",
+  "scope": "World-only 1280x720 candidate stills plus ray diagnostics; not the final encoded movie, not full continuous playback. Root must inspect merged-source render and patch seams.",
+  "status": "candidate patch ready for merge by transition_audit_now"
+}

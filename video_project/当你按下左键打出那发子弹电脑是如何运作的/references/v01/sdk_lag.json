@@ -1,0 +1,24 @@
+{
+  "id": "sdk_lag",
+  "url": "https://raw.githubusercontent.com/ValveSoftware/source-sdk-2013/master/src/game/server/player_lagcompensation.cpp",
+  "scope": "Valve Source SDK 2013 code; not CS:GO source or match evidence",
+  "accessedAt": "2026-10-16T04:39:36.522624+00:00",
+  "status": "retrieved",
+  "httpStatus": 200,
+  "sha256": "8f7b11368325b3c1ee955a14f59159634b44bd33d886144f9ca229dbdd8734ad",
+  "bytes": 27550,
+  "excerpts": [
+    {
+      "term": "StartLagCompensation",
+      "excerpt": "hink(); // ILagCompensationManager stuff // Called during player movement to set up/restore after lag compensation void StartLagCompensation( CBasePlayer *player, CUserCmd *cmd ); void FinishLagCompensation( CBasePlayer *player ); bool IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; } private: void BacktrackPlayer( CBasePlayer *player, float flTargetTime ); void ClearHistory() { for ( int i=0; i m_PlayerTrack[ MAX_PLAYERS ]; // Scratchpad for determining what needs to be restored CBitVec m_RestorePlayer; bool m_bNeedToRest"
+    },
+    {
+      "term": "BacktrackPlayer",
+      "excerpt": "layer ); bool IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; } private: void BacktrackPlayer( CBasePlayer *player, float flTargetTime ); void ClearHistory() { for ( int i=0; i m_PlayerTrack[ MAX_PLAYERS ]; // Scratchpad for determining what needs to be restored CBitVec m_RestorePlayer; bool m_bNeedToRestore; LagRecord m_RestoreData[ MAX_PLAYERS ]; // player data before we moved him back LagRecord m_ChangeData[ MAX_PLAYERS ]; // player data where we moved him back CBasePlayer *m_pCurrentPlayer; // The player we are doing l"
+    },
+    {
+      "term": "FinishLagCompensation",
+      "excerpt": "movement to set up/restore after lag compensation void StartLagCompensation( CBasePlayer *player, CUserCmd *cmd ); void FinishLagCompensation( CBasePlayer *player ); bool IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; } private: void BacktrackPlayer( CBasePlayer *player, float flTargetTime ); void ClearHistory() { for ( int i=0; i m_PlayerTrack[ MAX_PLAYERS ]; // Scratchpad for determining what needs to be restored CBitVec m_RestorePlayer; bool m_bNeedToRestore; LagRecord m_RestoreData[ MAX_PLAYERS ]; // player data befor"
+    }
+  ]
+}

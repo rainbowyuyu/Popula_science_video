@@ -1,0 +1,31 @@
+{
+  "title": "V5 pipeline fixture, never narration",
+  "shots": [
+    {
+      "id": "t001",
+      "section": "demo",
+      "text": "完整波形校验。",
+      "mechanism": "fixture",
+      "view": "meal",
+      "camera": {
+        "distance": 2
+      },
+      "action": [
+        "one",
+        "two"
+      ],
+      "pauseAfterSeconds": 0.2
+    },
+    {
+      "id": "t002",
+      "section": "demo",
+      "text": "自然停顿校验。",
+      "note": "不可丢失",
+      "sourceIds": [
+        "fixture"
+      ],
+      "pauseAfterSeconds": 0.5
+    }
+  ],
+  "revision": "fixture"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "h068",
+  "text": "血压控制，是为了减轻血管和器官持续承受的负担。高血压和高血糖，也会让本来就有斑块的血管更容易出问题。",
+  "ttsText": "血压控制，是为了减轻血管和器官持续承受的负担。高血压和高血糖，也会让本来就有斑块的血管更容易出问题。",
+  "signature": "237ae78306c275ca04a0a6e1b781caf7dd16f0a1bbb876fe37408a68c4dfc412",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h068-237ae78306c2-bb22a64b14.wav",
+  "processed": "audio/revision-v5/voice/h068.wav",
+  "rawDuration": 9.36,
+  "duration": 9.36,
+  "sampleRate": 48000,
+  "sha256": "de455be4375cbf13c6de36f9d2b5f7a3b1a320c262f35c27281f8da1b13452dc",
+  "rawSHA256": "7102296ec5e06449dafd607bdc01e9690efc597d5b19c30aad59cce79fd3f560",
+  "seed": 3139610187,
+  "batchIds": [
+    "h067",
+    "h068",
+    "h069"
+  ],
+  "batchKey": "bb22a64b148709d27574d84daf129071e08dbb5b6486db520dc079ccd03ad484",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -97.0047288729657,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "7102296ec5e06449dafd607bdc01e9690efc597d5b19c30aad59cce79fd3f560",
+    "outputSha256": "de455be4375cbf13c6de36f9d2b5f7a3b1a320c262f35c27281f8da1b13452dc",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 2.6811643865255164,
+    "input": {
+      "seconds": 9.36,
+      "peakDb": -5.212660870501368,
+      "activeRmsDb": -22.33870547658334,
+      "quietFrameP10Db": -57.47277941792245
+    },
+    "output": {
+      "seconds": 9.36,
+      "peakDb": -2.470363700635324,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -56.808330352008625
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,113 @@
+{
+  "status": "superseded",
+  "version": "v8",
+  "h047": {
+    "text": "测血压，静坐五分钟。背靠椅背，双脚平放，手臂与心脏同高。",
+    "sampleRate": 24000,
+    "seconds": 6.8,
+    "sha256": "18d65fe8ee9a0a634e0f2a1ad4c920c79a72aa941e08c2f5f52a6fa2b8ce713c",
+    "source": "cached generated take",
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "18d65fe8ee9a0a634e0f2a1ad4c920c79a72aa941e08c2f5f52a6fa2b8ce713c",
+    "outputSha256": "c1b34d3b3239eded4a851a7f4488502a7dbe21d1f67e8e615863af2bb11e57a9",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.362736920670365,
+    "input": {
+      "seconds": 6.8,
+      "peakDb": -7.66977141502092,
+      "activeRmsDb": -22.14886275863618,
+      "quietFrameP10Db": -62.300259580930984
+    },
+    "output": {
+      "seconds": 6.8,
+      "peakDb": -5.115301820510436,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -62.60466635541951
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "targetSeconds": 6.6,
+    "paddedSamples": 0,
+    "preservedLength": true,
+    "tempoFit": 1.0303030303030303,
+    "timeStretch": true,
+    "pitchShift": false,
+    "tempoFitPolicy": "Explicit 3.03% pitch-preserving atempo fit to frozen 6.6s camera slot; raw source preserved.",
+    "asrRecognized": "测血压 静坐五分钟 背靠椅背 双脚平放 手臂与心脏同高",
+    "asrArtifact": "research/hypertension/audio-v8-asr-cache.json",
+    "humanPronunciationReview": false,
+    "canonicalProcessedSha256": "89333e31fe61499d29b42ae78d1bf521506633b85067ebfa830cd39980342482"
+  },
+  "replacementText": "测血压，静坐五分钟。背靠椅背，双脚平放，手臂与心脏同高。",
+  "foley": {
+    "wakeClickSeconds": 0.98,
+    "pumpWindowSeconds": [
+      1.38,
+      5.55
+    ],
+    "valveWindowSeconds": [
+      5.18,
+      7.26
+    ],
+    "readoutTicksSeconds": [
+      6.12,
+      6.72
+    ],
+    "peakDbfs": -37.4446834295981,
+    "design": "low-level band-limited cuff pump, valve release, soft display ticks; no music changes",
+    "selectedForDelivery": false
+  },
+  "sourceMusicUnchangedSha256": "dcd64bc1d9ca820036b545adbdf442e0b6232a56d84fd39fb89b7b2bd4b609d3",
+  "oldNarrationSha256": "e46326a844351abcfeda261d922b1ced6c87a85d1d1e3db55de816a6d3d98818",
+  "newNarrationSha256": "7e49971589abd1e02109539fac5f7f81b3a2b1f6d979d92343f2aa8faa00a0d9",
+  "oldMasterSha256": "fc90b294e9010eff2c09cc2f93cf18208d0e008f4a9c647708a4038e3a7f4e91",
+  "newMasterSha256": "12e1106d20ace62384d25931a238f7928bc7ed6a74322dbc345652b248eb0b3a",
+  "narrationChangedOnlyAtH047": true,
+  "h047Frames": 316800,
+  "foleyPeakDbfs": -37.44468342438998,
+  "masterSeconds": 322.3666666666667,
+  "masterSha256": "12e1106d20ace62384d25931a238f7928bc7ed6a74322dbc345652b248eb0b3a",
+  "candidateMaster": "D:\\python_project\\manim_extend_rainbow\\video_project\\topology_optimization\\research\\hypertension\\audio-v8-candidate\\master.wav",
+  "outsideH047NarrationMaxAbsDifference": 0.0,
+  "candidateMasterMeasurement": {
+    "input_i": "-15.82",
+    "input_tp": "-1.70",
+    "input_lra": "2.80",
+    "input_thresh": "-26.52",
+    "output_i": "-15.65",
+    "output_tp": "-1.50",
+    "output_lra": "2.70",
+    "output_thresh": "-26.32",
+    "normalization_type": "dynamic",
+    "target_offset": "0.15"
+  },
+  "actualMasterFrames": 15473600,
+  "validation": {
+    "completeMasterDecode": true,
+    "exactMasterDuration": true,
+    "onlyH047NarrationChanged": true,
+    "asrCompleteSentenceAndTail": true,
+    "subjectiveListeningChecked": false,
+    "toneNote": "The word 量 is replaced by the unambiguous 测, avoiding tonal ambiguity; ASR does not certify tone or subjective voice quality."
+  },
+  "note": "Candidate used a 3.03% tempo fit and was not promoted. V9 uses the natural 6.8 s take with a 0.2 s tail buffer.",
+  "canonicalFilesUnchanged": true,
+  "supersededBy": "audio-v9-measurement-revision.json"
+}

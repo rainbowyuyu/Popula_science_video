@@ -1,0 +1,80 @@
+{
+  "id": "mesh-3",
+  "text": "这些载荷、约束和毫米制坐标，必须跟着模型一起传递。单位错了，后面的漂亮图形也就失去意义。",
+  "ttsText": "这些载荷、约束和毫米制坐标，必须跟着模型一起传递。单位错了，后面的漂亮图形也就失去意义。",
+  "signature": "3a81f8ab012137e956dc424ab6c1a428f09f5d08eb477226980395eea69050b4",
+  "raw": "audio/raw/mesh-3-3a81f8ab01.wav",
+  "processed": "public/voice/mesh-3.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.960041666666667,
+  "sha256": "3e5fd6fc19fb000952f277ee2bca0c3ed32b7155942f7b0aec47bda617f9896b",
+  "seed": 981596331,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "mesh-3",
+    "beso-0"
+  ],
+  "rawEndpointDB": -83.80164151392694,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "a218ddabc811b981cd69487289aabb699c4e10e19232f070a8a4ce240d4238a8",
+    "outputSha256": "3e5fd6fc19fb000952f277ee2bca0c3ed32b7155942f7b0aec47bda617f9896b",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 8.960041666666667,
+      "peakDb": -9.366580921047904,
+      "activeRmsDb": -24.436962384976265,
+      "quietFrameP10Db": -65.25799211560637
+    },
+    "output": {
+      "seconds": 8.960041666666667,
+      "peakDb": -3.905026953075418,
+      "activeRmsDb": -21.482389757228574,
+      "quietFrameP10Db": -64.81651099116095
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.8704000000000001,
+    "unmodifiedRawSHA256": "efc27be28e3a508645f25da4363455f1dab68c13f6978ee126b22efca744134c"
+  },
+  "subjectiveListeningChecked": false
+}

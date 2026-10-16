@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How HTTPS works - How HTTPS works</title>
+  <meta name="description" content="Follow the adventures of Certificat as she explains why HTTPS is crucial for the future of the internet and how it all works together in a comic.">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://howhttps.works/"/>
+
+  
+    
+    
+      <link rel="alternate" hreflang="en" href="https://howhttps.works/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="ru" href="https://howhttps.works/ru/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="ko" href="https://howhttps.works/ko/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="pt-BR" href="https://howhttps.works/pt-br/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="cs" href="https://howhttps.works/cs/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="ja" href="https://howhttps.works/ja/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="fr" href="https://howhttps.works/fr/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="tr" href="https://howhttps.works/tr/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="zh" href="https://howhttps.works/zh/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="it" href="https://howhttps.works/it/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="uk" href="https://howhttps.works/uk/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="he" href="https://howhttps.works/he/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="es" href="https://howhttps.works/es/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="uz" href="https://howhttps.works/uz/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="id" href="https://howhttps.works/id/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="fa" href="https://howhttps.works/fa/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="vi" href="https://howhttps.works/vi/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="pl" href="https://howhttps.works/pl/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="bn" href="https://howhttps.works/bn/"/>
+    
+  
+    
+    
+      <link rel="alternate" hreflang="ar" href="https://howhttps.works/ar/"/>
+    
+  
+  <link rel="alternate" hreflang="x-default" href="https://howhttps.works/"/>
+
+
+  <!-- Facebook open graph -->
+
+
+<meta property="og:url" content="https://howhttps.works/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="How HTTPS Works" />
+<meta property="og:description" content="🙀 A cat explains how HTTPS works...in a comic! 😻" />
+<meta property="og:image" content="https://howhttps.works/assets/images/how-https-works-open-graph.png" />
+<!-- Twitter cards, complemented with Fb's open graph -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@dnsimple" />
+<meta name="twitter:creator" content="@dnsimple" />
+
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L1THQ6C7YJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-L1THQ6C7YJ');
+  </script>
+
+
+  
+</head>
+<body class="sans-serif">
+  <header class="bg-light-gray">
+    <div class="mw9 pa3 center">
+      <nav class="flex justify-between items-center">
+        <a href="/" class="link dim dib v-mid">
+          <img src="/assets/images/how-https-works-logo.svg" style="width:120px;" alt="How HTTPS works">
+        </a>
+        <div>
+          <select id="languageSelect" class="db dib-ns pa2 mr3" onchange="window.location.href=this.value;">
+            
+              
+              
+              
+                <option value="/">English (English)</option>
+              
+            
+              
+              
+              
+                <option value="/es/">Español (Spanish)</option>
+              
+            
+              
+              
+              
+                <option value="/fr/">Français (French)</option>
+              
+            
+              
+              
+              
+                <option value="/zh/">中文 (Chinese)</option>
+              
+            
+              
+              
+              
+                <option value="/ja/">日本語 (Japanese)</option>
+              
+            
+              
+              
+              
+                <option value="/ko/">한국어 (Korean)</option>
+              
+            
+              
+              
+              
+                <option value="/uk/">Українська (Ukrainian)</option>
+              
+            
+              
+              
+              
+                <option value="/it/">Italiano (Italian)</option>
+              
+            
+              
+              
+              
+                <option value="/pt-br/">Português (Portuguese (Brazil))</option>
+              
+            
+              
+              
+              
+                <option value="/cs/">Čeština (Czech)</option>
+              
+            
+              
+              
+              
+                <option value="/pl/">Polski (Polish)</option>
+              
+            
+              
+              
+              
+                <option value="/tr/">Türkçe (Turkish)</option>
+              
+            
+              
+              
+              
+                <option value="/ru/">Русский (Russian)</option>
+              
+            
+              
+              
+              
+                <option value="/uz/">Oʻzbekcha (Uzbek)</option>
+              
+            
+              
+              
+              
+                <option value="/id/">Bahasa Indonesia (Indonesian)</option>
+              
+            
+              
+              
+              
+                <option value="/bn/">বাংলা (Bengali)</option>
+              
+            
+              
+              
+              
+                <option value="/vi/">Tiếng Việt (Vietnamese)</option>
+              
+            
+              
+              
+              
+                <option value="/ar/">العربية (Arabic)</option>
+              
+            
+              
+              
+              
+                <option value="/fa/">فارسی (Persian)</option>
+              
+            
+              
+              
+              
+                <option value="/he/">עברית (Hebrew)</option>
+              
+            
+            <option disabled>------------------</option>
+            <option value="/translate/">Help us translate</option>
+          </select>
+          <a href="/episodes/" class="dib pt3 pt0-ns link black dim v-mid mr3">Episodes</a>
+          <a href="/about/" class="dib pt3 pt0-ns link black dim v-mid">About</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main role="main" class="mw9 pa3 mv3 center">
+    <div dir="ltr">
+  <h1 class="mt0 mb3 f1 tc f-headline-ns tracked ttu lh-solid pt4">How HTTPS Works</h1>
+  
+  
+  <p class="mt2 mb4 tc">Last updated: <time datetime="2025-08-21T00:00:00+00:00">August 21, 2025</time>. <a href="/changelog/" class="link dim black underline">See What's New</a></p>
+
+  <div class="tc">
+    <p class="f3 ma0"> </p>
+    <a class="dib start-reading-cta" href="/why-do-we-need-https/">
+      <svg style="width: 320px;" viewBox="0 0 340 487" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="none" d="M0 0h340v487H0z"/><path d="M303.177 26.034c21.141.057 17.551 26.203-2.19 26.114-22.813 1.151-46.086 2.643-67.75 9.736-3.303 1.082-6.603 2.286-9.475 4.193 0 0 4.487 4.126 8.861 6.757 16.816 10.117 35.496 16.137 54.486 22.224 13.65 4.429 27.342 9.852 37.391 20.293 8.525 8.857 12.167 21.728 8.08 34.438-6.68 20.775-26.452 35.702-43.474 47.408-17.609 12.109-54.125 1.466-47.667-1.232 22.36-9.342 44.314-20.803 61.547-38.581 4.425-4.565 8.713-9.664 10.402-15.785 1.895-6.865-3.473-13.535-9.78-17.707-13.055-8.636-101.385-30.724-102.447-60.358-.324-9.04 8.981-15.783 17.14-19.807 18.526-9.137 40.097-12.099 60.351-14.906 8.145-1.129 16.312-2.12 24.525-2.787zM82.772 247.054c.522-1.714 10.421 1.767 10.405 2.124-.734 17.022-2.567 34.851-11.92 49.029-4.879 7.396-13.908 12.587-23.028 10.464-10.091-2.35-17.519-11.835-22.628-20.53-7.15-12.166-12.118-25.586-15.627-39.266 0 0 10.308-2.207 10.827-.768 5.951 16.296 12.309 33.581 25.418 44.13 2.802 2.254 6.467 3.873 9.446 2.413 6.957-3.408 9.606-13.525 11.75-20.603 2.662-8.791 4.398-17.829 5.356-26.983l.001-.01zM239.215 245.371s10.567-.461 10.632-.126c3.085 15.518 6.593 31.394 16.137 44.242 2.075 2.792 4.707 5.887 8.263 5.762 5.544-.194 9.255-6.107 11.84-10.07 8.126-12.453 12.758-27.189 16.174-41.558 0 0 10.143 2.864 10.105 3.086-2.98 17.218-7.419 34.809-17.054 48.928-5.044 7.39-12.288 14.007-21.956 13.584-8.621-.377-15.864-7.205-20.224-14.596-8.718-14.781-12.128-32.383-13.917-49.252z" fill-rule="nonzero"/><ellipse cx="172" cy="451" rx="139.894" ry="28" fill="#ebebeb"/><path d="M131.685 266.286s10.213 3.004 10.019 4.854c-3.298 31.958-5.641 65.087-4.001 94.384 1.267 22.124 4.97 67.832 4.97 67.832s-.181 3.204-2.1 5.049L122.36 453.02c-9.122 7.186-13.559-1.769-6.736-8.027l15.072-13.236c-1.728-13.037-7.132-68.412-7.132-68.412-1.747-32.579 8.121-97.059 8.121-97.059zM211.66 266.286s-10.213 3.004-10.019 4.854c3.298 31.958 5.641 65.087 4.001 94.384-1.267 22.124-4.969 67.832-4.969 67.832s.18 3.204 2.1 5.049l18.212 14.615c9.122 7.186 13.559-1.769 6.736-8.027l-15.071-13.236c1.728-13.037 7.131-68.412 7.131-68.412 1.747-32.579-8.121-97.059-8.121-97.059z" fill-rule="nonzero"/><g id="certificat-face"><path d="M288.84 62.336l-19.803 16.253c-69.573-6.857-135.802-4.515-198.917 6.394L49.745 66.898l5.001 155.61a16.002 16.002 0 0 0 16.506 15.478l207.011-6.654a16.001 16.001 0 0 0 15.478-16.506l-4.901-152.49z" fill="#ffd479"/><path d="M120.541 100.486L92.62 85.031l-19.693 35.577 20.687-3.786 7.234 19.241 19.693-35.577z" fill="#ff7e79"/><path d="M89.616 85.131l28.474 24.424c-4.992 9.256-9.982 18.514-14.99 27.755 0 0-3.259 2.745-4.717-.32l-.003.001c-2.19-5.667-4.375-11.34-6.543-17.029l-18.399 3.439s-4.58-.596-2.985-4.162l19.163-34.108zm24.541 22.247L91.659 92.092l-13.395 24.654 15.331-2.715c1.115.097 1.855.211 2.611 1.817l5.151 14.083 12.8-22.553z" fill-rule="nonzero"/><path d="M129.083 82.972c3.114 11.029-3.311 22.512-14.34 25.627-11.029 3.114-22.512-3.311-25.627-14.34-3.115-11.029 3.311-22.512 14.34-25.627 11.029-3.115 22.512 3.311 25.627 14.34z" fill="#ff7e79"/><path d="M108.559 65.008c12.667-.215 24.335 11.007 24.152 23.942-.17 11.983-10.787 22.836-22.779 23.264-8.185.292-16.388-4.028-20.781-10.962-8.645-13.649.896-35.247 18.823-36.223.293-.012.292-.012.585-.021zm17.655 18.293c-3.574-11.275-19.694-16.542-29.138-7.976-8.27 7.501-6.947 23.046 3.087 28.819 11.675 6.717 30.403-4.297 26.244-20.175a30.075 30.075 0 0 0-.193-.668z" fill-rule="nonzero"/><path d="M154.758 108.864c.157 2.598 4.817 2.347 4.668-.15.957-11.555.554-22.815-1.086-33.806-.03-.921-4.698-.771-4.668.15-.897 11.322-.518 22.59 1.086 33.806zM175.91 108.494c.087 2.859 4.765 3.074 4.668-.15.956-11.556.553-22.816-1.087-33.806-.03-.922-4.697-.772-4.668.15a152.877 152.877 0 0 0 1.087 33.806zM195.946 107.996c.089 2.65 4.753 2.395 4.667-.15.957-11.555.554-22.815-1.086-33.806-.03-.921-4.697-.771-4.668.15a152.877 152.877 0 0 0 1.087 33.806z"/><path d="M172.052 186.034l-13.966-19.281 26.666-.857-12.7 20.138z" fill="#ff7e79"/><path d="M178.302 162.659l7.523.076c3.048 1.316 2.366 3.548 1.638 4.871l-4.172 6.318c-3.005 4.504-6.01 9.009-9.028 13.504 0 0-2.012 2.179-4.051.462 0 0-.247-.284-.492-.602l-5.277-6.865-6.86-8.986-2.106-2.794c-1.309-2.057-.189-4.899 2.5-5.271 0 0 4.134-.184 6.934-.294 4.464-.176 8.928-.299 13.391-.419zm.221 6.882c-6.695.251-6.694.253-13.39.442l-.883.02 4.843 7.052 2.803 4.111c2.071-3.503 4.16-6.995 6.241-10.492 0 0 1.124-1.166.386-1.133z" fill-rule="nonzero"/><path d="M114.641 140.146c13.546-.435 24.952 11.939 25.455 27.616.504 15.677-10.084 28.758-23.629 29.193-13.545.436-24.951-11.938-25.455-27.615-.504-15.677 10.084-28.758 23.629-29.194z" fill="#fff"/><path d="M114.447 142.775c-8.939.638-16.484 8.002-19.106 16.844-3.939 13.28 1.949 30.773 17.109 33.57 16.171 2.984 30.737-19.841 21.295-38.035-3.67-7.07-10.89-12.846-19.298-12.379zm.82-5.263c15.143-.139 27.908 15.098 28.043 31.35.127 15.277-11.425 31.274-27.099 31.58-12.121.236-23.184-9.416-26.833-21.383-5.331-17.489 4.402-40.683 24.824-41.516.355-.009.71-.023 1.065-.031z" fill-rule="nonzero"/><path d="M228.58 136.484c13.545-.435 24.951 11.939 25.455 27.616.504 15.677-10.084 28.758-23.629 29.193-13.545.436-24.951-11.939-25.455-27.616-.504-15.676 10.084-28.758 23.629-29.193z" fill="#fff"/><path d="M228.386 139.112c-8.94.639-16.484 8.003-19.107 16.844-4.267 14.389 3.157 34.649 21.281 33.851 13.917-.613 23.488-18.147 19.15-33.219-2.695-9.365-10.807-17.577-21.046-17.491l-.278.015zm.82-5.263c15.143-.138 27.907 15.098 28.043 31.351.127 15.276-11.425 31.274-27.099 31.58-12.121.236-23.185-9.416-26.833-21.383-5.331-17.489 4.401-40.684 24.824-41.516.355-.009.71-.023 1.065-.032z" fill-rule="nonzero"/><path d="M229.511 165.459c3.486-.112 6.452 4.02 6.62 9.221.167 5.202-2.528 9.516-6.014 9.628-3.486.112-6.452-4.02-6.619-9.222-.167-5.201 2.527-9.515 6.013-9.627zM115.573 169.121c3.486-.112 6.452 4.02 6.619 9.222.167 5.201-2.527 9.515-6.013 9.627-3.486.112-6.452-4.02-6.62-9.221-.167-5.202 2.528-9.516 6.014-9.628z"/><path d="M172.689 187.297c2.839.721-1.827 1.016 7.791 5.494 4.255 1.98 9.151-.309 12.276-4.304l1.74-1.042 1.895.393.027.019 1.011 1.656-.391 1.971c-4.693 7.342-14.407 11.343-23.472 5.125-2.965-2.034-4.043 2.546-9.638 2.758-5.665.215-11.273-2.353-15.883-5.753l-1.072-1.707.387-1.938 1.624-1.025c5.955 1.009 5.148 2.38 9.554 3.472 3.891.965 8.46.37 10.572-3.407 0 0 1.402-1.875 3.579-1.712z" fill-rule="nonzero"/></g><path d="M320.5 194.188a6.191 6.191 0 0 0-6.188-6.188H29.688a6.191 6.191 0 0 0-6.188 6.188v72.624A6.191 6.191 0 0 0 29.688 273h284.624a6.191 6.191 0 0 0 6.188-6.188v-72.624z" fill="#ff7e79"/><text x="50%" y="47%" dominant-baseline="middle" text-anchor="middle" font-family="'Arial-BoldMT','Arial',sans-serif" font-weight="700" font-size="32" fill="#fff">Start reading</text><path d="M15.009 222.422c-7.519 14.961-3.818 28.831 5.088 42.195 0 0 19.447-15.314 17.693-28.69-1.755-13.376-22.781-13.505-22.781-13.505z" fill="#ffd479"/><path d="M15.305 220.177c11.948.146 25.353 5.305 25.373 17.671.016 9.55-6.813 17.749-12.811 23.746-1.808 1.808-3.696 3.541-5.689 5.143l-1.095.665-.96.169c-2.767-.205-2.498-1.309-3.324-2.622-7.955-12.646-11.436-28.636-4.008-43.129.498-.97.771-1.65 2.514-1.643zm1.102 4.593c-4.816 11.199-2.443 24.246 4.209 35.202l.111.18c5.455-4.942 10.638-10.497 13.276-17.288 1.437-3.701 1.678-8.263-1.052-11.515-3.721-4.433-10.246-5.977-16.446-6.576 0 0-.089-.022-.098-.003z" fill-rule="nonzero"/><path d="M327.505 197.284c7.431 15.005 3.648 28.853-5.336 42.164 0 0-19.357-15.429-17.523-28.794 1.833-13.365 22.859-13.37 22.859-13.37z" fill="#ffd479"/><path d="M327.418 195.038s1.507.256 2.102 1.254l-1.478.728 1.478-.728c6.932 13.393 4.893 29.612-4.264 43.833-.814 1.264-2.836 3.366-5.464 1.2-7.42-6.117-14.266-13.477-17.088-22.651-2.049-6.657-.06-14.646 5.877-18.699 5.378-3.672 12.145-4.948 18.837-4.937zm-1.423 4.589c-8.374.759-18.184 3.395-18.679 12.022-.512 8.93 7.003 16.131 11.756 20.928.987.996 2.493 2.403 2.493 2.403 6.466-10.39 9.58-23.264 4.599-35.189 0 0-.014-.177-.169-.164z" fill-rule="nonzero"/></svg>
+    </a>
+  </div>
+
+  <div class="mw6 pa3 center lh-copy">
+    <div class="measure">
+      <h2 class="f3 pt4">How HTTPS works ...in a comic! 🌈 🎉 🍕</h2>
+      <p>Have you ever wondered why a lock icon appears on your browser URL bar? And why is it important? We did too, and this comic is for you!</p>
+      <p>Follow the adventures of Certificat, Browserbird, and Compugter as they explain why HTTPS is crucial for the future of the web and how it all works together.</p>
+      <p>Don't let the bad crabs get you (you'll know what we mean in the comic). Get to know HTTPS and why it is essential to your privacy.</p>
+    </div>
+    <div class="tc pv3">
+      <a class="btn-cta dib link dim b mv2 dib pv2 ph3 br2" href="/why-do-we-need-https/">Start reading now</a>
+    </div>
+  </div>
+</div>
+
+  </main>
+  <footer class="bg-black" dir="ltr">
+  <div class="mw9 pa5 center white">
+    <div class="flex flex-wrap justify-between">
+      <div class="pv4" dir="ltr">
+        <img src="/assets/images/how-https-works-reverse.svg" class="w5" alt="How HTTPS works" />
+        <div class="dt pt4">
+          <p class="ma0 dtc pr2 v-mid">From the folks at</p>
+          <a class="dtc" href="https://dnsimple.com?utm_source=howhttpsworks&utm_medium=referral&utm_campaign=howhttpsworks" target="_blank">
+            <svg viewBox="0 0 154 48" class="v-mid" style="width: 120px;" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M0 0h154v48H0z"/><clipPath id="a"><path d="M0 0h154v48H0z"/></clipPath><g clip-path="url(#a)"><g class="link-to-dnsimple"><path d="M153.916 0L0 8.066v39.553l153.916-8.066V0z" fill="#fff" class="dnsimple-logo-bg"/><g class="dnsimple-logo-text" fill="#000" fill-rule="nonzero"><path d="M27.185 14.844c-.598.032-1.196.095-1.763.25v5.832c-.818-.27-1.762-.378-3.021-.312-4.469.235-8.12 3.468-8.12 8.36 0 5.017 3.336 7.602 8.246 7.344 2.423-.127 4.909-.916 6.452-1.812V14.907c-.598-.094-1.228-.092-1.794-.063zm-4.721 18.373c-2.707.142-4.564-1.579-4.564-4.496 0-2.885 1.983-4.839 4.627-4.977 1.07-.057 2.045.018 2.895.506v8.342a8.039 8.039 0 0 1-2.958.625zM40.057 19.626c-3.21.169-5.823 1.56-7.144 2.727v12.951c.598.094 1.196.094 1.762.064.598-.031 1.227-.096 1.794-.251V23.891c.692-.444 1.92-.916 3.305-.989 2.297-.12 3.619.846 3.619 3.574v8.278a8.695 8.695 0 0 0 1.794.063c.566-.03 1.196-.094 1.794-.251v-9.125c0-3.418-2.109-6.067-6.924-5.815zM56.013 34.595c4.092-.215 6.484-2.222 6.484-5.326 0-2.948-2.361-3.922-5.602-4.253-2.55-.275-3.211-.71-3.211-1.682 0-.941.819-1.58 2.707-1.679 1.794-.094 3.336.358 4.375.9.724-.603 1.196-1.505 1.353-2.611-.976-.639-2.895-1.291-5.602-1.149-3.777.198-6.263 2.21-6.263 4.969 0 3.136 2.518 3.976 5.161 4.245 2.675.268 3.525.788 3.525 1.791 0 1.004-.755 1.827-2.864 1.938-2.36.124-3.682-.623-4.595-1.233-.755.51-1.353 1.388-1.636 2.532.849.676 2.832 1.733 6.168 1.558zM67.469 16.402c1.228-.064 2.266-1.122 2.266-2.376a2.133 2.133 0 0 0-2.266-2.139c-1.29.067-2.329 1.125-2.329 2.379 0 1.255 1.039 2.204 2.329 2.136zm0 17.247c.598-.031 1.196-.094 1.763-.249V18.568c-.567-.096-1.196-.094-1.763-.065-.598.032-1.196.094-1.794.251v14.833c.598.094 1.228.092 1.794.062zM90.224 16.997c-2.014.106-3.84.985-5.067 1.99-1.102-1.008-2.738-1.581-4.878-1.469-3.116.164-5.823 1.623-7.019 2.72v12.951c.598.094 1.196.094 1.763.065.598-.032 1.227-.096 1.794-.251V21.776a6.379 6.379 0 0 1 3.052-.975c2.424-.127 3.336 1.362 3.336 3.494v8.373c.598.094 1.196.094 1.826.061.566-.03 1.196-.094 1.762-.249v-9.439c0-.47-.063-.937-.157-1.372.724-.633 1.731-1.313 3.179-1.389 2.423-.127 3.367 1.36 3.367 3.492v8.373c.567.096 1.165.096 1.794.063.567-.03 1.196-.094 1.763-.249V22.52c0-3.23-2.203-5.749-6.515-5.523zM107.219 16.138c-2.833.148-5.193 1.37-6.641 2.637v18.784a8.84 8.84 0 0 0 1.794.063c.598-.032 1.196-.094 1.763-.25v-5.77c.944.265 1.951.337 3.21.271 4.154-.218 7.899-3.33 7.899-8.348 0-5.142-3.462-7.626-8.025-7.387zm-.126 12.581c-1.164.061-2.109-.077-2.958-.441v-7.996c.912-.55 1.888-.82 2.927-.875 2.738-.143 4.595 1.484 4.595 4.338 0 2.948-1.857 4.832-4.564 4.974zM120.28 30.882c.598-.032 1.227-.096 1.794-.251V10.06c-.598-.094-1.228-.093-1.826-.061-.598.031-1.195.094-1.762.249v20.571a9.06 9.06 0 0 0 1.794.063zM139.635 21.15c0-3.983-2.832-6.563-6.829-6.353-4.249.223-7.49 3.716-7.49 8.326 0 4.861 3.21 7.64 7.679 7.406 2.99-.157 4.941-1.357 6.2-2.426-.126-.903-.755-1.873-1.542-2.334-.976.741-2.235 1.654-4.406 1.768-2.487.13-3.997-1.296-4.281-3.727l10.544-.553c.094-.82.125-1.323.125-2.107zm-10.637.306c.252-2.051 1.605-3.659 3.808-3.774 2.423-.096 3.336 1.644 3.336 3.4l-7.144.374z"/></g></g></g></svg>
+          </a>
+
+        </div>
+
+        <div class="social-media flex justify-start-ns justify-center items-center pv4">
+  <!-- twitter / x -->
+  <a href="https://twitter.com/dnsimple" rel="noopener noreferrer" aria-label="Visit us on X" target="_blank" class="grow mr4">
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512">
+      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        fill="#666666"
+        d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+      />
+    </svg>
+  </a>
+
+  <!-- youtube -->
+  <a
+    href="https://www.youtube.com/channel/UC_BHoTHFiZ1GTo3-rkfjHkA"
+    aria-label="Visit us on YouTube"
+    rel="noopener noreferrer"
+    target="_blank"
+    class="grow mr4"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="36" viewBox="0 0 576 512">
+      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        fill="#666666"
+        d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"
+      />
+    </svg>
+  </a>
+
+  <!-- linkedin -->
+  <a href="https://www.linkedin.com/company/dnsimple/" target="_blank" rel="noopener noreferrer" class="grow mr4">
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512">
+      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        fill="#666666"
+        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"
+      />
+    </svg>
+  </a>
+
+  <!-- bluesky -->
+  <a href="https://bsky.app/profile/dnsimple.bsky.social" aria-label="Visit us on Blue Sky Social" rel="noopener noreferrer" target="_blank" class="grow mr4">
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 512 512">
+      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        fill="#666666"
+        d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"
+      />
+    </svg>
+  </a>
+
+  <!-- facebook -->
+  <a href="https://www.facebook.com/dnsimple" aria-label="Visit us on Facebook" rel="noopener noreferrer" target="_blank" class="grow mr4">
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="20" viewBox="0 0 320 512">
+      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        fill="#666666"
+        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+      />
+    </svg>
+  </a>
+
+  <!-- mastodon -->
+  <a href="https://dnsimple.social/@trusty" aria-label="Visit us on Mastodon" rel="noopener noreferrer" target="_blank" class="grow mr4">
+    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512">
+      <!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path
+        fill="#666666"
+        d="M433 179.1c0-97.2-63.7-125.7-63.7-125.7-62.5-28.7-228.6-28.4-290.5 0 0 0-63.7 28.5-63.7 125.7 0 115.7-6.6 259.4 105.6 289.1 40.5 10.7 75.3 13 103.3 11.4 50.8-2.8 79.3-18.1 79.3-18.1l-1.7-36.9s-36.3 11.4-77.1 10.1c-40.4-1.4-83-4.4-89.6-54a102.5 102.5 0 0 1 -.9-13.9c85.6 20.9 158.7 9.1 178.8 6.7 56.1-6.7 105-41.3 111.2-72.9 9.8-49.8 9-121.5 9-121.5zm-75.1 125.2h-46.6v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.3V197c0-58.5-64-56.6-64-6.9v114.2H90.2c0-122.1-5.2-147.9 18.4-175 25.9-28.9 79.8-30.8 103.8 6.1l11.6 19.5 11.6-19.5c24.1-37.1 78.1-34.8 103.8-6.1 23.7 27.3 18.4 53 18.4 175z"
+      />
+    </svg>
+  </a>
+</div>
+
+      </div>
+      <div class="pa4">
+        <h3 class="f4 ma0 pb2 comic-red">Episodes 📖</h3>
+        <a class="link db pv2 white dim" href="/why-do-we-need-https/">1. Why do we need HTTPS?</a>
+        <a class="link db pv2 white dim" href="/the-keys/">2. The keys</a>
+        <a class="link db pv2 white dim" href="/the-handshake/">3. The handshake</a>
+        <a class="link db pv2 white dim" href="/https-ssl-tls-differences/">4. HTTPS, SSL, TLS differences</a>
+        <a class="link db pv2 white dim" href="/certificate-authorities/">5. Certificate Authorities</a>
+      </div>
+      <div class="pa4">
+        <h3 class="f4 ma0 pb2 comic-red">Be a social cat 😸</h3>
+        <a class="db pv2 white link dim" href="https://bsky.app/intent/compose?text=A%20comic%20explains%20how%20HTTPS%20works!%20via%20@dnsimple%20%23https%20%23certificates%20https://howhttps.works" target="_blank" rel="noopener noreferrer">
+          Share on Bluesky
+        </a>
+        <a class="db pv2 white link dim" href="https://www.linkedin.com/shareArticle?mini=true&text=A%20comic%20explains%20how%20HTTPS%20works!%20via%20@dnsimple%20%23https%20%23certificates&url=https://howhttps.works" target="_blank" rel="noopener noreferrer">
+          Share on LinkedIn
+        </a>
+        <a class="db pv2 white link dim" href="#" onclick="shareMastodon(); return false;">
+          Share on Mastodon
+        </a>
+      </div>
+      <div class="pv4">
+        <a class="link db ph3 pv2 white dim bg-mid-gray br-pill" href="https://dnsimple.com/comics" target="_blank">↗️ Read more comics 🤓</a>
+        <a class="pt3 link dim db white" href="/changelog/">What's New</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function shareMastodon() {
+    const instance = prompt("Enter your Mastodon instance (e.g., mastodon.social):");
+    if (instance) {
+      const text = encodeURIComponent("A comic explains how HTTPS works! via @trusty@dnsimple.social #https #certificates https://howhttps.works");
+      const url = `https://${instance}/share?text=${text}`;
+      window.open(url, '_blank', 'noopener,noreferrer,width=600,height=400');
+    }
+  }
+</script>
+
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "schema": "launch-v6-accepted-bridges-v1",
+  "compositionFps": 60,
+  "evidenceBoundary": "Generated camera/environment concepts only. Native geometry, saved numerical evidence and live local UI remain separate.",
+  "bridges": [
+    {
+      "id": "v5-web-to-platform",
+      "asset": "generated/v5/v5-web-to-platform.mp4",
+      "fromFrame": 900,
+      "durationFrames": 300,
+      "sourceFps": 30,
+      "sourceDurationSeconds": 5,
+      "sourceSHA256": "dc0785df53dec38c23b9fd74e8bad4480bcf100c388bd030abda58e2b6b77392",
+      "overlapFrames": 24,
+      "entryDirection": "left",
+      "reviewed": true,
+      "reviewNote": "Root reviewed 11 sample frames and full-size 0.5s/1.0s frames. Platform remains connected; separate conceptual evidence block enters from screen left. Live UI is composited independently. Not solver evidence."
+    },
+    {
+      "id": "v5-platform-to-viewer-r2",
+      "asset": "generated/v5/v5-platform-to-viewer-r2.mp4",
+      "fromFrame": 3240,
+      "durationFrames": 300,
+      "sourceFps": 30,
+      "sourceDurationSeconds": 5,
+      "sourceSHA256": "8188966644311993318e009c24ad32c69efad43b2ba6bfd9c2e87dec05ad98f9",
+      "overlapFrames": 24,
+      "entryDirection": "right",
+      "reviewed": true,
+      "reviewNote": "Root reviewed 11 sample frames. Stable waterline and connected assembly remain visible; no recurrence of rejected column detachment. Live viewer is independent; concept label excludes solver claims."
+    }
+  ]
+}

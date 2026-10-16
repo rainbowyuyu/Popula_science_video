@@ -1,0 +1,94 @@
+{
+  "kind": "editorial-and-scientific-review",
+  "reviewedStorySha256": "cf48091727ffbee331b570b10c75bfa5b4939eab1259ff48153038f25efa279c",
+  "cueCount": 34,
+  "chineseCharacters": 1269,
+  "claims": [
+    {
+      "cues": [
+        "s01",
+        "s02",
+        "s03",
+        "s05"
+      ],
+      "source": "EFF",
+      "scope": "Conditionally describes interception of unencrypted network traffic; does not claim every adjacent Wi-Fi user can necessarily capture it."
+    },
+    {
+      "cues": [
+        "s06",
+        "s07",
+        "s08",
+        "s09",
+        "s10"
+      ],
+      "source": "RFC8446 sections 1, 2, 5",
+      "scope": "Encryption and secret key need; early sequence is explicitly a result preview before handshake explanation."
+    },
+    {
+      "cues": [
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s18",
+        "s19",
+        "s20",
+        "s21",
+        "s22",
+        "s23"
+      ],
+      "source": "RFC8446 section 2; Khan Academy explanatory analogy",
+      "scope": "Exchange public shares while private material remains local; paint is illustrative, not a secure cryptosystem."
+    },
+    {
+      "cues": [
+        "s24",
+        "s25",
+        "s26",
+        "s27",
+        "s28"
+      ],
+      "source": "RFC8446 sections 2, 4.4.2, 4.4.3, 4.4.4, 7.1",
+      "scope": "Server authentication is distinct from session key derivation; copied certificate alone cannot produce the required signature."
+    },
+    {
+      "cues": [
+        "s29",
+        "s30",
+        "s31"
+      ],
+      "source": "RFC8446 section 5.2; research/order-crypto-evidence.json",
+      "scope": "Actual local single-bit corruption raises InvalidTag and returns no plaintext."
+    },
+    {
+      "cues": [
+        "s32",
+        "s33",
+        "s34"
+      ],
+      "source": "EFF HTTPS section; RFC8446 section 2",
+      "scope": "HTTPS protects transport to website; website receives plaintext; no claim of end-to-end chat or mutually authenticated customer certificates."
+    }
+  ],
+  "blockingNarrationFindings": [],
+  "visualAcceptanceChecks": [
+    "Keep phone left and shop right throughout color demonstration.",
+    "Do not mix until s16; public yellow and private red/blue must remain distinguishable.",
+    "Exchange mixture cups, not the private source bottles.",
+    "Each final mixture uses equal total material and matching component proportions.",
+    "Show both final colors simultaneously for at least one second.",
+    "Certificate signing key and derived traffic key must remain visually distinguishable.",
+    "Tampering changes ciphertext byte 0 from 63 to 62, not a chosen plaintext word.",
+    "At website endpoint the original order is readable; transport intermediaries see ciphertext."
+  ],
+  "limitations": [
+    "No real audience comprehension test conducted.",
+    "Reference video examined through transcript and selected playback screenshots only.",
+    "The paint sequence is illustrative, not a numerical or physical security proof.",
+    "Final film has not yet been reviewed by this subagent."
+  ]
+}

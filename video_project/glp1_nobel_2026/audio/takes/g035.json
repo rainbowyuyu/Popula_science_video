@@ -1,0 +1,69 @@
+{
+  "id": "g035",
+  "text": "再把镜头拉回身体，来到后腰两侧的肾脏。血压还受体内水盐多少影响，肾脏就是重要的调节者。",
+  "ttsText": "再把镜头拉回身体，来到后腰两侧的肾脏。血压还受体内水盐多少影响，肾脏就是重要的调节者。",
+  "signature": "8d80636e49b4cf06818264fd2bdf555ef7b4c986dfd14cda01eedb8bbd4e7114",
+  "raw": "audio/raw/g035-8d80636e49.wav",
+  "processed": "public/voice/g035.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.720041666666667,
+  "sha256": "7c7077e90dd3f7d154f6b342f22fa1cd033624133064a6a72dcf95ab998d2ea6",
+  "seed": 2292552719,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "g033",
+    "g034",
+    "g035",
+    "g036"
+  ],
+  "rawEndpointDB": -96.27733731818279,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "e9dcfccadd86a28979f7c3905522262dba51b7a1682105b0e59f75ac31bb2bb6",
+    "outputSha256": "7c7077e90dd3f7d154f6b342f22fa1cd033624133064a6a72dcf95ab998d2ea6",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 1.8898108674967347,
+    "input": {
+      "seconds": 8.720041666666667,
+      "peakDb": -5.721765162735765,
+      "activeRmsDb": -21.55123296759307,
+      "quietFrameP10Db": -61.91855699293258
+    },
+    "output": {
+      "seconds": 8.720041666666667,
+      "peakDb": -4.654009118154257,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.73355801662886
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

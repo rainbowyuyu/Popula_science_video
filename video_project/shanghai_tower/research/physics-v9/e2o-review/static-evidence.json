@@ -1,0 +1,32 @@
+{
+  "method": "Read-only source inspection and full-source text searches; no imported or executed repository Python",
+  "commitFromArchiveCommentVerifiedByParent": "daa3bce61305642fd809d0a94ba08c348128360b",
+  "directEDBParserFound": false,
+  "E2KParserFound": false,
+  "requiresRunningETABS": true,
+  "activeObjectCall": {"file": "src/general_utilities.py", "line": 49, "value": "CSI.ETABS.API.ETABSObject"},
+  "importTimeCOMConnectionDefaultArguments": [55, 58, 61, 64],
+  "demoEDB": {"path": "models/ETABS/FEMA_p2006_chapter8_v4.2.EDB", "bytes": 459580, "header": ["ETABS", "18.05", "18.1.1"]},
+  "elementConstructionCalls": [
+    {"file": "src/opensees_utilities.py", "line": 120, "type": "ElasticTimoshenkoBeam", "filter": "Angle == 0.00"},
+    {"file": "src/opensees_utilities.py", "line": 129, "type": "ElasticTimoshenkoBeam", "filter": "Angle == 90.0"},
+    {"file": "src/opensees_utilities.py", "line": 214, "type": "zeroLength", "properties": "Bilin material from WUF hinge Excel worksheet"}
+  ],
+  "materialConstructionCalls": [
+    {"file": "src/opensees_utilities.py", "line": 207, "type": "Bilin"}
+  ],
+  "areaShellRCWallConversionFound": false,
+  "sectionFiberOrNDMaterialConstructionFound": false,
+  "frameEndReleaseConversionFound": false,
+  "materialEGExtractionFound": false,
+  "fixedEG": {"E": 29000, "G": 11153.846, "file": "src/opensees_utilities.py", "lineE": 51, "lineG": 52},
+  "nodalMass": {"readFile": "src/etabs_utilities.py", "readLine": 168, "writeFile": "src/opensees_utilities.py", "writeLine": 99},
+  "rigidDiaphragmInferredFromEqualZ": {"file": "src/opensees_utilities.py", "line": 96, "alwaysEnabledByDefaultAtLine": 54},
+  "pointLoadsFilteredToDead": {"file": "src/etabs_utilities.py", "line": 124},
+  "addNodalLoadsInvokedByMainSetup": false,
+  "baseShearSumIncludesTimeColumn": {"file": "src/opensees_postprocessor.py", "timeColumnLine": 63, "sumLines": [74, 75]},
+  "ShanghaiModelSubstitutedWithDemo": false,
+  "repositoryPythonExecuted": false,
+  "originalEDBModified": false,
+  "conversionSucceededClaimed": false
+}

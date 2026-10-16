@@ -1,0 +1,80 @@
+{
+  "version": "V19Motion",
+  "fps": 30,
+  "strategy": "Clear native landing and continuous opaque skeletal fish exit. Reviewed first-last generated camera bridges: orbit into garden, physical foreground tree occlusion into painted coda. Native frames advance once.",
+  "pendingRegeneration": [],
+  "removedInteriorBridgeIds": [
+    "garden_to_drop_v16",
+    "drop_to_world_v16",
+    "world_to_secondary_v16b",
+    "secondary_to_world_v16b"
+  ],
+  "clips": [
+    {
+      "id": "painted_chase",
+      "frames": 300,
+      "framePath": "assets_v15/qwen/painted_chase/frames",
+      "taskId": "59f79d2a-693d-47cd-aae0-effce19241fc",
+      "anchor": {
+        "kind": "frame",
+        "offsetFrames": 0
+      },
+      "transition": {
+        "kind": "matched",
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "enterFrames": 1,
+        "exitFrames": 1,
+        "overlapFrames": 0,
+        "maxBlurPx": 0
+      },
+      "sourceVersion": "V15"
+    },
+    {
+      "id": "painted_to_garden_v19motion_b",
+      "frames": 150,
+      "framePath": "assets_v19_motion/qwen/painted_to_garden_v19motion_b/frames",
+      "taskId": "acd83766-e0a2-452a-886a-bfc395df8e62",
+      "sourceVersion": "V19Motion",
+      "anchor": {
+        "kind": "frame",
+        "offsetFrames": 300
+      },
+      "transition": {
+        "kind": "matched",
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "enterFrames": 1,
+        "exitFrames": 1,
+        "overlapFrames": 0,
+        "maxBlurPx": 0
+      }
+    },
+    {
+      "id": "garden_to_painted_v19motion_c",
+      "frames": 150,
+      "framePath": "assets_v19_motion/qwen/garden_to_painted_v19motion_c/frames",
+      "taskId": "1d4b95e0-1dad-425c-b7d6-9280fa016e28",
+      "sourceVersion": "V19Motion",
+      "anchor": {
+        "kind": "frame",
+        "offsetFrames": 10402
+      },
+      "transition": {
+        "kind": "matched",
+        "focus": [
+          0.5,
+          0.5
+        ],
+        "enterFrames": 1,
+        "exitFrames": 1,
+        "overlapFrames": 0,
+        "maxBlurPx": 0
+      }
+    }
+  ]
+}

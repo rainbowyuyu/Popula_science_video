@@ -1,0 +1,85 @@
+{
+  "id": "h036",
+  "partIndex": 0,
+  "ttsText": "低密度脂蛋白，英文缩写是 L、D、L。化验单上的低密度脂蛋白胆固醇，测的是这类颗粒里的胆固醇。",
+  "storySHA256": "3dbdd64f585f1902501a8d3bbaf4f6171428df334a9ac8e35e35035f5ccd61f8",
+  "attempt": 9,
+  "seed": 1792995108,
+  "signature": "6adeef24b969e1994ecc8c7f15757d6fe6ad1fc9e06af49fa8277105704652e9",
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "batchParts": [
+    "h036-p01"
+  ],
+  "modelIdentity": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "raw": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-09\\raw\\h036-p01.wav",
+  "rawSHA256": "228e06dacb0b283b1136cdceeee1cad5f1feb022f886f9968024285c470d0b44",
+  "rawMetrics": {
+    "samples48k": 433920,
+    "seconds": 9.04,
+    "peakDBFS": -5.341260211349159,
+    "first20msDBFS": -76.03611202276066,
+    "last20msDBFS": -96.01975066969871,
+    "firstActiveMs": 340.0,
+    "lastActiveToEndMs": 410.0,
+    "activityThresholdDBFS": -49.246339767619894,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "guardedSource": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-09\\guarded\\h036-p01.wav",
+  "guardedSHA256": "c4c184c56c32c69766911b5aa4e6102c7385e5dbb8d1cb384575d009dc130f38",
+  "processed": "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\research\\revision-v9\\audio\\candidate-09\\processed\\h036-p01.wav",
+  "sha256": "2de5b69d74d5af2b3d53bfe457674af8985747a97af102985f9c70c0a4fd3262",
+  "durationSeconds": 9.28,
+  "sampleRate": 48000,
+  "guardLeadingSeconds": 0.08,
+  "guardTrailingSeconds": 0.16,
+  "rawTailNeedsReview": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "c4c184c56c32c69766911b5aa4e6102c7385e5dbb8d1cb384575d009dc130f38",
+    "outputSha256": "2de5b69d74d5af2b3d53bfe457674af8985747a97af102985f9c70c0a4fd3262",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.399821899018555,
+    "input": {
+      "seconds": 9.28,
+      "peakDb": -5.3418255345775005,
+      "activeRmsDb": -22.06519650199674,
+      "quietFrameP10Db": -64.98730690908911
+    },
+    "output": {
+      "seconds": 9.28,
+      "peakDb": -3.543024955972504,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -65.65376021295293
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

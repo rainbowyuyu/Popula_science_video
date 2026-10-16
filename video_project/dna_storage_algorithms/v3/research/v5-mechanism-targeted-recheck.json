@@ -1,0 +1,265 @@
+{
+  "schema": "rainbow.dna.v5.targeted-mechanism-recheck",
+  "status": "PASS",
+  "checkedAt": "2026-10-11T12:27:13.892Z",
+  "method": "CPU-only real Three.js object construction and update calls. Canvas mock captures letter text but performs no rasterization. Events use frozen V5 spokenText and explicitly synthetic length-weighted cue windows loaded only into the local require cache.",
+  "currentNarrationVersion": 4,
+  "fixtureRevision": "v5-compact-3-frozen",
+  "sourceHashes": {
+    "src/scene/StationsV5.ts": "4270a081623c1dc23fd91df014b87bba89d570d6a43594c8b547e70318a41045",
+    "src/EventsV5.ts": "159e0b813f473298da4d71c6cb8790ffb5058a65b291d009379da778c2e696f7",
+    "src/FilmV5.tsx": "c4b9a137385db8aa25f91fbf63eb7bbc4de1570ba47e17c1a453dd05a722dcab",
+    "src/scene/MemoryArchiveV5.ts": "62558dac9ed2abbb401a7031bc03b500761becfc7b121cf78d30b43fc60afc05",
+    "src/teaching-data.json": "4d0f5a4eb9ccdfd3fb86c62c89762923360592567c71ff83fc462d5e28254848",
+    "src/story-v5.json": "f65df8db71d43896ab37ca926041d318e11a1ace4e6db06248d9b35932a09db5"
+  },
+  "checks": [
+    {
+      "name": "loss_uses_n10_new_phrase",
+      "pass": true,
+      "event": {
+        "id": "lose-whole-block",
+        "cueId": "n10",
+        "label": "整段缺失",
+        "timingKind": "cue-text-fraction",
+        "matchedPhrase": "整段拿走",
+        "wasOrderRepaired": false,
+        "audioStartSec": 76.53280954459478,
+        "audioEndSec": 81.35021097046413,
+        "sceneStartSec": 76.53280954459478,
+        "sceneEndSec": 81.35021097046413,
+        "motionAudioStartSec": 73.48280954459479,
+        "motionAudioEndSec": 76.68280954459479,
+        "motionSceneStartSec": 73.48280954459477,
+        "motionSceneEndSec": 76.68280954459479
+      }
+    },
+    {
+      "name": "loss_does_not_happen_before_phrase",
+      "pass": true
+    },
+    {
+      "name": "both_lost_blocks_leave_after_3_2_audio_seconds",
+      "pass": true
+    },
+    {
+      "name": "known_A_anchor_survives",
+      "pass": true
+    },
+    {
+      "name": "loss_callout_bound_to_n10",
+      "pass": true
+    },
+    {
+      "name": "fountain_recovers_B_with_existing_anchor",
+      "pass": true
+    },
+    {
+      "name": "fountain_recovers_C_with_existing_anchor",
+      "pass": true
+    },
+    {
+      "name": "independent_SW_matrix_matches",
+      "pass": true
+    },
+    {
+      "name": "traceback_starts_at_global_max_cell",
+      "pass": true,
+      "spot": [
+        3.96,
+        -3.3000000000000003,
+        0.24
+      ],
+      "score": 8
+    },
+    {
+      "name": "traceback_ends_at_zero_cell",
+      "pass": true,
+      "spot": [
+        0,
+        0,
+        0.24
+      ],
+      "score": 0
+    },
+    {
+      "name": "six_edges_cover_zero_through_max",
+      "pass": true,
+      "edges": 6
+    },
+    {
+      "name": "traceback_has_finite_interpolated_positions",
+      "pass": true,
+      "samples": 121
+    },
+    {
+      "name": "visible_bit_map_matches_actual_MP4_encoding",
+      "pass": true,
+      "visualMap": {
+        "10": "G",
+        "11": "T",
+        "00": "A",
+        "01": "C"
+      },
+      "actualMap": {
+        "10": "G",
+        "11": "T",
+        "00": "A",
+        "01": "C"
+      }
+    },
+    {
+      "name": "all_180_tiles_home_before_playback",
+      "pass": true,
+      "assemblyEnd": 5.155,
+      "playbackStart": 5.2,
+      "maxOffset": 0
+    },
+    {
+      "name": "atlas_starts_with_frame_zero",
+      "pass": true
+    },
+    {
+      "name": "atlas_midpoint_selects_correct_cell",
+      "pass": true,
+      "frame": 44,
+      "offset": [
+        0.4,
+        0.4444444444444444
+      ]
+    },
+    {
+      "name": "atlas_clamps_to_frame_89",
+      "pass": true
+    },
+    {
+      "name": "error_0_uses_new_verb",
+      "pass": true,
+      "event": {
+        "id": "substitution",
+        "cueId": "n19",
+        "label": "替换",
+        "timingKind": "cue-text-fraction",
+        "matchedPhrase": "换掉一个",
+        "wasOrderRepaired": false,
+        "audioStartSec": 144.3280033960662,
+        "audioEndSec": 146.20008490165557,
+        "sceneStartSec": 144.32800339606624,
+        "sceneEndSec": 146.20008490165557,
+        "motionAudioStartSec": 141.27800339606623,
+        "motionAudioEndSec": 144.4780033960662,
+        "motionSceneStartSec": 141.27800339606623,
+        "motionSceneEndSec": 144.47800339606619
+      }
+    },
+    {
+      "name": "substitution_before_action_is_original_G",
+      "pass": true
+    },
+    {
+      "name": "substitution_after_action_is_C",
+      "pass": true
+    },
+    {
+      "name": "error_0_reverses_on_seek",
+      "pass": true
+    },
+    {
+      "name": "error_1_uses_new_verb",
+      "pass": true,
+      "event": {
+        "id": "insertion",
+        "cueId": "n19",
+        "label": "插入",
+        "timingKind": "cue-text-fraction",
+        "matchedPhrase": "多塞一个",
+        "wasOrderRepaired": false,
+        "audioStartSec": 146.20008490165557,
+        "audioEndSec": 148.07216640724494,
+        "sceneStartSec": 146.20008490165557,
+        "sceneEndSec": 148.07216640724494,
+        "motionAudioStartSec": 143.1500849016556,
+        "motionAudioEndSec": 146.35008490165558,
+        "motionSceneStartSec": 143.15008490165556,
+        "motionSceneEndSec": 146.35008490165555
+      }
+    },
+    {
+      "name": "insertion_before_action_keeps_original_sequence",
+      "pass": true,
+      "baseline": "ATGCAT"
+    },
+    {
+      "name": "insertion_after_action_adds_exactly_one_G",
+      "pass": true
+    },
+    {
+      "name": "error_1_reverses_on_seek",
+      "pass": true
+    },
+    {
+      "name": "error_2_uses_new_verb",
+      "pass": true,
+      "event": {
+        "id": "deletion",
+        "cueId": "n19",
+        "label": "缺失",
+        "timingKind": "cue-text-fraction",
+        "matchedPhrase": "少掉一个",
+        "wasOrderRepaired": false,
+        "audioStartSec": 148.07216640724494,
+        "audioEndSec": 152.08376963350784,
+        "sceneStartSec": 148.07216640724494,
+        "sceneEndSec": 152.08376963350787,
+        "motionAudioStartSec": 145.02216640724495,
+        "motionAudioEndSec": 148.22216640724494,
+        "motionSceneStartSec": 145.02216640724492,
+        "motionSceneEndSec": 148.22216640724494
+      }
+    },
+    {
+      "name": "deletion_before_action_has_C_and_hidden_gap",
+      "pass": true
+    },
+    {
+      "name": "deletion_after_action_has_visible_gap_and_removed_C",
+      "pass": true
+    },
+    {
+      "name": "error_2_reverses_on_seek",
+      "pass": true
+    },
+    {
+      "name": "whole_read_dropout_uses_new_phrase",
+      "pass": true
+    },
+    {
+      "name": "whole_read_dropout_moves_one_row_out",
+      "pass": true
+    },
+    {
+      "name": "return_label_declares_teaching_and_check_result",
+      "pass": true
+    },
+    {
+      "name": "MP4_evidence_supports_integrity_label",
+      "pass": true
+    },
+    {
+      "name": "review_does_not_change_production_source",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "This verifies semantic cue wiring and numerical mechanism state, not final measured V5 audio offsets.",
+    "No browser, WebGL/GPU, final pixels, occlusion, GLB replacement, subjective speech or readability were tested.",
+    "The source label now states teaching encoding; the fixed XOR-chain details and high overhead remain documented in the recovery report."
+  ],
+  "typecheck": {
+    "command": "npm run check",
+    "exitCode": 0,
+    "result": "TypeScript --noEmit passed"
+  },
+  "followupCameraReport": "research/v5-loss-camera-recheck.json"
+}

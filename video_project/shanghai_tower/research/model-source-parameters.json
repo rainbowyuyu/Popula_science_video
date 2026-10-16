@@ -1,0 +1,293 @@
+{
+  "schema": "rainbow.architectural-reconstruction-sources/1",
+  "parameters": {
+    "height": 632.0,
+    "twist_degrees": 120.0,
+    "excavation_depth": 33.0,
+    "diaphragm_inner_diameter": 121.0,
+    "raft_thickness": 6.0,
+    "zone_boundaries": [
+      0,
+      33.45,
+      99,
+      173.7,
+      239.4,
+      314.1,
+      393.3,
+      465.4,
+      542,
+      580
+    ],
+    "source_status": "Geometry corrected against Su et al. (2013), figures 1-6. Published zone elevations, core width/cell topology, thickness limits, column counts/ranges and six outrigger zones verified. Standard-floor elevations between published control levels, exact column axes, truss within-zone elevations/sections, pile layout, TMD dimensions remain reconstruction assumptions.",
+    "occupied_top": 580.0,
+    "structural_top": 580.0,
+    "floors": 124,
+    "floor_elevation_anchors": [
+      [
+        1,
+        0
+      ],
+      [
+        5,
+        22.22
+      ],
+      [
+        7,
+        33.45
+      ],
+      [
+        14,
+        65.8
+      ],
+      [
+        21,
+        99
+      ],
+      [
+        29,
+        136
+      ],
+      [
+        37,
+        173.7
+      ],
+      [
+        44,
+        206.2
+      ],
+      [
+        51,
+        239.4
+      ],
+      [
+        60,
+        280.9
+      ],
+      [
+        67,
+        314.1
+      ],
+      [
+        76,
+        355.6
+      ],
+      [
+        84,
+        393.3
+      ],
+      [
+        92,
+        428.9
+      ],
+      [
+        100,
+        465.4
+      ],
+      [
+        109,
+        505.5
+      ],
+      [
+        117,
+        542
+      ],
+      [
+        121,
+        561
+      ],
+      [
+        124,
+        573.9
+      ]
+    ],
+    "core_width_base": 30.0,
+    "core_width_top": 30.0,
+    "core_wall_base": 1.2,
+    "core_wall_top": 0.5,
+    "core_concrete_grade": "C60",
+    "core_cell_grid": [
+      -15,
+      -5,
+      5,
+      15
+    ],
+    "core_shapes": [
+      "square9",
+      "square9",
+      "square9",
+      "square9",
+      "chamfer9",
+      "chamfer9",
+      "cross5",
+      "cross5",
+      "rectangle3"
+    ],
+    "mega_column_top": 542.0,
+    "mega_column_pair_offset": 5.0,
+    "mega_column_base_section": [
+      5.1,
+      3.7
+    ],
+    "mega_column_top_section": [
+      2.4,
+      1.9
+    ],
+    "corner_column_top": 314.1,
+    "corner_column_base_width": 2.0,
+    "corner_column_top_width": 1.3,
+    "outrigger_zone_indices": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "belt_zone_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "truss_depth": 8.6,
+    "outer_convex_harmonic": 0.1,
+    "inner_radius_base": 41.8,
+    "inner_radius_top": 21.0,
+    "floor_radius_top_height": 542.0,
+    "column_axis_ratio": 0.91,
+    "corner_column_axis_ratio": 0.95,
+    "mega_column_underground_section": [
+      5.3,
+      4.3
+    ],
+    "damper_height": 583.5,
+    "damper_cable_count": 12,
+    "damper_cable_length": 25.0,
+    "raft_top_elevation": -25.4
+  },
+  "verified": [
+    {
+      "source": "Jian Gong, Shanghai Tower, Frontiers of Engineering Management 4(1), 106–109 (2017)",
+      "doi": "10.15302/J-FEM-2017001",
+      "url": "https://journal.hep.com.cn/fem/EN/10.15302/J-FEM-2017001",
+      "claims": [
+        "632 m architectural height",
+        "120 degree external curtain-wall rotation",
+        "33 m excavation",
+        "121 m inside diameter circular diaphragm wall",
+        "6 m foundation mat thickness",
+        "five underground storeys",
+        "steel-concrete core, megacolumns, belt/outrigger trusses and composite floors"
+      ]
+    },
+    {
+      "source": "Gensler public section and diagrams, ArchDaily Shanghai Tower / Gensler (2016)",
+      "url": "https://www.archdaily.com/783216/shanghai-tower-gensler",
+      "local_images": [
+        "research/drawings/archdaily-section-1.jpg",
+        "research/drawings/archdaily-diagram-1.jpg",
+        "research/drawings/archdaily-diagram-2.jpg",
+        "research/drawings/archdaily-diagram-3.jpg"
+      ],
+      "claims": [
+        "rounded triangular rotating outer shell",
+        "circular internal occupied tower",
+        "multiple vertical atrium zones",
+        "uneven open crown",
+        "suspended rectangular TMD schematic"
+      ],
+      "measurement_note": "Section y=1067 ground and y=0 top gives approximately 1.688 pixels per metre. Interzone deck traces near y=1005,899,780,661,540,414,277,124 imply approximately 37,100,170,240,312,387,468,559 m. Boundaries are rounded graphic estimates, not surveyed dimensions or working drawings."
+    },
+    {
+      "source": "Trevor Haskett, Feeling at Home in the Clouds, STRUCTURE (2017)",
+      "url": "https://www.structuremag.org/article/feeling-at-home-in-the-clouds/",
+      "claims": [
+        "Shanghai Tower suspended-mass TMD",
+        "rare-earth magnet array moves with mass",
+        "copper plate fixed to floor dissipates motion via eddy currents"
+      ],
+      "limitation": "Concept geometry is illustrated. Exact mass-block dimensions, suspension length, support-frame detail and installation elevation are not taken from an as-built drawing."
+    },
+    {
+      "source": "Su et al., Long-term structural performance monitoring system for the Shanghai Tower, Journal of Civil Structural Health Monitoring 3 (2013), 49-61",
+      "doi": "10.1007/s13349-012-0034-z",
+      "local_pdf": "research/structural/su2013-monitoring-accepted.pdf",
+      "pages": "PDF pp.6-9,12 / Figures 1-6",
+      "claims": [
+        "Structural height 580 m; architectural height 632 m",
+        "Nine zones; strengthening-floor elevations 33.45,99.00,173.70,239.40,314.10,393.30,465.40,542.00 m",
+        "Core bottom 30x30 m, 9 cells; corners removed starting zone5, cross 5 cells zone7, uppermost rectangular3 cells",
+        "Core thickness 1.2 m to 0.5 m, C60 concrete",
+        "Eight super columns to zone8; four corner columns to zone5; sections 5.3x4.3 m underground to 2.4x1.9 m top",
+        "Eight two-storey box belt trusses; six outrigger zones 2,4,5,6,7,8",
+        "Orthogonal paired column locations and diagonally placed corner columns visible Fig5",
+        "Explicit numbered-floor anchors transcribed from Fig6"
+      ]
+    },
+    {
+      "source": "Chen et al. 2013 modal structural analysis, primary conference article",
+      "local_pdf": "research/structural/chen2013-modal.pdf",
+      "page": 2,
+      "claims": [
+        "Standard circular lower floor plan diameter83.6m",
+        "Circular floor plan reduces to diameter42m atzone8"
+      ]
+    },
+    {
+      "source": "Ou et al. 2013 structural finite-element analysis, primary article",
+      "local_pdf": "research/structural/ou2013-fe.pdf",
+      "page": 2,
+      "claims": [
+        "Zone1 main column section3.7x5.1m"
+      ]
+    },
+    {
+      "source": "Yi Zhu et al., Shanghai Tower structural design paper (year unverified)",
+      "local_pdf": "research/structural/zhu2012-http.pdf",
+      "pages": [
+        8,
+        10
+      ],
+      "claims": [
+        "Mat top elevation -25.4 m (p10)",
+        "Mat thickness 6 m (p8)",
+        "Pile-head / mat-bottom elevation -31.4 m derived from those two values; separate from ~33 m excavation depth"
+      ]
+    }
+  ],
+  "explicit_approximations": {
+    "outer_plan": "Strictly convex support-function rounded triangle h(theta)=r0[1+0.10 cos(3theta)] with 120 degree twist. This removes the old locally concave harmonic profile, while remaining a reconstruction rather than architect fabrication coordinates.",
+    "base_outer_radius_m": 49.0,
+    "top_to_base_area_ratio": 0.45,
+    "occupied_cylinder_radii_m": "Verified lower circular plan41.8m radius, zone8 upper21m; linear taper between those anchors assumed.",
+    "core_widths_m": "Constant 30 m overall grid in the lower9-cell / chamfer / five-cell cross; upper three-cell rectangle30x10 m. Exact clipping dimensions inferred from Fig3; no continuously shrinking empty square.",
+    "floor_levels": "124 numbered floors reconstructed piecewise between Fig6 surveyed-design anchors. Intermediate unlabelled elevations and F1=0 datum are assumed; final-built counted storeys may differ from this design-stage source.",
+    "mega_columns": "Verified8 paired onorthogonal sides tozone8, visibleaxes rebuilt fromFig5 proportions: majorcoordinate=.91*inner_radius, minoroffset5m. Zone1section5.1x3.7, underground5.3x4.3, top2.4x1.9 sourceverified; linearinterpolation inbetween assumed.",
+    "pile_group": "947 representative 1 m diameter cylinders, 52 m below raft: retained as illustrative dense geometry, not a verified pile layout, quantity survey or design length.",
+    "tmd": "1000tonne rectangular mass-box with circular top platform, four anchor plate assemblies and12cables25m long; floor125/source-verified mechanism. Centre583.5m, dimensions, magnetic poles, frame members and fasteners are explicit geometric reconstruction assumptions; artwork excluded.",
+    "six_skin_sectors": "Animation decomposition groups only, not six real fabrication seams.",
+    "crown": "Nonlevel open rim visually reconstructed from public section; only the 632 m maximum is source verified.",
+    "corner_columns": "Verified4 tozone5; radialaxis=.95*inner radius, square2.0to1.3m sections assumed.",
+    "outriggers": "Six verified zones 2,4,5,6,7,8. Exact upper/lower chord levels and member sections are unverified; initially placed in the8.6 m below selected zone boundary as an explicit analytical assumption.",
+    "belt_trusses": "Eight verified two-storey box belts; secondary posts/gussets/flange thicknesses and exact fabricated member sizes illustrative."
+  },
+  "scientific_scope": "Source-constrained educational geometry. The separately documented local Zwind/OpenSees equivalent structural model is being connected through stable node/member IDs. Neither geometry nor computed example is the Shanghai Tower as-built analysis model or engineering safety assessment.",
+  "tmdV3": {
+    "massMetricTonnes": 1000,
+    "actualFloor": 125,
+    "cableCount": 12,
+    "reportedCableLengthMetres": 25,
+    "visualMassCenterMetres": 583.5,
+    "massCenterStatus": "illustrative placement, not surveyed125F elevation",
+    "shape": "rectangular mass box, round upper platform, four plate anchor assemblies, three cables each; owner supplied2017 photo",
+    "source": "http://district.ce.cn/newarea/roll/201409/04/t20140904_3482912.shtml",
+    "photoSource": "https://www.thepaper.cn/newsDetail_forward_1777186",
+    "photo": "research/tmd-v3/owner2017-damper-photo.jpg",
+    "localDetailStatus": "dimensions, fasteners, sections and magnetic pole layout are proportional educational reconstruction; external volume is not used to calculate1000t mass",
+    "soilStatus": "five generic volumetric cutaway horizons; no borehole log or exact horizon claim"
+  }
+}

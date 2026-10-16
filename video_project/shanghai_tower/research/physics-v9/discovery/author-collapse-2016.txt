@@ -1,0 +1,1693 @@
+Application of Earthquake-Induced Collapse Analysis in Design Optimization 
+of a Supertall Building, The Structural Design of Tall and Special Buildings, 2016
+Application 
+    of Earthquake-Induced Collapse Analysis in Design Optimization of a Supertall 
+    Building
+Xiao Lu
+1,2
+, Xinzheng Lu
+1
+[*]
+, Hong Guan
+3
+, Linlin Xie
+1
+1
+Department of Civil Engineering,
+Tsinghua 
+    University
+, Beijing, P.R. China
+2
+Department of Civil Engineering, 
+    Beijing Jiaotong University, Beijing, P.R. China
+3
+Griffith School of Engineering,
+Griffith University Gold Coast Campus
+, Queensland 4222, 
+    Australia
+The 
+          Structural Design of Tall and Special Buildings, Accepted on Apr. 6, 
+          2016.
+DOI: 10.1002/tal.1291.
+Download 
+          Full Text
+SUMMARY
+In recent years, a combination of rapid 
+    construction of supertall buildings and frequent occurrence of strong earthquakes 
+    worldwide demands a rational seismic design method for structures of this 
+    kind. Although earthquake-induced collapse analysis is one of the most efficient 
+    methods to quantify the collapse resistance of buildings, little research 
+    has been reported on using the collapse analysis to evaluate the seismic safety 
+    of supertall buildings during the design stage. To optimize the design taking 
+    into account earthquake-induced collapses, a real world supertall building 
+    with a height of greater than 500 m is investigated in this work. Throughout 
+    its design procedure, earthquake-induced collapse analyses are performed to 
+    optimize the design at three different levels (i.e., the structural system 
+    level, design parameter level and component level). At the structural system 
+    level, the influence of different lateral force resisting systems on the collapse 
+    resistance is discussed; at the design parameter level, the influence of minimum 
+    base shear force is discussed; and at the component level, the influence of 
+    high-performance shear wall on the collapse resistance is studied. Based on 
+    these discussions, the optimal design scheme of the building is established 
+    to improve the seismic safety while maintaining the
+cost of construction
+. 
+    Given more and more supertall buildings will be constructed with new structural 
+    system and components, this work will provide important references for the 
+    seismic design of supertall buildings and the corresponding collapse resistance 
+    research in the future.
+KEY WORDS
+:
+Supertall building, design optimization, earthquake-induced 
+    collapse, structural system, minimum base shear force, brace-embedded shear 
+    wall
+DOI:
+10.1002/tal.1291
+If you need the PDF version of this paper, please email 
+to
+luxinzheng@sina.com
+1 Introduction
+Tall buildings are important symbols of construction technology and economic 
+    development of a nation. The Council on Tall Buildings and Urban Habitat (CTBUHa) 
+    defines ��supertall�� as a building over 300 m in height. Statistics show that
+until March 2015
+, there are 108 
+    completed or under constructed supertall buildings exceeding 300 m
+world
+wide. 
+    In the next five years, the number of supertall buildings that are higher 
+    than 300 m will be doubled to 246, and the maximum building height will exceed 
+    1000 m (the Kingdom Tower in Saudi Arabia) (CTBUH, 2015a). In short, supertall 
+    building construction has entered a period of vigorous development.
+Meanwhile, strong earthquakes continue to happen frequently all over the 
+    world. The
+China Wenchuan Earthquake
+in 2008, the
+Chile Concepci��n 
+    Earthquake
+in 2010, the Japan Tohoku Earthquake in 2011 and the
+Nepal 
+    Earthquake
+in 2015 are just a few examples. All of these catastrophes 
+    caused enormous
+casualties
+and property 
+    losses. Thus, earthquakes are serious threaten to tall buildings, especially 
+    to many new supertall buildings located in high seismic region. Due to the 
+    comprehensive function, dense population and long service life of supertall 
+    buildings, the earthquake-induced collapse will lead to unacceptable economic 
+    losses and casualties. Therefore, the collapse of supertall buildings due 
+    to extreme earthquakes must be prevented through a rational and effective 
+    seismic design.
+The structural system of a supertall 
+    building is very complex. A large number of new structural systems and high-performance 
+    structural components are adopted in the newly constructed supertall buildings. 
+    However, the seismic performance of these new systems and components has not 
+    yet been sufficiently studied. Consequently, their design philosophies and 
+    methods are also not comprehensively specified in the building codes. In addition, 
+    because the fundamental periods of supertall buildings are much longer than 
+    the other conventional structures, the applicability of certain design specifications 
+    (e.g., the minimum base shear force) in the design codes has not been verified 
+    for supertall buildings. Therefore, how to propose a rational seismic design 
+    method to ensure the structural seismic safety is the primary objective of 
+    seismic design for supertall buildings.
+As a new form of architecture, very few 
+    supertall buildings have experienced very strong earthquakes. Meanwhile, for 
+    supertall buildings with heights over several hundred meters, studying the 
+    seismic collapse resistance by means of shaking table tests is both difficult 
+    and impractical. As a consequence, the numerical methods especially the earthquake-induced 
+    collapse analysis has become one of the best choices to directly determine 
+    the relationship between the design parameters and structural seismic safety. 
+    At present, FEMA P695 has proposed the framework using the collapse analysis 
+    to guide the seismic design of structures (FEMA, 2009). The structural collapse 
+    fragility curve and collapse margin ratio (
+CMR
+) can be obtained through 
+    the incremental dynamic analysis (IDA). Subsequently, the reliability of code-specified 
+    seismic performance factors including response modification coefficient, system 
+    overstrength factor, and deflection amplification factor can be quantified. 
+    Nevertheless the existing work using collapse analysis mainly focuses on the 
+    collapse resistances of ordinary structural systems, such as
+timber 
+    structures
+(FEMA, 2009), concrete or steel frames (Zareian and Krawinkler, 
+    2007; Tavafoghi and Eshghi, 2013; Sengupta and Li, 2014; Akbas et al, 2014), 
+    shear wall structures (Cengiz and Saygun, 2007) and so on. Little research 
+    has been reported on using collapse analysis to ensure the seismic safety 
+    of supertall buildings during the design stage.
+Based on the above background information, a real world supertall building 
+    with a height of greater than 500 m is investigated in this work.
+Throughout 
+    its design procedure, the earthquake-induced collapse analyses are performed 
+    to optimize the design at different levels: (i.e., the structural system level, 
+    design parameter level and component level). Specifically, at the structural 
+    system level, the influence of different lateral force resisting systems on 
+    the collapse resistance is discussed; at the design parameter level, the influence 
+    of minimum base shear force is discussed; and at the component level, the 
+    influence of high-performance shear wall on the collapse resistance is studied. 
+    Based on these discussions, the optimal design scheme of the studied building 
+    is established to improve the safety while maintaining the cost of construction
+. 
+    Note that although the collapse analysis has been performed in the seismic 
+    design of ordinary buildings, a systematic collapse analysis to guide the 
+    seismic design of supertall buildings is very rare. As a result, this work 
+    will provide important references for the seismic design of similar supertall 
+    buildings and the corresponding collapse resistance research in the future.
+2 Building Information 
+    and Numerical Models
+2.1 Building information
+The building concerned is a supertall structure located in Beijing and its
+architectural drawing
+is shown in 
+    Figure 1, featuring the shape of a Chinese traditional wine cup. The planar 
+    layout of the building is approximately square with the largest dimension 
+    located at the bottom. The size of the planar layout decreases gradually along 
+    the height of the building. The minimum planar layout is located at the height 
+    of approximately 400 m, above which it begins to increase again until reaching 
+    the top. Note that the dimension of the planar layout at the top is still 
+    smaller than that at the bottom. It is a multifunctional building with a total 
+    height of 528 m. It has 7 stories underground and 108 stories above the ground. 
+    The gross floor area of this building is approximately 420,000 m
+2
+. 
+    It will become the tallest building located in the high seismic region in 
+    China as well as in the world.
+Figure 1.
+Architectural 
+            drawing of the supertall building
+The high seismic region is referred to 
+    as ��8 degree seismic design zone�� by the
+Code for Seismic Design of Buildings
+(CMC, 2010a) of China. The maximum spectral acceleration at the Maximum 
+    Considered Earthquake (MCE) level is about 0.9g (g is the acceleration of 
+    gravity) and the building site is classified as Class II (i.e., an equivalent 
+    shear-wave velocity of 360 m/s for 30 m soil (
+V
+S30
+)). Based 
+    on such information, the acceleration spectrum at the MCE level can be obtained 
+    according to the Chinese design code (CMC, 2010a) and shown in Figure 2. The 
+    wind loads with a return period of 50 years and 100 years are 0.45 kN/m
+2
+and 0.5 kN/m
+2
+, respectively. Preliminary analysis indicates that 
+    the story shear force is dominated by the seismic load; this guides the subsequent 
+    study which focuses on the earthquake-induced structural safety of this supertall 
+    building.
+Figure 2.  Target response spectrum at the MCE level
+It is noted 
+    that the experience of designing such a supertall building in highly seismic 
+    regions is very limit worldwide. In addition, the architectural layout, the 
+    lateral force resisting system (mega column/core tube/brace system) and the 
+    component types of the building concerned are significantly different from 
+    the ordinary buildings. As such, the collapse resistance of this supertall 
+    building is studied throughout the design procedure by performing earthquake-induced 
+    collapse analyses. This will in turn ensure the seismic safety of this building.
+2.2 Numerical model 
+    of the supertall building
+Generally, supertall buildings
+consist 
+    of a large number of components in different types
+. In addition, the stress 
+    states of these components are also very complicated. In the
+supertall 
+    building concerned,
+the main structural components include concrete filled 
+    steel tube (CFST) mega columns, shear walls, mega braces, outriggers, circle 
+    belt trusses and secondary steel frames. Therefore, based on the modeling 
+    approach for supertall buildings proposed by Lu et al. (2011; 2013a,b), the 
+    finite element (FE) models of this building with different design schemes 
+    are established. Details of these FE models are as follows.
+The fiber-beam element is adopted to 
+    simulate the CFST mega columns (Lu et al, 2013a). Both the external steel 
+    tube and the filled concrete are divided into a number of fibers. Different 
+    fibers adopt different constitutive material models. The constitutive model 
+    of CFST proposed by Han et al. (2001) is used for the confined concrete (Figure 
+    3(a)). The von Mises yield criterion-based plastic constitutive model (Lu 
+    et al, 2013b) is used for steel, and the typical stress-strain backbone curve 
+    shown in Figure 3(b) contains four stages, including elastic, yield, hardening 
+    and post-necking.
+(a) Typical stress-strain curves for confined 
+            concrete. (
+x
+is the confinement factor 
+            (Han et al, 2001))
+(b) Typical stress-strain backbone 
+            curve for steel
+Figure 3.  Typical stress-strain 
+    curves for confined concrete and steel
+The secondary frames, circle belt trusses, 
+    outriggers and mega braces of the building are constructed of H-shaped or 
+    welded box-shaped steel beams. The fiber-beam element is also used to model 
+    these components (Lu et al, 2011; 2013a,b). The shear walls and coupling beams 
+    in the core tube are simulated by the multi-layered shell elements (Guan and 
+    Loo, 1997; Lu et al, 2013b; 2015a). According to the actual reinforcement 
+    arrangement in the shear wall, the multi-layered shell element is divided 
+    into approximately 21 concrete or steel reinforcement layers in the wall thickness 
+    direction. The longitudinal and transverse rebars are smeared into equivalent 
+    steel layers. For the boundary zones of the shear wall, the concentrated reinforcing 
+    bars are simulated using beam elements, which are embedded in the shell elements 
+    by nodes sharing
+0
+. Existing studies show that such a modeling approach can successfully 
+    represent the nonlinear seismic behavior of supertall buildings with acceptable 
+    modeling and computing workload (Lu et al, 2011; 2013a,b).
+2.3 Collapse analysis 
+    methods
+Collapse 
+    is a very complicated process in which the structural components exceed their 
+    load or deformation capacities and the entire structure changes from a continuum 
+    system into discrete parts through the facture of the structural elements. 
+    The key issue to successfully simulate the earthquake-induced collapse is 
+    to properly simulate this phenomenon. At present, much research have been 
+    conducted on the collapse simulation using four types of methods: finite element 
+    method (Lu et al, 2012; 2013b; Burton and Deierlein, 2013; Qian and Li, 2014; 
+    Lignos et al, 2011; Mahin et al, 2015), discrete element method (Sun et al, 
+    2003; Gu et al, 2014), applied element method (Worakanchana and Meguro, 2008; 
+    Salem 2011) and rigid body method (Mattern et al, 2007). In addition, Sivaselvan 
+    and Reinhorn (2006) also have developed a mixed Lagrangian approach to simulate 
+    the structural collapse.
+Although the above mentioned numerical 
+    methods have been successfully adopted for the simulations of structural collapse, 
+    most of such simulations focus on the collapse of ordinary buildings, such 
+    as multi-story frames and masonry buildings. Limited collapse simulation has 
+    been conducted for supertall buildings. Based on the FE method, the authors 
+    have proposed the elemental deactivation technique in their previous studies 
+    (Lu et al, 2013b) on earthquake-induced collapse simulation. The material-related 
+    failure criterion (i.e. material strain) is adopted to monitor the failure 
+    of structural elements. Specifically, the strains of the elemental integration 
+    points of the whole building are monitored. If the strain at any integration 
+    point in a fiber or layer (either concrete or steel) exceeds the material 
+    failure criterion, the stress and the stiffness of this specific fiber/layer 
+    are considered to be deactivated, which means that the fiber/layer can no 
+    longer contribute to the stiffness computation of the whole structure. If 
+    all fibers/layers of an element are deactivated, the element is considered 
+    fully deactivated from the model. The proposed method has been successfully 
+    applied in the earthquake-induced collapse simulations for two supertall buildings 
+    that are higher than 500 m (Lu et al, 2011; 2013a). These applications fully 
+    demonstrate the feasibility of the proposed method in simulating the earthquake-induced 
+    collapse of supertall buildings. In addition, most of the widely used structural 
+    design software (e.g., ETABS) adopts the FE model consisting of beam elements 
+    and shell elements to analyze the mechanical behavior of supertall buildings. 
+    Such design models can be readily transformed to the collapse simulation in 
+    this work, which will greatly improve the analysis efficiency. For the above 
+    reasons, the collapse simulation method proposed by Lu et al. (2011; 2013a,b) 
+    is adopted herein to investigate the earthquake-induced collapse of the supertall 
+    building concerned.
+Details of the failure criteria for concrete 
+    and steel are summarized in Table 1. Note that the confined concrete (e.g., 
+    CFST columns) exhibits much higher ductility than its unconfined counterpart 
+    (e.g., concrete in the cover layer). As such, different failure criteria are 
+    adopted to describe the crushing behavior for confined and unconfined concrete. 
+    Similarly, different failure criteria are used to define different functions 
+    of steel. The influence of different failure criteria on the collapse resistance 
+    evaluation has been discussed previously by the authors (Lu et al, 2013b). 
+    Base on the findings achieved (Lu et al, 2013b), the specific failure criteria 
+    (Table 1) are adopted in this work for the following two reasons:
+(1) These failure criteria are based on the specifications 
+    given in the design codes, which are widely accepted by design engineers, 
+    especially for the design of this real world supertall building.
+(2) The major objective of this work 
+    is to identify the optimal seismic design according to the relative collapse 
+    resistances of different design schemes. The elemental failure criteria may 
+    affect the collapse resistance of one specific scheme, but will not change 
+    the relative relationships of collapse resistance among these schemes if the 
+    earthquake-induced collapse analyses are performed with the same values of 
+    the failure criteria. Therefore, as long as the same values of the elemental 
+    failure criteria are used to perform the earthquake-induced collapse of all 
+    of the design schemes, the optimization schemes still can be identified.
+Table 1.  The failure criteria 
+    for concrete and steel
+Materials
+Failure 
+            criteria
+Confined 
+            concrete
+Strain 
+            corresponding to 10% of the peak stress
+(Lu 
+            et al, 2013a)
+Unconfined 
+            concrete
+Compressive 
+            strain exceeding 0.37% (CMC, 2010b)
+Reinforcement 
+            in concrete
+Tensile 
+            strain exceeding 9% (CMC, 2010b)
+Steel 
+            for the mega braces, outriggers and the embedded steel plate in the 
+            shear wall
+Tensile 
+            strain exceeding 20% (CMC, 2010b)
+3 Optimal Design of Structural 
+    System
+3.1 Two options for 
+    the structural system
+Due 
+    to the height of the supertall building, its structural responses are more 
+    sensitive to the lateral loads (wind and seismic loads) than those of the 
+    ordinary frames or shear wall structures; in most cases the design of a supertall 
+    building is dominated by the lateral stiffness (Moon, 2014). Therefore, choosing 
+    a reasonable lateral force resisting system has a great influence on the cost 
+    and safety of supertall buildings. CTBUH (2015b) has conducted an investigation 
+    on the lateral force resisting systems of 75 supertall buildings constructed 
+    between 1961 and 2010 worldwide. They include 20 framed-tube buildings, 4 
+    bundled-tube buildings, 15 tube-in-tube buildings, 10 diagonalized buildings, 
+    19 mega column/core tube/outrigger buildings and 7 mega column/core tube/brace 
+    buildings. The statistics also indicate that the framed-tube, bundled-tube 
+    and tube-in-tube structures are mainly applied in the tall buildings lower 
+    than 90 stories. Among the 15 supertall buildings constructed between 2001 
+    and 2010, 11 adopted the mega column/core tube/outrigger system and 3 adopted 
+    the mega column/core tube/brace system. Conclusively, the mega structural 
+    systems (e.g., the mega column/core tube/outrigger system and mega column/core 
+    tube/brace system) have become the best choice for the lateral force resisting 
+    systems of modern supertall buildings.
+Consequently, the supertall building 
+    studied herein also adopts such a mega structural system. In August 2011, 
+    two design schemes with different lateral force resisting systems are proposed 
+    at the preliminary design stage according to the requirement of architectural 
+    features. The differences of these two schemes are briefly described as follows.
+The first scheme is referred to as the 
+    ��half-braced scheme��. The lateral force resisting system at the lower four 
+    zones involves mega columns, core tube and mega braces; while in the upper 
+    four zones, the mega columns, core tube and outriggers are adopted as the 
+    main lateral force resisting system, as shown in Figure 4(a). The mega columns, 
+    located at four corners, are constructed by CFST and their cross sections 
+    decrease along the building height. Each mega column at the corner is separated 
+    into two columns from Zone 2 and extends to the top of the building. The mega 
+    braces are arranged at the periphery of the building between Zone 1 and Zone 
+    4. For the upper four zones, closely spaced perimeter columns are used instead 
+    of mega braces. Nine circle belt trusses are arranged along the building height 
+    at 13 to 15-story intervals. The outriggers are built between Zone 5 and Zone 
+    8.
+(a) Half-braced scheme
+(b) Fully-braced scheme
+Figure 4.  The sketch of the 
+    two design schemes
+The other design scheme is referred to 
+    as the ��fully-braced scheme�� and the main lateral force resisting system includes 
+    mega columns, core tube and mega braces, as shown in Figure 4(b). The mega 
+    columns are also constructed by CFST and the layout of the mega columns is 
+    similar to the half-braced scheme except for the following two differences: 
+    (a) Each corner has two mega columns; (b) the mega columns only extend to 
+    the top of Zone 7. Zone 8, which is a sightseeing region, has no mega column. 
+    The mega braces are arranged throughout the building height. The number of 
+    circle belt trusses is reduced to eight comparing to the half-braced scheme. 
+    The core tube of the fully-braced scheme is similar to the half-braced scheme.
+3.2 Material consumption
+The 
+    fundamental vibration periods of the half-braced and fully-braced design schemes 
+    are 7.44 s and 7.38 s, respectively. This implies that the lateral stiffness 
+    of the fully-braced scheme is larger than that of the half-braced scheme. 
+    The material consumption of these two schemes is compared in Table 2. Note 
+    that both design schemes are for the preliminary design phase, therefore only 
+    the concrete and steel consumptions of the main structural components are 
+    calculated and compared; whereas the material consumption of non-structural 
+    components is not considered.
+Table 2.  Comparison of the total 
+    material consumption of the two design schemes
+Half-braced scheme
+Fully-braced scheme
+Relative deviation
+Total mass (ton)
+753 720
+669 382
+-11.19%
+Concrete consumption (ton)
+652 938
+565 211
+-13.44%
+Steel consumption in mega
+columns (ton)
+29 074
+23 934
+-17.68%
+Steel consumption in all
+steel components (ton)
+65 408
+73 936
+13.04%
+Steel consumption in slab (ton)
+6 300
+6 093
+-3.29%
+Total steel consumption (ton)
+100 783
+103 963
+3.16%
+The comparison shows that the total
+material consumption
+(concrete 
+    and steel) of the fully-braced scheme is 11.19% less than that of the half-braced 
+    scheme. This is mainly because the mega columns and shear walls in the fully-braced 
+    scheme have smaller cross sections, which results in a reduction of 13.44% 
+    in concrete consumption. The steel consumption of the two design schemes, 
+    on the other hand, is very similar. Specifically, the steel consumption of 
+    the mega columns in the fully-braced scheme is 17.68% less than that of the 
+    half-braced scheme; while the steel consumption of the mega braces increases 
+    13.04% comparing to the half-braced scheme. Consequently, the total steel 
+    consumption of the fully-braced scheme is only 3.16% larger than that of the 
+    half-braced scheme. Overall, although the mega braces in the fully-braced 
+    scheme result in a larger steel consumption, due to more uniform lateral stiffness 
+    in the fully-braced scheme, the cross sections of other components have been 
+    reduced and in turn resulted in a similar amount of the total steel consumption 
+    of these two design schemes. In addition, the total mass of the fully-braced 
+    scheme is smaller than that of the half-braced scheme.
+3.3 Seismic performance
+Although 
+    the fully-braced scheme is advantageous in material consumption, the seismic 
+    performances and collapse resistances of these two design schemes need to 
+    be further studied. The seismic performances of the two design schemes are 
+    comprehensively compared through nonlinear time history analysis (THA) using 
+    different ground motions at various intensities. The seismic responses of 
+    the two schemes subjected to the widely used ground motion records, El-Centro 
+    EW 1940, are illustrated herein as typical cases. The PGA of the El-Centro 
+    EW 1940 ground motion record is scaled to 400 cm/s
+2
+, 510 cm/s
+2
+and 620 cm/s
+2
+, which correspond to the MCE level ground motion 
+    of the seismic design intensities of 8, 8.5 and 9 degrees, respectively, as 
+    specified by the Chinese code (CMC, 2010a). The classical Rayleigh damping 
+    is adopted with a damping ratio of 5% in the nonlinear THA. Note that the 
+    design intensity of this building is 8 degree. However, given the special 
+    functionality and importance of this supertall building, stronger ground motions 
+    are considered as the seismic input for the structure to evaluate the performance 
+    of the building subjected to extreme earthquakes. The envelopes of story drift 
+    responses of the two schemes are shown in Figure 5.
+Figure 5.  The story drift responses 
+    of the two design schemes
+It indicates that the story drift ratio 
+    in the lower four zones is uniform and has no significant difference between 
+    the two design schemes. Meanwhile, the story drift ratio in the upper zones 
+    of the fully-braced scheme is slightly smaller than that of the half-braced 
+    scheme; and this trend increases with the increase of earthquake intensity. 
+    At the top of the building, the story drift ratio of the fully-braced scheme 
+    is larger than that of the half-braced scheme. This is because the top three 
+    stories of the fully-braced scheme are the sightseeing region. Hence, fewer 
+    lateral force resisting components are allowed in this region according to 
+    the requirement of the architectural function. Correspondingly, the lateral 
+    stiffness of this region is relatively smaller than that of the other zones. 
+    In addition, the story drift ratio in the upper zones of the half-braced scheme 
+    has significant reductions at the location of each circle belt truss. This 
+    phenomenon is due to the arrangement of the outriggers between Zone 5 and 
+    Zone 8, which significantly enhance the local structural stiffness and hence 
+    decrease the story drift ratio.
+Generally, the seismic responses at the 
+    MCE level of the two design schemes are very similar and the nonlinear THA 
+    does not distinguish one scheme better than the other. Hence, earthquake-induced 
+    collapse analysis based on IDA is necessary to be performed to evaluate the 
+    ultimate collapse resistance of the two design schemes.
+3.4 Collapse analysis
+Due 
+    to the absence of the site-specified ground motion records at the preliminary 
+    design stage, the widely used 22 far-field ground motion records suggested 
+    by FEMA P695 (2009) and the El-Centro EW 1940 ground motion are adopted as 
+    the basic seismic input for the following two considerations.
+(1) This work focuses on the relative 
+    collapse capacity between the half-braced and fully-braced schemes in order 
+    to identify the better design. For this reasion, the seismic input of these 
+    two designs are kept the same, thereby the relative collapse capacities of 
+    these two buildings can be obtained and differentiated; yet, the absolute 
+    seismic performance of each design may not be as so accurate. Note that, at 
+    the final design stage, a more accurate ground motion record set, which matches 
+    the site-specified spectrum, has been adopted to further assess the seismic 
+    performances of the improved designs.
+(2) Although the 22 far-field ground 
+    motion record set is primarily intended for buildings with natural (first-mode) 
+    periods less than or equal to 4 seconds, FEMA P695 (2009) also indicates that 
+    most records obtained from the newer seismographs are typically accurate to 
+    at least 10 seconds. As such, most records in far-field and near-field record 
+    sets are accurate to a period of at least 10 seconds. The fundamental periods 
+    of the two buildings are 7.44 s and 7.38 s, which are within the range of 
+    10 seconds. Hence, the reliability of the evaluated seismic performances by 
+    22 far-field ground motion record set is considered acceptable at the preliminary 
+    design stage.
+The earthquake-induced collapses of these 
+    two design schemes subjected to extreme earthquakes are conducted using the 
+    proposed method presented in Section 2.3. And a typical earthquake-induced 
+    collapse process of the fully-braced scheme subjected to El-Centro EW 1940 
+    ground motion with a PGA = 2058 cm/s
+2
+is shown in Figure 6. At 
+    the initial stage when
+t
+= 2.055 s (Figure 6(a)), the coupling beams 
+    at the bottom of the core tube begin to fail due to shear. When
+t
+= 
+    2.955 s (Figure 6(b)), the shear walls at Zone 6 begin to fail due to concrete 
+    crushing. When
+t
+= 10.810 s (Figure 6(c)), as the shear walls at Zone 
+    6 have already been damaged severely, the internal forces are redistributed 
+    to other structural components. This results in gradually increased vertical 
+    and horizontal loads in the mega columns. Subsequently, the mega columns at 
+    the top of Zone 6 begin to fail due to the combined overturning moment and 
+    compression. When
+t
+= 14.500 s (Figure 6(d)), the mega braces at Zone 
+    6 begin to fail. When
+t
+= 15.360 s (Figure 6(e)), most of the core 
+    tube, mega columns and mega braces are damaged in Zone 6 leading to the loss 
+    of the vertical load carrying capacity of the building. Consequently, the 
+    collapse of the whole building takes place. Meanwhile, large horizontal displacement 
+    responses of the upper zones induce an additional overturning moment due to 
+    the
+P
+-
+D
+effect. From the collapse process described above, the progress of structural 
+    failure generally follows: from the coupling beams at the bottom of the core 
+    tube, to the shear walls at Zone 6, then to the mega columns at Zone 6, and 
+    ﬁnally to the mega braces at Zones 6. In contrast, as discussed by 
+    Lu et al. (2013a), a different pattern of the collapse process was found for 
+    the half-braced scheme subjected to El-Centro EW 1940 ground motion,
+where collapse starts from
+the core tube at the bottom, then 
+    to the shear walls and coupling beams in the higher zones, and ﬁnally 
+    to the mega columns in Zones 1 and 2.
+(a)
+t
+= 2.055 s, initiation of 
+            failure of coupling beams at the bottom of core tube
+(b)
+t
+= 2.955 s
+��
+failure of shear walls at Zone 6
+(c)
+t
+= 10.810 s
+��
+failure of mega columns at Zone 6
+(d)
+t
+= 14.500 s
+��
+failure of mega braces at Zone 6
+(e)
+t
+= 15.360 s, most of the core 
+            tube, mega columns and mega braces are damaged at Zone 6
+Figure 
+            6  Collapse details of fully-braced scheme subjected to El-Centro 
+            EW (PGA =
+2058 
+            cm/s
+2
+)
+The collapse modes of the two schemes 
+    subjected to the ground motion of El-Centro EW 1940 are compared in Figure 
+    7. It clearly shows that the initial collapse region of the half-braced scheme 
+    occurs at the bottom of Zone 2. In addition, the junction of Zones 6 and 7 
+    also exhibit severe damage. In contrast, the earthquake-induced collapse of 
+    the fully-braced scheme begins at Zone 6.
+El-Centro EW (PGA = 2940 
+          cm/s
+2
+)
+KOBE_SHI000
+(PGA 
+          = 1764 cm/s
+2
+)
+(a) Half-braced scheme
+El-Centro EW
+(PGA 
+          = 2058 cm/s
+2
+)
+KOBE_SHI000
+(PGA 
+          = 2058 cm/s
+2
+)
+(b) Fully-braced scheme
+Figure 7.  Typical collapse modes 
+    of the two design schemes subjected to extreme earthquakes
+Giving the randomness nature of earthquakes, 
+    different failure modes may be triggered by different ground motions. The 
+    collapse mode of the fully-braced scheme subjected to KOBE_SHI000 ground motion 
+    is also shown in Figure 7. The collapse progresses as follows: failure is 
+    initiated from the coupling beams at the bottom of the core tube, then to 
+    the shear walls at Zone 3, subsequently to the mega columns at Zone 3, and 
+    finally to the mega braces at Zone 3, which is followed by the collapse of 
+    the entire structure. However, as described by Lu et al. (2013a), the collapse 
+    process of the half-braced scheme subjected to KOBE_SHI000 ground motion starts 
+    from the failure of shear walls at the bottom of the building. Subsequently, 
+    the mega columns and shear walls at Zone 2 are severely damaged. All these 
+    failures lead to the collapse of the entire building. The initial collapse 
+    regions of these two schemes subjected to the 23 ground motion records are 
+    shown in Figure 8. It is evident that Zone 2 is the main collapse region for 
+    the half-braced scheme and it accounts for approximately 69.57% of all the 
+    potential collapse regions. In contrast, the initial collapse regions of the 
+    fully-braced scheme are more uniformly distributed in each zone. Zone 6, which 
+    has the smallest planar layout, has a higher possibility to become the initial 
+    collapse region than the other zones. Such initial collapse regions can also 
+    be treated as the weakest points of the building when performing design optimization 
+    of the structural components.
+Figure 8  Collapse regions of 
+    the two design schemes
+The collapse fragility curves for these 
+    two schemes are compared in Figure 9. Because of the complicated nature of 
+    ground motion records, the intensity measure (
+IM
+) may affect the shape 
+    of the fragility curves. The authors have previously discussed the rationality 
+    of different
+IM
+s for supertall buildings and proposed a more efficient
+IM
+as shown in Eq.(1) (Lu et al, 2013c,d).
+,
+(1)
+where
+S
+a
+(
+T
+i
+) is the spectral acceleration 
+    for the
+i
+th
+period;
+n
+is the number of the translational 
+    vibration modes to be considered;
+reflects the geometric mean of the spectral 
+    acceleration at the first
+n
+periods of the structure, which contributes 
+    the most to the structural seismic responses. The collapse fragility curves 
+    for the two design schemes using PGA and
+as
+IM
+s are shown in Figure 9. Generally, 
+    the collapse probability of the half-braced scheme is higher than that of 
+    the fully-braced scheme subjected to the same ground motion intensity. The 
+    dispersions of the fragility curves based on
+(Figure 9(b)) are significantly smaller 
+    than those based on PGA (Figure 9(a)). For example, the
+IM
+of each 
+    ground motion that triggers a collapse is recorded, which is referred to as 
+    ��
+IM
+collapse
+�� (e.g., ��PGA
+collapse
+�� or ��
+��). The coefficient of variation (COV) of PGA
+collapse
+for the half-braced scheme is 0.426. In contrast, the corresponding COV of
+is only 0.282. Thus,
+is able to significantly reduce the dispersion 
+    of collapse resistances due to different ground motions.
+It 
+    should be noted that the Chinese building code adopts PGA to quantify the 
+    earthquake intensity, which is also popularly used in engineering practices. 
+    Note also that although different
+IM
+s will affect the dispersion of 
+    collapse resistances, they will not necessarily affect the relative collapse 
+    resistances of different design schemes. Therefore, PGA is selected as the
+IM
+to facilitate the following discussion in this work.
+(a) Based on PGA
+(b) Based on
+Figure 9.  The collapse 
+            fragility curves for the two design schemes
+The
+CMR
+proposed in FEMA P695 
+    (2009) is adopted to quantify the structural collapse resistance capacity, 
+    which is defined by the following equation.
+(2)
+where,
+IM
+CT
+is the ground motion intensity subject to which the 
+    collapse possibility is 50%;
+IM
+MT
+is the ground motion intensity 
+    corresponding to the design MCE level. For both design schemes, the PGA corresponding 
+    to the MCE level is 0.4 g as specified in the design code, and the PGAs inducing 
+    a 50% of the building collapse are 2.35 g and 2.70 g, respectively, for the 
+    half- and fully-braced schemes. Consequently, the
+CMR
+s of the two schemes 
+    are 5.88 and 6.75, respectively, according to Eq. (2). This evidently demonstrates 
+    that the fully-braced scheme has a relatively higher collapse resistance than 
+    the half-braced scheme.
+According to FEMA P695 (2009), the total 
+    system collapse uncertainty (
+b
+TOT
+) considered 
+    in this work is estimated to be 0.675. Thus, the
+CMR
+corresponding 
+    to a 5% collapse possibility at MCE level is 3.04 (FEMA P695 2009). Both the
+CMR
+s of the two design schemes readily meet this requirement. It is 
+    noteworthy that these
+CMR
+s don��t account for the expected epsilon (
+e
+) for the building site 
+    and collapse hazard intensity. To slove this issuse, Haselton et al, (2011) 
+    and FEMA P695 (2009) suggested a simplified spectral shape factors (
+SSF
+) 
+    to get a more accurate
+CMR
+prediction (
+ACMR
+=
+SSF��CMR,
+where
+ACMR
+is
+the adjusted collapse margin ratio
+).
+SSF
+depends 
+    on the building dynamic characteristics, inelastic performances and
+e
+parameters. Given that 
+    the
+e
+parameters are not provided 
+    in the seismic hazard map of China, it becomes problematic to compute the
+SSF
+and
+ACMR
+. Note that this work focuses on the relative collapse 
+    capacity between the half-braced and fully-braced design schemes. As the locations 
+    of the two buildings have the same site conditions, and both buildings have 
+    similar vibration periods, their
+SSF
+values are expected to be very 
+    close. Thus, the unadjusted collapse margin ratio can still be used to distinguish 
+    which design is a better one.
+Furthermore, the collapse probabilities 
+    of these two buildings at the MCE level earthquake are approximately 1.34% 
+    and 1.29%,
+respectively, 
+    for half-braced and fully-braced schemes. Clearly, such low collapse probabilities 
+    also meet the requirements of both ASCE 7-10 (i.e., < 6% at the MCE level 
+    for Risk Category III) (ASCE, 2010) and the
+Code for anti-collapse design 
+    of building structures
+of China
+(i.e., < 5% at the MCE level) 
+    (CAECS, 2015). Note that the fully-braced scheme exhibits a higher collapse 
+    resistance, having a
+CMR
+14.8% higher than that of the half-braced 
+    scheme. Furthermore, the total material consumption of the fully-braced scheme 
+    is 11.2% lower than that of the half-braced scheme. As a result, the fully-braced 
+    scheme is suggested as the lateral force resisting system for the supertall 
+    building studied herein.
+4 Optimal Design of Key 
+    Design Parameters
+4.1 Adjustment method 
+    for base shear force
+Base 
+    shear force is one of the most important design parameters in seismic design. 
+    To ensure the structural seismic safety, a lower bound (minimum) of the base 
+    shear force (
+V
+min
+) has been specified in different international 
+    building codes (Lu et al, 2014). Both academic research and engineering applications 
+    indicate that during the seismic design procedure of supertall buildings, 
+    the base shear force calculated by the mode superposition method (
+V
+t
+) 
+    is usually smaller than
+V
+min
+specified in the design codes 
+    (Lu et al, 2014; Wang et al, 2012), due to the long fundamental vibration 
+    period. A similar finding is also reached in this study. The minimum base 
+    shear force (
+V
+min
+) specified in the design code for the 
+    supertall building concerned is 0.024 G (CMC, 2010a), where G is the effective 
+    seismic weight. However, the calculated modal base shear force
+V
+t
+is 0.0173 G, which is only 72% of
+V
+min
+. According to the 
+    Chinese building code (CMC, 2010a), for such a situation, the structural layout 
+    and the component dimensions should be modified to enhance the global lateral 
+    stiffness (which will reduce the structural vibration period and increase 
+    the calculated modal base shear force
+V
+t
+). Although these 
+    measures are able to allow the modal base shear force to meet the code-specified 
+    requirement, it will also lead to a sharp increase in the material consumption 
+    (Lu et al, 2014). Consequently, the construction cost of the supertall building 
+    will be greatly increased. Therefore, an alternative and better strategy is 
+    necessary to be proposed to rationally adjust the base shear force to meet 
+    the minimum base shear force requirement.
+Since the building concerned is far beyond
+the maximum height
+of buildings specified in the building 
+    code (CMC, 2010a) and its occupancy importance is very high, a special advisory 
+    committee (referred to as ��the committee�� hereafter) has been established 
+    to guide and monitor the seismic design. After a detailed discussion, two 
+    alternative adjustment methods of the base shear force are suggested by the 
+    committee. These two alternative methods, together with the method specified 
+    in the design code, in adjusting the base shear force are listed in Table 
+    3, represented by three models (Models A, B and C). Specifically, the base 
+    shear force of Model A is adjusted according to the Chinese building code 
+    (CMC, 2010a). The component dimensions of Model A are increased to enhance 
+    the structural stiffness until the calculated base shear force meets the code-specified 
+    requirement (i.e.,
+V
+t
+��
+V
+min
+). 
+    Subsequently, the story drift displacement evaluation and component design 
+    are conducted. In contrast, for Model B, as
+V
+t
+<
+V
+min
+, the calculated shear force at each story using the mode 
+    superposition method
+V
+t,
+i
+(
+i
+is the story 
+    number) is multiplied by
+V
+min
+/
+V
+t
+to evaluate 
+    the story drift displacement and conduct the component design. For Model C, 
+    the calculated shear force at each story
+V
+t,
+i
+is 
+    directly adopted for the story drift displacement evaluation; while the scaled 
+    force
+V
+t,
+i
+��
+V
+min
+/
+V
+t
+is subsequently used to perform the component design. Consequently, the stiffness 
+    demand of Model B is slightly larger than that of Model C.
+Table 3.
+Three adjustment 
+    methods for base shear force
+Models
+Adjustment method
+Model A
+Altering the structural layout and increasing 
+            the component dimensions until
+V
+t
+��
+V
+min
+Model B
+Using the scaled shear force
+V
+t,
+i
+��
+V
+min
+/
+V
+t
+to perform the story drift displacement evaluation and component design
+Model C
+Using the calculated shear force
+V
+t,
+i
+for story drift displacement evaluation; and using scaled shear force
+V
+t,
+i
+��
+V
+min
+/
+V
+t
+to conduct the component design
+The analysis presented in Section 3 indicates 
+    that the
+CMR
+of this supertall building is too conservative at the 
+    preliminary design stage. The committee thus suggests that the sectional size 
+    and the strength of materials can be properly adjusted. Following such a suggestion, 
+    the typical components of Models A, B and C are given in Table 4. It can be 
+    seen that the dimensions of the mega columns, shear walls and circle belt 
+    trusses, as well as the steel ratio, of Model A are much larger than those 
+    of Model B and Model C. The mega columns of Model B are larger than those 
+    of Model C. The shear wall thickness and concrete strength of Model B are 
+    identical to those of Model C except that the reinforcement in the shear wall 
+    has a slight difference. The concrete compressive and steel yielding strengths, 
+    and the steel ratio of the mega columns of Model B and Model C are also identical. 
+    The other components in Model B and Model C also remain the same.
+Table 4.  The typical component parameters of Models A, B and 
+    C
+Model A
+Model B
+Model C
+The mega columns at the bottom
+Size (m)
+6.5 �� 6.5
+5.2 �� 5.2
+4.8 �� 4.8
+Concrete strength (MPa)
+44.5
+44.5
+44.5
+Steel ratio (%)
+10
+5.9
+5.9
+The shear wall at the bottom
+Wall thickness (m)
+1.5
+1.2
+1.2
+Concrete strength (MPa)
+38.5
+38.5
+38.5
+Mega braces
+Size (m)
+3.4 �� 1.7 �� 0.015 �� 0.01
+1.8 �� 0.9 �� 0.01 �� 0.01
+1.8 �� 0.9 �� 0.01 �� 0.01
+Steel strength (MPa)
+350
+350
+350
+(*Note: The section 
+    of the H-shaped steel is described as the width �� height �� web thickness �� 
+    flange thickness.)
+The material consumptions of the lateral 
+    force resisting system in these three models are compared in Table 5. The 
+    comparison clearly shows that the material consumption of the mega columns 
+    in Model A is much larger than that of the other models. The concrete and 
+    steel consumptions of the mega columns in Model A are respectively 86.47% 
+    and 185.58% larger than those of Model B. The material consumption of the 
+    mega columns in both Models B and C is very similar. Model B consumes a little 
+    bit more concrete (10.44%) and steel (17.59%) than Model C.
+Table 5.
+The material 
+    consumptions and fundamental vibration periods of Models A, B and C
+Material 
+            consumption
+Model 
+            A
+Model 
+            B
+Model 
+            C
+Mega 
+            column
+concrete 
+            consumption (m
+3
+)
+65 
+            408
+35 
+            077
+31 
+            761
+steel 
+            consumption (ton)
+47 
+            070
+16 
+            482
+14 
+            017
+Core 
+            tube
+concrete 
+            consumption (m
+3
+)
+59 
+            524
+51 
+            064
+51 
+            101
+steel 
+            consumption (ton)
+33 
+            376
+15 
+            423
+15 
+            132
+Mega 
+            brace
+steel 
+            consumption (ton)
+4 
+            532
+1 
+            236
+1 
+            236
+Circle 
+            belt truss
+steel 
+            consumption (ton)
+3 
+            072
+995
+995
+Total 
+            concrete consumption (m
+3
+)
+124 
+            932
+86 
+            141
+82 
+            862
+Total 
+            steel consumption (ton)
+88 
+            050
+34 
+            136
+31 
+            380
+Fundamental 
+            vibration period (s)
+5.957
+7.589
+7.669
+For shear walls, the concrete consumptions 
+    of three models are very similar, while the steel consumptions demonstrate 
+    significant differences. The steel consumption of the shear walls in Model 
+    A is 116.40% larger than that of Model B. In contrast, the steel consumption 
+    of the shear walls in Model B is only 1.92% larger than that of Model C. Because 
+    the mega braces and circle belt trusses in Model B and Model C are identical, 
+    the steel consumption of these components is also identical. However, the 
+    steel consumption of the mega braces and circle belt trusses in Model A are 
+    240.83% larger than that of the other two models.
+The above comparison demonstrates that 
+    Model A has the highest material consumption. The total concrete consumption 
+    of Model A is 45.03% larger than that of Model B, and its total steel consumption 
+    is 157.94% larger than that of Model B. Meanwhile, the total material consumption 
+    of Model B is slightly larger than that of Model C.
+The fundamental vibration periods of 
+    Models A, B and C are also compared in Table 5. It clearly shows that the 
+    fundamental vibration period of Model A is smaller than those of Models B 
+    and C. Considering the greater material consumption and self-weight of Model 
+    A, the stiffness of Model A is significantly larger than those of Models B 
+    and C. Further, the fundamental vibration period and stiffness of Model B 
+    are slight larger than those of Model C.
+4.2 Collapse analysis
+To 
+    study the rationality of the three adjustment methods for base shear force 
+    (Table 3), the earthquake-induced collapse analysis is performed to determine 
+    the collapse resistance of the above three models.
+With progressing of the design, seven 
+    site-specified ground motion records suitable for this supertall building 
+    are provided by the Beijing Earthquake Bureau according to the building site 
+    condition. This ground motion set is selected and scaled to match the site-specified 
+    acceleration spectrum according to the
+Code for Seismic Design of Buildings
+(GB50011-2010) (CMC. 2010a). This ground motion selection procedure is similar 
+    to that suggested by PEER Tall building initiative (TBI 2010) except that 
+    some control parameters vary slightly. Among these ground motions, there are 
+    five natural ground motion records and two artificial ground motion records. 
+    Their mean spectrums are shown in Figure 10. Hence, the seven ground motion 
+    records are also adopted as the basic seismic input for the collapse simulation. 
+    As mentioned above, the sections of the components are adjusted after the 
+    preliminary design, the
+CMR
+s calculated in this section is consequently 
+    smaller than those determined in Section 3.
+Figure 10.  The mean spectrum 
+    of site-specified ground motions
+The initial collapse regions of the above three models are compared in Figure 
+    11. It shows that the initial collapse regions of Model A are uniformly distributed 
+    along the building height. This suggests that Model A has no obvious weak 
+    regions. For Model B and Model C, their initial collapse regions are found 
+    to mainly concentrate in Zone 6, which
+has exactly the smallest planar layout.
+The strength and stiffness of this zone is relatively smaller than those of 
+    the upper and lower zones. Damage will be very likely to concentrate in this 
+    zone, so more attention should be paid on this zone in the subsequent designs.
+Figure 11.  The initial 
+            collapse regions of the three models
+Figure 12.  The fitted 
+            collapse fragility curves of the three models
+The fitted collapse fragility curves 
+    of the three models are shown in Figure 12. It indicates that Model A has 
+    an obvious higher collapse resistance than Models B and C when the ground 
+    motion intensity is relatively small. However, due to the much larger stiffness 
+    and self-weight of Model A than those of Models B and C, the increased seismic 
+    demand of Model A is higher than that of the other models when the ground 
+    motion intensity is increased. Correspondingly, the difference in the collapse 
+    resistances between the three models becomes small subjected to stronger ground 
+    motions. The
+CMR
+s of Models A, B and C are 4.53, 3.91 and 3.66, respectively. 
+    It clearly indicates that Model A has the highest seismic collapse resistance, 
+    which is followed by Model B and Model C. Note that all the
+CMR
+s of 
+    the three models are significantly greater than the acceptable value (i.e., 
+    3.04) discussed in Section 3.4. In addition, Model B has a significantly smaller 
+    material consumption than Model A. The total concrete consumption of Model 
+    B is 68.95% as large as Model A; and the steel consumption is only 38.77% 
+    of Model A. Conclusively, Model B achieves an acceptable seismic collapse 
+    resistance with a reasonable level of material consumption. Therefore, taking 
+    into consideration both the structural safety and construction cost, the committee 
+    believes that Model B is deemed to represent the best base shear force adjustment 
+    method for this supertall building. In other words, if the modal base shear 
+    force is smaller than the code-specified minimum value, the calculated base 
+    shear force can be directly scaled to the minimum value for story drift displacement 
+    evaluation and component design. In the subsequent design and analysis, Model 
+    B is selected to be further optimized.
+5 Optimal Design of Structural 
+    Components
+Given 
+    that the supertall building concerned is functionally very important, higher 
+    seismic performance objectives, e.g., seismic resilience, must be considered. 
+    This requires that the supertall building possesses lower collapse probability, 
+    smaller seismic loss and quickly recovery ability. To achieve these seismic 
+    objectives, high-performance components are adopted in newly constructed supertall 
+    buildings. For this particular supertall building being studied, the brace-embedded 
+    shear wall is used to enhance its collapse resistance. However, such high-performance 
+    components will bring additional construction efforts and cost. Hence, the 
+    balance between the seismic performance and the additional construction cost 
+    due to high-performance components must then be carefully evaluated.
+5.1 Layout of the 
+    embedded braces
+Over a three-year period, the global structural design of the supertall building 
+    concerned has in principal been completed. In 2014, the building comes into 
+    the final component optimization phase. According to its architectural features, 
+    Zone 6 has rightly the smallest planar layout.
+However, Lu et al.��s
+studies (Lu et al, 2011; 2013a) indicate 
+    that the seismic responses at the upper stories of a supertall building are 
+    sometimes larger than those of the other stories, because the contribution 
+    of high vibration modes is significant for this type of buildings. This suggests 
+    that the demand of seismic force in Zone 6 may not be smaller than the other 
+    zones. As a result, Zone 6 may become the potentially weak region and the 
+    damage is likely to concentrate in this zone. Such damage will significantly 
+    reduce the collapse resistance of the whole structure. In addition, Figure 
+    11 also indicates that Zone 6 has the largest possibility to become the initial 
+    collapse region in Model B. Therefore, it is desirable to use effective seismic 
+    measures to enhance the seismic capacity of Zone 6.
+Much work have been conducted on the 
+    seismic performances of brace-embedded shear walls (Zhang et al, 2014; Lan 
+    et al, 2015), being a new type of high-performance component. Comparing to 
+    the traditional RC shear walls, the brace-embedded shear wall exhibits a higher 
+    strength and ductility. The committee suggested that the high-performance 
+    brace-embedded shear walls can be used between 78
+th
+and 95
+th
+stories in Zone 6 to increase the collapse resistance. To validate the effect 
+    of the brace-embedded shear walls on the collapse mode and resistance, the 
+    earthquake-induced collapse analysis is also performed herein.
+Two models with different shear wall arrangements are designed. For Model 
+    B1, traditional RC shear walls are used
+between 78
+th
+and 95
+th
+stories; for Model B2, brace-embedded shear walls are adopted. Note 
+    that in order to make full utilization of the bracing capacity, the V-shaped 
+    embedded braces are uniformly distributed in the external shear walls, as 
+    shown in Figure 13. These braces are simulated with individual steel fiber-beam 
+    elements that are embedded in the multi-layered shell elements for shear walls. 
+    The displacement compatibility between the shell elements and the embedded 
+    fiber-beams are achieved by nodes sharing.
+Figure 13.  Typical layout of the brace-embedded shear walls
+Figure 14.  The displacement 
+            responses of Models B1 and B2
+5.2 Comparisons of 
+    different wall arrangements
+The 
+    vibration periods of these two models are compared in Table 6, with very similar 
+    values. This implies that the embedded braces in 78
+th
+-95
+th
+stories have little influence on the lateral stiffness of the structure and 
+    in turn the demand of the seismic force remains the same.
+Table 6.
+The vibration 
+    periods of Models B1 and B2
+Vibration 
+            periods
+Model 
+            B1
+Model 
+            B2
+T
+1
+(s)
+��
+translation in
+x
+direction
+��
+7.513
+7.458
+T
+2
+(s)
+��
+translation in
+y
+direction
+��
+7.452
+7.399
+T
+3
+(s)
+��
+torsion
+��
+2.587
+2.573
+The displacement responses of the two 
+    models subjected to the abovementioned seven selected ground motion records 
+    at the MCE level (i.e., PGA = 400 cm/s
+2
+) are shown in Figure 14. 
+    The story drift ratios of these two models are very similar and both meet 
+    the acceptance limit of 1/100 specified in the Chinese code (CMC, 2010a). 
+    Not being able to distinguish the advantages and disadvantages between these 
+    two designs, further collapse analysis is thus needed to quantify the collapse 
+    resistances of Models B1 and B2.
+The same seven ground motion records 
+    are also used for the collapse analysis, through which the typical collapse 
+    modes of Models B1 and B2 are compared in Figure 15. It shows that the collapse 
+    of Model B1 is initiated from the 85
+th
+story, which is the story 
+    without brace-embedded shear walls. In contrast, the collapse region of Model 
+    B2 is located at the mid-height of the building (i.e., 56
+th
+story). 
+    It can be concluded that after enhancing the shear walls by embedded braces, 
+    Zone 6 is no longer the typical weak region in this building and the global 
+    collapse resistance, i.e.,
+CMR
+, of Model B2 has been increased by 12.7% 
+    comparing to Model B1. Therefore, enhancing the shear walls in 78
+th
+-95
+th
+stories by embedded braces is an effective method to increase the collapse 
+    resistance of this supertall building. Note that the increased amount of steel 
+    due to the embedded braces is less than 0.1% of total steel consumption, which 
+    means that such an enhancement method is very cost-effective. In the final 
+    design, brace-embedded shear walls are indeed used in 78
+th
+-95
+th
+stories in the supertall building concerned.
+(a) Model B1
+(b)  Model B2
+Figure 15.  Typical collapse modes of Models B1 and B2 subjected to extreme 
+    earthquake
+6 Conclusions
+The 
+    earthquake-induced collapse analysis has been studied for many years and many 
+    of which have been performed at the theoretical level. However, such technologies 
+    have never been used in the seismic design of real world supertall buildings. 
+    In this study, an actual supertall building with a height larger than 500 
+    m is investigated. With the earthquake-induced collapse analysis, the optimal 
+    seismic designs of this supertall building are conducted at the structural 
+    system level, the design parameter level and the component level. The following 
+    comments are concluded.
+(1) The optimal design of the structural 
+    system indicates that the fully-braced scheme results in lower cost and higher 
+    level of safety. The
+CMR
+of the fully-braced scheme is 14.8% higher 
+    than that of the half-braced scheme together with an 11.2% reduction in the 
+    material consumption.
+(2) The optimal design of key design 
+    parameters indicates that when the calculated modal base shear force of supertall 
+    buildings does not meet the code-specified requirement, the adjustment method 
+    of scaling the calculated base shear force to the minimum value for component 
+    design and story drift displacement evaluation will find a balance between 
+    the seismic collapse resistance and the overall construction cost.
+(3) The optimal design of structural 
+    components indicates that enhancing the shear walls in 78
+th
+-95
+th
+stories by embedded braces has a significant effect on increasing the seismic 
+    collapse resistance of the supertall building. Specifically, the increased 
+    steel consumption is less than 0.1% of the total steel consumption, while 
+    the
+CMR
+is increased by 12.7%.
+Conclusively, the earthquake-induced 
+    collapse analysis can quantitatively study the influence of different design 
+    factors on the safety of the building. Given more and more supertall buildings 
+    to be constructed with new types of structural systems and components, the 
+    collapse analysis presented in this study will provide important references 
+    for both seismic design of similar supertall buildings and future collapse 
+    resistance research.
+Acknowledgement
+The 
+    authors are grateful for the contribution from Wankai Zhang, Bin Liu, Wuhui 
+    Qi and Weibiao Yang in establishing the FE models in this work. The authors 
+    are also grateful for the ﬁnancial support received from the National 
+    Natural Science Foundation of China (No. 51408034), the Beijing Natural Science 
+    Foundation (No. 8142024) and the Fundamental Research Funds for the Central 
+    Universities (No.
+2014JBM078 and 
+    No. 2015RC057).
+References
+Akbas B, Sutchiewcharn N, Cai W, Wen 
+    R, Shen J. 2013. Comparative study of special and ordinary braced frames.
+The Structural Design of Tall and Special Buildings
+22(13): 989-1022.
+ASCE. 2010.
+Minimum design loads for buildings and other structures
+(ASCE/SEI 7-10): American Society of Civil Engineers, Reston, Virginia.
+Burton H, Deierlein 
+    GG. 2013. Simulation of seismic collapse in nonductile reinforced concrete 
+    frame buildings with masonry infills.
+Journal of Structural Engineering
+140(8): A4014016.
+Cengiz EY, 
+    Saygun AI. 2007. Determination of collapse safety of shear wall-frame structures. 
+    Structural
+Engineering and Mechanics
+27(2): 135-148.
+CAECS. 2015.
+Code for anti-collapse design of building structures (
+CECS 392:2014
+).
+China Association for Engineering Construction Standardization. China Planning 
+    Press: Beijing, 2015.
+CMC. 2010a.
+Code for Seismic Design of Buildings (GB50011-2010)
+. China Ministry 
+    of Construction, China Architecture and Building Press: Beijing, China.
+CMC. 2010b.
+Code for Design of Concrete Structures (GB50010-2010)
+. China Ministry 
+    of Construction, China Architecture and Building Press: Beijing, China.
+CTBUH. 2015a. CTBUH Height 
+    Criteria. Council on tall buildings and urban habitat. http://skyscrapercenter 
+    .com/interactive-data.[2015.03.08].
+CTBUH. 2015b. 
+    CTBUH. Tall buildings, structural systems and materials, Tall Buildings in 
+    Numbers-CTBUH Journal. 2010; II: 40-41. (http://www.ctbuh.org/ Publications/CTBUHJournal/ 
+    InNumbers /tabid/1108/language/en-US/Default.aspx) [2015.06.16]
+FEMA. 2009. 
+    FEMA P695: Quantification of building seismic performance factors. Federal 
+    Emergency Management Agency, Washington DC, 2009.
+Gu XL, Wang 
+    XL, Yin XJ, Lin F, Hou J. 2014. Collapse simulation of reinforced concrete 
+    moment frames considering impact actions among blocks.
+Engineering Structures
+65: 30-41.
+Guan H, Loo 
+    YC. 1997. Layered finite element method in cracking and failure analysis of 
+    beams and beam-column-slab connection.
+Structural Engineering and Mechanics
+5(5): 645-662.
+Han LH, Zhao XL, Tao Z. 
+    2001. Tests and mechanics model for concrete-filled SHS stub columns, columns 
+    and beam-columns.
+Steel and Composite Structures
+1(1): 51-74.
+Haselton CB, Baker JW, Liel AB, Deierlein GG. 2011. Accounting for 
+    ground-motion spectral shape characteristics in structural collapse assessment 
+    through an adjustment for epsilon.
+Journal of Structural Engineering
+137(3): 332-344.
+Jiang Q, 
+        Lu XZ, Guan, H, Ye XG. 2014. Shaking table model test and FE analysis 
+        of a reinforced concrete mega-frame structure with tuned mass dampers.
+The Structural Design of Tall and Special Buildings
+23(18): 1426-1442.
+Lan W, Ma J, 
+    Li B. 2015. Seismic performance of steel-concrete composite structural walls 
+    with internal bracings.
+Journal of Constructional Steel Research
+110: 
+    76-89.
+Lignos DG, Krawinkler 
+    H, Whittaker AS. 2011. Prediction and validation of sidesway collapse of two 
+    scale models of a 4
+�\
+story steel moment frame.
+Earthquake Engineering & Structural Dynamics
+40(7): 807-825.
+Lu XZ, Lu X, Guan H, Zhang 
+        WK, Ye LP. 2013a. Earthquake-induced collapse simulation of a supertall 
+        mega-braced frame-core tube building.
+Journal of Constructional Steel 
+        Research
+82: 59-71.
+Lu 
+        X, Lu XZ, Guan H, Ye LP. 2013b. Collapse simulation of reinforced concrete 
+        high-rise building induced by extreme earthquakes.
+Earthquake Engineering 
+        & Structural Dynamics
+42(5): 705-723.
+Lu X, Lu XZ, 
+        Guan H, Ye LP. 2013c. Comparison and selection of ground motion intensity 
+        measures for seismic design of super high-rise buildings.
+Advances 
+        in Structural Engineering
+16(7): 1249-1262.
+Lu X, Ye LP, Lu XZ, Li 
+        MK, Ma XW. 2013d. An improved ground motion intensity measure for super 
+        high-rise buildings.
+Science China Technological Sciences
+56(6): 
+        1525-1533.
+Lu X, Lu XZ, Ye LP, Li MK. 2014.
+Influence of minimum base shear 
+    force on the collapse resistance of supertall buildings
+. Proceeding of 
+    10th U.S. National Conference on Earthquake Engineering, Earthquake Engineering 
+    Research Institute, Anchorage, AK, 2014.
+Lu X, Lu XZ, 
+        Zhang WK, Ye LP. 2011. Collapse simulation of a super high-rise building 
+        subjected to extremely strong earthquakes.
+Science China Technological 
+        Sciences
+54(10): 2549-2560.
+Lu XZ, Ye LP, Ma YH, Tang 
+        DY. 2012. Lessons from the collapse of typical RC frames in Xuankou School 
+        during the great Wenchuan Earthquake.
+Advances in Structural Engineering
+15(1): 139-153.
+Lu 
+        XZ, Xie LL, Guan H, Huang YL, Lu X. 2015a. A shear wall element for nonlinear 
+        seismic analysis of supertall buildings using OpenSees.
+Finite Elements 
+        in Analysis and Design
+98: 14-25.
+Lu 
+        XZ, Li MK, Guan H, Lu X, Ye LP. 2015b. A comparative case study on seismic 
+        design of tall RC frame-core tube structures in China and USA.
+The 
+        Structural Design of Tall and Special Buildings
+24(9): 687-702.
+Mahin S; Lai JW, Schoettler 
+    M; Wang SS. 2015.
+Seismic assessment and retrofit of a 35 story steel building 
+    having pre-Northridge connections
+. The 2nd Conference on Improving the 
+    Seismic Performance of Existing Buildings and Other Structures, San Francisco, 
+    California, 2015.
+Mattern S, 
+    Blankenhorn G, Breidt M, Nguyen V, Hohler S, Schweizerhof K, Hartmann D, Stangenberg 
+    F. 2007.
+Comparison of building collapse simulation results from finite 
+    element and rigid body models.
+IUTAM Symposium on Multiscale Problems 
+    in Multibody System Contacts, 2007; IUTAM Bookseries Volume 1: 257-267.
+Moon KS. 2014. Studies 
+    on various structural system design options for twisted tall buildings and 
+    their performances.
+The Structural Design of Tall and Special Buildings
+23(5): 319-333.
+Qian K, Li 
+    B. 2014. Dynamic disproportionate collapse in flat-slab structures.
+Journal 
+    of Performance of Constructed Facilities
+B4014005.
+Salem H. 2011. 
+    Computer-aided design of framed reinforced concrete structures subjected to 
+    flood scouring.
+Journal of American Science
+7(10): 191-200.
+Sengupta P, 
+    Li B. 2014. Seismic fragility evaluation of lightly reinforced concrete beam-column 
+    joints.
+Journal of Earthquake Engineering
+18(7): 1102-1128.
+Sivaselvan MV, Reinhorn 
+    AM. 2006. Lagrangian approach to structural collapse simulation.
+Journal 
+    of Engineering mechanics
+132(8): 795-805.
+Sun LM, Zhou 
+    C, Qin D, Fan LC. 2003. Application of extended distinct element method with 
+    lattice model to collapse analysis of RC bridges.
+Earthquake Engineering 
+    & Structural Dynamics
+32(8): 1217-1236.
+Tall Buildings Initiative 
+    (TBI). 2010. Guidelines for performance-based seismic design of tall buildings. 
+    Pacific Earthquake Engineering Research Center, College of Engineering, University 
+    of California, Berkeley.
+Tavafoghi A, Eshghi S. 
+    Evaluation of behavior factor of tunnel
+�\
+form concrete 
+    building structures using Applied Technology Council 63 methodology. 2013.
+The Structural Design of Tall and Special Buildings
+22(8): 615-634.
+Wang DS, Zhou 
+    JL, Jiang WW, Wang J, Jiang XF. 2012. Research on seismic shear gravity ratio 
+    limit for super high-rise buildings higher than 500m.
+Building Structure
+42(5): 24-27.
+(in Chinese)
+Worakanchana 
+    K, Meguro K. 2008. Applied element method for nonlinear analysis of reinforced 
+    concrete structures under fault action.
+Seisan Kenkyu
+60(3): 208-211.
+Zareian F, 
+    Krawinkler H. 2007. Assessment of probability of collapse and design for collapse 
+    safety.
+Earthquake Engineering & Structural Dynamics
+36(13): 1901-1914.
+Zhang J, Cao 
+    WL, Yu C, Dong HY. 2014.
+Shake table test of reinforced concrete wall structure 
+    with concealed bracings
+. Proceedings of the ICE-Structures and Buildings, 
+    167(10): 598-609.
+List of Tables
+Figure 1.
+The failure criteria for 
+    concrete and steel
+Figure 2.
+Comparison of the total 
+    material consumption of the two design schemes
+Figure 3.
+Three adjustment methods 
+    for base shear force
+Figure 4.
+The typical component parameters 
+    of Models A, B and C
+Figure 5.
+The material consumptions 
+    and fundamental vibration periods of Models A, B and C
+Figure 6.
+The vibration periods of 
+    Models B1 and B2
+List of Figures
+Figure 7.
+Architectural drawing of 
+    the supertall building
+Figure 8.
+Target response spectrum 
+    at the MCE level
+Figure 9.
+Typical stress-strain curves 
+    for confined concrete and steel
+Figure 10.
+The sketch of the two design schemes
+Figure 11.
+The story drift responses of the two design schemes
+Figure 12.
+Collapse details of fully-braced scheme subjected 
+    to El-Centro EW (PGA = 2058 cm/s
+2
+)
+Figure 13.
+Typical collapse modes of the two design schemes 
+    subjected to extreme earthquakes
+Figure 14.
+Collapse regions of the two design schemes
+Figure 15.
+The collapse fragility curves for the two design 
+    schemes
+Figure 16.
+The mean spectrum of site-specified ground motions
+Figure 17.
+The initial collapse regions of the three models
+Figure 18.
+The fitted collapse fragility curves of the three 
+    models
+Figure 19.
+Typical layout of the brace-embedded shear walls
+Figure 20.
+The displacement responses of Models B1 and B2
+Figure 21.
+Typical collapse modes of Models B1 and B2 subjected 
+    to extreme earthquake
+[*]
+Corresponding author.  
+    Tel: +86-10-62795364; fax: +86-10-62795364
+E-mail address:  luxz@tsinghua.edu.cn
+Introduction
+Research
+Application
+Teaching
+Publications
+Download
+Issues
+Others
+Our Lab
+Collapse Prevention Committee

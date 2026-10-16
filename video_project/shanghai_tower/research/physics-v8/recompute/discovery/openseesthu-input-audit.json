@@ -1,0 +1,141 @@
+{
+  "fiber_element_load.tcl": {
+    "sha256": "a09bec75a494be4588a47a7ce455e656204a772a92102128f3bb6facbaa8d609",
+    "bytes": 387283,
+    "commands": {
+      "node": 0,
+      "element": 0,
+      "section": 0,
+      "uniaxialMaterial": 0,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 0
+    },
+    "head": "#define load\r\npattern Plain 1 Linear {\r\neleLoad -ele     1 -type -beamUniform 0 0     55125.0000000000\r\neleLoad -ele     2 -type -beamUniform 0 0     41404.9960937500\r\neleLoad -ele     3 -type -beamUniform 0 0     41404.9960937500\r\neleLoad -ele     4 -type -beamUniform 0 0     41404.9960937500\r\neleLoad -ele     5 -type -beamUniform 0 0     55125.0000000000\r\neleLoad -ele     6 -type -beamUniform 0 0     29645.0019531250\r\neleLoad -ele     7 -type -beamUniform 0 0     41404.9960937500\r\neleLoad -ele     8 -type -beamUniform 0 0     41404.9960937500\r\neleLoad -ele     9 -type -beamUniform 0 0     29645.0019531250\r\neleLoad -ele    10 -type -beamUniform 0 0     29645.0019531250\r\neleLoad -ele    11 -type -beamUniform 0 0     41404.9960937500\r\neleLoad -ele    12 -type -beamUniform 0 0     41404.9960"
+  },
+  "fiber_elements.tcl": {
+    "sha256": "46211b63e0efee6d271f8f6942ba8d4666ddc9a94124a3400aa7686455ef5165",
+    "bytes": 621618,
+    "commands": {
+      "node": 0,
+      "element": 6216,
+      "section": 0,
+      "uniaxialMaterial": 0,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 0
+    },
+    "head": "#define elements\r\n#    1\r\nelement dispBeamColumn     1     1     2     3      10000     1 -mass      5625.0000000000\r\n#    2\r\nelement dispBeamColumn     2     3     4     3      20000     1 -mass      4224.9995117188\r\n#    3\r\nelement dispBeamColumn     3     5     6     3      30000     1 -mass      4224.9995117188\r\n#    4\r\nelement dispBeamColumn     4     7     8     3      40000     1 -mass      4224.9995117188\r\n#    5\r\nelement dispBeamColumn     5     9    10     3      50000     1 -mass      5625.0000000000\r\n#    6\r\nelement dispBeamColumn     6    11    12     3      60000     1 -mass      3025.0002441406\r\n#    7\r\nelement dispBeamColumn     7    13    14     3      70000     1 -mass      4224.9995117188\r\n#    8\r\nelement dispBeamColumn     8    15    16     3      80000     1 -mass     "
+  },
+  "fiber_sections.tcl": {
+    "sha256": "fadb1f318777bb529434d9a247049ac303eaad67b2fc10572e0704d84048f128",
+    "bytes": 18656316,
+    "commands": {
+      "node": 0,
+      "element": 0,
+      "section": 16488,
+      "uniaxialMaterial": 0,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 0
+    },
+    "head": "#define section\r\nsection Fiber     1 {\r\nfiber     0.73500     0.73500     0.00090     1\r\nfiber    -0.73500     0.73500     0.00090     1\r\nfiber     0.73500    -0.73500     0.00090     1\r\nfiber    -0.73500    -0.73500     0.00090     1\r\nfiber     0.54000     0.73500     0.01080     1\r\nfiber    -0.54000     0.73500     0.01080     1\r\nfiber     0.18000     0.73500     0.01080     1\r\nfiber    -0.18000     0.73500     0.01080     1\r\nfiber     0.54000    -0.73500     0.01080     1\r\nfiber    -0.54000    -0.73500     0.01080     1\r\nfiber     0.18000    -0.73500     0.01080     1\r\nfiber    -0.18000    -0.73500     0.01080     1\r\nfiber     0.54000     0.54000     0.13506     2\r\nfiber    -0.54000     0.54000     0.13506     2\r\nfiber     0.54000     0.18000     0.13506     2\r\nfiber    -0.54000     0.1"
+  },
+  "insert_beam_column.tcl": {
+    "sha256": "8fdee9e4a8a6579edef7fa9ae74d47a92a94f094b1f9653e48939f0ee88f58d0",
+    "bytes": 663292,
+    "commands": {
+      "node": 0,
+      "element": 3528,
+      "section": 0,
+      "uniaxialMaterial": 0,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 0
+    },
+    "head": "#define insert beam column\r\nelement elasticBeamColumn      10921         73       7859              0.00300   200000000000.00000    76923076923.07692         0.0000020000         0.0000010000         0.0000010000 1\r\nelement elasticBeamColumn      10922       7859        259              0.00300   200000000000.00000    76923076923.07692         0.0000020000         0.0000010000         0.0000010000 1\r\nelement elasticBeamColumn      10923         45       7855              0.00300   200000000000.00000    76923076923.07692         0.0000020000         0.0000010000         0.0000010000 1\r\nelement elasticBeamColumn      10924       7855        245              0.00300   200000000000.00000    76923076923.07692         0.0000020000         0.0000010000         0.0000010000 1\r\nelement elasticBeamC"
+  },
+  "materials.tcl": {
+    "sha256": "e7b7cb0bdddc200d0a3b92432f0882bb158f8c375c44f34d92d563e1f2fac472",
+    "bytes": 457270,
+    "commands": {
+      "node": 0,
+      "element": 0,
+      "section": 0,
+      "uniaxialMaterial": 8276,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 0
+    },
+    "head": "#define materials\r\nuniaxialMaterial Elastic         1000   0.1265625E+11\r\nuniaxialMaterial Elastic         2000   0.7140248E+10\r\nuniaxialMaterial Elastic         3000   0.7140248E+10\r\nuniaxialMaterial Elastic         4000   0.7140248E+10\r\nuniaxialMaterial Elastic         5000   0.1265625E+11\r\nuniaxialMaterial Elastic         6000   0.3660250E+10\r\nuniaxialMaterial Elastic         7000   0.7140248E+10\r\nuniaxialMaterial Elastic         8000   0.7140248E+10\r\nuniaxialMaterial Elastic         9000   0.3660250E+10\r\nuniaxialMaterial Elastic        10000   0.3660250E+10\r\nuniaxialMaterial Elastic        11000   0.7140248E+10\r\nuniaxialMaterial Elastic        12000   0.7140248E+10\r\nuniaxialMaterial Elastic        13000   0.3660250E+10\r\nuniaxialMaterial Elastic        14000   0.3660250E+10\r\nuniaxialMat"
+  },
+  "Multi_layer_shell.tcl": {
+    "sha256": "5c95b904642f6af2c61a5eb1b7c1f10502f4b0433aef3e477f45c03190de037d",
+    "bytes": 3677358,
+    "commands": {
+      "node": 0,
+      "element": 4704,
+      "section": 177,
+      "uniaxialMaterial": 1,
+      "nDMaterial": 10,
+      "fix": 0,
+      "mass": 4919,
+      "load": 18816,
+      "source": 0
+    },
+    "head": "#define concrete\r\nnDMaterial PlaneStressUserMaterial     8271       40        7  38500000.0000000000   3850000.0000000000  -7700000.1147389412        -0.0021388889        -0.0044833348         0.0010694444         0.2000000000\r\nnDMaterial   PlateFromPlaneStress   827100     8271 0.144000000000000E+11\r\n#define concrete\r\nnDMaterial PlaneStressUserMaterial     8272       40        7  32400000.0000000000   3240000.0000000000  -6480000.0965595245        -0.0018782609        -0.0043269582         0.0009391304         0.2000000000\r\nnDMaterial   PlateFromPlaneStress   827200     8272 0.138000000000000E+11\r\n#define concrete\r\nnDMaterial PlaneStressUserMaterial     8273       40        7  26800000.0000000000   2680000.0000000000  -5360000.0798702240        -0.0016492308        -0.0041895405         0"
+  },
+  "nodes.tcl": {
+    "sha256": "6b09bd98008156a652cea50d724d1ab7476b593810b1d35ef89ce9b81e489548",
+    "bytes": 635188,
+    "commands": {
+      "node": 8469,
+      "element": 0,
+      "section": 0,
+      "uniaxialMaterial": 0,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 0
+    },
+    "head": "#define nodes\r\nnode     1        11.6840000153        52.9389991760         4.1999998093\r\nnode     2        11.6840000153        52.9389991760         0.0000000000\r\nnode     3        17.5510005951        52.9389991760         4.1999998093\r\nnode     4        17.5510005951        52.9389991760         0.0000000000\r\nnode     5        23.4179992676        52.9389991760         4.1999998093\r\nnode     6        23.4179992676        52.9389991760         0.0000000000\r\nnode     7        29.2849998474        52.9389991760         4.1999998093\r\nnode     8        29.2849998474        52.9389991760         0.0000000000\r\nnode     9        35.1520004273        52.9389991760         4.1999998093\r\nnode    10        35.1520004273        52.9389991760         0.0000000000\r\nnode    11         6.9600000381    ",
+    "parsedNodes": 8469,
+    "minXYZ": [
+      6.9600000381,
+      52.938999176,
+      0.0
+    ],
+    "maxXYZ": [
+      39.8759994507,
+      85.5510025024,
+      135.6999969482
+    ]
+  },
+  "dynamic.tcl": {
+    "sha256": "f224cc674e421c9344c468a2f16f727137779b954dd502b4229acacbd8aba883",
+    "bytes": 2933,
+    "commands": {
+      "node": 0,
+      "element": 0,
+      "section": 0,
+      "uniaxialMaterial": 0,
+      "nDMaterial": 0,
+      "fix": 0,
+      "mass": 0,
+      "load": 0,
+      "source": 7
+    },
+    "head": "wipe\r\nmodel BasicBuilder -ndm 3 -ndf 6\r\n\r\nsource nodes.tcl\r\nputs \"nodes ok\"\r\n\r\nsource materials.tcl\r\nputs \"materials ok\"\r\n\r\nsource fiber_sections.tcl\r\nputs \"fiber sections ok\"\r\n\r\nsource fiber_elements.tcl\r\nputs \"fiber elements ok\"\r\n\r\nsource fiber_element_load.tcl\r\nputs \"fiber element load ok\"\r\n\r\nsource insert_beam_column.tcl\r\nputs \"insert beam column ok\"\r\n\r\nsource Multi_layer_shell.tcl\r\nputs \"Multi layer shell ok\"\r\n\r\n#define boundary conditions\r\nfixZ 0 1 1 1 1 1 1\r\nputs \"boundary ok\"\r\n\r\nrecorder Drift -file cengjianjiao.txt  -iNode 129\t287\t440\t593\t746\t899\t1052\t1205\t1358\t1511\t1665\t1818\t1971\t2124\t2277\t2430\t2583\t2736\t2889\t3042\t3195\t3348\t3501\t3654\t3807\t3960\t4113\t4266\t4419\t4572\t4725\t4878\t5031\t5184\t5337\t5490\t5643\t5796\t5949\t6102\t6255\t-jNode 287\t440\t593\t746\t899\t1052\t1205\t1358\t1511\t1665\t1818\t1971\t2"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "h058",
+  "partIndex": 0,
+  "expected": "如果睡觉打鼾，还反复憋醒、白天犯困，要想到睡眠呼吸暂停。",
+  "heard": "如果睡觉打烦,还反复憋情,白天犯困,要想到睡眠呼吸暂停。",
+  "words": [
+    {
+      "text": "如果",
+      "start": 0.0,
+      "end": 0.38,
+      "probability": 0.9508748054504395
+    },
+    {
+      "text": "睡",
+      "start": 0.38,
+      "end": 0.58,
+      "probability": 0.992183268070221
+    },
+    {
+      "text": "觉",
+      "start": 0.58,
+      "end": 0.72,
+      "probability": 0.6968275904655457
+    },
+    {
+      "text": "打",
+      "start": 0.72,
+      "end": 0.9,
+      "probability": 0.9846819639205933
+    },
+    {
+      "text": "烦,",
+      "start": 0.9,
+      "end": 1.18,
+      "probability": 0.41713815182447433
+    },
+    {
+      "text": "还",
+      "start": 1.46,
+      "end": 1.62,
+      "probability": 0.9390977621078491
+    },
+    {
+      "text": "反",
+      "start": 1.62,
+      "end": 1.78,
+      "probability": 0.995567262172699
+    },
+    {
+      "text": "复",
+      "start": 1.78,
+      "end": 1.94,
+      "probability": 0.9939072132110596
+    },
+    {
+      "text": "憋",
+      "start": 1.94,
+      "end": 2.1,
+      "probability": 0.9898784160614014
+    },
+    {
+      "text": "情,",
+      "start": 2.1,
+      "end": 2.34,
+      "probability": 0.14545217156410217
+    },
+    {
+      "text": "白",
+      "start": 2.68,
+      "end": 2.84,
+      "probability": 0.9830579161643982
+    },
+    {
+      "text": "天",
+      "start": 2.84,
+      "end": 2.98,
+      "probability": 0.9996304512023926
+    },
+    {
+      "text": "犯",
+      "start": 2.98,
+      "end": 3.18,
+      "probability": 0.8293500244617462
+    },
+    {
+      "text": "困,",
+      "start": 3.18,
+      "end": 3.42,
+      "probability": 0.9985481202602386
+    },
+    {
+      "text": "要",
+      "start": 3.8,
+      "end": 3.88,
+      "probability": 0.9549404978752136
+    },
+    {
+      "text": "想",
+      "start": 3.88,
+      "end": 4.02,
+      "probability": 0.9963880777359009
+    },
+    {
+      "text": "到",
+      "start": 4.02,
+      "end": 4.22,
+      "probability": 0.9696700572967529
+    },
+    {
+      "text": "睡",
+      "start": 4.22,
+      "end": 4.42,
+      "probability": 0.9929516911506653
+    },
+    {
+      "text": "眠",
+      "start": 4.42,
+      "end": 4.6,
+      "probability": 0.9978808164596558
+    },
+    {
+      "text": "呼",
+      "start": 4.6,
+      "end": 4.76,
+      "probability": 0.9621801376342773
+    },
+    {
+      "text": "吸",
+      "start": 4.76,
+      "end": 4.9,
+      "probability": 0.9943481087684631
+    },
+    {
+      "text": "暂",
+      "start": 4.9,
+      "end": 5.08,
+      "probability": 0.974310427904129
+    },
+    {
+      "text": "停。",
+      "start": 5.08,
+      "end": 5.3,
+      "probability": 0.9997919201850891
+    }
+  ],
+  "sourceSHA256": "aeb82522d345a4855995817982ac7d997e072be34fed34255fd4670db20fcca2",
+  "ratio": 0.9166666666666666,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "鼾",
+      "heard": "烦",
+      "end": 6
+    },
+    {
+      "op": "replace",
+      "expected": "醒",
+      "heard": "情",
+      "end": 11
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 261120,
+    "seconds": 5.44,
+    "peakDBFS": -7.615248656197027,
+    "first20msDBFS": -82.63330473358414,
+    "last20msDBFS": -97.02815836728605,
+    "firstActiveMs": 200.0,
+    "lastActiveToEndMs": 60.0,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

@@ -1,0 +1,382 @@
+{
+  "schema": "rainbow-science-video-v5-extra-files",
+  "waterpro": {
+    "implementation": "Verified licensed 3.1.1 wave-spectrum/optical shader ports + foam2/foam4 through WebGL adapter",
+    "nativeWaterSystem": false,
+    "nativeFFT": false
+  },
+  "assets": {
+    "provider": "Poly Haven",
+    "manifest": "provenance/polyhaven/polyhaven-manifest.json",
+    "license": "CC0 1.0",
+    "runtimeOnly": true,
+    "runtimeRoot": "public/",
+    "note": "Only current runtime HDRI, decimated tree glTF/bin/maps, grass PBR maps and finite provenance are selected. Original high-poly tree, unused ground glTF and download previews are not duplicated."
+  },
+  "evidenceScope": {
+    "inheritedModelQa": {
+      "files": [
+        "work/model-qa/packaging-v4.json",
+        "work/model-qa/foundations-v4-qa.json",
+        "work/model-qa/INTEGRATION-V4.md"
+      ],
+      "scope": "Historical V4 baseline. Unchanged turbine/nacelle dimensions may reuse the V4 source evidence; V4 foundation QA does not validate the modified V5 semi-submersible or render. Current V5 evidence must come from current source and final frames."
+    },
+    "audioCopies": [
+      {
+        "copy": "public/audio/narration-immersive-v5.wav",
+        "source": "scripts/mix_immersive_audio.py (RAINBOW_AUDIO_VARIANT=v5)",
+        "sourceSha256": "bd2f1e3fb9b3609c9fb25200054ceb8dcd93d22b00299e62dee4807fbf693727",
+        "copySha256": "0af2b75dd68027b2dc47757b1444d4f37464be3ee0186cc10de497270211de63",
+        "identicalAtManifestCreation": true,
+        "scope": "V5/V6 deterministic output regenerated from current immersion timeline; source narration SHA is recorded in work/audio-v4/immersive-audio-report.json."
+      },
+      {
+        "copy": "public/audio/water-crossings-v5.wav",
+        "source": "scripts/mix_immersive_audio.py (RAINBOW_AUDIO_VARIANT=v5)",
+        "sourceSha256": "bd2f1e3fb9b3609c9fb25200054ceb8dcd93d22b00299e62dee4807fbf693727",
+        "copySha256": "5b08709bed4e37d02ee67a189190ebdc70caadfbb61d18721278846d14ef8bd1",
+        "identicalAtManifestCreation": true,
+        "scope": "V5/V6 deterministic output regenerated from current immersion timeline; source narration SHA is recorded in work/audio-v4/immersive-audio-report.json."
+      }
+    ],
+    "waterpro": "V4 vendor-integrity and integration records establish license/source lineage; they do not replace V5 final water rendering inspection."
+  },
+  "files": [
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\work\\waterpro-v4\\installation.txt",
+      "archive": "work/waterpro-v4/installation.txt",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\work\\waterpro-v4\\INTEGRATION.md",
+      "archive": "work/waterpro-v4/INTEGRATION.md",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\work\\waterpro-v4\\official-docs-fetch.json",
+      "archive": "work/waterpro-v4/official-docs-fetch.json",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\work\\waterpro-v4\\qa-summary.json",
+      "archive": "work/waterpro-v4/qa-summary.json",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\work\\waterpro-v4\\verified-vendor-integrity.json",
+      "archive": "work/waterpro-v4/verified-vendor-integrity.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\agents\\openai.yaml",
+      "archive": "skills/science-video/agents/openai.yaml",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\ocean-college-emblem.svg",
+      "archive": "skills/science-video/assets/brand/ocean-college-emblem.svg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\ocean-college-lockup.svg",
+      "archive": "skills/science-video/assets/brand/ocean-college-lockup.svg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\rainbow-color.png",
+      "archive": "skills/science-video/assets/brand/rainbow-color.png",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\rainbow-line.png",
+      "archive": "skills/science-video/assets/brand/rainbow-line.png",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\rainbow-white-backed.png",
+      "archive": "skills/science-video/assets/brand/rainbow-white-backed.png",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\zju-emblem.svg",
+      "archive": "skills/science-video/assets/brand/zju-emblem.svg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\brand\\zju-official-wordmark.svg",
+      "archive": "skills/science-video/assets/brand/zju-official-wordmark.svg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\brand-sheet.jpg",
+      "archive": "skills/science-video/assets/reference/brand-sheet.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\camera-continuity-guide.png",
+      "archive": "skills/science-video/assets/reference/camera-continuity-guide.png",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\dna-alignment-mechanism.jpg",
+      "archive": "skills/science-video/assets/reference/dna-alignment-mechanism.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\dna-fountain-mechanism.jpg",
+      "archive": "skills/science-video/assets/reference/dna-fountain-mechanism.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\engineering-cover.jpg",
+      "archive": "skills/science-video/assets/reference/engineering-cover.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\engineering-force.jpg",
+      "archive": "skills/science-video/assets/reference/engineering-force.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\gallery-1.jpg",
+      "archive": "skills/science-video/assets/reference/gallery-1.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\gallery-2.jpg",
+      "archive": "skills/science-video/assets/reference/gallery-2.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\rainbow-character.jpg",
+      "archive": "skills/science-video/assets/reference/rainbow-character.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\rainbow-optics.jpg",
+      "archive": "skills/science-video/assets/reference/rainbow-optics.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\reference\\rainbow-reflection.jpg",
+      "archive": "skills/science-video/assets/reference/rainbow-reflection.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\templates\\asset-record.json",
+      "archive": "skills/science-video/assets/templates/asset-record.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\templates\\iteration-record.json",
+      "archive": "skills/science-video/assets/templates/iteration-record.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\templates\\qa-record.json",
+      "archive": "skills/science-video/assets/templates/qa-record.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\assets\\templates\\shot-contract.json",
+      "archive": "skills/science-video/assets/templates/shot-contract.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\3d-camera.md",
+      "archive": "skills/science-video/references/3d-camera.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\asset-manifest.json",
+      "archive": "skills/science-video/references/asset-manifest.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\brand-covers.md",
+      "archive": "skills/science-video/references/brand-covers.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\capability-evidence.md",
+      "archive": "skills/science-video/references/capability-evidence.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\formulas-drawing.md",
+      "archive": "skills/science-video/references/formulas-drawing.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\generation.md",
+      "archive": "skills/science-video/references/generation.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\qa-delivery.md",
+      "archive": "skills/science-video/references/qa-delivery.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\research-and-skills.md",
+      "archive": "skills/science-video/references/research-and-skills.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\resources.md",
+      "archive": "skills/science-video/references/resources.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\story-audio.md",
+      "archive": "skills/science-video/references/story-audio.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\tools-opus.md",
+      "archive": "skills/science-video/references/tools-opus.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\visual-reference.md",
+      "archive": "skills/science-video/references/visual-reference.md",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\scripts\\audit_assets.py",
+      "archive": "skills/science-video/scripts/audit_assets.py",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\scripts\\review_video.py",
+      "archive": "skills/science-video/scripts/review_video.py",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\SKILL.md",
+      "archive": "skills/science-video/SKILL.md",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\research\\iterations\\v4\\glass-title-underwater-audio-spec.md",
+      "archive": "research/iterations/v4/glass-title-underwater-audio-spec.md",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\work\\audio-v4\\sound-reference-search.json",
+      "archive": "work/audio-v4/sound-reference-search.json",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\blue_lagoon_2k.hdr",
+      "archive": "public/models/blue_lagoon_2k.hdr",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_lod.gltf",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_lod.gltf",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\lod-report.json",
+      "archive": "public/models/polyhaven/fir_sapling_lod/lod-report.json",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_lod.bin",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_lod.bin",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_branches_nor_gl_1k.jpg",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_branches_nor_gl_1k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_branches_diff_1k.jpg",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_branches_diff_1k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_branches_arm_1k.jpg",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_branches_arm_1k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_twigs_nor_gl_1k.jpg",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_twigs_nor_gl_1k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_twigs_diff_1k.jpg",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_twigs_diff_1k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\fir_sapling_lod\\fir_sapling_twigs_arm_1k.jpg",
+      "archive": "public/models/polyhaven/fir_sapling_lod/fir_sapling_twigs_arm_1k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\grass_ground\\textures\\grass_ground_diff_2k.jpg",
+      "archive": "public/models/polyhaven/grass_ground/textures/grass_ground_diff_2k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\grass_ground\\textures\\grass_ground_nor_gl_2k.jpg",
+      "archive": "public/models/polyhaven/grass_ground/textures/grass_ground_nor_gl_2k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\models\\polyhaven\\grass_ground\\textures\\grass_ground_arm_2k.jpg",
+      "archive": "public/models/polyhaven/grass_ground/textures/grass_ground_arm_2k.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\vendor\\waterpro\\LICENSE.md",
+      "archive": "public/vendor/waterpro/LICENSE.md",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\vendor\\waterpro\\provenance.json",
+      "archive": "public/vendor/waterpro/provenance.json",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\vendor\\waterpro\\waterpro-adapter-v07.min.js",
+      "archive": "public/vendor/waterpro/waterpro-adapter-v07.min.js",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\vendor\\waterpro\\foam2.jpg",
+      "archive": "public/vendor/waterpro/foam2.jpg",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\vendor\\waterpro\\foam4.jpg",
+      "archive": "public/vendor/waterpro/foam4.jpg",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\Videos\\rainbow-marine-ep01-v5\\work\\assets\\polyhaven\\polyhaven-manifest.json",
+      "archive": "provenance/polyhaven/polyhaven-manifest.json",
+      "required": true
+    },
+    {
+      "source": "C:\\Users\\zju\\.codex\\skills\\science-video\\references\\ocean-scene-rendering.md",
+      "archive": "skills/science-video/references/ocean-scene-rendering.md",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\narration-immersive-v5.wav",
+      "archive": "public/audio/narration-immersive-v5.wav",
+      "required": true
+    },
+    {
+      "source": "D:\\python_project\\manim_extend_rainbow\\video_project\\zju_marine_ep01\\public\\audio\\water-crossings-v5.wav",
+      "archive": "public/audio/water-crossings-v5.wav",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "version": "V18",
+  "schema": "rainbow.v18.delivery-encode-qa/1",
+  "createdUTC": "2026-10-12T21:44:23.000855+00:00",
+  "video": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\output-v16\\delivery\\彩虹为什么是弧形_V18_optimized_1080p.mp4",
+  "videoSHA256": "ee35a370d602939a85856e80ebf3d22f1a3a0ab9d3c1ea915914407712666a7c",
+  "sourceAudit": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\research\\qa-v18\\audit-v18.json",
+  "renderRecord": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\research\\qa-v16\\render-start-v18.json",
+  "renderStatus": "completed",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 10702,
+    "duration": 356.73333333333335,
+    "sample_rate": 48000,
+    "channels": 2
+  },
+  "checks": {
+    "V18 source audit passed": true,
+    "render-start-v18 status completed": true,
+    "delivery path matches render record": true,
+    "delivery SHA256 matches render record": true,
+    "render source audit hash matches current audit": true,
+    "V18 master WAV exists": true,
+    "mix report binds V18 master WAV": true,
+    "audio provenance binds V18 master WAV": true,
+    "source audit binds V18 master WAV": true,
+    "video and audio streams exist": true,
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "avgFPS": 30.0,
+    "nominalFPS": 30.0,
+    "frameCount": 10702,
+    "videoSeconds": 356.733333,
+    "audioSeconds": 356.733,
+    "video is 1920x1080": true,
+    "video is 30 fps": true,
+    "video frame count is 10702": true,
+    "video duration matches 10702 frames": true,
+    "audio codec is AAC": true,
+    "audio is 48 kHz stereo": true,
+    "audio/video duration drift is within two frames": true,
+    "strict ffmpeg audio/video decode passes": true,
+    "decodedAACLoudnorm": {
+      "input_i": "-16.06",
+      "input_tp": "-1.91",
+      "input_lra": "2.60",
+      "input_thresh": "-26.65",
+      "output_i": "-16.09",
+      "output_tp": "-1.63",
+      "output_lra": "2.40",
+      "output_thresh": "-26.66",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "passed": true,
+  "scope": "ffprobe metadata, complete strict ffmpeg decode, blackdetect and silencedetect interval reports, decoded AAC loudness/true-peak measurement, and byte/provenance checks. No normal-speed visual playback, subjective visual approval, or human listening is claimed. Blackdetect dark intervals are reported because macro/reference scenes intentionally use dark backgrounds.",
+  "audio": {
+    "master": "public/audio_v18/master-v18.wav",
+    "masterSHA256": "d2edf3cbc4059c7ef1f2e67009b4a54e959a2daad2d03fdfcf9db713ba40beaf",
+    "mixReport": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\research\\qa-v18\\mix-report-v18-painting-summer.json",
+    "provenance": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\research\\qa-v18\\audio-v18-painting-summer.json",
+    "decodedAACLoudnorm": {
+      "input_i": "-16.06",
+      "input_tp": "-1.91",
+      "input_lra": "2.60",
+      "input_thresh": "-26.65",
+      "output_i": "-16.09",
+      "output_tp": "-1.63",
+      "output_lra": "2.40",
+      "output_thresh": "-26.66",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    },
+    "subjectiveListeningChecked": false
+  },
+  "blackDetect": {
+    "filter": "blackdetect=d=0.5:pix_th=0.001:pic_th=0.98",
+    "spans": [],
+    "longSpans": [],
+    "automaticPassPolicy": "reported-only; macro/reference dark backgrounds require visual context"
+  },
+  "silenceDetect": {
+    "filter": "silencedetect=n=-60dB:d=1",
+    "spans": [],
+    "longSpans": [],
+    "automaticPassPolicy": "reported-only; tail fade may be authored"
+  }
+}

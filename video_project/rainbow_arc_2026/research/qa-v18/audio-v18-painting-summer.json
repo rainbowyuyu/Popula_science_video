@@ -1,0 +1,95 @@
+{
+  "version": "V18-audio-painting-summer",
+  "status": "pass",
+  "episodeAudioSeconds": 356.73333333333335,
+  "sampleRate": 48000,
+  "channels": 2,
+  "source": {
+    "path": "D:\\CloudMusic\\Legal S - Painting Summer.mp3",
+    "sha256": "92d1f974edafa9e56822872a77b1d24012107f64b920b4d582aa5fabe4282b8f",
+    "sizeBytes": 2881415,
+    "decodedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\rainbow_arc_2026_v16\\work\\audio-painting-summer\\painting-summer-source.wav",
+    "decodedSHA256": "2bf7ffed11a6b0fdd82c21967ec5f9ac48e6b3f82bff9cc4e77bc2b9e1c245db",
+    "durationSeconds": 170.0,
+    "artist": "Legal S",
+    "title": "Painting Summer",
+    "album": "Painting Summer",
+    "note": "User-provided MP3; audio stream selected explicitly, attached cover art excluded.",
+    "provenancePath": "research/qa-v18/audio-v18-painting-summer.json"
+  },
+  "sourceSamplesDecoded": 8160000,
+  "loop": {
+    "sourceSeconds": 170.0,
+    "crossfadeSeconds": 4.0,
+    "repeatMethod": "deterministic equal-power overlap",
+    "cropSamples": 17123200,
+    "fadeOutSeconds": 5.0,
+    "gainDbBeforeDuck": -18.0,
+    "highPassHz": 42.0,
+    "noTimeStretch": true,
+    "noPitchShift": true
+  },
+  "ducking": {
+    "envelope": "existing V11 clip activity",
+    "musicReductionDb": 4.5,
+    "releaseSeconds": 1.15,
+    "attackSeconds": 0.15,
+    "tailBoost": 0.45,
+    "sfxSource": "public/audio_v11/sfx-v11.wav",
+    "sfxSHA256": "79bd01b71e7e4d6262bbe170f0a99a203fbdc9c86ade16cb0e0a42509857aa72"
+  },
+  "outputs": {
+    "public/audio_v18/master-v18.wav": {
+      "sha256": "d2edf3cbc4059c7ef1f2e67009b4a54e959a2daad2d03fdfcf9db713ba40beaf",
+      "bytes": 102739302
+    },
+    "public/audio_v18/bed-v18.wav": {
+      "sha256": "22beb7a5bf1da322da8b1f68a104bcf51e09fb78b8c6c245f1a0eb73950e6e45",
+      "bytes": 102739244
+    },
+    "public/audio_v18/music-v18.wav": {
+      "sha256": "0f050fee17d66e27fd8d157ef85b0aaad8601b1936a68304d24d128ab4420035",
+      "bytes": 102739244
+    },
+    "public/audio_v18/premaster-v18.wav": {
+      "sha256": "f30b43078ca14be3a907162182f95066b663ce56d69216aa23824630b380c6a7",
+      "bytes": 102739244
+    }
+  },
+  "durationChecks": {
+    "masterSamples": 17123200,
+    "expectedSamples": 17123200,
+    "durationSeconds": 356.73333333333335,
+    "last5sRmsDb": -24.130350795436094,
+    "tailLast160msRmsDb": -83.7891287087285
+  },
+  "loudness": {
+    "wav": {
+      "input_i": "-16.04",
+      "input_tp": "-2.19",
+      "input_lra": "2.50",
+      "input_thresh": "-26.63",
+      "output_i": "-16.09",
+      "output_tp": "-1.73",
+      "output_lra": "2.40",
+      "output_thresh": "-26.66",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    },
+    "aac": {
+      "input_i": "-16.05",
+      "input_tp": "-1.98",
+      "input_lra": "2.60",
+      "input_thresh": "-26.65",
+      "output_i": "-16.09",
+      "output_tp": "-1.71",
+      "output_lra": "2.40",
+      "output_thresh": "-26.66",
+      "normalization_type": "dynamic",
+      "target_offset": "0.09"
+    }
+  },
+  "subjectiveListeningChecked": false,
+  "note": "V18 delivery copy for static audio replacement; byte-identical to V17 generated master. V11 remains untouched.",
+  "deliveryPath": "public/audio_v18/master-v18.wav"
+}

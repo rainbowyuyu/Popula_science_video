@@ -1,0 +1,112 @@
+{
+  "capturedAtUTC": "2026-10-08T15:42:37.714531+00:00",
+  "video": "delivery/ShanghaiTower_1080p_v2.mp4",
+  "videoSHA256": "7ac96efd026bc840e70d835c96a2f3915daeef1868cabc7047605ad9bbbfa747",
+  "baseRenderInputs": "render-inputs.json",
+  "baseRenderMarker": {
+    "finished": "2026-10-08T15:08:55.214Z",
+    "frames": [
+      0,
+      11386
+    ],
+    "seconds": 1793.535,
+    "outputLocation": "D:\\python_project\\manim_extend_rainbow\\video_project\\shanghai_tower\\delivery\\ShanghaiTower_1080p_v2.mp4",
+    "success": true
+  },
+  "patches": [
+    {
+      "frames": [
+        4929,
+        5512
+      ],
+      "inputs": "patch-inputs.json",
+      "merge": "../qa/patch-merge-v2.json"
+    },
+    {
+      "frames": [
+        702,
+        1989
+      ],
+      "inputs": "polish-inputs.json",
+      "merge": "../qa/patch-merge-v2-polish.json"
+    },
+    {
+      "frames": [
+        11117,
+        11386
+      ],
+      "inputs": "polish-inputs.json",
+      "worldAtRenderSHA256": "cc26d0bcec879e8405078dd2d6b6ecb2dfbe47132787e6aacf680b1a103a6400",
+      "note": "Coda was rendered before ground-slide source change; the later World change only affects frames702–1989.",
+      "merge": "../qa/patch-merge-v2-polish.json"
+    }
+  ],
+  "currentInputs": [
+    {
+      "file": "public/fonts/sans.woff2",
+      "sha256": "a2a0ee7670323ea855a3e7b009c257f995505d39ca76f6d3b3e014a6c43b1daf"
+    },
+    {
+      "file": "public/fonts/serif.woff2",
+      "sha256": "0d9cf8aa89d3c4696f0387247ed236bebf2821e8575546617124cf63b6c8c6c4"
+    },
+    {
+      "file": "public/master.wav",
+      "sha256": "74bba60ebd1dfc7ac38a9c4ad56c52b581391ad3faaed3dcc6963c61cc0709d4"
+    },
+    {
+      "file": "public/models/shanghai-tower-manifest.json",
+      "sha256": "29d575f78dd4606259c5eb4ec232ad575ab69871be32a125f92c7d607fdcbd83"
+    },
+    {
+      "file": "public/models/shanghai-tower.glb",
+      "sha256": "d0981ed1c7d6616341c9992249c3f1e010d4a7498a9aef0daf6e3349afa070b6"
+    },
+    {
+      "file": "public/physics/environment-qa.json",
+      "sha256": "b6562bcfb127f37bb61fc32ede1ab5b5ff3ff22876b4478aca3202a3e6863a55"
+    },
+    {
+      "file": "public/physics/environment-response.json",
+      "sha256": "c4292f0ca38da5425e929bb3645332ecdb92236e325ec04934eee3aaa2737919"
+    },
+    {
+      "file": "public/physics/response.json",
+      "sha256": "c2b81b5cbda3688d40e06d28f90b8996130d3902994830649c94614575c5f71a"
+    },
+    {
+      "file": "src/CameraPath.ts",
+      "sha256": "9fd6c046d9bc07c9c3ffcd9c16b0c349a944b1632cd9487060f16c136ed51a74"
+    },
+    {
+      "file": "src/EnvironmentPlayback.ts",
+      "sha256": "64139be4536cb97d741c4259fbbc494b97eadc8768559b1f399ad7cb47f27061"
+    },
+    {
+      "file": "src/Film.tsx",
+      "sha256": "4adbe616cc5415e72d206f9381787361f6612b1216a54d03b75e26fab862fc27"
+    },
+    {
+      "file": "src/index.tsx",
+      "sha256": "5cb8060074e1f2d6effa15a90d610f7a4c5719bd278c0fee3e48009742275a94"
+    },
+    {
+      "file": "src/PhysicsPlayback.ts",
+      "sha256": "781e43016ec304acb348227dbd0d888e50f1771d9993d64798ed8e9a7bed77e4"
+    },
+    {
+      "file": "src/timeline.json",
+      "sha256": "d84eb3534b89803b7b90ccbe304ee06a437efbe775e148aab73ee9df72615944"
+    },
+    {
+      "file": "src/visual.ts",
+      "sha256": "79962eceaa00daccb955500f8457a596cf0de6234688e22fc1bf433b6b842333"
+    },
+    {
+      "file": "src/World.ts",
+      "sha256": "ee5db91f20445552e5fa8c16be8b08ab9b958fc3c0c0958ff027dad2708b67fd"
+    }
+  ],
+  "technicalQA": "../qa/final-check-v2/automatic-report.json",
+  "musicReplacementPending": true
+}

@@ -1,0 +1,390 @@
+[
+  {
+    "text": "OpenSees Examples Manual",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual&redirect=no"
+  },
+  {
+    "text": "Jump to navigation",
+    "href": "#mw-head"
+  },
+  {
+    "text": "Jump to search",
+    "href": "#searchInput"
+  },
+  {
+    "text": "1 Introduction",
+    "href": "#Introduction"
+  },
+  {
+    "text": "2 Models",
+    "href": "#Models"
+  },
+  {
+    "text": "2.1 Elastic Elements",
+    "href": "#Elastic_Elements"
+  },
+  {
+    "text": "2.2 Inelastic Elements",
+    "href": "#Inelastic_Elements"
+  },
+  {
+    "text": "2.2.1 Uniaxial Section",
+    "href": "#Uniaxial_Section"
+  },
+  {
+    "text": "2.2.2 Fiber Section",
+    "href": "#Fiber_Section"
+  },
+  {
+    "text": "3 Lateral Loads",
+    "href": "#Lateral_Loads"
+  },
+  {
+    "text": "3.1 Static Pushover",
+    "href": "#Static_Pushover"
+  },
+  {
+    "text": "3.1.1 Monotonic Pushover",
+    "href": "#Monotonic_Pushover"
+  },
+  {
+    "text": "3.1.2 Reversed Cyclic Pushover",
+    "href": "#Reversed_Cyclic_Pushover"
+  },
+  {
+    "text": "3.2 Time-Dependent Dynamic Loads",
+    "href": "#Time-Dependent_Dynamic_Loads"
+  },
+  {
+    "text": "3.2.1 Uniform Sine-Wave",
+    "href": "#Uniform_Sine-Wave"
+  },
+  {
+    "text": "3.2.2 Multiple-Support Sine-Wave",
+    "href": "#Multiple-Support_Sine-Wave"
+  },
+  {
+    "text": "3.2.3 Uniform Earthquake",
+    "href": "#Uniform_Earthquake"
+  },
+  {
+    "text": "3.2.4 Multiple-Support Earthquake",
+    "href": "#Multiple-Support_Earthquake"
+  },
+  {
+    "text": "3.2.5 Bidirectional Earthquake",
+    "href": "#Bidirectional_Earthquake"
+  },
+  {
+    "text": "4 Simulation Process",
+    "href": "#Simulation_Process"
+  },
+  {
+    "text": "4.1 Build the model",
+    "href": "#Build_the_model"
+  },
+  {
+    "text": "4.2 Define & apply gravity load",
+    "href": "#Define_&_apply_gravity_load"
+  },
+  {
+    "text": "4.3 Define and apply lateral load",
+    "href": "#Define_and_apply_lateral_load"
+  },
+  {
+    "text": "5 Introductory Examples",
+    "href": "#Introductory_Examples"
+  },
+  {
+    "text": "5.1 OpenSees Example 1a. 2D Elastic Cantilever Column",
+    "href": "#OpenSees_Example_1a._2D_Elastic_Cantilever_Column"
+  },
+  {
+    "text": "5.2 OpenSees Example 1b. Elastic Portal Frame",
+    "href": "#OpenSees_Example_1b._Elastic_Portal_Frame"
+  },
+  {
+    "text": "6 Simple Examples of Nonlinear-Models",
+    "href": "#Simple_Examples_of_Nonlinear-Models"
+  },
+  {
+    "text": "6.1 OpenSees Example 2a. Elastic Cantilever Column with variables",
+    "href": "#OpenSees_Example_2a._Elastic_Cantilever_Column_with_variables"
+  },
+  {
+    "text": "6.2 OpenSees Example 2b. Nonlinear Cantilever Column: Uniaxial Inelastic Section",
+    "href": "#OpenSees_Example_2b._Nonlinear_Cantilever_Column:_Uniaxial_Inelastic_Section"
+  },
+  {
+    "text": "6.3 OpenSees Example 2c. Nonlinear Cantilever Column: Inelastic Uniaxial Materials in Fiber Section",
+    "href": "#OpenSees_Example_2c._Nonlinear_Cantilever_Column:_Inelastic_Uniaxial_Materials_in_Fiber_Section"
+  },
+  {
+    "text": "7 2D Structural Modeling & Analysis Examples",
+    "href": "#2D_Structural_Modeling_&_Analysis_Examples"
+  },
+  {
+    "text": "7.1 OpenSees Example 3. Cantilever Column with units",
+    "href": "#OpenSees_Example_3._Cantilever_Column_with_units"
+  },
+  {
+    "text": "7.2 OpenSees Example 4. Portal Frame",
+    "href": "#OpenSees_Example_4._Portal_Frame"
+  },
+  {
+    "text": "7.3 OpenSees Example 5. 2D Frame, 3-story 3-bay, Reinforced-Concrete Section & Steel W-Section",
+    "href": "#OpenSees_Example_5._2D_Frame,_3-story_3-bay,_Reinforced-Concrete_Section_&_Steel_W-Section"
+  },
+  {
+    "text": "7.4 OpenSees Example 6. generic 2D Frame, N-story N-bay, Reinforced-Concrete Section & Steel W-Section",
+    "href": "#OpenSees_Example_6._generic_2D_Frame,_N-story_N-bay,_Reinforced-Concrete_Section_&_Steel_W-Section"
+  },
+  {
+    "text": "8 3D Structural Modeling & Analysis Examples",
+    "href": "#3D_Structural_Modeling_&_Analysis_Examples"
+  },
+  {
+    "text": "8.1 OpenSees Example 7. 3D Frame, 3-story 3-bayX 3-bayZ, Reinforced-Concrete Section & Steel W-Section",
+    "href": "#OpenSees_Example_7._3D_Frame,_3-story_3-bayX_3-bayZ,_Reinforced-Concrete_Section_&_Steel_W-Section"
+  },
+  {
+    "text": "8.2 OpenSees Example 8. generic 3D Frame, NStory NBayX NBayZ, Reinforced-Concrete Section & Steel W-Section",
+    "href": "#OpenSees_Example_8._generic_3D_Frame,_NStory_NBayX_NBayZ,_Reinforced-Concrete_Section_&_Steel_W-Section"
+  },
+  {
+    "text": "9 Section Modeling And Analysis Examples",
+    "href": "#Section_Modeling_And_Analysis_Examples"
+  },
+  {
+    "text": "9.1 OpenSees Example 9. Build & Analyze a Section Example",
+    "href": "#OpenSees_Example_9._Build_&_Analyze_a_Section_Example"
+  },
+  {
+    "text": "Elastic Beam Column Element",
+    "href": "/wiki/index.php?title=Elastic_Beam_Column_Element"
+  },
+  {
+    "text": "Force-Based Beam-Column Element",
+    "href": "/wiki/index.php?title=Force-Based_Beam-Column_Element"
+  },
+  {
+    "text": "Uniaxial Section",
+    "href": "/wiki/index.php?title=Uniaxial_Section"
+  },
+  {
+    "text": "UniaxialMaterial Command",
+    "href": "/wiki/index.php?title=UniaxialMaterial_Command"
+  },
+  {
+    "text": "Fiber Section",
+    "href": "/wiki/index.php?title=Fiber_Section"
+  },
+  {
+    "text": "UniaxialMaterial Command",
+    "href": "/wiki/index.php?title=UniaxialMaterial_Command"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Analyses"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Analyses"
+  },
+  {
+    "text": "OpenSees Example 1a. 2D Elastic Cantilever Column",
+    "href": "/wiki/index.php?title=OpenSees_Example_1a._2D_Elastic_Cantilever_Column"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_1a._2D_Elastic_Cantilever_Column"
+  },
+  {
+    "text": "OpenSees Example 1b. Elastic Portal Frame",
+    "href": "/wiki/index.php?title=OpenSees_Example_1b._Elastic_Portal_Frame"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_1b._Elastic_Portal_Frame"
+  },
+  {
+    "text": "OpenSees Example 2a. Elastic Cantilever Column with variables",
+    "href": "/wiki/index.php?title=OpenSees_Example_2a._Elastic_Cantilever_Column_with_variables"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_2a._Elastic_Cantilever_Column_with_variables"
+  },
+  {
+    "text": "OpenSees Example 2b. Nonlinear Cantilever Column: Uniaxial Inelastic Section",
+    "href": "/wiki/index.php?title=OpenSees_Example_2b._Nonlinear_Cantilever_Column:_Uniaxial_Inelastic_Section"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_2b._Nonlinear_Cantilever_Column:_Uniaxial_Inelastic_Section"
+  },
+  {
+    "text": "OpenSees Example 2c. Nonlinear Cantilever Column: Inelastic Uniaxial Materials in Fiber Section",
+    "href": "/wiki/index.php?title=OpenSees_Example_2c._Nonlinear_Cantilever_Column:_Inelastic_Uniaxial_Materials_in_Fiber_Section"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_2c._Nonlinear_Cantilever_Column:_Inelastic_Uniaxial_Materials_in_Fiber_Section"
+  },
+  {
+    "text": "OpenSees Example 3. Cantilever Column with units",
+    "href": "/wiki/index.php?title=OpenSees_Example_3._Cantilever_Column_with_units"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_3._Cantilever_Column_with_unit"
+  },
+  {
+    "text": "OpenSees Example 4. Portal Frame",
+    "href": "/wiki/index.php?title=OpenSees_Example_4._Portal_Frame"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_4._Portal_Frame"
+  },
+  {
+    "text": "OpenSees Example 5. 2D Frame, 3-story 3-bay, Reinforced-Concrete Section & Steel W-Section",
+    "href": "/wiki/index.php?title=OpenSees_Example_5._2D_Frame,_3-story_3-bay,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_5._2D_Frame,_3-story_3-bay,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "OpenSees Example 6. generic 2D Frame, N-story N-bay, Reinforced-Concrete Section & Steel W-Section",
+    "href": "/wiki/index.php?title=OpenSees_Example_6._generic_2D_Frame,_N-story_N-bay,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_6._generic_2D_Frame,_N-story_N-bay,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "OpenSees Example 7. 3D Frame, 3-story 3-bayX 3-bayZ, Reinforced-Concrete Section & Steel W-Section",
+    "href": "/wiki/index.php?title=OpenSees_Example_7._3D_Frame,_3-story_3-bayX_3-bayZ,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_7._3D_Frame,_3-story_3-bayX_3-bayZ,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "OpenSees Example 8. generic 3D Frame, NStory NBayX NBayZ, Reinforced-Concrete Section & Steel W-Section",
+    "href": "/wiki/index.php?title=OpenSees_Example_8._generic_3D_Frame,_NStory_NBayX_NBayZ,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_8._generic_3D_Frame,_NStory_NBayX_NBayZ,_Reinforced-Concrete_Section_%26_Steel_W-Section"
+  },
+  {
+    "text": "OpenSees Example 9. Build & Analyze a Section Example",
+    "href": "/wiki/index.php?title=OpenSees_Example_9._Build_%26_Analyze_a_Section_Example"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=OpenSees_Example_9._Section_Build_%26_Analysis_Example"
+  },
+  {
+    "text": "OpenSees User",
+    "href": "/wiki/index.php?title=OpenSees_User"
+  },
+  {
+    "text": "https://opensees.ist.berkeley.edu/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&oldid=3006",
+    "href": "https://opensees.ist.berkeley.edu/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&oldid=3006"
+  },
+  {
+    "text": "Log in",
+    "href": "/wiki/index.php?title=Special:UserLogin&returnto=OpenSees+Examples+Manual+--+Structural+Models+%26+Anlyses"
+  },
+  {
+    "text": "Page",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses"
+  },
+  {
+    "text": "Discussion",
+    "href": "/wiki/index.php?title=Talk:OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&action=edit&redlink=1"
+  },
+  {
+    "text": "Read",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses"
+  },
+  {
+    "text": "View source",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&action=edit"
+  },
+  {
+    "text": "View history",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&action=history"
+  },
+  {
+    "text": "",
+    "href": "/wiki/index.php?title=Main_Page"
+  },
+  {
+    "text": "OpenSees Home",
+    "href": "http://opensees.berkeley.edu"
+  },
+  {
+    "text": "Message Board",
+    "href": "http://opensees.berkeley.edu/index.php"
+  },
+  {
+    "text": "OpenSees Wiki",
+    "href": "http://opensees.berkeley.edu/wiki/index.php"
+  },
+  {
+    "text": "User Documetation",
+    "href": "http://opensees.berkeley.edu/wiki/index.php/OpenSees_User"
+  },
+  {
+    "text": "Download Page",
+    "href": "http://opensees.berkeley.edu/OpenSees/user/download.php"
+  },
+  {
+    "text": "Source Code",
+    "href": "http://opensees.berkeley.edu/WebSVN/listing.php?repname=OpenSees&path=%2Ftrunk%2FSRC"
+  },
+  {
+    "text": "What links here",
+    "href": "/wiki/index.php?title=Special:WhatLinksHere/OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses"
+  },
+  {
+    "text": "Related changes",
+    "href": "/wiki/index.php?title=Special:RecentChangesLinked/OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses"
+  },
+  {
+    "text": "Special pages",
+    "href": "/wiki/index.php?title=Special:SpecialPages"
+  },
+  {
+    "text": "Printable version",
+    "href": "javascript:print();"
+  },
+  {
+    "text": "Permanent link",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&oldid=3006"
+  },
+  {
+    "text": "Page information",
+    "href": "/wiki/index.php?title=OpenSees_Examples_Manual_--_Structural_Models_%26_Anlyses&action=info"
+  },
+  {
+    "text": "Privacy policy",
+    "href": "/wiki/index.php?title=OpenSeesWiki:Privacy_policy"
+  },
+  {
+    "text": "About OpenSeesWiki",
+    "href": "/wiki/index.php?title=OpenSeesWiki:About"
+  },
+  {
+    "text": "Disclaimers",
+    "href": "/wiki/index.php?title=OpenSeesWiki:General_disclaimer"
+  },
+  {
+    "text": "",
+    "href": "https://www.mediawiki.org/"
+  }
+]

@@ -1,0 +1,2292 @@
+{
+  "createdUTC": "2026-10-09T06:08:42.500093+00:00",
+  "ffmpegVersion": "ffmpeg version 2026-02-09-git-9bfa1635ae-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+  "readOnly": true,
+  "inputSHA256": {
+    "delivery\\GLP1_V5_1080p.mp4": "6d77b4522f419fa56ba01cfc3abe89ccf2a31b6905c0e3e9857293dc537e8e7c",
+    "research\\revision-v5\\final-boundary-repair\\patch-plan.json": "475c61b20ea706748b6d5577b422cc54b106b9a4bdda6b3127a395058bed84c0",
+    "scripts\\compose_final_boundary_patches_v5.py": "391da2328501d419aae30a4274262b8350752f0519a64ba8a8ad056083e4d7d3",
+    "src\\timeline.json": "0ef7997628a5c9d86e8364da053e803ec38b1a34d69b0db24d7b49f9bcd6819d"
+  },
+  "inputsUnchanged": {
+    "delivery\\GLP1_V5_1080p.mp4": true,
+    "research\\revision-v5\\final-boundary-repair\\patch-plan.json": true,
+    "scripts\\compose_final_boundary_patches_v5.py": true,
+    "src\\timeline.json": true
+  },
+  "spans": 24,
+  "endpointComparisons": 48,
+  "elapsedSeconds": 48.274830700000166,
+  "reference": {
+    "label": "sequential-reference",
+    "command": [
+      "C:\\ffmpeg\\bin\\ffmpeg.exe",
+      "-hide_banner",
+      "-nostdin",
+      "-v",
+      "error",
+      "-threads",
+      "2",
+      "-i",
+      "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+      "-map",
+      "0:v:0",
+      "-an",
+      "-sn",
+      "-dn",
+      "-vf",
+      "select=eq(n\\,0)+eq(n\\,545)+eq(n\\,765)+eq(n\\,2914)+eq(n\\,3063)+eq(n\\,3457)+eq(n\\,3571)+eq(n\\,4247)+eq(n\\,4447)+eq(n\\,4706)+eq(n\\,4910)+eq(n\\,8278)+eq(n\\,8434)+eq(n\\,9258)+eq(n\\,9478)+eq(n\\,11364)+eq(n\\,11436)+eq(n\\,11571)+eq(n\\,11790)+eq(n\\,12219)+eq(n\\,12295)+eq(n\\,12683)+eq(n\\,12902)+eq(n\\,14541)+eq(n\\,14617)+eq(n\\,14826)+eq(n\\,15033)+eq(n\\,18400)+eq(n\\,18503)+eq(n\\,19061)+eq(n\\,19278)+eq(n\\,20342)+eq(n\\,20689)+eq(n\\,21246)+eq(n\\,21428)+eq(n\\,21487)+eq(n\\,21911)+eq(n\\,22744)+eq(n\\,22925)+eq(n\\,23121)+eq(n\\,23270)+eq(n\\,23522)+eq(n\\,23837)+eq(n\\,24660)+eq(n\\,25001)+eq(n\\,25235)+eq(n\\,25366)+eq(n\\,25620)",
+      "-frames:v",
+      "48",
+      "-fps_mode:v",
+      "passthrough",
+      "-pix_fmt",
+      "yuv420p",
+      "-f",
+      "framemd5",
+      "-"
+    ],
+    "seekSeconds": 0,
+    "expectedLocalFrames": [
+      0,
+      545,
+      765,
+      2914,
+      3063,
+      3457,
+      3571,
+      4247,
+      4447,
+      4706,
+      4910,
+      8278,
+      8434,
+      9258,
+      9478,
+      11364,
+      11436,
+      11571,
+      11790,
+      12219,
+      12295,
+      12683,
+      12902,
+      14541,
+      14617,
+      14826,
+      15033,
+      18400,
+      18503,
+      19061,
+      19278,
+      20342,
+      20689,
+      21246,
+      21428,
+      21487,
+      21911,
+      22744,
+      22925,
+      23121,
+      23270,
+      23522,
+      23837,
+      24660,
+      25001,
+      25235,
+      25366,
+      25620
+    ],
+    "elapsedSeconds": 44.484973500002525,
+    "returnCode": 0,
+    "frames": [
+      {
+        "stream": 0,
+        "dts": 0,
+        "pts": 0,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "bc814539c0d57f342cf8c19a062d1873"
+      },
+      {
+        "stream": 0,
+        "dts": 545,
+        "pts": 545,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "8370d2fbf9134a5b93eb182b899fa5a8"
+      },
+      {
+        "stream": 0,
+        "dts": 765,
+        "pts": 765,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "09b94f17bfe0a14e37cffb6ac7980783"
+      },
+      {
+        "stream": 0,
+        "dts": 2914,
+        "pts": 2914,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "289b7e6f5ab55e5bacb2e0a69f6aef66"
+      },
+      {
+        "stream": 0,
+        "dts": 3063,
+        "pts": 3063,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "a6ea0dd1dfd247a128ff6110ec265fdd"
+      },
+      {
+        "stream": 0,
+        "dts": 3457,
+        "pts": 3457,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "6507a8c93687a1f0fc7c411a1e05cb35"
+      },
+      {
+        "stream": 0,
+        "dts": 3571,
+        "pts": 3571,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "359c41715ec48125853e2760b7b01eef"
+      },
+      {
+        "stream": 0,
+        "dts": 4247,
+        "pts": 4247,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "fc24b13275c7d831c64305b6884b803f"
+      },
+      {
+        "stream": 0,
+        "dts": 4447,
+        "pts": 4447,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "7bc595d0ddf7822c86d887825bf64ef6"
+      },
+      {
+        "stream": 0,
+        "dts": 4706,
+        "pts": 4706,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "a9a06f64cefa33be11a1eac4ad608f63"
+      },
+      {
+        "stream": 0,
+        "dts": 4910,
+        "pts": 4910,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "2900542b0eaf4be69340376875efaeeb"
+      },
+      {
+        "stream": 0,
+        "dts": 8278,
+        "pts": 8278,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "8c71a448eb2a9359d706d3db0ca02ce0"
+      },
+      {
+        "stream": 0,
+        "dts": 8434,
+        "pts": 8434,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b9834a4510e78ce4a466a820430d58db"
+      },
+      {
+        "stream": 0,
+        "dts": 9258,
+        "pts": 9258,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "8a90e64037b5bf38fb332d648a6a6699"
+      },
+      {
+        "stream": 0,
+        "dts": 9478,
+        "pts": 9478,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b13404831388adcee5bd747e9665fd84"
+      },
+      {
+        "stream": 0,
+        "dts": 11364,
+        "pts": 11364,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "6520cb8bb36a4493f48215fd7e2d4014"
+      },
+      {
+        "stream": 0,
+        "dts": 11436,
+        "pts": 11436,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "98a9f6c5a6f930e4eb17b0bdf2ecd415"
+      },
+      {
+        "stream": 0,
+        "dts": 11571,
+        "pts": 11571,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b1f536618b4e463f6a6593c5cf6a184c"
+      },
+      {
+        "stream": 0,
+        "dts": 11790,
+        "pts": 11790,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "91aa0cad6b2a99b691cbaf0658be464b"
+      },
+      {
+        "stream": 0,
+        "dts": 12219,
+        "pts": 12219,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "a842172de1e65ea0bb478b0b6d319f4a"
+      },
+      {
+        "stream": 0,
+        "dts": 12295,
+        "pts": 12295,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "8011b77b9b32b55aece9f4878f7bc9fd"
+      },
+      {
+        "stream": 0,
+        "dts": 12683,
+        "pts": 12683,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "de651ffa727fb73a6f49aa8973666597"
+      },
+      {
+        "stream": 0,
+        "dts": 12902,
+        "pts": 12902,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "8e46fe3dfcfb32bdb9e95f3004178303"
+      },
+      {
+        "stream": 0,
+        "dts": 14541,
+        "pts": 14541,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "34d7d4c18b2c21ac2333e0737c98d520"
+      },
+      {
+        "stream": 0,
+        "dts": 14617,
+        "pts": 14617,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "5baae8353dee84a3e05bae1cd5ed1eeb"
+      },
+      {
+        "stream": 0,
+        "dts": 14826,
+        "pts": 14826,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "80b5dd1db5891a7c44c17a9f26edb452"
+      },
+      {
+        "stream": 0,
+        "dts": 15033,
+        "pts": 15033,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "c55b5cfec7ded6ae89fc50a3791cf969"
+      },
+      {
+        "stream": 0,
+        "dts": 18400,
+        "pts": 18400,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "6bce1bde15c645ead7cd47ceca0d474d"
+      },
+      {
+        "stream": 0,
+        "dts": 18503,
+        "pts": 18503,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b88ed9bab38e37c5ddd364ef351434b3"
+      },
+      {
+        "stream": 0,
+        "dts": 19061,
+        "pts": 19061,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "7261857b8da5049dd7bae0cdbc3f2ea7"
+      },
+      {
+        "stream": 0,
+        "dts": 19278,
+        "pts": 19278,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b2548cb4a153e5848855a02d10e0b81f"
+      },
+      {
+        "stream": 0,
+        "dts": 20342,
+        "pts": 20342,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "34b794ea63bf9818ffdc6baa31f671d6"
+      },
+      {
+        "stream": 0,
+        "dts": 20689,
+        "pts": 20689,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "74f01e8b4f4c8c398b9f245083d1ab78"
+      },
+      {
+        "stream": 0,
+        "dts": 21246,
+        "pts": 21246,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b9c1b29c022199cf46595129acc66ad3"
+      },
+      {
+        "stream": 0,
+        "dts": 21428,
+        "pts": 21428,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "f932110d2c847c426f5c6a09b370a5a2"
+      },
+      {
+        "stream": 0,
+        "dts": 21487,
+        "pts": 21487,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "418888dbc14291babc47c9926d815bc3"
+      },
+      {
+        "stream": 0,
+        "dts": 21911,
+        "pts": 21911,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "0bf032af0fb2e2bb04a809d6128996d1"
+      },
+      {
+        "stream": 0,
+        "dts": 22744,
+        "pts": 22744,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "b4cce70d76c5c833c7a47c62b78b6a88"
+      },
+      {
+        "stream": 0,
+        "dts": 22925,
+        "pts": 22925,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "39952db09d56ca1bb4f91a45c3c30d1a"
+      },
+      {
+        "stream": 0,
+        "dts": 23121,
+        "pts": 23121,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "97722abb4b0deaba575232a9dd39cdfb"
+      },
+      {
+        "stream": 0,
+        "dts": 23270,
+        "pts": 23270,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "5bef6d46a6d39146394739f8c83ade97"
+      },
+      {
+        "stream": 0,
+        "dts": 23522,
+        "pts": 23522,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "c77e68622ed01a2b50ecc52e60a785c1"
+      },
+      {
+        "stream": 0,
+        "dts": 23837,
+        "pts": 23837,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "7f0ddfd7000b322a90036d44f27911c4"
+      },
+      {
+        "stream": 0,
+        "dts": 24660,
+        "pts": 24660,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "00c28946f69add0b655b0374daf7fb82"
+      },
+      {
+        "stream": 0,
+        "dts": 25001,
+        "pts": 25001,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "ef4e81c23116341a15a843485cc66366"
+      },
+      {
+        "stream": 0,
+        "dts": 25235,
+        "pts": 25235,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "60de07837c566b89d06e0158e90ef6be"
+      },
+      {
+        "stream": 0,
+        "dts": 25366,
+        "pts": 25366,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "dd6c6d08156e704f15a6ca826acec8b0"
+      },
+      {
+        "stream": 0,
+        "dts": 25620,
+        "pts": 25620,
+        "duration": 1,
+        "size": 3110400,
+        "md5": "9bfbce90a7074e950f40ea6b84c9ef80"
+      }
+    ]
+  },
+  "preseekResults": [
+    {
+      "label": "preseek-00",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,0)+eq(n\\,545)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 0,
+      "expectedLocalFrames": [
+        0,
+        545
+      ],
+      "elapsedSeconds": 0.7673499000084121,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 0,
+          "pts": 0,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "bc814539c0d57f342cf8c19a062d1873"
+        },
+        {
+          "stream": 0,
+          "dts": 545,
+          "pts": 545,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "8370d2fbf9134a5b93eb182b899fa5a8"
+        }
+      ],
+      "start": 0,
+      "end": 545,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 0,
+          "expectedMD5": "bc814539c0d57f342cf8c19a062d1873",
+          "actualMD5": "bc814539c0d57f342cf8c19a062d1873",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 545,
+          "expectedMD5": "8370d2fbf9134a5b93eb182b899fa5a8",
+          "actualMD5": "8370d2fbf9134a5b93eb182b899fa5a8",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-01",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "23",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,75)+eq(n\\,2224)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 23,
+      "expectedLocalFrames": [
+        75,
+        2224
+      ],
+      "elapsedSeconds": 4.429804500003229,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 75,
+          "pts": 75,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "09b94f17bfe0a14e37cffb6ac7980783"
+        },
+        {
+          "stream": 0,
+          "dts": 2224,
+          "pts": 2224,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "289b7e6f5ab55e5bacb2e0a69f6aef66"
+        }
+      ],
+      "start": 765,
+      "end": 2914,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 765,
+          "expectedMD5": "09b94f17bfe0a14e37cffb6ac7980783",
+          "actualMD5": "09b94f17bfe0a14e37cffb6ac7980783",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 2914,
+          "expectedMD5": "289b7e6f5ab55e5bacb2e0a69f6aef66",
+          "actualMD5": "289b7e6f5ab55e5bacb2e0a69f6aef66",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-02",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "100",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,63)+eq(n\\,457)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 100,
+      "expectedLocalFrames": [
+        63,
+        457
+      ],
+      "elapsedSeconds": 1.1900645999994595,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 63,
+          "pts": 63,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "a6ea0dd1dfd247a128ff6110ec265fdd"
+        },
+        {
+          "stream": 0,
+          "dts": 457,
+          "pts": 457,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "6507a8c93687a1f0fc7c411a1e05cb35"
+        }
+      ],
+      "start": 3063,
+      "end": 3457,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 3063,
+          "expectedMD5": "a6ea0dd1dfd247a128ff6110ec265fdd",
+          "actualMD5": "a6ea0dd1dfd247a128ff6110ec265fdd",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 3457,
+          "expectedMD5": "6507a8c93687a1f0fc7c411a1e05cb35",
+          "actualMD5": "6507a8c93687a1f0fc7c411a1e05cb35",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-03",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "117",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,61)+eq(n\\,737)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 117,
+      "expectedLocalFrames": [
+        61,
+        737
+      ],
+      "elapsedSeconds": 1.4237792999920202,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 61,
+          "pts": 61,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "359c41715ec48125853e2760b7b01eef"
+        },
+        {
+          "stream": 0,
+          "dts": 737,
+          "pts": 737,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "fc24b13275c7d831c64305b6884b803f"
+        }
+      ],
+      "start": 3571,
+      "end": 4247,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 3571,
+          "expectedMD5": "359c41715ec48125853e2760b7b01eef",
+          "actualMD5": "359c41715ec48125853e2760b7b01eef",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 4247,
+          "expectedMD5": "fc24b13275c7d831c64305b6884b803f",
+          "actualMD5": "fc24b13275c7d831c64305b6884b803f",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-04",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "146",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,67)+eq(n\\,326)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 146,
+      "expectedLocalFrames": [
+        67,
+        326
+      ],
+      "elapsedSeconds": 1.1185160000022734,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 67,
+          "pts": 67,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "7bc595d0ddf7822c86d887825bf64ef6"
+        },
+        {
+          "stream": 0,
+          "dts": 326,
+          "pts": 326,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "a9a06f64cefa33be11a1eac4ad608f63"
+        }
+      ],
+      "start": 4447,
+      "end": 4706,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 4447,
+          "expectedMD5": "7bc595d0ddf7822c86d887825bf64ef6",
+          "actualMD5": "7bc595d0ddf7822c86d887825bf64ef6",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 4706,
+          "expectedMD5": "a9a06f64cefa33be11a1eac4ad608f63",
+          "actualMD5": "a9a06f64cefa33be11a1eac4ad608f63",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-05",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "161",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,80)+eq(n\\,3448)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 161,
+      "expectedLocalFrames": [
+        80,
+        3448
+      ],
+      "elapsedSeconds": 7.391512899994268,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 80,
+          "pts": 80,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "2900542b0eaf4be69340376875efaeeb"
+        },
+        {
+          "stream": 0,
+          "dts": 3448,
+          "pts": 3448,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "8c71a448eb2a9359d706d3db0ca02ce0"
+        }
+      ],
+      "start": 4910,
+      "end": 8278,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 4910,
+          "expectedMD5": "2900542b0eaf4be69340376875efaeeb",
+          "actualMD5": "2900542b0eaf4be69340376875efaeeb",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 8278,
+          "expectedMD5": "8c71a448eb2a9359d706d3db0ca02ce0",
+          "actualMD5": "8c71a448eb2a9359d706d3db0ca02ce0",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-06",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "279",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,64)+eq(n\\,888)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 279,
+      "expectedLocalFrames": [
+        64,
+        888
+      ],
+      "elapsedSeconds": 2.2172759999957634,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 64,
+          "pts": 64,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b9834a4510e78ce4a466a820430d58db"
+        },
+        {
+          "stream": 0,
+          "dts": 888,
+          "pts": 888,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "8a90e64037b5bf38fb332d648a6a6699"
+        }
+      ],
+      "start": 8434,
+      "end": 9258,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 8434,
+          "expectedMD5": "b9834a4510e78ce4a466a820430d58db",
+          "actualMD5": "b9834a4510e78ce4a466a820430d58db",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 9258,
+          "expectedMD5": "8a90e64037b5bf38fb332d648a6a6699",
+          "actualMD5": "8a90e64037b5bf38fb332d648a6a6699",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-07",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "313",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,88)+eq(n\\,1974)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 313,
+      "expectedLocalFrames": [
+        88,
+        1974
+      ],
+      "elapsedSeconds": 3.316391200001817,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 88,
+          "pts": 88,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b13404831388adcee5bd747e9665fd84"
+        },
+        {
+          "stream": 0,
+          "dts": 1974,
+          "pts": 1974,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "6520cb8bb36a4493f48215fd7e2d4014"
+        }
+      ],
+      "start": 9478,
+      "end": 11364,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 9478,
+          "expectedMD5": "b13404831388adcee5bd747e9665fd84",
+          "actualMD5": "b13404831388adcee5bd747e9665fd84",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 11364,
+          "expectedMD5": "6520cb8bb36a4493f48215fd7e2d4014",
+          "actualMD5": "6520cb8bb36a4493f48215fd7e2d4014",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-08",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "379",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,66)+eq(n\\,201)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 379,
+      "expectedLocalFrames": [
+        66,
+        201
+      ],
+      "elapsedSeconds": 0.8744674000045052,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 66,
+          "pts": 66,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "98a9f6c5a6f930e4eb17b0bdf2ecd415"
+        },
+        {
+          "stream": 0,
+          "dts": 201,
+          "pts": 201,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b1f536618b4e463f6a6593c5cf6a184c"
+        }
+      ],
+      "start": 11436,
+      "end": 11571,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 11436,
+          "expectedMD5": "98a9f6c5a6f930e4eb17b0bdf2ecd415",
+          "actualMD5": "98a9f6c5a6f930e4eb17b0bdf2ecd415",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 11571,
+          "expectedMD5": "b1f536618b4e463f6a6593c5cf6a184c",
+          "actualMD5": "b1f536618b4e463f6a6593c5cf6a184c",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-09",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "391",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,60)+eq(n\\,489)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 391,
+      "expectedLocalFrames": [
+        60,
+        489
+      ],
+      "elapsedSeconds": 1.3600990999984788,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 60,
+          "pts": 60,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "91aa0cad6b2a99b691cbaf0658be464b"
+        },
+        {
+          "stream": 0,
+          "dts": 489,
+          "pts": 489,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "a842172de1e65ea0bb478b0b6d319f4a"
+        }
+      ],
+      "start": 11790,
+      "end": 12219,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 11790,
+          "expectedMD5": "91aa0cad6b2a99b691cbaf0658be464b",
+          "actualMD5": "91aa0cad6b2a99b691cbaf0658be464b",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 12219,
+          "expectedMD5": "a842172de1e65ea0bb478b0b6d319f4a",
+          "actualMD5": "a842172de1e65ea0bb478b0b6d319f4a",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-10",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "407",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,85)+eq(n\\,473)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 407,
+      "expectedLocalFrames": [
+        85,
+        473
+      ],
+      "elapsedSeconds": 1.036733999993885,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 85,
+          "pts": 85,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "8011b77b9b32b55aece9f4878f7bc9fd"
+        },
+        {
+          "stream": 0,
+          "dts": 473,
+          "pts": 473,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "de651ffa727fb73a6f49aa8973666597"
+        }
+      ],
+      "start": 12295,
+      "end": 12683,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 12295,
+          "expectedMD5": "8011b77b9b32b55aece9f4878f7bc9fd",
+          "actualMD5": "8011b77b9b32b55aece9f4878f7bc9fd",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 12683,
+          "expectedMD5": "de651ffa727fb73a6f49aa8973666597",
+          "actualMD5": "de651ffa727fb73a6f49aa8973666597",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-11",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "428",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,62)+eq(n\\,1701)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 428,
+      "expectedLocalFrames": [
+        62,
+        1701
+      ],
+      "elapsedSeconds": 3.2000995999987936,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 62,
+          "pts": 62,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "8e46fe3dfcfb32bdb9e95f3004178303"
+        },
+        {
+          "stream": 0,
+          "dts": 1701,
+          "pts": 1701,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "34d7d4c18b2c21ac2333e0737c98d520"
+        }
+      ],
+      "start": 12902,
+      "end": 14541,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 12902,
+          "expectedMD5": "8e46fe3dfcfb32bdb9e95f3004178303",
+          "actualMD5": "8e46fe3dfcfb32bdb9e95f3004178303",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 14541,
+          "expectedMD5": "34d7d4c18b2c21ac2333e0737c98d520",
+          "actualMD5": "34d7d4c18b2c21ac2333e0737c98d520",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-12",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "485",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,67)+eq(n\\,276)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 485,
+      "expectedLocalFrames": [
+        67,
+        276
+      ],
+      "elapsedSeconds": 1.0888216999883298,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 67,
+          "pts": 67,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "5baae8353dee84a3e05bae1cd5ed1eeb"
+        },
+        {
+          "stream": 0,
+          "dts": 276,
+          "pts": 276,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "80b5dd1db5891a7c44c17a9f26edb452"
+        }
+      ],
+      "start": 14617,
+      "end": 14826,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 14617,
+          "expectedMD5": "5baae8353dee84a3e05bae1cd5ed1eeb",
+          "actualMD5": "5baae8353dee84a3e05bae1cd5ed1eeb",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 14826,
+          "expectedMD5": "80b5dd1db5891a7c44c17a9f26edb452",
+          "actualMD5": "80b5dd1db5891a7c44c17a9f26edb452",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-13",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "499",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,63)+eq(n\\,3430)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 499,
+      "expectedLocalFrames": [
+        63,
+        3430
+      ],
+      "elapsedSeconds": 6.237466500009759,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 63,
+          "pts": 63,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "c55b5cfec7ded6ae89fc50a3791cf969"
+        },
+        {
+          "stream": 0,
+          "dts": 3430,
+          "pts": 3430,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "6bce1bde15c645ead7cd47ceca0d474d"
+        }
+      ],
+      "start": 15033,
+      "end": 18400,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 15033,
+          "expectedMD5": "c55b5cfec7ded6ae89fc50a3791cf969",
+          "actualMD5": "c55b5cfec7ded6ae89fc50a3791cf969",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 18400,
+          "expectedMD5": "6bce1bde15c645ead7cd47ceca0d474d",
+          "actualMD5": "6bce1bde15c645ead7cd47ceca0d474d",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-14",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "614",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,83)+eq(n\\,641)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 614,
+      "expectedLocalFrames": [
+        83,
+        641
+      ],
+      "elapsedSeconds": 1.6094012999965344,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 83,
+          "pts": 83,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b88ed9bab38e37c5ddd364ef351434b3"
+        },
+        {
+          "stream": 0,
+          "dts": 641,
+          "pts": 641,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "7261857b8da5049dd7bae0cdbc3f2ea7"
+        }
+      ],
+      "start": 18503,
+      "end": 19061,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 18503,
+          "expectedMD5": "b88ed9bab38e37c5ddd364ef351434b3",
+          "actualMD5": "b88ed9bab38e37c5ddd364ef351434b3",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 19061,
+          "expectedMD5": "7261857b8da5049dd7bae0cdbc3f2ea7",
+          "actualMD5": "7261857b8da5049dd7bae0cdbc3f2ea7",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-15",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "640",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,78)+eq(n\\,1142)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 640,
+      "expectedLocalFrames": [
+        78,
+        1142
+      ],
+      "elapsedSeconds": 2.270490700000664,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 78,
+          "pts": 78,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b2548cb4a153e5848855a02d10e0b81f"
+        },
+        {
+          "stream": 0,
+          "dts": 1142,
+          "pts": 1142,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "34b794ea63bf9818ffdc6baa31f671d6"
+        }
+      ],
+      "start": 19278,
+      "end": 20342,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 19278,
+          "expectedMD5": "b2548cb4a153e5848855a02d10e0b81f",
+          "actualMD5": "b2548cb4a153e5848855a02d10e0b81f",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 20342,
+          "expectedMD5": "34b794ea63bf9818ffdc6baa31f671d6",
+          "actualMD5": "34b794ea63bf9818ffdc6baa31f671d6",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-16",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "687",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,79)+eq(n\\,636)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 687,
+      "expectedLocalFrames": [
+        79,
+        636
+      ],
+      "elapsedSeconds": 2.235235999993165,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 79,
+          "pts": 79,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "74f01e8b4f4c8c398b9f245083d1ab78"
+        },
+        {
+          "stream": 0,
+          "dts": 636,
+          "pts": 636,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b9c1b29c022199cf46595129acc66ad3"
+        }
+      ],
+      "start": 20689,
+      "end": 21246,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 20689,
+          "expectedMD5": "74f01e8b4f4c8c398b9f245083d1ab78",
+          "actualMD5": "74f01e8b4f4c8c398b9f245083d1ab78",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 21246,
+          "expectedMD5": "b9c1b29c022199cf46595129acc66ad3",
+          "actualMD5": "b9c1b29c022199cf46595129acc66ad3",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-17",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "712",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,68)+eq(n\\,127)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 712,
+      "expectedLocalFrames": [
+        68,
+        127
+      ],
+      "elapsedSeconds": 0.9526339000003645,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 68,
+          "pts": 68,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "f932110d2c847c426f5c6a09b370a5a2"
+        },
+        {
+          "stream": 0,
+          "dts": 127,
+          "pts": 127,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "418888dbc14291babc47c9926d815bc3"
+        }
+      ],
+      "start": 21428,
+      "end": 21487,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 21428,
+          "expectedMD5": "f932110d2c847c426f5c6a09b370a5a2",
+          "actualMD5": "f932110d2c847c426f5c6a09b370a5a2",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 21487,
+          "expectedMD5": "418888dbc14291babc47c9926d815bc3",
+          "actualMD5": "418888dbc14291babc47c9926d815bc3",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-18",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "728",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,71)+eq(n\\,904)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 728,
+      "expectedLocalFrames": [
+        71,
+        904
+      ],
+      "elapsedSeconds": 2.299565799999982,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 71,
+          "pts": 71,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "0bf032af0fb2e2bb04a809d6128996d1"
+        },
+        {
+          "stream": 0,
+          "dts": 904,
+          "pts": 904,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "b4cce70d76c5c833c7a47c62b78b6a88"
+        }
+      ],
+      "start": 21911,
+      "end": 22744,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 21911,
+          "expectedMD5": "0bf032af0fb2e2bb04a809d6128996d1",
+          "actualMD5": "0bf032af0fb2e2bb04a809d6128996d1",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 22744,
+          "expectedMD5": "b4cce70d76c5c833c7a47c62b78b6a88",
+          "actualMD5": "b4cce70d76c5c833c7a47c62b78b6a88",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-19",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "762",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,65)+eq(n\\,261)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 762,
+      "expectedLocalFrames": [
+        65,
+        261
+      ],
+      "elapsedSeconds": 0.8266602999938186,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 65,
+          "pts": 65,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "39952db09d56ca1bb4f91a45c3c30d1a"
+        },
+        {
+          "stream": 0,
+          "dts": 261,
+          "pts": 261,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "97722abb4b0deaba575232a9dd39cdfb"
+        }
+      ],
+      "start": 22925,
+      "end": 23121,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 22925,
+          "expectedMD5": "39952db09d56ca1bb4f91a45c3c30d1a",
+          "actualMD5": "39952db09d56ca1bb4f91a45c3c30d1a",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 23121,
+          "expectedMD5": "97722abb4b0deaba575232a9dd39cdfb",
+          "actualMD5": "97722abb4b0deaba575232a9dd39cdfb",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-20",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "773",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,80)+eq(n\\,332)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 773,
+      "expectedLocalFrames": [
+        80,
+        332
+      ],
+      "elapsedSeconds": 1.0228768000088166,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 80,
+          "pts": 80,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "5bef6d46a6d39146394739f8c83ade97"
+        },
+        {
+          "stream": 0,
+          "dts": 332,
+          "pts": 332,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "c77e68622ed01a2b50ecc52e60a785c1"
+        }
+      ],
+      "start": 23270,
+      "end": 23522,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 23270,
+          "expectedMD5": "5bef6d46a6d39146394739f8c83ade97",
+          "actualMD5": "5bef6d46a6d39146394739f8c83ade97",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 23522,
+          "expectedMD5": "c77e68622ed01a2b50ecc52e60a785c1",
+          "actualMD5": "c77e68622ed01a2b50ecc52e60a785c1",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-21",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "792",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,77)+eq(n\\,900)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 792,
+      "expectedLocalFrames": [
+        77,
+        900
+      ],
+      "elapsedSeconds": 1.6204534999997122,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 77,
+          "pts": 77,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "7f0ddfd7000b322a90036d44f27911c4"
+        },
+        {
+          "stream": 0,
+          "dts": 900,
+          "pts": 900,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "00c28946f69add0b655b0374daf7fb82"
+        }
+      ],
+      "start": 23837,
+      "end": 24660,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 23837,
+          "expectedMD5": "7f0ddfd7000b322a90036d44f27911c4",
+          "actualMD5": "7f0ddfd7000b322a90036d44f27911c4",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 24660,
+          "expectedMD5": "00c28946f69add0b655b0374daf7fb82",
+          "actualMD5": "00c28946f69add0b655b0374daf7fb82",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-22",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "831",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,71)+eq(n\\,305)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 831,
+      "expectedLocalFrames": [
+        71,
+        305
+      ],
+      "elapsedSeconds": 1.072454299996025,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 71,
+          "pts": 71,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "ef4e81c23116341a15a843485cc66366"
+        },
+        {
+          "stream": 0,
+          "dts": 305,
+          "pts": 305,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "60de07837c566b89d06e0158e90ef6be"
+        }
+      ],
+      "start": 25001,
+      "end": 25235,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 25001,
+          "expectedMD5": "ef4e81c23116341a15a843485cc66366",
+          "actualMD5": "ef4e81c23116341a15a843485cc66366",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 25235,
+          "expectedMD5": "60de07837c566b89d06e0158e90ef6be",
+          "actualMD5": "60de07837c566b89d06e0158e90ef6be",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    },
+    {
+      "label": "preseek-23",
+      "command": [
+        "C:\\ffmpeg\\bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-threads",
+        "2",
+        "-ss",
+        "843",
+        "-i",
+        "D:\\python_project\\manim_extend_rainbow\\video_project\\glp1_nobel_2026\\delivery\\GLP1_V5_1080p.mp4",
+        "-map",
+        "0:v:0",
+        "-an",
+        "-sn",
+        "-dn",
+        "-vf",
+        "select=eq(n\\,76)+eq(n\\,330)",
+        "-frames:v",
+        "2",
+        "-fps_mode:v",
+        "passthrough",
+        "-pix_fmt",
+        "yuv420p",
+        "-f",
+        "framemd5",
+        "-"
+      ],
+      "seekSeconds": 843,
+      "expectedLocalFrames": [
+        76,
+        330
+      ],
+      "elapsedSeconds": 0.8054738999926485,
+      "returnCode": 0,
+      "frames": [
+        {
+          "stream": 0,
+          "dts": 76,
+          "pts": 76,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "dd6c6d08156e704f15a6ca826acec8b0"
+        },
+        {
+          "stream": 0,
+          "dts": 330,
+          "pts": 330,
+          "duration": 1,
+          "size": 3110400,
+          "md5": "9bfbce90a7074e950f40ea6b84c9ef80"
+        }
+      ],
+      "start": 25366,
+      "end": 25620,
+      "pixelMatches": [
+        {
+          "absoluteFrame": 25366,
+          "expectedMD5": "dd6c6d08156e704f15a6ca826acec8b0",
+          "actualMD5": "dd6c6d08156e704f15a6ca826acec8b0",
+          "match": true,
+          "decodedBytes": 3110400
+        },
+        {
+          "absoluteFrame": 25620,
+          "expectedMD5": "9bfbce90a7074e950f40ea6b84c9ef80",
+          "actualMD5": "9bfbce90a7074e950f40ea6b84c9ef80",
+          "match": true,
+          "decodedBytes": 3110400
+        }
+      ]
+    }
+  ],
+  "allPixelMatches": true,
+  "allInputHashesUnchanged": true,
+  "limitation": "Pixel equality proven for each span first and last frame only; not all retained frames. Full decoded output count/timing checks remain mandatory."
+}

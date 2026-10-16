@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "shanghai_tower",
+  "title": "上海中心：高楼怎样站稳",
+  "category": "engineering",
+  "status": "source-library",
+  "currentVersion": "V16 horizontal + vertical",
+  "workbench": {
+    "title": "上海中心：高楼怎样站稳",
+    "seriesId": "rainbow-science",
+    "episode": 11,
+    "useSeriesStyle": true
+  },
+  "entrypoints": [
+    "src/indexV16.tsx",
+    "scripts/render-v16.mjs"
+  ],
+  "packages": [
+    {
+      "root": ".",
+      "scripts": {
+        "check": "tsc --noEmit",
+        "render": "node scripts/render.mjs",
+        "stills": "node scripts/render.mjs stills"
+      },
+      "lockfile": false
+    }
+  ],
+  "paths": {
+    "guide": "README.md",
+    "sources": [
+      "src",
+      "scripts"
+    ],
+    "assets": "assets.manifest.json",
+    "documentation": "docs",
+    "delivery": [
+      "delivery/ShanghaiTower_1080p_v16.mp4",
+      "delivery/ShanghaiTower_1080x1920_v16.mp4"
+    ],
+    "covers": [
+      "delivery/covers/上海中心_封面_16x9.jpg",
+      "delivery/covers/上海中心_封面_3x4.jpg",
+      "delivery/covers/上海中心_封面_4x3.jpg",
+      "delivery/covers/上海中心_封面_9x16.jpg"
+    ]
+  },
+  "requirements": [
+    "Python 3.10+",
+    "Node.js 22/24",
+    "npm (install per package-lock)",
+    "FFmpeg + ffprobe",
+    "Remotion Chromium where applicable",
+    "Blender (configure BLENDER_PATH; original D:/blender/blender.exe)"
+  ],
+  "notes": [
+    "保留 work/v16 中必要原创脚本和资产记录；商业 WaterPro vendor 不发布。V16 依赖先前物理数据与公共模型。"
+  ],
+  "originalMetadata": {}
+}

@@ -1,0 +1,2705 @@
+[
+  {
+    "order": 1,
+    "type": "paragraph",
+    "locator": "P0001",
+    "style": "af",
+    "text": "Closed-loop AI achieves certifiable engineering design",
+    "images": []
+  },
+  {
+    "order": 2,
+    "type": "paragraph",
+    "locator": "P0002",
+    "style": null,
+    "text": "Tianyi Yu1, †, Chengxing Tao1, †, Haoxuan Shen1, Huiyang Li1, Rugang Chen1, Long Teng1, Yan Li1,4, Lizhong Wang1,2,3, *, Lilin Wang1,2,3, *",
+    "images": []
+  },
+  {
+    "order": 3,
+    "type": "paragraph",
+    "locator": "P0003",
+    "style": null,
+    "text": "1 State Key Laboratory of Ocean Sensing & Ocean College, Zhejiang University, Zhoushan, 316021, China",
+    "images": []
+  },
+  {
+    "order": 4,
+    "type": "paragraph",
+    "locator": "P0004",
+    "style": null,
+    "text": "2 Zhejiang Province Key Laboratory of Offshore Civil Engineering and Materials & Ocean Academy, Zhejiang University, Zhoushan, 316021, PR China",
+    "images": []
+  },
+  {
+    "order": 5,
+    "type": "paragraph",
+    "locator": "P0005",
+    "style": null,
+    "text": "3 Institute of Fundamental and Transdisciplinary Research, Zhejiang University, 310058, PR China",
+    "images": []
+  },
+  {
+    "order": 6,
+    "type": "paragraph",
+    "locator": "P0006",
+    "style": null,
+    "text": "4 Goldwind Science & Technology Co., Ltd",
+    "images": []
+  },
+  {
+    "order": 7,
+    "type": "paragraph",
+    "locator": "P0007",
+    "style": null,
+    "text": "†These authors contributed equally to this work",
+    "images": []
+  },
+  {
+    "order": 8,
+    "type": "paragraph",
+    "locator": "P0008",
+    "style": null,
+    "text": "*Correspondence: wanglz@zju.edu.cn; lilin.wang@zju.edu.cn",
+    "images": []
+  },
+  {
+    "order": 9,
+    "type": "paragraph",
+    "locator": "P0009",
+    "style": "1",
+    "text": "Abstract",
+    "images": []
+  },
+  {
+    "order": 10,
+    "type": "paragraph",
+    "locator": "P0010",
+    "style": null,
+    "text": "Recent advances in agentic AI have demonstrated remarkable success in automating scientific discovery, including research-paper generation, expert-level code development, therapeutic-candidate proposal and autonomous experimentation. Complex physical engineering design remains a distinct challenge because candidate solutions must satisfy coupled constraints across geometry, structural mechanics, hydrodynamics, aerodynamics, stability, fatigue and manufacturability. Here we introduce The AI Engineer, an agentic framework that closes the engineering design loop between language-model reasoning and deterministic physics-based computation. Natural-language requirements are translated into structured design specifications, from which the system orchestrates topology optimization using bi-directional evolutionary structural optimization (BESO) coupled to CalculiX, size optimization using sequential quadratic programming (SQP), and final time-domain verification with Zwind subjected to offshore aero-hydro-servo-elastic load cases. Rather than treating language-model outputs as engineering results, the framework uses the large language model (LLM) to propose and revise engineering actions, while deterministic backends execute those actions and return numerical evidence that conditions subsequent decisions. An internal Automated Reviewer screens computed candidates across five engineering dimensions against a reference fleet, providing a termination and candidate-selection mechanism rather than a substitute for external certification. We demonstrate the framework through the design of a 20 MW floating offshore wind turbine foundation. The selected AI-generated candidate reduced steel intensity from 278 to 247.9 t MW⁻¹, a 10.8% reduction relative to the human-optimized “TuQiang” baseline, while satisfying the evaluated engineering constraints. The resulting technical dossier was subsequently submitted to the China Classification Society (CCS) and passed formal Approval in Principle (AIP), providing independent concept-level appraisal of the selected design. These results demonstrate end-to-end agentic orchestration from natural-language requirements to an externally appraised concept-level engineering design, while maintaining a clear separation between language-model decisions, deterministic physical verification and independent regulatory review.",
+    "images": []
+  },
+  {
+    "order": 11,
+    "type": "paragraph",
+    "locator": "P0011",
+    "style": "1",
+    "text": "Introduction",
+    "images": []
+  },
+  {
+    "order": 12,
+    "type": "paragraph",
+    "locator": "P0012",
+    "style": null,
+    "text": "From the towering wind turbines that harvest renewable energy to the floating platforms that enable deep-water offshore power generation[1], the performance of engineered systems is fundamentally determined by their physical design. Unlike software, which can be iteratively debugged and patched, physical artifacts must satisfy simultaneous constraints across fluid dynamics, solid mechanics, and structural stability—all while remaining manufacturable, cost-effective, and reliable under uncertain operating conditions. For centuries, this design process has remained a quintessentially human endeavour, relying on the intuition, experience, and painstaking trial-and-error of expert engineers. Yet as physical systems grow increasingly complex—with tighter performance margins, stricter sustainability targets, and more tightly coupled multi-physics interactions—the limits of human-centric design have become starkly apparent. The question is no longer whether computational tools can assist physical design, but whether a fundamentally new paradigm—one that automates the entire design loop—can be achieved.",
+    "images": []
+  },
+  {
+    "order": 13,
+    "type": "paragraph",
+    "locator": "P0013",
+    "style": null,
+    "text": "Consider the design of floating offshore wind turbines (FOWTs), one of the most urgent and demanding physical design problems of our era. To harvest wind energy in deep waters, a FOWT must balance conflicting objectives: maximizing energy capture while minimizing structural fatigue from unsteady aerodynamic and hydrodynamic loads, maintaining stability against violent wave-induced motions, and ensuring cost-competitive manufacturing and deployment. Design assessment combines energy-yield modelling, including digital-twin approaches[2], with coupled finite-element and multi-body dynamics simulations[3]. These high-fidelity calculations are computationally expensive, often taking hours and even days on computing clusters. The design space is high-dimensional and riddled with non-convex constraints. Consequently, the current state of practice remains heavily reliant on human experts, who iteratively propose candidate designs, interpret simulation outputs, hypothesize corrective modifications, and repeat—a laborious, time-consuming cycle that bottlenecks the entire engineering development pipeline (Figure 1a).",
+    "images": []
+  },
+  {
+    "order": 14,
+    "type": "paragraph",
+    "locator": "P0014",
+    "style": null,
+    "text": "Over the past decades, computational engineering has amassed an impressive arsenal of deterministic solvers—finite-element packages[4], boundary-element methods[5], and multi-body dynamics codes[6]—each capable of high-fidelity predictions for its assigned physics domain. Yet the engineering design cycle as a whole remains stubbornly human-intensive. The bottleneck is not the fidelity of individual solvers, but the orchestration across them. A typical floating-wind design iteration requires manual data translation between CAD modellers (geometry)[7], mesh generators (discretisation)[8], structural solvers (stress and stability)[9], and aero-hydro-servo-elastic simulators (coupled responses)[10]. When a continuum mesh degenerates, an element-set name dissociates from solver conventions, a geometric interference emerges after parametric updates, or a structural unity check[11] exceeds 1.0, the human expert must diagnose the root cause, adjust parameters or boundary conditions, restart the toolchain and re-evaluate. Reinforcement learning[12] and Bayesian optimization[13] can tune objectives within fixed computational pipelines, but practical engineering workflows additionally contain heterogeneous software interfaces, discrete numerical failures and codified physical constraints[14]. What is missing, therefore, is not another surrogate model or a faster solver, but an agentic layer capable of closing the loop across heterogeneous engineering tools: proposing an engineering action, observing its computational consequence, interpreting returned diagnostics against physical and codified constraints, and deciding what operation should follow. This is the gap we address with The AI Engineer.",
+    "images": []
+  },
+  {
+    "order": 15,
+    "type": "paragraph",
+    "locator": "P0015",
+    "style": null,
+    "text": "Here we introduce The AI Engineer, an end-to-end agentic framework that closes the engineering design loop between language-model reasoning and deterministic physics-based computation (Figure 1b). Rather than using an LLM to directly generate an engineering design, the framework assigns distinct roles to the language model and engineering backends: the LLM acts as an orchestrator that interprets requirements, selects engineering actions and responds to computational feedback, whereas deterministic tools execute and evaluate those actions. In essence, the LLM decides which engineering operation to attempt next, while deterministic physics-based computation determines its outcome and provides the evidence for the next decision. Starting from natural-language requirements, The AI Engineer converts design intent into structured specifications and progressively develops a candidate through topology optimization (BESO–CalculiX)[15,16], size optimization (SQP)[17], and final time-domain verification with Zwind under coupled aero-hydro-servo-elastic load cases[18], and automated generation of engineering drawings and reports. Crucially, these stages do not form a one-way pipeline. During topology and size optimization, solver outputs, constraint violations and diagnostic messages are returned to an explicit task state. The orchestrator then determines whether the candidate should proceed, be revised, or trigger a configured recovery action. The revised candidate is subsequently re-executed by the relevant engineering backend, such that a language-model decision becomes an engineering action whose consequence is quantitatively evaluated by deterministic computation. This repeated cycle of proposal, execution, diagnosis, revision and verification constitutes the closed loop of The AI Engineer. Zwind subsequently checks the selected design under the prescribed coupled load cases and is not used to propose or rank iterative modifications.",
+    "images": []
+  },
+  {
+    "order": 16,
+    "type": "paragraph",
+    "locator": "P0016",
+    "style": null,
+    "text": "Candidate selection forms a second layer of this loop. An internal Automated Reviewer screens computed candidates across five engineering dimensions against a reference fleet and supports decisions on whether a candidate should be advanced for further evaluation. Importantly, the framework distinguishes among a language-model-proposed action, a successfully completed calculation and an accepted engineering result: a proposed recovery is therefore not treated as evidence that the underlying engineering problem has been resolved. The resulting execution trace links design decisions to computational inputs, outputs, diagnostics and generated artifacts, making the autonomous design process inspectable and auditable.",
+    "images": []
+  },
+  {
+    "order": 17,
+    "type": "paragraph",
+    "locator": "P0017",
+    "style": null,
+    "text": "We demonstrate The AI Engineer through the design of a 20 MW floating offshore wind turbine (FOWT) foundation, a multi-physics and multi-tool problem relevant to China’s 3060 Dual Carbon Goals[19]. From natural-language design requirements, the framework generated and evaluated the structural concept, refined its member dimensions by static sizing and verified the selected design under coupled aero-hydro-servo-elastic loading, and produced the technical dossier required for external review. The selected AI-generated design was subsequently submitted to the China Classification Society (CCS) and passed formal Approval in Principle (AIP), providing independent concept-level appraisal of the submitted design. External certification remains distinct from the internal screening process and does not constitute validation of every autonomous decision made by the framework.",
+    "images": []
+  },
+  {
+    "order": 18,
+    "type": "table",
+    "locator": "T01",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T01R01C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T01R01C01P01",
+                "text": "",
+                "images": [
+                  "rId11"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "locator": "T01R02C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T01R02C01P01",
+                "text": "",
+                "images": [
+                  "rId12"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "locator": "T01R03C01",
+            "text": "\n",
+            "paragraphs": [
+              {
+                "locator": "T01R03C01P01",
+                "text": "",
+                "images": [
+                  "rId15",
+                  "rId16"
+                ]
+              },
+              {
+                "locator": "T01R03C01P02",
+                "text": "",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "locator": "T01R04C01",
+            "text": "Fig. 1 | Human and closed-loop AI engineering workflows. a, Reference human workflow, in which engineers translate requirements into candidate designs, operate engineering tools, interpret returned results and iteratively revise the design before external review. b, Closed-loop workflow of The AI Engineer. The LLM orchestrator converts requirements into structured engineering actions, deterministic backends execute and evaluate those actions, and returned numerical evidence and diagnostics update the task state that conditions subsequent decisions. The workflow spans requirements processing, geometry construction, meshing and topology optimization, followed by parametric upscaling, SQP-based size optimization, drawing and report preparation, and internal candidate review. Zwind performs the final coupled-response verification of the selected design. Recovery paths return failed or non-accepted operations to earlier stages for revision and re-execution. The Automated Reviewer supports internal candidate screening, whereas CCS AIP provides separate external appraisal of the selected concept. c, Six BESO topology cases with perspective and plan views. I–V use two to six supports and central-ring loading, with local sector moments of 200, 133.33, 100, 80 and 66.67 MN m, respectively. VI uses three supports and loading at the P1 rim with a 400 MN m moment. Red arrows denote the downward force (24.5 MN), orange double arrows denote moment axes, and blue triangles mark fixed supports. V/V₀ is the retained volume fraction. The central-case values are local sector moments rather than a common global resultant. The scale bar represents 20 m.",
+            "paragraphs": [
+              {
+                "locator": "T01R04C01P01",
+                "text": "Fig. 1 | Human and closed-loop AI engineering workflows. a, Reference human workflow, in which engineers translate requirements into candidate designs, operate engineering tools, interpret returned results and iteratively revise the design before external review. b, Closed-loop workflow of The AI Engineer. The LLM orchestrator converts requirements into structured engineering actions, deterministic backends execute and evaluate those actions, and returned numerical evidence and diagnostics update the task state that conditions subsequent decisions. The workflow spans requirements processing, geometry construction, meshing and topology optimization, followed by parametric upscaling, SQP-based size optimization, drawing and report preparation, and internal candidate review. Zwind performs the final coupled-response verification of the selected design. Recovery paths return failed or non-accepted operations to earlier stages for revision and re-execution. The Automated Reviewer supports internal candidate screening, whereas CCS AIP provides separate external appraisal of the selected concept. c, Six BESO topology cases with perspective and plan views. I–V use two to six supports and central-ring loading, with local sector moments of 200, 133.33, 100, 80 and 66.67 MN m, respectively. VI uses three supports and loading at the P1 rim with a 400 MN m moment. Red arrows denote the downward force (24.5 MN), orange double arrows denote moment axes, and blue triangles mark fixed supports. V/V₀ is the retained volume fraction. The central-case values are local sector moments rather than a common global resultant. The scale bar represents 20 m.",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 19,
+    "type": "paragraph",
+    "locator": "P0018",
+    "style": null,
+    "text": "",
+    "images": []
+  },
+  {
+    "order": 20,
+    "type": "paragraph",
+    "locator": "P0019",
+    "style": "1",
+    "text": "Results",
+    "images": []
+  },
+  {
+    "order": 21,
+    "type": "paragraph",
+    "locator": "P0020",
+    "style": "2",
+    "text": "Engineering performance of the selected AI-generated design",
+    "images": []
+  },
+  {
+    "order": 22,
+    "type": "paragraph",
+    "locator": "P0021",
+    "style": null,
+    "text": "We benchmarked the AI-generated foundation against the human-designed “TuQiang” baseline[20], a 20 MW floating wind demonstration unit developed by a consortium of universities and industry partners. Figure 2a compares the two configurations. The selected AI-generated candidate reduced steel intensity from 278 t MW⁻¹ to 247.9 t MW⁻¹, corresponding to a 10.8% reduction. Applying the same steel-proportional update to the previously reported cost gives an estimated unit capital cost of CNY 17,656 kW⁻¹, compared with CNY 19,800 kW⁻¹ for “TuQiang”, also corresponding to a 10.8% reduction under this proportional-cost assumption. Its steel intensity remained below the national demonstration target of 300 t MW⁻¹[21]. The reported tower natural frequencies lay outside the turbine’s 1P and 3P excitation bands[22] (Figure 2b-I). ",
+    "images": []
+  },
+  {
+    "order": 23,
+    "type": "table",
+    "locator": "T02",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T02R01C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T02R01C01P01",
+                "text": "",
+                "images": [
+                  "rId18",
+                  "rId19"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "locator": "T02R02C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T02R02C01P01",
+                "text": "",
+                "images": [
+                  "rId22",
+                  "rId23"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "locator": "T02R03C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T02R03C01P01",
+                "text": "",
+                "images": [
+                  "rId25",
+                  "rId26"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "locator": "T02R04C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T02R04C01P01",
+                "text": "",
+                "images": [
+                  "rId28",
+                  "rId29"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "locator": "T02R05C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T02R05C01P01",
+                "text": "",
+                "images": [
+                  "rId31",
+                  "rId32"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 6,
+        "cells": [
+          {
+            "locator": "T02R06C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T02R06C01P01",
+                "text": "",
+                "images": [
+                  "rId34",
+                  "rId35"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 7,
+        "cells": [
+          {
+            "locator": "T02R07C01",
+            "text": "Fig. 2 | Foundation configurations and dynamics. a, AI-generated foundation (left) and TuQiang (right). b, Tower natural frequencies and turbine excitation bands (I), and platform free-decay periods (II). c, Time-history maxima of surge (I), pitch (II) and tower-top acceleration (III) under design load case (DLC) 1.1. Percentage differences are relative to TuQiang. Dashed lines mark the 5° pitch reference and the 2.94 m s⁻² acceleration limit. The operational tilt criteria distinguish a mean of 5° from a maximum of 10°[24]. d, Time-history maxima of surge (I), pitch (II) and tower-top acceleration (III) under DLC 6.1. Percentage differences are relative to TuQiang. Dashed lines mark the project pitch threshold of 10° and the acceleration limit of 5.89 m s⁻². The latter follows the indicative DNV criterion[24]. e, Time-history maxima of mooring tension (I) and tower-base bending moment My (II) under DLC 1.1. Percentage differences are relative to TuQiang. f, Time-history maxima of mooring tension (I) and tower-base bending moment My (II) under DLC 6.1. Reported mooring tensions include a safety factor. The dashed line marks the corresponding project limit of 20,165.9 kN. Percentage differences are relative to TuQiang.",
+            "paragraphs": [
+              {
+                "locator": "T02R07C01P01",
+                "text": "Fig. 2 | Foundation configurations and dynamics. a, AI-generated foundation (left) and TuQiang (right). b, Tower natural frequencies and turbine excitation bands (I), and platform free-decay periods (II). c, Time-history maxima of surge (I), pitch (II) and tower-top acceleration (III) under design load case (DLC) 1.1. Percentage differences are relative to TuQiang. Dashed lines mark the 5° pitch reference and the 2.94 m s⁻² acceleration limit. The operational tilt criteria distinguish a mean of 5° from a maximum of 10°[24]. d, Time-history maxima of surge (I), pitch (II) and tower-top acceleration (III) under DLC 6.1. Percentage differences are relative to TuQiang. Dashed lines mark the project pitch threshold of 10° and the acceleration limit of 5.89 m s⁻². The latter follows the indicative DNV criterion[24]. e, Time-history maxima of mooring tension (I) and tower-base bending moment My (II) under DLC 1.1. Percentage differences are relative to TuQiang. f, Time-history maxima of mooring tension (I) and tower-base bending moment My (II) under DLC 6.1. Reported mooring tensions include a safety factor. The dashed line marks the corresponding project limit of 20,165.9 kN. Percentage differences are relative to TuQiang.",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 24,
+    "type": "paragraph",
+    "locator": "P0022",
+    "style": null,
+    "text": "",
+    "images": []
+  },
+  {
+    "order": 25,
+    "type": "paragraph",
+    "locator": "P0023",
+    "style": null,
+    "text": "The motion responses show a trade-off between lower surge and higher pitch and tower-top acceleration, while tower-base bending moments remain close to those of the baseline. Under power production (DLC 1.1), the time-history maximum surge was 5.10 m for the AI design and 6.92 m for TuQiang, a reduction of 26.3%. The corresponding maxima of pitch and tower-top acceleration were 3.29° versus 2.47° and 1.10 versus 0.82 m s⁻², increases of 33.2% and 34.1%, respectively (Figure 2c). Both pitch maxima were below the plotted 5° reference. The operational tilt criteria retain separate limits of 5° for the time-history mean and 10° for the maximum. Tower-top accelerations remained below 2.94 m s⁻² (0.3g), consistent with the indicative serviceability criteria in DNVGL-RP-0286, Section 5.5.1[24].",
+    "images": []
+  },
+  {
+    "order": 26,
+    "type": "paragraph",
+    "locator": "P0024",
+    "style": null,
+    "text": "Under the extreme condition (DLC 6.1), the time-history maximum surge was 11.20 versus 12.38 m, a reduction of 9.5%, whereas pitch reached 9.56° versus 8.02° and tower-top acceleration reached 3.67 versus 3.44 m s⁻², increases of 19.2% and 6.7% (Figure 2d). Both designs remained below the project’s plotted pitch threshold of 10° and the tower-top acceleration limit of 5.89 m s⁻² (0.6g), the latter corresponding to the indicative non-operational acceleration criterion in DNVGL-RP-0286[24].",
+    "images": []
+  },
+  {
+    "order": 27,
+    "type": "paragraph",
+    "locator": "P0025",
+    "style": null,
+    "text": "Structural loads showed a similar balance between response measures. Under DLC 1.1, the time-history maximum mooring tension was 2,788 kN for the AI design and 2,840 kN for TuQiang, a reduction of 1.8%. The maximum tower-base bending moment My was 570.00 versus 565.60 MN m, an increase of 0.8% (Figure 2e).",
+    "images": []
+  },
+  {
+    "order": 28,
+    "type": "paragraph",
+    "locator": "P0026",
+    "style": null,
+    "text": "Under DLC 6.1, the time-history maximum mooring tensions, after multiplication by a safety factor, were 14,041 versus 14,185 kN, a reduction of 1.0%. Both factored values were below the plotted project limit of 20,165.9 kN. This comparison distinguishes factored loads from unfactored responses, as described in DNVGL-RP-0286, Section 5.6[24]. The maximum tower-base bending moment was 1,117 versus 1,074 MN m, an increase of 4.0% (Figure 2f). Thus, the reported material and cost savings accompany lower surge and mooring tension, higher pitch and tower-top acceleration, and tower-base bending moments close to those of TuQiang.",
+    "images": []
+  },
+  {
+    "order": 29,
+    "type": "paragraph",
+    "locator": "P0027",
+    "style": "2",
+    "text": "Reviewer and rule-channel agreement",
+    "images": []
+  },
+  {
+    "order": 30,
+    "type": "paragraph",
+    "locator": "P0028",
+    "style": null,
+    "text": "Submitting every candidate generated during exploration to a classification society is economically and logistically infeasible. To enable high-throughput candidate screening without submitting every generated design to external review, we equipped The AI Engineer with an Automated Reviewer—an internal candidate-selection module that evaluates computed designs across five engineering dimensions (capacity, steel intensity, unit cost, constructability and fatigue life) using configured piecewise scoring functions and benchmarks from a reference fleet of 11 floating wind projects, comprising ten commissioned and one planned entry. Publicly available engineering data for floating offshore wind turbines, particularly semi-submersible units, remain limited, so the comparison uses the 11 projects for which comparable capacity, steel-intensity, cost, construction-time and fatigue-life information could be assembled. This fleet spans a capacity range from 2 MW to 20 MW and encompasses diverse floating topologies—from pioneering global prototypes (e.g., WindFloat[25,26], Fukushima Mirai, Kincardine[27]) to flagship demonstration platforms in China (e.g., Yinling[28], Fuyao[29], Guanlan[30], Mingyang Tiancheng[31], Gongxiang[32], Linghang[33], and TuQiang[20]). Detailed parameter specifications for the reference fleet are compiled in Methods and Supplementary Table 8.",
+    "images": []
+  },
+  {
+    "order": 31,
+    "type": "table",
+    "locator": "T03",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T03R01C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T03R01C01P01",
+                "text": "",
+                "images": [
+                  "rId38",
+                  "rId39"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "locator": "T03R02C01",
+            "text": "",
+            "paragraphs": [
+              {
+                "locator": "T03R02C01P01",
+                "text": "",
+                "images": [
+                  "rId42",
+                  "rId43"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "locator": "T03R03C01",
+            "text": "Fig. 3 | Automated Reviewer profiles and rule-channel comparison. a, Five-dimensional profiles and score matrix for the 11-entry reference fleet. Radar profiles compare each project with the fleet median. The matrix gives deviations from that median. The remaining planned entry, TuQiang, is marked with an asterisk. b, Per-dimension comparisons for capacity, steel intensity, unit cost, constructability and fatigue life. Blue circles and red squares denote the AI Review and regulatory scores, respectively. Green stars and diamonds identify the selected AI design in the two channels. Dashed curves show nonlinear trends. The composite-score agreement analysis uses the ten commissioned entries: Spearman ρ=0.612, mean absolute difference 4.0 points and 9/10 entries satisfying the agreement rule.",
+            "paragraphs": [
+              {
+                "locator": "T03R03C01P01",
+                "text": "Fig. 3 | Automated Reviewer profiles and rule-channel comparison. a, Five-dimensional profiles and score matrix for the 11-entry reference fleet. Radar profiles compare each project with the fleet median. The matrix gives deviations from that median. The remaining planned entry, TuQiang, is marked with an asterisk. b, Per-dimension comparisons for capacity, steel intensity, unit cost, constructability and fatigue life. Blue circles and red squares denote the AI Review and regulatory scores, respectively. Green stars and diamonds identify the selected AI design in the two channels. Dashed curves show nonlinear trends. The composite-score agreement analysis uses the ten commissioned entries: Spearman ρ=0.612, mean absolute difference 4.0 points and 9/10 entries satisfying the agreement rule.",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 32,
+    "type": "paragraph",
+    "locator": "P0029",
+    "style": null,
+    "text": "",
+    "images": []
+  },
+  {
+    "order": 33,
+    "type": "paragraph",
+    "locator": "P0030",
+    "style": null,
+    "text": "To compare the reviewer with a separate rule-based scoring channel, we used engineering checks informed by classification-society standards (DNV-ST-0437[34], DNVGL-OS-C301[35] and DNVGL-RP-0286[24]) together with project-defined capacity, steel-intensity, cost and construction-time benchmarks. Figure 3a shows profiles for the 11-entry reference fleet, and Figure 3b shows per-dimension comparisons. The aggregate agreement analysis uses the ten commissioned projects; only TuQiang remains in the planned cohort. Across paired composite scores, Spearman rank correlation[36] was ρ=0.612, mean absolute difference was 4.0 points, and nine of ten projects (90.0%) had both scores at least 60 and an absolute difference no greater than 15 points. These within-fleet results support the reviewer as an internal screening tool. They do not measure agreement with independent expert ratings and do not establish sensitivity, specificity, predictive value or a prospective probability of certification. Paired bootstrap resampling gave a 95% percentile interval of −0.342 to 0.963 for the rank correlation and 2.61 to 5.38 points for the mean absolute difference, reflecting the small cohort. The resampling procedure and weight-sensitivity results are reported in Supplementary Note 12 and Supplementary Table 11.",
+    "images": []
+  },
+  {
+    "order": 34,
+    "type": "paragraph",
+    "locator": "P0031",
+    "style": "2",
+    "text": "External appraisal of the selected design",
+    "images": []
+  },
+  {
+    "order": 35,
+    "type": "paragraph",
+    "locator": "P0032",
+    "style": null,
+    "text": "To assess the selected concept through external review, we submitted the reported highest-scoring candidate (composite score S = 91, grade A) with its complete technical dossier—in full accordance with the CCS review checklist[37]—which comprised the design basis specification, general arrangement drawings, hull configuration drawings, capacity plan, intact and damaged stability calculation reports, loading condition calculation reports, hydrodynamic and motion analysis reports for the floating platform, global strength calculation and structural rule calculation documents, basic structural drawings, structural member classification drawings, mooring system calculation report, mooring layout drawings, and mooring line component drawings, together with the applicable codes list—to the China Classification Society (CCS) for formal Approval in Principle (AIP).",
+    "images": []
+  },
+  {
+    "order": 36,
+    "type": "paragraph",
+    "locator": "P0033",
+    "style": null,
+    "text": "The AIP certification followed a four-stage workflow: preparation (defining the intended use, site conditions, and applicable standards), formal application (submission of all technical documentation), independent appraisal (CCS expert panel review, raising formal clarification requests and proposing optimizations), and final certification (issuance of the AIP certificate once all assessment items were resolved). During the independent appraisal stage, the CCS panel raised three rounds of formal clarification requests. The first round focused on the overall design rationale and fundamental static performance, verifying that the design basis and stability assessments were adequately justified. The second round addressed structural integrity and load-bearing capacity, with emphasis on strength verification and fatigue life assessment under combined environmental loads, as well as compliance with applicable code requirements. The third round concentrated on the station-keeping system and the design’s robustness under extreme environmental conditions, including the verification of key component layouts and load paths. After three clarification rounds, all review items were closed and the AIP certificate was issued. Available logs, input decks and file manifests provide a basis for tracing the calculations behind a clarification response[38,39].  After iterative exchanges and design refinements, the candidate successfully passed all review items and was awarded the CCS AIP certificate, confirming that the design meets the relevant code requirements at the conceptual level and possesses the technical basis for progressing to detailed design.",
+    "images": []
+  },
+  {
+    "order": 37,
+    "type": "paragraph",
+    "locator": "P0034",
+    "style": null,
+    "text": "The AIP establishes external concept-level appraisal of the submitted design. It does not, from one selected candidate, establish the sensitivity, specificity or predictive value of the internal threshold S≥85. Internal screening and external appraisal therefore serve different roles: the former helps prioritize candidates for further calculation and review, while the latter evaluates a particular dossier against the applicable requirements. Detailed design, fabrication inspection and final classification remain outside this approval.",
+    "images": []
+  },
+  {
+    "order": 38,
+    "type": "paragraph",
+    "locator": "P0035",
+    "style": "1",
+    "text": "Discussion",
+    "images": []
+  },
+  {
+    "order": 39,
+    "type": "paragraph",
+    "locator": "P0036",
+    "style": null,
+    "text": "The central result of this study is not a particular floating-wind geometry, but a different computational organization of engineering design. In The AI Engineer, language-model reasoning is not treated as engineering evidence: it proposes actions, whereas deterministic computation establishes their consequences. Returned numerical evidence and diagnostics are written back into persistent task state and condition subsequent actions, thereby closing the loop between language-level reasoning and physical computation. ",
+    "images": []
+  },
+  {
+    "order": 40,
+    "type": "paragraph",
+    "locator": "P0037",
+    "style": null,
+    "text": "The selected design additionally tests whether this closed-loop architecture can produce a competitive physical concept rather than merely complete a computational workflow. Relative to the “TuQiang” baseline, the design reduced steel intensity by 10.8%. Under the steel-proportional cost assumption used in the reported comparison, estimated unit capital cost likewise decreased from CNY 19,800 to CNY 17,656 kW⁻¹, corresponding to 10.8%. The updated responses show lower surge and mooring tension together with higher pitch, tower-top acceleration and tower-base bending moment. These trade-offs emphasize why language-model proposals cannot themselves constitute engineering evidence: candidate quality ultimately depends on quantitative evaluation against the relevant physical responses and limit states[40].",
+    "images": []
+  },
+  {
+    "order": 41,
+    "type": "paragraph",
+    "locator": "P0038",
+    "style": "2",
+    "text": "Distinct from discovery agents",
+    "images": []
+  },
+  {
+    "order": 42,
+    "type": "paragraph",
+    "locator": "P0039",
+    "style": null,
+    "text": "Recent agentic systems connect language models to research and manuscript preparation[41], scientific software[42], biomedical research[43], hypothesis generation and discovery[44,45], and laboratory experiments[46]. These applications build on architectures for planning, memory and tool use reviewed in the broader autonomous-agent literature[47]. Paper2Agent converts published methods and code into tested tools exposed through the Model Context Protocol, allowing language-model agents to invoke scientific workflows through natural-language interaction[48]. Engineering orchestration shares this need to ground a proposed action in external evidence, but additionally requires explicit physical inputs, admissible design changes and applicable limit states[11]. In The AI Engineer, structured tool requests connect the language model to numerical backends, task state carries feedback across operations, and revision contracts restrict which candidate variables may change. The agent uses the registered failure class, the latest tool status and the available task-state diagnostics to select the next configured operation. A mesh-quality failure calls for changes to discretization, whereas stalled structural convergence calls for changes to numerical solution settings. The corresponding backend then reruns the affected calculation, and its outputs are checked against the original engineering requirements before progression. This separation between deciding an action and establishing its physical consequence is the defining distinction between language-level agency and engineering verification in our framework. Recording the diagnostic evidence, selected modification and post-check together makes the contribution of each intervention inspectable, rather than attributing a successful design only to its final geometry.",
+    "images": []
+  },
+  {
+    "order": 43,
+    "type": "paragraph",
+    "locator": "P0040",
+    "style": "2",
+    "text": "Internal screening and external appraisal",
+    "images": []
+  },
+  {
+    "order": 44,
+    "type": "paragraph",
+    "locator": "P0041",
+    "style": null,
+    "text": "A practical challenge for autonomous engineering is that external certification cannot be applied to every candidate generated during exploration. The framework therefore separates internal candidate screening from external appraisal rather than treating them as interchangeable sources of evidence.",
+    "images": []
+  },
+  {
+    "order": 45,
+    "type": "paragraph",
+    "locator": "P0042",
+    "style": null,
+    "text": "The internal Automated Reviewer evaluates available engineering metrics using configured piecewise linear functions and reference-fleet values. The arithmetic scoring step does not itself invoke finite-element or time-domain simulations, although obtaining its inputs may require those computations. This separation allows internal screening to precede more detailed external assessment. Per-candidate computational effort is therefore measured from executed tool calls and solver runs, separately from the arithmetic evaluation of the reviewer.",
+    "images": []
+  },
+  {
+    "order": 46,
+    "type": "paragraph",
+    "locator": "P0043",
+    "style": null,
+    "text": "The default score test requires S≥85 and a supplied sub-score floor of 60. Passing it supports an internal selection decision, subject to the completeness and provenance of its inputs. External AIP evaluates the selected concept through a separate review process. The observed within-fleet correlation and agreement quantify similarity between two computational scoring channels. Evaluating their ability to predict external outcomes requires additional independently reviewed designs. This distinction preserves the practical value of screening without assigning the internal score a regulatory authority it does not have.",
+    "images": []
+  },
+  {
+    "order": 47,
+    "type": "paragraph",
+    "locator": "P0044",
+    "style": "2",
+    "text": "Transfer beyond floating wind",
+    "images": []
+  },
+  {
+    "order": 48,
+    "type": "paragraph",
+    "locator": "P0045",
+    "style": null,
+    "text": "Although we have demonstrated The AI Engineer on a 20 MW floating offshore wind foundation, the framework’s architecture is designed to be domain-extensible. The orchestrator does not assume FOWT-specific physics. Instead, it expects three enabling conditions that are met by a broad class of engineering problems. First, a deterministic solver (or suite of solvers) must be available to evaluate candidate designs against the relevant physics—structural finite-element analysis, boundary element method, multi-body dynamics, or coupled codes. The orchestrator interacts with these solvers through schema-validated input/output interfaces, requiring only that each solver returns quantifiable metrics and diagnostics. Second, the design problem must be governed by codified performance criteria that can be expressed as threshold-based constraints—spanning the four principal limit states：ultimate limit state (ULS), serviceability limit state (SLS), fatigue limit state (FLS) and accidental limit state (ALS) , intact and damaged stability margins, dynamic resonance avoidance, and constructability limits. These criteria define the rule-augmented thresholds τ in the orchestrator’s replanning logic. Third, a reference fleet of existing designs must be available to calibrate the Automated Reviewer’s scoring functions, establishing a performance baseline against which candidate novelty and competitiveness can be judged.",
+    "images": []
+  },
+  {
+    "order": 49,
+    "type": "paragraph",
+    "locator": "P0046",
+    "style": null,
+    "text": "Given these conditions, the architecture could be adapted to other marine and offshore structures (semi-submersible production platforms, jacket foundations, floating storage units), large-scale steel or concrete civil infrastructure (long-span bridges, high-rise structures, containment vessels), and aerospace components (airframe structures, turbine blades, landing gear) where high-fidelity solvers and certification standards are well established. For each new domain, the primary translation effort lies in redefining the geometry parameterization, the solver toolchain, and the regulatory threshold set τ—tasks that require domain expertise but no fundamental alteration of the orchestrator’s decision-making or replanning logic.",
+    "images": []
+  },
+  {
+    "order": 50,
+    "type": "paragraph",
+    "locator": "P0047",
+    "style": null,
+    "text": "The current adapters make construction-specific formats, required inputs and output artifacts explicit. Extending them to another domain would require a suitable geometry representation, solver integration and validation protocol. Neither the engineering effort nor performance in those other domains has been measured here. Modularity supports a route to transfer, rather than establishing transferability by itself.",
+    "images": []
+  },
+  {
+    "order": 51,
+    "type": "paragraph",
+    "locator": "P0048",
+    "style": null,
+    "text": "This domain-agnosticism, combined with the modular separation of the LLM-based orchestrator from the deterministic backends, suggests that The AI Engineer can serve as a general-purpose engineering exploration engine: a system that, given a solver, a set of constraints, and a performance baseline, autonomously searches for certifiable designs across problem domains. We therefore view the FOWT demonstration not as a domain-specific solution but as a proof of concept for a broader class of autonomous engineering systems—one in which human experts shift from operating individual design iterations to curating the solvers, standards, and objectives that the AI system orchestrates.",
+    "images": []
+  },
+  {
+    "order": 52,
+    "type": "paragraph",
+    "locator": "P0049",
+    "style": "2",
+    "text": "Limits and next steps",
+    "images": []
+  },
+  {
+    "order": 53,
+    "type": "paragraph",
+    "locator": "P0050",
+    "style": null,
+    "text": "Although The AI Engineer autonomously generated a foundation that passed CCS AIP and outperformed the human-optimized baseline, several limitations remain before such systems can be deployed commercially.",
+    "images": []
+  },
+  {
+    "order": 54,
+    "type": "paragraph",
+    "locator": "P0051",
+    "style": null,
+    "text": "First, the reported campaign generated multiple candidates that satisfied the internal screening criteria, but only the highest-scoring branch was advanced to AIP submission. The remaining candidates represented different trade-offs across cost, constructability and fatigue performance. The repeated experiments across different seeds provide a basis for examining candidate quality and run-to-run variability. Future work should extend these evaluations to a broader range of design tasks and campaigns, while tightening integration between the BESO topology module[15] and downstream SQP-based sizing and Zwind-based verification modules and developing more systematic replanning policies.",
+    "images": []
+  },
+  {
+    "order": 55,
+    "type": "paragraph",
+    "locator": "P0052",
+    "style": null,
+    "text": "Second, while the system uses Zwind 2.5 for high-fidelity aero-hydro-servo-elastic time-domain simulation, resolving extreme localized hydrodynamics—breaking wave impacts, slamming forces, strongly nonlinear viscous drag, and complex failure mechanisms under wind-wave misalignment—ultimately requires physical wave-basin tests or prohibitive CFD campaigns. The current framework cannot autonomously orchestrate such experimental setups. Claims of typhoon survivability therefore require the same full-scale prototype validation planned for “TuQiang”.",
+    "images": []
+  },
+  {
+    "order": 56,
+    "type": "paragraph",
+    "locator": "P0053",
+    "style": null,
+    "text": "Third, fabrication constraints are currently prompt-approximated rather than CAD-CAM exact. The AI Engineer does not yet emit weld maps, non-destructive examination schedules, or yard lift plans. Detailed design and construction remain entirely human responsibilities. Incorporating manufacturing constraints as hard, differentiable penalties within the optimization loop is a priority for future work.",
+    "images": []
+  },
+  {
+    "order": 57,
+    "type": "paragraph",
+    "locator": "P0054",
+    "style": null,
+    "text": "Fourth, the inherent stochasticity of LLM orchestration introduces epistemic variance. While the deterministic backends (CalculiX, Zwind) are reproducible given identical inputs, the orchestrator’s high-level replanning decisions are influenced by the LLM’s sampling behaviour. For regulatory submissions, we recommend multi-seed campaigns and strictly frozen tool schemas (with pinned dependency versions and deterministic solver flags) to measure variability and support reproducibility across runs.",
+    "images": []
+  },
+  {
+    "order": 58,
+    "type": "paragraph",
+    "locator": "P0055",
+    "style": null,
+    "text": "Finally, “TuQiang” itself is a moving baseline. Continued national investment regularly compresses the frontier of cost and material efficiency, thus, claims of algorithmic superiority will therefore require periodic re-benchmarking against the latest human-optimized designs.",
+    "images": []
+  },
+  {
+    "order": 59,
+    "type": "paragraph",
+    "locator": "P0056",
+    "style": "2",
+    "text": "Accountability and ethics",
+    "images": []
+  },
+  {
+    "order": 60,
+    "type": "paragraph",
+    "locator": "P0057",
+    "style": null,
+    "text": "Despite these limitations, The AI Engineer establishes a broader point: agentic loops coupled with deterministic solvers can autonomously develop engineering concepts that are quantitatively evaluated against physical and codified constraints and can be advanced to independent concept-level appraisal. Unlike text-only generative AI, engineering design imposes immediate numerical penalties for inconsistent units, degenerate meshes, or violated load limits. This makes transparent audit trails—WebSocket logs, SHA-256 integrity manifests, and versioned geometry fingerprints—not optional add-ons but critical infrastructure for establishing computational trust. Selected computational artifacts are recorded with content hashes, enabling a reviewer to identify retained files and detect changes. Reconstructing the full computational chain additionally requires complete solver inputs, configurations and model settings. We believe this level of auditability is a prerequisite for any autonomous engineering system intended for safety-critical applications.",
+    "images": []
+  },
+  {
+    "order": 61,
+    "type": "paragraph",
+    "locator": "P0058",
+    "style": null,
+    "text": "Ethically, certification societies must confront transparent AI authorship disclosure. Our protocol—AIP with pre-registered withdrawal clauses if certificate issuance would obscure AI attribution—offers a preliminary template, though global norms remain unsettled. This echoes concerns raised by recent autonomous discovery systems regarding the integrity of peer review and scientific attribution. For engineering certification, the stakes are even higher: if a design generated by an AI system is approved and later fails in service, the chain of accountability must be clear. We advocate that the human engineer responsible for submitting the design retains ultimate accountability, with the AI system treated as a computational collaborator rather than a legal author—a position consistent with the “human-in-command” stance adopted by recent agentic systems in biomedical and scientific domains[49,50].",
+    "images": []
+  },
+  {
+    "order": 62,
+    "type": "paragraph",
+    "locator": "P0059",
+    "style": null,
+    "text": "The framework provides intervention points, including review before meshing, allowing domain experts to inspect intermediate outputs and apply high-level adjustments—such as revising constraint priorities or freezing selected design subdomains—without breaking the closed-loop validation workflow. This interface serves scenarios where engineering judgement or project-specific requirements need to complement the optimization-driven search, preserving the human role as a high-level director rather than a low-level operator.",
+    "images": []
+  },
+  {
+    "order": 63,
+    "type": "paragraph",
+    "locator": "P0060",
+    "style": null,
+    "text": "If developed responsibly, such agentic systems could broaden access to high-quality design iteration. They could allow engineering teams to explore substantially larger numbers of computationally evaluated concepts before committing to physical fabrication, while ensuring that accountable human engineers remain in charge of the final mile to type approval and offshore installation. The AI Engineer does not replace human engineers. Instead, it amplifies their expertise through rigorous, physics-grounded automation. We envision that agentic frameworks of this kind will become standard collaborators in engineering practice—not as autonomous decision-makers, but as high-bandwidth explorers that dramatically expand the scope of systematic design exploration, leaving human judgment to navigate the trade-offs that no solver can encode.",
+    "images": []
+  },
+  {
+    "order": 64,
+    "type": "paragraph",
+    "locator": "P0061",
+    "style": "1",
+    "text": "Methods",
+    "images": []
+  },
+  {
+    "order": 65,
+    "type": "paragraph",
+    "locator": "P0062",
+    "style": "2",
+    "text": "Closed-loop agentic engineering architecture",
+    "images": []
+  },
+  {
+    "order": 66,
+    "type": "paragraph",
+    "locator": "P0063",
+    "style": null,
+    "text": "The AI Engineer was designed around a strict separation between decision, execution and evidence. A language-model output can propose an engineering operation or a revision to an existing candidate, but it is not itself treated as an engineering result. Only execution by the corresponding engineering backend establishes the numerical consequence of that action. Returned outputs, diagnostics and constraint evaluations are then incorporated into the persistent task state and used to condition the next decision. This sequence—proposal, execution, evaluation and state-conditioned replanning—defines the closed loop used throughout the framework. Tool-augmented scientific systems provide relevant precedents for connecting language-model planning to external execution[46,51].",
+    "images": []
+  },
+  {
+    "order": 67,
+    "type": "paragraph",
+    "locator": "P0064",
+    "style": null,
+    "text": "The implementation couples a conversational LLM-based orchestrator to an explicit engineering workflow. The orchestrator interprets natural-language requirements, returned diagnostics and candidate-level evidence, whereas registered engineering tools perform geometry construction, meshing, optimization and numerical evaluation. The LangGraph implementation separates the conversational graph from a master engineering graph spanning four principal phases: requirements processing, design-domain construction and topology optimization, deliverable preparation and size optimization, and candidate screening. The modular separation of numerical components also has precedents in nonlinear finite-element software architectures based on object composition[52].",
+    "images": []
+  },
+  {
+    "order": 68,
+    "type": "paragraph",
+    "locator": "P0065",
+    "style": null,
+    "text": "Engineering operations are invoked through structured tool calls. The language model specifies a registered tool and its arguments in JSON format. A dispatcher invokes the corresponding handler and returns execution status, diagnostic information, computed metrics and references to generated artifacts. Separate Pydantic schemas structure requirements and BESO parameters before operation-specific consistency checks. The response is either a tool proposal or a final reply. Malformed structured responses trigger a repair request. Returned tool results are incorporated into the next model context. A tool-turn budget bounds repeated interactions.",
+    "images": []
+  },
+  {
+    "order": 69,
+    "type": "paragraph",
+    "locator": "P0066",
+    "style": null,
+    "text": "This architecture establishes a deliberate asymmetry between the LLM and the engineering backends: the LLM determines which admissible engineering operation to attempt next, whereas deterministic physics-based computation determines the outcome of that operation and provides the evidence for the subsequent decision.",
+    "images": []
+  },
+  {
+    "order": 70,
+    "type": "paragraph",
+    "locator": "P0067",
+    "style": "3",
+    "text": "Task state and physics-grounded replanning",
+    "images": []
+  },
+  {
+    "order": 71,
+    "type": "paragraph",
+    "locator": "P0068",
+    "style": null,
+    "text": "The controller maintains computational context across engineering operations through an explicit task state：",
+    "images": []
+  },
+  {
+    "order": 72,
+    "type": "table",
+    "locator": "T04",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T04R01C01",
+            "text": "St=φt,Ct,Jt,At,Lt,Mt,rt",
+            "paragraphs": [
+              {
+                "locator": "T04R01C01P01",
+                "text": "St=φt,Ct,Jt,At,Lt,Mt,rt",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T04R01C02",
+            "text": "(1)",
+            "paragraphs": [
+              {
+                "locator": "T04R01C02P01",
+                "text": "(1)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 73,
+    "type": "paragraph",
+    "locator": "P0069",
+    "style": null,
+    "text": "where φt denotes the current workflow phase, Ct contains checklist and session information, Jt identifies active engineering jobs, At contains generated geometry and mesh files, solver inputs and outputs, logs and reports, Lt contains execution logs and diagnostics, Mt contains returned engineering metrics, and rt records whether a recovery action is pending.",
+    "images": []
+  },
+  {
+    "order": 74,
+    "type": "paragraph",
+    "locator": "P0070",
+    "style": null,
+    "text": "Tool responses update both the assistant history and the execution trace, whereas the master graph tracks the state of long-running engineering jobs. For example, a running BESO calculation can suspend graph progression until completion feedback is returned. A separate interruption point permits human inspection before meshing when required. Persistent task state therefore connects language-level decisions to long-running computations and preserves the numerical context required for subsequent operations. When a task identifier is supplied, the web assistant also records a task-scoped execution trace containing model settings, prompt and response hashes, tool summaries and artifact references.",
+    "images": []
+  },
+  {
+    "order": 76,
+    "type": "paragraph",
+    "locator": "P0071",
+    "style": null,
+    "text": "Solver or workflow failures do not directly trigger acceptance of an LLM-generated correction. Instead, returned diagnostics are first classified and mapped to configured recovery policies. In the reported optimization workflow, diagnostics distinguish mesh-quality defects from structural solver non-convergence. The agent combines this failure class with the active task state to select a registered recovery operation. For diagnostic class dt, the proposed configuration update can be represented as",
+    "images": []
+  },
+  {
+    "order": 77,
+    "type": "table",
+    "locator": "T05",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T05R01C01",
+            "text": "θt+1 p=Rdt,θt",
+            "paragraphs": [
+              {
+                "locator": "T05R01C01P01",
+                "text": "θt+1 p=Rdt,θt",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T05R01C02",
+            "text": "(2)",
+            "paragraphs": [
+              {
+                "locator": "T05R01C02P01",
+                "text": "(2)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 78,
+    "type": "paragraph",
+    "locator": "P0072",
+    "style": null,
+    "text": "where θt denotes the current engineering configuration and R returns an admissible parameter patch, such as changes to configured mesh-size, solver-iteration or load-step parameters.",
+    "images": []
+  },
+  {
+    "order": 79,
+    "type": "paragraph",
+    "locator": "P0073",
+    "style": null,
+    "text": "The superscript p emphasizes that θt+1p is only a proposed recovery. The patch, its rationale and the pending-recovery status are recorded in the task state, but the recovery is not considered successful until the modified operation is executed and new numerical evidence is returned. The replan executor dispatches the proposed intervention to the corresponding meshing or structural solver backend, and the returned artifacts, job status or checks determine whether the intervention resolved the original failure.",
+    "images": []
+  },
+  {
+    "order": 80,
+    "type": "paragraph",
+    "locator": "P0074",
+    "style": null,
+    "text": "The record for each intervention links the triggering diagnostic to the proposed parameter change, the executed job and the post-check. A numerical recovery is counted only when the affected computation completes and the triggering failure criterion is re-evaluated. Engineering feasibility is assessed separately against the unchanged load cases, material assumptions and design limits. This prevents improved numerical convergence from being mistaken for an improvement obtained by relaxing the design requirements.",
+    "images": []
+  },
+  {
+    "order": 81,
+    "type": "paragraph",
+    "locator": "P0075",
+    "style": "3",
+    "text": "Candidate revision and acceptance",
+    "images": []
+  },
+  {
+    "order": 84,
+    "type": "paragraph",
+    "locator": "P0076",
+    "style": null,
+    "text": "A bounded candidate-level revision loop surrounds the construction-specific engineering adapters. For each candidate xi, computed metrics, rule findings, assumptions and available provenance information are supplied to the orchestrator. The language model can recommend one of three candidate-level actions:",
+    "images": []
+  },
+  {
+    "order": 85,
+    "type": "table",
+    "locator": "T06",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T06R01C01",
+            "text": "ai∈accept,revise,reject.",
+            "paragraphs": [
+              {
+                "locator": "T06R01C01P01",
+                "text": "ai∈accept,revise,reject.",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T06R01C02",
+            "text": "(3)",
+            "paragraphs": [
+              {
+                "locator": "T06R01C02P01",
+                "text": "(3)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 86,
+    "type": "paragraph",
+    "locator": "P0077",
+    "style": null,
+    "text": "The recommendation does not itself determine engineering validity. A numerical validation callback evaluates the candidate against the applicable computational and screening criteria, and the candidate service combines this result with the structured model review before selection.",
+    "images": []
+  },
+  {
+    "order": 87,
+    "type": "paragraph",
+    "locator": "P0078",
+    "style": null,
+    "text": "When revision is requested, an adapter-specific revision contract defines which design variables may be modified and their admissible bounds:",
+    "images": []
+  },
+  {
+    "order": 88,
+    "type": "table",
+    "locator": "T07",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T07R01C01",
+            "text": "xi+1=xi+Δxi, Δxi∈Ωrev",
+            "paragraphs": [
+              {
+                "locator": "T07R01C01P01",
+                "text": "xi+1=xi+Δxi, Δxi∈Ωrev",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T07R01C02",
+            "text": "(4)",
+            "paragraphs": [
+              {
+                "locator": "T07R01C02P01",
+                "text": "(4)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 89,
+    "type": "paragraph",
+    "locator": "P0079",
+    "style": null,
+    "text": "where Ωrev denotes the set of modifications permitted by the active adapter. For the prism adapter, for example, geometry variables can be modified only through an explicit revision contract, while loads, material properties and acceptance requirements remain outside the geometry patch.",
+    "images": []
+  },
+  {
+    "order": 90,
+    "type": "paragraph",
+    "locator": "P0080",
+    "style": null,
+    "text": "Repeated specifications, invalid patches and exhaustion of the configured retry budget terminate further autonomous revision. Each attempt is assigned an identifier and linked to its parent candidate, allowing a proposed modification to be associated with the calculation that subsequently evaluates it.",
+    "images": []
+  },
+  {
+    "order": 91,
+    "type": "paragraph",
+    "locator": "P0081",
+    "style": null,
+    "text": "Candidate screening uses a default composite-score threshold of S≥85, together with a minimum supplied sub-score of 60. A separate phase-transition guard prevents progression while a recovery operation remains unresolved. When artifact enforcement is enabled, the executor additionally checks the availability and readability of required topology and review records and examines score provenance before advancing a candidate. For engineering advancement, all five scoring inputs must be identified, every required analysis must have completed, and the applicable physical checks must be satisfied. The scalar score test is evaluated together with these completion and feasibility checks. It does not replace them.",
+    "images": []
+  },
+  {
+    "order": 92,
+    "type": "paragraph",
+    "locator": "P0082",
+    "style": null,
+    "text": "The resulting closed loop can be expressed as",
+    "images": []
+  },
+  {
+    "order": 93,
+    "type": "table",
+    "locator": "T08",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T08R01C01",
+            "text": "ut∼πLLM·St, St+1=USt,ut,ESt,ut",
+            "paragraphs": [
+              {
+                "locator": "T08R01C01P01",
+                "text": "ut∼πLLM·St, St+1=USt,ut,ESt,ut",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T08R01C02",
+            "text": "(5)",
+            "paragraphs": [
+              {
+                "locator": "T08R01C02P01",
+                "text": "(5)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 94,
+    "type": "paragraph",
+    "locator": "P0083",
+    "style": null,
+    "text": "where ut denotes a registered tool call with its arguments, πLLM is the LLM action distribution conditioned on St, E returns numerical outputs and diagnostics from the selected engineering backend, and U incorporates this feedback, applies the validation and screening criteria, and updates the workflow state. Subsequent actions therefore depend on computed engineering evidence. The index t labels successive tool decisions and their returned feedback.",
+    "images": []
+  },
+  {
+    "order": 95,
+    "type": "paragraph",
+    "locator": "P0084",
+    "style": "2",
+    "text": "Topology optimization",
+    "images": []
+  },
+  {
+    "order": 96,
+    "type": "paragraph",
+    "locator": "P0085",
+    "style": null,
+    "text": "The topology-optimization stage searches for an efficient load-transfer layout for the semi-submersible platform by minimizing global static compliance under a prescribed material-volume constraint. Bi-directional Evolutionary Structural Optimization (BESO)[15] is coupled to the CalculiX finite-element solver[16].",
+    "images": []
+  },
+  {
+    "order": 97,
+    "type": "paragraph",
+    "locator": "P0086",
+    "style": null,
+    "text": "The optimization problem is formulated as",
+    "images": []
+  },
+  {
+    "order": 98,
+    "type": "table",
+    "locator": "T09",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T09R01C01",
+            "text": "minρCρ=FTU=UTKρU",
+            "paragraphs": [
+              {
+                "locator": "T09R01C01P01",
+                "text": "minρCρ=FTU=UTKρU",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T09R01C02",
+            "text": "(6)",
+            "paragraphs": [
+              {
+                "locator": "T09R01C02P01",
+                "text": "(6)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 99,
+    "type": "paragraph",
+    "locator": "P0087",
+    "style": null,
+    "text": "subject to",
+    "images": []
+  },
+  {
+    "order": 100,
+    "type": "table",
+    "locator": "T10",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T10R01C01",
+            "text": "KρU=F",
+            "paragraphs": [
+              {
+                "locator": "T10R01C01P01",
+                "text": "KρU=F",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T10R01C02",
+            "text": "(7)",
+            "paragraphs": [
+              {
+                "locator": "T10R01C02P01",
+                "text": "(7)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 101,
+    "type": "paragraph",
+    "locator": "P0088",
+    "style": null,
+    "text": "and",
+    "images": []
+  },
+  {
+    "order": 102,
+    "type": "table",
+    "locator": "T11",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T11R01C01",
+            "text": "∑e=1NρeVe∑e=1NVe=fv",
+            "paragraphs": [
+              {
+                "locator": "T11R01C01P01",
+                "text": "∑e=1NρeVe∑e=1NVe=fv",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T11R01C02",
+            "text": "(8)",
+            "paragraphs": [
+              {
+                "locator": "T11R01C02P01",
+                "text": "(8)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 103,
+    "type": "paragraph",
+    "locator": "P0089",
+    "style": null,
+    "text": "and",
+    "images": []
+  },
+  {
+    "order": 104,
+    "type": "table",
+    "locator": "T12",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T12R01C01",
+            "text": "ρe∈{ρmin,1},ρmin=10-6",
+            "paragraphs": [
+              {
+                "locator": "T12R01C01P01",
+                "text": "ρe∈{ρmin,1},ρmin=10-6",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T12R01C02",
+            "text": "(9)",
+            "paragraphs": [
+              {
+                "locator": "T12R01C02P01",
+                "text": "(9)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 105,
+    "type": "paragraph",
+    "locator": "P0090",
+    "style": null,
+    "text": "where U and F are the global displacement and load vectors, respectively. K is the global stiffness matrix, ρ=ρ1,…,ρNT is the vector of element relative densities and N is the number of elements, ρe is the relative density of element e, Ve is its volume, and fv denotes the prescribed material-retention fraction.[53]",
+    "images": []
+  },
+  {
+    "order": 106,
+    "type": "paragraph",
+    "locator": "P0091",
+    "style": null,
+    "text": "A soft-kill representation[54] assigns ρmin to nominally void elements to avoid singularity of the global stiffness matrix while suppressing their structural contribution. Element sensitivities are derived from strain-energy density and smoothed through a spatial distance-based filter to reduce checkerboard patterns and mesh dependence.",
+    "images": []
+  },
+  {
+    "order": 107,
+    "type": "paragraph",
+    "locator": "P0092",
+    "style": null,
+    "text": "At each iteration, BESO removes material from mechanically inefficient regions and can reintroduce material into highly stressed nominally void regions. Prescribed addition and removal ratios constrain the amount of material that can change between successive iterations.",
+    "images": []
+  },
+  {
+    "order": 108,
+    "type": "paragraph",
+    "locator": "P0093",
+    "style": null,
+    "text": "Convergence is declared when the relative change in compliance falls below 10-3 over the specified consecutive iterations and the auxiliary structural metrics, including maximum and mean unity checks, remain within their configured acceptance bounds. Filter-radius evolution, adaptive mesh-refinement procedures and convergence histories are provided in Supplementary Notes 1 and 5.",
+    "images": []
+  },
+  {
+    "order": 109,
+    "type": "paragraph",
+    "locator": "P0094",
+    "style": "2",
+    "text": "Size optimization",
+    "images": []
+  },
+  {
+    "order": 110,
+    "type": "paragraph",
+    "locator": "P0095",
+    "style": null,
+    "text": "The topology-optimized conceptual geometry is subsequently transformed to the target turbine class through an anisotropic fixed-draft scaling procedure[55]. Vertical dimensions are retained, whereas horizontal dimensions—including column radius, inter-column spacing and planar coordinates—are scaled by a common factor s.",
+    "images": []
+  },
+  {
+    "order": 111,
+    "type": "paragraph",
+    "locator": "P0096",
+    "style": null,
+    "text": "The initial approximation follows rotor swept-area scaling with rated power[55]. Assuming constant specific power, the baseline horizontal multiplier is ",
+    "images": []
+  },
+  {
+    "order": 112,
+    "type": "table",
+    "locator": "T13",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T13R01C01",
+            "text": "s0=Ptarget/Pbase",
+            "paragraphs": [
+              {
+                "locator": "T13R01C01P01",
+                "text": "s0=Ptarget/Pbase",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T13R01C02",
+            "text": "(10)",
+            "paragraphs": [
+              {
+                "locator": "T13R01C02P01",
+                "text": "(10)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 113,
+    "type": "paragraph",
+    "locator": "P0097",
+    "style": null,
+    "text": "where Ptarget is the target rated power and Pbase is the rated power of the reference geometry. The horizontal scale s is initialized at s0 and then corrected to reduce specific steel consumption while retaining hydrostatic feasibility.",
+    "images": []
+  },
+  {
+    "order": 114,
+    "type": "paragraph",
+    "locator": "P0098",
+    "style": null,
+    "text": "For hollow cylindrical structural members, the approximate structural mass is",
+    "images": []
+  },
+  {
+    "order": 115,
+    "type": "table",
+    "locator": "T14",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T14R01C01",
+            "text": "Ms=ρs∑k=1nAkLk",
+            "paragraphs": [
+              {
+                "locator": "T14R01C01P01",
+                "text": "Ms=ρs∑k=1nAkLk",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T14R01C02",
+            "text": "(11)",
+            "paragraphs": [
+              {
+                "locator": "T14R01C02P01",
+                "text": "(11)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 116,
+    "type": "paragraph",
+    "locator": "P0099",
+    "style": null,
+    "text": "where ρs is steel density and Ak and Lk are the cross-sectional area and length of member k, respectively.",
+    "images": []
+  },
+  {
+    "order": 117,
+    "type": "paragraph",
+    "locator": "P0100",
+    "style": null,
+    "text": "The preliminary sizing problem minimizes specific steel consumption,",
+    "images": []
+  },
+  {
+    "order": 118,
+    "type": "table",
+    "locator": "T15",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T15R01C01",
+            "text": "min MssPtarget",
+            "paragraphs": [
+              {
+                "locator": "T15R01C01P01",
+                "text": "min MssPtarget",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T15R01C02",
+            "text": "(12)",
+            "paragraphs": [
+              {
+                "locator": "T15R01C02P01",
+                "text": "(12)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 119,
+    "type": "paragraph",
+    "locator": "P0101",
+    "style": null,
+    "text": "The additional scale factor xs in s=s0xs is optimized by sequential quadratic programming (SQP). Here the scalar correction factor is distinct from the member design vector defined in equation (13). Hydrostatic restoring stiffness in pitch is evaluated from the waterplane second moment of area, displaced volume and metacentric height. ",
+    "images": []
+  },
+  {
+    "order": 120,
+    "type": "paragraph",
+    "locator": "P0102",
+    "style": null,
+    "text": "This stage does not constitute final member sizing. Instead, it produces a hydrostatically viable, material-efficient macroscopic envelope that provides the starting geometry for subsequent member-level optimization and coupled-system verification.",
+    "images": []
+  },
+  {
+    "order": 121,
+    "type": "paragraph",
+    "locator": "P0103",
+    "style": null,
+    "text": "Following topology optimization and parametric upscaling, tubular-member dimensions are optimized using sequential quadratic programming (SQP). The design vector is",
+    "images": []
+  },
+  {
+    "order": 122,
+    "type": "table",
+    "locator": "T16",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T16R01C01",
+            "text": "x=Dedge,tedge,Dinner,tinner,LspacingT",
+            "paragraphs": [
+              {
+                "locator": "T16R01C01P01",
+                "text": "x=Dedge,tedge,Dinner,tinner,LspacingT",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T16R01C02",
+            "text": "(13)",
+            "paragraphs": [
+              {
+                "locator": "T16R01C02P01",
+                "text": "(13)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 123,
+    "type": "paragraph",
+    "locator": "P0104",
+    "style": null,
+    "text": "where Dedge and tedge are the outer-column diameter and wall thickness, Dinner and tinner are the inner-column diameter and wall thickness, and Lspacing is the centre-to-centre distance of the three outer columns.",
+    "images": []
+  },
+  {
+    "order": 124,
+    "type": "paragraph",
+    "locator": "P0105",
+    "style": null,
+    "text": "The objective is",
+    "images": []
+  },
+  {
+    "order": 125,
+    "type": "table",
+    "locator": "T17",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T17R01C01",
+            "text": "minxMsx=ρsk=1nAkxLk",
+            "paragraphs": [
+              {
+                "locator": "T17R01C01P01",
+                "text": "minxMsx=ρsk=1nAkxLk",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T17R01C02",
+            "text": "(14)",
+            "paragraphs": [
+              {
+                "locator": "T17R01C02P01",
+                "text": "(14)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 126,
+    "type": "paragraph",
+    "locator": "P0106",
+    "style": null,
+    "text": "subject to the reported engineering requirements, including",
+    "images": []
+  },
+  {
+    "order": 127,
+    "type": "table",
+    "locator": "T18",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T18R01C01",
+            "text": "θratedx≤5∘",
+            "paragraphs": [
+              {
+                "locator": "T18R01C01P01",
+                "text": "θratedx≤5∘",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T18R01C02",
+            "text": "(15)",
+            "paragraphs": [
+              {
+                "locator": "T18R01C02P01",
+                "text": "(15)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "locator": "T18R02C01",
+            "text": "θextx≤10∘",
+            "paragraphs": [
+              {
+                "locator": "T18R02C01P01",
+                "text": "θextx≤10∘",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T18R02C02",
+            "text": "(16)",
+            "paragraphs": [
+              {
+                "locator": "T18R02C02P01",
+                "text": "(16)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "locator": "T18R03C01",
+            "text": "UCjx≤1",
+            "paragraphs": [
+              {
+                "locator": "T18R03C01P01",
+                "text": "UCjx≤1",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T18R03C02",
+            "text": "(17)",
+            "paragraphs": [
+              {
+                "locator": "T18R03C02P01",
+                "text": "(17)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 4,
+        "cells": [
+          {
+            "locator": "T18R04C01",
+            "text": "Djx≤1/DFF",
+            "paragraphs": [
+              {
+                "locator": "T18R04C01P01",
+                "text": "Djx≤1/DFF",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T18R04C02",
+            "text": "(18)",
+            "paragraphs": [
+              {
+                "locator": "T18R04C02P01",
+                "text": "(18)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 5,
+        "cells": [
+          {
+            "locator": "T18R05C01",
+            "text": "f1x∉B1P∪B3P",
+            "paragraphs": [
+              {
+                "locator": "T18R05C01P01",
+                "text": "f1x∉B1P∪B3P",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T18R05C02",
+            "text": "(19)",
+            "paragraphs": [
+              {
+                "locator": "T18R05C02P01",
+                "text": "(19)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 128,
+    "type": "paragraph",
+    "locator": "P0107",
+    "style": null,
+    "text": "where θratedx is the static pitch under rated aerodynamic thrust. θextx is the static pitch under the parked extreme condition. The aerodynamic force is the sum of the feathered-rotor, tower and nacelle drag, and the wave force is the Morison load on the columns; pitch is the resulting moment divided by the pitch restoring stiffness K55. UCjx is the analytical utilization of column group j under that extreme static load, NA+MW divided by fy/γM with fy = 355 MPa and γM = 1.15. The index j distinguishes the outer and inner columns. Djx is the fatigue damage of group j, and DFF=3 is the design fatigue factor. f1 is the relevant fundamental natural frequency, and B1P and B3P are the rotor 1P and 3P bands[57]. ",
+    "images": []
+  },
+  {
+    "order": 129,
+    "type": "paragraph",
+    "locator": "P0108",
+    "style": null,
+    "text": "The optimized candidate is then verified with Zwind 2.5[18] under coupled aero-hydro-servo-elastic load cases. Zwind does not participate in the optimization loop and only returns verification metrics such as platform motions, tower-top acceleration, mooring tension, and tower-base loads, under power production load cases (i.e. DLC 1.1) and extreme load cases (i.e. DLC 6.1). The selected design is accepted only if these verification responses satisfy the applicable limits.",
+    "images": []
+  },
+  {
+    "order": 130,
+    "type": "paragraph",
+    "locator": "P0109",
+    "style": "2",
+    "text": "Time domain verification",
+    "images": []
+  },
+  {
+    "order": 131,
+    "type": "paragraph",
+    "locator": "P0110",
+    "style": null,
+    "text": "Zwind 2.5[18] is used for coupled dynamic assessment of the floating wind turbine. The software represents the system through rigid-flexible coupled multibody dynamics. In generalized coordinates, the governing equation can be expressed as",
+    "images": []
+  },
+  {
+    "order": 132,
+    "type": "table",
+    "locator": "T19",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T19R01C01",
+            "text": "Mqq+Cq,qq+Fintq+ΦqTλ=F",
+            "paragraphs": [
+              {
+                "locator": "T19R01C01P01",
+                "text": "Mqq+Cq,qq+Fintq+ΦqTλ=F",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T19R01C02",
+            "text": "(20)",
+            "paragraphs": [
+              {
+                "locator": "T19R01C02P01",
+                "text": "(20)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 2,
+        "cells": [
+          {
+            "locator": "T19R02C01",
+            "text": "Φq,t=0",
+            "paragraphs": [
+              {
+                "locator": "T19R02C01P01",
+                "text": "Φq,t=0",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T19R02C02",
+            "text": "(21)",
+            "paragraphs": [
+              {
+                "locator": "T19R02C02P01",
+                "text": "(21)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "row": 3,
+        "cells": [
+          {
+            "locator": "T19R03C01",
+            "text": "F=Faeroq,q,β,Vwind+Fhydro+Fsoil",
+            "paragraphs": [
+              {
+                "locator": "T19R03C01P01",
+                "text": "F=Faeroq,q,β,Vwind+Fhydro+Fsoil",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T19R03C02",
+            "text": "(22)",
+            "paragraphs": [
+              {
+                "locator": "T19R03C02P01",
+                "text": "(22)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 133,
+    "type": "paragraph",
+    "locator": "P0111",
+    "style": null,
+    "text": "where q is the vector of generalized coordinates, M is the mass matrix, and C contains the velocity-dependent terms. Fintq is the internal structural force. Φq,t=0 is the multibody constraint, and ΦqTλ is the constraint force. Faero is the aerodynamic load, β is the blade-pitch vector and Vwind is the wind speed; servo action enters through β and Vwind rather than as a separate external force. Fhydro and Fsoil are the hydrodynamic and soil loads. ",
+    "images": []
+  },
+  {
+    "order": 134,
+    "type": "paragraph",
+    "locator": "P0112",
+    "style": null,
+    "text": "The external-force representation includes aerodynamic loading based on blade-element momentum theory[58], second-order hydrodynamic effects[59], mooring restoring forces and control actions. The coupled calculations provide the response quantities required for candidate assessment, including platform motions, tower-top acceleration, mooring tension and tower-base loads. Further details of the aero-hydro-servo-elastic formulation and analyzed load cases are provided in Supplementary Note 8.",
+    "images": []
+  },
+  {
+    "order": 135,
+    "type": "paragraph",
+    "locator": "P0113",
+    "style": "2",
+    "text": "Automated Reviewer and candidate screening",
+    "images": []
+  },
+  {
+    "order": 136,
+    "type": "paragraph",
+    "locator": "P0114",
+    "style": null,
+    "text": "The Automated Reviewer is an internal candidate-screening mechanism, not a surrogate for external certification. It maps five engineering dimensions—capacity, steel intensity, unit cost, constructability and fatigue life—to normalized scores and combines them through a weighted composite score,",
+    "images": []
+  },
+  {
+    "order": 137,
+    "type": "table",
+    "locator": "T20",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T20R01C01",
+            "text": "S=j∈Owjsjj∈Owj",
+            "paragraphs": [
+              {
+                "locator": "T20R01C01P01",
+                "text": "S=j∈Owjsjj∈Owj",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T20R01C02",
+            "text": "(23)",
+            "paragraphs": [
+              {
+                "locator": "T20R01C02P01",
+                "text": "(23)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 138,
+    "type": "paragraph",
+    "locator": "P0115",
+    "style": null,
+    "text": "where sj is the score for dimension j, wj is its configured weight and O denotes the set of dimensions for which the required inputs are available. The non-negative weights sum to one and are 0.15, 0.30, 0.25, 0.15 and 0.15 for capacity, steel intensity, unit cost, constructability and fatigue life, respectively. The observed-dimension normalization is used for incomplete reference-fleet records. Candidate advancement requires the complete five-dimensional assessment. Missing cost, construction-time or fatigue-life inputs receive 55 in the candidate scorer and therefore fail the sub-score floor of 60.",
+    "images": []
+  },
+  {
+    "order": 141,
+    "type": "paragraph",
+    "locator": "P0116",
+    "style": null,
+    "text": "The default internal advancement criterion is",
+    "images": []
+  },
+  {
+    "order": 142,
+    "type": "table",
+    "locator": "T21",
+    "rows": [
+      {
+        "row": 1,
+        "cells": [
+          {
+            "locator": "T21R01C01",
+            "text": "S≥85, minj∈Osj≥60.",
+            "paragraphs": [
+              {
+                "locator": "T21R01C01P01",
+                "text": "S≥85, minj∈Osj≥60.",
+                "images": []
+              }
+            ]
+          },
+          {
+            "locator": "T21R01C02",
+            "text": "(24)",
+            "paragraphs": [
+              {
+                "locator": "T21R01C02P01",
+                "text": "(24)",
+                "images": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "order": 143,
+    "type": "paragraph",
+    "locator": "P0117",
+    "style": null,
+    "text": "Grades A, B, C and D have lower boundaries of 85, 70, 60 and 0, respectively. These thresholds are configured design-review rules and are not calibrated probabilities of external approval. An unresolved recovery, an incomplete required calculation or a failed physical limit state prevents engineering advancement even when the score criterion is met. Zwind is applied to the selected candidate as a final coupled-response check, followed by external AIP review of the resulting dossier.",
+    "images": []
+  },
+  {
+    "order": 144,
+    "type": "paragraph",
+    "locator": "P0118",
+    "style": null,
+    "text": "The scoring weights, breakpoints and performance targets are fixed project choices that combine engineering checks with fleet benchmarks. Capacity is assessed relative to the 20 MW design requirement. Steel intensity and unit cost reward material and economic efficiency. Construction time represents a constructability proxy, and fatigue life is assessed against the 25-year design basis. The steel benchmark of 300 t/MW is a demonstration-project target. Standards supply the physical verification requirements, whereas the economic breakpoints and the 0–100 mapping are study-defined. Exact scoring settings, units and source definitions are given in Supplementary Notes 3 and 13.",
+    "images": []
+  },
+  {
+    "order": 145,
+    "type": "paragraph",
+    "locator": "P0119",
+    "style": null,
+    "text": "The reference-fleet comparison uses the ten commissioned entries; TuQiang is the only planned entry and is excluded from the aggregate agreement analysis. Composite scores are calculated from available dimensions, with weights renormalized when required. Spearman correlation is calculated using average ranks for ties, and the mean absolute difference is calculated from paired composite scores. Agreement is defined as both the AI-review and rule-channel scores being at least 60 with an absolute difference not exceeding 15 points.",
+    "images": []
+  },
+  {
+    "order": 146,
+    "type": "paragraph",
+    "locator": "P0120",
+    "style": null,
+    "text": "For the reported reference set, the resulting Spearman correlation is ρ=0.612, the mean absolute difference is 4.0 points, and nine of ten commissioned projects satisfy the agreement criterion. These statistics quantify within-reference-set agreement between the two computational scoring channels. Because the channels share raw inputs and some scoring terms, the uncertainty analysis treats project pairs as the resampling unit. We used 20,000 paired bootstrap replicates, leave-one-project-out recalculation, and separate ±20% perturbations of each dimension weight followed by renormalization. Full numerical results are provided in Supplementary Note 12 and Supplementary Table 11.",
+    "images": []
+  },
+  {
+    "order": 147,
+    "type": "paragraph",
+    "locator": "P0121",
+    "style": null,
+    "text": "The retained candidate score worksheet yields a composite score of 91.2, consistent with the rounded score reported in the main text. Its five sub-scores are 98, 92, 90, 88 and 88. Their weighted contributions are 14.70, 27.60, 22.50, 13.20 and 13.20. The minimum sub-score is 88, so both numerical screening conditions are satisfied. This retained worksheet is reported separately from the fleet-calibration scores and the updated steel-proportional cost estimate.",
+    "images": []
+  },
+  {
+    "order": 148,
+    "type": "paragraph",
+    "locator": "P0122",
+    "style": "2",
+    "text": "External Approval in Principle",
+    "images": []
+  },
+  {
+    "order": 149,
+    "type": "paragraph",
+    "locator": "P0123",
+    "style": null,
+    "text": "External appraisal is deliberately separated from internal candidate screening. The selected candidate was submitted to the China Classification Society (CCS) for formal Approval in Principle (AIP). AIP evaluates the technical feasibility of a design at the concept or preliminary-design stage. It does not replace detailed design approval, type approval, fabrication inspection or final classification.",
+    "images": []
+  },
+  {
+    "order": 150,
+    "type": "paragraph",
+    "locator": "P0124",
+    "style": null,
+    "text": "The reported AIP process comprised four stages.",
+    "images": []
+  },
+  {
+    "order": 151,
+    "type": "paragraph",
+    "locator": "P0125",
+    "style": null,
+    "text": "Preparation: definition of intended use, site conditions, applicable standards and the proposed certification pathway.",
+    "images": []
+  },
+  {
+    "order": 152,
+    "type": "paragraph",
+    "locator": "P0126",
+    "style": null,
+    "text": "Formal application: submission of the required technical dossier, including principal dimensions and general arrangement drawings, key system schematics, intact and damaged hydrostatic-stability assessments, ultimate- and fatigue-limit-state structural calculations, mooring-system analyses, and the list of applicable governing codes.[37,60]",
+    "images": []
+  },
+  {
+    "order": 153,
+    "type": "paragraph",
+    "locator": "P0127",
+    "style": null,
+    "text": "Independent appraisal: CCS experts reviewed the submitted documentation, issued clarification requests, and the submitting team provided supplementary analyses and design revisions. Retained computational artifacts can be used to trace the computational basis of individual responses where the corresponding records are complete.",
+    "images": []
+  },
+  {
+    "order": 154,
+    "type": "paragraph",
+    "locator": "P0128",
+    "style": null,
+    "text": "Final AIP issuance: the certificate was issued after the assessment items had been resolved.",
+    "images": []
+  },
+  {
+    "order": 155,
+    "type": "paragraph",
+    "locator": "P0129",
+    "style": null,
+    "text": "The selected design underwent three rounds of clarification during independent appraisal. Passing AIP therefore provides external concept-level evidence for the submitted candidate and its technical dossier. Internal screening and external appraisal consequently play distinct roles in the framework.",
+    "images": []
+  },
+  {
+    "order": 156,
+    "type": "paragraph",
+    "locator": "P0130",
+    "style": "1",
+    "text": "Statistics and reproducibility",
+    "images": []
+  },
+  {
+    "order": 157,
+    "type": "paragraph",
+    "locator": "P0131",
+    "style": null,
+    "text": "Flagship performance metrics are obtained from the reported engineering analysis campaign. Reference-fleet agreement is calculated from a frozen table of ten commissioned-project score pairs; TuQiang is the only planned entry. Resampling and weight perturbations quantify uncertainty conditional on these retained inputs. They do not propagate unmeasured uncertainty in estimated fleet costs, construction times or steel-mass definitions.",
+    "images": []
+  },
+  {
+    "order": 158,
+    "type": "paragraph",
+    "locator": "P0132",
+    "style": null,
+    "text": "The LLM-controlled workflow was evaluated across multiple random seeds, alongside numerical engineering analyses with verifiable computational outputs. These experiments provide a basis for assessing run-to-run variability and checking candidate designs against the applicable engineering criteria. The agent-evaluation endpoints and reporting definitions are specified in Supplementary Note 14.",
+    "images": []
+  },
+  {
+    "order": 159,
+    "type": "paragraph",
+    "locator": "P0133",
+    "style": null,
+    "text": "Reproducing the deterministic engineering calculations requires the corresponding solver inputs, retained outputs, solver and dependency versions, configuration files and model settings.[38,39] Reproducing the agentic orchestration additionally requires the language-model identifier, system and task prompts, tool schemas, sampling settings and execution-state records.",
+    "images": []
+  },
+  {
+    "order": 160,
+    "type": "paragraph",
+    "locator": "P0134",
+    "style": null,
+    "text": "Available run bundles include CalculiX input and output artifacts, BESO configuration and convergence records, retained Zwind reports, execution logs and associated manifests. The high-fidelity simulation dataset and flagship run bundles will be deposited in Zenodo upon publication. ",
+    "images": []
+  },
+  {
+    "order": 161,
+    "type": "paragraph",
+    "locator": "P0135",
+    "style": null,
+    "text": "The AI Engineer orchestration platform is made available separately, while third-party engineering software remains subject to its respective licensing conditions.",
+    "images": []
+  },
+  {
+    "order": 162,
+    "type": "paragraph",
+    "locator": "P0136",
+    "style": "1",
+    "text": "Data availability",
+    "images": []
+  },
+  {
+    "order": 163,
+    "type": "paragraph",
+    "locator": "P0137",
+    "style": null,
+    "text": "The high-fidelity simulation dataset and all flagship run bundles (INP, VTK, logs, beso_conf.py, Zwind reports) will be deposited in Zenodo with a DOI upon publication. Anonymized artifacts are available from the corresponding author on reasonable request.",
+    "images": []
+  },
+  {
+    "order": 164,
+    "type": "paragraph",
+    "locator": "P0138",
+    "style": "1",
+    "text": "Code availability",
+    "images": []
+  },
+  {
+    "order": 165,
+    "type": "paragraph",
+    "locator": "P0139",
+    "style": null,
+    "text": "The AI Engineer orchestration platform is available at https://github.com/rainbowyuyu/ai_engineer under an open-source license. Third-party solvers (CalculiX 2.21, FreeCAD 0.21+, Gmsh 4.15, Zwind 2.5) follow their respective licenses. Full implementation details, including filter-radius evolution, adaptive mesh refinement strategies, and convergence histories, are provided in Supplementary Notes 1, 5 and 10.",
+    "images": []
+  },
+  {
+    "order": 166,
+    "type": "paragraph",
+    "locator": "P0140",
+    "style": "1",
+    "text": "Funding",
+    "images": []
+  },
+  {
+    "order": 167,
+    "type": "paragraph",
+    "locator": "P0141",
+    "style": null,
+    "text": "This work was supported by the Excellent Young Scientists Fund (Overseas), the National Key Research and Development Program of China (Grant No. 2023YFB4203302), the National Natural Science Foundation of China (52409144, 52238008), and “Pioneer” and “Leading Goose” R&D Program of Zhejiang (2025C01172).",
+    "images": []
+  },
+  {
+    "order": 168,
+    "type": "paragraph",
+    "locator": "P0142",
+    "style": "1",
+    "text": "Author contributions",
+    "images": []
+  },
+  {
+    "order": 169,
+    "type": "paragraph",
+    "locator": "P0143",
+    "style": null,
+    "text": "LL.W. and LZ.W. conceived the study, designed the research framework, developed the methodology, revised the manuscript, provided overall guidance and strong support for this study. LZ.W. is also Chief Scientist of TuQiang demonstration project. TY. Y. contributed to large language model part of the AI Engineer, whilst CX.T. contributed to optimization part and time domain verification of the AI Engineer. HX.S., HY.L., RG. C. and L.T. supported CX.T. to conduct optimization work and Zwind-based verification work. As the chief engineer of TuQiang foundation, Y.L. offered the design information of TuQiang demonstration project. All authors reviewed and approved the final manuscript.",
+    "images": []
+  },
+  {
+    "order": 170,
+    "type": "paragraph",
+    "locator": "P0144",
+    "style": "1",
+    "text": "Competing interests",
+    "images": []
+  },
+  {
+    "order": 171,
+    "type": "paragraph",
+    "locator": "P0145",
+    "style": null,
+    "text": "The authors of this paper are applying for national and international patents.",
+    "images": []
+  },
+  {
+    "order": 172,
+    "type": "paragraph",
+    "locator": "P0146",
+    "style": "1",
+    "text": "References",
+    "images": []
+  },
+  {
+    "order": 173,
+    "type": "paragraph",
+    "locator": "P0147",
+    "style": "Reference",
+    "text": "[1] Ohta, M. et al. Development of a V-shaped semi-submersible floating structure for 7MW offshore wind turbine. Proc. Int. Symp. Mar. Offshore Renew. Energy (2013).",
+    "images": []
+  },
+  {
+    "order": 174,
+    "type": "paragraph",
+    "locator": "P0148",
+    "style": "Reference",
+    "text": "[2] Qaiser, M. T. et al. Digital twin-driven energy modeling of Hywind Tampen floating wind farm. Energy Reports 9, 284–289 (2023). https://doi.org/10.1016/j.egyr.2023.09.023",
+    "images": []
+  },
+  {
+    "order": 175,
+    "type": "paragraph",
+    "locator": "P0149",
+    "style": "Reference",
+    "text": "[3] Robertson, A. et al. Offshore Code Comparison Collaboration Continuation Within IEA Wind Task 30: Phase II Results Regarding a Floating Semisubmersible Wind System. In Proc. ASME 2014 33rd International Conference on Ocean, Offshore and Arctic Engineering, Vol. 9B, V09BT09A012 (ASME, 2014). https://doi.org/10.1115/OMAE2014-24040",
+    "images": []
+  },
+  {
+    "order": 176,
+    "type": "paragraph",
+    "locator": "P0150",
+    "style": "Reference",
+    "text": "[4] Zienkiewicz, O. C., Taylor, R. L. & Zhu, J. Z. The Finite Element Method: Its Basis and Fundamentals (Elsevier, 2005).",
+    "images": []
+  },
+  {
+    "order": 177,
+    "type": "paragraph",
+    "locator": "P0151",
+    "style": "Reference",
+    "text": "[5] Katsikadelis, J. T. Boundary Elements: Theory and Applications (Elsevier, 2016).",
+    "images": []
+  },
+  {
+    "order": 178,
+    "type": "paragraph",
+    "locator": "P0152",
+    "style": "Reference",
+    "text": "[6] Shabana, A. A. Dynamics of Multibody Systems (Cambridge Univ. Press, 2020). https://doi.org/10.1017/9781108757553",
+    "images": []
+  },
+  {
+    "order": 179,
+    "type": "paragraph",
+    "locator": "P0153",
+    "style": "Reference",
+    "text": "[7] FreeCAD Team. FreeCAD: An open-source parametric 3D CAD modeler. Available online: https://www.freecadweb.org (2026).",
+    "images": []
+  },
+  {
+    "order": 180,
+    "type": "paragraph",
+    "locator": "P0154",
+    "style": "Reference",
+    "text": "[8] Geuzaine, C. & Remacle, J. F. Gmsh: A 3-D finite element mesh generator with built-in pre- and post-processing facilities. Int. J. Numer. Meth. Eng. 79, 1309–1331 (2009). https://doi.org/10.1002/nme.2579",
+    "images": []
+  },
+  {
+    "order": 181,
+    "type": "paragraph",
+    "locator": "P0155",
+    "style": "Reference",
+    "text": "[9] Bathe, K. J. Finite Element Procedures (Klaus-Jürgen Bathe, 2006).",
+    "images": []
+  },
+  {
+    "order": 182,
+    "type": "paragraph",
+    "locator": "P0156",
+    "style": "Reference",
+    "text": "[10] Cordle, A. & Jonkman, J. State of the Art in Floating Wind Turbine Design Tools. Report NREL/CP-5000-50543 (National Renewable Energy Laboratory, 2011).",
+    "images": []
+  },
+  {
+    "order": 183,
+    "type": "paragraph",
+    "locator": "P0157",
+    "style": "Reference",
+    "text": "[11] API. API RP 2A-WSD: Planning, Designing, and Constructing Fixed Offshore Platforms (2014).",
+    "images": []
+  },
+  {
+    "order": 184,
+    "type": "paragraph",
+    "locator": "P0158",
+    "style": "Reference",
+    "text": "[12] Sutton, R. S. & Barto, A. G. Reinforcement Learning: An Introduction (MIT Press, 2018).",
+    "images": []
+  },
+  {
+    "order": 185,
+    "type": "paragraph",
+    "locator": "P0159",
+    "style": "Reference",
+    "text": "[13] Shahriari, B., Swersky, K., Wang, Z., Adams, R. P. & de Freitas, N. Taking the human out of the loop: a review of Bayesian optimization. Proc. IEEE 104, 148–175 (2016). https://doi.org/10.1109/jproc.2015.2494218",
+    "images": []
+  },
+  {
+    "order": 186,
+    "type": "paragraph",
+    "locator": "P0160",
+    "style": "Reference",
+    "text": "[14] Wang, L., Kolios, A., Liu, X., Venetsanos, D. & Cai, R. Reliability of offshore wind turbine support structures: a state-of-the-art review. Renew. Sustain. Energy Rev. 161, 112250 (2022). https://doi.org/10.1016/j.rser.2022.112250",
+    "images": []
+  },
+  {
+    "order": 187,
+    "type": "paragraph",
+    "locator": "P0161",
+    "style": "Reference",
+    "text": "[15] Xia, L., Xia, Q., Huang, X. & Xie, Y. M. Bi-directional evolutionary structural optimization on advanced structures and materials: A comprehensive review. Arch. Comput. Methods Eng. 25, 437–478 (2018). https://doi.org/10.1007/s11831-016-9203-2",
+    "images": []
+  },
+  {
+    "order": 188,
+    "type": "paragraph",
+    "locator": "P0162",
+    "style": "Reference",
+    "text": "[16] Dhondt, G. The Finite Element Method for Three-Dimensional Thermomechanical Applications (John Wiley & Sons, 2004). https://doi.org/10.1002/0470021217",
+    "images": []
+  },
+  {
+    "order": 189,
+    "type": "paragraph",
+    "locator": "P0163",
+    "style": "Reference",
+    "text": "[17] Boggs, P. T. & Tolle, J. W. Sequential quadratic programming. Acta Numer. 4, 1–51 (1995). https://doi.org/10.1017/s0962492900002518",
+    "images": []
+  },
+  {
+    "order": 190,
+    "type": "paragraph",
+    "locator": "P0164",
+    "style": "Reference",
+    "text": "[18] Teng, L., Xu, H., Wang, L., Wang, L. & Guo, Z. Interactive validation of real-time hybrid model test for FOWTs using an aero-hydro-servo multibody program Zwind. Mar. Struct. 108, 104050 (2026). https://doi.org/10.1016/j.marstruc.2026.104050",
+    "images": []
+  },
+  {
+    "order": 191,
+    "type": "paragraph",
+    "locator": "P0165",
+    "style": "Reference",
+    "text": "[19] Mallapaty, S. How China could be carbon neutral by mid-century. Nature 586, 482–483 (2020). https://doi.org/10.1038/d41586-020-02927-9",
+    "images": []
+  },
+  {
+    "order": 192,
+    "type": "paragraph",
+    "locator": "P0166",
+    "style": "Reference",
+    "text": "[20] National Energy Administration. Construction begins on the world’s largest single-unit floating wind turbine [in Chinese]. National Energy Administration (22 May 2026). https://www.nea.gov.cn/20260522/7cf96e984e124058922e2513523e8581/c.html (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 193,
+    "type": "paragraph",
+    "locator": "P0167",
+    "style": "Reference",
+    "text": "[21] Ministry of Science and Technology of China (MOST). Guidelines for the National Key R&D Program: Renewable Energy and Hydrogen Energy Technologies (2023).",
+    "images": []
+  },
+  {
+    "order": 194,
+    "type": "paragraph",
+    "locator": "P0168",
+    "style": "Reference",
+    "text": "[22] Jang, K.-H. & Ryu, K.-W. Blade design and aerodynamic performance analysis of a 20 MW wind turbine for LCoE reduction. Energies 16, 5169 (2023). https://doi.org/10.3390/en16135169",
+    "images": []
+  },
+  {
+    "order": 195,
+    "type": "paragraph",
+    "locator": "P0169",
+    "style": "Reference",
+    "text": "[23] DNV. DNVGL-RP-C203: Fatigue design of offshore steel structures (2016).",
+    "images": []
+  },
+  {
+    "order": 196,
+    "type": "paragraph",
+    "locator": "P0170",
+    "style": "Reference",
+    "text": "[24] DNV GL. DNVGL-RP-0286: Coupled analysis of floating wind turbines (2019).",
+    "images": []
+  },
+  {
+    "order": 197,
+    "type": "paragraph",
+    "locator": "P0171",
+    "style": "Reference",
+    "text": "[25] Roddier, D. et al. WindFloat: A floating foundation for offshore wind turbines. J. Renew. Sustain. Energy 2, 033104 (2010). https://doi.org/10.1063/1.3435339",
+    "images": []
+  },
+  {
+    "order": 198,
+    "type": "paragraph",
+    "locator": "P0172",
+    "style": "Reference",
+    "text": "[26] Duarte, T. et al. Windfloat atlantic project: Technology development towards commercial wind farms. Offshore Technol. Conf. (2022). https://doi.org/10.4043/32058-ms",
+    "images": []
+  },
+  {
+    "order": 199,
+    "type": "paragraph",
+    "locator": "P0173",
+    "style": "Reference",
+    "text": "[27] Principle Power. KOWL: World’s largest floating windfarm fully operational. Principle Power (19 October 2021). https://www.principlepower.com/news/kowl-worlds-largest-floating-windfarm-fully-operational (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 200,
+    "type": "paragraph",
+    "locator": "P0174",
+    "style": "Reference",
+    "text": "[28] China Three Gorges Renewables. Three Gorges Yinling receives the 2021 Wind Power Leader innovation award [in Chinese]. China Three Gorges Renewables (11 January 2022). https://www.ctgne.com/sxxnychina/1077761/1077661/2024080501001141737/index.html (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 201,
+    "type": "paragraph",
+    "locator": "P0175",
+    "style": "Reference",
+    "text": "[29] National Energy Administration. Fuyao, China’s highest-capacity floating offshore wind installation, prepares for grid connection [in Chinese]. National Energy Administration (24 June 2022). https://www.nea.gov.cn/2022-06/24/c_1310631921.htm (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 202,
+    "type": "paragraph",
+    "locator": "P0176",
+    "style": "Reference",
+    "text": "[30] China National Offshore Oil Corporation. Haiyou Guanlan successfully connects to the grid [in Chinese]. State-owned Assets Supervision and Administration Commission (23 May 2023). http://www.sasac.gov.cn/n2588025/n2588124/c27988362/content.html (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 203,
+    "type": "paragraph",
+    "locator": "P0177",
+    "style": "Reference",
+    "text": "[31] Zou, L. et al. Key innovative technologies of floating wind turbines—taking the world’s largest single-capacity floating wind platform “Mingyang Tiancheng” as an example (in Chinese). J. Tsinghua Univ. (Sci. Technol.) (2025).",
+    "images": []
+  },
+  {
+    "order": 204,
+    "type": "paragraph",
+    "locator": "P0178",
+    "style": "Reference",
+    "text": "[32] China Energy Investment Corporation. World’s first integrated floating wind and aquaculture platform enters operation [in Chinese]. China Energy Investment Corporation (28 June 2024). https://www.ceic.com/gjnyjtww/chnjtyw/202406/63df1a414ec949e9b119b67143b9afc0.shtml (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 205,
+    "type": "paragraph",
+    "locator": "P0179",
+    "style": "Reference",
+    "text": "[33] National Energy Administration. Installation completed for the world’s largest single-unit floating offshore wind platform [in Chinese]. National Energy Administration (8 May 2026). https://www.nea.gov.cn/20260508/6077d3ffe9cb4855b009df84347bfe80/c.html (accessed 3 October 2026).",
+    "images": []
+  },
+  {
+    "order": 206,
+    "type": "paragraph",
+    "locator": "P0180",
+    "style": "Reference",
+    "text": "[34] DNV. DNV-ST-0437: Loads and site conditions for wind turbines (2024).",
+    "images": []
+  },
+  {
+    "order": 207,
+    "type": "paragraph",
+    "locator": "P0181",
+    "style": "Reference",
+    "text": "[35] DNV GL. DNVGL-OS-C301: Stability and watertight integrity (2020).",
+    "images": []
+  },
+  {
+    "order": 208,
+    "type": "paragraph",
+    "locator": "P0182",
+    "style": "Reference",
+    "text": "[36] Zar, J. H. Spearman rank correlation. Encycl. Biostat. (2005). https://doi.org/10.1002/0470011815.b2a15150",
+    "images": []
+  },
+  {
+    "order": 209,
+    "type": "paragraph",
+    "locator": "P0183",
+    "style": "Reference",
+    "text": "[37] CCS. Guidelines for Floating Offshore Wind Turbine Platforms (China Classification Society, 2021).",
+    "images": []
+  },
+  {
+    "order": 210,
+    "type": "paragraph",
+    "locator": "P0184",
+    "style": "Reference",
+    "text": "[38] Stodden, V. et al. Enhancing reproducibility for computational methods. Science 354, 1240–1241 (2016). https://doi.org/10.1126/science.aah6168",
+    "images": []
+  },
+  {
+    "order": 211,
+    "type": "paragraph",
+    "locator": "P0185",
+    "style": "Reference",
+    "text": "[39] Wilkinson, M. D. et al. The FAIR Guiding Principles for scientific data management and stewardship. Sci. Data 3, 160018 (2016). https://doi.org/10.1038/sdata.2016.18",
+    "images": []
+  },
+  {
+    "order": 212,
+    "type": "paragraph",
+    "locator": "P0186",
+    "style": "Reference",
+    "text": "[40] IEC. IEC 61400-3-2: Wind energy generation systems – Part 3-2: Design requirements for floating offshore wind turbines (2025).",
+    "images": []
+  },
+  {
+    "order": 213,
+    "type": "paragraph",
+    "locator": "P0187",
+    "style": "Reference",
+    "text": "[41] Lu, C. et al. Towards end-to-end automation of AI research. Nature 651, 914–919 (2026). https://doi.org/10.1038/s41586-026-10265-5",
+    "images": []
+  },
+  {
+    "order": 214,
+    "type": "paragraph",
+    "locator": "P0188",
+    "style": "Reference",
+    "text": "[42] Aygün, E. et al. An AI system to help scientists write expert-level empirical software. Nature 654, 909–916 (2026). https://doi.org/10.1038/s41586-026-10658-6",
+    "images": []
+  },
+  {
+    "order": 215,
+    "type": "paragraph",
+    "locator": "P0189",
+    "style": "Reference",
+    "text": "[43] Huang, K. et al. Autonomous biomedical research with an artificial intelligence agent. Science 393, eadz4351 (2026). https://doi.org/10.1126/science.adz4351",
+    "images": []
+  },
+  {
+    "order": 216,
+    "type": "paragraph",
+    "locator": "P0190",
+    "style": "Reference",
+    "text": "[44] Ghareeb, A. E. et al. A multi-agent system for automating scientific discovery. Nature 655, 497–505 (2026). https://doi.org/10.1038/s41586-026-10652-y",
+    "images": []
+  },
+  {
+    "order": 217,
+    "type": "paragraph",
+    "locator": "P0191",
+    "style": "Reference",
+    "text": "[45] Gottweis, J. et al. Accelerating scientific discovery with Co-Scientist. Nature 655, 487–496 (2026). https://doi.org/10.1038/s41586-026-10644-y",
+    "images": []
+  },
+  {
+    "order": 218,
+    "type": "paragraph",
+    "locator": "P0192",
+    "style": "Reference",
+    "text": "[46] Boiko, D. A., MacKnight, R., Kline, B. & Gomes, G. Autonomous chemical research with large language models. Nature 624, 570–578 (2023). https://doi.org/10.1038/s41586-023-06792-0",
+    "images": []
+  },
+  {
+    "order": 219,
+    "type": "paragraph",
+    "locator": "P0193",
+    "style": "Reference",
+    "text": "[47] Wang, L. et al. A survey on large language model based autonomous agents. Front. Comput. Sci. 18, 186345 (2024). https://doi.org/10.1007/s11704-024-40231-1",
+    "images": []
+  },
+  {
+    "order": 220,
+    "type": "paragraph",
+    "locator": "P0194",
+    "style": "Reference",
+    "text": "[48] Miao, J., Davis, J. R., Zhang, Y., Pritchard, J. K. & Zou, J. Reimagining research papers as interactive and reliable AI agents. Nature (2026). https://doi.org/10.1038/s41586-026-11044-y",
+    "images": []
+  },
+  {
+    "order": 221,
+    "type": "paragraph",
+    "locator": "P0195",
+    "style": "Reference",
+    "text": "[49] Nature Editorial. Tools such as ChatGPT threaten transparent science; here are our ground rules for their use. Nature 613, 612 (2023). https://doi.org/10.1038/d41586-023-00191-1",
+    "images": []
+  },
+  {
+    "order": 222,
+    "type": "paragraph",
+    "locator": "P0196",
+    "style": "Reference",
+    "text": "[50] Stokel-Walker, C. & Van Noorden, R. What ChatGPT and generative AI mean for science. Nature 614, 214–216 (2023). https://doi.org/10.1038/d41586-023-00340-6",
+    "images": []
+  },
+  {
+    "order": 223,
+    "type": "paragraph",
+    "locator": "P0197",
+    "style": "Reference",
+    "text": "[51] M. Bran, A. et al. Augmenting large language models with chemistry tools. Nat. Mach. Intell. 6, 525–535 (2024). https://doi.org/10.1038/s42256-024-00832-8",
+    "images": []
+  },
+  {
+    "order": 224,
+    "type": "paragraph",
+    "locator": "P0198",
+    "style": "Reference",
+    "text": "[52] McKenna, F., Scott, M. H. & Fenves, G. L. Nonlinear finite-element analysis software architecture using object composition. J. Comput. Civ. Eng. 24, 95–107 (2010). https://doi.org/10.1061/(ASCE)CP.1943-5487.0000002",
+    "images": []
+  },
+  {
+    "order": 225,
+    "type": "paragraph",
+    "locator": "P0199",
+    "style": "Reference",
+    "text": "[53] Hibbeler, R. C. Structural Analysis (Pearson, 2017).",
+    "images": []
+  },
+  {
+    "order": 226,
+    "type": "paragraph",
+    "locator": "P0200",
+    "style": "Reference",
+    "text": "[54] Bendsøe, M. P. & Sigmund, O. Topology Optimization: Theory, Methods, and Applications (Springer, 2003).",
+    "images": []
+  },
+  {
+    "order": 227,
+    "type": "paragraph",
+    "locator": "P0201",
+    "style": "Reference",
+    "text": "[55] Sergiienko, N. Y. et al. Review of scaling laws applied to floating offshore wind turbines. Renew. Sustain. Energy Rev. 162, 112477 (2022). https://doi.org/10.1016/j.rser.2022.112477",
+    "images": []
+  },
+  {
+    "order": 228,
+    "type": "paragraph",
+    "locator": "P0202",
+    "style": "Reference",
+    "text": "[56] Kennedy, J. & Eberhart, R. Particle swarm optimization. Proceedings of ICNN'95 4, 1942–1948 (1995). https://doi.org/10.1109/icnn.1995.488968",
+    "images": []
+  },
+  {
+    "order": 229,
+    "type": "paragraph",
+    "locator": "P0203",
+    "style": "Reference",
+    "text": "[57] DNV. DNV-ST-0119: Floating wind turbine structures (2021).",
+    "images": []
+  },
+  {
+    "order": 230,
+    "type": "paragraph",
+    "locator": "P0204",
+    "style": "Reference",
+    "text": "[58] Hansen, M. O. L. Aerodynamics of Wind Turbines (Routledge, 2015). https://doi.org/10.4324/9781315769981",
+    "images": []
+  },
+  {
+    "order": 231,
+    "type": "paragraph",
+    "locator": "P0205",
+    "style": "Reference",
+    "text": "[59] Faltinsen, O. M. Sea Loads on Ships and Offshore Structures (Cambridge Univ. Press, 1990).",
+    "images": []
+  },
+  {
+    "order": 232,
+    "type": "paragraph",
+    "locator": "P0206",
+    "style": "Reference",
+    "text": "[60] CCS. Rules for Classification of Mobile Offshore Units (China Classification Society, 2023).",
+    "images": []
+  }
+]

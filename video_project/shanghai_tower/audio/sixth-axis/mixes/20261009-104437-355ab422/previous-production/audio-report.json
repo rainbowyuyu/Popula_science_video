@@ -1,0 +1,93 @@
+{
+  "title": "向云生长",
+  "bpm": 88.0,
+  "seed": 2026100817,
+  "durationSeconds": 450.96666666666664,
+  "sampleRate": 48000,
+  "totalSamples": 21646400,
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false,
+  "masterMeasurement": {
+    "input_i": "-15.01",
+    "input_tp": "-1.50",
+    "input_lra": "2.30",
+    "input_thresh": "-25.69",
+    "output_i": "-15.06",
+    "output_tp": "-1.50",
+    "output_lra": "2.40",
+    "output_thresh": "-25.70",
+    "normalization_type": "dynamic",
+    "target_offset": "0.06"
+  },
+  "aacMeasurement": {
+    "input_i": "-15.01",
+    "input_tp": "-1.46",
+    "input_lra": "2.30",
+    "input_thresh": "-25.70",
+    "output_i": "-15.06",
+    "output_tp": "-1.50",
+    "output_lra": "2.40",
+    "output_thresh": "-25.70",
+    "normalization_type": "dynamic",
+    "target_offset": "0.06"
+  },
+  "premasterMeasurement": {
+    "input_i": "-19.76",
+    "input_tp": "-2.47",
+    "input_lra": "2.40",
+    "input_thresh": "-30.44",
+    "output_i": "-15.07",
+    "output_tp": "-1.50",
+    "output_lra": "2.40",
+    "output_thresh": "-25.73",
+    "normalization_type": "dynamic",
+    "target_offset": "0.07"
+  },
+  "voiceOverMusicActiveDB": 17.94698608262149,
+  "hashes": {
+    "narration.wav": "5fca1581b31683470dbbf59da62ca2dcf24eae2fb5eedc46fc130fb7cd2fbb04",
+    "music.wav": "51cd328be486a2dafe02998421358d286897d73db1e5426d88b1738474ea1575",
+    "master.wav": "0bb6c28570d4638ab70661388087cee31925b724d29bbef924b6eeb9d32a4320",
+    "timeline.json": "355ab422fde6ace4c41050a36e5189e024052b58132e9498fcee3cf17f8a10b3"
+  },
+  "originalScoreSHA256": "d756afc87bdf258768966a159c02645b256525499b06d9c411289dbc7ccf7926",
+  "musicSource": "Existing Shanghai Tower original composition retained for working preview; requested Douyin track has not been acquired",
+  "musicReplacementPending": true,
+  "requestedMusic": {
+    "requestedURL": "https://v.douyin.com/hUudVGBOFKE/",
+    "videoID": "7693053715154013455",
+    "resolvedURL": "https://www.douyin.com/video/7693053715154013455?previous_page=app_code_link",
+    "checkedAtUTC": "2026-10-08T14:05:16.667699+00:00",
+    "status": "unavailable_from_public_access",
+    "musicTitle": null,
+    "musicAuthor": null,
+    "musicDurationSeconds": null,
+    "musicID": null,
+    "audioDownloaded": false,
+    "attempts": [
+      {
+        "route": "public desktop share redirect",
+        "outcome": "HTTP 200 platform script page; no music metadata"
+      },
+      {
+        "route": "public mobile share page",
+        "outcome": "HTTP 200 with itemId but no media or music object"
+      },
+      {
+        "route": "normal browser",
+        "outcome": "no CUA browser available"
+      },
+      {
+        "route": "public web detail endpoint",
+        "outcome": "HTTP 403; stopped"
+      },
+      {
+        "route": "legacy public share item endpoint",
+        "outcome": "HTTP 200 empty response"
+      }
+    ],
+    "constraints": "No login, CAPTCHA, DRM, payment or authenticated cookies bypassed. No alternative track identified as requested music.",
+    "nextStep": "Provide a user-accessible downloaded track or normal authenticated browser access; continue independent narration and subtitle work."
+  },
+  "narrationDraft": true
+}

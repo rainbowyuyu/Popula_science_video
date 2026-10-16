@@ -1,0 +1,70 @@
+{
+  "version": "chemistry-v02",
+  "generatedAt": "2026-10-07T22:03:03+08:00",
+  "mode": "plan-only",
+  "deletionPerformed": false,
+  "enabled": false,
+  "gates": [
+    "Completed final render",
+    "Video and audio hashes match QA",
+    "Human motion/listening review recorded",
+    "No live render or generation task using target",
+    "Absolute resolved path remains inside this project"
+  ],
+  "protected": [
+    "src/",
+    "scripts/",
+    "docs/",
+    "research/",
+    "public/",
+    "audio/v02/raw/",
+    "audio/v02/clean/",
+    "audio/v02/master.wav",
+    "audio/v02/music-source.m4a",
+    "delivery/",
+    "output/",
+    "node_modules junction and its target",
+    "External TTS model/reference/processor"
+  ],
+  "candidates": [
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v02-bundle-28800",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v02-bundle-28964",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v02-bundle-77500",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v02-public-28800",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v02-public-28964",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    },
+    {
+      "path": "D:\\python_project\\manim_extend_rainbow\\video_project\\nobel_chemistry_2026\\tmp\\chemistry-v02-public-77500",
+      "reason": "Reproducible per-process Remotion staging cache",
+      "status": "candidate-only-not-deleted"
+    }
+  ],
+  "finalVideo": {
+    "file": "delivery/chemistry2026_v02/2026诺贝尔化学奖_让化学选择同一只手_v02_1080p.mp4",
+    "bytes": 55754109,
+    "sha256": "69c8bc113a91ac1afbb27dfe6f7f7b97f7adc0a3ee6dbea0797d89f1fe3ef934",
+    "decodedAudioSHA256_PCM_s32le": "a09a61f9eb6bd1c7d4d3bad89dae7fd2af8a40da82e241f8db51bd96b5d3fb72",
+    "technicalQA": "delivery/chemistry2026_v02/qa-final/qa-report.json",
+    "technicalStatus": "technical-pass"
+  },
+  "instructions": "Do not apply this plan directly. Refresh after final acceptance; inspect exact paths and preserve selected assets, licenses and rerender dependencies."
+}

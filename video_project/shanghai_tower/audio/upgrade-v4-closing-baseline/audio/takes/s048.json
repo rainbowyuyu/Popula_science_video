@@ -1,0 +1,81 @@
+{
+  "id": "s048",
+  "text": "每天五分钟，认识生活里的新知识。脚下的桩、身边的梁，和云里的重物，一起撑起这座城市的天际线。",
+  "ttsText": "每天五分钟，认识生活里的新知识。脚下的桩、身边的梁，和云里的重物，一起撑起这座城市的天际线。",
+  "signature": "ff51738f65bfbe1a96ad791857c22ce4abd9cf56a534e6ebe1a8b09906b7dd60",
+  "raw": "audio/raw/s048-ff51738f65.wav",
+  "processed": "public/voice/s048.wav",
+  "rawDuration": 8.56,
+  "duration": 8.8,
+  "sha256": "f703886ba1f5059ae4809fc12e2425118791097f3f093db229c246a4bad72692",
+  "seed": 3860115851,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s043",
+    "s048"
+  ],
+  "rawEndpointDB": -95.78832224682824,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "65eddf54e381dad8d2815302f6be743d1c3c512dfe7b1ac84a3267592c731a1b",
+    "outputSha256": "f703886ba1f5059ae4809fc12e2425118791097f3f093db229c246a4bad72692",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.2960461867569997,
+    "input": {
+      "seconds": 8.8,
+      "peakDb": -8.601425513920107,
+      "activeRmsDb": -23.024618405589344,
+      "quietFrameP10Db": -64.92693796009452
+    },
+    "output": {
+      "seconds": 8.8,
+      "peakDb": -4.115967239383685,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.4575246786132
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "5665a2390eceed87f7172ecd0b9449642c72eabdc4dc07a25f57177968aa6949"
+  },
+  "subjectiveListeningChecked": false,
+  "candidateSource": "audio/candidates/v3-pronunciation/s048.wav",
+  "revision": "pronunciation-and-boundaries-v3"
+}

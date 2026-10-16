@@ -1,0 +1,67 @@
+{
+  "id": "s044",
+  "text": "这里的结构布置来自公开论文，缺少施工图的细节做了简化。它能帮我们读懂高楼，但不能代替工程设计。",
+  "ttsText": "这里的结构布置来自公开论文，缺少施工图的细节做了简化。它能帮我们读懂高楼，但不能代替工程设计。",
+  "signature": "5439a0a57fc02c5f29d5e029b8d4a2eba33ad7db2d0f40aa3675db2c27173e8a",
+  "raw": "audio/raw/s044-5439a0a57f.wav",
+  "processed": "public/voice/s044.wav",
+  "rawDuration": 8.720041666666667,
+  "duration": 8.720041666666667,
+  "sha256": "29f9093a4fb84e11d4c9d134cffb53ecb92339bb2a673411d605bac9be9727a1",
+  "seed": 1413062821,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s044"
+  ],
+  "rawEndpointDB": -96.79339426357424,
+  "rawEndpointFlag": false,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "2220d7833d8db93c78c34374cdff05e9e065e0de0a338c7a22966684895e0209",
+    "outputSha256": "29f9093a4fb84e11d4c9d134cffb53ecb92339bb2a673411d605bac9be9727a1",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.2313248850837653,
+    "input": {
+      "seconds": 8.720041666666667,
+      "peakDb": -6.121942937160175,
+      "activeRmsDb": -22.778322097417536,
+      "quietFrameP10Db": -62.4958309202937
+    },
+    "output": {
+      "seconds": 8.720041666666667,
+      "peakDb": -3.6323346638356435,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -61.4208859355621
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "subjectiveListeningChecked": false
+}

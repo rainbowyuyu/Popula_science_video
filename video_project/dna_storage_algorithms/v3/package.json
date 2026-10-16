@@ -1,0 +1,26 @@
+{
+  "name": "dna-storage-cinematic-v3",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "stills": "node scripts/render.mjs --stills",
+    "render": "node scripts/render.mjs --audio",
+    "qa:motion": "node scripts/qa_camera.mjs",
+    "stills:v4": "node scripts/render_v4.mjs --stills",
+    "render:v4": "node scripts/render_v4.mjs --audio",
+    "qa:camera:v4": "node scripts/qa_camera_v4.mjs",
+    "qa:motion:v4": "node scripts/qa_motion_state_v4.mjs",
+    "stills:v5": "node scripts/render_v5.mjs --stills",
+    "render:v5": "node scripts/render_v5.mjs --audio",
+    "qa:camera:v5": "node scripts/qa_camera_v5.mjs",
+    "qa:motion:v5": "node scripts/qa_motion_state_v5.mjs",
+    "qa:timeline:v5": "node scripts/qa_timeline_v5.mjs",
+    "stills:v6": "node scripts/render_v6.mjs --stills",
+    "render:v6": "node scripts/render_v6.mjs --audio",
+    "qa:camera:v6": "node scripts/qa_camera_v6.mjs",
+    "qa:motion:v6": "node scripts/qa_motion_state_v6.mjs",
+    "qa:timeline:v6": "node scripts/qa_timeline_v6.mjs"
+  }
+}

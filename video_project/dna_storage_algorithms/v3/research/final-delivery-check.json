@@ -1,0 +1,64 @@
+{
+  "schema": "rainbow.dna.final-delivery/v3",
+  "checkedAt": "2026-10-11T06:31:59.074661Z",
+  "video": {
+    "path": "delivery/DNA存储_连续数据之旅_V3_1080p.mp4",
+    "sha256": "133e9b61617770962eaef5647497553fc9bd88f46dcabf2caf127e6d8cb44af8",
+    "bytes": 96008716,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 9000,
+    "durationSec": 300
+  },
+  "audio": {
+    "path": "public/audio/master.wav",
+    "sampleRate": 48000,
+    "channels": 2,
+    "durationSec": 300,
+    "loudness": "approximately -16 LUFS; see research/audio-qa.json"
+  },
+  "checks": {
+    "qa_timeline": {
+      "status": "pass",
+      "checks": 522,
+      "captionCoverage": 0.9996347476715164,
+      "minimumCueCoverage": 0.9882352941176471
+    },
+    "qa_camera": {
+      "status": "PASS",
+      "samples": 9001,
+      "errors": []
+    },
+    "qa_motion_state_v3": {
+      "status": "PASS",
+      "testedFrames": 9000,
+      "failures": [],
+      "topJumps": []
+    },
+    "qa_teaching": {
+      "status": "passed",
+      "checks": 14,
+      "failed": []
+    }
+  },
+  "visualReview": {
+    "representativeContactSheet": "work/final-contact-15s.jpg",
+    "transitionSheet": "work/transition-final-114-122.jpg",
+    "result": "pass",
+    "scope": "representative frames and key bridge only"
+  },
+  "retainedFallback": "../v2/delivery/DNA存储与生信算法_V2_1080p.mp4",
+  "cleaned": [],
+  "notes": [
+    "All generated and artistic assets are source-tagged in research/asset-usage.json.",
+    "No root-level or other video-project files were deleted."
+  ],
+  "cleanup": {
+    "status": "blocked-by-policy",
+    "target": "tmp-bundle",
+    "bytes": 760812682,
+    "preserved": true,
+    "reason": "Automatic approval review rejected deletion; no retry or workaround attempted."
+  }
+}

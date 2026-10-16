@@ -1,0 +1,81 @@
+{
+  "id": "s001",
+  "text": "上海中心，六百三十二米。先把这座楼拆开，摊在眼前。看着像一排排重复的构件，其实每一组都有自己的位置和任务。名字旁边写着它来自哪一段、站在哪个位置，合起来，就是这栋楼的骨架。",
+  "ttsText": "上海中心，六百三十二米。先把这座楼拆开，摊在眼前。看着像一排排重复的构件，其实每一组都有自己的位置和任务。名字旁边写着它来自哪一段、站在哪个位置，合起来，就是这栋楼的骨架。",
+  "signature": "5d6a20a7f2db228b8de0a6084073fb94a7ca9a535892451cf527c57736a3a61f",
+  "raw": "audio/raw/s001-5d6a20a7f2.wav",
+  "processed": "public/voice/s001.wav",
+  "rawDuration": 15.440041666666668,
+  "duration": 15.680041666666666,
+  "sha256": "9875041017ebc8c0b65fb53cb955fcd64ac89b0bf904046b6e2df80ff259b41d",
+  "seed": 1567236263,
+  "attempt": 2,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s001",
+    "s003",
+    "s004"
+  ],
+  "rawEndpointDB": -53.780615240911295,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "6e146032bb409443406b2e532c5d374dfe8237b31648b71793e64a7bc76b2bc0",
+    "outputSha256": "9875041017ebc8c0b65fb53cb955fcd64ac89b0bf904046b6e2df80ff259b41d",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 2.7186699449185525,
+    "input": {
+      "seconds": 15.680041666666666,
+      "peakDb": -6.398059584068689,
+      "activeRmsDb": -22.521503106462927,
+      "quietFrameP10Db": -62.58770255112989
+    },
+    "output": {
+      "seconds": 15.680041666666666,
+      "peakDb": -3.644662120299138,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -62.80047176974705
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "e52d8600d7b1ce0fbd7bb56ed2049ee535c8b426ef5106b601f2545ace890303"
+  },
+  "subjectiveListeningChecked": false,
+  "selectedCandidate": "v8-atlas-refine"
+}

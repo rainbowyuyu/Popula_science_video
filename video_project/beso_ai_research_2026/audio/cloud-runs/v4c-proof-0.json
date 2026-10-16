@@ -1,0 +1,187 @@
+{
+  "id": "v4c-proof-0",
+  "model": "qwen3-tts-flash-realtime",
+  "voiceId": "Ethan",
+  "text": "价值也要经得起复查。论文案例中，单位功率用钢量减少约百分之八点一。",
+  "settings": {
+    "mode": "server_commit",
+    "responseFormat": "pcm",
+    "sampleRate": 24000,
+    "languageType": "auto",
+    "speechRate": 1.04,
+    "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。"
+  },
+  "elapsedSeconds": 1.9380000000019209,
+  "events": [
+    {
+      "event_id": "event_NyhvIwCxk1bCjkQZtbyCB",
+      "type": "session.created",
+      "session": {
+        "object": "realtime.session",
+        "mode": "server_commit",
+        "model": "qwen3-tts-flash-realtime",
+        "voice": "Cherry",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "id": "sess_RXBNW9o1j6jLxNLsM7iJa"
+      }
+    },
+    {
+      "event_id": "event_RGdNHMyP12KX5yFPQu8F4",
+      "type": "session.updated",
+      "session": {
+        "id": "sess_RXBNW9o1j6jLxNLsM7iJa",
+        "object": "realtime.session",
+        "model": "qwen3-tts-flash-realtime",
+        "instructions": "自然、清晰、有节奏的工程发布片解说，音色温暖稳定，英文名称用英文读，不夸张，不播音腔。",
+        "voice": "Ethan",
+        "mode": "server_commit",
+        "response_format": "pcm",
+        "sample_rate": 24000,
+        "speech_rate": 1.04,
+        "language_type": "auto",
+        "optimize_instructions": false
+      }
+    },
+    {
+      "event_id": "event_XtcSjPnpK3yP3AmizxQ8Y",
+      "type": "response.created",
+      "response": {
+        "id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+        "object": "realtime.response",
+        "conversation_id": "",
+        "status": "in_progress",
+        "voice": "Ethan",
+        "output": []
+      }
+    },
+    {
+      "event_id": "event_B247EofaPs1j1L2kjIUfY",
+      "type": "response.output_item.added",
+      "response_id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+      "output_index": 0,
+      "item": {
+        "id": "item_N6pfydE1aQxYFIcasBrPQ",
+        "object": "realtime.item",
+        "type": "message",
+        "status": "in_progress",
+        "role": "assistant",
+        "content": []
+      }
+    },
+    {
+      "event_id": "event_OB5nnSKsal7TEw8VSsdEq",
+      "type": "response.content_part.added",
+      "response_id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+      "item_id": "item_N6pfydE1aQxYFIcasBrPQ",
+      "output_index": 0,
+      "content_index": 0,
+      "part": {
+        "type": "audio",
+        "text": ""
+      }
+    },
+    {
+      "event_id": "event_IS5lMeJZO6UpMNV9a5wG3",
+      "type": "response.audio.done",
+      "response_id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+      "item_id": "item_N6pfydE1aQxYFIcasBrPQ",
+      "output_index": 0,
+      "content_index": 0
+    },
+    {
+      "event_id": "event_Oa6uhPIPuFiSJNtZKGJ5F",
+      "type": "response.content_part.done",
+      "response_id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+      "item_id": "item_N6pfydE1aQxYFIcasBrPQ",
+      "output_index": 0,
+      "content_index": 0,
+      "part": {
+        "type": "audio",
+        "text": ""
+      }
+    },
+    {
+      "event_id": "event_WmnUT1cWau6ozAhYXrGaB",
+      "type": "response.output_item.done",
+      "response_id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+      "output_index": 0,
+      "item": {
+        "id": "item_N6pfydE1aQxYFIcasBrPQ",
+        "object": "realtime.item",
+        "type": "message",
+        "status": "completed",
+        "role": "assistant",
+        "output": {
+          "usage": {
+            "input_tokens": 22,
+            "output_tokens": 86,
+            "total_tokens": 108,
+            "input_tokens_details": {
+              "text_tokens": 22
+            },
+            "output_tokens_details": {
+              "audio_tokens": 86,
+              "text_tokens": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "event_id": "event_STspUKAosxP4EaXY4czVb",
+      "type": "response.done",
+      "response": {
+        "id": "resp_BvmlKC6Vtk7QCs8Vdoa3d",
+        "object": "realtime.response",
+        "conversation_id": "",
+        "status": "completed",
+        "modalities": [
+          "text",
+          "audio"
+        ],
+        "voice": "Ethan",
+        "output": [
+          {
+            "id": "item_N6pfydE1aQxYFIcasBrPQ",
+            "object": "realtime.item",
+            "type": "message",
+            "status": "completed",
+            "role": "assistant",
+            "content": [
+              {
+                "type": "audio",
+                "transcript": ""
+              }
+            ]
+          }
+        ],
+        "usage": {
+          "characters": 63,
+          "total_tokens": 108,
+          "input_tokens": 22,
+          "output_tokens": 86,
+          "input_tokens_details": {
+            "text_tokens": 22
+          },
+          "output_tokens_details": {
+            "text_tokens": 0,
+            "audio_tokens": 86
+          }
+        }
+      }
+    },
+    {
+      "event_id": "event_LWzDp7YZ4AiC84YOFMVIu",
+      "type": "session.finished"
+    },
+    {
+      "type": "transport.close",
+      "code": null,
+      "message": null
+    }
+  ],
+  "credentialSource": "QWEN_API_KEY_BACKUP",
+  "personalReferenceUploaded": false,
+  "voiceSource": "Provider public voice; clone runtime unavailable"
+}

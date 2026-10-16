@@ -1,0 +1,83 @@
+{
+  "id": "h054",
+  "text": "这种信号叫血管紧张素二。它让小动脉收紧，还能促使肾上腺释放醛固酮，通知肾脏多留一点钠。",
+  "ttsText": "这种信号叫血管紧张素二。它让小动脉收紧，还能促使肾上腺释放醛固酮，通知肾脏多留一点钠。",
+  "signature": "18c735dc692b10f64c563b23cc321cd7e855a3f078fae2fca42dccc4814e3047",
+  "storySHA256": "64873048c0037aeb9a59488a795e9d60545e0fefc8adc3da724bcc983981abe6",
+  "raw": "audio/revision-v5/raw/h054-18c735dc692b-3c921f2cde.wav",
+  "processed": "audio/revision-v5/voice/h054.wav",
+  "rawDuration": 9.44,
+  "duration": 9.44,
+  "sampleRate": 48000,
+  "sha256": "9bde12466e56a75cfb8f1945933105be9e00833e6cf09fe9b686a342e939e40f",
+  "rawSHA256": "8ed63a2374ca3ef67846036e084950e2b5eae45a441a978f233da62f0d2e601e",
+  "seed": 1016209196,
+  "batchIds": [
+    "h001",
+    "h022",
+    "h054"
+  ],
+  "batchKey": "3c921f2cdea87aedfb042c1268b6977cea2603e8dad7ea567d68183821c2671c",
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 2048
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "modelIdentitySHA256": "e9c0a497d7d5a79afd5fd6d139332d53a7524fbf5cc22cc1bf16d441ba1dcef3",
+  "packageVersions": {
+    "qwen-tts": "0.1.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.3",
+    "soundfile": "0.14.0"
+  },
+  "processorSHA256": "14cff31437cfd83207428722c3a1355849c9e52fd595e922240ace562976771c",
+  "model": "Qwen3-TTS-0.6B",
+  "rawEndpointDB": -96.98462224760432,
+  "rawEndpointFlag": false,
+  "rawClippedSamples": 0,
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8ed63a2374ca3ef67846036e084950e2b5eae45a441a978f233da62f0d2e601e",
+    "outputSha256": "9bde12466e56a75cfb8f1945933105be9e00833e6cf09fe9b686a342e939e40f",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 3.2406367194144323,
+    "input": {
+      "seconds": 9.44,
+      "peakDb": -8.743238530434482,
+      "activeRmsDb": -23.027772606310407,
+      "quietFrameP10Db": -60.6575176331852
+    },
+    "output": {
+      "seconds": 9.44,
+      "peakDb": -4.607169808490166,
+      "activeRmsDb": -20.999999999999996,
+      "quietFrameP10Db": -60.3559746280154
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false
+  },
+  "voiceSpeedFactor": 1,
+  "subjectiveListeningChecked": false
+}

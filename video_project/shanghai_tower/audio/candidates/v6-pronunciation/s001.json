@@ -1,0 +1,81 @@
+{
+  "id": "s001",
+  "text": "六百三十二米的上海中心，高得像要伸进云里。风一来，这么细长的一栋楼，靠什么站得住？",
+  "ttsText": "六百三十二米的上海中心，高得像要伸进云里。风一来，这么细长的一栋楼，靠什么站得住？",
+  "signature": "c8bc8e732352aeec41e33ce5c6bbda8df9d92a6ed9de7bc4b8b603eec251e041",
+  "raw": "audio/raw/s001-c8bc8e7323.wav",
+  "processed": "audio/candidates/v6-pronunciation/s001.wav",
+  "rawDuration": 7.52,
+  "duration": 7.76,
+  "sha256": "49c9c7a6cc33accbaaf6ad787921cc2039adf3ad267af85dbe7d9ca748b3050a",
+  "seed": 3367800435,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "s001",
+    "s002",
+    "s003",
+    "s004"
+  ],
+  "rawEndpointDB": -96.84669289979917,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "1706c31658883b33e92b277a77ae8a02d79dcf375d654314bc13c4421046c9a5",
+    "outputSha256": "49c9c7a6cc33accbaaf6ad787921cc2039adf3ad267af85dbe7d9ca748b3050a",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 1.7223653003621529,
+    "input": {
+      "seconds": 7.76,
+      "peakDb": -6.701077290965973,
+      "activeRmsDb": -21.447314776502306,
+      "quietFrameP10Db": -62.7199696770565
+    },
+    "output": {
+      "seconds": 7.76,
+      "peakDb": -5.4839263638035085,
+      "activeRmsDb": -21.0,
+      "quietFrameP10Db": -64.62853159415927
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "unmodifiedRawSHA256": "3cd2abed327101c67e071449beebdfe53f2ff1ae5494f8473a8b067b7e236bba"
+  },
+  "subjectiveListeningChecked": false
+}

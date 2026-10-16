@@ -1,0 +1,1759 @@
+{
+  "parts": {
+    "PLINTH": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "PLINTH"
+      ],
+      "field": null,
+      "reason": "Platform is represented by fixed column support conditions; no separate soil/stone plate model or stress."
+    },
+    "STONE_FL": {
+      "category": "base_reaction",
+      "mesh_names": [
+        "STONE_FL"
+      ],
+      "node_ids": [
+        1
+      ],
+      "field": "support reaction N and moment N m; no stone material stress"
+    },
+    "POST_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "POST_FL"
+      ],
+      "native_element_ids": [
+        97,
+        98,
+        99,
+        100,
+        101
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "STONE_FR": {
+      "category": "base_reaction",
+      "mesh_names": [
+        "STONE_FR"
+      ],
+      "node_ids": [
+        2
+      ],
+      "field": "support reaction N and moment N m; no stone material stress"
+    },
+    "POST_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "POST_FR"
+      ],
+      "native_element_ids": [
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "STONE_BL": {
+      "category": "base_reaction",
+      "mesh_names": [
+        "STONE_BL"
+      ],
+      "node_ids": [
+        3
+      ],
+      "field": "support reaction N and moment N m; no stone material stress"
+    },
+    "POST_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "POST_BL"
+      ],
+      "native_element_ids": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "STONE_BR": {
+      "category": "base_reaction",
+      "mesh_names": [
+        "STONE_BR"
+      ],
+      "node_ids": [
+        4
+      ],
+      "field": "support reaction N and moment N m; no stone material stress"
+    },
+    "POST_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "POST_BR"
+      ],
+      "native_element_ids": [
+        124,
+        125,
+        126,
+        127,
+        128
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CROSS_FRONT": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CROSS_FRONT"
+      ],
+      "native_element_ids": [
+        133,
+        134,
+        135,
+        136
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CROSS_BACK": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CROSS_BACK"
+      ],
+      "native_element_ids": [
+        137,
+        138,
+        139,
+        140
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "LONG_LEFT": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "LONG_LEFT"
+      ],
+      "native_element_ids": [
+        141,
+        142,
+        143,
+        144
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "LONG_RIGHT": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "LONG_RIGHT"
+      ],
+      "native_element_ids": [
+        145,
+        146,
+        147,
+        148
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_X_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_X_FL"
+      ],
+      "native_element_ids": [
+        1
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_Y_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_Y_FL"
+      ],
+      "native_element_ids": [
+        2
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_X_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_X_FR"
+      ],
+      "native_element_ids": [
+        3
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_Y_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_Y_FR"
+      ],
+      "native_element_ids": [
+        4
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_X_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_X_BL"
+      ],
+      "native_element_ids": [
+        5
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_Y_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_Y_BL"
+      ],
+      "native_element_ids": [
+        6
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_X_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_X_BR"
+      ],
+      "native_element_ids": [
+        7
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "BRACE_Y_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "BRACE_Y_BR"
+      ],
+      "native_element_ids": [
+        8
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "PEG_X_FL": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_X_FL"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 133,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_Y_FL": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_Y_FL"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 141,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_X_FR": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_X_FR"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 136,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_Y_FR": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_Y_FR"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 145,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_X_BL": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_X_BL"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 137,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_Y_BL": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_Y_BL"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 144,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_X_BR": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_X_BR"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 140,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "PEG_Y_BR": {
+      "category": "connection_hardware_analytic_nominal_demand",
+      "mesh_names": [
+        "PEG_Y_BR"
+      ],
+      "result_file": "peg-connection-demands.json",
+      "field": "nominal average double-shear / timber-bearing demand Pa",
+      "native_element_id": 148,
+      "exclusions": "Not a local contact FE stress field; force-sharing and moment-transfer limitations are explicit in result file."
+    },
+    "DOU_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "DOU_FL"
+      ],
+      "native_element_ids": [
+        102
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_X_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_X_FL"
+      ],
+      "native_element_ids": [
+        103
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_Y_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_Y_FL"
+      ],
+      "native_element_ids": [
+        104
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CAP_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CAP_FL"
+      ],
+      "native_element_ids": [
+        105
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "DOU_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "DOU_FR"
+      ],
+      "native_element_ids": [
+        111
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_X_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_X_FR"
+      ],
+      "native_element_ids": [
+        112
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_Y_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_Y_FR"
+      ],
+      "native_element_ids": [
+        113
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CAP_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CAP_FR"
+      ],
+      "native_element_ids": [
+        114
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "DOU_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "DOU_BL"
+      ],
+      "native_element_ids": [
+        120
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_X_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_X_BL"
+      ],
+      "native_element_ids": [
+        121
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_Y_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_Y_BL"
+      ],
+      "native_element_ids": [
+        122
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CAP_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CAP_BL"
+      ],
+      "native_element_ids": [
+        123
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "DOU_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "DOU_BR"
+      ],
+      "native_element_ids": [
+        129
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_X_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_X_BR"
+      ],
+      "native_element_ids": [
+        130
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "GONG_Y_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "GONG_Y_BR"
+      ],
+      "native_element_ids": [
+        131
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CAP_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CAP_BR"
+      ],
+      "native_element_ids": [
+        132
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "PURLIN_X_FRONT": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "PURLIN_X_FRONT"
+      ],
+      "native_element_ids": [
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "PURLIN_X_BACK": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "PURLIN_X_BACK"
+      ],
+      "native_element_ids": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "PURLIN_Y_LEFT": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "PURLIN_Y_LEFT"
+      ],
+      "native_element_ids": [
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "PURLIN_Y_RIGHT": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "PURLIN_Y_RIGHT"
+      ],
+      "native_element_ids": [
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "SUPPORT_X": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "SUPPORT_X"
+      ],
+      "native_element_ids": [
+        197,
+        198
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "SUPPORT_Y": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "SUPPORT_Y"
+      ],
+      "native_element_ids": [
+        199,
+        200
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "CENTRE_POST": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "CENTRE_POST"
+      ],
+      "native_element_ids": [
+        201
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "HUB": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "HUB"
+      ],
+      "native_element_ids": [
+        202
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "HIP_FL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "HIP_FL"
+      ],
+      "native_element_ids": [
+        203,
+        204,
+        205,
+        206,
+        207,
+        208
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "HIP_FR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "HIP_FR"
+      ],
+      "native_element_ids": [
+        209,
+        210,
+        211,
+        212,
+        213,
+        214
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "HIP_BL": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "HIP_BL"
+      ],
+      "native_element_ids": [
+        215,
+        216,
+        217,
+        218,
+        219,
+        220
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "HIP_BR": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "HIP_BR"
+      ],
+      "native_element_ids": [
+        221,
+        222,
+        223,
+        224,
+        225,
+        226
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_00": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_00"
+      ],
+      "native_element_ids": [
+        9,
+        10
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_01": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_01"
+      ],
+      "native_element_ids": [
+        11,
+        12
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_02": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_02"
+      ],
+      "native_element_ids": [
+        13,
+        14
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_03": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_03"
+      ],
+      "native_element_ids": [
+        15,
+        16
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_04": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_04"
+      ],
+      "native_element_ids": [
+        17,
+        18
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_05": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_05"
+      ],
+      "native_element_ids": [
+        19,
+        20
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_06": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_06"
+      ],
+      "native_element_ids": [
+        21,
+        22
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_07": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_07"
+      ],
+      "native_element_ids": [
+        23,
+        24
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_08": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_08"
+      ],
+      "native_element_ids": [
+        25,
+        26
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_09": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_09"
+      ],
+      "native_element_ids": [
+        27,
+        28
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_0_10": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_0_10"
+      ],
+      "native_element_ids": [
+        29,
+        30
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_00": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_00"
+      ],
+      "native_element_ids": [
+        31,
+        32
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_01": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_01"
+      ],
+      "native_element_ids": [
+        33,
+        34
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_02": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_02"
+      ],
+      "native_element_ids": [
+        35,
+        36
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_03": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_03"
+      ],
+      "native_element_ids": [
+        37,
+        38
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_04": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_04"
+      ],
+      "native_element_ids": [
+        39,
+        40
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_05": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_05"
+      ],
+      "native_element_ids": [
+        41,
+        42
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_06": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_06"
+      ],
+      "native_element_ids": [
+        43,
+        44
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_07": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_07"
+      ],
+      "native_element_ids": [
+        45,
+        46
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_08": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_08"
+      ],
+      "native_element_ids": [
+        47,
+        48
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_09": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_09"
+      ],
+      "native_element_ids": [
+        49,
+        50
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_1_10": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_1_10"
+      ],
+      "native_element_ids": [
+        51,
+        52
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_00": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_00"
+      ],
+      "native_element_ids": [
+        53,
+        54
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_01": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_01"
+      ],
+      "native_element_ids": [
+        55,
+        56
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_02": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_02"
+      ],
+      "native_element_ids": [
+        57,
+        58
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_03": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_03"
+      ],
+      "native_element_ids": [
+        59,
+        60
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_04": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_04"
+      ],
+      "native_element_ids": [
+        61,
+        62
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_05": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_05"
+      ],
+      "native_element_ids": [
+        63,
+        64
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_06": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_06"
+      ],
+      "native_element_ids": [
+        65,
+        66
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_07": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_07"
+      ],
+      "native_element_ids": [
+        67,
+        68
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_08": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_08"
+      ],
+      "native_element_ids": [
+        69,
+        70
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_09": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_09"
+      ],
+      "native_element_ids": [
+        71,
+        72
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_2_10": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_2_10"
+      ],
+      "native_element_ids": [
+        73,
+        74
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_00": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_00"
+      ],
+      "native_element_ids": [
+        75,
+        76
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_01": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_01"
+      ],
+      "native_element_ids": [
+        77,
+        78
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_02": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_02"
+      ],
+      "native_element_ids": [
+        79,
+        80
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_03": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_03"
+      ],
+      "native_element_ids": [
+        81,
+        82
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_04": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_04"
+      ],
+      "native_element_ids": [
+        83,
+        84
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_05": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_05"
+      ],
+      "native_element_ids": [
+        85,
+        86
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_06": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_06"
+      ],
+      "native_element_ids": [
+        87,
+        88
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_07": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_07"
+      ],
+      "native_element_ids": [
+        89,
+        90
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_08": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_08"
+      ],
+      "native_element_ids": [
+        91,
+        92
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_09": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_09"
+      ],
+      "native_element_ids": [
+        93,
+        94
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "RAF_3_10": {
+      "category": "beam_solve",
+      "mesh_names": [
+        "RAF_3_10"
+      ],
+      "native_element_ids": [
+        95,
+        96
+      ],
+      "field": "beam-section axial plus bending normal-stress envelope Pa",
+      "inverse": "true_native_result and recovered_native_result members[part_id]",
+      "exclusions": "Not local mortise, peg, bearing, or contact stress; no fracture/strength verdict."
+    },
+    "DECK_FRONT": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "DECK_FRONT"
+      ],
+      "panel_id": "DECK_FRONT",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        37,
+        38,
+        39,
+        42,
+        43,
+        44,
+        47,
+        48,
+        49,
+        52,
+        53,
+        54,
+        57,
+        58,
+        59,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        75,
+        76,
+        77,
+        80,
+        81,
+        82,
+        85,
+        86,
+        87
+      ]
+    },
+    "TILE_FRONT": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "TILE_FRONT"
+      ],
+      "panel_id": "DECK_FRONT",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        37,
+        38,
+        39,
+        42,
+        43,
+        44,
+        47,
+        48,
+        49,
+        52,
+        53,
+        54,
+        57,
+        58,
+        59,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        75,
+        76,
+        77,
+        80,
+        81,
+        82,
+        85,
+        86,
+        87
+      ]
+    },
+    "DECK_RIGHT": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "DECK_RIGHT"
+      ],
+      "panel_id": "DECK_RIGHT",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        90,
+        91,
+        92,
+        94,
+        95,
+        96,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114,
+        115,
+        116,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        133,
+        134,
+        135
+      ]
+    },
+    "TILE_RIGHT": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "TILE_RIGHT"
+      ],
+      "panel_id": "DECK_RIGHT",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        90,
+        91,
+        92,
+        94,
+        95,
+        96,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        106,
+        107,
+        108,
+        110,
+        111,
+        112,
+        114,
+        115,
+        116,
+        118,
+        119,
+        120,
+        123,
+        124,
+        125,
+        128,
+        129,
+        130,
+        133,
+        134,
+        135
+      ]
+    },
+    "DECK_BACK": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "DECK_BACK"
+      ],
+      "panel_id": "DECK_BACK",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        138,
+        139,
+        140,
+        143,
+        144,
+        145,
+        148,
+        149,
+        150,
+        153,
+        154,
+        155,
+        158,
+        159,
+        160,
+        162,
+        163,
+        164,
+        166,
+        167,
+        168,
+        170,
+        171,
+        172,
+        174,
+        175,
+        176,
+        178,
+        179,
+        180,
+        182,
+        183,
+        184
+      ]
+    },
+    "TILE_BACK": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "TILE_BACK"
+      ],
+      "panel_id": "DECK_BACK",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        138,
+        139,
+        140,
+        143,
+        144,
+        145,
+        148,
+        149,
+        150,
+        153,
+        154,
+        155,
+        158,
+        159,
+        160,
+        162,
+        163,
+        164,
+        166,
+        167,
+        168,
+        170,
+        171,
+        172,
+        174,
+        175,
+        176,
+        178,
+        179,
+        180,
+        182,
+        183,
+        184
+      ]
+    },
+    "DECK_LEFT": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "DECK_LEFT"
+      ],
+      "panel_id": "DECK_LEFT",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        186,
+        187,
+        188,
+        190,
+        191,
+        192,
+        194,
+        195,
+        196,
+        198,
+        199,
+        200,
+        202,
+        203,
+        204,
+        206,
+        207,
+        208,
+        210,
+        211,
+        212,
+        214,
+        215,
+        216,
+        218,
+        219,
+        220,
+        222,
+        223,
+        224,
+        226,
+        227,
+        228
+      ]
+    },
+    "TILE_LEFT": {
+      "category": "pressure_panel",
+      "mesh_names": [
+        "TILE_LEFT"
+      ],
+      "panel_id": "DECK_LEFT",
+      "field": "imposed uniform pressure Pa, tributary mass; no local shell stress",
+      "support_nodes": [
+        186,
+        187,
+        188,
+        190,
+        191,
+        192,
+        194,
+        195,
+        196,
+        198,
+        199,
+        200,
+        202,
+        203,
+        204,
+        206,
+        207,
+        208,
+        210,
+        211,
+        212,
+        214,
+        215,
+        216,
+        218,
+        219,
+        220,
+        222,
+        223,
+        224,
+        226,
+        227,
+        228
+      ]
+    },
+    "FINIAL": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "FINIAL"
+      ],
+      "field": null,
+      "reason": "Apex ornamental finial is outside the primary timber frame; mass included only in the uniform roof allowance, no local finial stress."
+    },
+    "RAIL_BACK_0": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "RAIL_BACK_0"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    },
+    "RAIL_BACK_1": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "RAIL_BACK_1"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    },
+    "BALUSTER_00": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "BALUSTER_00"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    },
+    "BALUSTER_01": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "BALUSTER_01"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    },
+    "BALUSTER_02": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "BALUSTER_02"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    },
+    "BALUSTER_03": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "BALUSTER_03"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    },
+    "BALUSTER_04": {
+      "category": "nonprimary_component_not_solved",
+      "mesh_names": [
+        "BALUSTER_04"
+      ],
+      "field": null,
+      "reason": "Railing/baluster self-supporting enclosure is outside the roof-to-column wind/gravity system; railing-specific human horizontal loads and connection checks are not included."
+    }
+  },
+  "counts": {
+    "nonprimary_component_not_solved": 9,
+    "base_reaction": 4,
+    "beam_solve": 88,
+    "connection_hardware_analytic_nominal_demand": 8,
+    "pressure_panel": 8
+  },
+  "known_native_part_count": 88,
+  "mapped_visible_parts": 117,
+  "all_native_parts_mapped": true,
+  "rendering_rule": "Use beam solve stress only on mapped beam parts; pressure color on panels must be separately labeled. Unsupported parts remain neutral.",
+  "provenance": {
+    "native_module": "D:\\Zwind_example\\Zwind_example\\1\\Zwind_example\\.venv\\Lib\\site-packages\\zdynpywin\\zdyn.pyd",
+    "native_version": "3.7.2",
+    "native_sha256": "272a9ca377411d4986bc5733f541dbf4ef0974846ac1b9d86e5627f784b81933",
+    "input": "D:\\python_project\\manim_extend_rainbow\\video_project\\topology_optimization\\research\\episode3v7\\frame-contract.json",
+    "input_sha256": "b0ab69efea4bb1cbf123fe789385766e72b2c43fdde10a983d6d83d957d0c733",
+    "script_sha256": "194fe048652a57c720511a42de2aba4237ca4b70f206b537d06bdee9ec76161c",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "provisional": false
+  },
+  "connection_demand_extension": {
+    "file": "peg-connection-demands.json",
+    "sha256": "b273968bb4e6db56d6bd0f0b836e4a529be119dc6f105140198af6cf063ecc35"
+  }
+}

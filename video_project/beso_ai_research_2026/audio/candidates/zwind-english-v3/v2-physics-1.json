@@ -1,0 +1,79 @@
+{
+  "id": "v2-physics-1",
+  "text": "Z-wind 求解风浪和缆绳共同作用下，平台的运动响应。",
+  "ttsText": "Z-wind 求解风浪和缆绳共同作用下，平台的运动响应。",
+  "signature": "3899a7e7d9cf6da72207c0f99024fa60df8cb8e2a48a0380210d423eff9bab94",
+  "raw": "audio/raw/v2-physics-1-3899a7e7d9.wav",
+  "processed": "audio/candidates/zwind-english-v3/v2-physics-1.wav",
+  "rawDuration": 6.08,
+  "duration": 6.32,
+  "sha256": "91fc007200b5aef84e57b8cfc5f03e948bad2490880fb5c0d4e69b5b5186f63f",
+  "seed": 949594087,
+  "attempt": 4,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "v2-physics-1"
+  ],
+  "rawEndpointDB": -96.43400294029934,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "8423e17460183ad9ec30b787bc7c3269d07e15de4bf5f6730eea378d8a57e567",
+    "outputSha256": "91fc007200b5aef84e57b8cfc5f03e948bad2490880fb5c0d4e69b5b5186f63f",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1196,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 6.32,
+      "peakDb": -9.329984833803586,
+      "activeRmsDb": -23.96548831783917,
+      "quietFrameP10Db": -75.06320387772631
+    },
+    "output": {
+      "seconds": 6.32,
+      "peakDb": -6.715581993290303,
+      "activeRmsDb": -21.11752967805282,
+      "quietFrameP10Db": -74.26207584451204
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.8211320754716982,
+    "unmodifiedRawSHA256": "0f9a0a048bf17de555aef44f8e3412650e5f948e66cf8583c2a876a851eea75a"
+  },
+  "subjectiveListeningChecked": false
+}

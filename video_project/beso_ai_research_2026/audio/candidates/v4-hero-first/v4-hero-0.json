@@ -1,0 +1,80 @@
+{
+  "id": "v4-hero-0",
+  "text": "设计一座二十兆瓦浮式风机平台。从一句需求，走进真实工程。",
+  "ttsText": "设计一座二十兆瓦浮式风机平台。从一句需求，走进真实工程。",
+  "signature": "6f018b179a45aab9d32994198b35a6be63839c9c5b846ab5ddf40b9858679d18",
+  "raw": "audio/raw/v4-hero-0-6f018b179a.wav",
+  "processed": "public/voice/v4-hero-0.wav",
+  "rawDuration": 5.52,
+  "duration": 5.76,
+  "sha256": "195079ba9bf3a2c544ed1a6b3692fa8feaefbdbd4c536c4d4bf8cfe0b640d892",
+  "seed": 1862372119,
+  "attempt": 1,
+  "settings": {
+    "temperature": 0.3,
+    "top_p": 0.82,
+    "repetition_penalty": 1.05,
+    "non_streaming_mode": true,
+    "max_new_tokens": 1536
+  },
+  "referenceSHA256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+  "referenceTextSHA256": "a40d67ee6d00cc89a12b9bc769bc49b357d1735c42e4ccec8a7a382298f7e75f",
+  "model": "Qwen3-TTS-0.6B",
+  "batchIds": [
+    "v4-hero-0",
+    "v4-brief-1"
+  ],
+  "rawEndpointDB": -82.81465372537873,
+  "rawEndpointFlag": false,
+  "edgeGuards": {
+    "leadSeconds": 0.08,
+    "tailSeconds": 0.16,
+    "version": "source-edge-guard-v3"
+  },
+  "processing": {
+    "profile": {
+      "name": "rainbow-narration-v2",
+      "highpassHz": 65,
+      "lowpassHz": 10600,
+      "noiseReductionDb": 3,
+      "noiseFloorDb": -55,
+      "adaptiveNoiseTracking": false,
+      "lowMidEqDb": -1.4,
+      "presenceEqDb": 0.7,
+      "deesserIntensity": 0.12,
+      "compressionRatio": 1.65,
+      "edgeFadeMs": 8,
+      "timeStretch": false,
+      "hardGate": false,
+      "targetActiveRmsDb": -21,
+      "maximumClipGainDb": 4
+    },
+    "inputSha256": "9b94a23d53e3fc49bfbf0a265dbe6260e852ec622b223479626d2cf97f06a278",
+    "outputSha256": "195079ba9bf3a2c544ed1a6b3692fa8feaefbdbd4c536c4d4bf8cfe0b640d892",
+    "filter": "highpass=f=65,lowpass=f=10600,afftdn=nr=3:nf=-55:tn=0:gs=8,equalizer=f=240:t=q:w=0.8:g=-1.4,equalizer=f=2700:t=q:w=0.8:g=0.7,deesser=i=0.12:m=0.25:f=0.5,acompressor=threshold=0.16:ratio=1.65:attack=18:release=150:knee=2.2:makeup=1",
+    "measuredLatencySamples": 1200,
+    "gainDb": 4.0,
+    "input": {
+      "seconds": 5.76,
+      "peakDb": -9.366321955072694,
+      "activeRmsDb": -25.601659184642223,
+      "quietFrameP10Db": -66.1663414280539
+    },
+    "output": {
+      "seconds": 5.76,
+      "peakDb": -5.49839663703811,
+      "activeRmsDb": -22.516921000868997,
+      "quietFrameP10Db": -64.67706070469326
+    },
+    "preservedLengthSamples": true,
+    "subjectiveListeningChecked": false,
+    "sourceEdgeGuards": {
+      "leadSeconds": 0.08,
+      "tailSeconds": 0.16,
+      "version": "source-edge-guard-v3"
+    },
+    "linearHeadroomGain": 0.7314285714285714,
+    "unmodifiedRawSHA256": "02832890a1f710dfe86739fc513a48d80035793b94f9db1cc05466a67e528300"
+  },
+  "subjectiveListeningChecked": false
+}

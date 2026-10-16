@@ -1,0 +1,29 @@
+{
+  "name": "zju-marine-energy-episode01",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "render": "node scripts/render.mjs",
+    "stills": "node scripts/render.mjs --stills"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.3.0",
+    "@remotion/bundler": "4.0.526",
+    "@remotion/media": "4.0.526",
+    "@remotion/renderer": "4.0.526",
+    "@remotion/three": "4.0.526",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.526",
+    "three": "^0.183.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "^0.183.0",
+    "typescript": "5.9.3"
+  }
+}

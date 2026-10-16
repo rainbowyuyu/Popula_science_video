@@ -1,0 +1,31 @@
+{
+  "kind": "computed-local-mechanism-demo",
+  "implementations": {
+    "pythonPackage": "cryptography",
+    "version": "49.0.0",
+    "keyAgreement": "X25519",
+    "derivation": "HKDF-SHA256",
+    "authenticatedEncryption": "AES-256-GCM"
+  },
+  "plaintext": "蛋糕少放糖",
+  "publicKeys": {
+    "alice": "1f8b6db9710b7ebd1067123b9bbc9ac7de5c8f5cd132dc4be3b8248c3963016e",
+    "bob": "e472a7af7f1d778c837d46f2dc5cf57a896de7da6a71816db14ae98f33c62946"
+  },
+  "ciphertextAndTagHex": "b064f05b8c6514f1b814f1743a60e51b8bb001a921a47c370cd1d57e1af6b5",
+  "ciphertextBytes": 31,
+  "tagBytes": 16,
+  "nonceHex": "c615467eaee5fa132f01ea2b",
+  "aad": "order-demo-v1",
+  "decrypted": "蛋糕少放糖",
+  "modifiedByte": 0,
+  "bitFlipped": 0,
+  "tamperedCiphertextAndTagHex": "b164f05b8c6514f1b814f1743a60e51b8bb001a921a47c370cd1d57e1af6b5",
+  "checks": {
+    "sameSharedSecret": true,
+    "sameDerivedKey": true,
+    "roundTrip": true,
+    "tamperRejected": true
+  },
+  "notice": "Deterministic public teaching seeds, not production keys. This demonstrates cryptographic primitives, not a complete TLS implementation; no certificate chain validation is performed here."
+}

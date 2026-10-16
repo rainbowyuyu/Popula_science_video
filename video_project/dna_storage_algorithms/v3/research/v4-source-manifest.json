@@ -1,0 +1,5328 @@
+{
+  "schema": "rainbow.dna.source-manifest/v4",
+  "createdAt": "2026-10-11T11:42:14.655088+00:00",
+  "version": 4,
+  "inputs": {
+    "work_dir": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4",
+    "active_narration": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\narration-v4.json",
+    "active_captions": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\src\\captions-v4.json",
+    "active_narration_wav": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\audio\\v4\\narration.wav",
+    "active_master": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\audio\\v4\\master.wav",
+    "music_manifest": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\research\\music-composition-v4.json",
+    "public_root": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public",
+    "output": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\research\\v4-source-manifest.json",
+    "narration": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\narration.json",
+    "captions": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\captions.json",
+    "narration_wav": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\narration.wav",
+    "master": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\master.wav",
+    "generation_ledger": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\voice-generation-v4.json",
+    "mix_record": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\audio-mix-v4.json",
+    "video": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\delivery\\DNA存储_连续数据之旅_V4_1080p.mp4",
+    "model_dir": "D:\\python_project\\tts\\models\\Qwen3-TTS-0.6B",
+    "reference": "D:\\python_project\\tts\\work\\clone-reference.wav"
+  },
+  "checks": [
+    {
+      "id": "working-narration-version-four",
+      "pass": true,
+      "detail": 4
+    },
+    {
+      "id": "working-provider-local",
+      "pass": true,
+      "detail": "local-user-tts-project"
+    },
+    {
+      "id": "active-narration-exact-json-match",
+      "pass": true,
+      "detail": {
+        "workingCanonicalSha256": "eb9bdb205813655c4fac148b5baf6b3164da62b49525c1e5184c66666f99eb7f",
+        "activeCanonicalSha256": "eb9bdb205813655c4fac148b5baf6b3164da62b49525c1e5184c66666f99eb7f"
+      }
+    },
+    {
+      "id": "active-captions-exact-json-match",
+      "pass": true,
+      "detail": {
+        "workingCanonicalSha256": "7b7b7dde8ad447d49dadadee65ce91a98a160cc0f70edb6b550596850210ef96",
+        "activeCanonicalSha256": "7b7b7dde8ad447d49dadadee65ce91a98a160cc0f70edb6b550596850210ef96"
+      }
+    },
+    {
+      "id": "local-model-weights-present",
+      "pass": true,
+      "detail": 11
+    },
+    {
+      "id": "activated-narration-wav-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "activated-master-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "complete-cue-list-present",
+      "pass": true,
+      "detail": 37
+    },
+    {
+      "id": "generation-ledger-cue-set",
+      "pass": true,
+      "detail": {
+        "cueIds": [
+          "n01",
+          "n02",
+          "n03",
+          "n04",
+          "n05",
+          "n06",
+          "n07",
+          "n08",
+          "n09",
+          "n10",
+          "n11",
+          "n12",
+          "n13",
+          "n14",
+          "n15",
+          "n16",
+          "n17",
+          "n18",
+          "n19",
+          "n20",
+          "n21",
+          "n22",
+          "n23",
+          "n24",
+          "n25",
+          "n26",
+          "n27",
+          "n28",
+          "n29",
+          "n30",
+          "n31",
+          "n32",
+          "n33",
+          "n34",
+          "n35",
+          "n36",
+          "n37"
+        ],
+        "ledgerIds": [
+          "n01",
+          "n02",
+          "n03",
+          "n04",
+          "n05",
+          "n06",
+          "n07",
+          "n08",
+          "n09",
+          "n10",
+          "n11",
+          "n12",
+          "n13",
+          "n14",
+          "n15",
+          "n16",
+          "n17",
+          "n18",
+          "n19",
+          "n20",
+          "n21",
+          "n22",
+          "n23",
+          "n24",
+          "n25",
+          "n26",
+          "n27",
+          "n28",
+          "n29",
+          "n30",
+          "n31",
+          "n32",
+          "n33",
+          "n34",
+          "n35",
+          "n36",
+          "n37"
+        ]
+      }
+    },
+    {
+      "id": "n01-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n01-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 33600,
+        "clipFrames": 280320,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n02-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n02-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 464640,
+        "clipFrames": 341760,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n03-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n03-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 895334,
+        "clipFrames": 322560,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n04-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n04-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 1272269,
+        "clipFrames": 360960,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n05-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n05-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 1687603,
+        "clipFrames": 380160,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n06-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n06-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 2145600,
+        "clipFrames": 314880,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n07-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n07-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 2512640,
+        "clipFrames": 303360,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n08-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n08-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 2868160,
+        "clipFrames": 349440,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n09-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n09-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 3269760,
+        "clipFrames": 272640,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n10-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n10-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 3633600,
+        "clipFrames": 207360,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n11-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n11-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 3875327,
+        "clipFrames": 311042,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n12-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n12-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 4220736,
+        "clipFrames": 303360,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n13-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n13-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 4558462,
+        "clipFrames": 345602,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n14-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n14-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 4938431,
+        "clipFrames": 311042,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n15-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n15-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 5283840,
+        "clipFrames": 322560,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n16-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n16-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 5697600,
+        "clipFrames": 295680,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n17-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n17-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 6061680,
+        "clipFrames": 353280,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n18-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n18-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 6483359,
+        "clipFrames": 314880,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n19-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n19-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 6866639,
+        "clipFrames": 376320,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n20-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n20-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 7311358,
+        "clipFrames": 311042,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n21-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n21-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 7713600,
+        "clipFrames": 284160,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n22-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n22-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 8020388,
+        "clipFrames": 318720,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n23-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n23-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 8361735,
+        "clipFrames": 299522,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n24-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n24-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 8683885,
+        "clipFrames": 288000,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n25-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n25-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 8994513,
+        "clipFrames": 345602,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n26-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n26-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 9362743,
+        "clipFrames": 299522,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n27-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n27-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 9684892,
+        "clipFrames": 307200,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n28-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n28-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 10014720,
+        "clipFrames": 295680,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n29-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n29-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 10401600,
+        "clipFrames": 218882,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n30-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n30-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 10663681,
+        "clipFrames": 311042,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n31-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n31-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 11017922,
+        "clipFrames": 364800,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n32-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n32-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 11425922,
+        "clipFrames": 326400,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n33-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n33-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 11795521,
+        "clipFrames": 307200,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n34-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n34-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 12145920,
+        "clipFrames": 372480,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n35-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n35-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 12609600,
+        "clipFrames": 368640,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n36-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n36-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 13043155,
+        "clipFrames": 391680,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "n37-local-generation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-generation-text-matches-activated-script",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-reference-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-request-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-local-raw-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-processing-original-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-processing-output-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-activated-clean-exact-match",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "n37-exact-narration-insertion",
+      "pass": true,
+      "detail": {
+        "sampleStart": 13499750,
+        "clipFrames": 368640,
+        "maximumError": 0.0
+      }
+    },
+    {
+      "id": "v4-music-record-version",
+      "pass": true,
+      "detail": "v4"
+    },
+    {
+      "id": "music-0-composition-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "music-1-composition-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "mix-no-stretch-or-truncation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "mix-input-roles-present",
+      "pass": true,
+      "detail": [
+        "narration",
+        "music",
+        "transitions",
+        "timeline"
+      ]
+    },
+    {
+      "id": "mix-input-narration-matches-selected-source",
+      "pass": true,
+      "detail": {
+        "expectedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\narration.wav",
+        "recordedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\narration.wav"
+      }
+    },
+    {
+      "id": "mix-input-timeline-matches-selected-source",
+      "pass": true,
+      "detail": {
+        "expectedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\narration.json",
+        "recordedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\work\\audio-v4\\narration.json"
+      }
+    },
+    {
+      "id": "mix-input-music-matches-selected-source",
+      "pass": true,
+      "detail": {
+        "expectedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\music\\dna_archive_glow_v4.wav",
+        "recordedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\music\\dna_archive_glow_v4.wav"
+      }
+    },
+    {
+      "id": "mix-input-transitions-matches-selected-source",
+      "pass": true,
+      "detail": {
+        "expectedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\music\\dna_archive_transitions_v4.wav",
+        "recordedPath": "D:\\python_project\\manim_extend_rainbow\\video_project\\dna_storage_algorithms\\v3\\public\\music\\dna_archive_transitions_v4.wav"
+      }
+    },
+    {
+      "id": "mix-output-0-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "mix-output-1-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "mix-output-2-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "mix-output-3-hash",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "mix-record-binds-final-master",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "id": "cloud-candidates-excluded-voice-generation-cloud-v4",
+      "pass": true,
+      "detail": {
+        "candidates": 37
+      }
+    }
+  ],
+  "cues": [
+    {
+      "id": "n01",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101140,
+      "requestHash": "716dcb45f958062f6859d5e5c955ad17f9ca29ddf648a1cd7e8712340f14de1e",
+      "spokenTextSha256": "16f6cb908407302d5026c5f685e0f4e827fe22eb81b6604152e503fd960965d8",
+      "raw": {
+        "path": "work/audio-v4/raw/n01.wav",
+        "bytes": 403244,
+        "sha256": "174d8cff15e1eb4b3f0016ca02dcc6a333fdc4af15697b307ec546ad7bad9392",
+        "roles": [
+          "n01-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n01.wav",
+        "bytes": 841004,
+        "sha256": "65dc966f2da532455f7242040ca6e8bc1204ae0dd19cce64c6049bdcc8173679",
+        "roles": [
+          "n01-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n01.wav",
+        "bytes": 841004,
+        "sha256": "65dc966f2da532455f7242040ca6e8bc1204ae0dd19cce64c6049bdcc8173679",
+        "roles": [
+          "n01-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n02",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101141,
+      "requestHash": "91de940117fa6ade8ea49d79664b69b05d752802a54a3a68be6927a6f01b2328",
+      "spokenTextSha256": "ac0e36455ce264abc578fa9f4987e01f8b03fdce36b714699f928ae54909dc58",
+      "raw": {
+        "path": "work/audio-v4/raw/n02.wav",
+        "bytes": 495404,
+        "sha256": "eddef9f229533a5ad1c85047c921a97870f128294423490eee59278b0de4a9a5",
+        "roles": [
+          "n02-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n02.wav",
+        "bytes": 1025324,
+        "sha256": "26d59a513ab122e2d0fb11d1578cd3a4ddc5fc265f2003c9509615c08a43c6c4",
+        "roles": [
+          "n02-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n02.wav",
+        "bytes": 1025324,
+        "sha256": "26d59a513ab122e2d0fb11d1578cd3a4ddc5fc265f2003c9509615c08a43c6c4",
+        "roles": [
+          "n02-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n03",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101142,
+      "requestHash": "adb1c3c2f6434e8c37088cdc18ecd6281c0221b3761cc6d8eba0da892c9bd2ee",
+      "spokenTextSha256": "f856dc117ff1b3155ceface7f3930e7526b8b8bd9239d41724446143aff9dda5",
+      "raw": {
+        "path": "work/audio-v4/raw/n03.wav",
+        "bytes": 466604,
+        "sha256": "3144268ee93d9f25690e0346a99d47b381074aebe60f286bf6a6db7d7120a2a6",
+        "roles": [
+          "n03-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n03.wav",
+        "bytes": 967724,
+        "sha256": "89561a2375c4a4c7cdbd9e1e2f2f01771f994aee064a32254fb1c384b13cd554",
+        "roles": [
+          "n03-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n03.wav",
+        "bytes": 967724,
+        "sha256": "89561a2375c4a4c7cdbd9e1e2f2f01771f994aee064a32254fb1c384b13cd554",
+        "roles": [
+          "n03-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n04",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101244,
+      "requestHash": "33ed550876466b5d7d8b108f0b2766725848bc516650a5340257a3dde816e706",
+      "spokenTextSha256": "dea9386af00f7bf732a778c849aa6544b8a42c4a07c49dc87d116b944a40dc9a",
+      "raw": {
+        "path": "work/audio-v4/raw/n04.wav",
+        "bytes": 524204,
+        "sha256": "86ed957969b8d09ddfc01ecbc12da709e9746e2e3f77aae417e08fffd657fe5e",
+        "roles": [
+          "n04-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n04.wav",
+        "bytes": 1082924,
+        "sha256": "147998e002b3b39d345f326f0442a84dc9280766afdfc91ab35a82500305a0ae",
+        "roles": [
+          "n04-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n04.wav",
+        "bytes": 1082924,
+        "sha256": "147998e002b3b39d345f326f0442a84dc9280766afdfc91ab35a82500305a0ae",
+        "roles": [
+          "n04-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n05",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101144,
+      "requestHash": "fda4312eaa405552314c2590dc8e8d03ec802dd4a55e42286e35b8313f310987",
+      "spokenTextSha256": "918428e46cd9f7d67f1fb5b34e8e6e71cecd1626d06af51938e7e0df5897dd51",
+      "raw": {
+        "path": "work/audio-v4/raw/n05.wav",
+        "bytes": 553004,
+        "sha256": "0bfe9dfe327f601b452d89d083ef2a725f7c4196c8c9f2850cbb4871065acf9c",
+        "roles": [
+          "n05-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n05.wav",
+        "bytes": 1140524,
+        "sha256": "b5a403c922002fc1c4ccd629fc38595cb01f20d3d4f46fd64c3ac3d2f44dd22e",
+        "roles": [
+          "n05-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n05.wav",
+        "bytes": 1140524,
+        "sha256": "b5a403c922002fc1c4ccd629fc38595cb01f20d3d4f46fd64c3ac3d2f44dd22e",
+        "roles": [
+          "n05-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n06",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101145,
+      "requestHash": "1a5f4a61c674cf812a9d9f643a87de4ce6b13a640848b2d099deb8237c6fb7fc",
+      "spokenTextSha256": "22036addeaf40124a194b8cadfc743053c9e2b11d582ca7687e565892dbaa77f",
+      "raw": {
+        "path": "work/audio-v4/raw/n06.wav",
+        "bytes": 455084,
+        "sha256": "2fbab3a3f6d83bfd9e03cdb4fb339aee2110a9cf7a5d88902f5edb37143bfde5",
+        "roles": [
+          "n06-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n06.wav",
+        "bytes": 944684,
+        "sha256": "813be7f441a9b76ffb90d135bc16bde04e09b780660014e68bf628c713f3b263",
+        "roles": [
+          "n06-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n06.wav",
+        "bytes": 944684,
+        "sha256": "813be7f441a9b76ffb90d135bc16bde04e09b780660014e68bf628c713f3b263",
+        "roles": [
+          "n06-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n07",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101146,
+      "requestHash": "c157d5d1de519491b1d6173dfcb9cd464047188b28575909ff6424393e10de3b",
+      "spokenTextSha256": "3dde547fdd420411b1d40fe3ca06558f1098fa50a3a288fa4daf7cb8d2b63d62",
+      "raw": {
+        "path": "work/audio-v4/raw/n07.wav",
+        "bytes": 437804,
+        "sha256": "3bbb79dc44015bece00d1164d1e9a88401910c09b4b625175070822a59250fef",
+        "roles": [
+          "n07-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n07.wav",
+        "bytes": 910124,
+        "sha256": "2ddded66bf41f00d1c31f6e0bae9d77a3de5375dac1114faaf954666c03c6180",
+        "roles": [
+          "n07-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n07.wav",
+        "bytes": 910124,
+        "sha256": "2ddded66bf41f00d1c31f6e0bae9d77a3de5375dac1114faaf954666c03c6180",
+        "roles": [
+          "n07-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n08",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101147,
+      "requestHash": "b4a7ef804282ea5bc14eae608010fc520b5c44d60241abf9f9fb0829d5928049",
+      "spokenTextSha256": "45c066d99632f21f687dacb9bf4c499fc61f5acc03d05e1b900c4c266259a6b4",
+      "raw": {
+        "path": "work/audio-v4/raw/n08.wav",
+        "bytes": 506924,
+        "sha256": "1a997139a0e98c375338bb2348f78a00540a54ff9f02267dd36edf3f027a69a2",
+        "roles": [
+          "n08-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n08.wav",
+        "bytes": 1048364,
+        "sha256": "8c927b119ef83f264e72282bc854d147188d06f51c65268d9b4692789f670d39",
+        "roles": [
+          "n08-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n08.wav",
+        "bytes": 1048364,
+        "sha256": "8c927b119ef83f264e72282bc854d147188d06f51c65268d9b4692789f670d39",
+        "roles": [
+          "n08-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n09",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101148,
+      "requestHash": "467645847930c4ecfedcc7df1239d7e8621083b3c551ca84dbf62974aad6e070",
+      "spokenTextSha256": "011d0b2f1553c2d6051f4e309bc6c67efe502b9f484dc2201dc8298ef8d5883d",
+      "raw": {
+        "path": "work/audio-v4/raw/n09.wav",
+        "bytes": 391724,
+        "sha256": "499b6da3a82b21f2745787de72baf93516a310977132bc3f26a17d63d0fd9075",
+        "roles": [
+          "n09-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n09.wav",
+        "bytes": 817964,
+        "sha256": "3798010da4ae0f73980cd4e8acc0a06c05a4f0c48aeb86e44931e91bd73ba41b",
+        "roles": [
+          "n09-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n09.wav",
+        "bytes": 817964,
+        "sha256": "3798010da4ae0f73980cd4e8acc0a06c05a4f0c48aeb86e44931e91bd73ba41b",
+        "roles": [
+          "n09-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n10",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101149,
+      "requestHash": "e0036ec602d68866a30666dc442391c323cef979172bd4694f0421208d055a1e",
+      "spokenTextSha256": "500062c7f163614dba8988f802d8867f81dc044e2b9173cfb2b8b1fddfeb8803",
+      "raw": {
+        "path": "work/audio-v4/raw/n10.wav",
+        "bytes": 293804,
+        "sha256": "a75c21c12ce8b6a747dd370abdf73843ee97e90d22b39856aed07e95277f81a1",
+        "roles": [
+          "n10-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n10.wav",
+        "bytes": 622124,
+        "sha256": "b0b36432965f197d9ae08718eb7655aa79d5236a42736e1a99a9de1b0a65b969",
+        "roles": [
+          "n10-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n10.wav",
+        "bytes": 622124,
+        "sha256": "b0b36432965f197d9ae08718eb7655aa79d5236a42736e1a99a9de1b0a65b969",
+        "roles": [
+          "n10-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n11",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101150,
+      "requestHash": "27cc51251bd2d67332e37de0df82d48e9bda33cb8f252ed000f946a089b92a14",
+      "spokenTextSha256": "28b78b0d7bd4b994d5ac66e27164535cb79b95596f29b64894522a23211df33b",
+      "raw": {
+        "path": "work/audio-v4/raw/n11.wav",
+        "bytes": 449328,
+        "sha256": "16da6578bc13528b914cd8b8a35e2c0a822470f262d099b08dd85dcae1d58bbf",
+        "roles": [
+          "n11-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n11.wav",
+        "bytes": 933170,
+        "sha256": "32feac08d6e373068eaa4540414285c16a6b20228293278e59f35a348c79a4b0",
+        "roles": [
+          "n11-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n11.wav",
+        "bytes": 933170,
+        "sha256": "32feac08d6e373068eaa4540414285c16a6b20228293278e59f35a348c79a4b0",
+        "roles": [
+          "n11-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n12",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101151,
+      "requestHash": "653e891772572e3f94ed46090dacd39aced3a3dbbfe970665b518c32db163c6a",
+      "spokenTextSha256": "c3efb3d9dff70055405164295a295727e1701f221dc97e84c48fb371f5cb2b40",
+      "raw": {
+        "path": "work/audio-v4/raw/n12.wav",
+        "bytes": 437804,
+        "sha256": "9786d0c1766019d2a9769f3f77ccc3c5088d76911bf9e92b5606976bdab10604",
+        "roles": [
+          "n12-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n12.wav",
+        "bytes": 910124,
+        "sha256": "71b549c3b5a492fa34dbc7af4ee6994701d4a49e7dd3fff4adc121fb3acafefb",
+        "roles": [
+          "n12-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n12.wav",
+        "bytes": 910124,
+        "sha256": "71b549c3b5a492fa34dbc7af4ee6994701d4a49e7dd3fff4adc121fb3acafefb",
+        "roles": [
+          "n12-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n13",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101152,
+      "requestHash": "770a4a92bf605f0716678954779a65f31ef345362f491175fe194f1ea4a5f709",
+      "spokenTextSha256": "65e5e003415098c93422f5b058b2b351bfdc3c56714fa29aedb25e6e1ee4c07b",
+      "raw": {
+        "path": "work/audio-v4/raw/n13.wav",
+        "bytes": 501168,
+        "sha256": "dca67aa080dabb87bd6478ec45d2a5dc221a3d007f38bef3e4b3ed8caebbb318",
+        "roles": [
+          "n13-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n13.wav",
+        "bytes": 1036850,
+        "sha256": "23d4e9be3ae3c9029ac3874fe7b0b0223b403eb6b11fa3fef5c9b425725a7791",
+        "roles": [
+          "n13-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n13.wav",
+        "bytes": 1036850,
+        "sha256": "23d4e9be3ae3c9029ac3874fe7b0b0223b403eb6b11fa3fef5c9b425725a7791",
+        "roles": [
+          "n13-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n14",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101153,
+      "requestHash": "020a1a37a7b149e3b19f3c61b3d9d381963d5f323a5975cf7bd23470c833dca4",
+      "spokenTextSha256": "c8c497677d93151af7b556cdbad9521ddc23f758de79b4ac42bd621866fdaa4e",
+      "raw": {
+        "path": "work/audio-v4/raw/n14.wav",
+        "bytes": 449328,
+        "sha256": "30ef8f02ae55064c3c2a21b79554d16d56141d0aedb10992364195232ccf7411",
+        "roles": [
+          "n14-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n14.wav",
+        "bytes": 933170,
+        "sha256": "4f9ac34fc7ebd015cc87e946afa44d313711df3c7b83a727f2636e53a36acb86",
+        "roles": [
+          "n14-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n14.wav",
+        "bytes": 933170,
+        "sha256": "4f9ac34fc7ebd015cc87e946afa44d313711df3c7b83a727f2636e53a36acb86",
+        "roles": [
+          "n14-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n15",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101154,
+      "requestHash": "d82c5c828aab32e2ff6c175ef267b0d2cca00de4f64b6b085124bf5347d23fdb",
+      "spokenTextSha256": "5994b34f2513f398cd20323034bcd76f20dbf964ee1fe3c27cfabe0b77b0f452",
+      "raw": {
+        "path": "work/audio-v4/raw/n15.wav",
+        "bytes": 466604,
+        "sha256": "f2034c2cef4f51ebddead2fc56a9fcb94ad5962d2cef361f1703c45eaacce06d",
+        "roles": [
+          "n15-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n15.wav",
+        "bytes": 967724,
+        "sha256": "8a8067eb56b13c98faada8125fd3fcd29a4ba0ccdf91dd5ffd852620073c3c49",
+        "roles": [
+          "n15-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n15.wav",
+        "bytes": 967724,
+        "sha256": "8a8067eb56b13c98faada8125fd3fcd29a4ba0ccdf91dd5ffd852620073c3c49",
+        "roles": [
+          "n15-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n16",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101155,
+      "requestHash": "9c4dd8992cd0921844eed947d66f8f0373afc79bfc7e0d9d19e51dbb060b1914",
+      "spokenTextSha256": "7a7e66622ccf5cedc2d5aac2460b8172ad85e3aee72ce182244e5c8afd5a6099",
+      "raw": {
+        "path": "work/audio-v4/raw/n16.wav",
+        "bytes": 426284,
+        "sha256": "9afcc663ebb159cbfebbbc830711353641567f9b72353154a9ed67df641eac8f",
+        "roles": [
+          "n16-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n16.wav",
+        "bytes": 887084,
+        "sha256": "fab423c32cd98c3b918a4c6d5a781fa95950a3a2159b7d00ce298010f1b39e25",
+        "roles": [
+          "n16-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n16.wav",
+        "bytes": 887084,
+        "sha256": "fab423c32cd98c3b918a4c6d5a781fa95950a3a2159b7d00ce298010f1b39e25",
+        "roles": [
+          "n16-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n17",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101156,
+      "requestHash": "64b0d856011f5923c19d181fd149a0ce1ca6dfaa04dfb5c91147bf710d24747a",
+      "spokenTextSha256": "2e71e54b6db7b96bd4d12b6e8d8807ed959f40ea65bd6e4af55e4b0f8b47083a",
+      "raw": {
+        "path": "work/audio-v4/raw/n17.wav",
+        "bytes": 512684,
+        "sha256": "2de51b9d970523af93831c288df61346e96a1dfbf59decc9b4e658f045c1570c",
+        "roles": [
+          "n17-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n17.wav",
+        "bytes": 1059884,
+        "sha256": "c0c3934120820e896c37efd90634ed5ed079a0c8bffeeabb95f9185a9f7a9073",
+        "roles": [
+          "n17-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n17.wav",
+        "bytes": 1059884,
+        "sha256": "c0c3934120820e896c37efd90634ed5ed079a0c8bffeeabb95f9185a9f7a9073",
+        "roles": [
+          "n17-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n18",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101157,
+      "requestHash": "1e08fc5914b2ae916708533c44bb0baa04dab1049ebd64a63789a621d743efdb",
+      "spokenTextSha256": "050df7e6ac19e2974b040b21d75d5459544d643e916ec1643761746f822f8fa3",
+      "raw": {
+        "path": "work/audio-v4/raw/n18.wav",
+        "bytes": 455084,
+        "sha256": "d08924c831594c858470db7262f4b80d3d39b2ea90cebc76dab741d9bbb2fb74",
+        "roles": [
+          "n18-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n18.wav",
+        "bytes": 944684,
+        "sha256": "abfd2621b28b1858483a0836d3b9a6ab57e4bedf04f04cac20655627c14a1936",
+        "roles": [
+          "n18-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n18.wav",
+        "bytes": 944684,
+        "sha256": "abfd2621b28b1858483a0836d3b9a6ab57e4bedf04f04cac20655627c14a1936",
+        "roles": [
+          "n18-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n19",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101158,
+      "requestHash": "67e39a9877739d38239648ac3c73e4b407c000ac8aaaab43a02eef8103e89c60",
+      "spokenTextSha256": "da103c04d478bb255172cf33fb07ec3e1b047d943321fab69df00dd2eac186c4",
+      "raw": {
+        "path": "work/audio-v4/raw/n19.wav",
+        "bytes": 547244,
+        "sha256": "7c1e0572440d76eff0dd523464da43777a9cb61d396ec18ae7d03fe294c9b0eb",
+        "roles": [
+          "n19-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n19.wav",
+        "bytes": 1129004,
+        "sha256": "9c7ee2b298c80ef2c94f1f823b23526b2c06e5f9fe986e1a4355b198fb9a81d5",
+        "roles": [
+          "n19-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n19.wav",
+        "bytes": 1129004,
+        "sha256": "9c7ee2b298c80ef2c94f1f823b23526b2c06e5f9fe986e1a4355b198fb9a81d5",
+        "roles": [
+          "n19-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n20",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101159,
+      "requestHash": "57028c04970fb923097815cfec14e2b12d01a428362e77a7d490b1ac7450ebed",
+      "spokenTextSha256": "48f909aeb9559c7657d8dc1dc953b30d3e627d8551b7843964c068e34a7b51e7",
+      "raw": {
+        "path": "work/audio-v4/raw/n20.wav",
+        "bytes": 449328,
+        "sha256": "fe1f072cf24441fe51d8ce8a353cc00484fd255cdd1b7f86ed42b98a11f34f44",
+        "roles": [
+          "n20-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n20.wav",
+        "bytes": 933170,
+        "sha256": "6ee611abbcfb05bf0f64434d02972b08a351c0e6fa1e4cce57cc580cbb841390",
+        "roles": [
+          "n20-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n20.wav",
+        "bytes": 933170,
+        "sha256": "6ee611abbcfb05bf0f64434d02972b08a351c0e6fa1e4cce57cc580cbb841390",
+        "roles": [
+          "n20-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n21",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101160,
+      "requestHash": "bc15f669db5aa75e8677a9429c2b642c86f9c24c87acd9feab1c2554483bd9bd",
+      "spokenTextSha256": "52ee7bf28f7e06707f31540d478756c53eb0dab7acff6686e448b394c4e4fc6b",
+      "raw": {
+        "path": "work/audio-v4/raw/n21.wav",
+        "bytes": 409004,
+        "sha256": "fa2d1e6332a5b003145c9031decd6577cdc5e0d2694843edb922750f41a67f3b",
+        "roles": [
+          "n21-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n21.wav",
+        "bytes": 852524,
+        "sha256": "b8ffe9ed420dfa646fa9058373e26cf743b2b168865f37db2b1229c69d013fe1",
+        "roles": [
+          "n21-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n21.wav",
+        "bytes": 852524,
+        "sha256": "b8ffe9ed420dfa646fa9058373e26cf743b2b168865f37db2b1229c69d013fe1",
+        "roles": [
+          "n21-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n22",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101161,
+      "requestHash": "e1c39986343228c2ed776d0197f0d5d74efb194a8e46c55b380a56c2dce64e0b",
+      "spokenTextSha256": "502064717695b526180f4d96f6e478d34c7ac1f3919ab1184573cd42e53832fa",
+      "raw": {
+        "path": "work/audio-v4/raw/n22.wav",
+        "bytes": 460844,
+        "sha256": "b7767810139d3211bea2a7cf6efa9a6cbdd669b42868b711afd47cafb384ffe5",
+        "roles": [
+          "n22-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n22.wav",
+        "bytes": 956204,
+        "sha256": "d09ae742148eb9b1272424ad26010f5e1331937556bbf80f72805c06bbba49ec",
+        "roles": [
+          "n22-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n22.wav",
+        "bytes": 956204,
+        "sha256": "d09ae742148eb9b1272424ad26010f5e1331937556bbf80f72805c06bbba49ec",
+        "roles": [
+          "n22-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n23",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101162,
+      "requestHash": "3fdcb0c85e444d4f9a2626193548b3f4d9911290d1759a33efd1c3b9acc1102e",
+      "spokenTextSha256": "0696c37f0c8702e5f85d4afa08dfdf991104eb3e794d84fc07e079dec793ccea",
+      "raw": {
+        "path": "work/audio-v4/raw/n23.wav",
+        "bytes": 432048,
+        "sha256": "3e8876d0d942e8d5de0d557634d997aa232359993e473ce2d6ecf32ec054dd62",
+        "roles": [
+          "n23-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n23.wav",
+        "bytes": 898610,
+        "sha256": "d2bd2acf6ccdad1aeee1f3b2b890d61b0e9e207373b622c63c440b48e9c73d28",
+        "roles": [
+          "n23-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n23.wav",
+        "bytes": 898610,
+        "sha256": "d2bd2acf6ccdad1aeee1f3b2b890d61b0e9e207373b622c63c440b48e9c73d28",
+        "roles": [
+          "n23-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n24",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101163,
+      "requestHash": "ae043a10df4b41e8ff7f1bfef4ca4b4b054c694daebbb94d1a4d976b77c5c8bc",
+      "spokenTextSha256": "4b9a2811bce3f4cbda7c1bad387a5c96e0ce971a53d66217e493cb7b40ddb24c",
+      "raw": {
+        "path": "work/audio-v4/raw/n24.wav",
+        "bytes": 414764,
+        "sha256": "0b98250e1695b9b0b733857333165db1e5870493c33a560bc62415f8c558e338",
+        "roles": [
+          "n24-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n24.wav",
+        "bytes": 864044,
+        "sha256": "1a95560dc180bd4f2ed60e4870da8f7059fc35f330932d2c5cc28f34ca99d640",
+        "roles": [
+          "n24-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n24.wav",
+        "bytes": 864044,
+        "sha256": "1a95560dc180bd4f2ed60e4870da8f7059fc35f330932d2c5cc28f34ca99d640",
+        "roles": [
+          "n24-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n25",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101164,
+      "requestHash": "1145f7305fa3dc87178e1f7ea17ad4500164b2f4d1220cf3165677ada9cc4f9b",
+      "spokenTextSha256": "dba4550178ae2da924ed02e8b06ee85e4376e2a8cd7248fd0dc3bf627ca1257e",
+      "raw": {
+        "path": "work/audio-v4/raw/n25.wav",
+        "bytes": 501168,
+        "sha256": "3b90fc7323542a358c636899231bcaae309167cc9129f04cd385cedd4d2c52e4",
+        "roles": [
+          "n25-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n25.wav",
+        "bytes": 1036850,
+        "sha256": "5cf2695158de5aa984831da2edb35fd70c2087fd6a304cebd7cd2ba9a8ebf511",
+        "roles": [
+          "n25-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n25.wav",
+        "bytes": 1036850,
+        "sha256": "5cf2695158de5aa984831da2edb35fd70c2087fd6a304cebd7cd2ba9a8ebf511",
+        "roles": [
+          "n25-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n26",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101165,
+      "requestHash": "37dac5293279bb1c9afec29e82b46e392d01093b4abe09852bd6a158834d999b",
+      "spokenTextSha256": "1abef21097cd6944f8346c7c805ef98343e27e24956b3859abc57e18f576dd81",
+      "raw": {
+        "path": "work/audio-v4/raw/n26.wav",
+        "bytes": 432048,
+        "sha256": "f5222e2dac0f062a4213685f2245b54b02065fa332aca4d93a94bdf167823fac",
+        "roles": [
+          "n26-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n26.wav",
+        "bytes": 898610,
+        "sha256": "61edfedcead16e885072e582995c4cdafa64c8052b62a2535bfa8d11fba263a2",
+        "roles": [
+          "n26-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n26.wav",
+        "bytes": 898610,
+        "sha256": "61edfedcead16e885072e582995c4cdafa64c8052b62a2535bfa8d11fba263a2",
+        "roles": [
+          "n26-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n27",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101166,
+      "requestHash": "4a569e3cb402d69969b669b911d7724b2f06d6c3f4a76391e99dbc49576de40f",
+      "spokenTextSha256": "46d0efc3d5c26a2ee8c14fc77bf3ee413afee986dfc5ce4352d6fb0149548e00",
+      "raw": {
+        "path": "work/audio-v4/raw/n27.wav",
+        "bytes": 443564,
+        "sha256": "584563b39f9c4c3b2b60802520c60a6f94317012113793a7dfddb6350127afdb",
+        "roles": [
+          "n27-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n27.wav",
+        "bytes": 921644,
+        "sha256": "f741deabedbc6cabff4e59d87998b4404814c6a795e98aca84723d906e357aa7",
+        "roles": [
+          "n27-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n27.wav",
+        "bytes": 921644,
+        "sha256": "f741deabedbc6cabff4e59d87998b4404814c6a795e98aca84723d906e357aa7",
+        "roles": [
+          "n27-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n28",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101167,
+      "requestHash": "750c91aa0797dc2ed178a8a3c569d41f14ee7ca38bf1f92b81572a13b277a0c1",
+      "spokenTextSha256": "8b536cb5d86ff471d243981be531ade5925875c9bdea7433086f5bb36d21d8cd",
+      "raw": {
+        "path": "work/audio-v4/raw/n28.wav",
+        "bytes": 426284,
+        "sha256": "0bf69a614f735e000e48f2af26d256a8340f905069ac07188aed4dc9d84898f6",
+        "roles": [
+          "n28-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n28.wav",
+        "bytes": 887084,
+        "sha256": "c2ed1820eac6a7ddf0bd0d18ae71e68535c3dd981f0c529a34413359028f4e34",
+        "roles": [
+          "n28-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n28.wav",
+        "bytes": 887084,
+        "sha256": "c2ed1820eac6a7ddf0bd0d18ae71e68535c3dd981f0c529a34413359028f4e34",
+        "roles": [
+          "n28-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n29",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101168,
+      "requestHash": "7e0fcf3510df5c4d311eaebba923988e41b6b86c38b2b255de6202c82b6088b8",
+      "spokenTextSha256": "7ef5b99ce1d9f8856264d7759924540be15341b7d8536b7c0247a0b272159fff",
+      "raw": {
+        "path": "work/audio-v4/raw/n29.wav",
+        "bytes": 311088,
+        "sha256": "42f78d5f6d8b5bb6563d19af71c6e74b8f28190f87aa127191768cb5acf4d4db",
+        "roles": [
+          "n29-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n29.wav",
+        "bytes": 656690,
+        "sha256": "17660dc410efb7fa7b406a824b6080fc8d3a4db11e63762afb4a493ef8abb09e",
+        "roles": [
+          "n29-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n29.wav",
+        "bytes": 656690,
+        "sha256": "17660dc410efb7fa7b406a824b6080fc8d3a4db11e63762afb4a493ef8abb09e",
+        "roles": [
+          "n29-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n30",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101169,
+      "requestHash": "ac34dc40511046aac7346590c897843b3a24ed8b820a740486f8fc98f0c663dd",
+      "spokenTextSha256": "08b343ab0faa8688e0b057b0cae56cd4d4e768bc1cc8004e38c3b75c0baf8e1f",
+      "raw": {
+        "path": "work/audio-v4/raw/n30.wav",
+        "bytes": 449328,
+        "sha256": "3bcc30e46068e6f5d8d8f46504e22670e34d3761ca114ba49ae83bcc644988de",
+        "roles": [
+          "n30-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n30.wav",
+        "bytes": 933170,
+        "sha256": "1e62b5bdbeba9342e97a385ebe71d877089fb81ff129b11561d46db9307807cf",
+        "roles": [
+          "n30-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n30.wav",
+        "bytes": 933170,
+        "sha256": "1e62b5bdbeba9342e97a385ebe71d877089fb81ff129b11561d46db9307807cf",
+        "roles": [
+          "n30-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n31",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101170,
+      "requestHash": "b733cb1f84a78e88ab96724298784b8fa38f1d2f8c9fb1a93b0bf837a608db9f",
+      "spokenTextSha256": "405fc696a69a394354e5053aae59c0ce7aead61f38632a7c54f12a7775af8897",
+      "raw": {
+        "path": "work/audio-v4/raw/n31.wav",
+        "bytes": 529964,
+        "sha256": "786391d04a464e081038ed8f729914e7037003e1ebe24033b018dd09bee28f60",
+        "roles": [
+          "n31-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n31.wav",
+        "bytes": 1094444,
+        "sha256": "d5da528ba2552a3027ca6db33c82992adaa8889e64572da69b1f36a604a85a58",
+        "roles": [
+          "n31-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n31.wav",
+        "bytes": 1094444,
+        "sha256": "d5da528ba2552a3027ca6db33c82992adaa8889e64572da69b1f36a604a85a58",
+        "roles": [
+          "n31-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n32",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101171,
+      "requestHash": "5b35cfe8a797bccac9322c3ceca9b63b9060c28198cffcc141c55abdd6e7a765",
+      "spokenTextSha256": "638c51cb8afee3e0dcd02381f74e616507367dd7594903097172d1f3fe3c500c",
+      "raw": {
+        "path": "work/audio-v4/raw/n32.wav",
+        "bytes": 472364,
+        "sha256": "f2f628c6f370843e17b5050756029adfc1fb0030682b29e653ffa44032b621a4",
+        "roles": [
+          "n32-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n32.wav",
+        "bytes": 979244,
+        "sha256": "1a46a7cde5a74516fc3b73259b615888bd7fcff23522461fd788f9c3e88dbfe3",
+        "roles": [
+          "n32-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n32.wav",
+        "bytes": 979244,
+        "sha256": "1a46a7cde5a74516fc3b73259b615888bd7fcff23522461fd788f9c3e88dbfe3",
+        "roles": [
+          "n32-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n33",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101172,
+      "requestHash": "b3d099afc8df6c2b5a97f296d071626b2f4ee251e785e2c0e8fc463cc5a8c934",
+      "spokenTextSha256": "87723cabac977a712bd2c4a72b3c6abc3630e9baf9f99a1e68a0be97853c3672",
+      "raw": {
+        "path": "work/audio-v4/raw/n33.wav",
+        "bytes": 443564,
+        "sha256": "d57fa3666ac70be1624fe4dafbc52622922186a9f247f4d7f8af1d6e5b7785f0",
+        "roles": [
+          "n33-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n33.wav",
+        "bytes": 921644,
+        "sha256": "67049f80c436c30bd44e7f655d1d92690d27edb951af4a76562021f6d3a0f0e3",
+        "roles": [
+          "n33-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n33.wav",
+        "bytes": 921644,
+        "sha256": "67049f80c436c30bd44e7f655d1d92690d27edb951af4a76562021f6d3a0f0e3",
+        "roles": [
+          "n33-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n34",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101173,
+      "requestHash": "635e6ba4c456cedbde09e2e3c33bd94799f163ba17f9380a18fa759ce6193353",
+      "spokenTextSha256": "09cd4dfb3aa0bffb80ef8b13899d6d58da3b47049e924e6d04b8031564ed24aa",
+      "raw": {
+        "path": "work/audio-v4/raw/n34.wav",
+        "bytes": 541484,
+        "sha256": "744cb69901da4997c531d23f0b1c7427fd38df04ba6dc4534e1c065aefdbaa0a",
+        "roles": [
+          "n34-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n34.wav",
+        "bytes": 1117484,
+        "sha256": "f29eb83eac367c446cf0866941532b00f1841e9008c7e82c48fad0053962f00d",
+        "roles": [
+          "n34-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n34.wav",
+        "bytes": 1117484,
+        "sha256": "f29eb83eac367c446cf0866941532b00f1841e9008c7e82c48fad0053962f00d",
+        "roles": [
+          "n34-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n35",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101174,
+      "requestHash": "877a2c64e0a2dbdfcc94a559f0df62f54ee9b2d5f4c775e88828cdb637282218",
+      "spokenTextSha256": "80f2aff2a93b112136a3b00b770de168c41e817c500306fc687bd52ae28176d5",
+      "raw": {
+        "path": "work/audio-v4/raw/n35.wav",
+        "bytes": 535724,
+        "sha256": "55de7836c72d6708c9d5b045b65d36efb67371466a653cf9bae92030f5b59e68",
+        "roles": [
+          "n35-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n35.wav",
+        "bytes": 1105964,
+        "sha256": "c7a42c5e6cd64ce9c118fee6e9b26369305daf426c3a9811e200c62a24c9413f",
+        "roles": [
+          "n35-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n35.wav",
+        "bytes": 1105964,
+        "sha256": "c7a42c5e6cd64ce9c118fee6e9b26369305daf426c3a9811e200c62a24c9413f",
+        "roles": [
+          "n35-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n36",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101175,
+      "requestHash": "4b655e843229cc59d1378b7f993c2c217781090edf1dc87ac074dad24d62042e",
+      "spokenTextSha256": "456d8533c3f2d3549dc94d226149e3b062d54ae6df0481f14adbd78aea6508f2",
+      "raw": {
+        "path": "work/audio-v4/raw/n36.wav",
+        "bytes": 570284,
+        "sha256": "f69afda8ac3b7df7f7b99c2033d915f65c0f41a22b8df94552741e002adaf259",
+        "roles": [
+          "n36-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n36.wav",
+        "bytes": 1175084,
+        "sha256": "c56cd1209b069ff499c22e24d7d030f58e8985ef27b1bcd668a2873cb486ece8",
+        "roles": [
+          "n36-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n36.wav",
+        "bytes": 1175084,
+        "sha256": "c56cd1209b069ff499c22e24d7d030f58e8985ef27b1bcd668a2873cb486ece8",
+        "roles": [
+          "n36-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    },
+    {
+      "id": "n37",
+      "provider": "local-user-tts-project",
+      "model": "Qwen3-TTS-0.6B",
+      "seed": 2026101176,
+      "requestHash": "ba9f2db51bc93f2c2eebad8c683d23b6fac6ec414aa13dd22f03009d7f8f7dd4",
+      "spokenTextSha256": "3ed79e8a9cabecc47ba5fbb8bc9a415d1ca0873822085ec4abe5e899acf76e70",
+      "raw": {
+        "path": "work/audio-v4/raw/n37.wav",
+        "bytes": 535724,
+        "sha256": "a5a74606c5d3455febaf30323f0c2f5d329cafdbf6e7a149fb2cd7d102633d6e",
+        "roles": [
+          "n37-local-raw"
+        ]
+      },
+      "clean": {
+        "path": "work/audio-v4/clean/n37.wav",
+        "bytes": 1105964,
+        "sha256": "9682d73ff689ff72360d250a7cbf9910198f53eb6f565a7fae45067c190be35a",
+        "roles": [
+          "n37-working-clean"
+        ]
+      },
+      "activatedClean": {
+        "path": "public/audio/v4/clean/n37.wav",
+        "bytes": 1105964,
+        "sha256": "9682d73ff689ff72360d250a7cbf9910198f53eb6f565a7fae45067c190be35a",
+        "roles": [
+          "n37-activated-clean"
+        ]
+      },
+      "narrationMaxSampleError": 0.0
+    }
+  ],
+  "subjectiveListeningChecked": false,
+  "finalDeliveryVerified": false,
+  "scope": "Source provenance and activation integrity. Full encoded-file, captions and duration checks are separate in delivery-qa-v4.json.",
+  "limits": [
+    "Model hashes identify local files used by the recorded generation setup; they are not third-party proof of training or model identity.",
+    "Request and output hashes bind recorded text to saved WAVs; they do not prove correct pronunciation or complete spoken content.",
+    "A source manifest without a successful final delivery QA is not a final-film approval."
+  ],
+  "localVoice": {
+    "provider": "local-user-tts-project",
+    "model": "Qwen3-TTS-0.6B",
+    "modelDirectory": "D:\\python_project\\tts\\models\\Qwen3-TTS-0.6B",
+    "reference": {
+      "path": "D:/python_project/tts/work/clone-reference.wav",
+      "bytes": 763248,
+      "sha256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+      "roles": [
+        "local-voice-reference"
+      ]
+    },
+    "modelFiles": [
+      {
+        "path": "config.json",
+        "bytes": 4494,
+        "sha256": "2e714c787c8edb98b05432685cddb634add2de4d4e645f653d68251ef72ba011"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 245,
+        "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 1829344272,
+        "sha256": "180b3b10eb1c9f1b4db7806d5475bae3071c0243c299d49926bab1da3b6946f6"
+      },
+      {
+        "path": "preprocessor_config.json",
+        "bytes": 127,
+        "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119"
+      },
+      {
+        "path": "speech_tokenizer/config.json",
+        "bytes": 2336,
+        "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167"
+      },
+      {
+        "path": "speech_tokenizer/configuration.json",
+        "bytes": 76,
+        "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd"
+      },
+      {
+        "path": "speech_tokenizer/model.safetensors",
+        "bytes": 682293092,
+        "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+      },
+      {
+        "path": "speech_tokenizer/preprocessor_config.json",
+        "bytes": 234,
+        "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 7344,
+        "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ],
+    "modelTreeSha256": "1813249848613b2403a3809e897f350e499fdba0bedd84f96a064bdfea2bf923"
+  },
+  "music": {
+    "title": "DNA Archive Glow / DNA档案微光",
+    "version": "v4",
+    "originalArrangement": true,
+    "sourceSamples": "https://github.com/sgossner/VSCO-2-CE",
+    "sampleLicense": "CC0-1.0",
+    "sampleManifest": "public/music/samples/manifest.json",
+    "seed": 202610114,
+    "bpm": 84,
+    "seconds": 300,
+    "timeStretch": false
+  },
+  "mix": {
+    "seconds": 300.0,
+    "sampleRate": 48000,
+    "channels": 2,
+    "timeStretch": false,
+    "truncation": false,
+    "musicTitle": "DNA档案微光 / DNA Archive Glow",
+    "inputs": [
+      {
+        "role": "narration",
+        "path": "work/audio-v4/narration.wav",
+        "sha256": "4cabe261507b96aa6c5c01fabf81ac558666f51eed7158a36456df9ea051e9bb"
+      },
+      {
+        "role": "music",
+        "path": "public/music/dna_archive_glow_v4.wav",
+        "sha256": "178a8f5a46b324ff8b6a5649599fc880a5058ba2df6957d071a66ef632eb038c"
+      },
+      {
+        "role": "transitions",
+        "path": "public/music/dna_archive_transitions_v4.wav",
+        "sha256": "bca1c2bde4eba93ea923aad89101c4c97286df30c8cf5557b351c3ef8f3c9377"
+      },
+      {
+        "role": "timeline",
+        "path": "work/audio-v4/narration.json",
+        "sha256": "9637748c9a18b45cf46fcb00c8f2cfa6d9577d0e6252e39635fc8ee2039ae388"
+      }
+    ],
+    "files": [
+      {
+        "path": "work/audio-v4/master.wav",
+        "sha256": "45ae699b3d7d8f77620b2f06c6bd2414e498a850818f6836a2dcdf008a38655b",
+        "duration": 300.0
+      },
+      {
+        "path": "work/audio-v4/narration.wav",
+        "sha256": "4cabe261507b96aa6c5c01fabf81ac558666f51eed7158a36456df9ea051e9bb",
+        "duration": 300.0
+      },
+      {
+        "path": "work/audio-v4/music-ducked.wav",
+        "sha256": "c525d0fb72b8ff9658a035d15c0fd1cc42aaee2b3cf59e84036616d3de9991b9",
+        "duration": 300.0
+      },
+      {
+        "path": "work/audio-v4/master-preview.m4a",
+        "sha256": "230793e88d2ed32675912fdd132b897e41d678c2ed1cfdeb5312552f261553f0",
+        "duration": 300.0
+      }
+    ],
+    "wav": {
+      "input_i": "-16.03",
+      "input_tp": "-1.49",
+      "input_lra": "4.60",
+      "input_thresh": "-26.49",
+      "output_i": "-16.03",
+      "output_tp": "-1.50",
+      "output_lra": "4.40",
+      "output_thresh": "-26.43",
+      "normalization_type": "dynamic",
+      "target_offset": "0.03"
+    },
+    "aac": {
+      "input_i": "-16.04",
+      "input_tp": "-1.41",
+      "input_lra": "4.60",
+      "input_thresh": "-26.50",
+      "output_i": "-16.03",
+      "output_tp": "-1.50",
+      "output_lra": "4.40",
+      "output_thresh": "-26.43",
+      "normalization_type": "dynamic",
+      "target_offset": "0.03"
+    }
+  },
+  "excludedCloudCandidates": [
+    {
+      "ledgerPath": "research/voice-generation-cloud-v4.json",
+      "ledgerSha256": "2211da92a9b83685e5ef0285f9d4097f88255fc892ff8213aa2a5b18f7d13bf5",
+      "usage": "unused-candidate",
+      "reason": "The activated V4 voice uses the local generation ledger and its matching raw/clean WAVs; cloud candidate hashes are excluded.",
+      "candidateHashesDisjointFromUsedAudio": true,
+      "candidates": [
+        {
+          "id": "n01",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n01.wav",
+          "recordedSha256": "128938ebf217f9cdb160df8507b8e737b8a38e6889fb8ca821055ef9c2bf0897",
+          "actualSha256": "128938ebf217f9cdb160df8507b8e737b8a38e6889fb8ca821055ef9c2bf0897",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n02",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n02.wav",
+          "recordedSha256": "dfe46886f9b91e5fa87bd8f561d856b01c5a38d267d788f7b57acec056b53426",
+          "actualSha256": "dfe46886f9b91e5fa87bd8f561d856b01c5a38d267d788f7b57acec056b53426",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n03",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n03.wav",
+          "recordedSha256": "3acdf725367520ffbe39b81c0e1720baadca1f90d30a46049aca932e10f1878a",
+          "actualSha256": "3acdf725367520ffbe39b81c0e1720baadca1f90d30a46049aca932e10f1878a",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n04",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n04.wav",
+          "recordedSha256": "03209159f9c2fb7dfb55d6de5c2394d2b6f093a028caf9ab110073cdb0efe0ec",
+          "actualSha256": "03209159f9c2fb7dfb55d6de5c2394d2b6f093a028caf9ab110073cdb0efe0ec",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n05",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n05.wav",
+          "recordedSha256": "cab9068846e5fd7663464a37a44c07da70ba2caf1f462064526e0e8b1e653876",
+          "actualSha256": "cab9068846e5fd7663464a37a44c07da70ba2caf1f462064526e0e8b1e653876",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n06",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n06.wav",
+          "recordedSha256": "0fcb04130d1ed77e982db2bb06654a3a2c439e7ca5d5c122810b41770c0cd126",
+          "actualSha256": "0fcb04130d1ed77e982db2bb06654a3a2c439e7ca5d5c122810b41770c0cd126",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n07",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n07.wav",
+          "recordedSha256": "445f5308e41de673480252ae360096d9ea9d605481257fb1643111b109377ae6",
+          "actualSha256": "445f5308e41de673480252ae360096d9ea9d605481257fb1643111b109377ae6",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n08",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n08.wav",
+          "recordedSha256": "cd2afcd86f4897114f92f39fe35f3aca966bd6c85c7aef8d5798bf1de36dc1b8",
+          "actualSha256": "cd2afcd86f4897114f92f39fe35f3aca966bd6c85c7aef8d5798bf1de36dc1b8",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n09",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n09.wav",
+          "recordedSha256": "74813d9ddec53dddb7a6ea19b05ea39ad1874a2385eeb5b7176a70f12a28ebad",
+          "actualSha256": "74813d9ddec53dddb7a6ea19b05ea39ad1874a2385eeb5b7176a70f12a28ebad",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n10",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n10.wav",
+          "recordedSha256": "d91dda76e7c34cccae2fbd1e76b7bb0d67afa188a13751be214e11b0ef04fd52",
+          "actualSha256": "d91dda76e7c34cccae2fbd1e76b7bb0d67afa188a13751be214e11b0ef04fd52",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n11",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n11.wav",
+          "recordedSha256": "2b949d5db391503e553399435496ffce8f501896e534b91149a321c027cdeea7",
+          "actualSha256": "2b949d5db391503e553399435496ffce8f501896e534b91149a321c027cdeea7",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n12",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n12.wav",
+          "recordedSha256": "c0c33349eeebe37319c14cfa68011dc32f7cb6ddd8362e740f2365285f95595d",
+          "actualSha256": "c0c33349eeebe37319c14cfa68011dc32f7cb6ddd8362e740f2365285f95595d",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n13",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n13.wav",
+          "recordedSha256": "70ed5344f560bd7224adccc3823b4136ac70b5cc86efd3a177a39570b8d871b4",
+          "actualSha256": "70ed5344f560bd7224adccc3823b4136ac70b5cc86efd3a177a39570b8d871b4",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n14",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n14.wav",
+          "recordedSha256": "c94535ee9a6491bf022c50abde46264222dbfdf449d680676658d5fef8e8ce7a",
+          "actualSha256": "c94535ee9a6491bf022c50abde46264222dbfdf449d680676658d5fef8e8ce7a",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n15",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n15.wav",
+          "recordedSha256": "f8244df8054ab4f5cc101554e5983d5544fe80d7a1f7e7acae7b61e4b0fbae8a",
+          "actualSha256": "f8244df8054ab4f5cc101554e5983d5544fe80d7a1f7e7acae7b61e4b0fbae8a",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n16",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n16.wav",
+          "recordedSha256": "0b9ecb49d205905324c341e30f6137c64ef1851e6054e2f6d0ae27ddcbf8bf3c",
+          "actualSha256": "0b9ecb49d205905324c341e30f6137c64ef1851e6054e2f6d0ae27ddcbf8bf3c",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n17",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n17.wav",
+          "recordedSha256": "b18a7dc6c0d399e446dbe3173b767130a29461978131fd2d8b8ce777b51dacc2",
+          "actualSha256": "b18a7dc6c0d399e446dbe3173b767130a29461978131fd2d8b8ce777b51dacc2",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n18",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n18.wav",
+          "recordedSha256": "a3734ab90e156dd06ada8db0f90420833bbdaf04a3d26e125f6d0ceb8c0c71a1",
+          "actualSha256": "a3734ab90e156dd06ada8db0f90420833bbdaf04a3d26e125f6d0ceb8c0c71a1",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n19",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n19.wav",
+          "recordedSha256": "3223fd9972a7b0c20db9f9e238f06186d06a50e4d4dc818816987873362d1bdb",
+          "actualSha256": "3223fd9972a7b0c20db9f9e238f06186d06a50e4d4dc818816987873362d1bdb",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n20",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n20.wav",
+          "recordedSha256": "8578011fff8d8667c5ee80ade9d3c1f001b6596609cdcd35ef96ddd8f8d7f86b",
+          "actualSha256": "8578011fff8d8667c5ee80ade9d3c1f001b6596609cdcd35ef96ddd8f8d7f86b",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n21",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n21.wav",
+          "recordedSha256": "5150ac116f97991ceb3747eab5846a374fa3bf16ebf02375a902c4c392f86573",
+          "actualSha256": "5150ac116f97991ceb3747eab5846a374fa3bf16ebf02375a902c4c392f86573",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n22",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n22.wav",
+          "recordedSha256": "4dd30c264dc4926216ada88cc4b427a45d8abf064ffad5ee593a2fc4ab8efdd7",
+          "actualSha256": "4dd30c264dc4926216ada88cc4b427a45d8abf064ffad5ee593a2fc4ab8efdd7",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n23",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n23.wav",
+          "recordedSha256": "8634c252bbf894cddb33363fc2c6c6fbe6fae901bc940798a4f81e7434e9dea6",
+          "actualSha256": "8634c252bbf894cddb33363fc2c6c6fbe6fae901bc940798a4f81e7434e9dea6",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n24",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n24.wav",
+          "recordedSha256": "8ca99c77e039eded95aaa51689299e397c2cde704aca418ff75d3b5e644f618c",
+          "actualSha256": "8ca99c77e039eded95aaa51689299e397c2cde704aca418ff75d3b5e644f618c",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n25",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n25.wav",
+          "recordedSha256": "b0bb69966560003cee2a1512d5aa7acbbedf652b98dc6e773e52a2d96c9ed59b",
+          "actualSha256": "b0bb69966560003cee2a1512d5aa7acbbedf652b98dc6e773e52a2d96c9ed59b",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n26",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n26.wav",
+          "recordedSha256": "74ac77bcba0bea9310c604bd43a42f1c382c1d521321c3f3614d29cba4204c76",
+          "actualSha256": "74ac77bcba0bea9310c604bd43a42f1c382c1d521321c3f3614d29cba4204c76",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n27",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n27.wav",
+          "recordedSha256": "5717fc3d5ed2d7075487d16c8cae0997abe9e4d4dd3d6366d2f68c5db25b6a7f",
+          "actualSha256": "5717fc3d5ed2d7075487d16c8cae0997abe9e4d4dd3d6366d2f68c5db25b6a7f",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n28",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n28.wav",
+          "recordedSha256": "b495709750bdedfab8e27330f5444c1368ad5649dc6676a47178963cf8bd9408",
+          "actualSha256": "b495709750bdedfab8e27330f5444c1368ad5649dc6676a47178963cf8bd9408",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n29",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n29.wav",
+          "recordedSha256": "222c9eec7baf8a26799fb7c6e7fce19cc308de8054209834d1ce3aa9b77a31c0",
+          "actualSha256": "222c9eec7baf8a26799fb7c6e7fce19cc308de8054209834d1ce3aa9b77a31c0",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n30",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n30.wav",
+          "recordedSha256": "9b31ebd72f9ae43f0ebc37268d938d1a3ed82e99a4ebae90c0d0c2d3fefa7d6e",
+          "actualSha256": "9b31ebd72f9ae43f0ebc37268d938d1a3ed82e99a4ebae90c0d0c2d3fefa7d6e",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n31",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n31.wav",
+          "recordedSha256": "338e2c73f31ce62a822c132e8fb80d675fe2163b1a71db123fc2a00865a0f06e",
+          "actualSha256": "338e2c73f31ce62a822c132e8fb80d675fe2163b1a71db123fc2a00865a0f06e",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n32",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n32.wav",
+          "recordedSha256": "cbc33149e37382fdf4780ad8b362bb7259a21dd7ad20ff1632416d6f291033e1",
+          "actualSha256": "cbc33149e37382fdf4780ad8b362bb7259a21dd7ad20ff1632416d6f291033e1",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n33",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n33.wav",
+          "recordedSha256": "3978b82f86b2050fc3e5311aac2788c07db4d5537da0f71f931263eb65c1b93b",
+          "actualSha256": "3978b82f86b2050fc3e5311aac2788c07db4d5537da0f71f931263eb65c1b93b",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n34",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n34.wav",
+          "recordedSha256": "5a0f2a4818628717ad4cd25b47084d15f38259f6a224e9b9df1bf01c9ac2114c",
+          "actualSha256": "5a0f2a4818628717ad4cd25b47084d15f38259f6a224e9b9df1bf01c9ac2114c",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n35",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n35.wav",
+          "recordedSha256": "a9b0f00a948f74e68f83842718195f993e0ec171741020803f9a02cc37201c34",
+          "actualSha256": "a9b0f00a948f74e68f83842718195f993e0ec171741020803f9a02cc37201c34",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n36",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n36.wav",
+          "recordedSha256": "a0287932559b0352baef3f0b818c38178679178453a519a6816a97d408703234",
+          "actualSha256": "a0287932559b0352baef3f0b818c38178679178453a519a6816a97d408703234",
+          "present": true,
+          "usedInV4": false
+        },
+        {
+          "id": "n37",
+          "model": "qwen-audio-3.0-tts-flash",
+          "path": "public/audio/cloud-raw-v4/n37.wav",
+          "recordedSha256": "76518d4d9847dd1eedb1442c9f26f856f8822108569d02820cb16bcb9adf2d14",
+          "actualSha256": "76518d4d9847dd1eedb1442c9f26f856f8822108569d02820cb16bcb9adf2d14",
+          "present": true,
+          "usedInV4": false
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/config.json",
+      "bytes": 4494,
+      "sha256": "2e714c787c8edb98b05432685cddb634add2de4d4e645f653d68251ef72ba011",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/generation_config.json",
+      "bytes": 245,
+      "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/merges.txt",
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/model.safetensors",
+      "bytes": 1829344272,
+      "sha256": "180b3b10eb1c9f1b4db7806d5475bae3071c0243c299d49926bab1da3b6946f6",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/preprocessor_config.json",
+      "bytes": 127,
+      "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/speech_tokenizer/config.json",
+      "bytes": 2336,
+      "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/speech_tokenizer/configuration.json",
+      "bytes": 76,
+      "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/speech_tokenizer/model.safetensors",
+      "bytes": 682293092,
+      "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/speech_tokenizer/preprocessor_config.json",
+      "bytes": 234,
+      "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/tokenizer_config.json",
+      "bytes": 7344,
+      "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/models/Qwen3-TTS-0.6B/vocab.json",
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "roles": [
+        "local-model-file"
+      ]
+    },
+    {
+      "path": "D:/python_project/tts/work/clone-reference.wav",
+      "bytes": 763248,
+      "sha256": "dd8b89f70ab634af820966c01f3af535adcba7323427866d646c0dc1f6280bf7",
+      "roles": [
+        "local-voice-reference"
+      ]
+    },
+    {
+      "path": "delivery/DNA存储_连续数据之旅_V4_1080p.mp4",
+      "bytes": 92641089,
+      "sha256": "b0c10dae43cc0c857f4cea616e6a801dde292b90cbd692eb3f7b7d799ebd71a7",
+      "roles": [
+        "final-video-selected-for-later-delivery-qa"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n01.wav",
+      "bytes": 841004,
+      "sha256": "65dc966f2da532455f7242040ca6e8bc1204ae0dd19cce64c6049bdcc8173679",
+      "roles": [
+        "n01-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n02.wav",
+      "bytes": 1025324,
+      "sha256": "26d59a513ab122e2d0fb11d1578cd3a4ddc5fc265f2003c9509615c08a43c6c4",
+      "roles": [
+        "n02-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n03.wav",
+      "bytes": 967724,
+      "sha256": "89561a2375c4a4c7cdbd9e1e2f2f01771f994aee064a32254fb1c384b13cd554",
+      "roles": [
+        "n03-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n04.wav",
+      "bytes": 1082924,
+      "sha256": "147998e002b3b39d345f326f0442a84dc9280766afdfc91ab35a82500305a0ae",
+      "roles": [
+        "n04-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n05.wav",
+      "bytes": 1140524,
+      "sha256": "b5a403c922002fc1c4ccd629fc38595cb01f20d3d4f46fd64c3ac3d2f44dd22e",
+      "roles": [
+        "n05-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n06.wav",
+      "bytes": 944684,
+      "sha256": "813be7f441a9b76ffb90d135bc16bde04e09b780660014e68bf628c713f3b263",
+      "roles": [
+        "n06-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n07.wav",
+      "bytes": 910124,
+      "sha256": "2ddded66bf41f00d1c31f6e0bae9d77a3de5375dac1114faaf954666c03c6180",
+      "roles": [
+        "n07-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n08.wav",
+      "bytes": 1048364,
+      "sha256": "8c927b119ef83f264e72282bc854d147188d06f51c65268d9b4692789f670d39",
+      "roles": [
+        "n08-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n09.wav",
+      "bytes": 817964,
+      "sha256": "3798010da4ae0f73980cd4e8acc0a06c05a4f0c48aeb86e44931e91bd73ba41b",
+      "roles": [
+        "n09-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n10.wav",
+      "bytes": 622124,
+      "sha256": "b0b36432965f197d9ae08718eb7655aa79d5236a42736e1a99a9de1b0a65b969",
+      "roles": [
+        "n10-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n11.wav",
+      "bytes": 933170,
+      "sha256": "32feac08d6e373068eaa4540414285c16a6b20228293278e59f35a348c79a4b0",
+      "roles": [
+        "n11-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n12.wav",
+      "bytes": 910124,
+      "sha256": "71b549c3b5a492fa34dbc7af4ee6994701d4a49e7dd3fff4adc121fb3acafefb",
+      "roles": [
+        "n12-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n13.wav",
+      "bytes": 1036850,
+      "sha256": "23d4e9be3ae3c9029ac3874fe7b0b0223b403eb6b11fa3fef5c9b425725a7791",
+      "roles": [
+        "n13-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n14.wav",
+      "bytes": 933170,
+      "sha256": "4f9ac34fc7ebd015cc87e946afa44d313711df3c7b83a727f2636e53a36acb86",
+      "roles": [
+        "n14-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n15.wav",
+      "bytes": 967724,
+      "sha256": "8a8067eb56b13c98faada8125fd3fcd29a4ba0ccdf91dd5ffd852620073c3c49",
+      "roles": [
+        "n15-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n16.wav",
+      "bytes": 887084,
+      "sha256": "fab423c32cd98c3b918a4c6d5a781fa95950a3a2159b7d00ce298010f1b39e25",
+      "roles": [
+        "n16-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n17.wav",
+      "bytes": 1059884,
+      "sha256": "c0c3934120820e896c37efd90634ed5ed079a0c8bffeeabb95f9185a9f7a9073",
+      "roles": [
+        "n17-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n18.wav",
+      "bytes": 944684,
+      "sha256": "abfd2621b28b1858483a0836d3b9a6ab57e4bedf04f04cac20655627c14a1936",
+      "roles": [
+        "n18-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n19.wav",
+      "bytes": 1129004,
+      "sha256": "9c7ee2b298c80ef2c94f1f823b23526b2c06e5f9fe986e1a4355b198fb9a81d5",
+      "roles": [
+        "n19-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n20.wav",
+      "bytes": 933170,
+      "sha256": "6ee611abbcfb05bf0f64434d02972b08a351c0e6fa1e4cce57cc580cbb841390",
+      "roles": [
+        "n20-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n21.wav",
+      "bytes": 852524,
+      "sha256": "b8ffe9ed420dfa646fa9058373e26cf743b2b168865f37db2b1229c69d013fe1",
+      "roles": [
+        "n21-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n22.wav",
+      "bytes": 956204,
+      "sha256": "d09ae742148eb9b1272424ad26010f5e1331937556bbf80f72805c06bbba49ec",
+      "roles": [
+        "n22-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n23.wav",
+      "bytes": 898610,
+      "sha256": "d2bd2acf6ccdad1aeee1f3b2b890d61b0e9e207373b622c63c440b48e9c73d28",
+      "roles": [
+        "n23-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n24.wav",
+      "bytes": 864044,
+      "sha256": "1a95560dc180bd4f2ed60e4870da8f7059fc35f330932d2c5cc28f34ca99d640",
+      "roles": [
+        "n24-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n25.wav",
+      "bytes": 1036850,
+      "sha256": "5cf2695158de5aa984831da2edb35fd70c2087fd6a304cebd7cd2ba9a8ebf511",
+      "roles": [
+        "n25-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n26.wav",
+      "bytes": 898610,
+      "sha256": "61edfedcead16e885072e582995c4cdafa64c8052b62a2535bfa8d11fba263a2",
+      "roles": [
+        "n26-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n27.wav",
+      "bytes": 921644,
+      "sha256": "f741deabedbc6cabff4e59d87998b4404814c6a795e98aca84723d906e357aa7",
+      "roles": [
+        "n27-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n28.wav",
+      "bytes": 887084,
+      "sha256": "c2ed1820eac6a7ddf0bd0d18ae71e68535c3dd981f0c529a34413359028f4e34",
+      "roles": [
+        "n28-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n29.wav",
+      "bytes": 656690,
+      "sha256": "17660dc410efb7fa7b406a824b6080fc8d3a4db11e63762afb4a493ef8abb09e",
+      "roles": [
+        "n29-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n30.wav",
+      "bytes": 933170,
+      "sha256": "1e62b5bdbeba9342e97a385ebe71d877089fb81ff129b11561d46db9307807cf",
+      "roles": [
+        "n30-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n31.wav",
+      "bytes": 1094444,
+      "sha256": "d5da528ba2552a3027ca6db33c82992adaa8889e64572da69b1f36a604a85a58",
+      "roles": [
+        "n31-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n32.wav",
+      "bytes": 979244,
+      "sha256": "1a46a7cde5a74516fc3b73259b615888bd7fcff23522461fd788f9c3e88dbfe3",
+      "roles": [
+        "n32-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n33.wav",
+      "bytes": 921644,
+      "sha256": "67049f80c436c30bd44e7f655d1d92690d27edb951af4a76562021f6d3a0f0e3",
+      "roles": [
+        "n33-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n34.wav",
+      "bytes": 1117484,
+      "sha256": "f29eb83eac367c446cf0866941532b00f1841e9008c7e82c48fad0053962f00d",
+      "roles": [
+        "n34-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n35.wav",
+      "bytes": 1105964,
+      "sha256": "c7a42c5e6cd64ce9c118fee6e9b26369305daf426c3a9811e200c62a24c9413f",
+      "roles": [
+        "n35-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n36.wav",
+      "bytes": 1175084,
+      "sha256": "c56cd1209b069ff499c22e24d7d030f58e8985ef27b1bcd668a2873cb486ece8",
+      "roles": [
+        "n36-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/clean/n37.wav",
+      "bytes": 1105964,
+      "sha256": "9682d73ff689ff72360d250a7cbf9910198f53eb6f565a7fae45067c190be35a",
+      "roles": [
+        "n37-activated-clean"
+      ]
+    },
+    {
+      "path": "public/audio/v4/master.wav",
+      "bytes": 86400102,
+      "sha256": "45ae699b3d7d8f77620b2f06c6bd2414e498a850818f6836a2dcdf008a38655b",
+      "roles": [
+        "activated-master"
+      ]
+    },
+    {
+      "path": "public/audio/v4/narration.wav",
+      "bytes": 86400044,
+      "sha256": "4cabe261507b96aa6c5c01fabf81ac558666f51eed7158a36456df9ea051e9bb",
+      "roles": [
+        "activated-narration-wav"
+      ]
+    },
+    {
+      "path": "public/music/dna_archive_glow_v4.wav",
+      "bytes": 86400044,
+      "sha256": "178a8f5a46b324ff8b6a5649599fc880a5058ba2df6957d071a66ef632eb038c",
+      "roles": [
+        "new-music-0",
+        "mix-input-music"
+      ]
+    },
+    {
+      "path": "public/music/dna_archive_transitions_v4.wav",
+      "bytes": 86400044,
+      "sha256": "bca1c2bde4eba93ea923aad89101c4c97286df30c8cf5557b351c3ef8f3c9377",
+      "roles": [
+        "new-music-1",
+        "mix-input-transitions"
+      ]
+    },
+    {
+      "path": "public/music/samples/manifest.json",
+      "bytes": 13496,
+      "sha256": "0d0f0bc399381c9d1a8d4a7912377c16e570da199045e2b920514acfc5a28836",
+      "roles": [
+        "music-sample-source-manifest"
+      ]
+    },
+    {
+      "path": "research/music-composition-v4.json",
+      "bytes": 184270,
+      "sha256": "5370a0e9a47e4756f3d28e9bd2275f83974c4e3e028579f2bfb624ea11921a57",
+      "roles": [
+        "v4-music-composition-record"
+      ]
+    },
+    {
+      "path": "scripts/build_v4_manifest.py",
+      "bytes": 18260,
+      "sha256": "c423d43f5bb687ec8e849ee86643182b185a8e547337a2a46f7be5e7bd013d93",
+      "roles": [
+        "manifest-generator"
+      ]
+    },
+    {
+      "path": "scripts/mix_v4.py",
+      "bytes": 5741,
+      "sha256": "90b9cd22b5737c07dcf67d3deac2b9189576e26091811aa3bc3c62f1eb8121b3",
+      "roles": [
+        "v4-audio-generation-source"
+      ]
+    },
+    {
+      "path": "scripts/prepare_voice_v4.py",
+      "bytes": 5631,
+      "sha256": "0042ce98fe1c0b70e1e1dccf1da213982ca253c27e49c874f2ba53a2d86e9e5a",
+      "roles": [
+        "v4-audio-generation-source"
+      ]
+    },
+    {
+      "path": "scripts/render_v4.mjs",
+      "bytes": 4054,
+      "sha256": "48efcd6bcdd3c7f139695f9b811a72116aa2177312ffc1fa2e8028ed87ee7b32",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "scripts/score_v4.py",
+      "bytes": 8189,
+      "sha256": "adc3c01ade7d225ffa975f5ba3e1cc42ef0218602ee163a870595429daf61434",
+      "roles": [
+        "v4-audio-generation-source"
+      ]
+    },
+    {
+      "path": "scripts/voice_v4.py",
+      "bytes": 4090,
+      "sha256": "ff9aa08e1a921b19f19f13ce466928c3452d74d457de0bbc619402a06d7dc6fe",
+      "roles": [
+        "v4-audio-generation-source"
+      ]
+    },
+    {
+      "path": "src/CameraPathV4.ts",
+      "bytes": 8782,
+      "sha256": "57660aa9e54daa8ef926f287041b3dcdc79cce398c3ab227d58cba6838e5229c",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "src/EventsV4.ts",
+      "bytes": 9206,
+      "sha256": "e28520a08551f97b65ef7f54bc1cf77ef6631bd3ec860f838974798fa04ce76c",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "src/FilmV4.tsx",
+      "bytes": 9782,
+      "sha256": "05f098a92b6bf72803d280e98b672e9f35b3d2e35014fd55c863cf820ae03c83",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "src/TimelineV4.ts",
+      "bytes": 1522,
+      "sha256": "4c99016b16d421be43bfab545949fc0db0801e6a9a256751cda1d0ef1744302b",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "src/WorldV4.ts",
+      "bytes": 5935,
+      "sha256": "3bf5306715816af4706263161350ffe42405faeee1497eb69ab913f4d38f1d59",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "src/captions-v4.json",
+      "bytes": 22151,
+      "sha256": "ae11f55870067ecb7a17edd05025b673814ef9a6329c6fba3df7b239b774f1db",
+      "roles": [
+        "activated-captions-json"
+      ]
+    },
+    {
+      "path": "src/indexV4.tsx",
+      "bytes": 352,
+      "sha256": "3e9b45b7b7baca6cab138deb876908d8d323d9445280024d741e2a35d03e8dee",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "src/narration-v4.json",
+      "bytes": 27075,
+      "sha256": "9637748c9a18b45cf46fcb00c8f2cfa6d9577d0e6252e39635fc8ee2039ae388",
+      "roles": [
+        "activated-narration-json"
+      ]
+    },
+    {
+      "path": "src/scene/StationsV4.ts",
+      "bytes": 19622,
+      "sha256": "c27e4e508214d4295a541981b7b049c98b0d730042e360511d24c9763957feba",
+      "roles": [
+        "activated-v4-source"
+      ]
+    },
+    {
+      "path": "work/audio-v4/audio-mix-v4.json",
+      "bytes": 2700,
+      "sha256": "5d6b8a288ab126b83e70f2e0fef6c20a11157965b9ce7ef1130d48f048f338cc",
+      "roles": [
+        "v4-mixing-record"
+      ]
+    },
+    {
+      "path": "work/audio-v4/captions.json",
+      "bytes": 22151,
+      "sha256": "ae11f55870067ecb7a17edd05025b673814ef9a6329c6fba3df7b239b774f1db",
+      "roles": [
+        "working-captions-json"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n01.wav",
+      "bytes": 841004,
+      "sha256": "65dc966f2da532455f7242040ca6e8bc1204ae0dd19cce64c6049bdcc8173679",
+      "roles": [
+        "n01-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n02.wav",
+      "bytes": 1025324,
+      "sha256": "26d59a513ab122e2d0fb11d1578cd3a4ddc5fc265f2003c9509615c08a43c6c4",
+      "roles": [
+        "n02-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n03.wav",
+      "bytes": 967724,
+      "sha256": "89561a2375c4a4c7cdbd9e1e2f2f01771f994aee064a32254fb1c384b13cd554",
+      "roles": [
+        "n03-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n04.wav",
+      "bytes": 1082924,
+      "sha256": "147998e002b3b39d345f326f0442a84dc9280766afdfc91ab35a82500305a0ae",
+      "roles": [
+        "n04-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n05.wav",
+      "bytes": 1140524,
+      "sha256": "b5a403c922002fc1c4ccd629fc38595cb01f20d3d4f46fd64c3ac3d2f44dd22e",
+      "roles": [
+        "n05-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n06.wav",
+      "bytes": 944684,
+      "sha256": "813be7f441a9b76ffb90d135bc16bde04e09b780660014e68bf628c713f3b263",
+      "roles": [
+        "n06-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n07.wav",
+      "bytes": 910124,
+      "sha256": "2ddded66bf41f00d1c31f6e0bae9d77a3de5375dac1114faaf954666c03c6180",
+      "roles": [
+        "n07-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n08.wav",
+      "bytes": 1048364,
+      "sha256": "8c927b119ef83f264e72282bc854d147188d06f51c65268d9b4692789f670d39",
+      "roles": [
+        "n08-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n09.wav",
+      "bytes": 817964,
+      "sha256": "3798010da4ae0f73980cd4e8acc0a06c05a4f0c48aeb86e44931e91bd73ba41b",
+      "roles": [
+        "n09-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n10.wav",
+      "bytes": 622124,
+      "sha256": "b0b36432965f197d9ae08718eb7655aa79d5236a42736e1a99a9de1b0a65b969",
+      "roles": [
+        "n10-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n11.wav",
+      "bytes": 933170,
+      "sha256": "32feac08d6e373068eaa4540414285c16a6b20228293278e59f35a348c79a4b0",
+      "roles": [
+        "n11-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n12.wav",
+      "bytes": 910124,
+      "sha256": "71b549c3b5a492fa34dbc7af4ee6994701d4a49e7dd3fff4adc121fb3acafefb",
+      "roles": [
+        "n12-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n13.wav",
+      "bytes": 1036850,
+      "sha256": "23d4e9be3ae3c9029ac3874fe7b0b0223b403eb6b11fa3fef5c9b425725a7791",
+      "roles": [
+        "n13-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n14.wav",
+      "bytes": 933170,
+      "sha256": "4f9ac34fc7ebd015cc87e946afa44d313711df3c7b83a727f2636e53a36acb86",
+      "roles": [
+        "n14-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n15.wav",
+      "bytes": 967724,
+      "sha256": "8a8067eb56b13c98faada8125fd3fcd29a4ba0ccdf91dd5ffd852620073c3c49",
+      "roles": [
+        "n15-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n16.wav",
+      "bytes": 887084,
+      "sha256": "fab423c32cd98c3b918a4c6d5a781fa95950a3a2159b7d00ce298010f1b39e25",
+      "roles": [
+        "n16-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n17.wav",
+      "bytes": 1059884,
+      "sha256": "c0c3934120820e896c37efd90634ed5ed079a0c8bffeeabb95f9185a9f7a9073",
+      "roles": [
+        "n17-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n18.wav",
+      "bytes": 944684,
+      "sha256": "abfd2621b28b1858483a0836d3b9a6ab57e4bedf04f04cac20655627c14a1936",
+      "roles": [
+        "n18-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n19.wav",
+      "bytes": 1129004,
+      "sha256": "9c7ee2b298c80ef2c94f1f823b23526b2c06e5f9fe986e1a4355b198fb9a81d5",
+      "roles": [
+        "n19-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n20.wav",
+      "bytes": 933170,
+      "sha256": "6ee611abbcfb05bf0f64434d02972b08a351c0e6fa1e4cce57cc580cbb841390",
+      "roles": [
+        "n20-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n21.wav",
+      "bytes": 852524,
+      "sha256": "b8ffe9ed420dfa646fa9058373e26cf743b2b168865f37db2b1229c69d013fe1",
+      "roles": [
+        "n21-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n22.wav",
+      "bytes": 956204,
+      "sha256": "d09ae742148eb9b1272424ad26010f5e1331937556bbf80f72805c06bbba49ec",
+      "roles": [
+        "n22-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n23.wav",
+      "bytes": 898610,
+      "sha256": "d2bd2acf6ccdad1aeee1f3b2b890d61b0e9e207373b622c63c440b48e9c73d28",
+      "roles": [
+        "n23-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n24.wav",
+      "bytes": 864044,
+      "sha256": "1a95560dc180bd4f2ed60e4870da8f7059fc35f330932d2c5cc28f34ca99d640",
+      "roles": [
+        "n24-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n25.wav",
+      "bytes": 1036850,
+      "sha256": "5cf2695158de5aa984831da2edb35fd70c2087fd6a304cebd7cd2ba9a8ebf511",
+      "roles": [
+        "n25-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n26.wav",
+      "bytes": 898610,
+      "sha256": "61edfedcead16e885072e582995c4cdafa64c8052b62a2535bfa8d11fba263a2",
+      "roles": [
+        "n26-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n27.wav",
+      "bytes": 921644,
+      "sha256": "f741deabedbc6cabff4e59d87998b4404814c6a795e98aca84723d906e357aa7",
+      "roles": [
+        "n27-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n28.wav",
+      "bytes": 887084,
+      "sha256": "c2ed1820eac6a7ddf0bd0d18ae71e68535c3dd981f0c529a34413359028f4e34",
+      "roles": [
+        "n28-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n29.wav",
+      "bytes": 656690,
+      "sha256": "17660dc410efb7fa7b406a824b6080fc8d3a4db11e63762afb4a493ef8abb09e",
+      "roles": [
+        "n29-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n30.wav",
+      "bytes": 933170,
+      "sha256": "1e62b5bdbeba9342e97a385ebe71d877089fb81ff129b11561d46db9307807cf",
+      "roles": [
+        "n30-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n31.wav",
+      "bytes": 1094444,
+      "sha256": "d5da528ba2552a3027ca6db33c82992adaa8889e64572da69b1f36a604a85a58",
+      "roles": [
+        "n31-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n32.wav",
+      "bytes": 979244,
+      "sha256": "1a46a7cde5a74516fc3b73259b615888bd7fcff23522461fd788f9c3e88dbfe3",
+      "roles": [
+        "n32-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n33.wav",
+      "bytes": 921644,
+      "sha256": "67049f80c436c30bd44e7f655d1d92690d27edb951af4a76562021f6d3a0f0e3",
+      "roles": [
+        "n33-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n34.wav",
+      "bytes": 1117484,
+      "sha256": "f29eb83eac367c446cf0866941532b00f1841e9008c7e82c48fad0053962f00d",
+      "roles": [
+        "n34-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n35.wav",
+      "bytes": 1105964,
+      "sha256": "c7a42c5e6cd64ce9c118fee6e9b26369305daf426c3a9811e200c62a24c9413f",
+      "roles": [
+        "n35-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n36.wav",
+      "bytes": 1175084,
+      "sha256": "c56cd1209b069ff499c22e24d7d030f58e8985ef27b1bcd668a2873cb486ece8",
+      "roles": [
+        "n36-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/clean/n37.wav",
+      "bytes": 1105964,
+      "sha256": "9682d73ff689ff72360d250a7cbf9910198f53eb6f565a7fae45067c190be35a",
+      "roles": [
+        "n37-working-clean"
+      ]
+    },
+    {
+      "path": "work/audio-v4/master-preview.m4a",
+      "bytes": 9584670,
+      "sha256": "230793e88d2ed32675912fdd132b897e41d678c2ed1cfdeb5312552f261553f0",
+      "roles": [
+        "mix-output-3"
+      ]
+    },
+    {
+      "path": "work/audio-v4/master.wav",
+      "bytes": 86400102,
+      "sha256": "45ae699b3d7d8f77620b2f06c6bd2414e498a850818f6836a2dcdf008a38655b",
+      "roles": [
+        "working-master",
+        "mix-output-0"
+      ]
+    },
+    {
+      "path": "work/audio-v4/music-ducked.wav",
+      "bytes": 86400044,
+      "sha256": "c525d0fb72b8ff9658a035d15c0fd1cc42aaee2b3cf59e84036616d3de9991b9",
+      "roles": [
+        "mix-output-2"
+      ]
+    },
+    {
+      "path": "work/audio-v4/narration.json",
+      "bytes": 27075,
+      "sha256": "9637748c9a18b45cf46fcb00c8f2cfa6d9577d0e6252e39635fc8ee2039ae388",
+      "roles": [
+        "working-narration-json",
+        "mix-input-timeline"
+      ]
+    },
+    {
+      "path": "work/audio-v4/narration.wav",
+      "bytes": 86400044,
+      "sha256": "4cabe261507b96aa6c5c01fabf81ac558666f51eed7158a36456df9ea051e9bb",
+      "roles": [
+        "working-narration-wav",
+        "mix-input-narration",
+        "mix-output-1"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n01.json",
+      "bytes": 1572,
+      "sha256": "13f949c30ab5b28d57cfd0fc64d5a1d9ed791ed41decf8ecb4ddf6947e63ed6a",
+      "roles": [
+        "n01-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n02.json",
+      "bytes": 1586,
+      "sha256": "0d6d21926f76bc62671854d5fe85c23527c2b4a96f746d70f79f7d23e94c4407",
+      "roles": [
+        "n02-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n03.json",
+      "bytes": 1586,
+      "sha256": "fe5e0b054a030256a896318288b452a75c189a1e2ac1c8fdb31f5dc2c00ba6ab",
+      "roles": [
+        "n03-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n04.json",
+      "bytes": 1573,
+      "sha256": "ebd8fa2da439353b8f3ea88a7ec57aadae9a8f88327608ad86a657f45965ace3",
+      "roles": [
+        "n04-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n05.json",
+      "bytes": 1570,
+      "sha256": "0c6fe2f42d127c834bacfc587037299224222c24ae24201d60e28094e3efb7d0",
+      "roles": [
+        "n05-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n06.json",
+      "bytes": 1571,
+      "sha256": "5ea31ab4804a423926bebd13fa29d879140c832dae68095473c2ec7ab63908cf",
+      "roles": [
+        "n06-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n07.json",
+      "bytes": 1574,
+      "sha256": "297203b6fee9ba46dc2b2803f3aa1d30f903fe8af79b1fd2d8ede1e451395629",
+      "roles": [
+        "n07-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n08.json",
+      "bytes": 1572,
+      "sha256": "8addeb0ba7d7704f76d45c3206d4275dd2250afdf30b56cbb659600c3d97d4b7",
+      "roles": [
+        "n08-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n09.json",
+      "bytes": 1569,
+      "sha256": "c1e3765f5ce0f36dc5fc87b692fdc36f5bf59997eb6291b023e6dbc5044b4d7d",
+      "roles": [
+        "n09-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n10.json",
+      "bytes": 1572,
+      "sha256": "67b87b201b325760451d3d6d0a974276381d0ab1994305a1d7b6a64bf0367704",
+      "roles": [
+        "n10-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n11.json",
+      "bytes": 1597,
+      "sha256": "01f123d97fa429860ac2a183088690d4d9b38e490d1ecf558eac3811231240cc",
+      "roles": [
+        "n11-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n12.json",
+      "bytes": 1583,
+      "sha256": "52183f124da09ab5f44d6a1eedbee7eab5c330c2a826dcf97db5f8c0a1c8a920",
+      "roles": [
+        "n12-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n13.json",
+      "bytes": 1600,
+      "sha256": "23bb8d282cd119f5f73188f7583974a2e92cffd39c6fdb6d48cc478581832225",
+      "roles": [
+        "n13-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n14.json",
+      "bytes": 1611,
+      "sha256": "41e24ad994590194af1480ebdc8f1921a286e12259851d53b754fb2fe72f5f61",
+      "roles": [
+        "n14-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n15.json",
+      "bytes": 1588,
+      "sha256": "3c1065b8784c0f38eb0bd0714c6a7d67e706b818dac9ad781df57cc61eab39fa",
+      "roles": [
+        "n15-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n16.json",
+      "bytes": 1573,
+      "sha256": "c2a9fb735260029fa66a4867c45e8faedb3f5b58aefcb4e736ab9291e65135cd",
+      "roles": [
+        "n16-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n17.json",
+      "bytes": 1585,
+      "sha256": "97f66b5e9e647ceb252180715f2e6db694d975ea5ae2c989d0772a450a70a31a",
+      "roles": [
+        "n17-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n18.json",
+      "bytes": 1571,
+      "sha256": "5b7b06db2cf2dbebcb4f3efc5b0f570190dbdbd15ba9ea13ba1f6ad633e2f6bd",
+      "roles": [
+        "n18-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n19.json",
+      "bytes": 1572,
+      "sha256": "e7706f7d3297193ea400e919414ee376a63653678bd3d2d5ea44aa78988df325",
+      "roles": [
+        "n19-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n20.json",
+      "bytes": 1596,
+      "sha256": "9eeda69dca588ee28ffb0b17bef89f0b6a24482a7813209dfbaa3ea21a4f1e90",
+      "roles": [
+        "n20-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n21.json",
+      "bytes": 1568,
+      "sha256": "acdf73df31c822da06e0d5e728c8599d05bbc9ea90d35742833efe943ac1b93e",
+      "roles": [
+        "n21-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n22.json",
+      "bytes": 1573,
+      "sha256": "13d42409ac615d3ebc86bbd51bf65a176b0a84ca24a7ffd6705235bb09d4d0af",
+      "roles": [
+        "n22-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n23.json",
+      "bytes": 1598,
+      "sha256": "1aa1bc03adfdbf6a1b50ca78303be61ee74d083ac23f2fd86a688479f6cdf479",
+      "roles": [
+        "n23-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n24.json",
+      "bytes": 1569,
+      "sha256": "d692393b38f707a153512935ef9c864450db7e68f5b7d384c3d0e86cbc59f14f",
+      "roles": [
+        "n24-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n25.json",
+      "bytes": 1614,
+      "sha256": "3ace5fffc21cf08c31200479ccc1b097ba0d12326d50ca14c50f1f803a611e71",
+      "roles": [
+        "n25-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n26.json",
+      "bytes": 1600,
+      "sha256": "fbb42eaf55a33f0de2194856ecbf840f3d541a781056fc1c0cbe1d4cad652010",
+      "roles": [
+        "n26-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n27.json",
+      "bytes": 1570,
+      "sha256": "b1d01e154afa0f13880022338582160378a12731458cff3d789711cfd4ff05e1",
+      "roles": [
+        "n27-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n28.json",
+      "bytes": 1573,
+      "sha256": "b6fe51215589e771c3607a3811ca8d4cfdb8ec20336d412c489dda5b5b2afb79",
+      "roles": [
+        "n28-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n29.json",
+      "bytes": 1598,
+      "sha256": "41600929288eefcdc6264abb6de7584d29cb8f342de03b6b3f8cd6beb4d6f730",
+      "roles": [
+        "n29-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n30.json",
+      "bytes": 1599,
+      "sha256": "0a4bcd3a8870ab285266983c44c218297fc494127b532c71371706c6db1121d6",
+      "roles": [
+        "n30-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n31.json",
+      "bytes": 1570,
+      "sha256": "230533fa53a091bb35412937258bf7f50823dfd192d8054f87836ad4ddb76eee",
+      "roles": [
+        "n31-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n32.json",
+      "bytes": 1570,
+      "sha256": "5d765c71a4af1c806ad3002d3808931170d4057a497a63cd16ee63d64b3c5e43",
+      "roles": [
+        "n32-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n33.json",
+      "bytes": 1585,
+      "sha256": "91b2e68059d70497cf704cfccfc2316fd095edc2225a89020c2fdd3f387efaf6",
+      "roles": [
+        "n33-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n34.json",
+      "bytes": 1569,
+      "sha256": "75fd6eb5bcca119b71130e17a6a8d758858112e575b6098e62a0be9052da345a",
+      "roles": [
+        "n34-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n35.json",
+      "bytes": 1586,
+      "sha256": "ab85ad2cebb511ce797e63f8fd8901829ed65f6699adb2a1261ae42067dc68f1",
+      "roles": [
+        "n35-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n36.json",
+      "bytes": 1572,
+      "sha256": "fb0923931abcfde55ef633e955934e91773461ee906b3bf47215476db58fba0e",
+      "roles": [
+        "n36-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/processing/n37.json",
+      "bytes": 1586,
+      "sha256": "1a1e9fc641c75586ff3fdd61fc923e83dbafef71d6ce70224c3dcd7c75ef1c93",
+      "roles": [
+        "n37-processing"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n01.wav",
+      "bytes": 403244,
+      "sha256": "174d8cff15e1eb4b3f0016ca02dcc6a333fdc4af15697b307ec546ad7bad9392",
+      "roles": [
+        "n01-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n02.wav",
+      "bytes": 495404,
+      "sha256": "eddef9f229533a5ad1c85047c921a97870f128294423490eee59278b0de4a9a5",
+      "roles": [
+        "n02-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n03.wav",
+      "bytes": 466604,
+      "sha256": "3144268ee93d9f25690e0346a99d47b381074aebe60f286bf6a6db7d7120a2a6",
+      "roles": [
+        "n03-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n04.wav",
+      "bytes": 524204,
+      "sha256": "86ed957969b8d09ddfc01ecbc12da709e9746e2e3f77aae417e08fffd657fe5e",
+      "roles": [
+        "n04-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n05.wav",
+      "bytes": 553004,
+      "sha256": "0bfe9dfe327f601b452d89d083ef2a725f7c4196c8c9f2850cbb4871065acf9c",
+      "roles": [
+        "n05-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n06.wav",
+      "bytes": 455084,
+      "sha256": "2fbab3a3f6d83bfd9e03cdb4fb339aee2110a9cf7a5d88902f5edb37143bfde5",
+      "roles": [
+        "n06-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n07.wav",
+      "bytes": 437804,
+      "sha256": "3bbb79dc44015bece00d1164d1e9a88401910c09b4b625175070822a59250fef",
+      "roles": [
+        "n07-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n08.wav",
+      "bytes": 506924,
+      "sha256": "1a997139a0e98c375338bb2348f78a00540a54ff9f02267dd36edf3f027a69a2",
+      "roles": [
+        "n08-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n09.wav",
+      "bytes": 391724,
+      "sha256": "499b6da3a82b21f2745787de72baf93516a310977132bc3f26a17d63d0fd9075",
+      "roles": [
+        "n09-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n10.wav",
+      "bytes": 293804,
+      "sha256": "a75c21c12ce8b6a747dd370abdf73843ee97e90d22b39856aed07e95277f81a1",
+      "roles": [
+        "n10-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n11.wav",
+      "bytes": 449328,
+      "sha256": "16da6578bc13528b914cd8b8a35e2c0a822470f262d099b08dd85dcae1d58bbf",
+      "roles": [
+        "n11-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n12.wav",
+      "bytes": 437804,
+      "sha256": "9786d0c1766019d2a9769f3f77ccc3c5088d76911bf9e92b5606976bdab10604",
+      "roles": [
+        "n12-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n13.wav",
+      "bytes": 501168,
+      "sha256": "dca67aa080dabb87bd6478ec45d2a5dc221a3d007f38bef3e4b3ed8caebbb318",
+      "roles": [
+        "n13-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n14.wav",
+      "bytes": 449328,
+      "sha256": "30ef8f02ae55064c3c2a21b79554d16d56141d0aedb10992364195232ccf7411",
+      "roles": [
+        "n14-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n15.wav",
+      "bytes": 466604,
+      "sha256": "f2034c2cef4f51ebddead2fc56a9fcb94ad5962d2cef361f1703c45eaacce06d",
+      "roles": [
+        "n15-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n16.wav",
+      "bytes": 426284,
+      "sha256": "9afcc663ebb159cbfebbbc830711353641567f9b72353154a9ed67df641eac8f",
+      "roles": [
+        "n16-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n17.wav",
+      "bytes": 512684,
+      "sha256": "2de51b9d970523af93831c288df61346e96a1dfbf59decc9b4e658f045c1570c",
+      "roles": [
+        "n17-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n18.wav",
+      "bytes": 455084,
+      "sha256": "d08924c831594c858470db7262f4b80d3d39b2ea90cebc76dab741d9bbb2fb74",
+      "roles": [
+        "n18-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n19.wav",
+      "bytes": 547244,
+      "sha256": "7c1e0572440d76eff0dd523464da43777a9cb61d396ec18ae7d03fe294c9b0eb",
+      "roles": [
+        "n19-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n20.wav",
+      "bytes": 449328,
+      "sha256": "fe1f072cf24441fe51d8ce8a353cc00484fd255cdd1b7f86ed42b98a11f34f44",
+      "roles": [
+        "n20-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n21.wav",
+      "bytes": 409004,
+      "sha256": "fa2d1e6332a5b003145c9031decd6577cdc5e0d2694843edb922750f41a67f3b",
+      "roles": [
+        "n21-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n22.wav",
+      "bytes": 460844,
+      "sha256": "b7767810139d3211bea2a7cf6efa9a6cbdd669b42868b711afd47cafb384ffe5",
+      "roles": [
+        "n22-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n23.wav",
+      "bytes": 432048,
+      "sha256": "3e8876d0d942e8d5de0d557634d997aa232359993e473ce2d6ecf32ec054dd62",
+      "roles": [
+        "n23-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n24.wav",
+      "bytes": 414764,
+      "sha256": "0b98250e1695b9b0b733857333165db1e5870493c33a560bc62415f8c558e338",
+      "roles": [
+        "n24-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n25.wav",
+      "bytes": 501168,
+      "sha256": "3b90fc7323542a358c636899231bcaae309167cc9129f04cd385cedd4d2c52e4",
+      "roles": [
+        "n25-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n26.wav",
+      "bytes": 432048,
+      "sha256": "f5222e2dac0f062a4213685f2245b54b02065fa332aca4d93a94bdf167823fac",
+      "roles": [
+        "n26-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n27.wav",
+      "bytes": 443564,
+      "sha256": "584563b39f9c4c3b2b60802520c60a6f94317012113793a7dfddb6350127afdb",
+      "roles": [
+        "n27-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n28.wav",
+      "bytes": 426284,
+      "sha256": "0bf69a614f735e000e48f2af26d256a8340f905069ac07188aed4dc9d84898f6",
+      "roles": [
+        "n28-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n29.wav",
+      "bytes": 311088,
+      "sha256": "42f78d5f6d8b5bb6563d19af71c6e74b8f28190f87aa127191768cb5acf4d4db",
+      "roles": [
+        "n29-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n30.wav",
+      "bytes": 449328,
+      "sha256": "3bcc30e46068e6f5d8d8f46504e22670e34d3761ca114ba49ae83bcc644988de",
+      "roles": [
+        "n30-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n31.wav",
+      "bytes": 529964,
+      "sha256": "786391d04a464e081038ed8f729914e7037003e1ebe24033b018dd09bee28f60",
+      "roles": [
+        "n31-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n32.wav",
+      "bytes": 472364,
+      "sha256": "f2f628c6f370843e17b5050756029adfc1fb0030682b29e653ffa44032b621a4",
+      "roles": [
+        "n32-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n33.wav",
+      "bytes": 443564,
+      "sha256": "d57fa3666ac70be1624fe4dafbc52622922186a9f247f4d7f8af1d6e5b7785f0",
+      "roles": [
+        "n33-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n34.wav",
+      "bytes": 541484,
+      "sha256": "744cb69901da4997c531d23f0b1c7427fd38df04ba6dc4534e1c065aefdbaa0a",
+      "roles": [
+        "n34-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n35.wav",
+      "bytes": 535724,
+      "sha256": "55de7836c72d6708c9d5b045b65d36efb67371466a653cf9bae92030f5b59e68",
+      "roles": [
+        "n35-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n36.wav",
+      "bytes": 570284,
+      "sha256": "f69afda8ac3b7df7f7b99c2033d915f65c0f41a22b8df94552741e002adaf259",
+      "roles": [
+        "n36-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/raw/n37.wav",
+      "bytes": 535724,
+      "sha256": "a5a74606c5d3455febaf30323f0c2f5d329cafdbf6e7a149fb2cd7d102633d6e",
+      "roles": [
+        "n37-local-raw"
+      ]
+    },
+    {
+      "path": "work/audio-v4/voice-generation-v4.json",
+      "bytes": 39761,
+      "sha256": "554524d97e37d092fc6e4479cdab710091b2cb83eee2a2f66b699ce73ce42eee",
+      "roles": [
+        "local-generation-ledger"
+      ]
+    }
+  ],
+  "sourceSetSha256": "91c243428cb814b7b9d2605534ed3ff6c84b24744c3d442323a8e66e804d6449",
+  "status": "source-activation-checks-pass",
+  "failedCheckIds": []
+}

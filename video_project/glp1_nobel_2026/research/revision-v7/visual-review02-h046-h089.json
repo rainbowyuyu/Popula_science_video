@@ -1,0 +1,1159 @@
+{
+  "schema": "rainbow.manual-visual-review.v2",
+  "createdUTC": "2026-10-09T10:14:26.016912+00:00",
+  "preview": "v7-preview-02 full Film overlays",
+  "scope": "Actually viewed every one of the 23 contact sheets covering h046–h089 (3 samples/sentence) and opened 10 native frames. No continuous playback or audio listening; no whole-video visual pass. h045 in first sheet is outside assigned range.",
+  "sourceEditsInThisReview": false,
+  "overall": "Most prior severe sampled defects improved; local fixes still required before final visual signoff.",
+  "priorityFixes": [
+    {
+      "frames": [
+        13598
+      ],
+      "issue": "Arteriole entry completely covered by opaque parent muscle",
+      "severity": "blocker"
+    },
+    {
+      "frames": [
+        18443
+      ],
+      "issue": "Large parent kidney/tissue sheet reappears while tiny nephron and oversized labels remain",
+      "severity": "localized-transition"
+    },
+    {
+      "frames": [
+        20616,
+        20709,
+        20916
+      ],
+      "issue": "Main vascular red shells and yellow emissive pulse dominate/partly obscure atrial mechanism",
+      "severity": "localized-occlusion-aesthetic"
+    },
+    {
+      "frames": [
+        19789
+      ],
+      "issue": "Clot-blocking label arrives before a clearly visible clot",
+      "severity": "localized-label"
+    }
+  ],
+  "fixedAtReviewedSamples": [
+    14031,
+    16759,
+    16849,
+    19035,
+    22239,
+    24639
+  ],
+  "sentences": [
+    {
+      "id": "h046",
+      "text": "无论糖还是脂质，运输都靠心脏推动血液。血液对管壁形成压力，血压计测到的，就是这股压力的变化。",
+      "frames": [
+        13043,
+        13141,
+        13231
+      ],
+      "seconds": [
+        434.767,
+        438.033,
+        441.033
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h045-h046.jpg",
+      "status": "usable-sampled-frames",
+      "observed": "血管剖面、弹性管壁与压力提示清晰，三个样本对应。",
+      "nextStep": "仍需连续片段核对泵血/回缩动作。",
+      "priorStatus": "usable-static-samples",
+      "priorFinding": "开口血管、血流和压力提示可辨认，主题对应；三帧不能验证泵血/弹性因果的连续动作。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h047",
+      "text": "心脏收缩，把血推出去，压力升高；心脏舒张时，大动脉的弹性回缩继续推着血走，压力也不会掉到零。",
+      "frames": [
+        13323,
+        13420,
+        13509
+      ],
+      "seconds": [
+        444.1,
+        447.333,
+        450.3
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h047-h048.jpg",
+      "status": "improved-with-caveat",
+      "observed": "局部血管保留到中间帧，末帧才到心脏/主动脉，较前轮不再直接大腿；中间F13420背景黄色光斑抢眼。",
+      "nextStep": "近景减少背景血管发光，保留压力动作。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "从血管转心脏主动脉再拉到躯干/大腿，句末弹性回缩解释可能提前失去局部对象。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h048",
+      "text": "血液还要经过许多小动脉。管壁上的肌肉收紧，通道变窄；要维持流动，就得有更大的压力差。",
+      "frames": [
+        13598,
+        13690,
+        13774
+      ],
+      "seconds": [
+        453.267,
+        456.333,
+        459.133
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h047-h048.jpg",
+      "status": "blocker-remains",
+      "observed": "F13598原图仍是巨大不透明粉色大腿组织，完全看不到小动脉；后两帧可见目标。",
+      "nextStep": "进入父组织之前退透该几何；复检13560–13650。",
+      "priorStatus": "blocker",
+      "priorFinding": "F13598小动脉入场被不透明粉色组织完全遮住；后两帧可见小动脉但竖向肌肉条纹占据背景。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h049",
+      "text": "所以，血压高有多种来路：小动脉偏紧、循环里的水钠偏多、大动脉变硬，都可能参与其中。",
+      "frames": [
+        13860,
+        13949,
+        14031
+      ],
+      "seconds": [
+        462.0,
+        464.967,
+        467.7
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h049-h050.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "F14031不再被实面覆盖，退出时能看到条状肌肉背景和逐渐缩小的血管。",
+      "nextStep": "核对连续退出与到肾的跨位置路线。",
+      "priorStatus": "blocker",
+      "priorFinding": "F14031退出时又被巨大的组织表面盖住；三种升压因素仍主要依靠文字。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h050",
+      "text": "要找水钠这一头，得顺着血液到肾脏。它把水和小分子滤出来，再把身体要留下的部分收回去。",
+      "frames": [
+        14114,
+        14200,
+        14279
+      ],
+      "seconds": [
+        470.467,
+        473.333,
+        475.967
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h049-h050.jpg",
+      "status": "unchanged-caveat",
+      "observed": "肾脏定位明确，但过滤/收回营养的句子仍停在肾外形，具体小管机制下一句才出现。",
+      "nextStep": "可保器官定位；不把此样本宣称为可见滤过仿真。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "滤过/重吸收叙述时仍主要显示不透明肾外形，机制没有进入可见窗口。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h051",
+      "text": "肾小管多收回一些钠，水也容易跟着留下。循环里的液体增多，推动血流的负担就可能随之增加。",
+      "frames": [
+        14359,
+        14445,
+        14523
+      ],
+      "seconds": [
+        478.633,
+        481.5,
+        484.1
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h051-h052.jpg",
+      "status": "improved-with-caveat",
+      "observed": "原图F14445管壁变厚、可见细青色方向符号；新增水钠回到血侧标注。F14359入场目标仍很小。",
+      "nextStep": "方向符号原图可辨，手机缩小仍弱，局部可增屏幕可读性。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "F14359肾单位过小；F14445原图管路清楚但颗粒极细淡，钠/水回到血侧的方向不可辨。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h052",
+      "text": "饭桌上的盐，不只在盐罐里。汤、酱油、腌菜和加工肉，也能积出不少；先少喝咸汤，是很具体的一步。",
+      "frames": [
+        14611,
+        14712,
+        14803
+      ],
+      "seconds": [
+        487.033,
+        490.4,
+        493.433
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h051-h052.jpg",
+      "status": "improved-with-caveat",
+      "observed": "少盐/钠输入减少标注明确，保持同肾单位；三帧不足以核定输入/回收的速率对比。",
+      "nextStep": "使用连续片段评估粒子变化；不新增无关全餐场景。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "三帧未清晰展示盐摄入减少与水钠回收变化之间的动作差异。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h053",
+      "text": "肾脏还有一套保住血压的办法。感到灌注不足时，它能释放肾素，接力生成一种让血管收紧的信号。",
+      "frames": [
+        14895,
+        14989,
+        15074
+      ],
+      "seconds": [
+        496.5,
+        499.633,
+        502.467
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h053-h054.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "肾发调节信号与作用到血管的标注已明确，心肾间有金色粒子。",
+      "nextStep": "按连续播放确认信号先到、器官后响应。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "干净的心肾总览和黄色粒子，但肾素/血管紧张素路径与分支不够明确。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h054",
+      "text": "这种信号叫血管紧张素二。它让小动脉收紧，还能促使肾上腺释放醛固酮，通知肾脏多留一点钠。",
+      "frames": [
+        15167,
+        15268,
+        15361
+      ],
+      "seconds": [
+        505.567,
+        508.933,
+        512.033
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h053-h054.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "肾上腺释放醛固酮、肾多留钠两端已标清，低对比器官上下文连贯。",
+      "nextStep": "方向对应可读；定量作用大小仍只是教学示意。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "同心肾总览，未清楚见到肾上腺分支或可辨认的水钠响应。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h055",
+      "text": "失血、缺水时，这套办法有用；可它长期偏活跃，血管一直收紧、水钠留得多，血压就更难降下来。",
+      "frames": [
+        15455,
+        15553,
+        15643
+      ],
+      "seconds": [
+        515.167,
+        518.433,
+        521.433
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h055-h056.jpg",
+      "status": "improved-with-caveat",
+      "observed": "心肾信号可定位，升压环节保持同尺度；微小血管收缩/体液量变化在静帧中不易区分。",
+      "nextStep": "无需新镜头，连续片段核查时间顺序。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "心肾总览有运动提示，但信号、血管与水钠反应的先后因果不清。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h056",
+      "text": "内脏和肾脏周围的脂肪增多，会通过多种方式干扰这套调节。交感神经、激素和肾脏留钠，都可能参与。",
+      "frames": [
+        15737,
+        15838,
+        15931
+      ],
+      "seconds": [
+        524.567,
+        527.933,
+        531.033
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h055-h056.jpg",
+      "status": "improved-with-caveat",
+      "observed": "新增肾周脂肪标注，肾周浅黄色轮廓可见但很淡，较前轮有指向。",
+      "nextStep": "避免把仅有文字当作脂肪体积变化验收。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "讲内脏/肾周脂肪时画面仍主要是心肾，脂肪极弱或不可辨。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h057",
+      "text": "交感神经一兴奋，心脏会加把劲，一些血管也会收紧。长期睡不好、反复缺氧等问题，也会增加调节负担。",
+      "frames": [
+        16025,
+        16122,
+        16211
+      ],
+      "seconds": [
+        534.167,
+        537.4,
+        540.367
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h057-h058.jpg",
+      "status": "usable-sampled-frames",
+      "observed": "心脏肾脏响应与向上气道的定位路线可读，没有前轮严重遮挡。",
+      "nextStep": "连续转场尚需播放验证。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "同心肾段落转上气道，需要连续播放验证父层透明与目标到达；单帧不能证明呼吸作用。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h058",
+      "text": "如果睡觉打鼾，还反复憋醒、白天犯困，要想到睡眠呼吸暂停。它和肥胖常常相伴，也会牵动血压。",
+      "frames": [
+        16302,
+        16397,
+        16485
+      ],
+      "seconds": [
+        543.4,
+        546.567,
+        549.5
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h057-h058.jpg",
+      "status": "usable-sampled-frames",
+      "observed": "舌/咽壁/舌后气道标注可读，管道由前到后辨认清楚。",
+      "nextStep": "呼吸阻塞动态速度需连续观察。",
+      "priorStatus": "usable-static-samples",
+      "priorFinding": "舌、咽部与上气道可辨认，标注对应且布局清楚。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h059",
+      "text": "确诊阻塞性睡眠呼吸暂停后，有人需要正压通气，用气压撑住上气道，减少反复缺氧；减重也能帮忙。",
+      "frames": [
+        16575,
+        16671,
+        16759
+      ],
+      "seconds": [
+        552.5,
+        555.7,
+        558.633
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h059-h060.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "F16759仍保持完整气道及正压撑开图，前轮几乎空白的问题已消失。",
+      "nextStep": "保留此停留，再检查下句入场。",
+      "priorStatus": "blocker",
+      "priorFinding": "F16575上气道清楚，F16671已缩小；讲气压撑开气道时F16759几乎空白，仅很淡的人体。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h060",
+      "text": "当生活调整还不够，降压药会从不同环节帮忙。像氨氯地平，会减少钙进入管壁肌肉细胞，让小动脉放松。",
+      "frames": [
+        16849,
+        16943,
+        17028
+      ],
+      "seconds": [
+        561.633,
+        564.767,
+        567.6
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h059-h060.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "F16849现为人体/大腿定位总览，没有原先整块实面盖屏；后两帧到小动脉。",
+      "nextStep": "连续样本间仍需查是否穿组织，不能只凭三帧宣称全解决。",
+      "priorStatus": "blocker",
+      "priorFinding": "F16849进入小动脉时被肌肉/皮肤实面盖住；后两帧小动脉可见，钙符号很小。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h061",
+      "text": "小动脉松开，外周阻力就会下降。部分人会出现脚踝肿、脸热或头晕，这些反应也要和血压一起观察。",
+      "frames": [
+        17120,
+        17220,
+        17311
+      ],
+      "seconds": [
+        570.667,
+        574.0,
+        577.033
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h061-h062.jpg",
+      "status": "usable-with-caveat",
+      "observed": "舒张后的同一小动脉可见；副作用仍主要是文字，没有额外机制。",
+      "nextStep": "属于内容丰富度限制，不列渲染阻断。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "小动脉主体清楚，水肿/潮红/头晕副作用只有文字，无对应可见机制。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h062",
+      "text": "另一类常见的沙坦类药物，会挡住血管紧张素二的接收位置。血管少收紧一些，醛固酮相关的留钠信号也减弱。",
+      "frames": [
+        17406,
+        17507,
+        17600
+      ],
+      "seconds": [
+        580.2,
+        583.567,
+        586.667
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h061-h062.jpg",
+      "status": "improved-with-caveat",
+      "observed": "前两帧目标保持，接收位置阻断/小动脉放松标签对应；末帧17600缩得很小但不再被大腿实面盖住。",
+      "nextStep": "末句仍讲留钠信号，退场可再稍迟，现为节奏弱项。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "F17507小动脉已缩在肌肉背景，F17600几乎是大腿肌肉，醛固酮/钠信号句子尚未结束。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h063",
+      "text": "这类药可能让血钾升高，肾功能也需要监测。正在用药时，别因为听说低钠盐好，就自行大量加含钾的盐。",
+      "frames": [
+        17696,
+        17797,
+        17890
+      ],
+      "seconds": [
+        589.867,
+        593.233,
+        596.333
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h063-h064.jpg",
+      "status": "improved-with-caveat",
+      "observed": "中后两帧清楚标出钾的血侧留存；第一帧仍在肾定位转场。",
+      "nextStep": "离子箭头小，连续片段核实净流向。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "F17696肾外形仍遮住内部；后两帧有留钾提示，但流向颗粒小且淡。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h064",
+      "text": "还有常用的噻嗪或噻嗪样利尿剂，减少肾小管回收钠，让多余的钠和水排出去，帮助控制血压。",
+      "frames": [
+        17981,
+        18074,
+        18160
+      ],
+      "seconds": [
+        599.367,
+        602.467,
+        605.333
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h063-h064.jpg",
+      "status": "improved-with-caveat",
+      "observed": "F18074原图可见青色方向符号；两端标注为减少回收/更多水钠尿侧。",
+      "nextStep": "粒子仍很细，机制位置为概括肾小管示意，不能当作精确药物作用部位模型。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "F18074原图可确认：肾单位外形清晰，却看不清减少回收钠的动作，仅更换主题字。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h065",
+      "text": "但排水排盐也可能带走过多钾，出现乏力、抽筋或头晕。身体脱水时更要留意，复查电解质有实际用处。",
+      "frames": [
+        18251,
+        18352,
+        18443
+      ],
+      "seconds": [
+        608.367,
+        611.733,
+        614.767
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h065-h066.jpg",
+      "status": "localized-transition-fix",
+      "observed": "前两帧尿侧失钾清楚；F18443原图出现覆盖大半画面的粉色父组织，目标小到接近点而标注仍大。",
+      "nextStep": "延迟父组织恢复，或先退远建立肾外形，再保留宏观定位。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "先有钾尿侧流失标签，后两帧很快拉远为小肾单位和肾外形。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h066",
+      "text": "用药以后，要看一段时间的记录。今天偏低、明天偏高，可能和测量条件、睡眠或活动有关，别只盯一个数。",
+      "frames": [
+        18539,
+        18640,
+        18733
+      ],
+      "seconds": [
+        617.967,
+        621.333,
+        624.433
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h065-h066.jpg",
+      "status": "usable-with-caveat",
+      "observed": "测量坐姿、袖带与托臂稳定，记录趋势依然主要由文案说明。",
+      "nextStep": "没有真实记录数据可避免虚构数值；此项不列视觉阻断。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "血压测量坐姿/袖带可读，但讲一段时间记录时未见可比较的记录趋势。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h067",
+      "text": "测量前安静坐至少五分钟，背靠稳、双脚落地。把手臂托好，让上臂袖带的中部接近心脏高度，再记录读数。",
+      "frames": [
+        18831,
+        18938,
+        19035
+      ],
+      "seconds": [
+        627.7,
+        631.267,
+        634.5
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h067-h068.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "F19035保持正向测量构图，袖带高度句完整，钻桌底/家具盖脸已修复。",
+      "nextStep": "仍需检查到下一场之间的连续路径。",
+      "priorStatus": "blocker",
+      "priorFinding": "F19035原图确认镜头进入桌底/背面，巨大桌板和桌腿盖住人，袖带/支撑标签指家具，字幕正讲袖带与心脏高度。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h068",
+      "text": "血压控制，是为了减轻血管和器官持续承受的负担。高血压和高血糖，也会让本来就有斑块的血管更容易出问题。",
+      "frames": [
+        19132,
+        19233,
+        19324
+      ],
+      "seconds": [
+        637.733,
+        641.1,
+        644.133
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h067-h068.jpg",
+      "status": "improved-with-caveat",
+      "observed": "测量退出经人物、心脏/主动脉，到同一血管局部；到达后斑块可见。",
+      "nextStep": "前两帧在转场，不能据此认定所有中间帧均无穿模。",
+      "priorStatus": "usable-static-samples",
+      "priorFinding": "动脉壁上的斑块清晰，与风险话题对应，文字/主体分布可读。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h069",
+      "text": "斑块在管壁里慢慢长；血栓，则是血液在不该凝固的地方结成一团。有时，危险就发生在两者接上的那一刻。",
+      "frames": [
+        19420,
+        19521,
+        19614
+      ],
+      "seconds": [
+        647.333,
+        650.7,
+        653.8
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h069-h070.jpg",
+      "status": "usable-with-caveat",
+      "observed": "斑块在管壁位置清楚，血栓形成动作留到下一句；当前句属于铺垫。",
+      "nextStep": "静态概括可接受，不列阻断。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "三帧均是同一斑块血管，血栓形成变化尚不清楚。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h070",
+      "text": "斑块表面一旦破裂，血液接触到里面的成分，血小板会黏过来、聚成团，凝血反应也被启动。",
+      "frames": [
+        19702,
+        19789,
+        19869
+      ],
+      "seconds": [
+        656.733,
+        659.633,
+        662.3
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h069-h070.jpg",
+      "status": "localized-label-fix",
+      "observed": "F19789“血栓堵通道”标签先出现，团块尚不明显；F19869团块清晰生长。",
+      "nextStep": "标签应随可辨团块出现，避免让观众把平斑块当成新血栓。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "F19789血栓/剩余通道标签出现时团块尚不明显，F19869才见红色团块增长。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h071",
+      "text": "同时，纤维蛋白像细丝一样织成网，把血细胞和血小板固定住。血块越长越大，就可能突然堵住血流。",
+      "frames": [
+        19954,
+        20047,
+        20133
+      ],
+      "seconds": [
+        665.133,
+        668.233,
+        671.1
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h071-h072.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "血栓体积增长明显，纤维网条线及剩余通道可读；材质仍为简化团块。",
+      "nextStep": "三帧有增长对照；颗粒与纤维的细节仍属示意，不当作真实扫描。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "血栓表现为实心红色团块外侧少量白线，纤维蛋白网固定细胞/血小板的结构不够可见。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h072",
+      "text": "阿司匹林这一类抗血小板药，重点是减少血小板聚集。在某些已经发生心梗、缺血性卒中等情况下，会用到它。",
+      "frames": [
+        20225,
+        20326,
+        20419
+      ],
+      "seconds": [
+        674.167,
+        677.533,
+        680.633
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h071-h072.jpg",
+      "status": "usable-sampled-frames",
+      "observed": "既有血栓保留，继续聚集减少标签对应；离开时同一血管剖面一起缩小。",
+      "nextStep": "抗血小板未被画成消失旧栓，连续速率待视频核查。",
+      "priorStatus": "usable-static-samples",
+      "priorFinding": "已有团块保持，标签指后续聚集减少，没有把抗血小板画成溶栓。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h073",
+      "text": "还有一种情况是房颤：心房收缩乱了，局部血流容易淤滞，可能在心脏里形成血栓，再顺着血流跑到脑部。",
+      "frames": [
+        20515,
+        20616,
+        20709
+      ],
+      "seconds": [
+        683.833,
+        687.2,
+        690.3
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h073-h074.jpg",
+      "status": "improved-but-local-fix-required",
+      "observed": "F20616/20709原图能辨认青色流向与生长的单团心房血栓；大血管红面仍挡住半环。F20709有巨大黄白亮带像火焰，明显抢走主体。",
+      "nextStep": "心房近景退透大血管并取消其发光脉冲；保留浅房壁与机制。",
+      "priorStatus": "blocker",
+      "priorFinding": "F20616原图确认巨大半透明心脏红壳，未能辨认心房内涡流/血栓；叙述脑栓塞时无清楚行进路径。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h074",
+      "text": "这时需要考虑的抗凝药，作用在凝血过程中的不同环节，减少血栓形成或继续长大的机会，和抗血小板药用途有区别。",
+      "frames": [
+        20808,
+        20916,
+        21015
+      ],
+      "seconds": [
+        693.6,
+        697.2,
+        700.5
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h073-h074.jpg",
+      "status": "improved-with-caveat",
+      "observed": "F20916已有血栓和变少的金色反应可辨，前轮完全红壳问题部分解决；红色大管仍占较多面积。",
+      "nextStep": "与h073共同清理主血管遮挡，保留现有栓块。",
+      "priorStatus": "blocker",
+      "priorFinding": "F20916同样心脏红壳遮住机制；只有凝血减少标签，无法辨认减少形成/继续长大的可见动作。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h075",
+      "text": "抗凝药不能拿来降血压。降压管压力，降脂减少有害脂质负担，抗血小板和抗凝处理特定的血栓风险。",
+      "frames": [
+        21111,
+        21207,
+        21295
+      ],
+      "seconds": [
+        703.7,
+        706.9,
+        709.833
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h075-h076.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "已退出心房到心/脑/肝肾系统概括，作用类别随句更换，不再一直讲药但显示同一心房。",
+      "nextStep": "第二张降脂句未见强烈局部提示，属于可读性可提升项。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "解释降压/降脂/抗血小板/抗凝的作用差别，三帧仍为同一心房凝血画面。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h076",
+      "text": "抗栓治疗的另一面，是更容易出血。仅仅有三高，就自己加上阿司匹林或抗凝药，可能添出新的麻烦。",
+      "frames": [
+        21385,
+        21480,
+        21567
+      ],
+      "seconds": [
+        712.833,
+        716.0,
+        718.9
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h075-h076.jpg",
+      "status": "usable-with-caveat",
+      "observed": "心脑总览概括风险，上一凝血标签已移除；没有具象出血机制。",
+      "nextStep": "此项作为一般风险说明可保留，不列严重错误。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "讲出血风险仍是心脏凝血图，未见止血过程；“别错过急救时间”标题此时已提前出现。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h077",
+      "text": "如果突然嘴歪、说不清话、一侧胳膊没力，要立即拨打一二零。急症来时，不能等吃点药、睡一觉再看看。",
+      "frames": [
+        21659,
+        21760,
+        21851
+      ],
+      "seconds": [
+        721.967,
+        725.333,
+        728.367
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h077-h078.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "卒中识别时仅保留脑/心定位，没有上一凝血减少标签悬挂。",
+      "nextStep": "继续向生活场景的连续变换待播放。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "脑/心到人体总览可见，但第一帧残留凝血减少标签，与卒中识别叙述不一致。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h078",
+      "text": "再看这顿饭：甜饮换水，咸汤少喝；主食配好份量，蔬菜和蛋白质留下。每个改动，都对应刚才的一段过程。",
+      "frames": [
+        21947,
+        22049,
+        22143
+      ],
+      "seconds": [
+        731.567,
+        734.967,
+        738.1
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h077-h078.jpg",
+      "status": "fixed-at-sampled-frame-with-caveat",
+      "observed": "F22143原图确认仍坐着，手臂正常；不再站起裁头。餐桌已左移，尚在画面内但透明度很低。",
+      "nextStep": "坐立严重问题解决；如果严格要求移出后再消失，应将桌子保持可见至出画。",
+      "priorStatus": "blocker",
+      "priorFinding": "前两帧坐着吃饭，F22143突然站在桌后且头顶裁切；字幕仍总结饭菜选择。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h079",
+      "text": "活动也能拆开做：饭后走一段，久坐时起身动动，再留些时间练力量。强度从自己能完成的程度慢慢加。",
+      "frames": [
+        22239,
+        22340,
+        22433
+      ],
+      "seconds": [
+        741.3,
+        744.667,
+        747.767
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h079-h080.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "F22239原图前臂恢复正常体积，姿态已站起，未见反复坐下或穿桌。",
+      "nextStep": "三帧主要为静立，不能据此证明完整自然步行/力量运动。",
+      "priorStatus": "blocker",
+      "priorFinding": "F22239原图确认前臂被拉成薄丝带，双手张开，膝顶近桌面；上一句已站起，此句又坐下。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h080",
+      "text": "如果每晚饿得睡不着，第二天又吃到撑，这种办法就很难维持。把每餐安排得有饱足感，比天天硬忍更实际。",
+      "frames": [
+        22529,
+        22630,
+        22723
+      ],
+      "seconds": [
+        750.967,
+        754.333,
+        757.433
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h079-h080.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "后两帧由人物到器官系统，饱足支持持续性的标签和信号有显示，不再全句静立。",
+      "nextStep": "总结尺度适当；连续帧检查透明变换。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "三帧几乎同一静立人物，选择能坚持的吃法没有生活/生理动作。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h081",
+      "text": "睡眠也在这张网里。经常睡不够，会影响食欲调节，让人更想吃，也更难察觉已经吃饱。",
+      "frames": [
+        22806,
+        22883,
+        22954
+      ],
+      "seconds": [
+        760.2,
+        762.767,
+        765.133
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h081-h082.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "保持脑/内脏相同整体尺度，用信号说明食欲调节；不再单纯静立人物。",
+      "nextStep": "睡眠内容通过概括通路说明，未做睡眠行为。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "讲睡眠影响食欲仍为同一静立模型，无睡眠/食欲调节可见过程。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h082",
+      "text": "当多余脂肪逐渐减少，肌肉和肝脏对胰岛素的反应可能改善；肾脏留钠、神经升压的负担，也可能减轻。",
+      "frames": [
+        23034,
+        23127,
+        23213
+      ],
+      "seconds": [
+        767.8,
+        770.9,
+        773.767
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h081-h082.jpg",
+      "status": "improved-with-caveat",
+      "observed": "同系统内出现脂肪逐渐减少标签和金色提示；静帧中体积变化较弱。",
+      "nextStep": "不应把标签等同实际脂肪体積响应已充分可读。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "讲脂肪减少减轻肾留钠/神经升压负担，仍为静立人物，无对应系统响应。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h083",
+      "text": "体重负担轻一些，活动可能更容易；肌肉练得更有力，又更有条件保持活动。这些变化，可以互相帮一把。",
+      "frames": [
+        23305,
+        23406,
+        23499
+      ],
+      "seconds": [
+        776.833,
+        780.2,
+        783.3
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h083-h084.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "肌肉方向有明显青色信号串，活动反馈对应同一人体系统。",
+      "nextStep": "同尺度保持良好，动态因果待连续播放。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "讲活动正向反馈，三帧仍为静立人物。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h084",
+      "text": "但体重回落时，身体也可能增加饥饿感、减少能量消耗，把人往原来的体重拉。遇到平台期，并不稀奇。",
+      "frames": [
+        23593,
+        23690,
+        23779
+      ],
+      "seconds": [
+        786.433,
+        789.667,
+        792.633
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h083-h084.jpg",
+      "status": "improved-at-sampled-frames",
+      "observed": "脑与脂肪相关信号、标签在同人体显示，较前轮静立有机制概括。",
+      "nextStep": "这是概括示意，没有个人代谢定量结论。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "讲减重后饥饿增加/能耗下降，仍为静立人物；没有变化对照。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h085",
+      "text": "这时更需要能重复的饭菜、活动和睡眠安排；需要药物帮助的人，也要把营养和生活习惯一起接上。",
+      "frames": [
+        23870,
+        23966,
+        24054
+      ],
+      "seconds": [
+        795.667,
+        798.867,
+        801.8
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h085-h086.jpg",
+      "status": "improved-with-caveat",
+      "observed": "器官系统联系饮食活动睡眠，末帧恢复体表进入测量；人物头顶在转场有裁切。",
+      "nextStep": "转场裁切若非穿模无需全景；持续帧需检查自然性。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "维持饮食活动睡眠/药物帮助的句子仍为静立人物，第三帧测量桌进入但对当前内容关联弱。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h086",
+      "text": "接下来，除了体重，还看腰围、血压、血糖和血脂的趋势。能不能走得稳、吃得下、有力气，同样值得记录。",
+      "frames": [
+        24152,
+        24263,
+        24364
+      ],
+      "seconds": [
+        805.067,
+        808.767,
+        812.133
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h085-h086.jpg",
+      "status": "usable-with-caveat",
+      "observed": "坐姿测量稳定，仍无具体腰围/血糖血脂记录图。",
+      "nextStep": "作为结尾行动提示可保留，不列渲染阻断。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "三帧测血压坐姿清楚，但体重/腰围/血糖血脂趋势没有可见相应记录。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h087",
+      "text": "如果瘦了以后经常头晕，或原来的药让血糖偏低，就带着记录，和治疗团队调整既有用药；别自行停药。",
+      "frames": [
+        24460,
+        24554,
+        24639
+      ],
+      "seconds": [
+        815.333,
+        818.467,
+        821.3
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h087-h088.jpg",
+      "status": "fixed-at-sampled-frame",
+      "observed": "F24639原图确认测量姿态保持，前轮站起但标签仍说托臂的问题已消失。",
+      "nextStep": "前臂与垫接触较轻，属于细节，不再有明显错姿标签。",
+      "priorStatus": "blocker",
+      "priorFinding": "F24639原图确认人站立，前臂垂下而“前臂得到支撑”标签仍保留，袖带管线和桌面随其残留。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h088",
+      "text": "三高管理，靠的是几个环节一起慢慢调顺：吃进去的、身体用掉的、血管承受的，再加上需要时有针对性的药。",
+      "frames": [
+        24735,
+        24842,
+        24940
+      ],
+      "seconds": [
+        824.5,
+        828.067,
+        831.333
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h087-h088.jpg",
+      "status": "usable-with-caveat",
+      "observed": "人物→器官→人物串联总结，前后透明层变化有中间态；结尾皮肤恢复。",
+      "nextStep": "三帧不构成连续切换流畅性通过。",
+      "priorStatus": "usable-static-samples",
+      "priorFinding": "从人体渐显器官全景，整体调节总结的对象对应且干净。",
+      "continuousMotionAssessed": false
+    },
+    {
+      "id": "h089",
+      "text": "下一顿饭，不妨先换掉那杯甜饮，吃完陪家人走一小段。看懂身体怎么工作，改变就有了具体的落脚处。",
+      "frames": [
+        25035,
+        25131,
+        25219
+      ],
+      "seconds": [
+        834.5,
+        837.7,
+        840.633
+      ],
+      "sheet": "tmp/v7-preview-02/sheets/h089-h089.jpg",
+      "status": "changed-with-caveat",
+      "observed": "已从器官静帧换为站立人物收束，没实际做甜饮换水动作。",
+      "nextStep": "内容落点靠文案，非阻断；若继续润色可用生活行动落地。",
+      "priorStatus": "needs-fix",
+      "priorFinding": "三帧均为器官全景，最后甜饮换水的生活落点未见具体动作。",
+      "continuousMotionAssessed": false
+    }
+  ],
+  "sheetsViewed": [
+    {
+      "path": "tmp/v7-preview-02/sheets/h045-h046.jpg",
+      "sha256": "ff9bfc14fcc9fd8cf0409eb6924557d137eabc6ba579e2c0b57b00f5eb7732fd",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h047-h048.jpg",
+      "sha256": "ad68a3b1db7b3796e3cb4a9428b1c5a96da52fe653cd46f54fcdffe74ee94660",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h049-h050.jpg",
+      "sha256": "b87f779e25bbaae05496440d3eeadc144afaf9414e58ef529889265bb4193857",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h051-h052.jpg",
+      "sha256": "e93e266ac8a9b33df2811f660d13e1e290dcd27fcfedb82c5ac84bcf7b5d1d68",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h053-h054.jpg",
+      "sha256": "b84117ea3e3ec70a6fc403f060d9654fa591467bbfa01899503e5ba9ceccaf28",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h055-h056.jpg",
+      "sha256": "7164ef7f9aaab3c4fb9b496a5596e0fa6059f7075271af50a331e2e8cc7f7bf1",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h057-h058.jpg",
+      "sha256": "564e1fa6211f05aab71fe32862fec9797c52897a83fe3c98fa1dfcf6dcbb2773",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h059-h060.jpg",
+      "sha256": "9dd74e3dee1fce661073edae18968fac6dd401f364bc57b88b3aa12f7557271c",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h061-h062.jpg",
+      "sha256": "cbb7c0c3229a50dd1e6341cd8286314d26126f5461996de6ed08412e5a76881a",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h063-h064.jpg",
+      "sha256": "d76b39087d970a40bcbcd9f564389fb23b670d48b83af143bd9e869174c95b39",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h065-h066.jpg",
+      "sha256": "52ece6e7e705db6d9699d597ecc0e74ec999359c47e29976d411aa99003440cd",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h067-h068.jpg",
+      "sha256": "35968ccd225f80a309ebddc3f3f7e14dd0b391fcb818c4e5880b6a140d6e0e81",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h069-h070.jpg",
+      "sha256": "62535a040f25d95eded39a3772788b49c1dfb0e249a70f0027f4bb0839d6280d",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h071-h072.jpg",
+      "sha256": "e46a740aca76e2f73a2ef4ab01f8ed7d0771f757f0fc73b348ccdfdef071d67b",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h073-h074.jpg",
+      "sha256": "94a17c5422bd5d2215965f3f71795f6a8316226ff394fa215af3db97af211989",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h075-h076.jpg",
+      "sha256": "5f106f38d4517bc4d72b07de122b3114244cf601cbf6698e6ef6feaa3f027f66",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h077-h078.jpg",
+      "sha256": "be26603c65624b977fed908970b355adace360b3770ab2691e8a4b0e7da67151",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h079-h080.jpg",
+      "sha256": "7310e31fd3e31e5423f77d75440db0434ee6b9095a305986545cdf33cbd80b63",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h081-h082.jpg",
+      "sha256": "6b72751942f98293190da85b7eace9ddd34e16a0b220d7647b830636a5daac5b",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h083-h084.jpg",
+      "sha256": "94c0468059dc7ea937fa7bfd540580b80aa5fd8215d98ac59804ffe7620cbc45",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h085-h086.jpg",
+      "sha256": "39ff6b620d133b3193c1153d82b0d797b531a05ecebd63107f38528b7875243e",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h087-h088.jpg",
+      "sha256": "8e57d0d17f46263d7a5acee087d60104457dca1760dabbdd08a0966b3ab5f541",
+      "actuallyViewed": true
+    },
+    {
+      "path": "tmp/v7-preview-02/sheets/h089-h089.jpg",
+      "sha256": "5e9b2a5aa974a4e236a5068837c73ab8962ab72e7887a2a1f4fd19cdb730d5b7",
+      "actuallyViewed": true
+    }
+  ],
+  "nativeViewed": [
+    {
+      "frame": 13598,
+      "path": "tmp/v7-preview-02/frames/element-13598.jpeg",
+      "sha256": "3904347701dde1891e141dd02c23468189d169fbe7c04785755c5efd1a17afbe",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 18443,
+      "path": "tmp/v7-preview-02/frames/element-18443.jpeg",
+      "sha256": "0a586fd2ebdfbdf143f1f85fad6c0062349a80ef0416b5b0ab7d011fdaa3c715",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 14445,
+      "path": "tmp/v7-preview-02/frames/element-14445.jpeg",
+      "sha256": "147bda18a975a7ac9dd0d9a5cad0e149910eccb8fb5a59929b695d8746cd098a",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 18074,
+      "path": "tmp/v7-preview-02/frames/element-18074.jpeg",
+      "sha256": "8ccff906d06fef5de09829f855e8218a2bb5fd4ea30d0dbdd69cc88252a80393",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 20616,
+      "path": "tmp/v7-preview-02/frames/element-20616.jpeg",
+      "sha256": "c99ab5c8961ebd3e0a3d67cbd304e5db0a5070f3bcbca8036968a29c555fa909",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 20709,
+      "path": "tmp/v7-preview-02/frames/element-20709.jpeg",
+      "sha256": "d74f52b9bd4f9ac9aceb641ae64b31d867601328ef92748488532ba9466e8f19",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 20916,
+      "path": "tmp/v7-preview-02/frames/element-20916.jpeg",
+      "sha256": "4e42045fd8d40333660795ffa941a3706a0d9e2fbd1fa1cb795b16becedb1175",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 22143,
+      "path": "tmp/v7-preview-02/frames/element-22143.jpeg",
+      "sha256": "d7e3dcb22f0540421199d37b0f1e10a05d666641c46f2aaf13001ae5c2fd87c0",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 22239,
+      "path": "tmp/v7-preview-02/frames/element-22239.jpeg",
+      "sha256": "c616757c26461ab354cbe22b6a37f5113cc6e13b9c7b622476a5de2a189a12c1",
+      "actuallyViewed": true
+    },
+    {
+      "frame": 24639,
+      "path": "tmp/v7-preview-02/frames/element-24639.jpeg",
+      "sha256": "6dfd920490252bce17d8aba6e454c733fdd6408e4f7ce50a0212072d9adfb50b",
+      "actuallyViewed": true
+    }
+  ],
+  "limitations": [
+    "A still contact sheet cannot certify temporal easing, all intermediate occlusions, causality, beat synchronization, or natural gait.",
+    "No audio was played; V7 audio installation and numerical verification are separate evidence.",
+    "Some summary sentences are supported by organ-scale signal illustrations instead of full detailed mechanisms.",
+    "Clinical images are teaching models, not patient-specific scans or CFD."
+  ]
+}

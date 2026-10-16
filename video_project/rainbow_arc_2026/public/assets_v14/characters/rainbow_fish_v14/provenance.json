@@ -1,0 +1,115 @@
+{
+  "asset": "V14 original pearl rainbow-fish mascot",
+  "externalMeshOrTextures": [],
+  "authoring": "Original continuous rounded parametric body, curved weighted silk membranes, embedded porcelain eye sockets, teal irises and coral cheek marks; explicitly authored twenty-bone skeleton incl Tail3.",
+  "rigSource": "Blender 5.1.2 via D:/blender/blender.exe --factory-startup",
+  "runtime": "Three.js 0.180 frame-driven FishObserverV14/FishMotionV14, three independent cloned skeletons",
+  "frozenGLBSHA256": "30b4e7441aecdd2b44798feb132b9a9f5ba0bfab6e79d3628906d868fe68fd03",
+  "files": [
+    {
+      "file": "public/assets_v14/characters/rainbow_fish_v14/rainbow_fish_v14.glb",
+      "bytes": 1652456,
+      "sha256": "30b4e7441aecdd2b44798feb132b9a9f5ba0bfab6e79d3628906d868fe68fd03"
+    },
+    {
+      "file": "public/assets_v14/characters/rainbow_fish_v14/rainbow-fish-source-v14.blend",
+      "bytes": 715657,
+      "sha256": "47eca54f56dfd91aa541f262a9ee0af92c7702a2f0cafb1de5ad686729628307"
+    },
+    {
+      "file": "public/assets_v14/characters/rainbow_fish_v14/rig-build-v14.json",
+      "bytes": 1902,
+      "sha256": "1d77d6b07d3c496aef35227ce320a533add254323cdc4b28ba017e69abf67591"
+    },
+    {
+      "file": "scripts/build-fish-v14.py",
+      "bytes": 15727,
+      "sha256": "3b123874a9779447f0f648b35ba5fda7a4e11aaa9d256e37e9e9a1586a33ddc5"
+    },
+    {
+      "file": "src/FishObserverV14.ts",
+      "bytes": 11568,
+      "sha256": "c140198077707e64af31547c4cd89cafa7500ad60acafabb6fd138f78748dced"
+    },
+    {
+      "file": "src/FishMotionV14.ts",
+      "bytes": 3998,
+      "sha256": "78315adee6e83bd7f6cdb99d7e181fe88f124f31a0463bc8825329f9c40add3e"
+    }
+  ],
+  "opticalReference": {
+    "eyeMarker": "EyeReference",
+    "parentBone": "Head",
+    "irisNames": [
+      "EyeIrisL",
+      "EyeIrisR"
+    ],
+    "irisCentres": [
+      [
+        -0.218,
+        1.55,
+        0.711
+      ],
+      [
+        0.218,
+        1.55,
+        0.711
+      ]
+    ],
+    "irisRadii": [
+      0.08,
+      0.091,
+      0.039
+    ],
+    "frontPoleMidpoint": [
+      0,
+      1.55,
+      0.75
+    ],
+    "runtimeEyeAnchor": [
+      0,
+      1.55,
+      0
+    ],
+    "runtimeScale": 1
+  },
+  "boneCount": 20,
+  "meshCount": 22,
+  "vertices": 28618,
+  "multiboneVertices": 12488,
+  "bboxThreeYUp": {
+    "min": [
+      -0.785,
+      0.805,
+      -1.913125
+    ],
+    "max": [
+      0.785,
+      1.97,
+      0.8105
+    ]
+  },
+  "palette": "Pearl ivory/aqua dorsal cape, restrained coral and lavender silken fins; linear RGB vertex colors exported without extra base-color multiplication.",
+  "license": "Original user project output; no external mesh/texture required. See LICENSE.txt.",
+  "visualQa": {
+    "images": "research/qa-v14/fish-beauty",
+    "actualViewed": [
+      "front-threequarter.png",
+      "front.png",
+      "side.png",
+      "back-threequarter.png"
+    ],
+    "revision": "Second Blender build strengthens dorsal aqua and rounds the caudal twin-lobe contour. Pass1 renders preserved separately.",
+    "scope": "Static Blender beauty views; full-film/runtime confirmation is separate."
+  },
+  "integration": {
+    "import": "import {FishObserverV14} from ./FishObserverV14",
+    "asset": "assets_v14/characters/rainbow_fish_v14/rainbow_fish_v14.glb",
+    "api": "new FishObserverV14(g.scene,g.animations).attach(world); update(frame); dispose();"
+  },
+  "validation": {
+    "npmRunCheck": "passed 2026-10-12",
+    "glbSkinCount": 1,
+    "glbJointCount": 20
+  }
+}

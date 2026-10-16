@@ -1,0 +1,5506 @@
+{
+  "schema": "rainbow.windkessel.v1",
+  "model": "Two-element Windkessel",
+  "equation": "C dP/dt = Qin - (P-Pv)/R",
+  "units": {
+    "pressure": "mmHg",
+    "flow": "mL/s",
+    "R": "mmHg s/mL",
+    "C": "mL/mmHg"
+  },
+  "assumptions": [
+    "Lumped parameters; uniform arterial pressure",
+    "Periodic prescribed inflow",
+    "R and C are independent conceptual controls",
+    "No wave reflection, autoregulation or patient anatomy in solver"
+  ],
+  "display": "教学简化模型 · 非个体预测",
+  "anatomyIsSolverGeometry": false,
+  "cases": {
+    "baseline": {
+      "id": "baseline",
+      "R": 1.02,
+      "C": 1.65,
+      "pv": 5.0,
+      "heartRate": 72.0,
+      "strokeVolume": 70.0,
+      "period": 0.8333333333333334,
+      "samples": [
+        {
+          "phase": 0.0,
+          "pressure": 77.6572,
+          "inflow": 0.0,
+          "outflow": 71.2325
+        },
+        {
+          "phase": 0.003333,
+          "pressure": 77.5458,
+          "inflow": 9.9835,
+          "outflow": 71.1233
+        },
+        {
+          "phase": 0.006667,
+          "pressure": 77.4513,
+          "inflow": 19.9592,
+          "outflow": 71.0307
+        },
+        {
+          "phase": 0.01,
+          "pressure": 77.3738,
+          "inflow": 29.919,
+          "outflow": 70.9547
+        },
+        {
+          "phase": 0.013333,
+          "pressure": 77.3131,
+          "inflow": 39.8551,
+          "outflow": 70.8952
+        },
+        {
+          "phase": 0.016667,
+          "pressure": 77.2692,
+          "inflow": 49.7596,
+          "outflow": 70.8522
+        },
+        {
+          "phase": 0.02,
+          "pressure": 77.2421,
+          "inflow": 59.6247,
+          "outflow": 70.8256
+        },
+        {
+          "phase": 0.023333,
+          "pressure": 77.2315,
+          "inflow": 69.4426,
+          "outflow": 70.8152
+        },
+        {
+          "phase": 0.026667,
+          "pressure": 77.2374,
+          "inflow": 79.2054,
+          "outflow": 70.821
+        },
+        {
+          "phase": 0.03,
+          "pressure": 77.2597,
+          "inflow": 88.9054,
+          "outflow": 70.8428
+        },
+        {
+          "phase": 0.033333,
+          "pressure": 77.2982,
+          "inflow": 98.535,
+          "outflow": 70.8806
+        },
+        {
+          "phase": 0.036667,
+          "pressure": 77.3527,
+          "inflow": 108.0866,
+          "outflow": 70.9341
+        },
+        {
+          "phase": 0.04,
+          "pressure": 77.4232,
+          "inflow": 117.5525,
+          "outflow": 71.0032
+        },
+        {
+          "phase": 0.043333,
+          "pressure": 77.5094,
+          "inflow": 126.9252,
+          "outflow": 71.0877
+        },
+        {
+          "phase": 0.046667,
+          "pressure": 77.6112,
+          "inflow": 136.1974,
+          "outflow": 71.1874
+        },
+        {
+          "phase": 0.05,
+          "pressure": 77.7282,
+          "inflow": 145.3616,
+          "outflow": 71.3022
+        },
+        {
+          "phase": 0.053333,
+          "pressure": 77.8604,
+          "inflow": 154.4107,
+          "outflow": 71.4318
+        },
+        {
+          "phase": 0.056667,
+          "pressure": 78.0075,
+          "inflow": 163.3374,
+          "outflow": 71.576
+        },
+        {
+          "phase": 0.06,
+          "pressure": 78.1693,
+          "inflow": 172.1346,
+          "outflow": 71.7346
+        },
+        {
+          "phase": 0.063333,
+          "pressure": 78.3455,
+          "inflow": 180.7955,
+          "outflow": 71.9074
+        },
+        {
+          "phase": 0.066667,
+          "pressure": 78.5359,
+          "inflow": 189.3131,
+          "outflow": 72.094
+        },
+        {
+          "phase": 0.07,
+          "pressure": 78.7401,
+          "inflow": 197.6807,
+          "outflow": 72.2942
+        },
+        {
+          "phase": 0.073333,
+          "pressure": 78.9579,
+          "inflow": 205.8917,
+          "outflow": 72.5078
+        },
+        {
+          "phase": 0.076667,
+          "pressure": 79.1891,
+          "inflow": 213.9395,
+          "outflow": 72.7344
+        },
+        {
+          "phase": 0.08,
+          "pressure": 79.4333,
+          "inflow": 221.8178,
+          "outflow": 72.9738
+        },
+        {
+          "phase": 0.083333,
+          "pressure": 79.6902,
+          "inflow": 229.5203,
+          "outflow": 73.2256
+        },
+        {
+          "phase": 0.086667,
+          "pressure": 79.9594,
+          "inflow": 237.041,
+          "outflow": 73.4896
+        },
+        {
+          "phase": 0.09,
+          "pressure": 80.2407,
+          "inflow": 244.3738,
+          "outflow": 73.7654
+        },
+        {
+          "phase": 0.093333,
+          "pressure": 80.5337,
+          "inflow": 251.5129,
+          "outflow": 74.0527
+        },
+        {
+          "phase": 0.096667,
+          "pressure": 80.8381,
+          "inflow": 258.4528,
+          "outflow": 74.3511
+        },
+        {
+          "phase": 0.1,
+          "pressure": 81.1535,
+          "inflow": 265.1879,
+          "outflow": 74.6603
+        },
+        {
+          "phase": 0.103333,
+          "pressure": 81.4795,
+          "inflow": 271.7129,
+          "outflow": 74.9799
+        },
+        {
+          "phase": 0.106667,
+          "pressure": 81.8158,
+          "inflow": 278.0225,
+          "outflow": 75.3096
+        },
+        {
+          "phase": 0.11,
+          "pressure": 82.1619,
+          "inflow": 284.1118,
+          "outflow": 75.6489
+        },
+        {
+          "phase": 0.113333,
+          "pressure": 82.5175,
+          "inflow": 289.976,
+          "outflow": 75.9976
+        },
+        {
+          "phase": 0.116667,
+          "pressure": 82.8822,
+          "inflow": 295.6105,
+          "outflow": 76.3551
+        },
+        {
+          "phase": 0.12,
+          "pressure": 83.2556,
+          "inflow": 301.0107,
+          "outflow": 76.7212
+        },
+        {
+          "phase": 0.123333,
+          "pressure": 83.6373,
+          "inflow": 306.1723,
+          "outflow": 77.0954
+        },
+        {
+          "phase": 0.126667,
+          "pressure": 84.0268,
+          "inflow": 311.0914,
+          "outflow": 77.4772
+        },
+        {
+          "phase": 0.13,
+          "pressure": 84.4237,
+          "inflow": 315.764,
+          "outflow": 77.8664
+        },
+        {
+          "phase": 0.133333,
+          "pressure": 84.8276,
+          "inflow": 320.1863,
+          "outflow": 78.2624
+        },
+        {
+          "phase": 0.136667,
+          "pressure": 85.2381,
+          "inflow": 324.3549,
+          "outflow": 78.6648
+        },
+        {
+          "phase": 0.14,
+          "pressure": 85.6547,
+          "inflow": 328.2666,
+          "outflow": 79.0733
+        },
+        {
+          "phase": 0.143333,
+          "pressure": 86.077,
+          "inflow": 331.9181,
+          "outflow": 79.4873
+        },
+        {
+          "phase": 0.146667,
+          "pressure": 86.5045,
+          "inflow": 335.3065,
+          "outflow": 79.9064
+        },
+        {
+          "phase": 0.15,
+          "pressure": 86.9368,
+          "inflow": 338.4293,
+          "outflow": 80.3302
+        },
+        {
+          "phase": 0.153333,
+          "pressure": 87.3734,
+          "inflow": 341.2839,
+          "outflow": 80.7582
+        },
+        {
+          "phase": 0.156667,
+          "pressure": 87.8138,
+          "inflow": 343.8681,
+          "outflow": 81.19
+        },
+        {
+          "phase": 0.16,
+          "pressure": 88.2577,
+          "inflow": 346.1798,
+          "outflow": 81.6252
+        },
+        {
+          "phase": 0.163333,
+          "pressure": 88.7044,
+          "inflow": 348.2172,
+          "outflow": 82.0632
+        },
+        {
+          "phase": 0.166667,
+          "pressure": 89.1537,
+          "inflow": 349.9787,
+          "outflow": 82.5036
+        },
+        {
+          "phase": 0.17,
+          "pressure": 89.6049,
+          "inflow": 351.4628,
+          "outflow": 82.9459
+        },
+        {
+          "phase": 0.173333,
+          "pressure": 90.0576,
+          "inflow": 352.6685,
+          "outflow": 83.3898
+        },
+        {
+          "phase": 0.176667,
+          "pressure": 90.5114,
+          "inflow": 353.5947,
+          "outflow": 83.8347
+        },
+        {
+          "phase": 0.18,
+          "pressure": 90.9657,
+          "inflow": 354.2407,
+          "outflow": 84.2801
+        },
+        {
+          "phase": 0.183333,
+          "pressure": 91.4202,
+          "inflow": 354.606,
+          "outflow": 84.7257
+        },
+        {
+          "phase": 0.186667,
+          "pressure": 91.8743,
+          "inflow": 354.6903,
+          "outflow": 85.1708
+        },
+        {
+          "phase": 0.19,
+          "pressure": 92.3275,
+          "inflow": 354.4936,
+          "outflow": 85.6152
+        },
+        {
+          "phase": 0.193333,
+          "pressure": 92.7794,
+          "inflow": 354.016,
+          "outflow": 86.0582
+        },
+        {
+          "phase": 0.196667,
+          "pressure": 93.2295,
+          "inflow": 353.2578,
+          "outflow": 86.4996
+        },
+        {
+          "phase": 0.2,
+          "pressure": 93.6774,
+          "inflow": 352.2197,
+          "outflow": 86.9387
+        },
+        {
+          "phase": 0.203333,
+          "pressure": 94.1226,
+          "inflow": 350.9025,
+          "outflow": 87.3751
+        },
+        {
+          "phase": 0.206667,
+          "pressure": 94.5646,
+          "inflow": 349.3073,
+          "outflow": 87.8084
+        },
+        {
+          "phase": 0.21,
+          "pressure": 95.0029,
+          "inflow": 347.4353,
+          "outflow": 88.2381
+        },
+        {
+          "phase": 0.213333,
+          "pressure": 95.4371,
+          "inflow": 345.288,
+          "outflow": 88.6639
+        },
+        {
+          "phase": 0.216667,
+          "pressure": 95.8668,
+          "inflow": 342.867,
+          "outflow": 89.0851
+        },
+        {
+          "phase": 0.22,
+          "pressure": 96.2915,
+          "inflow": 340.1744,
+          "outflow": 89.5014
+        },
+        {
+          "phase": 0.223333,
+          "pressure": 96.7107,
+          "inflow": 337.2123,
+          "outflow": 89.9124
+        },
+        {
+          "phase": 0.226667,
+          "pressure": 97.124,
+          "inflow": 333.9829,
+          "outflow": 90.3176
+        },
+        {
+          "phase": 0.23,
+          "pressure": 97.531,
+          "inflow": 330.4889,
+          "outflow": 90.7166
+        },
+        {
+          "phase": 0.233333,
+          "pressure": 97.9312,
+          "inflow": 326.733,
+          "outflow": 91.109
+        },
+        {
+          "phase": 0.236667,
+          "pressure": 98.3242,
+          "inflow": 322.7182,
+          "outflow": 91.4943
+        },
+        {
+          "phase": 0.24,
+          "pressure": 98.7095,
+          "inflow": 318.4476,
+          "outflow": 91.8721
+        },
+        {
+          "phase": 0.243333,
+          "pressure": 99.0869,
+          "inflow": 313.9248,
+          "outflow": 92.2421
+        },
+        {
+          "phase": 0.246667,
+          "pressure": 99.4558,
+          "inflow": 309.1532,
+          "outflow": 92.6037
+        },
+        {
+          "phase": 0.25,
+          "pressure": 99.8159,
+          "inflow": 304.1366,
+          "outflow": 92.9568
+        },
+        {
+          "phase": 0.253333,
+          "pressure": 100.1667,
+          "inflow": 298.879,
+          "outflow": 93.3007
+        },
+        {
+          "phase": 0.256667,
+          "pressure": 100.5079,
+          "inflow": 293.3846,
+          "outflow": 93.6352
+        },
+        {
+          "phase": 0.26,
+          "pressure": 100.8392,
+          "inflow": 287.6577,
+          "outflow": 93.96
+        },
+        {
+          "phase": 0.263333,
+          "pressure": 101.16,
+          "inflow": 281.7029,
+          "outflow": 94.2745
+        },
+        {
+          "phase": 0.266667,
+          "pressure": 101.4701,
+          "inflow": 275.5248,
+          "outflow": 94.5785
+        },
+        {
+          "phase": 0.27,
+          "pressure": 101.7691,
+          "inflow": 269.1284,
+          "outflow": 94.8717
+        },
+        {
+          "phase": 0.273333,
+          "pressure": 102.0567,
+          "inflow": 262.5188,
+          "outflow": 95.1537
+        },
+        {
+          "phase": 0.276667,
+          "pressure": 102.3325,
+          "inflow": 255.7011,
+          "outflow": 95.4241
+        },
+        {
+          "phase": 0.28,
+          "pressure": 102.5963,
+          "inflow": 248.6809,
+          "outflow": 95.6826
+        },
+        {
+          "phase": 0.283333,
+          "pressure": 102.8476,
+          "inflow": 241.4636,
+          "outflow": 95.929
+        },
+        {
+          "phase": 0.286667,
+          "pressure": 103.0862,
+          "inflow": 234.0549,
+          "outflow": 96.1629
+        },
+        {
+          "phase": 0.29,
+          "pressure": 103.3118,
+          "inflow": 226.4608,
+          "outflow": 96.3841
+        },
+        {
+          "phase": 0.293333,
+          "pressure": 103.5241,
+          "inflow": 218.6872,
+          "outflow": 96.5922
+        },
+        {
+          "phase": 0.296667,
+          "pressure": 103.7228,
+          "inflow": 210.7404,
+          "outflow": 96.787
+        },
+        {
+          "phase": 0.3,
+          "pressure": 103.9077,
+          "inflow": 202.6265,
+          "outflow": 96.9683
+        },
+        {
+          "phase": 0.303333,
+          "pressure": 104.0784,
+          "inflow": 194.3521,
+          "outflow": 97.1357
+        },
+        {
+          "phase": 0.306667,
+          "pressure": 104.2349,
+          "inflow": 185.9237,
+          "outflow": 97.2891
+        },
+        {
+          "phase": 0.31,
+          "pressure": 104.3768,
+          "inflow": 177.348,
+          "outflow": 97.4282
+        },
+        {
+          "phase": 0.313333,
+          "pressure": 104.5039,
+          "inflow": 168.6317,
+          "outflow": 97.5529
+        },
+        {
+          "phase": 0.316667,
+          "pressure": 104.6161,
+          "inflow": 159.7818,
+          "outflow": 97.6628
+        },
+        {
+          "phase": 0.32,
+          "pressure": 104.713,
+          "inflow": 150.8053,
+          "outflow": 97.7579
+        },
+        {
+          "phase": 0.323333,
+          "pressure": 104.7946,
+          "inflow": 141.7093,
+          "outflow": 97.8379
+        },
+        {
+          "phase": 0.326667,
+          "pressure": 104.8607,
+          "inflow": 132.501,
+          "outflow": 97.9026
+        },
+        {
+          "phase": 0.33,
+          "pressure": 104.9111,
+          "inflow": 123.1878,
+          "outflow": 97.952
+        },
+        {
+          "phase": 0.333333,
+          "pressure": 104.9456,
+          "inflow": 113.7769,
+          "outflow": 97.9859
+        },
+        {
+          "phase": 0.336667,
+          "pressure": 104.9642,
+          "inflow": 104.2758,
+          "outflow": 98.0041
+        },
+        {
+          "phase": 0.34,
+          "pressure": 104.9667,
+          "inflow": 94.6921,
+          "outflow": 98.0066
+        },
+        {
+          "phase": 0.343333,
+          "pressure": 104.953,
+          "inflow": 85.0334,
+          "outflow": 97.9931
+        },
+        {
+          "phase": 0.346667,
+          "pressure": 104.923,
+          "inflow": 75.3073,
+          "outflow": 97.9637
+        },
+        {
+          "phase": 0.35,
+          "pressure": 104.8767,
+          "inflow": 65.5216,
+          "outflow": 97.9183
+        },
+        {
+          "phase": 0.353333,
+          "pressure": 104.8139,
+          "inflow": 55.6839,
+          "outflow": 97.8568
+        },
+        {
+          "phase": 0.356667,
+          "pressure": 104.7347,
+          "inflow": 45.8021,
+          "outflow": 97.7791
+        },
+        {
+          "phase": 0.36,
+          "pressure": 104.6389,
+          "inflow": 35.884,
+          "outflow": 97.6852
+        },
+        {
+          "phase": 0.363333,
+          "pressure": 104.5266,
+          "inflow": 25.9375,
+          "outflow": 97.5751
+        },
+        {
+          "phase": 0.366667,
+          "pressure": 104.3977,
+          "inflow": 15.9704,
+          "outflow": 97.4487
+        },
+        {
+          "phase": 0.37,
+          "pressure": 104.2522,
+          "inflow": 5.9906,
+          "outflow": 97.3061
+        },
+        {
+          "phase": 0.373333,
+          "pressure": 104.0916,
+          "inflow": 0.0,
+          "outflow": 97.1486
+        },
+        {
+          "phase": 0.376667,
+          "pressure": 103.9281,
+          "inflow": 0.0,
+          "outflow": 96.9884
+        },
+        {
+          "phase": 0.38,
+          "pressure": 103.765,
+          "inflow": 0.0,
+          "outflow": 96.8284
+        },
+        {
+          "phase": 0.383333,
+          "pressure": 103.6021,
+          "inflow": 0.0,
+          "outflow": 96.6687
+        },
+        {
+          "phase": 0.386667,
+          "pressure": 103.4395,
+          "inflow": 0.0,
+          "outflow": 96.5093
+        },
+        {
+          "phase": 0.39,
+          "pressure": 103.2772,
+          "inflow": 0.0,
+          "outflow": 96.3502
+        },
+        {
+          "phase": 0.393333,
+          "pressure": 103.1151,
+          "inflow": 0.0,
+          "outflow": 96.1913
+        },
+        {
+          "phase": 0.396667,
+          "pressure": 102.9533,
+          "inflow": 0.0,
+          "outflow": 96.0326
+        },
+        {
+          "phase": 0.4,
+          "pressure": 102.7918,
+          "inflow": 0.0,
+          "outflow": 95.8743
+        },
+        {
+          "phase": 0.403333,
+          "pressure": 102.6305,
+          "inflow": 0.0,
+          "outflow": 95.7162
+        },
+        {
+          "phase": 0.406667,
+          "pressure": 102.4695,
+          "inflow": 0.0,
+          "outflow": 95.5583
+        },
+        {
+          "phase": 0.41,
+          "pressure": 102.3087,
+          "inflow": 0.0,
+          "outflow": 95.4007
+        },
+        {
+          "phase": 0.413333,
+          "pressure": 102.1483,
+          "inflow": 0.0,
+          "outflow": 95.2434
+        },
+        {
+          "phase": 0.416667,
+          "pressure": 101.9881,
+          "inflow": 0.0,
+          "outflow": 95.0863
+        },
+        {
+          "phase": 0.42,
+          "pressure": 101.8281,
+          "inflow": 0.0,
+          "outflow": 94.9295
+        },
+        {
+          "phase": 0.423333,
+          "pressure": 101.6684,
+          "inflow": 0.0,
+          "outflow": 94.773
+        },
+        {
+          "phase": 0.426667,
+          "pressure": 101.509,
+          "inflow": 0.0,
+          "outflow": 94.6167
+        },
+        {
+          "phase": 0.43,
+          "pressure": 101.3499,
+          "inflow": 0.0,
+          "outflow": 94.4606
+        },
+        {
+          "phase": 0.433333,
+          "pressure": 101.191,
+          "inflow": 0.0,
+          "outflow": 94.3049
+        },
+        {
+          "phase": 0.436667,
+          "pressure": 101.0323,
+          "inflow": 0.0,
+          "outflow": 94.1493
+        },
+        {
+          "phase": 0.44,
+          "pressure": 100.874,
+          "inflow": 0.0,
+          "outflow": 93.9941
+        },
+        {
+          "phase": 0.443333,
+          "pressure": 100.7159,
+          "inflow": 0.0,
+          "outflow": 93.8391
+        },
+        {
+          "phase": 0.446667,
+          "pressure": 100.558,
+          "inflow": 0.0,
+          "outflow": 93.6843
+        },
+        {
+          "phase": 0.45,
+          "pressure": 100.4004,
+          "inflow": 0.0,
+          "outflow": 93.5298
+        },
+        {
+          "phase": 0.453333,
+          "pressure": 100.2431,
+          "inflow": 0.0,
+          "outflow": 93.3756
+        },
+        {
+          "phase": 0.456667,
+          "pressure": 100.086,
+          "inflow": 0.0,
+          "outflow": 93.2216
+        },
+        {
+          "phase": 0.46,
+          "pressure": 99.9292,
+          "inflow": 0.0,
+          "outflow": 93.0679
+        },
+        {
+          "phase": 0.463333,
+          "pressure": 99.7727,
+          "inflow": 0.0,
+          "outflow": 92.9144
+        },
+        {
+          "phase": 0.466667,
+          "pressure": 99.6164,
+          "inflow": 0.0,
+          "outflow": 92.7611
+        },
+        {
+          "phase": 0.47,
+          "pressure": 99.4603,
+          "inflow": 0.0,
+          "outflow": 92.6082
+        },
+        {
+          "phase": 0.473333,
+          "pressure": 99.3046,
+          "inflow": 0.0,
+          "outflow": 92.4554
+        },
+        {
+          "phase": 0.476667,
+          "pressure": 99.149,
+          "inflow": 0.0,
+          "outflow": 92.303
+        },
+        {
+          "phase": 0.48,
+          "pressure": 98.9938,
+          "inflow": 0.0,
+          "outflow": 92.1508
+        },
+        {
+          "phase": 0.483333,
+          "pressure": 98.8388,
+          "inflow": 0.0,
+          "outflow": 91.9988
+        },
+        {
+          "phase": 0.486667,
+          "pressure": 98.684,
+          "inflow": 0.0,
+          "outflow": 91.8471
+        },
+        {
+          "phase": 0.49,
+          "pressure": 98.5295,
+          "inflow": 0.0,
+          "outflow": 91.6956
+        },
+        {
+          "phase": 0.493333,
+          "pressure": 98.3753,
+          "inflow": 0.0,
+          "outflow": 91.5444
+        },
+        {
+          "phase": 0.496667,
+          "pressure": 98.2213,
+          "inflow": 0.0,
+          "outflow": 91.3934
+        },
+        {
+          "phase": 0.5,
+          "pressure": 98.0675,
+          "inflow": 0.0,
+          "outflow": 91.2427
+        },
+        {
+          "phase": 0.503333,
+          "pressure": 97.9141,
+          "inflow": 0.0,
+          "outflow": 91.0922
+        },
+        {
+          "phase": 0.506667,
+          "pressure": 97.7608,
+          "inflow": 0.0,
+          "outflow": 90.942
+        },
+        {
+          "phase": 0.51,
+          "pressure": 97.6079,
+          "inflow": 0.0,
+          "outflow": 90.792
+        },
+        {
+          "phase": 0.513333,
+          "pressure": 97.4551,
+          "inflow": 0.0,
+          "outflow": 90.6423
+        },
+        {
+          "phase": 0.516667,
+          "pressure": 97.3027,
+          "inflow": 0.0,
+          "outflow": 90.4928
+        },
+        {
+          "phase": 0.52,
+          "pressure": 97.1505,
+          "inflow": 0.0,
+          "outflow": 90.3436
+        },
+        {
+          "phase": 0.523333,
+          "pressure": 96.9985,
+          "inflow": 0.0,
+          "outflow": 90.1946
+        },
+        {
+          "phase": 0.526667,
+          "pressure": 96.8468,
+          "inflow": 0.0,
+          "outflow": 90.0459
+        },
+        {
+          "phase": 0.53,
+          "pressure": 96.6953,
+          "inflow": 0.0,
+          "outflow": 89.8974
+        },
+        {
+          "phase": 0.533333,
+          "pressure": 96.5441,
+          "inflow": 0.0,
+          "outflow": 89.7491
+        },
+        {
+          "phase": 0.536667,
+          "pressure": 96.3931,
+          "inflow": 0.0,
+          "outflow": 89.6011
+        },
+        {
+          "phase": 0.54,
+          "pressure": 96.2424,
+          "inflow": 0.0,
+          "outflow": 89.4533
+        },
+        {
+          "phase": 0.543333,
+          "pressure": 96.0919,
+          "inflow": 0.0,
+          "outflow": 89.3058
+        },
+        {
+          "phase": 0.546667,
+          "pressure": 95.9417,
+          "inflow": 0.0,
+          "outflow": 89.1585
+        },
+        {
+          "phase": 0.55,
+          "pressure": 95.7917,
+          "inflow": 0.0,
+          "outflow": 89.0115
+        },
+        {
+          "phase": 0.553333,
+          "pressure": 95.642,
+          "inflow": 0.0,
+          "outflow": 88.8647
+        },
+        {
+          "phase": 0.556667,
+          "pressure": 95.4925,
+          "inflow": 0.0,
+          "outflow": 88.7182
+        },
+        {
+          "phase": 0.56,
+          "pressure": 95.3433,
+          "inflow": 0.0,
+          "outflow": 88.5718
+        },
+        {
+          "phase": 0.563333,
+          "pressure": 95.1943,
+          "inflow": 0.0,
+          "outflow": 88.4258
+        },
+        {
+          "phase": 0.566667,
+          "pressure": 95.0456,
+          "inflow": 0.0,
+          "outflow": 88.28
+        },
+        {
+          "phase": 0.57,
+          "pressure": 94.8971,
+          "inflow": 0.0,
+          "outflow": 88.1344
+        },
+        {
+          "phase": 0.573333,
+          "pressure": 94.7488,
+          "inflow": 0.0,
+          "outflow": 87.989
+        },
+        {
+          "phase": 0.576667,
+          "pressure": 94.6008,
+          "inflow": 0.0,
+          "outflow": 87.8439
+        },
+        {
+          "phase": 0.58,
+          "pressure": 94.453,
+          "inflow": 0.0,
+          "outflow": 87.6991
+        },
+        {
+          "phase": 0.583333,
+          "pressure": 94.3055,
+          "inflow": 0.0,
+          "outflow": 87.5544
+        },
+        {
+          "phase": 0.586667,
+          "pressure": 94.1582,
+          "inflow": 0.0,
+          "outflow": 87.41
+        },
+        {
+          "phase": 0.59,
+          "pressure": 94.0112,
+          "inflow": 0.0,
+          "outflow": 87.2659
+        },
+        {
+          "phase": 0.593333,
+          "pressure": 93.8644,
+          "inflow": 0.0,
+          "outflow": 87.122
+        },
+        {
+          "phase": 0.596667,
+          "pressure": 93.7179,
+          "inflow": 0.0,
+          "outflow": 86.9783
+        },
+        {
+          "phase": 0.6,
+          "pressure": 93.5716,
+          "inflow": 0.0,
+          "outflow": 86.8349
+        },
+        {
+          "phase": 0.603333,
+          "pressure": 93.4255,
+          "inflow": 0.0,
+          "outflow": 86.6917
+        },
+        {
+          "phase": 0.606667,
+          "pressure": 93.2797,
+          "inflow": 0.0,
+          "outflow": 86.5487
+        },
+        {
+          "phase": 0.61,
+          "pressure": 93.1341,
+          "inflow": 0.0,
+          "outflow": 86.406
+        },
+        {
+          "phase": 0.613333,
+          "pressure": 92.9887,
+          "inflow": 0.0,
+          "outflow": 86.2635
+        },
+        {
+          "phase": 0.616667,
+          "pressure": 92.8436,
+          "inflow": 0.0,
+          "outflow": 86.1212
+        },
+        {
+          "phase": 0.62,
+          "pressure": 92.6988,
+          "inflow": 0.0,
+          "outflow": 85.9792
+        },
+        {
+          "phase": 0.623333,
+          "pressure": 92.5541,
+          "inflow": 0.0,
+          "outflow": 85.8374
+        },
+        {
+          "phase": 0.626667,
+          "pressure": 92.4098,
+          "inflow": 0.0,
+          "outflow": 85.6958
+        },
+        {
+          "phase": 0.63,
+          "pressure": 92.2656,
+          "inflow": 0.0,
+          "outflow": 85.5545
+        },
+        {
+          "phase": 0.633333,
+          "pressure": 92.1217,
+          "inflow": 0.0,
+          "outflow": 85.4134
+        },
+        {
+          "phase": 0.636667,
+          "pressure": 91.978,
+          "inflow": 0.0,
+          "outflow": 85.2726
+        },
+        {
+          "phase": 0.64,
+          "pressure": 91.8346,
+          "inflow": 0.0,
+          "outflow": 85.1319
+        },
+        {
+          "phase": 0.643333,
+          "pressure": 91.6914,
+          "inflow": 0.0,
+          "outflow": 84.9915
+        },
+        {
+          "phase": 0.646667,
+          "pressure": 91.5484,
+          "inflow": 0.0,
+          "outflow": 84.8514
+        },
+        {
+          "phase": 0.65,
+          "pressure": 91.4057,
+          "inflow": 0.0,
+          "outflow": 84.7115
+        },
+        {
+          "phase": 0.653333,
+          "pressure": 91.2632,
+          "inflow": 0.0,
+          "outflow": 84.5718
+        },
+        {
+          "phase": 0.656667,
+          "pressure": 91.1209,
+          "inflow": 0.0,
+          "outflow": 84.4323
+        },
+        {
+          "phase": 0.66,
+          "pressure": 90.9789,
+          "inflow": 0.0,
+          "outflow": 84.293
+        },
+        {
+          "phase": 0.663333,
+          "pressure": 90.8371,
+          "inflow": 0.0,
+          "outflow": 84.154
+        },
+        {
+          "phase": 0.666667,
+          "pressure": 90.6956,
+          "inflow": 0.0,
+          "outflow": 84.0153
+        },
+        {
+          "phase": 0.67,
+          "pressure": 90.5542,
+          "inflow": 0.0,
+          "outflow": 83.8767
+        },
+        {
+          "phase": 0.673333,
+          "pressure": 90.4131,
+          "inflow": 0.0,
+          "outflow": 83.7384
+        },
+        {
+          "phase": 0.676667,
+          "pressure": 90.2723,
+          "inflow": 0.0,
+          "outflow": 83.6003
+        },
+        {
+          "phase": 0.68,
+          "pressure": 90.1317,
+          "inflow": 0.0,
+          "outflow": 83.4624
+        },
+        {
+          "phase": 0.683333,
+          "pressure": 89.9913,
+          "inflow": 0.0,
+          "outflow": 83.3248
+        },
+        {
+          "phase": 0.686667,
+          "pressure": 89.8511,
+          "inflow": 0.0,
+          "outflow": 83.1874
+        },
+        {
+          "phase": 0.69,
+          "pressure": 89.7112,
+          "inflow": 0.0,
+          "outflow": 83.0502
+        },
+        {
+          "phase": 0.693333,
+          "pressure": 89.5715,
+          "inflow": 0.0,
+          "outflow": 82.9132
+        },
+        {
+          "phase": 0.696667,
+          "pressure": 89.432,
+          "inflow": 0.0,
+          "outflow": 82.7765
+        },
+        {
+          "phase": 0.7,
+          "pressure": 89.2928,
+          "inflow": 0.0,
+          "outflow": 82.64
+        },
+        {
+          "phase": 0.703333,
+          "pressure": 89.1538,
+          "inflow": 0.0,
+          "outflow": 82.5037
+        },
+        {
+          "phase": 0.706667,
+          "pressure": 89.015,
+          "inflow": 0.0,
+          "outflow": 82.3676
+        },
+        {
+          "phase": 0.71,
+          "pressure": 88.8764,
+          "inflow": 0.0,
+          "outflow": 82.2318
+        },
+        {
+          "phase": 0.713333,
+          "pressure": 88.7381,
+          "inflow": 0.0,
+          "outflow": 82.0962
+        },
+        {
+          "phase": 0.716667,
+          "pressure": 88.6,
+          "inflow": 0.0,
+          "outflow": 81.9608
+        },
+        {
+          "phase": 0.72,
+          "pressure": 88.4621,
+          "inflow": 0.0,
+          "outflow": 81.8256
+        },
+        {
+          "phase": 0.723333,
+          "pressure": 88.3245,
+          "inflow": 0.0,
+          "outflow": 81.6907
+        },
+        {
+          "phase": 0.726667,
+          "pressure": 88.1871,
+          "inflow": 0.0,
+          "outflow": 81.556
+        },
+        {
+          "phase": 0.73,
+          "pressure": 88.0499,
+          "inflow": 0.0,
+          "outflow": 81.4215
+        },
+        {
+          "phase": 0.733333,
+          "pressure": 87.9129,
+          "inflow": 0.0,
+          "outflow": 81.2872
+        },
+        {
+          "phase": 0.736667,
+          "pressure": 87.7762,
+          "inflow": 0.0,
+          "outflow": 81.1531
+        },
+        {
+          "phase": 0.74,
+          "pressure": 87.6397,
+          "inflow": 0.0,
+          "outflow": 81.0193
+        },
+        {
+          "phase": 0.743333,
+          "pressure": 87.5034,
+          "inflow": 0.0,
+          "outflow": 80.8857
+        },
+        {
+          "phase": 0.746667,
+          "pressure": 87.3674,
+          "inflow": 0.0,
+          "outflow": 80.7523
+        },
+        {
+          "phase": 0.75,
+          "pressure": 87.2315,
+          "inflow": 0.0,
+          "outflow": 80.6191
+        },
+        {
+          "phase": 0.753333,
+          "pressure": 87.0959,
+          "inflow": 0.0,
+          "outflow": 80.4862
+        },
+        {
+          "phase": 0.756667,
+          "pressure": 86.9605,
+          "inflow": 0.0,
+          "outflow": 80.3535
+        },
+        {
+          "phase": 0.76,
+          "pressure": 86.8254,
+          "inflow": 0.0,
+          "outflow": 80.2209
+        },
+        {
+          "phase": 0.763333,
+          "pressure": 86.6904,
+          "inflow": 0.0,
+          "outflow": 80.0886
+        },
+        {
+          "phase": 0.766667,
+          "pressure": 86.5557,
+          "inflow": 0.0,
+          "outflow": 79.9566
+        },
+        {
+          "phase": 0.77,
+          "pressure": 86.4212,
+          "inflow": 0.0,
+          "outflow": 79.8247
+        },
+        {
+          "phase": 0.773333,
+          "pressure": 86.2869,
+          "inflow": 0.0,
+          "outflow": 79.6931
+        },
+        {
+          "phase": 0.776667,
+          "pressure": 86.1529,
+          "inflow": 0.0,
+          "outflow": 79.5616
+        },
+        {
+          "phase": 0.78,
+          "pressure": 86.019,
+          "inflow": 0.0,
+          "outflow": 79.4304
+        },
+        {
+          "phase": 0.783333,
+          "pressure": 85.8854,
+          "inflow": 0.0,
+          "outflow": 79.2994
+        },
+        {
+          "phase": 0.786667,
+          "pressure": 85.752,
+          "inflow": 0.0,
+          "outflow": 79.1687
+        },
+        {
+          "phase": 0.79,
+          "pressure": 85.6189,
+          "inflow": 0.0,
+          "outflow": 79.0381
+        },
+        {
+          "phase": 0.793333,
+          "pressure": 85.4859,
+          "inflow": 0.0,
+          "outflow": 78.9078
+        },
+        {
+          "phase": 0.796667,
+          "pressure": 85.3532,
+          "inflow": 0.0,
+          "outflow": 78.7776
+        },
+        {
+          "phase": 0.8,
+          "pressure": 85.2207,
+          "inflow": 0.0,
+          "outflow": 78.6477
+        },
+        {
+          "phase": 0.803333,
+          "pressure": 85.0884,
+          "inflow": 0.0,
+          "outflow": 78.518
+        },
+        {
+          "phase": 0.806667,
+          "pressure": 84.9563,
+          "inflow": 0.0,
+          "outflow": 78.3885
+        },
+        {
+          "phase": 0.81,
+          "pressure": 84.8244,
+          "inflow": 0.0,
+          "outflow": 78.2593
+        },
+        {
+          "phase": 0.813333,
+          "pressure": 84.6928,
+          "inflow": 0.0,
+          "outflow": 78.1302
+        },
+        {
+          "phase": 0.816667,
+          "pressure": 84.5614,
+          "inflow": 0.0,
+          "outflow": 78.0014
+        },
+        {
+          "phase": 0.82,
+          "pressure": 84.4302,
+          "inflow": 0.0,
+          "outflow": 77.8727
+        },
+        {
+          "phase": 0.823333,
+          "pressure": 84.2992,
+          "inflow": 0.0,
+          "outflow": 77.7443
+        },
+        {
+          "phase": 0.826667,
+          "pressure": 84.1684,
+          "inflow": 0.0,
+          "outflow": 77.6161
+        },
+        {
+          "phase": 0.83,
+          "pressure": 84.0379,
+          "inflow": 0.0,
+          "outflow": 77.4881
+        },
+        {
+          "phase": 0.833333,
+          "pressure": 83.9075,
+          "inflow": 0.0,
+          "outflow": 77.3603
+        },
+        {
+          "phase": 0.836667,
+          "pressure": 83.7774,
+          "inflow": 0.0,
+          "outflow": 77.2327
+        },
+        {
+          "phase": 0.84,
+          "pressure": 83.6475,
+          "inflow": 0.0,
+          "outflow": 77.1054
+        },
+        {
+          "phase": 0.843333,
+          "pressure": 83.5178,
+          "inflow": 0.0,
+          "outflow": 76.9782
+        },
+        {
+          "phase": 0.846667,
+          "pressure": 83.3883,
+          "inflow": 0.0,
+          "outflow": 76.8513
+        },
+        {
+          "phase": 0.85,
+          "pressure": 83.259,
+          "inflow": 0.0,
+          "outflow": 76.7245
+        },
+        {
+          "phase": 0.853333,
+          "pressure": 83.1299,
+          "inflow": 0.0,
+          "outflow": 76.598
+        },
+        {
+          "phase": 0.856667,
+          "pressure": 83.0011,
+          "inflow": 0.0,
+          "outflow": 76.4717
+        },
+        {
+          "phase": 0.86,
+          "pressure": 82.8725,
+          "inflow": 0.0,
+          "outflow": 76.3456
+        },
+        {
+          "phase": 0.863333,
+          "pressure": 82.744,
+          "inflow": 0.0,
+          "outflow": 76.2197
+        },
+        {
+          "phase": 0.866667,
+          "pressure": 82.6158,
+          "inflow": 0.0,
+          "outflow": 76.094
+        },
+        {
+          "phase": 0.87,
+          "pressure": 82.4878,
+          "inflow": 0.0,
+          "outflow": 75.9685
+        },
+        {
+          "phase": 0.873333,
+          "pressure": 82.36,
+          "inflow": 0.0,
+          "outflow": 75.8432
+        },
+        {
+          "phase": 0.876667,
+          "pressure": 82.2325,
+          "inflow": 0.0,
+          "outflow": 75.7181
+        },
+        {
+          "phase": 0.88,
+          "pressure": 82.1051,
+          "inflow": 0.0,
+          "outflow": 75.5932
+        },
+        {
+          "phase": 0.883333,
+          "pressure": 81.9779,
+          "inflow": 0.0,
+          "outflow": 75.4686
+        },
+        {
+          "phase": 0.886667,
+          "pressure": 81.851,
+          "inflow": 0.0,
+          "outflow": 75.3441
+        },
+        {
+          "phase": 0.89,
+          "pressure": 81.7243,
+          "inflow": 0.0,
+          "outflow": 75.2199
+        },
+        {
+          "phase": 0.893333,
+          "pressure": 81.5977,
+          "inflow": 0.0,
+          "outflow": 75.0958
+        },
+        {
+          "phase": 0.896667,
+          "pressure": 81.4714,
+          "inflow": 0.0,
+          "outflow": 74.972
+        },
+        {
+          "phase": 0.9,
+          "pressure": 81.3453,
+          "inflow": 0.0,
+          "outflow": 74.8483
+        },
+        {
+          "phase": 0.903333,
+          "pressure": 81.2194,
+          "inflow": 0.0,
+          "outflow": 74.7249
+        },
+        {
+          "phase": 0.906667,
+          "pressure": 81.0937,
+          "inflow": 0.0,
+          "outflow": 74.6017
+        },
+        {
+          "phase": 0.91,
+          "pressure": 80.9682,
+          "inflow": 0.0,
+          "outflow": 74.4786
+        },
+        {
+          "phase": 0.913333,
+          "pressure": 80.8429,
+          "inflow": 0.0,
+          "outflow": 74.3558
+        },
+        {
+          "phase": 0.916667,
+          "pressure": 80.7179,
+          "inflow": 0.0,
+          "outflow": 74.2332
+        },
+        {
+          "phase": 0.92,
+          "pressure": 80.593,
+          "inflow": 0.0,
+          "outflow": 74.1108
+        },
+        {
+          "phase": 0.923333,
+          "pressure": 80.4683,
+          "inflow": 0.0,
+          "outflow": 73.9886
+        },
+        {
+          "phase": 0.926667,
+          "pressure": 80.3439,
+          "inflow": 0.0,
+          "outflow": 73.8665
+        },
+        {
+          "phase": 0.93,
+          "pressure": 80.2196,
+          "inflow": 0.0,
+          "outflow": 73.7447
+        },
+        {
+          "phase": 0.933333,
+          "pressure": 80.0956,
+          "inflow": 0.0,
+          "outflow": 73.6231
+        },
+        {
+          "phase": 0.936667,
+          "pressure": 79.9717,
+          "inflow": 0.0,
+          "outflow": 73.5017
+        },
+        {
+          "phase": 0.94,
+          "pressure": 79.8481,
+          "inflow": 0.0,
+          "outflow": 73.3805
+        },
+        {
+          "phase": 0.943333,
+          "pressure": 79.7247,
+          "inflow": 0.0,
+          "outflow": 73.2595
+        },
+        {
+          "phase": 0.946667,
+          "pressure": 79.6014,
+          "inflow": 0.0,
+          "outflow": 73.1387
+        },
+        {
+          "phase": 0.95,
+          "pressure": 79.4784,
+          "inflow": 0.0,
+          "outflow": 73.018
+        },
+        {
+          "phase": 0.953333,
+          "pressure": 79.3556,
+          "inflow": 0.0,
+          "outflow": 72.8976
+        },
+        {
+          "phase": 0.956667,
+          "pressure": 79.233,
+          "inflow": 0.0,
+          "outflow": 72.7774
+        },
+        {
+          "phase": 0.96,
+          "pressure": 79.1105,
+          "inflow": 0.0,
+          "outflow": 72.6574
+        },
+        {
+          "phase": 0.963333,
+          "pressure": 78.9883,
+          "inflow": 0.0,
+          "outflow": 72.5376
+        },
+        {
+          "phase": 0.966667,
+          "pressure": 78.8663,
+          "inflow": 0.0,
+          "outflow": 72.4179
+        },
+        {
+          "phase": 0.97,
+          "pressure": 78.7445,
+          "inflow": 0.0,
+          "outflow": 72.2985
+        },
+        {
+          "phase": 0.973333,
+          "pressure": 78.6229,
+          "inflow": 0.0,
+          "outflow": 72.1793
+        },
+        {
+          "phase": 0.976667,
+          "pressure": 78.5015,
+          "inflow": 0.0,
+          "outflow": 72.0603
+        },
+        {
+          "phase": 0.98,
+          "pressure": 78.3802,
+          "inflow": 0.0,
+          "outflow": 71.9414
+        },
+        {
+          "phase": 0.983333,
+          "pressure": 78.2592,
+          "inflow": 0.0,
+          "outflow": 71.8228
+        },
+        {
+          "phase": 0.986667,
+          "pressure": 78.1384,
+          "inflow": 0.0,
+          "outflow": 71.7043
+        },
+        {
+          "phase": 0.99,
+          "pressure": 78.0178,
+          "inflow": 0.0,
+          "outflow": 71.5861
+        },
+        {
+          "phase": 0.993333,
+          "pressure": 77.8974,
+          "inflow": 0.0,
+          "outflow": 71.468
+        },
+        {
+          "phase": 0.996667,
+          "pressure": 77.7772,
+          "inflow": 0.0,
+          "outflow": 71.3502
+        },
+        {
+          "phase": 1.0,
+          "pressure": 77.6571,
+          "inflow": 0.0,
+          "outflow": 71.2325
+        }
+      ],
+      "systolic": 104.97,
+      "diastolic": 77.23,
+      "mean": 90.68,
+      "pulsePressure": 27.74,
+      "cycleVolumeResidualMl": -0.0012244619817181502
+    },
+    "higher_resistance": {
+      "id": "higher_resistance",
+      "R": 1.5,
+      "C": 1.65,
+      "pv": 5.0,
+      "heartRate": 72.0,
+      "strokeVolume": 70.0,
+      "period": 0.8333333333333334,
+      "samples": [
+        {
+          "phase": 0.0,
+          "pressure": 117.8679,
+          "inflow": 0.0,
+          "outflow": 75.2453
+        },
+        {
+          "phase": 0.003333,
+          "pressure": 117.7497,
+          "inflow": 9.9835,
+          "outflow": 75.1665
+        },
+        {
+          "phase": 0.006667,
+          "pressure": 117.6484,
+          "inflow": 19.9592,
+          "outflow": 75.0989
+        },
+        {
+          "phase": 0.01,
+          "pressure": 117.564,
+          "inflow": 29.919,
+          "outflow": 75.0427
+        },
+        {
+          "phase": 0.013333,
+          "pressure": 117.4965,
+          "inflow": 39.8551,
+          "outflow": 74.9976
+        },
+        {
+          "phase": 0.016667,
+          "pressure": 117.4457,
+          "inflow": 49.7596,
+          "outflow": 74.9638
+        },
+        {
+          "phase": 0.02,
+          "pressure": 117.4116,
+          "inflow": 59.6247,
+          "outflow": 74.941
+        },
+        {
+          "phase": 0.023333,
+          "pressure": 117.3941,
+          "inflow": 69.4426,
+          "outflow": 74.9294
+        },
+        {
+          "phase": 0.026667,
+          "pressure": 117.3931,
+          "inflow": 79.2054,
+          "outflow": 74.9287
+        },
+        {
+          "phase": 0.03,
+          "pressure": 117.4084,
+          "inflow": 88.9054,
+          "outflow": 74.9389
+        },
+        {
+          "phase": 0.033333,
+          "pressure": 117.44,
+          "inflow": 98.535,
+          "outflow": 74.96
+        },
+        {
+          "phase": 0.036667,
+          "pressure": 117.4878,
+          "inflow": 108.0866,
+          "outflow": 74.9918
+        },
+        {
+          "phase": 0.04,
+          "pressure": 117.5514,
+          "inflow": 117.5525,
+          "outflow": 75.0343
+        },
+        {
+          "phase": 0.043333,
+          "pressure": 117.6309,
+          "inflow": 126.9252,
+          "outflow": 75.0872
+        },
+        {
+          "phase": 0.046667,
+          "pressure": 117.7259,
+          "inflow": 136.1974,
+          "outflow": 75.1506
+        },
+        {
+          "phase": 0.05,
+          "pressure": 117.8363,
+          "inflow": 145.3616,
+          "outflow": 75.2242
+        },
+        {
+          "phase": 0.053333,
+          "pressure": 117.962,
+          "inflow": 154.4107,
+          "outflow": 75.308
+        },
+        {
+          "phase": 0.056667,
+          "pressure": 118.1026,
+          "inflow": 163.3374,
+          "outflow": 75.4017
+        },
+        {
+          "phase": 0.06,
+          "pressure": 118.258,
+          "inflow": 172.1346,
+          "outflow": 75.5053
+        },
+        {
+          "phase": 0.063333,
+          "pressure": 118.4279,
+          "inflow": 180.7955,
+          "outflow": 75.6186
+        },
+        {
+          "phase": 0.066667,
+          "pressure": 118.612,
+          "inflow": 189.3131,
+          "outflow": 75.7413
+        },
+        {
+          "phase": 0.07,
+          "pressure": 118.8102,
+          "inflow": 197.6807,
+          "outflow": 75.8734
+        },
+        {
+          "phase": 0.073333,
+          "pressure": 119.0221,
+          "inflow": 205.8917,
+          "outflow": 76.0147
+        },
+        {
+          "phase": 0.076667,
+          "pressure": 119.2474,
+          "inflow": 213.9395,
+          "outflow": 76.1649
+        },
+        {
+          "phase": 0.08,
+          "pressure": 119.4858,
+          "inflow": 221.8178,
+          "outflow": 76.3239
+        },
+        {
+          "phase": 0.083333,
+          "pressure": 119.7371,
+          "inflow": 229.5203,
+          "outflow": 76.4914
+        },
+        {
+          "phase": 0.086667,
+          "pressure": 120.001,
+          "inflow": 237.041,
+          "outflow": 76.6673
+        },
+        {
+          "phase": 0.09,
+          "pressure": 120.277,
+          "inflow": 244.3738,
+          "outflow": 76.8513
+        },
+        {
+          "phase": 0.093333,
+          "pressure": 120.5649,
+          "inflow": 251.5129,
+          "outflow": 77.0433
+        },
+        {
+          "phase": 0.096667,
+          "pressure": 120.8643,
+          "inflow": 258.4528,
+          "outflow": 77.2429
+        },
+        {
+          "phase": 0.1,
+          "pressure": 121.1749,
+          "inflow": 265.1879,
+          "outflow": 77.45
+        },
+        {
+          "phase": 0.103333,
+          "pressure": 121.4963,
+          "inflow": 271.7129,
+          "outflow": 77.6642
+        },
+        {
+          "phase": 0.106667,
+          "pressure": 121.8282,
+          "inflow": 278.0225,
+          "outflow": 77.8854
+        },
+        {
+          "phase": 0.11,
+          "pressure": 122.1701,
+          "inflow": 284.1118,
+          "outflow": 78.1134
+        },
+        {
+          "phase": 0.113333,
+          "pressure": 122.5216,
+          "inflow": 289.976,
+          "outflow": 78.3478
+        },
+        {
+          "phase": 0.116667,
+          "pressure": 122.8825,
+          "inflow": 295.6105,
+          "outflow": 78.5883
+        },
+        {
+          "phase": 0.12,
+          "pressure": 123.2522,
+          "inflow": 301.0107,
+          "outflow": 78.8348
+        },
+        {
+          "phase": 0.123333,
+          "pressure": 123.6304,
+          "inflow": 306.1723,
+          "outflow": 79.0869
+        },
+        {
+          "phase": 0.126667,
+          "pressure": 124.0167,
+          "inflow": 311.0914,
+          "outflow": 79.3444
+        },
+        {
+          "phase": 0.13,
+          "pressure": 124.4106,
+          "inflow": 315.764,
+          "outflow": 79.607
+        },
+        {
+          "phase": 0.133333,
+          "pressure": 124.8117,
+          "inflow": 320.1863,
+          "outflow": 79.8744
+        },
+        {
+          "phase": 0.136667,
+          "pressure": 125.2196,
+          "inflow": 324.3549,
+          "outflow": 80.1464
+        },
+        {
+          "phase": 0.14,
+          "pressure": 125.6338,
+          "inflow": 328.2666,
+          "outflow": 80.4225
+        },
+        {
+          "phase": 0.143333,
+          "pressure": 126.0539,
+          "inflow": 331.9181,
+          "outflow": 80.7026
+        },
+        {
+          "phase": 0.146667,
+          "pressure": 126.4795,
+          "inflow": 335.3065,
+          "outflow": 80.9863
+        },
+        {
+          "phase": 0.15,
+          "pressure": 126.91,
+          "inflow": 338.4293,
+          "outflow": 81.2734
+        },
+        {
+          "phase": 0.153333,
+          "pressure": 127.3452,
+          "inflow": 341.2839,
+          "outflow": 81.5634
+        },
+        {
+          "phase": 0.156667,
+          "pressure": 127.7844,
+          "inflow": 343.8681,
+          "outflow": 81.8562
+        },
+        {
+          "phase": 0.16,
+          "pressure": 128.2272,
+          "inflow": 346.1798,
+          "outflow": 82.1515
+        },
+        {
+          "phase": 0.163333,
+          "pressure": 128.6732,
+          "inflow": 348.2172,
+          "outflow": 82.4488
+        },
+        {
+          "phase": 0.166667,
+          "pressure": 129.1219,
+          "inflow": 349.9787,
+          "outflow": 82.7479
+        },
+        {
+          "phase": 0.17,
+          "pressure": 129.5728,
+          "inflow": 351.4628,
+          "outflow": 83.0485
+        },
+        {
+          "phase": 0.173333,
+          "pressure": 130.0255,
+          "inflow": 352.6685,
+          "outflow": 83.3503
+        },
+        {
+          "phase": 0.176667,
+          "pressure": 130.4794,
+          "inflow": 353.5947,
+          "outflow": 83.653
+        },
+        {
+          "phase": 0.18,
+          "pressure": 130.9342,
+          "inflow": 354.2407,
+          "outflow": 83.9561
+        },
+        {
+          "phase": 0.183333,
+          "pressure": 131.3893,
+          "inflow": 354.606,
+          "outflow": 84.2596
+        },
+        {
+          "phase": 0.186667,
+          "pressure": 131.8443,
+          "inflow": 354.6903,
+          "outflow": 84.5629
+        },
+        {
+          "phase": 0.19,
+          "pressure": 132.2987,
+          "inflow": 354.4936,
+          "outflow": 84.8658
+        },
+        {
+          "phase": 0.193333,
+          "pressure": 132.752,
+          "inflow": 354.016,
+          "outflow": 85.168
+        },
+        {
+          "phase": 0.196667,
+          "pressure": 133.2038,
+          "inflow": 353.2578,
+          "outflow": 85.4692
+        },
+        {
+          "phase": 0.2,
+          "pressure": 133.6535,
+          "inflow": 352.2197,
+          "outflow": 85.769
+        },
+        {
+          "phase": 0.203333,
+          "pressure": 134.1007,
+          "inflow": 350.9025,
+          "outflow": 86.0672
+        },
+        {
+          "phase": 0.206667,
+          "pressure": 134.545,
+          "inflow": 349.3073,
+          "outflow": 86.3634
+        },
+        {
+          "phase": 0.21,
+          "pressure": 134.9859,
+          "inflow": 347.4353,
+          "outflow": 86.6573
+        },
+        {
+          "phase": 0.213333,
+          "pressure": 135.4229,
+          "inflow": 345.288,
+          "outflow": 86.9486
+        },
+        {
+          "phase": 0.216667,
+          "pressure": 135.8556,
+          "inflow": 342.867,
+          "outflow": 87.2371
+        },
+        {
+          "phase": 0.22,
+          "pressure": 136.2835,
+          "inflow": 340.1744,
+          "outflow": 87.5223
+        },
+        {
+          "phase": 0.223333,
+          "pressure": 136.7061,
+          "inflow": 337.2123,
+          "outflow": 87.8041
+        },
+        {
+          "phase": 0.226667,
+          "pressure": 137.1231,
+          "inflow": 333.9829,
+          "outflow": 88.0821
+        },
+        {
+          "phase": 0.23,
+          "pressure": 137.5339,
+          "inflow": 330.4889,
+          "outflow": 88.356
+        },
+        {
+          "phase": 0.233333,
+          "pressure": 137.9382,
+          "inflow": 326.733,
+          "outflow": 88.6255
+        },
+        {
+          "phase": 0.236667,
+          "pressure": 138.3355,
+          "inflow": 322.7182,
+          "outflow": 88.8903
+        },
+        {
+          "phase": 0.24,
+          "pressure": 138.7254,
+          "inflow": 318.4476,
+          "outflow": 89.1502
+        },
+        {
+          "phase": 0.243333,
+          "pressure": 139.1074,
+          "inflow": 313.9248,
+          "outflow": 89.4049
+        },
+        {
+          "phase": 0.246667,
+          "pressure": 139.4812,
+          "inflow": 309.1532,
+          "outflow": 89.6541
+        },
+        {
+          "phase": 0.25,
+          "pressure": 139.8463,
+          "inflow": 304.1366,
+          "outflow": 89.8975
+        },
+        {
+          "phase": 0.253333,
+          "pressure": 140.2024,
+          "inflow": 298.879,
+          "outflow": 90.1349
+        },
+        {
+          "phase": 0.256667,
+          "pressure": 140.549,
+          "inflow": 293.3846,
+          "outflow": 90.366
+        },
+        {
+          "phase": 0.26,
+          "pressure": 140.8858,
+          "inflow": 287.6577,
+          "outflow": 90.5906
+        },
+        {
+          "phase": 0.263333,
+          "pressure": 141.2124,
+          "inflow": 281.7029,
+          "outflow": 90.8083
+        },
+        {
+          "phase": 0.266667,
+          "pressure": 141.5285,
+          "inflow": 275.5248,
+          "outflow": 91.019
+        },
+        {
+          "phase": 0.27,
+          "pressure": 141.8336,
+          "inflow": 269.1284,
+          "outflow": 91.2224
+        },
+        {
+          "phase": 0.273333,
+          "pressure": 142.1274,
+          "inflow": 262.5188,
+          "outflow": 91.4182
+        },
+        {
+          "phase": 0.276667,
+          "pressure": 142.4095,
+          "inflow": 255.7011,
+          "outflow": 91.6064
+        },
+        {
+          "phase": 0.28,
+          "pressure": 142.6798,
+          "inflow": 248.6809,
+          "outflow": 91.7865
+        },
+        {
+          "phase": 0.283333,
+          "pressure": 142.9377,
+          "inflow": 241.4636,
+          "outflow": 91.9585
+        },
+        {
+          "phase": 0.286667,
+          "pressure": 143.183,
+          "inflow": 234.0549,
+          "outflow": 92.122
+        },
+        {
+          "phase": 0.29,
+          "pressure": 143.4155,
+          "inflow": 226.4608,
+          "outflow": 92.277
+        },
+        {
+          "phase": 0.293333,
+          "pressure": 143.6347,
+          "inflow": 218.6872,
+          "outflow": 92.4232
+        },
+        {
+          "phase": 0.296667,
+          "pressure": 143.8405,
+          "inflow": 210.7404,
+          "outflow": 92.5603
+        },
+        {
+          "phase": 0.3,
+          "pressure": 144.0326,
+          "inflow": 202.6265,
+          "outflow": 92.6884
+        },
+        {
+          "phase": 0.303333,
+          "pressure": 144.2106,
+          "inflow": 194.3521,
+          "outflow": 92.8071
+        },
+        {
+          "phase": 0.306667,
+          "pressure": 144.3744,
+          "inflow": 185.9237,
+          "outflow": 92.9163
+        },
+        {
+          "phase": 0.31,
+          "pressure": 144.5237,
+          "inflow": 177.348,
+          "outflow": 93.0158
+        },
+        {
+          "phase": 0.313333,
+          "pressure": 144.6583,
+          "inflow": 168.6317,
+          "outflow": 93.1055
+        },
+        {
+          "phase": 0.316667,
+          "pressure": 144.7779,
+          "inflow": 159.7818,
+          "outflow": 93.1853
+        },
+        {
+          "phase": 0.32,
+          "pressure": 144.8824,
+          "inflow": 150.8053,
+          "outflow": 93.2549
+        },
+        {
+          "phase": 0.323333,
+          "pressure": 144.9716,
+          "inflow": 141.7093,
+          "outflow": 93.3144
+        },
+        {
+          "phase": 0.326667,
+          "pressure": 145.0453,
+          "inflow": 132.501,
+          "outflow": 93.3635
+        },
+        {
+          "phase": 0.33,
+          "pressure": 145.1033,
+          "inflow": 123.1878,
+          "outflow": 93.4022
+        },
+        {
+          "phase": 0.333333,
+          "pressure": 145.1455,
+          "inflow": 113.7769,
+          "outflow": 93.4304
+        },
+        {
+          "phase": 0.336667,
+          "pressure": 145.1718,
+          "inflow": 104.2758,
+          "outflow": 93.4479
+        },
+        {
+          "phase": 0.34,
+          "pressure": 145.182,
+          "inflow": 94.6921,
+          "outflow": 93.4546
+        },
+        {
+          "phase": 0.343333,
+          "pressure": 145.1759,
+          "inflow": 85.0334,
+          "outflow": 93.4506
+        },
+        {
+          "phase": 0.346667,
+          "pressure": 145.1536,
+          "inflow": 75.3073,
+          "outflow": 93.4357
+        },
+        {
+          "phase": 0.35,
+          "pressure": 145.1149,
+          "inflow": 65.5216,
+          "outflow": 93.4099
+        },
+        {
+          "phase": 0.353333,
+          "pressure": 145.0597,
+          "inflow": 55.6839,
+          "outflow": 93.3731
+        },
+        {
+          "phase": 0.356667,
+          "pressure": 144.9879,
+          "inflow": 45.8021,
+          "outflow": 93.3253
+        },
+        {
+          "phase": 0.36,
+          "pressure": 144.8996,
+          "inflow": 35.884,
+          "outflow": 93.2664
+        },
+        {
+          "phase": 0.363333,
+          "pressure": 144.7947,
+          "inflow": 25.9375,
+          "outflow": 93.1965
+        },
+        {
+          "phase": 0.366667,
+          "pressure": 144.6732,
+          "inflow": 15.9704,
+          "outflow": 93.1155
+        },
+        {
+          "phase": 0.37,
+          "pressure": 144.535,
+          "inflow": 5.9906,
+          "outflow": 93.0233
+        },
+        {
+          "phase": 0.373333,
+          "pressure": 144.3815,
+          "inflow": 0.0,
+          "outflow": 92.921
+        },
+        {
+          "phase": 0.376667,
+          "pressure": 144.2252,
+          "inflow": 0.0,
+          "outflow": 92.8168
+        },
+        {
+          "phase": 0.38,
+          "pressure": 144.069,
+          "inflow": 0.0,
+          "outflow": 92.7127
+        },
+        {
+          "phase": 0.383333,
+          "pressure": 143.913,
+          "inflow": 0.0,
+          "outflow": 92.6087
+        },
+        {
+          "phase": 0.386667,
+          "pressure": 143.7572,
+          "inflow": 0.0,
+          "outflow": 92.5048
+        },
+        {
+          "phase": 0.39,
+          "pressure": 143.6016,
+          "inflow": 0.0,
+          "outflow": 92.401
+        },
+        {
+          "phase": 0.393333,
+          "pressure": 143.4461,
+          "inflow": 0.0,
+          "outflow": 92.2974
+        },
+        {
+          "phase": 0.396667,
+          "pressure": 143.2908,
+          "inflow": 0.0,
+          "outflow": 92.1939
+        },
+        {
+          "phase": 0.4,
+          "pressure": 143.1357,
+          "inflow": 0.0,
+          "outflow": 92.0904
+        },
+        {
+          "phase": 0.403333,
+          "pressure": 142.9807,
+          "inflow": 0.0,
+          "outflow": 91.9871
+        },
+        {
+          "phase": 0.406667,
+          "pressure": 142.8259,
+          "inflow": 0.0,
+          "outflow": 91.884
+        },
+        {
+          "phase": 0.41,
+          "pressure": 142.6713,
+          "inflow": 0.0,
+          "outflow": 91.7809
+        },
+        {
+          "phase": 0.413333,
+          "pressure": 142.5169,
+          "inflow": 0.0,
+          "outflow": 91.6779
+        },
+        {
+          "phase": 0.416667,
+          "pressure": 142.3627,
+          "inflow": 0.0,
+          "outflow": 91.5751
+        },
+        {
+          "phase": 0.42,
+          "pressure": 142.2086,
+          "inflow": 0.0,
+          "outflow": 91.4724
+        },
+        {
+          "phase": 0.423333,
+          "pressure": 142.0547,
+          "inflow": 0.0,
+          "outflow": 91.3698
+        },
+        {
+          "phase": 0.426667,
+          "pressure": 141.9009,
+          "inflow": 0.0,
+          "outflow": 91.2673
+        },
+        {
+          "phase": 0.43,
+          "pressure": 141.7474,
+          "inflow": 0.0,
+          "outflow": 91.1649
+        },
+        {
+          "phase": 0.433333,
+          "pressure": 141.594,
+          "inflow": 0.0,
+          "outflow": 91.0627
+        },
+        {
+          "phase": 0.436667,
+          "pressure": 141.4408,
+          "inflow": 0.0,
+          "outflow": 90.9605
+        },
+        {
+          "phase": 0.44,
+          "pressure": 141.2877,
+          "inflow": 0.0,
+          "outflow": 90.8585
+        },
+        {
+          "phase": 0.443333,
+          "pressure": 141.1348,
+          "inflow": 0.0,
+          "outflow": 90.7566
+        },
+        {
+          "phase": 0.446667,
+          "pressure": 140.9821,
+          "inflow": 0.0,
+          "outflow": 90.6548
+        },
+        {
+          "phase": 0.45,
+          "pressure": 140.8296,
+          "inflow": 0.0,
+          "outflow": 90.5531
+        },
+        {
+          "phase": 0.453333,
+          "pressure": 140.6773,
+          "inflow": 0.0,
+          "outflow": 90.4515
+        },
+        {
+          "phase": 0.456667,
+          "pressure": 140.5251,
+          "inflow": 0.0,
+          "outflow": 90.35
+        },
+        {
+          "phase": 0.46,
+          "pressure": 140.373,
+          "inflow": 0.0,
+          "outflow": 90.2487
+        },
+        {
+          "phase": 0.463333,
+          "pressure": 140.2212,
+          "inflow": 0.0,
+          "outflow": 90.1475
+        },
+        {
+          "phase": 0.466667,
+          "pressure": 140.0695,
+          "inflow": 0.0,
+          "outflow": 90.0463
+        },
+        {
+          "phase": 0.47,
+          "pressure": 139.918,
+          "inflow": 0.0,
+          "outflow": 89.9453
+        },
+        {
+          "phase": 0.473333,
+          "pressure": 139.7667,
+          "inflow": 0.0,
+          "outflow": 89.8444
+        },
+        {
+          "phase": 0.476667,
+          "pressure": 139.6155,
+          "inflow": 0.0,
+          "outflow": 89.7437
+        },
+        {
+          "phase": 0.48,
+          "pressure": 139.4645,
+          "inflow": 0.0,
+          "outflow": 89.643
+        },
+        {
+          "phase": 0.483333,
+          "pressure": 139.3137,
+          "inflow": 0.0,
+          "outflow": 89.5424
+        },
+        {
+          "phase": 0.486667,
+          "pressure": 139.163,
+          "inflow": 0.0,
+          "outflow": 89.442
+        },
+        {
+          "phase": 0.49,
+          "pressure": 139.0125,
+          "inflow": 0.0,
+          "outflow": 89.3417
+        },
+        {
+          "phase": 0.493333,
+          "pressure": 138.8622,
+          "inflow": 0.0,
+          "outflow": 89.2415
+        },
+        {
+          "phase": 0.496667,
+          "pressure": 138.712,
+          "inflow": 0.0,
+          "outflow": 89.1414
+        },
+        {
+          "phase": 0.5,
+          "pressure": 138.5621,
+          "inflow": 0.0,
+          "outflow": 89.0414
+        },
+        {
+          "phase": 0.503333,
+          "pressure": 138.4122,
+          "inflow": 0.0,
+          "outflow": 88.9415
+        },
+        {
+          "phase": 0.506667,
+          "pressure": 138.2626,
+          "inflow": 0.0,
+          "outflow": 88.8417
+        },
+        {
+          "phase": 0.51,
+          "pressure": 138.1131,
+          "inflow": 0.0,
+          "outflow": 88.7421
+        },
+        {
+          "phase": 0.513333,
+          "pressure": 137.9638,
+          "inflow": 0.0,
+          "outflow": 88.6425
+        },
+        {
+          "phase": 0.516667,
+          "pressure": 137.8147,
+          "inflow": 0.0,
+          "outflow": 88.5431
+        },
+        {
+          "phase": 0.52,
+          "pressure": 137.6657,
+          "inflow": 0.0,
+          "outflow": 88.4438
+        },
+        {
+          "phase": 0.523333,
+          "pressure": 137.5169,
+          "inflow": 0.0,
+          "outflow": 88.3446
+        },
+        {
+          "phase": 0.526667,
+          "pressure": 137.3682,
+          "inflow": 0.0,
+          "outflow": 88.2455
+        },
+        {
+          "phase": 0.53,
+          "pressure": 137.2197,
+          "inflow": 0.0,
+          "outflow": 88.1465
+        },
+        {
+          "phase": 0.533333,
+          "pressure": 137.0714,
+          "inflow": 0.0,
+          "outflow": 88.0476
+        },
+        {
+          "phase": 0.536667,
+          "pressure": 136.9233,
+          "inflow": 0.0,
+          "outflow": 87.9489
+        },
+        {
+          "phase": 0.54,
+          "pressure": 136.7753,
+          "inflow": 0.0,
+          "outflow": 87.8502
+        },
+        {
+          "phase": 0.543333,
+          "pressure": 136.6275,
+          "inflow": 0.0,
+          "outflow": 87.7517
+        },
+        {
+          "phase": 0.546667,
+          "pressure": 136.4798,
+          "inflow": 0.0,
+          "outflow": 87.6532
+        },
+        {
+          "phase": 0.55,
+          "pressure": 136.3324,
+          "inflow": 0.0,
+          "outflow": 87.5549
+        },
+        {
+          "phase": 0.553333,
+          "pressure": 136.185,
+          "inflow": 0.0,
+          "outflow": 87.4567
+        },
+        {
+          "phase": 0.556667,
+          "pressure": 136.0379,
+          "inflow": 0.0,
+          "outflow": 87.3586
+        },
+        {
+          "phase": 0.56,
+          "pressure": 135.8909,
+          "inflow": 0.0,
+          "outflow": 87.2606
+        },
+        {
+          "phase": 0.563333,
+          "pressure": 135.7441,
+          "inflow": 0.0,
+          "outflow": 87.1627
+        },
+        {
+          "phase": 0.566667,
+          "pressure": 135.5974,
+          "inflow": 0.0,
+          "outflow": 87.065
+        },
+        {
+          "phase": 0.57,
+          "pressure": 135.4509,
+          "inflow": 0.0,
+          "outflow": 86.9673
+        },
+        {
+          "phase": 0.573333,
+          "pressure": 135.3046,
+          "inflow": 0.0,
+          "outflow": 86.8697
+        },
+        {
+          "phase": 0.576667,
+          "pressure": 135.1584,
+          "inflow": 0.0,
+          "outflow": 86.7723
+        },
+        {
+          "phase": 0.58,
+          "pressure": 135.0125,
+          "inflow": 0.0,
+          "outflow": 86.675
+        },
+        {
+          "phase": 0.583333,
+          "pressure": 134.8666,
+          "inflow": 0.0,
+          "outflow": 86.5777
+        },
+        {
+          "phase": 0.586667,
+          "pressure": 134.7209,
+          "inflow": 0.0,
+          "outflow": 86.4806
+        },
+        {
+          "phase": 0.59,
+          "pressure": 134.5754,
+          "inflow": 0.0,
+          "outflow": 86.3836
+        },
+        {
+          "phase": 0.593333,
+          "pressure": 134.4301,
+          "inflow": 0.0,
+          "outflow": 86.2867
+        },
+        {
+          "phase": 0.596667,
+          "pressure": 134.2849,
+          "inflow": 0.0,
+          "outflow": 86.1899
+        },
+        {
+          "phase": 0.6,
+          "pressure": 134.1399,
+          "inflow": 0.0,
+          "outflow": 86.0933
+        },
+        {
+          "phase": 0.603333,
+          "pressure": 133.995,
+          "inflow": 0.0,
+          "outflow": 85.9967
+        },
+        {
+          "phase": 0.606667,
+          "pressure": 133.8503,
+          "inflow": 0.0,
+          "outflow": 85.9002
+        },
+        {
+          "phase": 0.61,
+          "pressure": 133.7058,
+          "inflow": 0.0,
+          "outflow": 85.8039
+        },
+        {
+          "phase": 0.613333,
+          "pressure": 133.5614,
+          "inflow": 0.0,
+          "outflow": 85.7076
+        },
+        {
+          "phase": 0.616667,
+          "pressure": 133.4172,
+          "inflow": 0.0,
+          "outflow": 85.6115
+        },
+        {
+          "phase": 0.62,
+          "pressure": 133.2732,
+          "inflow": 0.0,
+          "outflow": 85.5155
+        },
+        {
+          "phase": 0.623333,
+          "pressure": 133.1293,
+          "inflow": 0.0,
+          "outflow": 85.4195
+        },
+        {
+          "phase": 0.626667,
+          "pressure": 132.9856,
+          "inflow": 0.0,
+          "outflow": 85.3237
+        },
+        {
+          "phase": 0.63,
+          "pressure": 132.842,
+          "inflow": 0.0,
+          "outflow": 85.228
+        },
+        {
+          "phase": 0.633333,
+          "pressure": 132.6986,
+          "inflow": 0.0,
+          "outflow": 85.1324
+        },
+        {
+          "phase": 0.636667,
+          "pressure": 132.5554,
+          "inflow": 0.0,
+          "outflow": 85.0369
+        },
+        {
+          "phase": 0.64,
+          "pressure": 132.4123,
+          "inflow": 0.0,
+          "outflow": 84.9415
+        },
+        {
+          "phase": 0.643333,
+          "pressure": 132.2694,
+          "inflow": 0.0,
+          "outflow": 84.8462
+        },
+        {
+          "phase": 0.646667,
+          "pressure": 132.1266,
+          "inflow": 0.0,
+          "outflow": 84.7511
+        },
+        {
+          "phase": 0.65,
+          "pressure": 131.984,
+          "inflow": 0.0,
+          "outflow": 84.656
+        },
+        {
+          "phase": 0.653333,
+          "pressure": 131.8416,
+          "inflow": 0.0,
+          "outflow": 84.561
+        },
+        {
+          "phase": 0.656667,
+          "pressure": 131.6993,
+          "inflow": 0.0,
+          "outflow": 84.4662
+        },
+        {
+          "phase": 0.66,
+          "pressure": 131.5572,
+          "inflow": 0.0,
+          "outflow": 84.3715
+        },
+        {
+          "phase": 0.663333,
+          "pressure": 131.4152,
+          "inflow": 0.0,
+          "outflow": 84.2768
+        },
+        {
+          "phase": 0.666667,
+          "pressure": 131.2734,
+          "inflow": 0.0,
+          "outflow": 84.1823
+        },
+        {
+          "phase": 0.67,
+          "pressure": 131.1318,
+          "inflow": 0.0,
+          "outflow": 84.0878
+        },
+        {
+          "phase": 0.673333,
+          "pressure": 130.9903,
+          "inflow": 0.0,
+          "outflow": 83.9935
+        },
+        {
+          "phase": 0.676667,
+          "pressure": 130.849,
+          "inflow": 0.0,
+          "outflow": 83.8993
+        },
+        {
+          "phase": 0.68,
+          "pressure": 130.7078,
+          "inflow": 0.0,
+          "outflow": 83.8052
+        },
+        {
+          "phase": 0.683333,
+          "pressure": 130.5668,
+          "inflow": 0.0,
+          "outflow": 83.7112
+        },
+        {
+          "phase": 0.686667,
+          "pressure": 130.4259,
+          "inflow": 0.0,
+          "outflow": 83.6173
+        },
+        {
+          "phase": 0.69,
+          "pressure": 130.2853,
+          "inflow": 0.0,
+          "outflow": 83.5235
+        },
+        {
+          "phase": 0.693333,
+          "pressure": 130.1447,
+          "inflow": 0.0,
+          "outflow": 83.4298
+        },
+        {
+          "phase": 0.696667,
+          "pressure": 130.0043,
+          "inflow": 0.0,
+          "outflow": 83.3362
+        },
+        {
+          "phase": 0.7,
+          "pressure": 129.8641,
+          "inflow": 0.0,
+          "outflow": 83.2428
+        },
+        {
+          "phase": 0.703333,
+          "pressure": 129.7241,
+          "inflow": 0.0,
+          "outflow": 83.1494
+        },
+        {
+          "phase": 0.706667,
+          "pressure": 129.5842,
+          "inflow": 0.0,
+          "outflow": 83.0561
+        },
+        {
+          "phase": 0.71,
+          "pressure": 129.4444,
+          "inflow": 0.0,
+          "outflow": 82.9629
+        },
+        {
+          "phase": 0.713333,
+          "pressure": 129.3048,
+          "inflow": 0.0,
+          "outflow": 82.8699
+        },
+        {
+          "phase": 0.716667,
+          "pressure": 129.1654,
+          "inflow": 0.0,
+          "outflow": 82.7769
+        },
+        {
+          "phase": 0.72,
+          "pressure": 129.0261,
+          "inflow": 0.0,
+          "outflow": 82.6841
+        },
+        {
+          "phase": 0.723333,
+          "pressure": 128.887,
+          "inflow": 0.0,
+          "outflow": 82.5913
+        },
+        {
+          "phase": 0.726667,
+          "pressure": 128.748,
+          "inflow": 0.0,
+          "outflow": 82.4987
+        },
+        {
+          "phase": 0.73,
+          "pressure": 128.6092,
+          "inflow": 0.0,
+          "outflow": 82.4061
+        },
+        {
+          "phase": 0.733333,
+          "pressure": 128.4706,
+          "inflow": 0.0,
+          "outflow": 82.3137
+        },
+        {
+          "phase": 0.736667,
+          "pressure": 128.3321,
+          "inflow": 0.0,
+          "outflow": 82.2214
+        },
+        {
+          "phase": 0.74,
+          "pressure": 128.1937,
+          "inflow": 0.0,
+          "outflow": 82.1292
+        },
+        {
+          "phase": 0.743333,
+          "pressure": 128.0555,
+          "inflow": 0.0,
+          "outflow": 82.037
+        },
+        {
+          "phase": 0.746667,
+          "pressure": 127.9175,
+          "inflow": 0.0,
+          "outflow": 81.945
+        },
+        {
+          "phase": 0.75,
+          "pressure": 127.7796,
+          "inflow": 0.0,
+          "outflow": 81.8531
+        },
+        {
+          "phase": 0.753333,
+          "pressure": 127.6419,
+          "inflow": 0.0,
+          "outflow": 81.7613
+        },
+        {
+          "phase": 0.756667,
+          "pressure": 127.5043,
+          "inflow": 0.0,
+          "outflow": 81.6696
+        },
+        {
+          "phase": 0.76,
+          "pressure": 127.3669,
+          "inflow": 0.0,
+          "outflow": 81.578
+        },
+        {
+          "phase": 0.763333,
+          "pressure": 127.2297,
+          "inflow": 0.0,
+          "outflow": 81.4864
+        },
+        {
+          "phase": 0.766667,
+          "pressure": 127.0926,
+          "inflow": 0.0,
+          "outflow": 81.395
+        },
+        {
+          "phase": 0.77,
+          "pressure": 126.9556,
+          "inflow": 0.0,
+          "outflow": 81.3037
+        },
+        {
+          "phase": 0.773333,
+          "pressure": 126.8188,
+          "inflow": 0.0,
+          "outflow": 81.2125
+        },
+        {
+          "phase": 0.776667,
+          "pressure": 126.6822,
+          "inflow": 0.0,
+          "outflow": 81.1214
+        },
+        {
+          "phase": 0.78,
+          "pressure": 126.5457,
+          "inflow": 0.0,
+          "outflow": 81.0305
+        },
+        {
+          "phase": 0.783333,
+          "pressure": 126.4093,
+          "inflow": 0.0,
+          "outflow": 80.9396
+        },
+        {
+          "phase": 0.786667,
+          "pressure": 126.2732,
+          "inflow": 0.0,
+          "outflow": 80.8488
+        },
+        {
+          "phase": 0.79,
+          "pressure": 126.1371,
+          "inflow": 0.0,
+          "outflow": 80.7581
+        },
+        {
+          "phase": 0.793333,
+          "pressure": 126.0012,
+          "inflow": 0.0,
+          "outflow": 80.6675
+        },
+        {
+          "phase": 0.796667,
+          "pressure": 125.8655,
+          "inflow": 0.0,
+          "outflow": 80.577
+        },
+        {
+          "phase": 0.8,
+          "pressure": 125.7299,
+          "inflow": 0.0,
+          "outflow": 80.4866
+        },
+        {
+          "phase": 0.803333,
+          "pressure": 125.5945,
+          "inflow": 0.0,
+          "outflow": 80.3963
+        },
+        {
+          "phase": 0.806667,
+          "pressure": 125.4592,
+          "inflow": 0.0,
+          "outflow": 80.3062
+        },
+        {
+          "phase": 0.81,
+          "pressure": 125.3241,
+          "inflow": 0.0,
+          "outflow": 80.2161
+        },
+        {
+          "phase": 0.813333,
+          "pressure": 125.1892,
+          "inflow": 0.0,
+          "outflow": 80.1261
+        },
+        {
+          "phase": 0.816667,
+          "pressure": 125.0543,
+          "inflow": 0.0,
+          "outflow": 80.0362
+        },
+        {
+          "phase": 0.82,
+          "pressure": 124.9197,
+          "inflow": 0.0,
+          "outflow": 79.9464
+        },
+        {
+          "phase": 0.823333,
+          "pressure": 124.7852,
+          "inflow": 0.0,
+          "outflow": 79.8568
+        },
+        {
+          "phase": 0.826667,
+          "pressure": 124.6508,
+          "inflow": 0.0,
+          "outflow": 79.7672
+        },
+        {
+          "phase": 0.83,
+          "pressure": 124.5166,
+          "inflow": 0.0,
+          "outflow": 79.6777
+        },
+        {
+          "phase": 0.833333,
+          "pressure": 124.3825,
+          "inflow": 0.0,
+          "outflow": 79.5883
+        },
+        {
+          "phase": 0.836667,
+          "pressure": 124.2486,
+          "inflow": 0.0,
+          "outflow": 79.4991
+        },
+        {
+          "phase": 0.84,
+          "pressure": 124.1148,
+          "inflow": 0.0,
+          "outflow": 79.4099
+        },
+        {
+          "phase": 0.843333,
+          "pressure": 123.9812,
+          "inflow": 0.0,
+          "outflow": 79.3208
+        },
+        {
+          "phase": 0.846667,
+          "pressure": 123.8478,
+          "inflow": 0.0,
+          "outflow": 79.2318
+        },
+        {
+          "phase": 0.85,
+          "pressure": 123.7145,
+          "inflow": 0.0,
+          "outflow": 79.143
+        },
+        {
+          "phase": 0.853333,
+          "pressure": 123.5813,
+          "inflow": 0.0,
+          "outflow": 79.0542
+        },
+        {
+          "phase": 0.856667,
+          "pressure": 123.4483,
+          "inflow": 0.0,
+          "outflow": 78.9655
+        },
+        {
+          "phase": 0.86,
+          "pressure": 123.3154,
+          "inflow": 0.0,
+          "outflow": 78.8769
+        },
+        {
+          "phase": 0.863333,
+          "pressure": 123.1827,
+          "inflow": 0.0,
+          "outflow": 78.7885
+        },
+        {
+          "phase": 0.866667,
+          "pressure": 123.0501,
+          "inflow": 0.0,
+          "outflow": 78.7001
+        },
+        {
+          "phase": 0.87,
+          "pressure": 122.9177,
+          "inflow": 0.0,
+          "outflow": 78.6118
+        },
+        {
+          "phase": 0.873333,
+          "pressure": 122.7855,
+          "inflow": 0.0,
+          "outflow": 78.5236
+        },
+        {
+          "phase": 0.876667,
+          "pressure": 122.6533,
+          "inflow": 0.0,
+          "outflow": 78.4356
+        },
+        {
+          "phase": 0.88,
+          "pressure": 122.5214,
+          "inflow": 0.0,
+          "outflow": 78.3476
+        },
+        {
+          "phase": 0.883333,
+          "pressure": 122.3895,
+          "inflow": 0.0,
+          "outflow": 78.2597
+        },
+        {
+          "phase": 0.886667,
+          "pressure": 122.2579,
+          "inflow": 0.0,
+          "outflow": 78.1719
+        },
+        {
+          "phase": 0.89,
+          "pressure": 122.1263,
+          "inflow": 0.0,
+          "outflow": 78.0842
+        },
+        {
+          "phase": 0.893333,
+          "pressure": 121.995,
+          "inflow": 0.0,
+          "outflow": 77.9966
+        },
+        {
+          "phase": 0.896667,
+          "pressure": 121.8637,
+          "inflow": 0.0,
+          "outflow": 77.9091
+        },
+        {
+          "phase": 0.9,
+          "pressure": 121.7326,
+          "inflow": 0.0,
+          "outflow": 77.8218
+        },
+        {
+          "phase": 0.903333,
+          "pressure": 121.6017,
+          "inflow": 0.0,
+          "outflow": 77.7345
+        },
+        {
+          "phase": 0.906667,
+          "pressure": 121.4709,
+          "inflow": 0.0,
+          "outflow": 77.6473
+        },
+        {
+          "phase": 0.91,
+          "pressure": 121.3403,
+          "inflow": 0.0,
+          "outflow": 77.5602
+        },
+        {
+          "phase": 0.913333,
+          "pressure": 121.2098,
+          "inflow": 0.0,
+          "outflow": 77.4732
+        },
+        {
+          "phase": 0.916667,
+          "pressure": 121.0794,
+          "inflow": 0.0,
+          "outflow": 77.3863
+        },
+        {
+          "phase": 0.92,
+          "pressure": 120.9492,
+          "inflow": 0.0,
+          "outflow": 77.2995
+        },
+        {
+          "phase": 0.923333,
+          "pressure": 120.8191,
+          "inflow": 0.0,
+          "outflow": 77.2128
+        },
+        {
+          "phase": 0.926667,
+          "pressure": 120.6892,
+          "inflow": 0.0,
+          "outflow": 77.1261
+        },
+        {
+          "phase": 0.93,
+          "pressure": 120.5594,
+          "inflow": 0.0,
+          "outflow": 77.0396
+        },
+        {
+          "phase": 0.933333,
+          "pressure": 120.4298,
+          "inflow": 0.0,
+          "outflow": 76.9532
+        },
+        {
+          "phase": 0.936667,
+          "pressure": 120.3003,
+          "inflow": 0.0,
+          "outflow": 76.8669
+        },
+        {
+          "phase": 0.94,
+          "pressure": 120.171,
+          "inflow": 0.0,
+          "outflow": 76.7807
+        },
+        {
+          "phase": 0.943333,
+          "pressure": 120.0418,
+          "inflow": 0.0,
+          "outflow": 76.6946
+        },
+        {
+          "phase": 0.946667,
+          "pressure": 119.9128,
+          "inflow": 0.0,
+          "outflow": 76.6085
+        },
+        {
+          "phase": 0.95,
+          "pressure": 119.7839,
+          "inflow": 0.0,
+          "outflow": 76.5226
+        },
+        {
+          "phase": 0.953333,
+          "pressure": 119.6551,
+          "inflow": 0.0,
+          "outflow": 76.4368
+        },
+        {
+          "phase": 0.956667,
+          "pressure": 119.5265,
+          "inflow": 0.0,
+          "outflow": 76.351
+        },
+        {
+          "phase": 0.96,
+          "pressure": 119.3981,
+          "inflow": 0.0,
+          "outflow": 76.2654
+        },
+        {
+          "phase": 0.963333,
+          "pressure": 119.2697,
+          "inflow": 0.0,
+          "outflow": 76.1798
+        },
+        {
+          "phase": 0.966667,
+          "pressure": 119.1416,
+          "inflow": 0.0,
+          "outflow": 76.0944
+        },
+        {
+          "phase": 0.97,
+          "pressure": 119.0135,
+          "inflow": 0.0,
+          "outflow": 76.009
+        },
+        {
+          "phase": 0.973333,
+          "pressure": 118.8856,
+          "inflow": 0.0,
+          "outflow": 75.9238
+        },
+        {
+          "phase": 0.976667,
+          "pressure": 118.7579,
+          "inflow": 0.0,
+          "outflow": 75.8386
+        },
+        {
+          "phase": 0.98,
+          "pressure": 118.6303,
+          "inflow": 0.0,
+          "outflow": 75.7535
+        },
+        {
+          "phase": 0.983333,
+          "pressure": 118.5028,
+          "inflow": 0.0,
+          "outflow": 75.6686
+        },
+        {
+          "phase": 0.986667,
+          "pressure": 118.3755,
+          "inflow": 0.0,
+          "outflow": 75.5837
+        },
+        {
+          "phase": 0.99,
+          "pressure": 118.2483,
+          "inflow": 0.0,
+          "outflow": 75.4989
+        },
+        {
+          "phase": 0.993333,
+          "pressure": 118.1213,
+          "inflow": 0.0,
+          "outflow": 75.4142
+        },
+        {
+          "phase": 0.996667,
+          "pressure": 117.9944,
+          "inflow": 0.0,
+          "outflow": 75.3296
+        },
+        {
+          "phase": 1.0,
+          "pressure": 117.8677,
+          "inflow": 0.0,
+          "outflow": 75.2451
+        }
+      ],
+      "systolic": 145.18,
+      "diastolic": 117.39,
+      "mean": 131.0,
+      "pulsePressure": 27.79,
+      "cycleVolumeResidualMl": -0.0013320552944584563
+    },
+    "stiffer_artery": {
+      "id": "stiffer_artery",
+      "R": 1.02,
+      "C": 0.72,
+      "pv": 5.0,
+      "heartRate": 72.0,
+      "strokeVolume": 70.0,
+      "period": 0.8333333333333334,
+      "samples": [
+        {
+          "phase": 0.0,
+          "pressure": 62.137,
+          "inflow": 0.0,
+          "outflow": 56.0166
+        },
+        {
+          "phase": 0.003333,
+          "pressure": 61.9405,
+          "inflow": 9.9835,
+          "outflow": 55.824
+        },
+        {
+          "phase": 0.006667,
+          "pressure": 61.7832,
+          "inflow": 19.9592,
+          "outflow": 55.6698
+        },
+        {
+          "phase": 0.01,
+          "pressure": 61.6649,
+          "inflow": 29.919,
+          "outflow": 55.5538
+        },
+        {
+          "phase": 0.013333,
+          "pressure": 61.5853,
+          "inflow": 39.8551,
+          "outflow": 55.4758
+        },
+        {
+          "phase": 0.016667,
+          "pressure": 61.5443,
+          "inflow": 49.7596,
+          "outflow": 55.4356
+        },
+        {
+          "phase": 0.02,
+          "pressure": 61.5415,
+          "inflow": 59.6247,
+          "outflow": 55.4328
+        },
+        {
+          "phase": 0.023333,
+          "pressure": 61.5765,
+          "inflow": 69.4426,
+          "outflow": 55.4672
+        },
+        {
+          "phase": 0.026667,
+          "pressure": 61.6492,
+          "inflow": 79.2054,
+          "outflow": 55.5384
+        },
+        {
+          "phase": 0.03,
+          "pressure": 61.759,
+          "inflow": 88.9054,
+          "outflow": 55.6461
+        },
+        {
+          "phase": 0.033333,
+          "pressure": 61.9057,
+          "inflow": 98.535,
+          "outflow": 55.7899
+        },
+        {
+          "phase": 0.036667,
+          "pressure": 62.0887,
+          "inflow": 108.0866,
+          "outflow": 55.9693
+        },
+        {
+          "phase": 0.04,
+          "pressure": 62.3076,
+          "inflow": 117.5525,
+          "outflow": 56.184
+        },
+        {
+          "phase": 0.043333,
+          "pressure": 62.5621,
+          "inflow": 126.9252,
+          "outflow": 56.4334
+        },
+        {
+          "phase": 0.046667,
+          "pressure": 62.8514,
+          "inflow": 136.1974,
+          "outflow": 56.7171
+        },
+        {
+          "phase": 0.05,
+          "pressure": 63.1751,
+          "inflow": 145.3616,
+          "outflow": 57.0345
+        },
+        {
+          "phase": 0.053333,
+          "pressure": 63.5327,
+          "inflow": 154.4107,
+          "outflow": 57.385
+        },
+        {
+          "phase": 0.056667,
+          "pressure": 63.9236,
+          "inflow": 163.3374,
+          "outflow": 57.7682
+        },
+        {
+          "phase": 0.06,
+          "pressure": 64.3471,
+          "inflow": 172.1346,
+          "outflow": 58.1834
+        },
+        {
+          "phase": 0.063333,
+          "pressure": 64.8026,
+          "inflow": 180.7955,
+          "outflow": 58.63
+        },
+        {
+          "phase": 0.066667,
+          "pressure": 65.2895,
+          "inflow": 189.3131,
+          "outflow": 59.1074
+        },
+        {
+          "phase": 0.07,
+          "pressure": 65.8071,
+          "inflow": 197.6807,
+          "outflow": 59.6148
+        },
+        {
+          "phase": 0.073333,
+          "pressure": 66.3546,
+          "inflow": 205.8917,
+          "outflow": 60.1516
+        },
+        {
+          "phase": 0.076667,
+          "pressure": 66.9314,
+          "inflow": 213.9395,
+          "outflow": 60.717
+        },
+        {
+          "phase": 0.08,
+          "pressure": 67.5366,
+          "inflow": 221.8178,
+          "outflow": 61.3104
+        },
+        {
+          "phase": 0.083333,
+          "pressure": 68.1696,
+          "inflow": 229.5203,
+          "outflow": 61.931
+        },
+        {
+          "phase": 0.086667,
+          "pressure": 68.8295,
+          "inflow": 237.041,
+          "outflow": 62.5779
+        },
+        {
+          "phase": 0.09,
+          "pressure": 69.5155,
+          "inflow": 244.3738,
+          "outflow": 63.2505
+        },
+        {
+          "phase": 0.093333,
+          "pressure": 70.2268,
+          "inflow": 251.5129,
+          "outflow": 63.9478
+        },
+        {
+          "phase": 0.096667,
+          "pressure": 70.9625,
+          "inflow": 258.4528,
+          "outflow": 64.6691
+        },
+        {
+          "phase": 0.1,
+          "pressure": 71.7217,
+          "inflow": 265.1879,
+          "outflow": 65.4134
+        },
+        {
+          "phase": 0.103333,
+          "pressure": 72.5036,
+          "inflow": 271.7129,
+          "outflow": 66.18
+        },
+        {
+          "phase": 0.106667,
+          "pressure": 73.3073,
+          "inflow": 278.0225,
+          "outflow": 66.9679
+        },
+        {
+          "phase": 0.11,
+          "pressure": 74.1318,
+          "inflow": 284.1118,
+          "outflow": 67.7763
+        },
+        {
+          "phase": 0.113333,
+          "pressure": 74.9762,
+          "inflow": 289.976,
+          "outflow": 68.6042
+        },
+        {
+          "phase": 0.116667,
+          "pressure": 75.8396,
+          "inflow": 295.6105,
+          "outflow": 69.4506
+        },
+        {
+          "phase": 0.12,
+          "pressure": 76.721,
+          "inflow": 301.0107,
+          "outflow": 70.3147
+        },
+        {
+          "phase": 0.123333,
+          "pressure": 77.6194,
+          "inflow": 306.1723,
+          "outflow": 71.1954
+        },
+        {
+          "phase": 0.126667,
+          "pressure": 78.5337,
+          "inflow": 311.0914,
+          "outflow": 72.0919
+        },
+        {
+          "phase": 0.13,
+          "pressure": 79.4632,
+          "inflow": 315.764,
+          "outflow": 73.0031
+        },
+        {
+          "phase": 0.133333,
+          "pressure": 80.4066,
+          "inflow": 320.1863,
+          "outflow": 73.928
+        },
+        {
+          "phase": 0.136667,
+          "pressure": 81.363,
+          "inflow": 324.3549,
+          "outflow": 74.8656
+        },
+        {
+          "phase": 0.14,
+          "pressure": 82.3313,
+          "inflow": 328.2666,
+          "outflow": 75.815
+        },
+        {
+          "phase": 0.143333,
+          "pressure": 83.3105,
+          "inflow": 331.9181,
+          "outflow": 76.775
+        },
+        {
+          "phase": 0.146667,
+          "pressure": 84.2996,
+          "inflow": 335.3065,
+          "outflow": 77.7447
+        },
+        {
+          "phase": 0.15,
+          "pressure": 85.2975,
+          "inflow": 338.4293,
+          "outflow": 78.7231
+        },
+        {
+          "phase": 0.153333,
+          "pressure": 86.3032,
+          "inflow": 341.2839,
+          "outflow": 79.709
+        },
+        {
+          "phase": 0.156667,
+          "pressure": 87.3155,
+          "inflow": 343.8681,
+          "outflow": 80.7015
+        },
+        {
+          "phase": 0.16,
+          "pressure": 88.3334,
+          "inflow": 346.1798,
+          "outflow": 81.6994
+        },
+        {
+          "phase": 0.163333,
+          "pressure": 89.3559,
+          "inflow": 348.2172,
+          "outflow": 82.7019
+        },
+        {
+          "phase": 0.166667,
+          "pressure": 90.3818,
+          "inflow": 349.9787,
+          "outflow": 83.7077
+        },
+        {
+          "phase": 0.17,
+          "pressure": 91.4101,
+          "inflow": 351.4628,
+          "outflow": 84.7158
+        },
+        {
+          "phase": 0.173333,
+          "pressure": 92.4397,
+          "inflow": 352.6685,
+          "outflow": 85.7252
+        },
+        {
+          "phase": 0.176667,
+          "pressure": 93.4695,
+          "inflow": 353.5947,
+          "outflow": 86.7348
+        },
+        {
+          "phase": 0.18,
+          "pressure": 94.4984,
+          "inflow": 354.2407,
+          "outflow": 87.7436
+        },
+        {
+          "phase": 0.183333,
+          "pressure": 95.5254,
+          "inflow": 354.606,
+          "outflow": 88.7504
+        },
+        {
+          "phase": 0.186667,
+          "pressure": 96.5494,
+          "inflow": 354.6903,
+          "outflow": 89.7543
+        },
+        {
+          "phase": 0.19,
+          "pressure": 97.5693,
+          "inflow": 354.4936,
+          "outflow": 90.7542
+        },
+        {
+          "phase": 0.193333,
+          "pressure": 98.5841,
+          "inflow": 354.016,
+          "outflow": 91.7491
+        },
+        {
+          "phase": 0.196667,
+          "pressure": 99.5926,
+          "inflow": 353.2578,
+          "outflow": 92.7379
+        },
+        {
+          "phase": 0.2,
+          "pressure": 100.5939,
+          "inflow": 352.2197,
+          "outflow": 93.7195
+        },
+        {
+          "phase": 0.203333,
+          "pressure": 101.5869,
+          "inflow": 350.9025,
+          "outflow": 94.693
+        },
+        {
+          "phase": 0.206667,
+          "pressure": 102.5705,
+          "inflow": 349.3073,
+          "outflow": 95.6574
+        },
+        {
+          "phase": 0.21,
+          "pressure": 103.5437,
+          "inflow": 347.4353,
+          "outflow": 96.6115
+        },
+        {
+          "phase": 0.213333,
+          "pressure": 104.5055,
+          "inflow": 345.288,
+          "outflow": 97.5544
+        },
+        {
+          "phase": 0.216667,
+          "pressure": 105.4549,
+          "inflow": 342.867,
+          "outflow": 98.4852
+        },
+        {
+          "phase": 0.22,
+          "pressure": 106.3909,
+          "inflow": 340.1744,
+          "outflow": 99.4028
+        },
+        {
+          "phase": 0.223333,
+          "pressure": 107.3124,
+          "inflow": 337.2123,
+          "outflow": 100.3063
+        },
+        {
+          "phase": 0.226667,
+          "pressure": 108.2185,
+          "inflow": 333.9829,
+          "outflow": 101.1946
+        },
+        {
+          "phase": 0.23,
+          "pressure": 109.1083,
+          "inflow": 330.4889,
+          "outflow": 102.0669
+        },
+        {
+          "phase": 0.233333,
+          "pressure": 109.9807,
+          "inflow": 326.733,
+          "outflow": 102.9223
+        },
+        {
+          "phase": 0.236667,
+          "pressure": 110.8349,
+          "inflow": 322.7182,
+          "outflow": 103.7597
+        },
+        {
+          "phase": 0.24,
+          "pressure": 111.6699,
+          "inflow": 318.4476,
+          "outflow": 104.5783
+        },
+        {
+          "phase": 0.243333,
+          "pressure": 112.4848,
+          "inflow": 313.9248,
+          "outflow": 105.3773
+        },
+        {
+          "phase": 0.246667,
+          "pressure": 113.2788,
+          "inflow": 309.1532,
+          "outflow": 106.1557
+        },
+        {
+          "phase": 0.25,
+          "pressure": 114.0509,
+          "inflow": 304.1366,
+          "outflow": 106.9126
+        },
+        {
+          "phase": 0.253333,
+          "pressure": 114.8003,
+          "inflow": 298.879,
+          "outflow": 107.6473
+        },
+        {
+          "phase": 0.256667,
+          "pressure": 115.5262,
+          "inflow": 293.3846,
+          "outflow": 108.359
+        },
+        {
+          "phase": 0.26,
+          "pressure": 116.2277,
+          "inflow": 287.6577,
+          "outflow": 109.0467
+        },
+        {
+          "phase": 0.263333,
+          "pressure": 116.9041,
+          "inflow": 281.7029,
+          "outflow": 109.7099
+        },
+        {
+          "phase": 0.266667,
+          "pressure": 117.5545,
+          "inflow": 275.5248,
+          "outflow": 110.3476
+        },
+        {
+          "phase": 0.27,
+          "pressure": 118.1783,
+          "inflow": 269.1284,
+          "outflow": 110.9592
+        },
+        {
+          "phase": 0.273333,
+          "pressure": 118.7747,
+          "inflow": 262.5188,
+          "outflow": 111.5439
+        },
+        {
+          "phase": 0.276667,
+          "pressure": 119.343,
+          "inflow": 255.7011,
+          "outflow": 112.101
+        },
+        {
+          "phase": 0.28,
+          "pressure": 119.8825,
+          "inflow": 248.6809,
+          "outflow": 112.6299
+        },
+        {
+          "phase": 0.283333,
+          "pressure": 120.3926,
+          "inflow": 241.4636,
+          "outflow": 113.13
+        },
+        {
+          "phase": 0.286667,
+          "pressure": 120.8726,
+          "inflow": 234.0549,
+          "outflow": 113.6005
+        },
+        {
+          "phase": 0.29,
+          "pressure": 121.3218,
+          "inflow": 226.4608,
+          "outflow": 114.041
+        },
+        {
+          "phase": 0.293333,
+          "pressure": 121.7398,
+          "inflow": 218.6872,
+          "outflow": 114.4508
+        },
+        {
+          "phase": 0.296667,
+          "pressure": 122.1259,
+          "inflow": 210.7404,
+          "outflow": 114.8293
+        },
+        {
+          "phase": 0.3,
+          "pressure": 122.4797,
+          "inflow": 202.6265,
+          "outflow": 115.1762
+        },
+        {
+          "phase": 0.303333,
+          "pressure": 122.8005,
+          "inflow": 194.3521,
+          "outflow": 115.4907
+        },
+        {
+          "phase": 0.306667,
+          "pressure": 123.088,
+          "inflow": 185.9237,
+          "outflow": 115.7726
+        },
+        {
+          "phase": 0.31,
+          "pressure": 123.3417,
+          "inflow": 177.348,
+          "outflow": 116.0213
+        },
+        {
+          "phase": 0.313333,
+          "pressure": 123.5611,
+          "inflow": 168.6317,
+          "outflow": 116.2364
+        },
+        {
+          "phase": 0.316667,
+          "pressure": 123.7458,
+          "inflow": 159.7818,
+          "outflow": 116.4175
+        },
+        {
+          "phase": 0.32,
+          "pressure": 123.8956,
+          "inflow": 150.8053,
+          "outflow": 116.5643
+        },
+        {
+          "phase": 0.323333,
+          "pressure": 124.0099,
+          "inflow": 141.7093,
+          "outflow": 116.6764
+        },
+        {
+          "phase": 0.326667,
+          "pressure": 124.0886,
+          "inflow": 132.501,
+          "outflow": 116.7536
+        },
+        {
+          "phase": 0.33,
+          "pressure": 124.1314,
+          "inflow": 123.1878,
+          "outflow": 116.7954
+        },
+        {
+          "phase": 0.333333,
+          "pressure": 124.1379,
+          "inflow": 113.7769,
+          "outflow": 116.8018
+        },
+        {
+          "phase": 0.336667,
+          "pressure": 124.1079,
+          "inflow": 104.2758,
+          "outflow": 116.7725
+        },
+        {
+          "phase": 0.34,
+          "pressure": 124.0414,
+          "inflow": 94.6921,
+          "outflow": 116.7072
+        },
+        {
+          "phase": 0.343333,
+          "pressure": 123.938,
+          "inflow": 85.0334,
+          "outflow": 116.6059
+        },
+        {
+          "phase": 0.346667,
+          "pressure": 123.7977,
+          "inflow": 75.3073,
+          "outflow": 116.4684
+        },
+        {
+          "phase": 0.35,
+          "pressure": 123.6204,
+          "inflow": 65.5216,
+          "outflow": 116.2945
+        },
+        {
+          "phase": 0.353333,
+          "pressure": 123.4059,
+          "inflow": 55.6839,
+          "outflow": 116.0843
+        },
+        {
+          "phase": 0.356667,
+          "pressure": 123.1543,
+          "inflow": 45.8021,
+          "outflow": 115.8376
+        },
+        {
+          "phase": 0.36,
+          "pressure": 122.8655,
+          "inflow": 35.884,
+          "outflow": 115.5545
+        },
+        {
+          "phase": 0.363333,
+          "pressure": 122.5396,
+          "inflow": 25.9375,
+          "outflow": 115.2349
+        },
+        {
+          "phase": 0.366667,
+          "pressure": 122.1765,
+          "inflow": 15.9704,
+          "outflow": 114.879
+        },
+        {
+          "phase": 0.37,
+          "pressure": 121.7764,
+          "inflow": 5.9906,
+          "outflow": 114.4867
+        },
+        {
+          "phase": 0.373333,
+          "pressure": 121.3425,
+          "inflow": 0.0,
+          "outflow": 114.0613
+        },
+        {
+          "phase": 0.376667,
+          "pressure": 120.9033,
+          "inflow": 0.0,
+          "outflow": 113.6307
+        },
+        {
+          "phase": 0.38,
+          "pressure": 120.4657,
+          "inflow": 0.0,
+          "outflow": 113.2017
+        },
+        {
+          "phase": 0.383333,
+          "pressure": 120.0298,
+          "inflow": 0.0,
+          "outflow": 112.7743
+        },
+        {
+          "phase": 0.386667,
+          "pressure": 119.5955,
+          "inflow": 0.0,
+          "outflow": 112.3486
+        },
+        {
+          "phase": 0.39,
+          "pressure": 119.1629,
+          "inflow": 0.0,
+          "outflow": 111.9244
+        },
+        {
+          "phase": 0.393333,
+          "pressure": 118.7319,
+          "inflow": 0.0,
+          "outflow": 111.5019
+        },
+        {
+          "phase": 0.396667,
+          "pressure": 118.3026,
+          "inflow": 0.0,
+          "outflow": 111.0809
+        },
+        {
+          "phase": 0.4,
+          "pressure": 117.8748,
+          "inflow": 0.0,
+          "outflow": 110.6616
+        },
+        {
+          "phase": 0.403333,
+          "pressure": 117.4487,
+          "inflow": 0.0,
+          "outflow": 110.2438
+        },
+        {
+          "phase": 0.406667,
+          "pressure": 117.0242,
+          "inflow": 0.0,
+          "outflow": 109.8276
+        },
+        {
+          "phase": 0.41,
+          "pressure": 116.6012,
+          "inflow": 0.0,
+          "outflow": 109.413
+        },
+        {
+          "phase": 0.413333,
+          "pressure": 116.1799,
+          "inflow": 0.0,
+          "outflow": 108.9999
+        },
+        {
+          "phase": 0.416667,
+          "pressure": 115.7602,
+          "inflow": 0.0,
+          "outflow": 108.5884
+        },
+        {
+          "phase": 0.42,
+          "pressure": 115.342,
+          "inflow": 0.0,
+          "outflow": 108.1785
+        },
+        {
+          "phase": 0.423333,
+          "pressure": 114.9255,
+          "inflow": 0.0,
+          "outflow": 107.7701
+        },
+        {
+          "phase": 0.426667,
+          "pressure": 114.5105,
+          "inflow": 0.0,
+          "outflow": 107.3632
+        },
+        {
+          "phase": 0.43,
+          "pressure": 114.0971,
+          "inflow": 0.0,
+          "outflow": 106.9579
+        },
+        {
+          "phase": 0.433333,
+          "pressure": 113.6852,
+          "inflow": 0.0,
+          "outflow": 106.5541
+        },
+        {
+          "phase": 0.436667,
+          "pressure": 113.2749,
+          "inflow": 0.0,
+          "outflow": 106.1518
+        },
+        {
+          "phase": 0.44,
+          "pressure": 112.8661,
+          "inflow": 0.0,
+          "outflow": 105.7511
+        },
+        {
+          "phase": 0.443333,
+          "pressure": 112.4589,
+          "inflow": 0.0,
+          "outflow": 105.3519
+        },
+        {
+          "phase": 0.446667,
+          "pressure": 112.0532,
+          "inflow": 0.0,
+          "outflow": 104.9541
+        },
+        {
+          "phase": 0.45,
+          "pressure": 111.6491,
+          "inflow": 0.0,
+          "outflow": 104.5579
+        },
+        {
+          "phase": 0.453333,
+          "pressure": 111.2464,
+          "inflow": 0.0,
+          "outflow": 104.1632
+        },
+        {
+          "phase": 0.456667,
+          "pressure": 110.8453,
+          "inflow": 0.0,
+          "outflow": 103.7699
+        },
+        {
+          "phase": 0.46,
+          "pressure": 110.4457,
+          "inflow": 0.0,
+          "outflow": 103.3782
+        },
+        {
+          "phase": 0.463333,
+          "pressure": 110.0477,
+          "inflow": 0.0,
+          "outflow": 102.9879
+        },
+        {
+          "phase": 0.466667,
+          "pressure": 109.6511,
+          "inflow": 0.0,
+          "outflow": 102.5991
+        },
+        {
+          "phase": 0.47,
+          "pressure": 109.256,
+          "inflow": 0.0,
+          "outflow": 102.2118
+        },
+        {
+          "phase": 0.473333,
+          "pressure": 108.8624,
+          "inflow": 0.0,
+          "outflow": 101.8259
+        },
+        {
+          "phase": 0.476667,
+          "pressure": 108.4703,
+          "inflow": 0.0,
+          "outflow": 101.4415
+        },
+        {
+          "phase": 0.48,
+          "pressure": 108.0797,
+          "inflow": 0.0,
+          "outflow": 101.0585
+        },
+        {
+          "phase": 0.483333,
+          "pressure": 107.6905,
+          "inflow": 0.0,
+          "outflow": 100.677
+        },
+        {
+          "phase": 0.486667,
+          "pressure": 107.3028,
+          "inflow": 0.0,
+          "outflow": 100.2969
+        },
+        {
+          "phase": 0.49,
+          "pressure": 106.9166,
+          "inflow": 0.0,
+          "outflow": 99.9183
+        },
+        {
+          "phase": 0.493333,
+          "pressure": 106.5319,
+          "inflow": 0.0,
+          "outflow": 99.5411
+        },
+        {
+          "phase": 0.496667,
+          "pressure": 106.1486,
+          "inflow": 0.0,
+          "outflow": 99.1653
+        },
+        {
+          "phase": 0.5,
+          "pressure": 105.7667,
+          "inflow": 0.0,
+          "outflow": 98.7909
+        },
+        {
+          "phase": 0.503333,
+          "pressure": 105.3863,
+          "inflow": 0.0,
+          "outflow": 98.4179
+        },
+        {
+          "phase": 0.506667,
+          "pressure": 105.0073,
+          "inflow": 0.0,
+          "outflow": 98.0464
+        },
+        {
+          "phase": 0.51,
+          "pressure": 104.6298,
+          "inflow": 0.0,
+          "outflow": 97.6762
+        },
+        {
+          "phase": 0.513333,
+          "pressure": 104.2536,
+          "inflow": 0.0,
+          "outflow": 97.3075
+        },
+        {
+          "phase": 0.516667,
+          "pressure": 103.8789,
+          "inflow": 0.0,
+          "outflow": 96.9401
+        },
+        {
+          "phase": 0.52,
+          "pressure": 103.5056,
+          "inflow": 0.0,
+          "outflow": 96.5742
+        },
+        {
+          "phase": 0.523333,
+          "pressure": 103.1338,
+          "inflow": 0.0,
+          "outflow": 96.2096
+        },
+        {
+          "phase": 0.526667,
+          "pressure": 102.7633,
+          "inflow": 0.0,
+          "outflow": 95.8463
+        },
+        {
+          "phase": 0.53,
+          "pressure": 102.3942,
+          "inflow": 0.0,
+          "outflow": 95.4845
+        },
+        {
+          "phase": 0.533333,
+          "pressure": 102.0265,
+          "inflow": 0.0,
+          "outflow": 95.124
+        },
+        {
+          "phase": 0.536667,
+          "pressure": 101.6602,
+          "inflow": 0.0,
+          "outflow": 94.7649
+        },
+        {
+          "phase": 0.54,
+          "pressure": 101.2953,
+          "inflow": 0.0,
+          "outflow": 94.4072
+        },
+        {
+          "phase": 0.543333,
+          "pressure": 100.9318,
+          "inflow": 0.0,
+          "outflow": 94.0507
+        },
+        {
+          "phase": 0.546667,
+          "pressure": 100.5696,
+          "inflow": 0.0,
+          "outflow": 93.6957
+        },
+        {
+          "phase": 0.55,
+          "pressure": 100.2088,
+          "inflow": 0.0,
+          "outflow": 93.342
+        },
+        {
+          "phase": 0.553333,
+          "pressure": 99.8494,
+          "inflow": 0.0,
+          "outflow": 92.9896
+        },
+        {
+          "phase": 0.556667,
+          "pressure": 99.4913,
+          "inflow": 0.0,
+          "outflow": 92.6385
+        },
+        {
+          "phase": 0.56,
+          "pressure": 99.1346,
+          "inflow": 0.0,
+          "outflow": 92.2888
+        },
+        {
+          "phase": 0.563333,
+          "pressure": 98.7792,
+          "inflow": 0.0,
+          "outflow": 91.9404
+        },
+        {
+          "phase": 0.566667,
+          "pressure": 98.4251,
+          "inflow": 0.0,
+          "outflow": 91.5933
+        },
+        {
+          "phase": 0.57,
+          "pressure": 98.0724,
+          "inflow": 0.0,
+          "outflow": 91.2475
+        },
+        {
+          "phase": 0.573333,
+          "pressure": 97.7211,
+          "inflow": 0.0,
+          "outflow": 90.903
+        },
+        {
+          "phase": 0.576667,
+          "pressure": 97.371,
+          "inflow": 0.0,
+          "outflow": 90.5598
+        },
+        {
+          "phase": 0.58,
+          "pressure": 97.0223,
+          "inflow": 0.0,
+          "outflow": 90.2179
+        },
+        {
+          "phase": 0.583333,
+          "pressure": 96.6749,
+          "inflow": 0.0,
+          "outflow": 89.8773
+        },
+        {
+          "phase": 0.586667,
+          "pressure": 96.3288,
+          "inflow": 0.0,
+          "outflow": 89.538
+        },
+        {
+          "phase": 0.59,
+          "pressure": 95.984,
+          "inflow": 0.0,
+          "outflow": 89.2
+        },
+        {
+          "phase": 0.593333,
+          "pressure": 95.6405,
+          "inflow": 0.0,
+          "outflow": 88.8633
+        },
+        {
+          "phase": 0.596667,
+          "pressure": 95.2983,
+          "inflow": 0.0,
+          "outflow": 88.5278
+        },
+        {
+          "phase": 0.6,
+          "pressure": 94.9574,
+          "inflow": 0.0,
+          "outflow": 88.1936
+        },
+        {
+          "phase": 0.603333,
+          "pressure": 94.6178,
+          "inflow": 0.0,
+          "outflow": 87.8606
+        },
+        {
+          "phase": 0.606667,
+          "pressure": 94.2795,
+          "inflow": 0.0,
+          "outflow": 87.5289
+        },
+        {
+          "phase": 0.61,
+          "pressure": 93.9425,
+          "inflow": 0.0,
+          "outflow": 87.1985
+        },
+        {
+          "phase": 0.613333,
+          "pressure": 93.6067,
+          "inflow": 0.0,
+          "outflow": 86.8693
+        },
+        {
+          "phase": 0.616667,
+          "pressure": 93.2722,
+          "inflow": 0.0,
+          "outflow": 86.5413
+        },
+        {
+          "phase": 0.62,
+          "pressure": 92.9389,
+          "inflow": 0.0,
+          "outflow": 86.2146
+        },
+        {
+          "phase": 0.623333,
+          "pressure": 92.6069,
+          "inflow": 0.0,
+          "outflow": 85.8891
+        },
+        {
+          "phase": 0.626667,
+          "pressure": 92.2762,
+          "inflow": 0.0,
+          "outflow": 85.5649
+        },
+        {
+          "phase": 0.63,
+          "pressure": 91.9467,
+          "inflow": 0.0,
+          "outflow": 85.2419
+        },
+        {
+          "phase": 0.633333,
+          "pressure": 91.6185,
+          "inflow": 0.0,
+          "outflow": 84.9201
+        },
+        {
+          "phase": 0.636667,
+          "pressure": 91.2915,
+          "inflow": 0.0,
+          "outflow": 84.5995
+        },
+        {
+          "phase": 0.64,
+          "pressure": 90.9657,
+          "inflow": 0.0,
+          "outflow": 84.2801
+        },
+        {
+          "phase": 0.643333,
+          "pressure": 90.6411,
+          "inflow": 0.0,
+          "outflow": 83.9619
+        },
+        {
+          "phase": 0.646667,
+          "pressure": 90.3178,
+          "inflow": 0.0,
+          "outflow": 83.6449
+        },
+        {
+          "phase": 0.65,
+          "pressure": 89.9957,
+          "inflow": 0.0,
+          "outflow": 83.3291
+        },
+        {
+          "phase": 0.653333,
+          "pressure": 89.6749,
+          "inflow": 0.0,
+          "outflow": 83.0146
+        },
+        {
+          "phase": 0.656667,
+          "pressure": 89.3552,
+          "inflow": 0.0,
+          "outflow": 82.7012
+        },
+        {
+          "phase": 0.66,
+          "pressure": 89.0367,
+          "inflow": 0.0,
+          "outflow": 82.3889
+        },
+        {
+          "phase": 0.663333,
+          "pressure": 88.7195,
+          "inflow": 0.0,
+          "outflow": 82.0779
+        },
+        {
+          "phase": 0.666667,
+          "pressure": 88.4034,
+          "inflow": 0.0,
+          "outflow": 81.768
+        },
+        {
+          "phase": 0.67,
+          "pressure": 88.0885,
+          "inflow": 0.0,
+          "outflow": 81.4594
+        },
+        {
+          "phase": 0.673333,
+          "pressure": 87.7749,
+          "inflow": 0.0,
+          "outflow": 81.1518
+        },
+        {
+          "phase": 0.676667,
+          "pressure": 87.4624,
+          "inflow": 0.0,
+          "outflow": 80.8455
+        },
+        {
+          "phase": 0.68,
+          "pressure": 87.1511,
+          "inflow": 0.0,
+          "outflow": 80.5402
+        },
+        {
+          "phase": 0.683333,
+          "pressure": 86.8409,
+          "inflow": 0.0,
+          "outflow": 80.2362
+        },
+        {
+          "phase": 0.686667,
+          "pressure": 86.5319,
+          "inflow": 0.0,
+          "outflow": 79.9333
+        },
+        {
+          "phase": 0.69,
+          "pressure": 86.2241,
+          "inflow": 0.0,
+          "outflow": 79.6315
+        },
+        {
+          "phase": 0.693333,
+          "pressure": 85.9175,
+          "inflow": 0.0,
+          "outflow": 79.3309
+        },
+        {
+          "phase": 0.696667,
+          "pressure": 85.612,
+          "inflow": 0.0,
+          "outflow": 79.0314
+        },
+        {
+          "phase": 0.7,
+          "pressure": 85.3077,
+          "inflow": 0.0,
+          "outflow": 78.733
+        },
+        {
+          "phase": 0.703333,
+          "pressure": 85.0045,
+          "inflow": 0.0,
+          "outflow": 78.4358
+        },
+        {
+          "phase": 0.706667,
+          "pressure": 84.7025,
+          "inflow": 0.0,
+          "outflow": 78.1397
+        },
+        {
+          "phase": 0.71,
+          "pressure": 84.4016,
+          "inflow": 0.0,
+          "outflow": 77.8447
+        },
+        {
+          "phase": 0.713333,
+          "pressure": 84.1018,
+          "inflow": 0.0,
+          "outflow": 77.5508
+        },
+        {
+          "phase": 0.716667,
+          "pressure": 83.8032,
+          "inflow": 0.0,
+          "outflow": 77.258
+        },
+        {
+          "phase": 0.72,
+          "pressure": 83.5057,
+          "inflow": 0.0,
+          "outflow": 76.9664
+        },
+        {
+          "phase": 0.723333,
+          "pressure": 83.2093,
+          "inflow": 0.0,
+          "outflow": 76.6758
+        },
+        {
+          "phase": 0.726667,
+          "pressure": 82.9141,
+          "inflow": 0.0,
+          "outflow": 76.3863
+        },
+        {
+          "phase": 0.73,
+          "pressure": 82.6199,
+          "inflow": 0.0,
+          "outflow": 76.098
+        },
+        {
+          "phase": 0.733333,
+          "pressure": 82.3269,
+          "inflow": 0.0,
+          "outflow": 75.8107
+        },
+        {
+          "phase": 0.736667,
+          "pressure": 82.035,
+          "inflow": 0.0,
+          "outflow": 75.5245
+        },
+        {
+          "phase": 0.74,
+          "pressure": 81.7441,
+          "inflow": 0.0,
+          "outflow": 75.2393
+        },
+        {
+          "phase": 0.743333,
+          "pressure": 81.4544,
+          "inflow": 0.0,
+          "outflow": 74.9553
+        },
+        {
+          "phase": 0.746667,
+          "pressure": 81.1658,
+          "inflow": 0.0,
+          "outflow": 74.6723
+        },
+        {
+          "phase": 0.75,
+          "pressure": 80.8782,
+          "inflow": 0.0,
+          "outflow": 74.3904
+        },
+        {
+          "phase": 0.753333,
+          "pressure": 80.5918,
+          "inflow": 0.0,
+          "outflow": 74.1096
+        },
+        {
+          "phase": 0.756667,
+          "pressure": 80.3064,
+          "inflow": 0.0,
+          "outflow": 73.8298
+        },
+        {
+          "phase": 0.76,
+          "pressure": 80.0221,
+          "inflow": 0.0,
+          "outflow": 73.5511
+        },
+        {
+          "phase": 0.763333,
+          "pressure": 79.7389,
+          "inflow": 0.0,
+          "outflow": 73.2734
+        },
+        {
+          "phase": 0.766667,
+          "pressure": 79.4567,
+          "inflow": 0.0,
+          "outflow": 72.9968
+        },
+        {
+          "phase": 0.77,
+          "pressure": 79.1756,
+          "inflow": 0.0,
+          "outflow": 72.7212
+        },
+        {
+          "phase": 0.773333,
+          "pressure": 78.8956,
+          "inflow": 0.0,
+          "outflow": 72.4467
+        },
+        {
+          "phase": 0.776667,
+          "pressure": 78.6166,
+          "inflow": 0.0,
+          "outflow": 72.1731
+        },
+        {
+          "phase": 0.78,
+          "pressure": 78.3387,
+          "inflow": 0.0,
+          "outflow": 71.9007
+        },
+        {
+          "phase": 0.783333,
+          "pressure": 78.0618,
+          "inflow": 0.0,
+          "outflow": 71.6292
+        },
+        {
+          "phase": 0.786667,
+          "pressure": 77.786,
+          "inflow": 0.0,
+          "outflow": 71.3588
+        },
+        {
+          "phase": 0.79,
+          "pressure": 77.5112,
+          "inflow": 0.0,
+          "outflow": 71.0894
+        },
+        {
+          "phase": 0.793333,
+          "pressure": 77.2375,
+          "inflow": 0.0,
+          "outflow": 70.821
+        },
+        {
+          "phase": 0.796667,
+          "pressure": 76.9648,
+          "inflow": 0.0,
+          "outflow": 70.5537
+        },
+        {
+          "phase": 0.8,
+          "pressure": 76.6931,
+          "inflow": 0.0,
+          "outflow": 70.2873
+        },
+        {
+          "phase": 0.803333,
+          "pressure": 76.4224,
+          "inflow": 0.0,
+          "outflow": 70.022
+        },
+        {
+          "phase": 0.806667,
+          "pressure": 76.1528,
+          "inflow": 0.0,
+          "outflow": 69.7576
+        },
+        {
+          "phase": 0.81,
+          "pressure": 75.8842,
+          "inflow": 0.0,
+          "outflow": 69.4943
+        },
+        {
+          "phase": 0.813333,
+          "pressure": 75.6166,
+          "inflow": 0.0,
+          "outflow": 69.2319
+        },
+        {
+          "phase": 0.816667,
+          "pressure": 75.35,
+          "inflow": 0.0,
+          "outflow": 68.9705
+        },
+        {
+          "phase": 0.82,
+          "pressure": 75.0844,
+          "inflow": 0.0,
+          "outflow": 68.7102
+        },
+        {
+          "phase": 0.823333,
+          "pressure": 74.8198,
+          "inflow": 0.0,
+          "outflow": 68.4508
+        },
+        {
+          "phase": 0.826667,
+          "pressure": 74.5562,
+          "inflow": 0.0,
+          "outflow": 68.1924
+        },
+        {
+          "phase": 0.83,
+          "pressure": 74.2936,
+          "inflow": 0.0,
+          "outflow": 67.9349
+        },
+        {
+          "phase": 0.833333,
+          "pressure": 74.032,
+          "inflow": 0.0,
+          "outflow": 67.6784
+        },
+        {
+          "phase": 0.836667,
+          "pressure": 73.7714,
+          "inflow": 0.0,
+          "outflow": 67.4229
+        },
+        {
+          "phase": 0.84,
+          "pressure": 73.5118,
+          "inflow": 0.0,
+          "outflow": 67.1684
+        },
+        {
+          "phase": 0.843333,
+          "pressure": 73.2531,
+          "inflow": 0.0,
+          "outflow": 66.9148
+        },
+        {
+          "phase": 0.846667,
+          "pressure": 72.9954,
+          "inflow": 0.0,
+          "outflow": 66.6622
+        },
+        {
+          "phase": 0.85,
+          "pressure": 72.7388,
+          "inflow": 0.0,
+          "outflow": 66.4105
+        },
+        {
+          "phase": 0.853333,
+          "pressure": 72.483,
+          "inflow": 0.0,
+          "outflow": 66.1598
+        },
+        {
+          "phase": 0.856667,
+          "pressure": 72.2283,
+          "inflow": 0.0,
+          "outflow": 65.9101
+        },
+        {
+          "phase": 0.86,
+          "pressure": 71.9745,
+          "inflow": 0.0,
+          "outflow": 65.6612
+        },
+        {
+          "phase": 0.863333,
+          "pressure": 71.7216,
+          "inflow": 0.0,
+          "outflow": 65.4133
+        },
+        {
+          "phase": 0.866667,
+          "pressure": 71.4697,
+          "inflow": 0.0,
+          "outflow": 65.1664
+        },
+        {
+          "phase": 0.87,
+          "pressure": 71.2188,
+          "inflow": 0.0,
+          "outflow": 64.9204
+        },
+        {
+          "phase": 0.873333,
+          "pressure": 70.9688,
+          "inflow": 0.0,
+          "outflow": 64.6753
+        },
+        {
+          "phase": 0.876667,
+          "pressure": 70.7197,
+          "inflow": 0.0,
+          "outflow": 64.4311
+        },
+        {
+          "phase": 0.88,
+          "pressure": 70.4716,
+          "inflow": 0.0,
+          "outflow": 64.1879
+        },
+        {
+          "phase": 0.883333,
+          "pressure": 70.2245,
+          "inflow": 0.0,
+          "outflow": 63.9456
+        },
+        {
+          "phase": 0.886667,
+          "pressure": 69.9782,
+          "inflow": 0.0,
+          "outflow": 63.7041
+        },
+        {
+          "phase": 0.89,
+          "pressure": 69.7329,
+          "inflow": 0.0,
+          "outflow": 63.4636
+        },
+        {
+          "phase": 0.893333,
+          "pressure": 69.4885,
+          "inflow": 0.0,
+          "outflow": 63.2241
+        },
+        {
+          "phase": 0.896667,
+          "pressure": 69.2451,
+          "inflow": 0.0,
+          "outflow": 62.9854
+        },
+        {
+          "phase": 0.9,
+          "pressure": 69.0025,
+          "inflow": 0.0,
+          "outflow": 62.7476
+        },
+        {
+          "phase": 0.903333,
+          "pressure": 68.7609,
+          "inflow": 0.0,
+          "outflow": 62.5107
+        },
+        {
+          "phase": 0.906667,
+          "pressure": 68.5202,
+          "inflow": 0.0,
+          "outflow": 62.2747
+        },
+        {
+          "phase": 0.91,
+          "pressure": 68.2804,
+          "inflow": 0.0,
+          "outflow": 62.0396
+        },
+        {
+          "phase": 0.913333,
+          "pressure": 68.0415,
+          "inflow": 0.0,
+          "outflow": 61.8054
+        },
+        {
+          "phase": 0.916667,
+          "pressure": 67.8035,
+          "inflow": 0.0,
+          "outflow": 61.5721
+        },
+        {
+          "phase": 0.92,
+          "pressure": 67.5664,
+          "inflow": 0.0,
+          "outflow": 61.3396
+        },
+        {
+          "phase": 0.923333,
+          "pressure": 67.3302,
+          "inflow": 0.0,
+          "outflow": 61.108
+        },
+        {
+          "phase": 0.926667,
+          "pressure": 67.0949,
+          "inflow": 0.0,
+          "outflow": 60.8773
+        },
+        {
+          "phase": 0.93,
+          "pressure": 66.8605,
+          "inflow": 0.0,
+          "outflow": 60.6475
+        },
+        {
+          "phase": 0.933333,
+          "pressure": 66.6269,
+          "inflow": 0.0,
+          "outflow": 60.4186
+        },
+        {
+          "phase": 0.936667,
+          "pressure": 66.3943,
+          "inflow": 0.0,
+          "outflow": 60.1905
+        },
+        {
+          "phase": 0.94,
+          "pressure": 66.1625,
+          "inflow": 0.0,
+          "outflow": 59.9632
+        },
+        {
+          "phase": 0.943333,
+          "pressure": 65.9316,
+          "inflow": 0.0,
+          "outflow": 59.7369
+        },
+        {
+          "phase": 0.946667,
+          "pressure": 65.7016,
+          "inflow": 0.0,
+          "outflow": 59.5113
+        },
+        {
+          "phase": 0.95,
+          "pressure": 65.4724,
+          "inflow": 0.0,
+          "outflow": 59.2867
+        },
+        {
+          "phase": 0.953333,
+          "pressure": 65.2441,
+          "inflow": 0.0,
+          "outflow": 59.0628
+        },
+        {
+          "phase": 0.956667,
+          "pressure": 65.0167,
+          "inflow": 0.0,
+          "outflow": 58.8399
+        },
+        {
+          "phase": 0.96,
+          "pressure": 64.7901,
+          "inflow": 0.0,
+          "outflow": 58.6177
+        },
+        {
+          "phase": 0.963333,
+          "pressure": 64.5644,
+          "inflow": 0.0,
+          "outflow": 58.3964
+        },
+        {
+          "phase": 0.966667,
+          "pressure": 64.3395,
+          "inflow": 0.0,
+          "outflow": 58.176
+        },
+        {
+          "phase": 0.97,
+          "pressure": 64.1155,
+          "inflow": 0.0,
+          "outflow": 57.9564
+        },
+        {
+          "phase": 0.973333,
+          "pressure": 63.8923,
+          "inflow": 0.0,
+          "outflow": 57.7376
+        },
+        {
+          "phase": 0.976667,
+          "pressure": 63.67,
+          "inflow": 0.0,
+          "outflow": 57.5196
+        },
+        {
+          "phase": 0.98,
+          "pressure": 63.4485,
+          "inflow": 0.0,
+          "outflow": 57.3024
+        },
+        {
+          "phase": 0.983333,
+          "pressure": 63.2278,
+          "inflow": 0.0,
+          "outflow": 57.0861
+        },
+        {
+          "phase": 0.986667,
+          "pressure": 63.008,
+          "inflow": 0.0,
+          "outflow": 56.8706
+        },
+        {
+          "phase": 0.99,
+          "pressure": 62.789,
+          "inflow": 0.0,
+          "outflow": 56.6559
+        },
+        {
+          "phase": 0.993333,
+          "pressure": 62.5708,
+          "inflow": 0.0,
+          "outflow": 56.442
+        },
+        {
+          "phase": 0.996667,
+          "pressure": 62.3535,
+          "inflow": 0.0,
+          "outflow": 56.2289
+        },
+        {
+          "phase": 1.0,
+          "pressure": 62.137,
+          "inflow": 0.0,
+          "outflow": 56.0166
+        }
+      ],
+      "systolic": 124.14,
+      "diastolic": 61.54,
+      "mean": 90.68,
+      "pulsePressure": 62.6,
+      "cycleVolumeResidualMl": -0.0013033735641971589
+    }
+  },
+  "radiusExperiment": {
+    "assumptions": "Ideal steady laminar rigid cylinder; fixed length and viscosity",
+    "radiusRatio": [
+      1.0,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "resistanceRatio": [
+      1.0,
+      1.5242,
+      2.4414,
+      4.1649
+    ]
+  },
+  "software": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1"
+  }
+}

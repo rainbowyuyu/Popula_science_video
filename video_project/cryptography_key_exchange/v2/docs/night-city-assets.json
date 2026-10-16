@@ -1,0 +1,205 @@
+{
+  "asset": "midnight-cryptography-city",
+  "version": 2,
+  "source": "Original procedural modelling; scripts/build_night_city.py",
+  "tool": "Blender 5.1.2",
+  "license": "Original project geometry and materials; no external textures",
+  "unit": "metre",
+  "coordinateSystem": "glTF Y-up right handed",
+  "anchors": {
+    "postBox": [
+      -5,
+      0,
+      0
+    ],
+    "postSlot": [
+      -5,
+      1.88,
+      0.45
+    ],
+    "heroWindow": [
+      7,
+      8,
+      -10
+    ],
+    "deliveryDoor": [
+      7,
+      0,
+      -10
+    ],
+    "corridor": "x=-3.5..3.5, z=-23..24"
+  },
+  "objects": [
+    {
+      "name": "City",
+      "translation_xyz_m": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "bounds_local_min_m": [
+        -20.0,
+        -0.2800000011920929,
+        -25.0
+      ],
+      "bounds_local_max_m": [
+        20.0,
+        23.770000457763672,
+        25.0
+      ],
+      "dimensions_m": [
+        40.0,
+        24.050000458955765,
+        50.0
+      ]
+    },
+    {
+      "name": "PostBox",
+      "translation_xyz_m": [
+        -5.0,
+        0.0,
+        -0.0
+      ],
+      "bounds_local_min_m": [
+        -0.6299999952316284,
+        0.0,
+        -0.5249999761581421
+      ],
+      "bounds_local_max_m": [
+        0.6299999952316284,
+        2.2049999237060547,
+        0.5600000023841858
+      ],
+      "dimensions_m": [
+        1.2599999904632568,
+        2.2049999237060547,
+        1.0849999785423279
+      ]
+    },
+    {
+      "name": "WindowFrame",
+      "translation_xyz_m": [
+        7.0,
+        8.0,
+        -10.0
+      ],
+      "bounds_local_min_m": [
+        -2.125,
+        -2.125,
+        -0.4099997878074646
+      ],
+      "bounds_local_max_m": [
+        2.125,
+        2.125,
+        0.6399997472763062
+      ],
+      "dimensions_m": [
+        4.25,
+        4.25,
+        1.0499995350837708
+      ]
+    },
+    {
+      "name": "DeliveryDoor",
+      "translation_xyz_m": [
+        7.0,
+        0.0,
+        -10.0
+      ],
+      "bounds_local_min_m": [
+        -1.274999976158142,
+        -0.05000007152557373,
+        -0.23000037670135498
+      ],
+      "bounds_local_max_m": [
+        1.274999976158142,
+        3.1500000953674316,
+        0.40353745222091675
+      ],
+      "dimensions_m": [
+        2.549999952316284,
+        3.2000001668930054,
+        0.6335378289222717
+      ]
+    },
+    {
+      "name": "Envelope",
+      "translation_xyz_m": [
+        -5.0,
+        1.8700000047683716,
+        0.6499999761581421
+      ],
+      "bounds_local_min_m": [
+        -0.11999999731779099,
+        -0.07900000363588333,
+        -0.002400000113993883
+      ],
+      "bounds_local_max_m": [
+        0.11999999731779099,
+        0.07900000363588333,
+        0.009499999694526196
+      ],
+      "dimensions_m": [
+        0.23999999463558197,
+        0.15800000727176666,
+        0.011899999808520079
+      ]
+    },
+    {
+      "name": "CipherWheel",
+      "translation_xyz_m": [
+        24.0,
+        2.0,
+        -0.0
+      ],
+      "bounds_local_min_m": [
+        -1.350000023841858,
+        -1.350000023841858,
+        -0.10500005632638931
+      ],
+      "bounds_local_max_m": [
+        1.350000023841858,
+        1.350000023841858,
+        0.3199999928474426
+      ],
+      "dimensions_m": [
+        2.700000047683716,
+        2.700000047683716,
+        0.42500004917383194
+      ]
+    },
+    {
+      "name": "Certificate",
+      "translation_xyz_m": [
+        28.0,
+        2.0,
+        -0.0
+      ],
+      "bounds_local_min_m": [
+        -1.149999976158142,
+        -1.524999976158142,
+        -0.008999999612569809
+      ],
+      "bounds_local_max_m": [
+        1.149999976158142,
+        1.524999976158142,
+        0.08500000834465027
+      ],
+      "dimensions_m": [
+        2.299999952316284,
+        3.049999952316284,
+        0.09400000795722008
+      ]
+    }
+  ],
+  "triangles": 180787,
+  "glbBytes": 4272148,
+  "sha256": {
+    "night_city.glb": "a2acb960c474739090c4d06fb4e74b0172af961a787afd04edf38a54bc8e622f",
+    "night_city.blend": "3b9818eb3f1e846d4d14017ac7b6602a582a9921dc92857b49894f81b4a8b8af",
+    "night_city_preview.png": "21453ba1d98aae2a35a1497d899fad6a3d111626598f3ca0e477692bcbbbdb31",
+    "build_night_city.py": "cd555a4fab9bb9770620fc18388fbd60d42558149925e26bd9bab8cdf08c8606"
+  },
+  "preview": "D:\\python_project\\manim_extend_rainbow\\video_project\\cryptography_key_exchange\\v2\\work\\models\\night_city_preview.png",
+  "limits": "Window emission and wet material are illustrative lighting cues; no live rain/fluids or scanned geometry. CipherWheel and Certificate are library props outside city bounds and should be cloned/repositioned by the caller."
+}

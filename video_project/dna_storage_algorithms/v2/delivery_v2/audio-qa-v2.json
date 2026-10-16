@@ -1,0 +1,80 @@
+{
+  "masterSha256": "64cfea934a6143c833fa12de16b061860d2e26f79090e184669f42448000708b",
+  "narrationSha256": "1dc95acf12b668efea5c39f5fe6170670a97f47d7593ebbad05848dc908dd06b",
+  "master": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "pcm_s24le",
+          "sample_rate": "48000",
+          "channels": 2,
+          "bits_per_sample": 24
+        }
+      ],
+      "format": {
+        "duration": "300.000000",
+        "size": "86400044"
+      },
+      "returncode": 0
+    },
+    "ebur128": {
+      "returncode": 0,
+      "integratedLUFS": -19.7,
+      "lraLU": 12.3,
+      "truePeakDbFS": -1.5
+    },
+    "loudnorm": {
+      "input_i": "-19.77",
+      "input_tp": "-1.50",
+      "input_lra": "12.30",
+      "input_thresh": "-30.45",
+      "output_i": "-17.13",
+      "output_tp": "-1.50",
+      "output_lra": "6.80",
+      "output_thresh": "-27.71",
+      "normalization_type": "dynamic",
+      "target_offset": "1.13",
+      "returncode": 0
+    }
+  },
+  "aac192k": {
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 2,
+          "bits_per_sample": 0
+        }
+      ],
+      "format": {
+        "duration": "300.000000",
+        "size": "7237173"
+      },
+      "returncode": 0
+    },
+    "ebur128": {
+      "returncode": 0,
+      "integratedLUFS": -19.7,
+      "lraLU": 12.4,
+      "truePeakDbFS": -1.6
+    },
+    "loudnorm": {
+      "input_i": "-19.84",
+      "input_tp": "-1.56",
+      "input_lra": "12.30",
+      "input_thresh": "-30.46",
+      "output_i": "-17.13",
+      "output_tp": "-1.50",
+      "output_lra": "6.80",
+      "output_thresh": "-27.71",
+      "normalization_type": "dynamic",
+      "target_offset": "1.13",
+      "returncode": 0
+    }
+  }
+}

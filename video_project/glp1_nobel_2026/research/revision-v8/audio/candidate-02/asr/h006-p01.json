@@ -1,0 +1,142 @@
+{
+  "id": "h006",
+  "partIndex": 0,
+  "expected": "一部分糖马上供能，一部分存进肝脏和肌肉。",
+  "heard": "一部分糖馬上功能,一部分純淨肝臟和肌肉",
+  "words": [
+    {
+      "text": "一",
+      "start": 0.0,
+      "end": 0.36,
+      "probability": 0.972012996673584
+    },
+    {
+      "text": "部分",
+      "start": 0.36,
+      "end": 0.54,
+      "probability": 0.888915479183197
+    },
+    {
+      "text": "糖",
+      "start": 0.54,
+      "end": 0.78,
+      "probability": 0.9943066239356995
+    },
+    {
+      "text": "馬",
+      "start": 0.78,
+      "end": 1.0,
+      "probability": 0.8863498568534851
+    },
+    {
+      "text": "上",
+      "start": 1.0,
+      "end": 1.14,
+      "probability": 0.9869301319122314
+    },
+    {
+      "text": "功",
+      "start": 1.14,
+      "end": 1.34,
+      "probability": 0.9962433576583862
+    },
+    {
+      "text": "能,",
+      "start": 1.34,
+      "end": 1.56,
+      "probability": 0.9993676543235779
+    },
+    {
+      "text": "一",
+      "start": 1.94,
+      "end": 2.02,
+      "probability": 0.9385160803794861
+    },
+    {
+      "text": "部分",
+      "start": 2.02,
+      "end": 2.24,
+      "probability": 0.9875124096870422
+    },
+    {
+      "text": "純",
+      "start": 2.24,
+      "end": 2.46,
+      "probability": 0.9003942012786865
+    },
+    {
+      "text": "淨",
+      "start": 2.46,
+      "end": 2.64,
+      "probability": 0.9538495540618896
+    },
+    {
+      "text": "肝",
+      "start": 2.64,
+      "end": 2.86,
+      "probability": 0.8951456844806671
+    },
+    {
+      "text": "臟",
+      "start": 2.86,
+      "end": 3.04,
+      "probability": 0.9778916537761688
+    },
+    {
+      "text": "和",
+      "start": 3.04,
+      "end": 3.18,
+      "probability": 0.9863302707672119
+    },
+    {
+      "text": "肌",
+      "start": 3.18,
+      "end": 3.38,
+      "probability": 0.9976248145103455
+    },
+    {
+      "text": "肉",
+      "start": 3.38,
+      "end": 3.54,
+      "probability": 0.9999847412109375
+    }
+  ],
+  "sourceSHA256": "b29130f748d8d7ddfd28ffb5e3fec822299b0c37dfb51ee68ec38cee2c62d77f",
+  "ratio": 0.8333333333333334,
+  "edits": [
+    {
+      "op": "replace",
+      "expected": "供",
+      "heard": "功",
+      "end": 7
+    },
+    {
+      "op": "replace",
+      "expected": "存进",
+      "heard": "纯净",
+      "end": 13
+    }
+  ],
+  "rawTailNeedsReview": false,
+  "rawMetrics": {
+    "samples48k": 188162,
+    "seconds": 3.9200416666666666,
+    "peakDBFS": -8.380213462312499,
+    "first20msDBFS": -46.65527680294974,
+    "last20msDBFS": -96.77416155482871,
+    "firstActiveMs": 0.0,
+    "lastActiveToEndMs": 390.0416666666667,
+    "activityThresholdDBFS": -50.0,
+    "finite": true,
+    "clippedSamples": 0
+  },
+  "model": "local whisper-small",
+  "options": {
+    "initial_prompt": null,
+    "vad_filter": false,
+    "beam_size": 5,
+    "word_timestamps": true,
+    "condition_on_previous_text": false
+  },
+  "subjectiveListeningChecked": false
+}

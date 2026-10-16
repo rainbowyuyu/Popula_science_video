@@ -1,0 +1,4 @@
+from pathlib import Path
+import json,hashlib,soundfile as sf
+R=Path('.'); p=R/'public/audio/audio-manifest.json';d=json.loads(p.read_text(encoding='utf8'));v=json.loads((R/'research/audio/audio-integrity.json').read_text(encoding='utf8'));d['durationSeconds']=v['seconds'];d['narrationSeconds']=sf.info(R/'public/audio/narration.wav').duration;d['master']='public/audio/rainbow-arc-master.wav';d['masterSHA256']=v['masterSHA256'];d['musicBed']='public/audio/music-bed.wav';d['finalIntegrity']='research/audio/audio-integrity.json';d['captionTiming']='research/audio/caption-timing-report.json';d['naturalTiming']=True;d['rawDescription']='Model output with only leading/trailing padding trimmed, before broadcast mastering. No time stretch.';p.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf8')
+print('Manifest finalised')
